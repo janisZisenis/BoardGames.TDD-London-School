@@ -9,6 +9,9 @@ public class Main {
 
         scanInput();
 
+        System.out.println('.' +  '.' + '.');
+        System.out.println('.' +  '.' + '.');
+        System.out.println('.' +  '.' + '.');
     }
 
     private static void scanInput() {
@@ -18,9 +21,9 @@ public class Main {
     }
 
     private static void printEmptyField() {
-        System.out.println("...");
-        System.out.println("...");
-        System.out.println("...");
+        System.out.println('.' +  '.' + '.');
+        System.out.println('.' +  '.' + '.');
+        System.out.println('.' +  '.' + '.');
     }
 
     private static Scanner makeScanner() {
