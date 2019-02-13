@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         FieldPrinter.print(field);
 
-        UserInput in = scanInput();
+        UserInput in = InputScanner.scan();
         apply(in);
 
         FieldPrinter.print(field);
@@ -19,22 +19,6 @@ public class Main {
 
     private static void apply(UserInput in) {
         field[in.getRow()][in.getColumn()] = 'X';
-    }
-
-    private static UserInput scanInput() {
-        Scanner in = makeScanner();
-        int row = in.nextInt();
-        int col = in.nextInt();
-
-        return makeUserInput(row, col);
-    }
-
-    private static UserInput makeUserInput(int row, int col) {
-        return new UserInput(row, col);
-    }
-
-    private static Scanner makeScanner() {
-        return new Scanner(System.in);
     }
 
 }
