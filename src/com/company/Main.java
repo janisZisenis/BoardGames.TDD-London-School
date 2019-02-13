@@ -9,30 +9,17 @@ public class Main {
                                 {'.', '.', '.'}   };
 
     public static void main(String[] args) {
-        print(field);
+        FieldPrinter.print(field);
 
         scanInput();
 
-        print(field);
+        FieldPrinter.print(field);
     }
 
     private static void scanInput() {
         Scanner in = makeScanner();
         int row = in.nextInt();
         int col = in.nextInt();
-    }
-
-    private static void print(char[][] field) {
-        for(int row = 0; row < 3; row++) {
-            printRow(row, field);
-        }
-    }
-
-    private static void printRow(int row, char[][] field) {
-        for(int col = 0; col < 3; col++) {
-            System.out.print(field[col][row]);
-        }
-        System.out.print('\n');
     }
 
     private static Scanner makeScanner() {
