@@ -9,11 +9,11 @@ public class Main {
                                 {'.', '.', '.'}   };
 
     public static void main(String[] args) {
-        printField();
+        print(field);
 
         scanInput();
 
-        printField();
+        print(field);
     }
 
     private static void scanInput() {
@@ -22,13 +22,13 @@ public class Main {
         int col = in.nextInt();
     }
 
-    private static void printField() {
+    private static void print(char[][] field) {
         for(int row = 0; row < 3; row++) {
-            printRow(row);
+            printRow(row, field);
         }
     }
 
-    private static void printRow(int row) {
+    private static void printRow(int row, char[][] field) {
         for(int col = 0; col < 3; col++) {
             System.out.print(field[col][row]);
         }
