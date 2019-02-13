@@ -12,8 +12,13 @@ public class Main {
         FieldPrinter.print(field);
 
         UserInput in = scanInput();
+        apply(in);
 
         FieldPrinter.print(field);
+    }
+
+    private static void apply(UserInput in) {
+        field[in.getRow()][in.getColumn()] = 'X';
     }
 
     private static UserInput scanInput() {

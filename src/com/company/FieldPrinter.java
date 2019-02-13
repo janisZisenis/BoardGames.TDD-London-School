@@ -10,7 +10,7 @@ public class FieldPrinter {
 
     public static void printRow(int row, char[][] field) {
         for(int col = 0; col < 3; col++) {
-            System.out.print(field[col][row]);
+            System.out.print(field[row][col]);
         }
         System.out.print('\n');
     }
