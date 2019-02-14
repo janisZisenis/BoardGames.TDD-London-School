@@ -26,11 +26,15 @@ public class Main {
     }
 
     private static void applyX(UserInput in) {
-        field[in.getRow()][in.getColumn()] = 'X';
+        applyFor('X', in);
     }
 
     private static void applyO(UserInput in) {
-        field[in.getRow()][in.getColumn()] = 'O';
+        applyFor('O', in);
+    }
+
+    private static void applyFor(char player, UserInput in) {
+        field[in.getRow()][in.getColumn()] = player;
     }
 
 }
