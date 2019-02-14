@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
+
 public class UserInput {
     private int row;
     private int column;
@@ -15,5 +17,11 @@ public class UserInput {
 
     public int getColumn() {
         return column;
+    }
+
+    public boolean equals(Object o) {
+        UserInput in = (UserInput) o;
+        return in.row == this.row
+                && in.column == this.column;
     }
 }

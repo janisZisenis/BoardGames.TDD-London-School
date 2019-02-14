@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/ScannerStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/InputGenerator/InputPrompter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/InputGenerator/InputGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/InputGenerator/InputPrompterStub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/InputScanner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/InputScanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/UserInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/UserInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/UserInput.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,30 +40,32 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="56" />
-          <entry key="java" value="2857" />
+          <entry key="dummy" value="169" />
+          <entry key="java" value="3990" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2857" />
-          <entry key="PLAIN_TEXT" value="56" />
+          <entry key="JAVA" value="3990" />
+          <entry key="PLAIN_TEXT" value="169" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="19" />
+          <entry key="java" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="38" />
         </counts>
       </usages-collector>
     </session>
@@ -70,34 +73,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-end-line="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="139">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/ScannerStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="18" />
-              <folding>
-                <element signature="e#267#268#0" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +89,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -128,9 +109,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/FieldPrinter.java" />
-        <option value="$PROJECT_DIR$/src/com/company/UserInput.java" />
         <option value="$PROJECT_DIR$/src/com/company/FieldPrinter.java" />
-        <option value="$PROJECT_DIR$/src/com/company/InputScanner.java" />
         <option value="$PROJECT_DIR$/test/com/company/SaveInputScanner.java" />
         <option value="$PROJECT_DIR$/test/com/company/ValidIntegerScanningTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Scanner.java" />
@@ -138,6 +117,17 @@
         <option value="$PROJECT_DIR$/src/com/company/SaveIntScanner.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/UserInput.java" />
+        <option value="$PROJECT_DIR$/test/com/company/InputScannerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/InputPrompter1.java" />
+        <option value="$PROJECT_DIR$/src/com/company/InputScanner1.java" />
+        <option value="$PROJECT_DIR$/src/com/company/InputScanner.java" />
+        <option value="$PROJECT_DIR$/src/com/company/InputPrompter.java" />
+        <option value="$PROJECT_DIR$/test/com/company/InputPrompterTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/InputScannerStub.java" />
+        <option value="$PROJECT_DIR$/test/com/company/InputGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/InputPrompterStub.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java" />
       </list>
     </option>
   </component>
@@ -165,28 +155,6 @@
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -200,13 +168,19 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550094419748" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550122940804" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="FieldPrinter" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company.InputGenerator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.ConsoleInputPrompter" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company" />
@@ -224,13 +198,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.InputGeneratorTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="TicTacToe.Main" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.InputGenerator.InputGenerator" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.InputGenerator" />
+      <option name="MAIN_CLASS_NAME" value="com.company.InputGenerator.InputGeneratorTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -252,9 +240,11 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SaveIntScannerTest" />
+      <item itemvalue="JUnit.InputGeneratorTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InputGeneratorTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SaveIntScannerTest" />
       </list>
@@ -272,49 +262,49 @@
       <updated>1550083232438</updated>
       <workItem from="1550083236713" duration="396000" />
       <workItem from="1550083888007" duration="3282000" />
+      <workItem from="1550120495418" duration="2469000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 28m 48s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 25m 10s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 31m 03s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 26m 40s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 31m 12s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 27m 13s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 37m 15s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 27m 44s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 38m 07s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 24s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 38m 33s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 29s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 39m 02s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 34s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 39m 21s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 40s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 39m 35s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputScannerTest - 2019.02.14 at 06h 29m 23s.xml">
+      <configuration name="InputScannerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SaveIntScannerTest - 2019.02.13 at 22h 39m 50s.xml">
-      <configuration name="SaveIntScannerTest" configurationId="JUnit" />
+    <history-entry file="InputGeneratorTest - 2019.02.14 at 06h 38m 23s.xml">
+      <configuration name="InputGeneratorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6128000" />
+    <option name="totallyTimeSpent" value="8597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19412607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1969914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -332,7 +322,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299363" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -353,22 +343,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FieldPrinter.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/UserInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ScannerStub.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ScannerStub.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/FieldPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -376,55 +351,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Scanner.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Scanner.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/company/ScannerStub.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/SaveIntScanner.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/UserInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        <state relative-caret-position="300">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/ScannerStub.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/InputGenerator/InputGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
-            <element signature="e#267#268#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SaveIntScanner.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputPrompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/InputGenerator/InputPrompterStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="139">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/InputScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-end-line="83" />
         </state>
       </provider>
     </entry>
