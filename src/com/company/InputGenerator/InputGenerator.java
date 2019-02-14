@@ -9,7 +9,7 @@ public class InputGenerator {
         this.scanner = scanner;
     }
 
-    public UserInput promptInput() {
+    public UserInput generateInput() {
         int row = scanner.promptRow();
         int col = scanner.promptColumn();
 
