@@ -15,13 +15,22 @@ public class Main {
         FieldPrinter.print(field);
 
         UserInput in = generator.generateInput();
-        apply(in);
+        applyX(in);
+
+        FieldPrinter.print(field);
+
+        in = generator.generateInput();
+        applyO(in);
 
         FieldPrinter.print(field);
     }
 
-    private static void apply(UserInput in) {
+    private static void applyX(UserInput in) {
         field[in.getRow()][in.getColumn()] = 'X';
+    }
+
+    private static void applyO(UserInput in) {
+        field[in.getRow()][in.getColumn()] = 'O';
     }
 
 }
