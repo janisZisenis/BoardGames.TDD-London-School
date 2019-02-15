@@ -1,4 +1,4 @@
-package com.company.InputGenerator;
+package com.company.DefaultInputGenerator;
 
 import com.company.UserInput;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InputGeneratorTest {
 
     InputPrompterStub prompter = new InputPrompterStub();
-    InputGenerator sut = new InputGenerator(prompter);
+    DefaultInputGenerator sut = new DefaultInputGenerator(prompter);
 
     @Test
     void IfPrompterReturnsRow0AndColumn1_ShouldReturnUserInputWithRow0AndColumn1() {

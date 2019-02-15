@@ -1,6 +1,6 @@
 package com.company.ConsoleInputPrompter;
 
-import com.company.InputGenerator.InputPrompter;
+import com.company.DefaultInputGenerator.InputPrompter;
 
 import java.util.Scanner;
 
@@ -12,34 +12,35 @@ public class ConsoleInputPrompter implements InputPrompter {
     private final String errorMessage = "Error, please try again. ";
 
     public int promptRow() {
-        return promptInt(rowMessage);
+        int i = promptInt(rowMessage);
+        return i;
     }
 
     public int promptColumn() {
         return promptInt(columnMessage);
     }
 
-    public int promptInt(String promtMessage) {
-        print(promtMessage);
+    public int promptInt(String promptMessage) {
+        print(promptMessage);
 
-        int i = scan();
-        while (i == -1) {
+        return scanInt();
+    }
+
+    private int scanInt() {
+        while(noIntScanned()) {
             print(errorMessage);
             skipLastScanned();
-            i = promptInt(promtMessage);
         }
 
-        return i;
+        return scanner.nextInt();
+    }
+
+    private boolean noIntScanned() {
+        return !scanner.hasNextInt();
     }
 
     private void print(String message) {
         System.out.print(message);
-    }
-
-    private int scan() {
-        if (scanner.hasNextInt())
-            return scanner.nextInt();
-        return -1;
     }
 
     private void skipLastScanned() {

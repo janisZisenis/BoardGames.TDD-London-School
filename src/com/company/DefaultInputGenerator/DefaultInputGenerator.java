@@ -1,11 +1,11 @@
-package com.company.InputGenerator;
+package com.company.DefaultInputGenerator;
 
 import com.company.UserInput;
 
-public class InputGenerator {
+public class DefaultInputGenerator {
     private final InputPrompter scanner;
 
-    public InputGenerator(InputPrompter scanner) {
+    public DefaultInputGenerator(InputPrompter scanner) {
         this.scanner = scanner;
     }
 

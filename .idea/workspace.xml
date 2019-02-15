@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/InputGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/IsOnFieldValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/OnBoardInputGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/InputGeneratorStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/IsOnFieldValidatorStub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/OnBoardInputGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/ConsoleInputPrompter/ConsoleInputPrompter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/ConsoleInputPrompter/ConsoleInputPrompter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/InputGenerator/InputGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/InputGenerator/InputPrompter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/TicTacToe.Main/com/company/InputGenerator/InputGeneratorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/TicTacToe.Main/com/company/InputGenerator/InputPrompterStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DefaultInputGenerator/DefaultInputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InputGenerator/InputPrompter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DefaultInputGenerator/InputPrompter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/InputGenerator/InputGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/DefaultInputGenerator/InputGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/InputGenerator/InputPrompterStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/DefaultInputGenerator/InputPrompterStub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,64 +51,144 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="173" />
-          <entry key="java" value="4700" />
+          <entry key="dummy" value="249" />
+          <entry key="java" value="6711" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4700" />
-          <entry key="PLAIN_TEXT" value="173" />
+          <entry key="JAVA" value="6711" />
+          <entry key="PLAIN_TEXT" value="249" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="44" />
+          <entry key="java" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="68" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            <state relative-caret-position="134">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/OnBoardInputGeneratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="396">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputPrompter.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/IsOnFieldValidatorStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+              <folding>
+                <element signature="e#179#180#0" expanded="true" />
+                <element signature="e#221#222#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/OnBoardInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/InputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/IsOnFieldValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/DefaultInputGenerator/DefaultInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/UserInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#382#383#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#899#900#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/DefaultInputGenerator/InputPrompter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -140,9 +238,18 @@
         <option value="$PROJECT_DIR$/test/com/company/InputScannerStub.java" />
         <option value="$PROJECT_DIR$/test/com/company/InputGeneratorTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/InputPrompterStub.java" />
-        <option value="$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java" />
         <option value="$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Player/Player.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Player/PlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/InputGeneratorStub.java" />
+        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/FieldStub.java" />
+        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/FieldStub.java" />
+        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/InputGenerator.java" />
+        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/InputGeneratorStub.java" />
+        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/OnBoardInputGenerator.java" />
+        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/OnBoardInputGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java" />
       </list>
     </option>
   </component>
@@ -152,9 +259,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -162,8 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,12 +299,39 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="DefaultInputGenerator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="OnBoardInputGeneratorTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="OnBoardInputGeneratorTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +340,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550126862175" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550207097530" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -217,12 +349,14 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company.OnBoardInputGeneratorTest" />
       <recent name="com.company.InputGenerator" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company.ConsoleInputPrompter" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.OnBoardInputGeneratorTest" />
       <recent name="com.company" />
     </key>
   </component>
@@ -253,12 +387,26 @@
       <module name="TicTacToe.Main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.InputGenerator.InputGenerator" />
+          <option name="PATTERN" value="com.company.DefaultInputGenerator.DefaultInputGenerator" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.InputGenerator" />
-      <option name="MAIN_CLASS_NAME" value="com.company.InputGenerator.InputGeneratorTest" />
+      <option name="PACKAGE_NAME" value="com.company.DefaultInputGenerator" />
+      <option name="MAIN_CLASS_NAME" value="com.company.DefaultInputGenerator.InputGeneratorTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnBoardInputGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.OnBoardInputGeneratorTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.OnBoardInputGeneratorTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.OnBoardInputGeneratorTest.OnBoardInputGeneratorTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -281,10 +429,12 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.SaveIntScannerTest" />
       <item itemvalue="JUnit.InputGeneratorTest" />
+      <item itemvalue="JUnit.OnBoardInputGeneratorTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.OnBoardInputGeneratorTest" />
         <item itemvalue="JUnit.InputGeneratorTest" />
         <item itemvalue="JUnit.SaveIntScannerTest" />
       </list>
@@ -303,50 +453,52 @@
       <workItem from="1550083236713" duration="396000" />
       <workItem from="1550083888007" duration="3282000" />
       <workItem from="1550120495418" duration="2469000" />
-      <workItem from="1550126127264" duration="888000" />
+      <workItem from="1550126127264" duration="3642000" />
+      <workItem from="1550164889799" duration="22000" />
+      <workItem from="1550169561772" duration="1171000" />
+      <workItem from="1550201741397" duration="2074000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 27m 13s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 42m 57s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 27m 44s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 47m 40s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 24s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 49m 22s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 29s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 49m 52s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 34s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 50m 26s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 28m 40s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 50m 58s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputScannerTest - 2019.02.14 at 06h 29m 23s.xml">
-      <configuration name="InputScannerTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 51m 13s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputGeneratorTest - 2019.02.14 at 06h 38m 23s.xml">
-      <configuration name="InputGeneratorTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 51m 22s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputGeneratorTest - 2019.02.14 at 06h 52m 11s.xml">
-      <configuration name="InputGeneratorTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 04h 56m 54s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="InputGeneratorTest - 2019.02.14 at 06h 52m 47s.xml">
-      <configuration name="InputGeneratorTest" configurationId="JUnit" />
+    <history-entry file="OnBoardInputGeneratorTest - 2019.02.15 at 05h 02m 04s.xml">
+      <configuration name="OnBoardInputGeneratorTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10288000" />
+    <option name="totallyTimeSpent" value="16309000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19985673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20845272" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -355,16 +507,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32356688" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32356688" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3299363" />
+      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -372,7 +525,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" visible="true" weight="0.24498567" />
+      <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" weight="0.24498567" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
@@ -382,24 +535,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>16</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FieldPrinter.java" />
@@ -415,61 +550,122 @@
     <entry file="file://$PROJECT_DIR$/test/com/company/ScannerStub.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/SaveIntScanner.java" />
     <entry file="file://$PROJECT_DIR$/test/com/company/SaveIntScannerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/UserInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/InputGenerator/InputGeneratorTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/DefaultInputGenerator/InputGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/InputGenerator/InputPrompterStub.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/DefaultInputGenerator/InputPrompterStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator/InputPrompter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/DefaultInputGenerator/InputPrompter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/IsOnFieldValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/InputGeneratorStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/InputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/IsOnFieldValidatorStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/OnBoardInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/OnBoardInputGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/UserInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#382#383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DefaultInputGenerator/DefaultInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ConsoleInputPrompter/ConsoleInputPrompter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#899#900#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
