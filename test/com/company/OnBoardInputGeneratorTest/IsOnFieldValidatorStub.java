@@ -1,9 +1,16 @@
 package com.company.OnBoardInputGeneratorTest;
 
-public class IsOnFieldValidatorStub implements IsOnFieldValidator {
-    private boolean isOnBoard;
+import com.company.UserInput;
 
-    public void setUserInputIsOnBoard(boolean isOnBoard) {
-        this.isOnBoard = isOnBoard;
+public class IsOnFieldValidatorStub implements IsOnFieldValidator {
+    private int indexOfUserInputBeingOnField = 0;
+    private int count = 0;
+
+    public void setTimesUserInputIsNotOnField(int times) {
+        this.indexOfUserInputBeingOnField = times;
+    }
+
+    public boolean isOnField(UserInput input) {
+        return indexOfUserInputBeingOnField == count++;
     }
 }

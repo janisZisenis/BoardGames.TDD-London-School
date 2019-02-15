@@ -4,13 +4,14 @@ import com.company.UserInput;
 
 public class InputGeneratorStub implements InputGenerator {
 
-    private UserInput userInput;
-
-    public void setUserInput(UserInput userInput) {
-        this.userInput = userInput;
-    }
+    private int count = 0;
+    private UserInput[] userInputs;
 
     public UserInput generateInput() {
-        return this.userInput;
+        return this.userInputs[count++];
+    }
+
+    public void setUserInputs(UserInput[] inputs) {
+        this.userInputs = inputs;
     }
 }
