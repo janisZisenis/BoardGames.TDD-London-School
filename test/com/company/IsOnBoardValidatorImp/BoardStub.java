@@ -1,9 +1,13 @@
 package com.company.IsOnBoardValidatorImp;
 
-public class BoardStub {
-    private boolean inputIsOnBoard = false;
+public class BoardStub implements Board {
+    private boolean fieldIsOnBoard = false;
 
     public void setUserInputIsOnBoard(boolean b) {
-        inputIsOnBoard = b;
+        fieldIsOnBoard = b;
+    }
+
+    public boolean exists(Field f) {
+        return fieldIsOnBoard;
     }
 }
