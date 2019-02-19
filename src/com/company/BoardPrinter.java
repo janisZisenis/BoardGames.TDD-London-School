@@ -1,6 +1,6 @@
 package com.company;
 
-public class FieldPrinter {
+public class BoardPrinter {
 
     public static void print(char[][] field) {
         for(int row = 0; row < 3; row++) {

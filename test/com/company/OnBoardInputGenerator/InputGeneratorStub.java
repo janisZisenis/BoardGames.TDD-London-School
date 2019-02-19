@@ -1,4 +1,4 @@
-package com.company.OnBoardInputGeneratorTest;
+package com.company.OnBoardInputGenerator;
 
 import com.company.UserInput;
 

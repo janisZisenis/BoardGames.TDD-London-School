@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
+import com.company.OnBoardInputGenerator.OnBoardInputGenerator;
 
 public class Main {
     static char[][] field = {   {'.', '.', '.'},
@@ -11,8 +12,9 @@ public class Main {
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
+        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, null);
 
-        FieldPrinter.print(field);
+        BoardPrinter.print(field);
 
         UserInput in = generator.generateInput();
         while(isOutOfBounds(in)) {
@@ -24,7 +26,7 @@ public class Main {
         while(isOutOfBounds(in)) {
             in = generator.generateInput();
         }
-        FieldPrinter.print(field);
+        BoardPrinter.print(field);
 
         in = generator.generateInput();
         while(isOutOfBounds(in)) {
@@ -33,7 +35,7 @@ public class Main {
         }
         applyO(in);
 
-        FieldPrinter.print(field);
+        BoardPrinter.print(field);
     }
 
     private static boolean isOutOfBounds(UserInput in) {

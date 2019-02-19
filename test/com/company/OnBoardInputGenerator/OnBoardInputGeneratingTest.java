@@ -1,22 +1,21 @@
-package com.company.OnBoardInputGeneratorTest;
+package com.company.OnBoardInputGenerator;
 
 import com.company.UserInput;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class OnBoardInputGeneratorTest {
+public class OnBoardInputGeneratingTest {
 
     InputGeneratorStub generator = new InputGeneratorStub();
-    IsOnFieldValidatorStub validator = new IsOnFieldValidatorStub();
+    IsOnBoardValidatorStub validator = new IsOnBoardValidatorStub();
     OnBoardInputGenerator sut = new OnBoardInputGenerator(generator, validator);
+
     UserInput[] inputs;
 
-
     @Test
-    void IfGeneratedUserInputIsOnField_ShouldBeTheFirstUserInput() {
-        makeFirstUserInputIsOnField();
+    void IfFirstUserInputIsOnBoard_ShouldBeTheFirstUserInput() {
+        makeFirstUserInputIsOnBoard();
 
         UserInput actual = sut.generateInput();
 
@@ -25,8 +24,8 @@ public class OnBoardInputGeneratorTest {
     }
 
     @Test
-    void IfFirstGeneratedUserInputIsNotOnField_ShouldBeTheSecondUserInput() {
-        makeFirstInputIsNotOnField();
+    void IfFirstUserInputIsNotOnBoard_ShouldBeTheSecondUserInput() {
+        makeFirstInputIsNotOnBoard();
 
         UserInput actual = sut.generateInput();
 
@@ -35,8 +34,8 @@ public class OnBoardInputGeneratorTest {
     }
 
     @Test
-    void IfSecondGeneratedUserInputIsNotOnField_ShouldBeTheThirdUserInput() {
-        makeSecondInputIsNotOnField();
+    void IfFirstAndSecondUserInputIsNotOnBoard_ShouldBeTheThirdUserInput() {
+        makeFirstAndSecondInputIsNotOnBoard();
 
         UserInput actual = sut.generateInput();
 
@@ -44,23 +43,23 @@ public class OnBoardInputGeneratorTest {
         assertEquals(expected, actual);
     }
 
-    private void makeFirstUserInputIsOnField() {
-        validator.setTimesUserInputIsNotOnField(0);
+    private void makeFirstUserInputIsOnBoard() {
+        validator.setTimesUserInputIsNotOnBoard(0);
 
         inputs = new UserInput[] { new UserInput(0, 1) };
         generator.setUserInputs(inputs);
     }
 
-    private void makeFirstInputIsNotOnField() {
-        validator.setTimesUserInputIsNotOnField(1);
+    private void makeFirstInputIsNotOnBoard() {
+        validator.setTimesUserInputIsNotOnBoard(1);
 
         inputs = new UserInput[]{ new UserInput(0, 1),
-                                  new UserInput(1, 2 ) };
+                new UserInput(1, 2 ) };
         generator.setUserInputs(inputs);
     }
 
-    private void makeSecondInputIsNotOnField() {
-        validator.setTimesUserInputIsNotOnField(2);
+    private void makeFirstAndSecondInputIsNotOnBoard() {
+        validator.setTimesUserInputIsNotOnBoard(2);
 
         inputs = new UserInput[]{ new UserInput(0, 1),
                                   new UserInput(1, 2),
