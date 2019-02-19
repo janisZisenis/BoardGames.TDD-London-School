@@ -1,8 +1,9 @@
 package com.company.IsOnBoardValidatorImp;
 
+import com.company.OnBoardInputGenerator.IsOnBoardValidator;
 import com.company.UserInput;
 
-public class IsOnBoardValidatorImp {
+public class IsOnBoardValidatorImp implements IsOnBoardValidator {
 
     private final Board board;
 

@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
+import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
 import com.company.OnBoardInputGenerator.OnBoardInputGenerator;
 
 public class Main {
@@ -12,7 +13,8 @@ public class Main {
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
-        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, null);
+        IsOnBoardValidatorImp onBoardValidator = new IsOnBoardValidatorImp(null);
+        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, onBoardValidator);
 
         BoardPrinter.print(field);
 
