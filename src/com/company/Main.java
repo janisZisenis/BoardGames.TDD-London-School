@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
-import com.company.InputGenerator.InputGenerator;
+import com.company.DefaultInputGenerator.DefaultInputGenerator;
+import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
+import com.company.OnBoardInputGenerator.OnBoardInputGenerator;
 
 public class Main {
     static char[][] field = {   {'.', '.', '.'},
@@ -10,19 +12,36 @@ public class Main {
 
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        InputGenerator generator = new InputGenerator(prompter);
+        DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
+        IsOnBoardValidatorImp onBoardValidator = new IsOnBoardValidatorImp(null);
+        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, onBoardValidator);
 
-        FieldPrinter.print(field);
+        BoardPrinter.print(field);
 
         UserInput in = generator.generateInput();
+        while(isOutOfBounds(in)) {
+            System.out.println("The inserted input is out of bounds. Please insert again!");
+            in = generator.generateInput();
+        }
         applyX(in);
 
-        FieldPrinter.print(field);
+        while(isOutOfBounds(in)) {
+            in = generator.generateInput();
+        }
+        BoardPrinter.print(field);
 
         in = generator.generateInput();
+        while(isOutOfBounds(in)) {
+            System.out.println("The inserted input is out of bounds. Please insert again!");
+            in = generator.generateInput();
+        }
         applyO(in);
 
-        FieldPrinter.print(field);
+        BoardPrinter.print(field);
+    }
+
+    private static boolean isOutOfBounds(UserInput in) {
+        return in.getColumn() < 0 || in.getColumn() > 2 || in.getRow() < 0 || in.getRow() > 2;
     }
 
     private static void applyX(UserInput in) {

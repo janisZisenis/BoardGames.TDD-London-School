@@ -1,4 +1,4 @@
-package com.company.InputGenerator;
+package com.company.DefaultInputGenerator;
 
 public interface InputPrompter {
     int promptRow();
