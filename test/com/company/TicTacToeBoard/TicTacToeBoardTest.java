@@ -6,42 +6,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TicTacToeBoardTest {
 
+    Field field;
+    TicTacToeBoard sut;
+
+    boolean actual;
+
     @Test
     void IfRowAndColumnExists_FieldShouldExist() {
-        Field field = new Field(1, 1);
-        TicTacToeBoard sut = new TicTacToeBoard();
+        field = new Field(1, 1);
+        sut = new TicTacToeBoard();
 
-        boolean actual = sut.exists(field);
+        actual = sut.exists(field);
 
         assertTrue(actual);
     }
 
     @Test
-    void IfRowIsMinus1_FieldShouldNotExist() {
-        Field field = new Field(-1, 0);
-        TicTacToeBoard sut = new TicTacToeBoard();
+    void IfRowIsNegative_FieldShouldNotExist() {
+        field = new Field(-1, 0);
+        sut = new TicTacToeBoard();
 
-        boolean actual = sut.exists(field);
-
-        assertFalse(actual);
-    }
-
-    @Test
-    void IfRowIsMinus2_FieldShouldNotExist() {
-        Field field = new Field(-2, 0);
-        TicTacToeBoard sut = new TicTacToeBoard();
-
-        boolean actual = sut.exists(field);
-
-        assertFalse(actual);
-    }
-
-    @Test
-    void IfRowIsMinus3_FieldShouldNotExist() {
-        Field field = new Field(-3, 0);
-        TicTacToeBoard sut = new TicTacToeBoard();
-
-        boolean actual = sut.exists(field);
+        actual = sut.exists(field);
 
         assertFalse(actual);
     }
