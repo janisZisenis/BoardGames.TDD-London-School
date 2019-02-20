@@ -32,28 +32,8 @@ public class TicTacToeBoardTest {
     }
 
     @Test
-    void IfRowIs3_FieldShouldNotExist() {
+    void IfRowIsBiggerThan2_FieldShouldNotExist() {
         field = new Field(3, 0);
-        sut = new TicTacToeBoard();
-
-        actual = sut.exists(field);
-
-        assertFalse(actual);
-    }
-
-    @Test
-    void IfRowIs4_FieldShouldNotExist() {
-        field = new Field(4, 0);
-        sut = new TicTacToeBoard();
-
-        actual = sut.exists(field);
-
-        assertFalse(actual);
-    }
-
-    @Test
-    void IfRowIs5_FieldShouldNotExist() {
-        field = new Field(5, 0);
         sut = new TicTacToeBoard();
 
         actual = sut.exists(field);
