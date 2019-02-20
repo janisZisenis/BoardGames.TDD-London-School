@@ -7,14 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TicTacToeBoardTest {
 
     Field field;
-    TicTacToeBoard sut;
+    TicTacToeBoard sut = new TicTacToeBoard();
 
     boolean actual;
 
     @Test
     void IfRowAndColumnExists_FieldShouldExist() {
-        field = new Field(1, 1);
-        sut = new TicTacToeBoard();
+        makeFieldExists();
 
         actual = sut.exists(field);
 
@@ -23,8 +22,7 @@ public class TicTacToeBoardTest {
 
     @Test
     void IfRowIsNegative_FieldShouldNotExist() {
-        field = new Field(-1, 0);
-        sut = new TicTacToeBoard();
+        makeFieldHasNegativeRow();
 
         actual = sut.exists(field);
 
@@ -33,8 +31,7 @@ public class TicTacToeBoardTest {
 
     @Test
     void IfRowIsBiggerThan2_FieldShouldNotExist() {
-        field = new Field(3, 0);
-        sut = new TicTacToeBoard();
+        makeFieldHasRowBiggerThan2();
 
         actual = sut.exists(field);
 
@@ -43,8 +40,7 @@ public class TicTacToeBoardTest {
 
     @Test
     void IfColumnIsNegative_FieldShouldNotExist() {
-        field = new Field(0, -1);
-        sut = new TicTacToeBoard();
+        makeFieldHasNegativeColumn();
 
         actual = sut.exists(field);
 
@@ -53,12 +49,31 @@ public class TicTacToeBoardTest {
 
     @Test
     void IfColumnIsBiggerThan2_FieldShouldNotExist() {
-        field = new Field(0, 3);
-        sut = new TicTacToeBoard();
+        makeFieldHasColumnBiggerThan2();
 
         actual = sut.exists(field);
 
         assertFalse(actual);
+    }
+
+    private void makeFieldExists() {
+        field = new Field(1, 1);
+    }
+
+    private void makeFieldHasNegativeRow() {
+        field = new Field(-1, 0);
+    }
+
+    private void makeFieldHasRowBiggerThan2() {
+        field = new Field(3, 0);
+    }
+
+    private void makeFieldHasNegativeColumn() {
+        field = new Field(0, -1);
+    }
+
+    private void makeFieldHasColumnBiggerThan2() {
+        field = new Field(0, 3);
     }
 
 }
