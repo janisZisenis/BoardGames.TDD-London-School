@@ -51,4 +51,34 @@ public class TicTacToeBoardTest {
         assertFalse(actual);
     }
 
+    @Test
+    void IfColumnIsBiggerThan3_FieldShouldNotExist() {
+        field = new Field(0, 3);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfColumnIsBiggerThan4_FieldShouldNotExist() {
+        field = new Field(0, 4);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfColumnIsBiggerThan5_FieldShouldNotExist() {
+        field = new Field(0, 5);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
 }
