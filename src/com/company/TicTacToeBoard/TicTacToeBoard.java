@@ -8,6 +8,9 @@ public class TicTacToeBoard {
         if(field.getRow() < 0)
             return false;
 
+        if(field.getColumn() < 0)
+            return false;
+
         return true;
     }
 }

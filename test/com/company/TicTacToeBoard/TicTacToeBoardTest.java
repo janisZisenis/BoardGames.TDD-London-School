@@ -31,4 +31,34 @@ public class TicTacToeBoardTest {
         assertFalse(actual);
     }
 
+    @Test
+    void IfColumnIsMinus1_FieldShouldNotExist() {
+        field = new Field(0, -1);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfColumnIsMinus2_FieldShouldNotExist() {
+        field = new Field(0, -2);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfColumnIsMinus3_FieldShouldNotExist() {
+        field = new Field(0, -3);
+        sut = new TicTacToeBoard();
+
+        actual = sut.exists(field);
+
+        assertFalse(actual);
+    }
+
 }
