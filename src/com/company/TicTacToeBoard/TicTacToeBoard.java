@@ -5,12 +5,13 @@ import com.company.IsOnBoardValidatorImp.Field;
 public class TicTacToeBoard {
 
     public boolean exists(Field field) {
-        if(field.getRow() < 0 || field.getRow() > 2)
-            return false;
-
-        if(field.getColumn() < 0 || field.getColumn() > 2)
+        if(isOutOfBounds(field.getRow()) || isOutOfBounds(field.getColumn()))
             return false;
 
         return true;
+    }
+
+    private boolean isOutOfBounds(int row) {
+        return row < 0 || row > 2;
     }
 }
