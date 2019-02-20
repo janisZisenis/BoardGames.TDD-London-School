@@ -11,6 +11,10 @@ public class TicTacToeBoard {
         if(field.getColumn() < 0)
             return false;
 
+        if(field.getRow() > 2) {
+            return false;
+        }
+
         return true;
     }
 }
