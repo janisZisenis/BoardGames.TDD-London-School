@@ -7,8 +7,6 @@ public class TicTacToeBoard {
     private Field xField = null;
     private Field oField = null;
 
-    private boolean markedO = false;
-
     public boolean exists(Field field) {
         if(isOutOfBounds(field.getRow()) || isOutOfBounds(field.getColumn()))
             return false;
@@ -22,13 +20,13 @@ public class TicTacToeBoard {
 
     public boolean isEmpty(Field field) {
         if(xField != null)
-            if(field.getRow() != 0 && field.getColumn() != 0)
+            if(!field.equals(xField))
                 return true;
         if(oField != null)
-            if(field.getRow() != 0 && field.getColumn() != 0)
+            if(!field.equals(oField))
                 return true;
 
-        return xField == null && !markedO;
+        return xField == null && oField == null;
     }
 
     public void markX(Field field) {
@@ -36,23 +34,20 @@ public class TicTacToeBoard {
     }
 
     public boolean isX(Field field) {
-        if (xField != null)
-            if(field.getRow() != 0 && field.getColumn() != 0)
-                return false;
+        if(xField == null)
+            return false;
 
-        return xField != null;
+        return field.equals(xField);
     }
 
     public boolean isO(Field field) {
-        if (oField != null)
-            if(field.getRow() != 0 && field.getColumn() != 0)
-                return false;
+        if(oField == null)
+            return false;
 
-        return markedO;
+        return field.equals(oField);
     }
 
     public void markO(Field field) {
-        markedO = true;
         oField = field;
     }
 }
