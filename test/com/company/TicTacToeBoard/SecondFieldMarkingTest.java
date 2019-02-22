@@ -13,7 +13,7 @@ public class SecondFieldMarkingTest {
 
 
     @Test
-    void Row0Column0Marked_Row1Column1ShouldBeEmpty() {
+    void _0_0_Marked_1_1ShouldBeEmpty() {
         sut = new TicTacToeBoard();
         first = new Field(0, 0);
         second = new Field(1, 1);
@@ -25,7 +25,7 @@ public class SecondFieldMarkingTest {
     }
 
     @Test
-    void Row1Column1Marked_Row0Column0ShouldBeEmpty() {
+    void _1_1Marked_0_0ShouldBeEmpty() {
         sut = new TicTacToeBoard();
         first = new Field(1, 1);
         second = new Field(0, 0);
@@ -37,7 +37,7 @@ public class SecondFieldMarkingTest {
     }
 
     @Test
-    void IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedWithX_XShouldBeStoredAtRow0Column0() {
+    void _1_1MarkedWithOAfter_0_0MarkedWithX_XShouldBeStoredAt_0_0() {
         sut = new TicTacToeBoard();
         first = new Field(0, 0);
         second = new Field(1, 1);
@@ -51,7 +51,7 @@ public class SecondFieldMarkingTest {
     }
 
     @Test
-    void IfRow1Column1GetsMarkedWith2AfterRow2Column0WasMarkedWithX_XShouldBeStoredAtRow2Column2() {
+    void _1_1MarkedWithOAfter_2_2MarkedWithX_XShouldBeStoredAt_2_2() {
         sut = new TicTacToeBoard();
         first = new Field(2, 2);
         second = new Field(1, 1);
@@ -66,7 +66,7 @@ public class SecondFieldMarkingTest {
 
 
     @Test
-    void IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_OShouldBeStoredAtRow1Column1() {
+    void _1_1MarkedWithOAfter_0_0MarkedX_OShouldBeStoredAt_1_1() {
         sut = new TicTacToeBoard();
         first = new Field(0, 0);
         second = new Field(1, 1);
@@ -80,7 +80,7 @@ public class SecondFieldMarkingTest {
     }
 
     @Test
-    void IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_OShouldBeStoredAtRow2Column2() {
+    void _1_1MarkedWithOAfter_0_0WasMarkedWithX_OShouldBeStoredAt_2_2() {
         sut = new TicTacToeBoard();
         first = new Field(0, 0);
         second = new Field(2, 2);
