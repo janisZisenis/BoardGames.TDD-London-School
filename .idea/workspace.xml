@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/TicTacToeBoard/Mark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/TicTacToe.Main/com/company/TicTacToeBoard/FirstFieldMarkingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,72 +47,52 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="342" />
-          <entry key="java" value="16343" />
+          <entry key="dummy" value="352" />
+          <entry key="java" value="16374" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16343" />
-          <entry key="PLAIN_TEXT" value="342" />
+          <entry key="JAVA" value="16374" />
+          <entry key="PLAIN_TEXT" value="352" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="175" />
+          <entry key="java" value="178" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="175" />
+          <entry key="JAVA" value="178" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="105">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <element signature="method#Row0Column0Marked_Row1Column1ShouldBeEmpty#0;class#FieldMarkingTest#0" />
-                <element signature="method#Row1Column1Marked_Row0Column0ShouldBeEmpty#0;class#FieldMarkingTest#0" />
-                <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedWithX_XShouldBeStoredAtRow0Column0#0;class#FieldMarkingTest#0" />
-                <element signature="method#IfRow1Column1GetsMarkedWith2AfterRow2Column0WasMarkedWithX_XShouldBeStoredAtRow0Column2#0;class#FieldMarkingTest#0" />
-                <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_XShouldBeStoredAtRow1Column1#0;class#FieldMarkingTest#0" />
-                <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_XShouldBeStoredAtRow2Column2#0;class#FieldMarkingTest#0" />
+                <element signature="method#FreshInstance_Row0Column0ShouldBeEmpty#0;class#FirstFieldMarkingTest#0" />
+                <element signature="method#Row0Column0Marked_ItShouldNotBeEmpty#0;class#FirstFieldMarkingTest#0" />
+                <element signature="method#Row0Column0MarkedWithX_XShouldBeStoredAtRow0Column0#0;class#FirstFieldMarkingTest#0" />
+                <element signature="method#Row0Column0MarkedWithO_OShouldBeStoredAtRow0Column0#0;class#FirstFieldMarkingTest#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/Mark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/IsOnBoardValidatorImp/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="210">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -137,9 +113,11 @@
       <find>Field</find>
       <find>field</find>
       <find>And</find>
+      <find>TicTacToeBoard.Mark</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
+      <replace>Mark</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -194,11 +172,11 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/TicTacToeMarkIsStoredTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/TicTacToeFieldMarkingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/XMarkingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToeBoard/Mark.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java" />
       </list>
     </option>
   </component>
@@ -295,7 +273,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550812532145" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550813035804" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -311,6 +289,7 @@
       <recent name="com.company.InputGenerator" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.TicTacToeBoard" />
       <recent name="com.company.ConsoleInputPrompter" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -395,7 +374,7 @@
       <workItem from="1550649810278" duration="72000" />
       <workItem from="1550668351199" duration="5892000" />
       <workItem from="1550767955331" duration="1808000" />
-      <workItem from="1550811815029" duration="716000" />
+      <workItem from="1550811815029" duration="1067000" />
     </task>
     <servers />
   </component>
@@ -432,7 +411,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35732000" />
+    <option name="totallyTimeSpent" value="36083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -484,14 +463,6 @@
           <line>9</line>
           <properties />
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java</url>
-          <line>34</line>
-          <properties class="com.company.TicTacToeBoard.FieldMarkingTest" method="Row0Column0MarkedWithX_XShouldBeStoredAtRow0Column0">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -669,7 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" />
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/TicTacToeFieldExistsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="664">
@@ -683,6 +653,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/Mark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/IsOnBoardValidatorImp/Field.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -690,32 +674,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldMarkingTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="210">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
-            <element signature="method#Row0Column0Marked_Row1Column1ShouldBeEmpty#0;class#FieldMarkingTest#0" />
-            <element signature="method#Row1Column1Marked_Row0Column0ShouldBeEmpty#0;class#FieldMarkingTest#0" />
-            <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedWithX_XShouldBeStoredAtRow0Column0#0;class#FieldMarkingTest#0" />
-            <element signature="method#IfRow1Column1GetsMarkedWith2AfterRow2Column0WasMarkedWithX_XShouldBeStoredAtRow0Column2#0;class#FieldMarkingTest#0" />
-            <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_XShouldBeStoredAtRow1Column1#0;class#FieldMarkingTest#0" />
-            <element signature="method#IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedX_XShouldBeStoredAtRow2Column2#0;class#FieldMarkingTest#0" />
+            <element signature="method#FreshInstance_Row0Column0ShouldBeEmpty#0;class#FirstFieldMarkingTest#0" />
+            <element signature="method#Row0Column0Marked_ItShouldNotBeEmpty#0;class#FirstFieldMarkingTest#0" />
+            <element signature="method#Row0Column0MarkedWithX_XShouldBeStoredAtRow0Column0#0;class#FirstFieldMarkingTest#0" />
+            <element signature="method#Row0Column0MarkedWithO_OShouldBeStoredAtRow0Column0#0;class#FirstFieldMarkingTest#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/Mark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>

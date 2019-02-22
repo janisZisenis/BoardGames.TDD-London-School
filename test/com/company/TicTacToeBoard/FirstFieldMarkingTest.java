@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FirstFieldMarkingTest {
 
     TicTacToeBoard sut = new TicTacToeBoard();
-    Field field;
+    Field field = new Field(1, 2);
 
     @Test
-    void FreshInstance_Row0Column0ShouldBeEmpty() {
+    void FreshInstance_FieldShouldBeEmpty() {
         sut = new TicTacToeBoard();
         field = new Field(0, 0);
 
@@ -21,10 +21,7 @@ public class FirstFieldMarkingTest {
     }
 
     @Test
-    void Row0Column0Marked_ItShouldNotBeEmpty() {
-        sut = new TicTacToeBoard();
-        field = new Field(0, 0);
-
+    void FieldIsMarked_ItShouldNotBeEmpty() {
         sut.mark(field, Mark.X);
 
         boolean actual = sut.isEmpty(field);
@@ -32,10 +29,7 @@ public class FirstFieldMarkingTest {
     }
 
     @Test
-    void Row0Column0MarkedWithX_XShouldBeStoredAtRow0Column0() {
-        sut = new TicTacToeBoard();
-        field = new Field(0, 0);
-
+    void FieldGetsMarkedWithX_XShouldBeStoredAtField() {
         sut.mark(field, Mark.X);
 
         Mark actual = sut.getMarkAt(field);
@@ -44,10 +38,7 @@ public class FirstFieldMarkingTest {
     }
 
     @Test
-    void Row0Column0MarkedWithO_OShouldBeStoredAtRow0Column0() {
-        sut = new TicTacToeBoard();
-        field = new Field(0, 0);
-
+    void FieldGetsMarkedWithO_OShouldBeStoredAtField() {
         sut.mark(field, Mark.O);
 
         Mark actual = sut.getMarkAt(field);

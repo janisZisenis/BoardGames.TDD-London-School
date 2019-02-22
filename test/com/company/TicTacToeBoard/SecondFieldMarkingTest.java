@@ -36,8 +36,6 @@ public class SecondFieldMarkingTest {
         assertTrue(actual);
     }
 
-
-
     @Test
     void IfRow1Column1GetsMarkedWithOAfterRow0Column0WasMarkedWithX_XShouldBeStoredAtRow0Column0() {
         sut = new TicTacToeBoard();
