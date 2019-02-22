@@ -4,7 +4,7 @@ import com.company.IsOnBoardValidatorImp.Field;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TicTacToeFieldExistsTest {
+public class FieldExistsTest {
 
     Field field;
     TicTacToeBoard sut = new TicTacToeBoard();
