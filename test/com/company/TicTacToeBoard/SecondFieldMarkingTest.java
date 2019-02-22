@@ -11,7 +11,6 @@ public class SecondFieldMarkingTest {
     Field first;
     Field second;
 
-
     @Test
     void _0_0_Marked_1_1ShouldBeEmpty() {
         sut = new TicTacToeBoard();
@@ -33,6 +32,33 @@ public class SecondFieldMarkingTest {
         sut.mark(first, Mark.X);
 
         boolean actual = sut.isEmpty(second);
+        assertTrue(actual);
+    }
+
+    @Test
+    void _1_1MarkedAfter_0_0WasMarked_1_1ShouldNotBeEmpty() {
+        sut = new TicTacToeBoard();
+        first = new Field(0, 0);
+        second = new Field(1, 1);
+        sut.mark(first, Mark.X);
+
+        sut.mark(second, Mark.O);
+
+        boolean actual = sut.isEmpty(second);
+        assertFalse(actual);
+    }
+
+    @Test
+    void _1_1MarkedAfter_0_0WasMarked_2_2ShouldBeEmpty() {
+        sut = new TicTacToeBoard();
+        first = new Field(0, 0);
+        second = new Field(1, 1);
+        Field anotherField = new Field(2, 2);
+        sut.mark(first, Mark.X);
+
+        sut.mark(second, Mark.O);
+
+        boolean actual = sut.isEmpty(anotherField);
         assertTrue(actual);
     }
 
@@ -64,7 +90,6 @@ public class SecondFieldMarkingTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     void _1_1MarkedWithOAfter_0_0MarkedX_OShouldBeStoredAt_1_1() {
         sut = new TicTacToeBoard();
@@ -92,6 +117,5 @@ public class SecondFieldMarkingTest {
         Mark expected = Mark.O;
         assertEquals(expected, actual);
     }
-
 
 }

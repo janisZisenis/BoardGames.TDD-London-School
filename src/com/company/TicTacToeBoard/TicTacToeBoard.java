@@ -25,6 +25,9 @@ public class TicTacToeBoard {
         if(firstField != null)
             if(field.equals(firstField))
                 return false;
+        if(secondField != null)
+            if(field.equals(secondField))
+                return false;
         return true;
     }
 
@@ -33,18 +36,19 @@ public class TicTacToeBoard {
             this.first = m;
             this.firstField = f;
         }
-        else {
+        else if(second == null) {
             secondField = f;
             second = m;
         }
     }
 
     public Mark getMarkAt(Field field) {
+        if(first != null && field.equals(firstField))
+            return first;
+
         if(second != null && field.equals(secondField))
             return second;
 
-        if(first != null && field.equals(firstField))
-            return first;
 
         return null;
     }
