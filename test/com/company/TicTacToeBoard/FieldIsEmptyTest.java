@@ -7,106 +7,86 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldIsEmptyTest {
 
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field first = new Field(1, 2);
+    private Field second = new Field(1, 3);
+    private Field third = new Field(2, 1);
+    private Field fourth = new Field(2, 2);
+
     @Test
     void FreshInstance_FieldShouldBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field field = new Field(1, 2);
-
-        boolean actual = sut.isEmpty(field);
+        boolean actual = sut.isEmpty(first);
         assertTrue(actual);
     }
 
     @Test
-    void FieldIsMarked_ItShouldNotBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field field = new Field(1, 2);
-
-        sut.mark(field, Mark.X);
-
-        boolean actual = sut.isEmpty(field);
-        assertFalse(actual);
-    }
-
-    @Test
-    void FieldIsMarked_ASecondFieldShouldBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
-
-        sut.mark(first, Mark.X);
-
-        boolean actual = sut.isEmpty(second);
-        assertTrue(actual);
-    }
-
-    @Test
-    void TwoFieldsAreMarked_FirstFieldShouldNotBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
-
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.X);
+    void IfOneFieldIsMarked_ItShouldNotBeEmpty() {
+        makeOneFieldMarked();
 
         boolean actual = sut.isEmpty(first);
         assertFalse(actual);
     }
 
     @Test
-    void TwoFieldsAreMarked_SecondFieldShouldNotBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
+    void IfOneFieldIsMarked_ASecondFieldShouldBeEmpty() {
+        makeOneFieldMarked();
 
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.X);
+        boolean actual = sut.isEmpty(second);
+        assertTrue(actual);
+    }
+
+    @Test
+    void IfTwoFieldsAreMarked_FirstFieldShouldNotBeEmpty() {
+        makeTwoFieldsMarked();
+
+        boolean actual = sut.isEmpty(first);
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfTwoFieldsAreMarked_SecondFieldShouldNotBeEmpty() {
+        makeTwoFieldsMarked();
 
         boolean actual = sut.isEmpty(second);
         assertFalse(actual);
     }
 
     @Test
-    void TwoFieldsAreMarked_ThirdFieldShouldBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
-        Field third = new Field(2, 1);
-
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.X);
+    void IfTwoFieldsAreMarked_ThirdFieldShouldBeEmpty() {
+        makeTwoFieldsMarked();
 
         boolean actual = sut.isEmpty(third);
         assertTrue(actual);
     }
 
     @Test
-    void ThreeFieldsAreMarked_ThirdFieldShouldNotBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
-        Field third = new Field(2, 1);
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.X);
-        sut.mark(third, Mark.X);
+    void IfThreeFieldsAreMarked_ThirdFieldShouldNotBeEmpty() {
+        markThreeFields();
 
         boolean actual = sut.isEmpty(third);
         assertFalse(actual);
     }
 
     @Test
-    void ThreeFieldsAreMarked_FourthFieldShouldBeEmpty() {
-        TicTacToeBoard sut = new TicTacToeBoard();
-        Field first = new Field(1, 2);
-        Field second = new Field(1, 3);
-        Field third = new Field(2, 1);
-        Field fourth = new Field(2, 2);
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.X);
-        sut.mark(third, Mark.X);
+    void IfThreeFieldsAreMarked_FourthFieldShouldBeEmpty() {
+        markThreeFields();
 
         boolean actual = sut.isEmpty(fourth);
         assertTrue(actual);
     }
 
+    private void makeOneFieldMarked() {
+        sut.mark(first, Mark.X);
+    }
+
+    private void makeTwoFieldsMarked() {
+        makeOneFieldMarked();
+        sut.mark(second, Mark.X);
+    }
+
+    private void markThreeFields() {
+        makeTwoFieldsMarked();
+        sut.mark(third, Mark.X);
+    }
 
 }
