@@ -2,6 +2,7 @@ package com.company.TicTacToeBoard;
 
 import com.company.IsOnBoardValidatorImp.Field;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +10,7 @@ public class FieldIsEmptyTest {
 
     private TicTacToeBoard sut = new TicTacToeBoard();
     private Field first = new Field(1, 2);
-    private Field second = new Field(1, 3);
+    private Field second = new Field(0, 1);
     private Field third = new Field(2, 1);
     private Field fourth = new Field(2, 2);
 
@@ -74,6 +75,44 @@ public class FieldIsEmptyTest {
         boolean actual = sut.isEmpty(fourth);
         assertTrue(actual);
     }
+
+    @Test
+    void IfRowIsNegative_ShouldThrowException() {
+        Field field = new Field(-1, 0);
+
+        Executable act = () -> sut.isEmpty(field);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
+
+    @Test
+    void IfColumnIsNegative_ShouldThrowException() {
+        Field field = new Field(0, -1);
+
+        Executable act = () -> sut.isEmpty(field);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
+
+    @Test
+    void IfRowIsBiggerThan2_ShouldThrowException() {
+        Field field = new Field(3, 0);
+
+        Executable act = () -> sut.isEmpty(field);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
+
+    @Test
+    void IfColumnIsBiggerThan2_ShouldThrowException() {
+        Field field = new Field(0, 3);
+
+        Executable act = () -> sut.isEmpty(field);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
+
+
 
     private void makeOneFieldMarked() {
         sut.mark(first, Mark.X);

@@ -56,6 +56,7 @@ public class FieldExistsTest {
         assertFalse(actual);
     }
 
+
     private void makeFieldExists() {
         field = new Field(1, 1);
     }

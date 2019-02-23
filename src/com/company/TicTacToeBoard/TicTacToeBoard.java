@@ -20,6 +20,11 @@ public class TicTacToeBoard {
     }
 
     public boolean isEmpty(Field f) {
+        throwIfFieldDoesNotExist(f);
+        return fieldWasMarked(f);
+    }
+
+    private boolean fieldWasMarked(Field f) {
         for(int i = 0; fields.size() >= i + 1; i++)
             if (fields.get(i).equals(f))
                 return false;
@@ -27,8 +32,14 @@ public class TicTacToeBoard {
         return true;
     }
 
+    private void throwIfFieldDoesNotExist(Field f) {
+        if(!exists(f))
+            throw new FieldDoesNotExist();
+    }
+
     public void mark(Field f, Mark m) {
         fields.add(f);
     }
 
+    public class FieldDoesNotExist extends RuntimeException {}
 }
