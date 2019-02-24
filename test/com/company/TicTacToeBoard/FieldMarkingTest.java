@@ -2,8 +2,10 @@ package com.company.TicTacToeBoard;
 
 import com.company.IsOnBoardValidatorImp.Field;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FieldMarkingTest {
 
@@ -92,6 +94,15 @@ public class FieldMarkingTest {
         Mark actual = sut.getMarkAt(third);
         Mark expected = Mark.O;
         assertEquals(expected, actual);
+    }
+
+    @Test
+    void FreshInstance_mark_ShouldThrowException() {
+        Field field = new Field(1, 2);
+
+        Executable act = () -> sut.getMarkAt(field);
+
+        assertThrows(TicTacToeBoard.FieldIsEmpty.class, act);
     }
 
 }

@@ -60,9 +60,13 @@ public class TicTacToeBoard {
         if(second != null)
             if(field.equals(fields.get(1)))
             return second;
+        if(third != null)
+            return third;
 
-        return third;
+        throw new FieldIsEmpty();
     }
 
     public class FieldDoesNotExist extends RuntimeException {}
+
+    public class FieldIsEmpty extends RuntimeException {}
 }
