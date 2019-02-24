@@ -1,13 +1,13 @@
-package com.company.IsOnBoardValidatorImp;
+package com.company.IsOnBoardValidator;
 
 import com.company.UserInput;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class IsOnBoardValidatorImpTest {
+public class IsOnBoardValidatorTest {
 
     BoardStub board = new BoardStub();
-    IsOnBoardValidatorImp sut = new IsOnBoardValidatorImp(board);
+    IsOnBoardValidator sut = new IsOnBoardValidator(board);
     UserInput input = new UserInput(0, 1);
 
     @Test

@@ -5,8 +5,8 @@ import com.company.CLImp.ConsoleAlerter;
 import com.company.CLImp.ConsoleInputPrompter;
 import com.company.Constants.AlertingMessages;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
-import com.company.IsOnBoardValidatorImp.Field;
-import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
+import com.company.IsOnBoardValidator.Field;
+import com.company.IsOnBoardValidator.IsOnBoardValidator;
 import com.company.TicTacToeBoard.Player;
 import com.company.TicTacToeBoard.TicTacToeBoard;
 
@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
-        IsOnBoardValidatorImp validator = new IsOnBoardValidatorImp(board);
+        IsOnBoardValidator validator = new IsOnBoardValidator(board);
         ConsoleAlerter alerter = new ConsoleAlerter();
         AlertingValidator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
 

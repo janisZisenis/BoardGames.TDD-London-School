@@ -1,15 +1,13 @@
-package com.company.IsOnBoardValidatorImp;
+package com.company.IsOnBoardValidator;
 
 import com.company.AlertingValidator.Validator;
-import com.company.OnBoardInputGenerator.IsOnBoardValidator;
 import com.company.UserInput;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 
-public class IsOnBoardValidatorImp implements IsOnBoardValidator, Validator {
+public class IsOnBoardValidator implements Validator {
 
     private final Board board;
 
-    public IsOnBoardValidatorImp(Board board) {
+    public IsOnBoardValidator(Board board) {
         this.board = board;
     }
 

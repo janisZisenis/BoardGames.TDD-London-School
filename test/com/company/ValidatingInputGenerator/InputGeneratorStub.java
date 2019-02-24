@@ -1,4 +1,4 @@
-package com.company.OnBoardInputGenerator;
+package com.company.ValidatingInputGenerator;
 
 import com.company.UserInput;
 

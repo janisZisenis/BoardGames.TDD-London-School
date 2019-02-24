@@ -1,4 +1,4 @@
-package com.company.IsOnBoardValidatorImp;
+package com.company.IsOnBoardValidator;
 
 public class BoardStub implements Board {
     private boolean fieldIsOnBoard = false;

@@ -1,6 +1,6 @@
 package com.company.DefaultInputGenerator;
 
-import com.company.OnBoardInputGenerator.InputGenerator;
+import com.company.ValidatingInputGenerator.InputGenerator;
 import com.company.UserInput;
 
 public class DefaultInputGenerator implements InputGenerator {

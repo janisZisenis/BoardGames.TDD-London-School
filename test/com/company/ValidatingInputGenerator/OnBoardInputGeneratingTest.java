@@ -1,4 +1,4 @@
-package com.company.OnBoardInputGenerator;
+package com.company.ValidatingInputGenerator;
 
 import com.company.UserInput;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ public class OnBoardInputGeneratingTest {
 
     InputGeneratorStub generator = new InputGeneratorStub();
     IsOnBoardValidatorStub validator = new IsOnBoardValidatorStub();
-    OnBoardInputGenerator sut = new OnBoardInputGenerator(generator, validator);
+    ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
     UserInput[] inputs;
 
@@ -44,14 +44,14 @@ public class OnBoardInputGeneratingTest {
     }
 
     private void makeFirstUserInputIsOnBoard() {
-        validator.setTimesUserInputIsNotOnBoard(0);
+        validator.setTimesUserInputIsInvalid(0);
 
         inputs = new UserInput[] { new UserInput(0, 1) };
         generator.setUserInputs(inputs);
     }
 
     private void makeFirstInputIsNotOnBoard() {
-        validator.setTimesUserInputIsNotOnBoard(1);
+        validator.setTimesUserInputIsInvalid(1);
 
         inputs = new UserInput[]{ new UserInput(0, 1),
                                   new UserInput(1, 2) };
@@ -59,7 +59,7 @@ public class OnBoardInputGeneratingTest {
     }
 
     private void makeFirstAndSecondInputIsNotOnBoard() {
-        validator.setTimesUserInputIsNotOnBoard(2);
+        validator.setTimesUserInputIsInvalid(2);
 
         inputs = new UserInput[]{ new UserInput(0, 1),
                                   new UserInput(1, 2),

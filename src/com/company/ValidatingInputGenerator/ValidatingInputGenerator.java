@@ -1,12 +1,13 @@
-package com.company.OnBoardInputGenerator;
+package com.company.ValidatingInputGenerator;
 
+import com.company.AlertingValidator.Validator;
 import com.company.UserInput;
 
-public class OnBoardInputGenerator {
+public class ValidatingInputGenerator {
     private InputGenerator generator;
-    private IsOnBoardValidator validator;
+    private Validator validator;
 
-    public OnBoardInputGenerator(InputGenerator generator, IsOnBoardValidator validator) {
+    public ValidatingInputGenerator(InputGenerator generator, Validator validator) {
         this.generator = generator;
         this.validator = validator;
     }

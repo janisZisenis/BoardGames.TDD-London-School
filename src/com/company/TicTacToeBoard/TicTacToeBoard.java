@@ -1,7 +1,7 @@
 package com.company.TicTacToeBoard;
 
-import com.company.IsOnBoardValidatorImp.Board;
-import com.company.IsOnBoardValidatorImp.Field;
+import com.company.IsOnBoardValidator.Board;
+import com.company.IsOnBoardValidator.Field;
 
 import java.util.HashMap;
 
