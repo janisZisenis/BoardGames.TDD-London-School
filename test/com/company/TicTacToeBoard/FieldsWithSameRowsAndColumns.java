@@ -13,7 +13,7 @@ public class FieldsWithSameRowsAndColumns {
 
     @Test
     void IfFieldGetsMarked_ASimilarFieldShouldNotBeEmpty() {
-        sut.mark(field, Mark.X);
+        sut.mark(field, Mark.John);
 
         boolean actual = sut.isEmpty(similar);
         assertFalse(actual);
@@ -21,10 +21,10 @@ public class FieldsWithSameRowsAndColumns {
 
     @Test
     void IfAFieldGetsMarked_SimilarFieldShouldHaveTheSameMark() {
-        sut.mark(field, Mark.X);
+        sut.mark(field, Mark.John);
 
         Mark actual = sut.getMarkAt(similar);
-        Mark expected = Mark.X;
+        Mark expected = Mark.John;
         assertEquals(expected, actual);
     }
 

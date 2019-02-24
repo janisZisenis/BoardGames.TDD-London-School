@@ -2,7 +2,6 @@ package com.company.TicTacToeBoard;
 
 import com.company.IsOnBoardValidatorImp.Field;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -15,88 +14,97 @@ public class FieldMarkingTest {
     private Field second = new Field(1, 2);
     private Field third = new Field(1, 1);
 
+
     @Test
-    void FreshInstance_getMarkAt_ShouldThrowException() {
-        Field field = new Field(1, 2);
+    void IfJohnMarksField_ItShouldBeJohns() {
+        sut.mark(first, Mark.John);
 
-        Executable act = () -> sut.getMarkAt(field);
-
-        assertThrows(TicTacToeBoard.FieldIsEmpty.class, act);
+        assertIsJohns(first);
     }
 
     @Test
-    void IfFieldGetsMarkedWithX_XShouldBeStoredAtField() {
-        sut.mark(first, Mark.X);
+    void IfHaleyMarksField_ItShouldBeHaleys() {
+        sut.mark(first, Mark.Haley);
 
+        assertIsHaleys(first);
+    }
+
+    @Test
+    void IfJohnMarksSecondAfterHaleyMarkedFirst_FirstFieldShouldBeHaleys() {
+        makeHaleyMarkedFirst();
+
+        sut.mark(second, Mark.John);
+
+        assertIsHaleys(first);
+    }
+
+    @Test
+    void IfHaleyMarksSecondAfterJohnMarkedFirst_SecondFieldShouldBeHaleys() {
+        makeJohnMarkedFirst();
+
+        sut.mark(second, Mark.Haley);
+
+        assertIsHaleys(second);
+    }
+
+    @Test
+    void IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_SecondFieldShouldBeHaleys() {
+        makeJohnMarkedFirstAndHaleyMarkedSecond();
+
+        sut.mark(third, Mark.John);
+
+        assertIsHaleys(second);
+    }
+
+    @Test
+    void IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_ThirdFieldShouldBeJohns() {
+        makeJohnMarkedFirstAndHaleyMarkedSecond();
+
+        sut.mark(third, Mark.John);
+
+        assertIsJohns(third);
+    }
+
+    @Test
+    void IfHaleyMarksThirdAfterJohnMarkedSecondAndHaleyMarkedFirst_ThirdFieldShouldBeHaleys() {
+        makeHaleyMarkedFirstAndJohnMarkedSecond();
+
+        sut.mark(third, Mark.Haley);
+
+        assertIsHaleys(third);
+    }
+
+
+    private void makeHaleyMarkedFirst() {
+        sut.mark(first, Mark.Haley);
+    }
+
+    private void makeJohnMarkedFirst() {
+        sut.mark(first, Mark.John);
+    }
+
+    private void makeJohnMarkedFirstAndHaleyMarkedSecond() {
+        makeJohnMarkedFirst();
+        sut.mark(second, Mark.Haley);
+    }
+
+    private void makeHaleyMarkedFirstAndJohnMarkedSecond() {
+        makeHaleyMarkedFirst();
+        sut.mark(second, Mark.John);
+    }
+
+
+    private void assertIsJohns(Field f) {
+        assertFieldHasMark(first, Mark.John);
+    }
+
+    private void assertIsHaleys(Field f) {
+        assertFieldHasMark(f, Mark.Haley);
+    }
+
+    private void assertFieldHasMark(Field first, Mark x) {
         Mark actual = sut.getMarkAt(first);
-        Mark expected = Mark.X;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void IfFieldGetsMarkedWithO_OShouldBeStoredAtField() {
-        sut.mark(first, Mark.O);
-
-        Mark actual = sut.getMarkAt(first);
-        Mark expected = Mark.O;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void FirstFieldWasMarkedWithO_SecondFieldGetsMarkedWithX_OShouldBeStoredAtFirstField() {
-        sut.mark(first, Mark.O);
-
-        sut.mark(second, Mark.X);
-
-        Mark actual = sut.getMarkAt(first);
-        Mark expected = Mark.O;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void FirstFieldWasMarkedWithX_SecondFieldGetsMarkedWithO_OShouldBeStoredAtSecondField() {
-        sut.mark(first, Mark.X);
-
-        sut.mark(second, Mark.O);
-
-        Mark actual = sut.getMarkAt(second);
-        Mark expected = Mark.O;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void FirstFieldWasMarkedWithX_SecondFieldGetsMarkedWithO_ThirdFieldGetsMarkedWithX_OShouldBeStoredAtSecondField() {
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.O);
-
-        sut.mark(third, Mark.X);
-
-        Mark actual = sut.getMarkAt(second);
-        Mark expected = Mark.O;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void FirstFieldWasMarkedWithX_SecondFieldGetsMarkedWithO_ThirdFieldGetsMarkedWithX_XShouldBeStoredAtThirdField() {
-        sut.mark(first, Mark.X);
-        sut.mark(second, Mark.O);
-
-        sut.mark(third, Mark.X);
-
-        Mark actual = sut.getMarkAt(third);
-        Mark expected = Mark.X;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void FirstFieldWasMarkedWithO_SecondFieldGetsMarkedWithX_ThirdFieldGetsMarkedWithO_OShouldBeStoredAtThirdField() {
-        sut.mark(first, Mark.O);
-        sut.mark(second, Mark.X);
-
-        sut.mark(third, Mark.O);
-
-        Mark actual = sut.getMarkAt(third);
-        Mark expected = Mark.O;
+        Mark expected = x;
         assertEquals(expected, actual);
     }
 

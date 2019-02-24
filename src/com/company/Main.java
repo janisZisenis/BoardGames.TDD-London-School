@@ -55,11 +55,11 @@ public class Main {
 
     //Player
     private static void applyX(Field f) {
-        mark(Mark.X, f);
+        mark(Mark.John, f);
     }
 
     private static void applyO(Field f) {
-        mark(Mark.O, f);
+        mark(Mark.Haley, f);
     }
 
     private static void mark(Mark m, Field f) {
@@ -89,7 +89,7 @@ public class Main {
     }
 
     private static char map(Mark m) {
-        return (m == Mark.X) ? 'X' : 'O';
+        return (m == Mark.John) ? 'X' : 'O';
     }
 
 }

@@ -11,7 +11,6 @@ public class FieldIsEmptyTest {
     private Field first = new Field(1, 2);
     private Field second = new Field(0, 1);
     private Field third = new Field(2, 1);
-    private Field fourth = new Field(2, 2);
 
     @Test
     void FreshInstance_FieldShouldBeEmpty() {
@@ -67,27 +66,19 @@ public class FieldIsEmptyTest {
         assertFalse(actual);
     }
 
-    @Test
-    void IfThreeFieldsAreMarked_FourthFieldShouldBeEmpty() {
-        markThreeFields();
-
-        boolean actual = sut.isEmpty(fourth);
-        assertTrue(actual);
-    }
-
 
     private void makeOneFieldMarked() {
-        sut.mark(first, Mark.X);
+        sut.mark(first, Mark.John);
     }
 
     private void makeTwoFieldsMarked() {
         makeOneFieldMarked();
-        sut.mark(second, Mark.X);
+        sut.mark(second, Mark.John);
     }
 
     private void markThreeFields() {
         makeTwoFieldsMarked();
-        sut.mark(third, Mark.X);
+        sut.mark(third, Mark.John);
     }
 
 }

@@ -2,6 +2,8 @@ package com.company.TicTacToeBoard;
 
 import com.company.IsOnBoardValidatorImp.Field;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldHasExistingRowAndColumn {
@@ -16,4 +18,10 @@ public class FieldHasExistingRowAndColumn {
         assertTrue(actual);
     }
 
+    @Test
+    void FreshInstance_getMarkAt_ShouldThrowException() {
+        Executable act = () -> sut.getMarkAt(field);
+
+        assertThrows(TicTacToeBoard.FieldIsEmpty.class, act);
+    }
 }
