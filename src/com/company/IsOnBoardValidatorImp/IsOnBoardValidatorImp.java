@@ -2,6 +2,7 @@ package com.company.IsOnBoardValidatorImp;
 
 import com.company.OnBoardInputGenerator.IsOnBoardValidator;
 import com.company.UserInput;
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 
 public class IsOnBoardValidatorImp implements IsOnBoardValidator {
 
@@ -11,12 +12,15 @@ public class IsOnBoardValidatorImp implements IsOnBoardValidator {
         this.board = board;
     }
 
-    public boolean isOnBoard(UserInput input) {
-        int row = input.getRow();
-        int column = input.getColumn();
-
-        Field f = new Field(row, column);
-
+    public boolean isOnBoard(UserInput in) {
+        Field f = makeField(in);
         return board.exists(f);
+    }
+
+    private Field makeField(UserInput in) {
+        int row = in.getRow();
+        int column = in.getColumn();
+
+        return new Field(row, column);
     }
 }

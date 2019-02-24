@@ -20,9 +20,10 @@ public class Main {
 
         UserInput in = generator.generateInput();
         Field f = makeField(in);
-        while(!board.exists(f)) {
+        while(!validator.isOnBoard(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
+            f = makeField(in);
         }
         applyJohn(f);
 
@@ -31,9 +32,10 @@ public class Main {
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!board.exists(f)) {
+        while(!validator.isOnBoard(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
+            f = makeField(in);
         }
         applyHaley(f);
 
@@ -41,9 +43,10 @@ public class Main {
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!board.exists(f)) {
+        while(!validator.isOnBoard(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
+            f = makeField(in);
         }
         applyJohn(f);
 
