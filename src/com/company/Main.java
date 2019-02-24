@@ -1,59 +1,97 @@
 package com.company;
 
-import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
+import com.company.AlertingValidator.AlertingValidator;
+import com.company.AlertingValidator.Validator;
+import com.company.CLImp.ConsoleAlerter;
+import com.company.CLImp.ConsoleInputPrompter;
+import com.company.Constants.AlertingMessages;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
-import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
-import com.company.OnBoardInputGenerator.OnBoardInputGenerator;
+import com.company.IsOnBoardValidator.Field;
+import com.company.IsOnBoardValidator.IsOnBoardValidator;
+import com.company.TicTacToeBoard.Player;
+import com.company.TicTacToeBoard.TicTacToeBoard;
+import com.company.ValidatingInputGenerator.InputGenerator;
+import com.company.ValidatingInputGenerator.ValidatingInputGenerator;
 
 public class Main {
-    static char[][] field = {   {'.', '.', '.'},
-                                {'.', '.', '.'},
-                                {'.', '.', '.'}   };
+
+    static TicTacToeBoard board = new TicTacToeBoard();
+
+    private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
+        ConsoleAlerter alerter = new ConsoleAlerter();
+        Validator validator = new IsOnBoardValidator(board);
+        Validator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
+
+        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
+        InputGenerator generator = new DefaultInputGenerator(prompter);
+        return new ValidatingInputGenerator(generator, alerting);
+    }
 
     public static void main(String[] args) {
-        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
-        IsOnBoardValidatorImp onBoardValidator = new IsOnBoardValidatorImp(null);
-        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, onBoardValidator);
+        InputGenerator generator = makeTicTacToeInputGenerator(board);
 
-        BoardPrinter.print(field);
+        print(board);
 
         UserInput in = generator.generateInput();
-        while(isOutOfBounds(in)) {
-            System.out.println("The inserted input is out of bounds. Please insert again!");
-            in = generator.generateInput();
-        }
-        applyX(in);
+        Field f = makeField(in);
+        applyJohn(f);
 
-        while(isOutOfBounds(in)) {
-            in = generator.generateInput();
-        }
-        BoardPrinter.print(field);
+        print(board);
 
         in = generator.generateInput();
-        while(isOutOfBounds(in)) {
-            System.out.println("The inserted input is out of bounds. Please insert again!");
-            in = generator.generateInput();
+        f = makeField(in);
+        applyHaley(f);
+
+        print(board);
+
+        in = generator.generateInput();
+        f = makeField(in);
+        applyJohn(f);
+
+        print(board);
+    }
+
+
+    //Player
+    private static void applyJohn(Field f) {
+        mark(Player.John, f);
+    }
+
+    private static void applyHaley(Field f) {
+        mark(Player.Haley, f);
+    }
+
+    private static void mark(Player m, Field f) {
+        board.mark(f, m);
+    }
+
+    private static Field makeField(UserInput in) {
+        return new Field(in.getRow(), in.getColumn());
+    }
+
+    //Printer
+    public static void print(TicTacToeBoard board) {
+        for(int row = 0; row < 3; row++) {
+            printRow(row, board);
         }
-        applyO(in);
-
-        BoardPrinter.print(field);
     }
 
-    private static boolean isOutOfBounds(UserInput in) {
-        return in.getColumn() < 0 || in.getColumn() > 2 || in.getRow() < 0 || in.getRow() > 2;
+    public static void printRow(int row, TicTacToeBoard board) {
+        for(int col = 0; col < 3; col++) {
+            Field f = new Field(row, col);
+            if(board.isEmpty(f)) {
+                System.out.print('.');
+            }
+            else {
+                char c = map(Main.board.getMarkAt(f));
+                System.out.print(c);
+            }
+        }
+        System.out.print('\n');
     }
 
-    private static void applyX(UserInput in) {
-        applyFor('X', in);
-    }
-
-    private static void applyO(UserInput in) {
-        applyFor('O', in);
-    }
-
-    private static void applyFor(char player, UserInput in) {
-        field[in.getRow()][in.getColumn()] = player;
+    private static char map(Player m) {
+        return (m == Player.John) ? 'X' : 'O';
     }
 
 }
