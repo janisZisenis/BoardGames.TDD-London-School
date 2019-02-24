@@ -54,7 +54,7 @@ public class OnBoardInputGeneratingTest {
         validator.setTimesUserInputIsNotOnBoard(1);
 
         inputs = new UserInput[]{ new UserInput(0, 1),
-                new UserInput(1, 2 ) };
+                                  new UserInput(1, 2) };
         generator.setUserInputs(inputs);
     }
 

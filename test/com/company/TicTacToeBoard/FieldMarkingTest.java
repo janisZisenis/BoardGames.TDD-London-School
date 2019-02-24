@@ -14,7 +14,6 @@ public class FieldMarkingTest {
     private Field second = new Field(1, 2);
     private Field third = new Field(1, 1);
 
-
     @Test
     void IfJohnMarksField_ItShouldBeJohns() {
         sut.mark(first, Mark.John);
