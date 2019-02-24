@@ -3,6 +3,7 @@ package com.company;
 import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
 import com.company.IsOnBoardValidatorImp.Field;
+import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
 import com.company.TicTacToeBoard.Mark;
 import com.company.TicTacToeBoard.TicTacToeBoard;
 
@@ -13,6 +14,7 @@ public class Main {
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
+        IsOnBoardValidatorImp validator = new IsOnBoardValidatorImp(board);
 
         print(board);
 

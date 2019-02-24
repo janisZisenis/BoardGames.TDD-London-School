@@ -1,16 +1,17 @@
 package com.company.TicTacToeBoard;
 
+import com.company.IsOnBoardValidatorImp.Board;
 import com.company.IsOnBoardValidatorImp.Field;
 
 import java.util.HashMap;
 
-public class TicTacToeBoard {
+public class TicTacToeBoard implements Board {
 
-    private HashMap<Field, Mark> markedFields = new HashMap<Field, Mark>();
+    private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
-    public boolean exists(Field field) {
-        int row = field.getRow();
-        int col = field.getColumn();
+    public boolean exists(Field f) {
+        int row = f.getRow();
+        int col = f.getColumn();
 
         if(isOutOfBounds(row) || isOutOfBounds(col))
             return false;
@@ -28,22 +29,22 @@ public class TicTacToeBoard {
         store(f, m);
     }
 
-    public Mark getMarkAt(Field field) {
-        throwIfFieldDoesNotExist(field);
+    public Mark getMarkAt(Field f) {
+        throwIfFieldDoesNotExist(f);
 
-        if(markedFields.keySet().contains(field))
-            return markedFields.get(field);
+        if(fields.keySet().contains(f))
+            return fields.get(f);
 
         throw new FieldIsEmpty();
     }
 
 
-    private boolean isOutOfBounds(int row) {
-        return row < 0 || row > 2;
+    private boolean isOutOfBounds(int pos) {
+        return pos < 0 || pos > 2;
     }
 
     private boolean fieldWasNotMarked(Field f) {
-        return !markedFields.keySet().contains(f);
+        return !fields.keySet().contains(f);
     }
 
     private void throwIfFieldDoesNotExist(Field f) {
@@ -53,7 +54,7 @@ public class TicTacToeBoard {
 
 
     private void store(Field f, Mark m) {
-        markedFields.put(f, m);
+        fields.put(f, m);
     }
 
     public class FieldDoesNotExist extends RuntimeException {}
