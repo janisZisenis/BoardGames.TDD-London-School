@@ -3,85 +3,85 @@ package com.company;
 import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
 import com.company.IsOnBoardValidatorImp.Field;
-import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
-import com.company.OnBoardInputGenerator.OnBoardInputGenerator;
 import com.company.TicTacToeBoard.Mark;
+import com.company.TicTacToeBoard.TicTacToeBoard;
 
 public class Main {
-    static Mark[][] board = {   {null, null, null},
-                                {null, null, null},
-                                {null, null, null}   };
+
+    static TicTacToeBoard complex = new TicTacToeBoard();
 
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
-        IsOnBoardValidatorImp onBoardValidator = new IsOnBoardValidatorImp(null);
-        OnBoardInputGenerator onBoardGenerator = new OnBoardInputGenerator(generator, onBoardValidator);
 
-        print(board);
+        print(complex);
 
         UserInput in = generator.generateInput();
-        while(exists(in)) {
+        Field f = makeField(in);
+        while(!complex.exists(f)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
         }
-        applyX(in);
+        applyX(f);
 
-        while(exists(in)) {
-            in = generator.generateInput();
-        }
-        print(board);
+        print(complex);
+
 
         in = generator.generateInput();
-        while(exists(in)) {
+        f = makeField(in);
+        while(!complex.exists(f)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
         }
-        applyO(in);
+        applyO(f);
 
-        print(board);
+        print(complex);
+
+        in = generator.generateInput();
+        f = makeField(in);
+        while(!complex.exists(f)) {
+            System.out.println("The inserted input is out of bounds. Please insert again!");
+            in = generator.generateInput();
+        }
+        applyX(f);
+
+        print(complex);
     }
 
-    //Board
-    private static boolean exists(UserInput in) {
-        return in.getColumn() < 0 || in.getColumn() > 2 || in.getRow() < 0 || in.getRow() > 2;
+    private static Field makeField(UserInput in) {
+        return new Field(in.getRow(), in.getColumn());
     }
 
-    private static boolean isEmpty(int row, int column) {
-        return board[row][column] == null;
-    }
-
-    private static void mark(Mark m, Field f) {
-        board[f.getRow()][f.getColumn()] = m;
-    }
 
     //Player
-    private static void applyX(UserInput in) {
-        Field f = new Field(in.getRow(), in.getColumn());
+    private static void applyX(Field f) {
         mark(Mark.X, f);
     }
 
-    private static void applyO(UserInput in) {
-        Field f = new Field(in.getRow(), in.getColumn());
+    private static void applyO(Field f) {
         mark(Mark.O, f);
+    }
 
+    private static void mark(Mark m, Field f) {
+        complex.mark(f, m);
     }
 
 
     //Printer
-    public static void print(Mark[][] board) {
+    public static void print(TicTacToeBoard board) {
         for(int row = 0; row < 3; row++) {
             printRow(row, board);
         }
     }
 
-    public static void printRow(int row, Mark[][] board) {
+    public static void printRow(int row, TicTacToeBoard board) {
         for(int col = 0; col < 3; col++) {
-            if(isEmpty(row, col)) {
+            Field f = new Field(row, col);
+            if(board.isEmpty(f)) {
                 System.out.print('.');
             }
             else {
-                char c = map(board[row][col]);
+                char c = map(complex.getMarkAt(f));
                 System.out.print(c);
             }
         }
