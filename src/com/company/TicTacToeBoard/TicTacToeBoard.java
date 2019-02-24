@@ -29,8 +29,7 @@ public class TicTacToeBoard {
     }
 
     public Mark getMarkAt(Field field) {
-        if(field.getRow () < 0 || field.getRow() > 2 || field.getColumn() > 2 || field.getColumn() < 0)
-            throw new FieldDoesNotExist();
+        throwIfFieldDoesNotExist(field);
 
         if(markedFields.keySet().contains(field))
             return markedFields.get(field);
