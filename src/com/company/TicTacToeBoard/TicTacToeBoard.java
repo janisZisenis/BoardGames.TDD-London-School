@@ -7,12 +7,13 @@ import java.util.LinkedList;
 public class TicTacToeBoard {
 
     private LinkedList<Field> fields = new LinkedList<Field>();
-    private Mark first;
-    private Mark second;
-    private Mark third;
+    private LinkedList<Mark> marks = new LinkedList<Mark>();
 
     public boolean exists(Field field) {
-        if(isOutOfBounds(field.getRow()) || isOutOfBounds(field.getColumn()))
+        int row = field.getRow();
+        int col = field.getColumn();
+
+        if(isOutOfBounds(row) || isOutOfBounds(col))
             return false;
 
         return true;
@@ -42,26 +43,18 @@ public class TicTacToeBoard {
 
     public void mark(Field f, Mark m) {
         throwIfFieldDoesNotExist(f);
+        store(f, m);
+    }
 
+    private void store(Field f, Mark m) {
         fields.add(f);
-
-        if(first == null)
-            first = m;
-        else if(second == null)
-            second = m;
-
-        third = m;
+        marks.add(m);
     }
 
     public Mark getMarkAt(Field field) {
-        if(first != null)
-            if(field.equals(fields.get(0)))
-                return first;
-        if(second != null)
-            if(field.equals(fields.get(1)))
-            return second;
-        if(third != null)
-            return third;
+        for(int i = 0; i < marks.size(); i++)
+            if (field.equals(fields.get(i)))
+                return marks.get(i);
 
         throw new FieldIsEmpty();
     }
