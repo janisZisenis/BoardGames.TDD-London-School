@@ -26,5 +26,11 @@ public class FieldHasColumnBiggerThan2 {
         assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
     }
 
+    @Test
+    void FreshInstance_mark_ShouldThrowException() {
+        Executable act = () -> sut.mark(field, Mark.X);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
 
 }
