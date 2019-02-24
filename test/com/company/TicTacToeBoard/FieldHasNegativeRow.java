@@ -32,4 +32,11 @@ public class FieldHasNegativeRow {
         assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
     }
 
+    @Test
+    void FreshInstance_getMarkAt_ShouldThrowException() {
+        Executable act = () -> sut.getMarkAt(field);
+
+        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
+    }
+
 }

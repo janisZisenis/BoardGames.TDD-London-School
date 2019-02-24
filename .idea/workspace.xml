@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard$FieldDoesNotExist.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard$FieldDoesNotExist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard$FieldIsEmpty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard$FieldIsEmpty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/TicTacToeBoard/TicTacToeBoard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,12 +47,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="401" />
-          <entry key="java" value="22093" />
+          <entry key="java" value="22379" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="22093" />
+          <entry key="JAVA" value="22379" />
           <entry key="PLAIN_TEXT" value="401" />
         </counts>
       </usages-collector>
@@ -91,13 +87,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state relative-caret-position="239">
+              <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#200#207#0" expanded="true" />
-                <element signature="e#262#268#0" expanded="true" />
-                <element signature="method#fieldWasMarked#0;class#TicTacToeBoard#0" />
+                <element signature="method#exists#0;class#TicTacToeBoard#0" />
+                <element signature="method#isEmpty#0;class#TicTacToeBoard#0" />
+                <element signature="method#mark#0;class#TicTacToeBoard#0" />
                 <element signature="method#throwIfFieldDoesNotExist#0;class#TicTacToeBoard#0" />
               </folding>
             </state>
@@ -124,6 +119,8 @@
       <find>makeTwoFieldsMarked</find>
       <find>_</find>
       <find>-</find>
+      <find>fields.</find>
+      <find>fields.</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -387,7 +384,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551000442876" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551015778816" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -490,44 +487,44 @@
       <workItem from="1550767955331" duration="1808000" />
       <workItem from="1550811815029" duration="11513000" />
       <workItem from="1550943064875" duration="4214000" />
-      <workItem from="1551013280940" duration="611000" />
+      <workItem from="1551013280940" duration="1525000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 07m 14s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 20m 32s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 08m 20s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 35m 33s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 08m 29s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 36m 40s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 09m 02s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 36m 54s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 09m 12s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 37m 01s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 09m 21s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 37m 35s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 09m 50s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 37m 52s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 10m 05s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 38m 03s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 10m 15s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 39m 24s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 10m 25s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 14h 39m 37s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51354000" />
+    <option name="totallyTimeSpent" value="52268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -817,6 +814,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,13 +832,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="239">
+          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#200#207#0" expanded="true" />
-            <element signature="e#262#268#0" expanded="true" />
-            <element signature="method#fieldWasMarked#0;class#TicTacToeBoard#0" />
+            <element signature="method#exists#0;class#TicTacToeBoard#0" />
+            <element signature="method#isEmpty#0;class#TicTacToeBoard#0" />
+            <element signature="method#mark#0;class#TicTacToeBoard#0" />
             <element signature="method#throwIfFieldDoesNotExist#0;class#TicTacToeBoard#0" />
           </folding>
         </state>

@@ -2,12 +2,11 @@ package com.company.TicTacToeBoard;
 
 import com.company.IsOnBoardValidatorImp.Field;
 
-import java.util.LinkedList;
+import java.util.HashMap;
 
 public class TicTacToeBoard {
 
-    private LinkedList<Field> fields = new LinkedList<Field>();
-    private LinkedList<Mark> marks = new LinkedList<Mark>();
+    private HashMap<Field, Mark> markedFields = new HashMap<Field, Mark>();
 
     public boolean exists(Field field) {
         int row = field.getRow();
@@ -19,26 +18,9 @@ public class TicTacToeBoard {
         return true;
     }
 
-    private boolean isOutOfBounds(int row) {
-        return row < 0 || row > 2;
-    }
-
     public boolean isEmpty(Field f) {
         throwIfFieldDoesNotExist(f);
-        return fieldWasMarked(f);
-    }
-
-    private boolean fieldWasMarked(Field f) {
-        for(int i = 0; fields.size() >= i + 1; i++)
-            if (fields.get(i).equals(f))
-                return false;
-
-        return true;
-    }
-
-    private void throwIfFieldDoesNotExist(Field f) {
-        if(!exists(f))
-            throw new FieldDoesNotExist();
+        return fieldWasNotMarked(f);
     }
 
     public void mark(Field f, Mark m) {
@@ -46,17 +28,33 @@ public class TicTacToeBoard {
         store(f, m);
     }
 
-    private void store(Field f, Mark m) {
-        fields.add(f);
-        marks.add(m);
-    }
-
     public Mark getMarkAt(Field field) {
-        for(int i = 0; i < marks.size(); i++)
-            if (field.equals(fields.get(i)))
-                return marks.get(i);
+        if(field.getRow () < 0 || field.getRow() > 2 || field.getColumn() > 2 || field.getColumn() < 0)
+            throw new FieldDoesNotExist();
+
+        if(markedFields.keySet().contains(field))
+            return markedFields.get(field);
 
         throw new FieldIsEmpty();
+    }
+
+
+    private boolean isOutOfBounds(int row) {
+        return row < 0 || row > 2;
+    }
+
+    private boolean fieldWasNotMarked(Field f) {
+        return !markedFields.keySet().contains(f);
+    }
+
+    private void throwIfFieldDoesNotExist(Field f) {
+        if(!exists(f))
+            throw new FieldDoesNotExist();
+    }
+
+
+    private void store(Field f, Mark m) {
+        markedFields.put(f, m);
     }
 
     public class FieldDoesNotExist extends RuntimeException {}
