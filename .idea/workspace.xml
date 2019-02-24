@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExistsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExists.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,44 +46,50 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="370" />
-          <entry key="java" value="20256" />
+          <entry key="dummy" value="378" />
+          <entry key="java" value="20591" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20256" />
-          <entry key="PLAIN_TEXT" value="370" />
+          <entry key="JAVA" value="20591" />
+          <entry key="PLAIN_TEXT" value="378" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="200" />
+          <entry key="java" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="200" />
+          <entry key="JAVA" value="214" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasColumnBiggerThan2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+            <state relative-caret-position="210">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#exists#0;class#Main#0" />
-                <element signature="method#applyO#0;class#Main#0" />
-                <element signature="method#print#1;class#Main#0" />
-                <element signature="method#printRow#0;class#Main#0" />
+                <element signature="method#IfColumnIsBiggerThan2_FieldShouldNotExist#0;class#FieldHasColumnBiggerThan2#0" />
+                <element signature="method#IfColumnIsBiggerThan2_ShouldThrowException#0;class#FieldHasColumnBiggerThan2#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExists.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -107,6 +112,8 @@
       <find>And</find>
       <find>TicTacToeBoard.Mark</find>
       <find>makeTwoFieldsMarked</find>
+      <find>_</find>
+      <find>-</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -119,12 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/NotOnBoardInputGenerationTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/InputGeneratorStub.java" />
-        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/IsOnFieldValidator.java" />
-        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/IsOnFieldValidatorStub.java" />
-        <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/OnBoardInputGenerator.java" />
-        <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGeneratorTest/OnBoardInputGeneratorTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGeneratorTest/AlerterSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/OnBoardInputGenerator/AlerterSpy.java" />
         <option value="$PROJECT_DIR$/test/com/company/OnBoardInputGenerator/AlerterSpy.java" />
@@ -166,10 +167,16 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/SecondFieldMarkingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/ThirdFieldMarkingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FirstFieldMarkingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExistsTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldIsEmptyTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasNegativeRow.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasNegativeColumnTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasNegativeRowTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasRowBiggerThan2.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldIsEmptyTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasColumnBiggerThan2.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExistsTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExists.java" />
       </list>
     </option>
   </component>
@@ -376,7 +383,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550943029399" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550998002892" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -416,7 +423,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="TicTacToe.Main" />
@@ -478,50 +485,50 @@
       <workItem from="1550668351199" duration="5892000" />
       <workItem from="1550767955331" duration="1808000" />
       <workItem from="1550811815029" duration="11513000" />
-      <workItem from="1550943064875" duration="626000" />
+      <workItem from="1550943064875" duration="1780000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 24m 49s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 37m 35s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 25m 06s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 38m 20s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 25m 17s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 38m 26s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 25m 53s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 40m 00s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 26m 09s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 42m 08s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 26m 48s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 42m 14s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 26m 58s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 42m 47s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 27m 21s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 43m 57s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 27m 32s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 44m 00s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.02.23 at 18h 27m 37s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.02.24 at 09h 44m 20s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47155000" />
+    <option name="totallyTimeSpent" value="48309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21848138" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21848138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -530,7 +537,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32356688" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32356688" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -548,7 +555,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" weight="0.24498567" />
+      <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" visible="true" weight="0.24498567" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Maven Projects" order="9" />
     </layout>
@@ -693,6 +700,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -734,41 +744,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExistsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldIsEmptyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#FreshInstance_FieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfFieldIsMarked_ItShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfFieldIsMarked_ASecondFieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfTwoFieldsAreMarked_FirstFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfTwoFieldsAreMarked_SecondFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfTwoFieldsAreMarked_ThirdFieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfThreeFieldsAreMarked_ThirdFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfThreeFieldsAreMarked_FourthFieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfRowIsNegative_ShouldThrowException#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfRowIsNegative_FieldShouldNotExist#1;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfRowIsNegative_FieldShouldNotExist#1;class#FieldIsEmptyTest#0" />
-            <element signature="method#IfRowIsBiggerThan2_ShouldThrowException#1;class#FieldIsEmptyTest#0" />
-            <element signature="method#makeTwoFieldsMarked#0;class#FieldIsEmptyTest#0" />
-            <element signature="method#markThreeFields#0;class#FieldIsEmptyTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToeBoard/TicTacToeBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#exists#0;class#TicTacToeBoard#0" />
+            <element signature="method#fieldWasMarked#0;class#TicTacToeBoard#0" />
+            <element signature="method#throwIfFieldDoesNotExist#0;class#TicTacToeBoard#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -786,17 +771,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasNegativeRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#FreshInstance_FieldShouldNotExist#0;class#FieldHasNegativeRowTest#0" />
+            <element signature="method#FreshInstance_isEmpty_ShouldThrowException#0;class#FieldHasNegativeRowTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasNegativeColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="method#FreshInstance_FieldShouldNotExist#0;class#FieldHasNegativeColumnTest#0" />
+            <element signature="method#FreshInstance_isEmpty_ShouldThrowException#0;class#FieldHasNegativeColumnTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasRowBiggerThan2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldIsEmptyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#FreshInstance_FieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#IfTwoFieldsAreMarked_FirstFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#IfTwoFieldsAreMarked_SecondFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#IfTwoFieldsAreMarked_ThirdFieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#IfThreeFieldsAreMarked_ThirdFieldShouldNotBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#IfThreeFieldsAreMarked_FourthFieldShouldBeEmpty#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#makeTwoFieldsMarked#0;class#FieldIsEmptyTest#0" />
+            <element signature="method#markThreeFields#0;class#FieldIsEmptyTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#exists#0;class#Main#0" />
+            <element signature="method#applyX#0;class#Main#0" />
             <element signature="method#applyO#0;class#Main#0" />
             <element signature="method#print#1;class#Main#0" />
             <element signature="method#printRow#0;class#Main#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldHasColumnBiggerThan2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="method#IfColumnIsBiggerThan2_FieldShouldNotExist#0;class#FieldHasColumnBiggerThan2#0" />
+            <element signature="method#IfColumnIsBiggerThan2_ShouldThrowException#0;class#FieldHasColumnBiggerThan2#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldExists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

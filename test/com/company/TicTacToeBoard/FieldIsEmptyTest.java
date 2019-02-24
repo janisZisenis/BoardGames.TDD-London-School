@@ -76,43 +76,6 @@ public class FieldIsEmptyTest {
         assertTrue(actual);
     }
 
-    @Test
-    void IfRowIsNegative_ShouldThrowException() {
-        Field field = new Field(-1, 0);
-
-        Executable act = () -> sut.isEmpty(field);
-
-        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
-    }
-
-    @Test
-    void IfColumnIsNegative_ShouldThrowException() {
-        Field field = new Field(0, -1);
-
-        Executable act = () -> sut.isEmpty(field);
-
-        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
-    }
-
-    @Test
-    void IfRowIsBiggerThan2_ShouldThrowException() {
-        Field field = new Field(3, 0);
-
-        Executable act = () -> sut.isEmpty(field);
-
-        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
-    }
-
-    @Test
-    void IfColumnIsBiggerThan2_ShouldThrowException() {
-        Field field = new Field(0, 3);
-
-        Executable act = () -> sut.isEmpty(field);
-
-        assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
-    }
-
-
 
     private void makeOneFieldMarked() {
         sut.mark(first, Mark.X);
