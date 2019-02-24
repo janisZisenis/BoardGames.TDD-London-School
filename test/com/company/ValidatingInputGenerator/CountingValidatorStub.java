@@ -3,7 +3,7 @@ package com.company.ValidatingInputGenerator;
 import com.company.AlertingValidator.Validator;
 import com.company.UserInput;
 
-public class IsOnBoardValidatorStub implements Validator {
+public class CountingValidatorStub implements Validator {
     private int indexOfUserInputBeingOnBoard = 0;
     private int count = 0;
 

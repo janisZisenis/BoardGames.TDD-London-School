@@ -3,7 +3,7 @@ package com.company.ValidatingInputGenerator;
 import com.company.AlertingValidator.Validator;
 import com.company.UserInput;
 
-public class ValidatingInputGenerator {
+public class ValidatingInputGenerator implements InputGenerator {
     private InputGenerator generator;
     private Validator validator;
 

@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.AlertingValidator.AlertingValidator;
+import com.company.AlertingValidator.Validator;
 import com.company.CLImp.ConsoleAlerter;
 import com.company.CLImp.ConsoleInputPrompter;
 import com.company.Constants.AlertingMessages;
@@ -9,50 +10,47 @@ import com.company.IsOnBoardValidator.Field;
 import com.company.IsOnBoardValidator.IsOnBoardValidator;
 import com.company.TicTacToeBoard.Player;
 import com.company.TicTacToeBoard.TicTacToeBoard;
+import com.company.ValidatingInputGenerator.InputGenerator;
+import com.company.ValidatingInputGenerator.ValidatingInputGenerator;
 
 public class Main {
 
     static TicTacToeBoard board = new TicTacToeBoard();
 
-    public static void main(String[] args) {
-        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
-        IsOnBoardValidator validator = new IsOnBoardValidator(board);
+    private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
         ConsoleAlerter alerter = new ConsoleAlerter();
-        AlertingValidator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
+        Validator validator = new IsOnBoardValidator(board);
+        Validator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
+
+        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
+        InputGenerator generator = new DefaultInputGenerator(prompter);
+        return new ValidatingInputGenerator(generator, alerting);
+    }
+
+    public static void main(String[] args) {
+        InputGenerator generator = makeTicTacToeInputGenerator(board);
 
         print(board);
 
         UserInput in = generator.generateInput();
         Field f = makeField(in);
-        while(!alerting.isValid(in)) {
-            in = generator.generateInput();
-            f = makeField(in);
-        }
         applyJohn(f);
 
         print(board);
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!alerting.isValid(in)) {
-            in = generator.generateInput();
-            f = makeField(in);
-        }
         applyHaley(f);
 
         print(board);
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!alerting.isValid(in)) {
-            in = generator.generateInput();
-            f = makeField(in);
-        }
         applyJohn(f);
 
         print(board);
     }
+
 
     //Player
     private static void applyJohn(Field f) {

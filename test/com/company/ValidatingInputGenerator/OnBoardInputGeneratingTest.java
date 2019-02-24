@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class OnBoardInputGeneratingTest {
 
     InputGeneratorStub generator = new InputGeneratorStub();
-    IsOnBoardValidatorStub validator = new IsOnBoardValidatorStub();
+    CountingValidatorStub validator = new CountingValidatorStub();
     ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
     UserInput[] inputs;

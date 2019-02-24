@@ -2,7 +2,7 @@ package com.company.AlertingValidator;
 
 import com.company.UserInput;
 
-public class AlertingValidator {
+public class AlertingValidator implements Validator {
 
     private final Validator validator;
     private String message;
