@@ -8,64 +8,62 @@ import com.company.TicTacToeBoard.TicTacToeBoard;
 
 public class Main {
 
-    static TicTacToeBoard complex = new TicTacToeBoard();
+    static TicTacToeBoard board = new TicTacToeBoard();
 
     public static void main(String[] args) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
 
-        print(complex);
+        print(board);
 
         UserInput in = generator.generateInput();
         Field f = makeField(in);
-        while(!complex.exists(f)) {
+        while(!board.exists(f)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
         }
-        applyX(f);
+        applyJohn(f);
 
-        print(complex);
+        print(board);
 
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!complex.exists(f)) {
+        while(!board.exists(f)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
         }
-        applyO(f);
+        applyHaley(f);
 
-        print(complex);
+        print(board);
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!complex.exists(f)) {
+        while(!board.exists(f)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
         }
-        applyX(f);
+        applyJohn(f);
 
-        print(complex);
+        print(board);
+    }
+
+    //Player
+    private static void applyJohn(Field f) {
+        mark(Mark.John, f);
+    }
+
+    private static void applyHaley(Field f) {
+        mark(Mark.Haley, f);
+    }
+
+    private static void mark(Mark m, Field f) {
+        board.mark(f, m);
     }
 
     private static Field makeField(UserInput in) {
         return new Field(in.getRow(), in.getColumn());
     }
-
-
-    //Player
-    private static void applyX(Field f) {
-        mark(Mark.John, f);
-    }
-
-    private static void applyO(Field f) {
-        mark(Mark.Haley, f);
-    }
-
-    private static void mark(Mark m, Field f) {
-        complex.mark(f, m);
-    }
-
 
     //Printer
     public static void print(TicTacToeBoard board) {
@@ -81,7 +79,7 @@ public class Main {
                 System.out.print('.');
             }
             else {
-                char c = map(complex.getMarkAt(f));
+                char c = map(Main.board.getMarkAt(f));
                 System.out.print(c);
             }
         }
