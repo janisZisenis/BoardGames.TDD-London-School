@@ -14,7 +14,7 @@ public class OnBoardInputGenerator {
     public UserInput generateInput() {
         UserInput in = generator.generateInput();
 
-        while(!validator.isOnBoard(in)) {
+        while(!validator.isValid(in)) {
             in = generator.generateInput();
         }
 

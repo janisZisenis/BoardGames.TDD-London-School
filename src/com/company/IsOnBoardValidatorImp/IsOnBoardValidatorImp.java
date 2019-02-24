@@ -12,7 +12,7 @@ public class IsOnBoardValidatorImp implements IsOnBoardValidator {
         this.board = board;
     }
 
-    public boolean isOnBoard(UserInput in) {
+    public boolean isValid(UserInput in) {
         Field f = makeField(in);
         return board.exists(f);
     }

@@ -14,7 +14,7 @@ public class IsOnBoardValidatorImpTest {
     void IfUserInputIsOnBoard_ShouldBeTrue() {
         makeUserInputIsOnBoard();
 
-        boolean actual = sut.isOnBoard(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
@@ -24,7 +24,7 @@ public class IsOnBoardValidatorImpTest {
         makeUserInputIsNotOnBoard();
 
         UserInput input = new UserInput(0, 1);
-        boolean actual = sut.isOnBoard(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }

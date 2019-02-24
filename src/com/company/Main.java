@@ -20,7 +20,7 @@ public class Main {
 
         UserInput in = generator.generateInput();
         Field f = makeField(in);
-        while(!validator.isOnBoard(in)) {
+        while(!validator.isValid(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
             f = makeField(in);
@@ -29,10 +29,9 @@ public class Main {
 
         print(board);
 
-
         in = generator.generateInput();
         f = makeField(in);
-        while(!validator.isOnBoard(in)) {
+        while(!validator.isValid(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
             f = makeField(in);
@@ -43,7 +42,7 @@ public class Main {
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!validator.isOnBoard(in)) {
+        while(!validator.isValid(in)) {
             System.out.println("The inserted input is out of bounds. Please insert again!");
             in = generator.generateInput();
             f = makeField(in);

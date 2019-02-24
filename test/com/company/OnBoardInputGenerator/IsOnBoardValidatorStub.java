@@ -10,7 +10,7 @@ public class IsOnBoardValidatorStub implements IsOnBoardValidator {
         this.indexOfUserInputBeingOnBoard = times;
     }
 
-    public boolean isOnBoard(UserInput input) {
+    public boolean isValid(UserInput input) {
         return indexOfUserInputBeingOnBoard == count++;
     }
 }
