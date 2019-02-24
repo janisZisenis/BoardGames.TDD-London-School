@@ -9,6 +9,7 @@ public class TicTacToeBoard {
     private LinkedList<Field> fields = new LinkedList<Field>();
     private Mark first;
     private Mark second;
+    private Mark third;
 
     public boolean exists(Field field) {
         if(isOutOfBounds(field.getRow()) || isOutOfBounds(field.getColumn()))
@@ -46,15 +47,21 @@ public class TicTacToeBoard {
 
         if(first == null)
             first = m;
-        second = m;
+        else if(second == null)
+            second = m;
+
+        third = m;
     }
 
     public Mark getMarkAt(Field field) {
         if(first != null)
             if(field.equals(fields.get(0)))
                 return first;
+        if(second != null)
+            if(field.equals(fields.get(1)))
+            return second;
 
-        return second;
+        return third;
     }
 
     public class FieldDoesNotExist extends RuntimeException {}

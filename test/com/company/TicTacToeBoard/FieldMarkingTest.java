@@ -52,4 +52,46 @@ public class FieldMarkingTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void FirstFieldWasMarkedWithX_SecondFieldGetsMarkedWithO_ThirdFieldGetsMarkedWithX_OShouldBeStoredAtSecondField() {
+        sut.mark(first, Mark.X);
+        Field second = new Field(1, 2);
+        sut.mark(second, Mark.O);
+        Field third = new Field(1, 1);
+
+        sut.mark(third, Mark.X);
+
+        Mark actual = sut.getMarkAt(second);
+        Mark expected = Mark.O;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void FirstFieldWasMarkedWithX_SecondFieldGetsMarkedWithO_ThirdFieldGetsMarkedWithX_XShouldBeStoredAtThirdField() {
+        sut.mark(first, Mark.X);
+        Field second = new Field(1, 2);
+        sut.mark(second, Mark.O);
+        Field third = new Field(1, 1);
+
+        sut.mark(third, Mark.X);
+
+        Mark actual = sut.getMarkAt(third);
+        Mark expected = Mark.X;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void FirstFieldWasMarkedWithO_SecondFieldGetsMarkedWithX_ThirdFieldGetsMarkedWithO_OShouldBeStoredAtThirdField() {
+        sut.mark(first, Mark.O);
+        Field second = new Field(1, 2);
+        sut.mark(second, Mark.X);
+        Field third = new Field(1, 1);
+
+        sut.mark(third, Mark.O);
+
+        Mark actual = sut.getMarkAt(third);
+        Mark expected = Mark.O;
+        assertEquals(expected, actual);
+    }
+
 }
