@@ -7,7 +7,7 @@ import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.Core.InputGeneration.DefaultInputGenerator.DefaultInputGenerator;
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
 import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
 import com.company.TicTacToe.Board.Player;
 import com.company.TicTacToe.Board.TicTacToeBoard;

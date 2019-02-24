@@ -2,6 +2,7 @@ package com.company.TicTacToe.IsOnBoardValidator;
 
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.Input;
+import com.company.TicTacToe.Field;
 
 public class FieldExistsValidator implements InputValidator {
 

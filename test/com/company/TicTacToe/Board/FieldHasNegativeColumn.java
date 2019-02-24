@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

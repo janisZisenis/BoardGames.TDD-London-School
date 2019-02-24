@@ -1,5 +1,7 @@
 package com.company.TicTacToe.IsOnBoardValidator;
 
+import com.company.TicTacToe.Field;
+
 public class FieldExistsProviderStub implements FieldExistsProvider {
     private boolean fieldExists = false;
 

@@ -1,7 +1,7 @@
 package com.company.TicTacToe.Board;
 
 import com.company.TicTacToe.IsOnBoardValidator.FieldExistsProvider;
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
 
 import java.util.HashMap;
 
