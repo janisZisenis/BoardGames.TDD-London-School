@@ -16,14 +16,4 @@ public class FieldHasExistingRowAndColumn {
         assertTrue(actual);
     }
 
-    @Test
-    void IfAFieldGetsMarked_AnotherFieldWithSameRowAndColumnShouldNotBeEmpty() {
-        Field anotherField = new Field(1, 1);
-
-        sut.mark(field, Mark.X);
-
-        boolean actual = sut.isEmpty(anotherField);
-        assertFalse(actual);
-    }
-
 }
