@@ -16,14 +16,14 @@ public class FieldMarkingTest {
 
     @Test
     void IfJohnMarksField_ItShouldBeJohns() {
-        sut.mark(first, Mark.John);
+        sut.mark(first, Player.John);
 
         assertIsJohns(first);
     }
 
     @Test
     void IfHaleyMarksField_ItShouldBeHaleys() {
-        sut.mark(first, Mark.Haley);
+        sut.mark(first, Player.Haley);
 
         assertIsHaleys(first);
     }
@@ -32,7 +32,7 @@ public class FieldMarkingTest {
     void IfJohnMarksSecondAfterHaleyMarkedFirst_FirstFieldShouldBeHaleys() {
         makeHaleyMarkedFirst();
 
-        sut.mark(second, Mark.John);
+        sut.mark(second, Player.John);
 
         assertIsHaleys(first);
     }
@@ -41,7 +41,7 @@ public class FieldMarkingTest {
     void IfHaleyMarksSecondAfterJohnMarkedFirst_SecondFieldShouldBeHaleys() {
         makeJohnMarkedFirst();
 
-        sut.mark(second, Mark.Haley);
+        sut.mark(second, Player.Haley);
 
         assertIsHaleys(second);
     }
@@ -50,7 +50,7 @@ public class FieldMarkingTest {
     void IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_SecondFieldShouldBeHaleys() {
         makeJohnMarkedFirstAndHaleyMarkedSecond();
 
-        sut.mark(third, Mark.John);
+        sut.mark(third, Player.John);
 
         assertIsHaleys(second);
     }
@@ -59,7 +59,7 @@ public class FieldMarkingTest {
     void IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_ThirdFieldShouldBeJohns() {
         makeJohnMarkedFirstAndHaleyMarkedSecond();
 
-        sut.mark(third, Mark.John);
+        sut.mark(third, Player.John);
 
         assertIsJohns(third);
     }
@@ -68,42 +68,42 @@ public class FieldMarkingTest {
     void IfHaleyMarksThirdAfterJohnMarkedSecondAndHaleyMarkedFirst_ThirdFieldShouldBeHaleys() {
         makeHaleyMarkedFirstAndJohnMarkedSecond();
 
-        sut.mark(third, Mark.Haley);
+        sut.mark(third, Player.Haley);
 
         assertIsHaleys(third);
     }
 
 
     private void makeHaleyMarkedFirst() {
-        sut.mark(first, Mark.Haley);
+        sut.mark(first, Player.Haley);
     }
 
     private void makeJohnMarkedFirst() {
-        sut.mark(first, Mark.John);
+        sut.mark(first, Player.John);
     }
 
     private void makeJohnMarkedFirstAndHaleyMarkedSecond() {
         makeJohnMarkedFirst();
-        sut.mark(second, Mark.Haley);
+        sut.mark(second, Player.Haley);
     }
 
     private void makeHaleyMarkedFirstAndJohnMarkedSecond() {
         makeHaleyMarkedFirst();
-        sut.mark(second, Mark.John);
+        sut.mark(second, Player.John);
     }
 
 
     private void assertIsJohns(Field f) {
-        assertFieldHasMark(first, Mark.John);
+        assertFieldHasMark(first, Player.John);
     }
 
     private void assertIsHaleys(Field f) {
-        assertFieldHasMark(f, Mark.Haley);
+        assertFieldHasMark(f, Player.Haley);
     }
 
-    private void assertFieldHasMark(Field first, Mark x) {
-        Mark actual = sut.getMarkAt(first);
-        Mark expected = x;
+    private void assertFieldHasMark(Field first, Player x) {
+        Player actual = sut.getMarkAt(first);
+        Player expected = x;
         assertEquals(expected, actual);
     }
 

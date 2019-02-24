@@ -30,7 +30,7 @@ public class FieldHasNegativeColumn {
 
     @Test
     void FreshInstance_mark_ShouldThrowException() {
-        Executable act = () -> sut.mark(field, Mark.John);
+        Executable act = () -> sut.mark(field, Player.John);
 
         assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
     }

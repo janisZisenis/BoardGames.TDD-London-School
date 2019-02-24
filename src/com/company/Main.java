@@ -1,10 +1,13 @@
 package com.company;
 
-import com.company.ConsoleInputPrompter.ConsoleInputPrompter;
+import com.company.AlertingValidator.AlertingValidator;
+import com.company.CLImp.ConsoleAlerter;
+import com.company.CLImp.ConsoleInputPrompter;
+import com.company.Constants.AlertingMessages;
 import com.company.DefaultInputGenerator.DefaultInputGenerator;
 import com.company.IsOnBoardValidatorImp.Field;
 import com.company.IsOnBoardValidatorImp.IsOnBoardValidatorImp;
-import com.company.TicTacToeBoard.Mark;
+import com.company.TicTacToeBoard.Player;
 import com.company.TicTacToeBoard.TicTacToeBoard;
 
 public class Main {
@@ -15,13 +18,14 @@ public class Main {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         DefaultInputGenerator generator = new DefaultInputGenerator(prompter);
         IsOnBoardValidatorImp validator = new IsOnBoardValidatorImp(board);
+        ConsoleAlerter alerter = new ConsoleAlerter();
+        AlertingValidator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
 
         print(board);
 
         UserInput in = generator.generateInput();
         Field f = makeField(in);
-        while(!validator.isValid(in)) {
-            System.out.println("The inserted input is out of bounds. Please insert again!");
+        while(!alerting.isValid(in)) {
             in = generator.generateInput();
             f = makeField(in);
         }
@@ -31,8 +35,7 @@ public class Main {
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!validator.isValid(in)) {
-            System.out.println("The inserted input is out of bounds. Please insert again!");
+        while(!alerting.isValid(in)) {
             in = generator.generateInput();
             f = makeField(in);
         }
@@ -42,8 +45,7 @@ public class Main {
 
         in = generator.generateInput();
         f = makeField(in);
-        while(!validator.isValid(in)) {
-            System.out.println("The inserted input is out of bounds. Please insert again!");
+        while(!alerting.isValid(in)) {
             in = generator.generateInput();
             f = makeField(in);
         }
@@ -54,14 +56,14 @@ public class Main {
 
     //Player
     private static void applyJohn(Field f) {
-        mark(Mark.John, f);
+        mark(Player.John, f);
     }
 
     private static void applyHaley(Field f) {
-        mark(Mark.Haley, f);
+        mark(Player.Haley, f);
     }
 
-    private static void mark(Mark m, Field f) {
+    private static void mark(Player m, Field f) {
         board.mark(f, m);
     }
 
@@ -90,8 +92,8 @@ public class Main {
         System.out.print('\n');
     }
 
-    private static char map(Mark m) {
-        return (m == Mark.John) ? 'X' : 'O';
+    private static char map(Player m) {
+        return (m == Player.John) ? 'X' : 'O';
     }
 
 }

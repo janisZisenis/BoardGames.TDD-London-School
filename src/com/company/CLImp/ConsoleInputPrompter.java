@@ -1,4 +1,4 @@
-package com.company.ConsoleInputPrompter;
+package com.company.CLImp;
 
 import com.company.DefaultInputGenerator.InputPrompter;
 

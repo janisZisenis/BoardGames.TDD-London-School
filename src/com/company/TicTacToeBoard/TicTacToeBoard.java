@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class TicTacToeBoard implements Board {
 
-    private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
+    private HashMap<Field, Player> fields = new HashMap<Field, Player>();
 
     public boolean exists(Field f) {
         int row = f.getRow();
@@ -24,12 +24,12 @@ public class TicTacToeBoard implements Board {
         return fieldWasNotMarked(f);
     }
 
-    public void mark(Field f, Mark m) {
+    public void mark(Field f, Player m) {
         throwIfFieldDoesNotExist(f);
         store(f, m);
     }
 
-    public Mark getMarkAt(Field f) {
+    public Player getMarkAt(Field f) {
         throwIfFieldDoesNotExist(f);
 
         if(fields.keySet().contains(f))
@@ -53,7 +53,7 @@ public class TicTacToeBoard implements Board {
     }
 
 
-    private void store(Field f, Mark m) {
+    private void store(Field f, Player m) {
         fields.put(f, m);
     }
 

@@ -1,5 +1,5 @@
 package com.company.TicTacToeBoard;
 
-public enum Mark {
+public enum Player {
     Haley, John
 }
