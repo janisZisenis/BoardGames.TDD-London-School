@@ -1,17 +1,18 @@
 package com.company;
 
-import com.company.AlertingValidator.AlertingValidator;
-import com.company.AlertingValidator.Validator;
-import com.company.CLImp.ConsoleAlerter;
-import com.company.CLImp.ConsoleInputPrompter;
-import com.company.Constants.AlertingMessages;
-import com.company.DefaultInputGenerator.DefaultInputGenerator;
-import com.company.IsOnBoardValidator.Field;
-import com.company.IsOnBoardValidator.IsOnBoardValidator;
-import com.company.TicTacToeBoard.Player;
-import com.company.TicTacToeBoard.TicTacToeBoard;
-import com.company.ValidatingInputGenerator.InputGenerator;
-import com.company.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
+import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.InputValidator;
+import com.company.CLI.InputGeneration.ConsoleAlerter;
+import com.company.CLI.InputGeneration.ConsoleInputPrompter;
+import com.company.TicTacToe.Constants.AlertingMessages;
+import com.company.Core.InputGeneration.DefaultInputGenerator.DefaultInputGenerator;
+import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
+import com.company.TicTacToe.Board.Player;
+import com.company.TicTacToe.Board.TicTacToeBoard;
+import com.company.Core.InputGeneration.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 
 public class Main {
 
@@ -19,8 +20,8 @@ public class Main {
 
     private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
         ConsoleAlerter alerter = new ConsoleAlerter();
-        Validator validator = new IsOnBoardValidator(board);
-        Validator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
+        InputValidator validator = new FieldExistsValidator(board);
+        InputValidator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
 
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new DefaultInputGenerator(prompter);
@@ -32,7 +33,7 @@ public class Main {
 
         print(board);
 
-        UserInput in = generator.generateInput();
+        Input in = generator.generateInput();
         Field f = makeField(in);
         applyJohn(f);
 
@@ -65,7 +66,7 @@ public class Main {
         board.mark(f, m);
     }
 
-    private static Field makeField(UserInput in) {
+    private static Field makeField(Input in) {
         return new Field(in.getRow(), in.getColumn());
     }
 
