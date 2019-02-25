@@ -6,7 +6,7 @@ public class FieldExistsProviderStub implements FieldExistsProvider {
     private boolean fieldExists = false;
 
     public void setFieldExists(boolean b) {
-        fieldExwists = b;
+        fieldExists = b;
     }
 
     public boolean exists(Field f) {
