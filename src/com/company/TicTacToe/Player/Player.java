@@ -11,10 +11,10 @@ public class Player {
     private final Mark mark;
     private final InputGenerator generator;
 
-    public Player(InputGenerator generator, MarkFieldService markService, Mark mark) {
-        this.generator = generator;
-        this.markService = markService;
-        this.mark = mark;
+    public Player(PlayerConfig config) {
+        this.generator = config.getGenerator();
+        this.markService = config.getMarkService();
+        this.mark = config.getMark();
     }
 
     public void play() {

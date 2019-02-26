@@ -14,6 +14,7 @@ import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.TicTacToe.Player.Player;
+import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
@@ -30,11 +31,13 @@ public class Main {
     }
 
     private static Player makeHaley(TicTacToeBoard board, InputGenerator generator) {
-        return new Player(generator, board, Mark.Haley);
+        PlayerConfig config = new PlayerConfig(generator, board, Mark.Haley);
+        return new Player(config);
     }
 
     private static Player makeJohn(TicTacToeBoard board, InputGenerator generator) {
-        return new Player(generator, board, Mark.John);
+        PlayerConfig config = new PlayerConfig(generator, board, Mark.John);
+        return new Player(config);
     }
 
     public static void main(String[] args) {
