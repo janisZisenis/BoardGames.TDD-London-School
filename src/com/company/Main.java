@@ -5,11 +5,11 @@ import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.Core.InputGeneration.DefaultInputGenerator.DefaultInputGenerator;
 import com.company.TicTacToe.Field;
 import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
-import com.company.TicTacToe.Board.Player;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
@@ -51,16 +51,16 @@ public class Main {
     }
 
 
-    //Player
+    //Mark
     private static void applyJohn(Field f) {
-        mark(Player.John, f);
+        mark(Mark.John, f);
     }
 
     private static void applyHaley(Field f) {
-        mark(Player.Haley, f);
+        mark(Mark.Haley, f);
     }
 
-    private static void mark(Player m, Field f) {
+    private static void mark(Mark m, Field f) {
         board.mark(f, m);
     }
 
@@ -89,8 +89,8 @@ public class Main {
         System.out.print('\n');
     }
 
-    private static char map(Player m) {
-        return (m == Player.John) ? 'X' : 'O';
+    private static char map(Mark m) {
+        return (m == Mark.John) ? 'X' : 'O';
     }
 
 }

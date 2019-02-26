@@ -68,17 +68,17 @@ public class FieldIsEmptyTest {
 
 
     private void makeOneFieldMarked() {
-        sut.mark(first, Player.John);
+        sut.mark(first, Mark.John);
     }
 
     private void makeTwoFieldsMarked() {
         makeOneFieldMarked();
-        sut.mark(second, Player.John);
+        sut.mark(second, Mark.John);
     }
 
     private void markThreeFields() {
         makeTwoFieldsMarked();
-        sut.mark(third, Player.John);
+        sut.mark(third, Mark.John);
     }
 
 }

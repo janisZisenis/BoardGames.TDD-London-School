@@ -2,7 +2,7 @@ package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputGeneratorStub;
-import com.company.TicTacToe.Board.Player;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +20,7 @@ public class HaleyTest {
         Input in = new Input(1, 2);
         makeGeneratorReturns(in);
         Field f = new Field(1, 2);
-        makeMarkServiceExpects(f, Player.Haley);
+        makeMarkServiceExpects(f, Mark.Haley);
 
         sut.play();
 
@@ -32,14 +32,14 @@ public class HaleyTest {
         Input in = new Input(2, 1);
         makeGeneratorReturns(in);
         Field f = new Field(2, 1);
-        makeMarkServiceExpects(f, Player.Haley);
+        makeMarkServiceExpects(f, Mark.Haley);
 
         sut.play();
 
         markService.verifyAll();
     }
 
-    private void makeMarkServiceExpects(Field f, Player p) {
+    private void makeMarkServiceExpects(Field f, Mark p) {
         markService.expectFieldWasMarkedWith(p, f);
     }
 
@@ -51,27 +51,27 @@ public class HaleyTest {
     public class MarkFieldServiceMock implements MarkFieldService {
         private boolean wasMarked = false;
 
-        private Player expectedPlayer;
+        private Mark expectedMark;
         private Field expectedField;
 
-        private Player markedPlayer;
+        private Mark markedMark;
         private Field markedField;
 
-        public void expectFieldWasMarkedWith(Player p, Field f) {
-            this.expectedPlayer = p;
+        public void expectFieldWasMarkedWith(Mark p, Field f) {
+            this.expectedMark = p;
             this.expectedField = f;
         }
 
         public void verifyAll() {
             assertTrue(wasMarked);
-            assertEquals(expectedPlayer, markedPlayer);
+            assertEquals(expectedMark, markedMark);
             assertEquals(expectedField, markedField);
         }
 
-        public void mark(Field f, Player p) {
+        public void mark(Field f, Mark p) {
             wasMarked = true;
             markedField = f;
-            markedPlayer = p;
+            markedMark = p;
         }
     }
 

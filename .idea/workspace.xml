@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe.Main/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/TicTacToeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/TicTacToeBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/John.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/John.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasColumnBiggerThan2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasColumnBiggerThan2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasNegativeColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasNegativeColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasNegativeRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasNegativeRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasRowBiggerThan2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldHasRowBiggerThan2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldIsEmptyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldIsEmptyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldMarkingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldMarkingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldsWithSameRowsAndColumns.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/FieldsWithSameRowsAndColumns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/HaleyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/HaleyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/JohnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/JohnTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,25 +63,25 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="632" />
-          <entry key="java" value="27624" />
+          <entry key="java" value="27817" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="27624" />
+          <entry key="JAVA" value="27817" />
           <entry key="PLAIN_TEXT" value="632" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="398" />
+          <entry key="java" value="400" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="398" />
+          <entry key="JAVA" value="400" />
         </counts>
       </usages-collector>
     </session>
@@ -74,15 +89,23 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+            <state relative-caret-position="315">
+              <caret line="24" column="87" selection-start-line="24" selection-start-column="87" selection-end-line="24" selection-end-column="87" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#print#0;class#Main#0" />
-                <element signature="method#printRow#0;class#Main#0" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -121,7 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/FieldValueType.java" />
         <option value="$PROJECT_DIR$/src/com/company/IsOnBoardValidatorImp/Field.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/DifferentFieldsWithSameRowAndColumn.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToeBoard/TwoSimilarFields.java" />
@@ -160,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/com/company/InputGeneration/FieldExistsValidator/FieldExistsValidator.java" />
         <option value="$PROJECT_DIR$/src/com/company/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/InputGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Player.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/IsOnBoardValidator/FieldExistsProvider.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldServiceSpy.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceSpy.java" />
@@ -169,9 +190,11 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Player/JohnTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Player/HaleyTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/John.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/TicTacToeBoard.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java" />
       </list>
     </option>
   </component>
@@ -366,6 +389,14 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="Player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,7 +465,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="TicTacToe.Main" />
@@ -502,7 +533,7 @@
       <workItem from="1551023852867" duration="650000" />
       <workItem from="1551040621172" duration="233000" />
       <workItem from="1551040918525" duration="7000" />
-      <workItem from="1551072947353" duration="2191000" />
+      <workItem from="1551072947353" duration="2456000" />
     </task>
     <servers />
   </component>
@@ -539,13 +570,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66045000" />
+    <option name="totallyTimeSpent" value="66310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30945557" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30945557" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -554,7 +585,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32356688" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32356688" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -754,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/InputValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -883,16 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Player/HaleyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
@@ -913,12 +927,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        <state relative-caret-position="326">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#print#0;class#Main#0" />
             <element signature="method#printRow#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/Haley.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="87" selection-start-line="24" selection-start-column="87" selection-end-line="24" selection-end-column="87" />
+          <folding>
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
           </folding>
         </state>
       </provider>

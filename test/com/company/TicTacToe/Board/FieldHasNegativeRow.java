@@ -27,7 +27,7 @@ public class FieldHasNegativeRow {
 
     @Test
     void FreshInstance_mark_ShouldThrowException() {
-        Executable act = () -> sut.mark(field, Player.John);
+        Executable act = () -> sut.mark(field, Mark.John);
 
         assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
     }

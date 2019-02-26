@@ -2,34 +2,48 @@ package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputGenerator;
-import com.company.TicTacToe.Board.Player;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field;
 
 public class Haley {
 
-    private final MarkFieldService markService;
-    private final InputGenerator generator;
+    private final Player p;
 
     public Haley(InputGenerator generator, MarkFieldService markService) {
-        this.generator = generator;
-        this.markService = markService;
+        this.p = new Player(generator, markService, Mark.Haley);
     }
 
     public void play() {
-        Input in = generateInput();
-        Field f = makeField(in);
-        markFie(f);
+        p.play();
     }
 
-    private void markFie(Field f) {
-        markService.mark(f, Player.Haley);
-    }
+    private class Player {
+        private final MarkFieldService markService;
+        private final InputGenerator generator;
+        private final Mark mark;
 
-    private Input generateInput() {
-        return generator.generateInput();
-    }
+        public Player(InputGenerator generator, MarkFieldService markService, Mark mark) {
+            this.generator = generator;
+            this.markService = markService;
+            this.mark = mark;
+        }
 
-    private Field makeField(Input in) {
-        return new Field(in.getRow(), in.getColumn());
+        public void play() {
+            Input in = generateInput();
+            Field f = makeField(in);
+            mark(f);
+        }
+
+        private void mark(Field f) {
+            markService.mark(f, mark);
+        }
+
+        private Input generateInput() {
+            return generator.generateInput();
+        }
+
+        private Field makeField(Input in) {
+            return new Field(in.getRow(), in.getColumn());
+        }
     }
 }
