@@ -14,7 +14,8 @@ public class HaleyTest {
     Mark mark = Mark.Haley;
     InputGeneratorStub generator = new InputGeneratorStub();
     MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    Player sut = new Player(generator, markService, mark);
+    PlayerConfig config = new PlayerConfig(generator, markService, mark);
+    Player sut = new Player(config);
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithHisMark() {
