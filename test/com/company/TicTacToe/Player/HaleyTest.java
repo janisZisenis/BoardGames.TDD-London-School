@@ -11,28 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HaleyTest {
 
+    Mark mark = Mark.Haley;
     InputGeneratorStub generator = new InputGeneratorStub();
     MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    Haley sut = new Haley(generator, markService);
+    Player sut = new Player(generator, markService, mark);
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithHisMark() {
         Input in = new Input(1, 2);
         makeGeneratorReturns(in);
         Field f = new Field(1, 2);
-        makeMarkServiceExpects(f, Mark.Haley);
-
-        sut.play();
-
-        markService.verifyAll();
-    }
-
-    @Test
-    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithHisMark() {
-        Input in = new Input(2, 1);
-        makeGeneratorReturns(in);
-        Field f = new Field(2, 1);
-        makeMarkServiceExpects(f, Mark.Haley);
+        makeMarkServiceExpects(f, mark);
 
         sut.play();
 

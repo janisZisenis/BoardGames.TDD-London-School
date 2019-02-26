@@ -6,20 +6,22 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class JohnTest {
 
+    Mark mark = Mark.John;
     InputGeneratorStub generator = new InputGeneratorStub();
     MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    John sut = new John(generator, markService);
+    Player sut = new Player(generator, markService, mark);
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithHisMark() {
         Input in = new Input(1, 2);
         makeGeneratorReturns(in);
         Field f = new Field(1, 2);
-        makeMarkServiceExpects(f, Mark.John);
+        makeMarkServiceExpects(f, mark);
 
         sut.play();
 
@@ -31,7 +33,7 @@ public class JohnTest {
         Input in = new Input(2, 1);
         makeGeneratorReturns(in);
         Field f = new Field(2, 1);
-        makeMarkServiceExpects(f, Mark.John);
+        makeMarkServiceExpects(f, mark);
 
         sut.play();
 

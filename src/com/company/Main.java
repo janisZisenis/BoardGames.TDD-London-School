@@ -13,8 +13,7 @@ import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.TicTacToe.Player.Haley;
-import com.company.TicTacToe.Player.John;
+import com.company.TicTacToe.Player.Player;
 
 public class Main {
 
@@ -30,10 +29,18 @@ public class Main {
         return new ValidatingInputGenerator(generator, alerting);
     }
 
+    private static Player makeHaley(TicTacToeBoard board, InputGenerator generator) {
+        return new Player(generator, board, Mark.Haley);
+    }
+
+    private static Player makeJohn(TicTacToeBoard board, InputGenerator generator) {
+        return new Player(generator, board, Mark.John);
+    }
+
     public static void main(String[] args) {
         InputGenerator generator = makeTicTacToeInputGenerator(board);
-        John john = new John(generator, board);
-        Haley haley = new Haley(generator, board);
+        Player john = makeJohn(board, generator);
+        Player haley = makeHaley(board, generator);
 
         print(board);
 
@@ -50,25 +57,6 @@ public class Main {
         print(board);
     }
 
-
-    //Mark
-    private static void applyJohn(Field f) {
-        mark(Mark.John, f);
-    }
-
-    private static void applyHaley(Field f) {
-        mark(Mark.Haley, f);
-    }
-
-    private static void mark(Mark m, Field f) {
-        board.mark(f, m);
-    }
-
-    private static Field makeField(Input in) {
-        return new Field(in.getRow(), in.getColumn());
-    }
-
-    //Printer
     public static void print(TicTacToeBoard board) {
         for(int row = 0; row < 3; row++) {
             printRow(row, board);
