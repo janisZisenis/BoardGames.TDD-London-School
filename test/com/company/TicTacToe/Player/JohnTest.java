@@ -50,31 +50,4 @@ public class JohnTest {
         generator.setUserInputs(inputs);
     }
 
-    public class MarkFieldServiceMock implements MarkFieldService {
-        private boolean wasMarked = false;
-
-        private Mark expectedMark;
-        private Field expectedField;
-
-        private Mark markedMark;
-        private Field markedField;
-
-        public void expectFieldWasMarkedWith(Mark p, Field f) {
-            this.expectedMark = p;
-            this.expectedField = f;
-        }
-
-        public void verifyAll() {
-            assertTrue(wasMarked);
-            assertEquals(expectedMark, markedMark);
-            assertEquals(expectedField, markedField);
-        }
-
-        public void mark(Field f, Mark p) {
-            wasMarked = true;
-            markedField = f;
-            markedMark = p;
-        }
-    }
-
 }
