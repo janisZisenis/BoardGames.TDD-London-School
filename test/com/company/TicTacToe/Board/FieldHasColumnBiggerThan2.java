@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -28,7 +28,7 @@ public class FieldHasColumnBiggerThan2 {
 
     @Test
     void FreshInstance_mark_ShouldThrowException() {
-        Executable act = () -> sut.mark(field, Player.John);
+        Executable act = () -> sut.mark(field, Mark.John);
 
         assertThrows(TicTacToeBoard.FieldDoesNotExist.class, act);
     }

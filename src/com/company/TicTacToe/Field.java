@@ -1,4 +1,4 @@
-package com.company.TicTacToe.IsOnBoardValidator;
+package com.company.TicTacToe;
 
 public class Field {
 

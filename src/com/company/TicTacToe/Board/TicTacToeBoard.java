@@ -1,13 +1,14 @@
 package com.company.TicTacToe.Board;
 
 import com.company.TicTacToe.IsOnBoardValidator.FieldExistsProvider;
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class TicTacToeBoard implements FieldExistsProvider {
+public class TicTacToeBoard implements FieldExistsProvider, MarkFieldService {
 
-    private HashMap<Field, Player> fields = new HashMap<Field, Player>();
+    private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean exists(Field f) {
         int row = f.getRow();
@@ -24,12 +25,12 @@ public class TicTacToeBoard implements FieldExistsProvider {
         return fieldWasNotMarked(f);
     }
 
-    public void mark(Field f, Player m) {
+    public void mark(Field f, Mark m) {
         throwIfFieldDoesNotExist(f);
         store(f, m);
     }
 
-    public Player getMarkAt(Field f) {
+    public Mark getMarkAt(Field f) {
         throwIfFieldDoesNotExist(f);
 
         if(fields.keySet().contains(f))
@@ -53,7 +54,7 @@ public class TicTacToeBoard implements FieldExistsProvider {
     }
 
 
-    private void store(Field f, Player m) {
+    private void store(Field f, Mark m) {
         fields.put(f, m);
     }
 

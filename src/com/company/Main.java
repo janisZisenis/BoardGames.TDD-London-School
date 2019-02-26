@@ -5,14 +5,15 @@ import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.Core.InputGeneration.DefaultInputGenerator.DefaultInputGenerator;
-import com.company.TicTacToe.IsOnBoardValidator.Field;
+import com.company.TicTacToe.Field;
 import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
-import com.company.TicTacToe.Board.Player;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.TicTacToe.Player.Player;
 
 public class Main {
 
@@ -28,49 +29,34 @@ public class Main {
         return new ValidatingInputGenerator(generator, alerting);
     }
 
+    private static Player makeHaley(TicTacToeBoard board, InputGenerator generator) {
+        return new Player(generator, board, Mark.Haley);
+    }
+
+    private static Player makeJohn(TicTacToeBoard board, InputGenerator generator) {
+        return new Player(generator, board, Mark.John);
+    }
+
     public static void main(String[] args) {
         InputGenerator generator = makeTicTacToeInputGenerator(board);
+        Player john = makeJohn(board, generator);
+        Player haley = makeHaley(board, generator);
 
         print(board);
 
-        Input in = generator.generateInput();
-        Field f = makeField(in);
-        applyJohn(f);
+        john.play();
 
         print(board);
 
-        in = generator.generateInput();
-        f = makeField(in);
-        applyHaley(f);
+        haley.play();
 
         print(board);
 
-        in = generator.generateInput();
-        f = makeField(in);
-        applyJohn(f);
+        john.play();
 
         print(board);
     }
 
-
-    //Player
-    private static void applyJohn(Field f) {
-        mark(Player.John, f);
-    }
-
-    private static void applyHaley(Field f) {
-        mark(Player.Haley, f);
-    }
-
-    private static void mark(Player m, Field f) {
-        board.mark(f, m);
-    }
-
-    private static Field makeField(Input in) {
-        return new Field(in.getRow(), in.getColumn());
-    }
-
-    //Printer
     public static void print(TicTacToeBoard board) {
         for(int row = 0; row < 3; row++) {
             printRow(row, board);
@@ -91,8 +77,8 @@ public class Main {
         System.out.print('\n');
     }
 
-    private static char map(Player m) {
-        return (m == Player.John) ? 'X' : 'O';
+    private static char map(Mark m) {
+        return (m == Mark.John) ? 'X' : 'O';
     }
 
 }
