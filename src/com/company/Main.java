@@ -13,6 +13,8 @@ import com.company.TicTacToe.Board.Player;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.TicTacToe.Player.Haley;
+import com.company.TicTacToe.Player.John;
 
 public class Main {
 
@@ -30,24 +32,20 @@ public class Main {
 
     public static void main(String[] args) {
         InputGenerator generator = makeTicTacToeInputGenerator(board);
+        John john = new John(generator, board);
+        Haley haley = new Haley(generator, board);
 
         print(board);
 
-        Input in = generator.generateInput();
-        Field f = makeField(in);
-        applyJohn(f);
+        john.play();
 
         print(board);
 
-        in = generator.generateInput();
-        f = makeField(in);
-        applyHaley(f);
+        haley.play();
 
         print(board);
 
-        in = generator.generateInput();
-        f = makeField(in);
-        applyJohn(f);
+        john.play();
 
         print(board);
     }
