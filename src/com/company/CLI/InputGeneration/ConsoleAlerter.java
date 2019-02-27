@@ -4,7 +4,13 @@ import com.company.Core.InputGeneration.AlertingValidator.Alerter;
 
 public class ConsoleAlerter implements Alerter {
 
-    public void alert(String message) {
+    private final String message;
+
+    public ConsoleAlerter(String message) {
+        this.message = message;
+    }
+
+    public void alert() {
         System.out.println(message);
     }
 }

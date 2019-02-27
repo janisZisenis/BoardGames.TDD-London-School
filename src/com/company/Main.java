@@ -21,9 +21,9 @@ public class Main {
     static TicTacToeBoard board = new TicTacToeBoard();
 
     private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
-        ConsoleAlerter alerter = new ConsoleAlerter();
+        ConsoleAlerter alerter = new ConsoleAlerter(AlertingMessages.inputOutOfBounds);
         InputValidator validator = new FieldExistsValidator(board);
-        InputValidator alerting = new AlertingValidator(validator, alerter, AlertingMessages.inputOutOfBounds);
+        InputValidator alerting = new AlertingValidator(validator, alerter);
 
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new DefaultInputGenerator(prompter);
