@@ -1,4 +1,4 @@
-package com.company.TicTacToe.IsOnBoardValidator;
+package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.Input;

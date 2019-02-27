@@ -1,11 +1,11 @@
-package com.company.Core.InputGeneration.DefaultInputGenerator;
+package com.company.Core.InputGeneration.PromptingInputGenerator;
 
 import com.company.Core.InputGeneration.Input;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class InputGeneratorTest {
+public class PromptingInputGeneratorTest {
 
     InputPrompterStub prompter = new InputPrompterStub();
     DefaultInputGenerator sut = new DefaultInputGenerator(prompter);

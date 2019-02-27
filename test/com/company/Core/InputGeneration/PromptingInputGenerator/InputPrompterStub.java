@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.DefaultInputGenerator;
+package com.company.Core.InputGeneration.PromptingInputGenerator;
 
 import com.company.Core.InputGeneration.Input;
 

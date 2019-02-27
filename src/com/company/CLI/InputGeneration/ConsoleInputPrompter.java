@@ -1,6 +1,6 @@
 package com.company.CLI.InputGeneration;
 
-import com.company.Core.InputGeneration.DefaultInputGenerator.InputPrompter;
+import com.company.Core.InputGeneration.PromptingInputGenerator.InputPrompter;
 
 import java.util.Scanner;
 

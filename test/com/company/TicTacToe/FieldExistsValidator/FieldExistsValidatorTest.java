@@ -1,10 +1,10 @@
-package com.company.TicTacToe.IsOnBoardValidator;
+package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class IsOnBoardValidatorTest {
+public class FieldExistsValidatorTest {
 
     FieldExistsProviderStub board = new FieldExistsProviderStub();
     FieldExistsValidator sut = new FieldExistsValidator(board);
