@@ -1,13 +1,13 @@
 package com.company.Core.InputGeneration.AlertingValidator;
 
 public class AlerterSpy implements Alerter {
-    String alerted = "";
+    boolean alerted = false;
 
-    public String getAlertedMessage() {
-        return alerted;
+    public void alert() {
+        this.alerted = true;
     }
 
-    public void alert(String message) {
-        this.alerted = message;
+    public boolean hasAlerted() {
+        return alerted;
     }
 }

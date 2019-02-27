@@ -9,9 +9,8 @@ public class AlertingValidatorTest {
 
     ValidatorStub validator = new ValidatorStub();
     AlerterSpy alerter = new AlerterSpy();
-    String message = "MessageToBeAlerted";
 
-    AlertingValidator sut = new AlertingValidator(validator, alerter, message);
+    AlertingValidator sut = new AlertingValidator(validator, alerter);
 
     Input input = new Input(1, 2);
 
@@ -37,11 +36,11 @@ public class AlertingValidatorTest {
 
         sut.isValid(input);
 
-        assertHasAlerted(message);
+        assertHasAlerted();
     }
 
-    private void assertHasAlerted(String expected) {
-        String actual = alerter.getAlertedMessage();
-        assertEquals(expected, actual);
+    private void assertHasAlerted() {
+        boolean actual = alerter.hasAlerted();
+        assertTrue(actual);
     }
 }
