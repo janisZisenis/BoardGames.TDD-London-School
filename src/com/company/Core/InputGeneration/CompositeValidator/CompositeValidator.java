@@ -5,11 +5,11 @@ import com.company.Core.InputGeneration.InputValidator;
 
 import java.util.LinkedList;
 
-public class CompositeValidator {
+public class CompositeValidator implements InputValidator {
 
     private LinkedList<InputValidator> validators = new LinkedList<InputValidator>();
 
-    public boolean validate(Input input) {
+    public boolean isValid(Input input) {
         boolean isValid = true;
 
         for(int i = 0; validators.size() > i; i++) {
@@ -23,4 +23,5 @@ public class CompositeValidator {
     public void add(InputValidator validator) {
         validators.add(validator);
     }
+
 }

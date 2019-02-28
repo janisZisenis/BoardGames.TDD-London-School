@@ -2,11 +2,12 @@ package com.company.TicTacToe.Board;
 
 import com.company.TicTacToe.FieldExistsValidator.FieldExistsProvider;
 import com.company.TicTacToe.Field;
+import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class TicTacToeBoard implements FieldExistsProvider, MarkFieldService {
+public class TicTacToeBoard implements FieldExistsProvider, MarkFieldService, FieldIsEmptyProvider {
 
     private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 

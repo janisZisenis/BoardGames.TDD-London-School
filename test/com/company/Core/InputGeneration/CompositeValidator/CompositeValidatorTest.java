@@ -12,7 +12,7 @@ public class CompositeValidatorTest {
 
     @Test
     void FreshInstance_InputShouldBeValid() {
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
@@ -21,7 +21,7 @@ public class CompositeValidatorTest {
     void AddedInvalidator_InputShouldBeInvalid() {
         makeInvalidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -30,7 +30,7 @@ public class CompositeValidatorTest {
     void AddedValidator_InputShouldBeInvalid() {
         makeValidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
@@ -40,7 +40,7 @@ public class CompositeValidatorTest {
         makeInvalidatorAdded();
         makeValidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -50,7 +50,7 @@ public class CompositeValidatorTest {
         makeValidatorAdded();
         makeInvalidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -61,7 +61,7 @@ public class CompositeValidatorTest {
         makeInvalidatorAdded();
         makeValidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -72,7 +72,7 @@ public class CompositeValidatorTest {
         makeValidatorAdded();
         makeInvalidatorAdded();
 
-        boolean actual = sut.validate(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
