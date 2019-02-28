@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,12 +50,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="880" />
-          <entry key="java" value="34311" />
+          <entry key="java" value="34474" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="34311" />
+          <entry key="JAVA" value="34474" />
           <entry key="PLAIN_TEXT" value="880" />
         </counts>
       </usages-collector>
@@ -81,10 +80,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="382">
+              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
                 <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
                 <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
                 <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
@@ -92,6 +92,8 @@
                 <element signature="method#makeJohn#0;class#Main#0" />
                 <element signature="method#print#0;class#Main#0" />
                 <element signature="method#printRow#0;class#Main#0" />
+                <element signature="e#4077#4078#0" expanded="true" />
+                <element signature="e#4128#4129#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -386,7 +388,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551380146182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551380505208" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -499,7 +501,7 @@
       <workItem from="1551200371053" duration="2558000" />
       <workItem from="1551245916453" duration="5779000" />
       <workItem from="1551357532719" duration="806000" />
-      <workItem from="1551372739521" duration="5373000" />
+      <workItem from="1551372739521" duration="5636000" />
     </task>
     <servers />
   </component>
@@ -536,7 +538,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81724000" />
+    <option name="totallyTimeSpent" value="81987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
@@ -551,7 +553,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2134715" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2134715" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25906736" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1004,10 +1006,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="382">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
             <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
             <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
             <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
@@ -1015,6 +1018,8 @@
             <element signature="method#makeJohn#0;class#Main#0" />
             <element signature="method#print#0;class#Main#0" />
             <element signature="method#printRow#0;class#Main#0" />
+            <element signature="e#4077#4078#0" expanded="true" />
+            <element signature="e#4128#4129#0" expanded="true" />
           </folding>
         </state>
       </provider>

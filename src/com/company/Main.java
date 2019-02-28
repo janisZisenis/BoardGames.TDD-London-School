@@ -19,6 +19,9 @@ import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
+    static Player john;
+    static Player haley;
+
     private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board, InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new DefaultInputGenerator(prompter);
@@ -62,19 +65,22 @@ public class Main {
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(board, validator);
 
-        Player john = makeJohn(board, generator);
-        Player haley = makeHaley(board, generator);
+        john = makeJohn(board, generator);
+        haley = makeHaley(board, generator);
 
+        Player current = john;
 
         print(board);
 
-        john.play();
+        current.play();
         print(board);
+        current = (current == john) ? haley : john;
 
-        haley.play();
+        current.play();
         print(board);
+        current = (current == john) ? haley : john;
 
-        john.play();
+        current.play();
         print(board);
     }
 
