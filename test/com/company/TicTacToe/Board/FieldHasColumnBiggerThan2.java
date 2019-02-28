@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FieldHasColumnBiggerThan2 {
 
-    TicTacToeBoard sut = new TicTacToeBoard();
-    Field field = new Field(0, 3);
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(0, 3);
 
     @Test
     void FreshInstance_FieldShouldNotExist() {

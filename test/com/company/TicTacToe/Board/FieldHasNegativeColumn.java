@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FieldHasNegativeColumn {
 
-    TicTacToeBoard sut = new TicTacToeBoard();
-    Field field = new Field(0, -1);
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(0, -1);
 
     @Test
     void FreshInstance_FieldShouldNotExist() {

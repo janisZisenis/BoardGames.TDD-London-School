@@ -5,7 +5,7 @@ import com.company.Core.InputGeneration.PromptingInputGenerator.InputPrompter;
 import java.util.Scanner;
 
 public class ConsoleInputPrompter implements InputPrompter {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     private final String rowMessage = "Input row:";
     private final String columnMessage = "Input column:";

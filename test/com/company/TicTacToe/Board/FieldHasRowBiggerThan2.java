@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldHasRowBiggerThan2 {
 
-    TicTacToeBoard sut = new TicTacToeBoard();
-    Field field = new Field(3, 0);
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(3, 0);
 
     @Test
     void FreshInstance_FieldShouldNotExist() {

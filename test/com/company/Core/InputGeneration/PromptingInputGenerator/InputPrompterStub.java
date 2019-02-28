@@ -3,7 +3,7 @@ package com.company.Core.InputGeneration.PromptingInputGenerator;
 import com.company.Core.InputGeneration.Input;
 
 public class InputPrompterStub implements InputPrompter {
-    Input input;
+    private Input input;
 
     public void setInput(Input input) {
         this.input = input;

@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldHasNegativeRow {
 
-    TicTacToeBoard sut = new TicTacToeBoard();
-    Field field = new Field(-1, 0);
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(-1, 0);
 
     @Test
     void FreshInstance_FieldShouldNotExist() {

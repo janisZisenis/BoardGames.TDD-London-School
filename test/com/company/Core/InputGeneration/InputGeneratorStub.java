@@ -1,7 +1,6 @@
 package com.company.Core.InputGeneration;
 
 public class InputGeneratorStub implements InputGenerator {
-
     private int count = 0;
     private Input[] userInputs;
 

@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldsWithSameRowsAndColumns {
 
-    TicTacToeBoard sut = new TicTacToeBoard();
-    Field field = new Field(1, 1);
-    Field similar = new Field(1, 1);
+    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(1, 1);
+    private Field similar = new Field(1, 1);
 
     @Test
     void IfFieldGetsMarked_ASimilarFieldShouldNotBeEmpty() {

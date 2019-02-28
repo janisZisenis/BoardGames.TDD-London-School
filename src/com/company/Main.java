@@ -21,6 +21,7 @@ public class Main {
 
     static Player john;
     static Player haley;
+    static Player current;
 
     private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board, InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
@@ -67,21 +68,20 @@ public class Main {
 
         john = makeJohn(board, generator);
         haley = makeHaley(board, generator);
-
-        Player current = john;
+        current = john;
 
         print(board);
 
-        current.play();
-        print(board);
+        for(int i = 0; i < 9; i++) {
+            current.playMove();
+            print(board);
+            togglePlayer();
+        }
+
+    }
+
+    private static void togglePlayer() {
         current = (current == john) ? haley : john;
-
-        current.play();
-        print(board);
-        current = (current == john) ? haley : john;
-
-        current.play();
-        print(board);
     }
 
     public static void print(TicTacToeBoard board) {

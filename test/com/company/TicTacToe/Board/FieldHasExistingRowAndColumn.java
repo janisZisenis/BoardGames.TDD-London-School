@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldHasExistingRowAndColumn {
 
-    Field field = new Field(1, 1);
-    TicTacToeBoard sut = new TicTacToeBoard();
+    private Field field = new Field(1, 1);
+    private TicTacToeBoard sut = new TicTacToeBoard();
 
     @Test
     void IfRowAndColumnExists_FieldShouldExist() {

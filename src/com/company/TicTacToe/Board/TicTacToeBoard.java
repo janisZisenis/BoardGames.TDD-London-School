@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class TicTacToeBoard implements FieldExistsProvider, MarkFieldService, FieldIsEmptyProvider {
 
-    private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
+    private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean exists(Field f) {
         int row = f.getRow();

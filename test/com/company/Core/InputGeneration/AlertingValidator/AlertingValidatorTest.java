@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AlertingValidatorTest {
 
-    InputValidatorStub validator = new InputValidatorStub();
-    AlerterSpy alerter = new AlerterSpy();
+    private InputValidatorStub validator = new InputValidatorStub();
+    private AlerterSpy alerter = new AlerterSpy();
 
-    AlertingValidator sut = new AlertingValidator(validator, alerter);
+    private AlertingValidator sut = new AlertingValidator(validator, alerter);
 
     Input input = new Input(1, 2);
 

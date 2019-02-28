@@ -6,15 +6,15 @@ import com.company.TicTacToe.Field;
 
 public class FieldExistsValidator implements InputValidator {
 
-    private final FieldExistsProvider board;
+    private final FieldExistsProvider provider;
 
-    public FieldExistsValidator(FieldExistsProvider board) {
-        this.board = board;
+    public FieldExistsValidator(FieldExistsProvider provider) {
+        this.provider = provider;
     }
 
     public boolean isValid(Input in) {
         Field f = makeField(in);
-        return board.exists(f);
+        return provider.exists(f);
     }
 
     private Field makeField(Input in) {

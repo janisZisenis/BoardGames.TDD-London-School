@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidatingInputGeneratorTest {
 
-    InputGeneratorStub generator = new InputGeneratorStub();
-    CountingValidatorStub validator = new CountingValidatorStub();
-    ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
+    private InputGeneratorStub generator = new InputGeneratorStub();
+    private CountingValidatorStub validator = new CountingValidatorStub();
+    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
-    Input[] inputs;
+    private Input[] inputs;
 
     @Test
     void IfFirstUserInputIsOnBoard_ShouldBeTheFirstUserInput() {
