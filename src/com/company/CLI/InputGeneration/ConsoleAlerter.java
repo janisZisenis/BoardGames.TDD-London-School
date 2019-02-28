@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.InputGeneration;
+package com.company.CLI.InputGeneration;
 
 import com.company.Core.InputGeneration.AlertingValidator.Alerter;
 

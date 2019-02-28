@@ -3,24 +3,24 @@ package com.company.Core.InputGeneration.CompositeValidator;
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
 
+import java.util.LinkedList;
+
 public class CompositeValidator {
 
-    boolean isValid = true;
-    InputValidator validator;
-
-    CompositeValidator() {
-
-    }
+    private LinkedList<InputValidator> validators = new LinkedList<InputValidator>();
 
     public boolean validate(Input input) {
-        if(validator == null)
-            return true;
+        boolean isValid = true;
 
-        return validator.isValid(input);
+        for(int i = 0; validators.size() > i; i++) {
+            InputValidator v = validators.get(i);
+            isValid = isValid && v.isValid(input);
+        }
+
+        return isValid;
     }
 
     public void add(InputValidator validator) {
-        isValid = false;
-        this.validator = validator;
+        validators.add(validator);
     }
 }

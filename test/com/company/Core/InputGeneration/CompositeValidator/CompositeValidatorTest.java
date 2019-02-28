@@ -7,24 +7,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CompositeValidatorTest {
 
+    CompositeValidator sut = new CompositeValidator();
+    Input input = new Input(0 ,1);
+
     @Test
     void FreshInstance_InputShouldBeValid() {
-        CompositeValidator sut = new CompositeValidator();
-        Input input = new Input(0 ,1);
-
         boolean actual = sut.validate(input);
 
         assertTrue(actual);
     }
 
     @Test
-    void AddedInvalidating_InputShouldBeInvalid() {
-        CompositeValidator sut = new CompositeValidator();
-        Input input = new Input(0, 1);
-        InputValidatorStub validator = new InputValidatorStub();
-        Input[] valid = {};
-        validator.setValidInputs(valid);
-        sut.add(validator);
+    void AddedInvalidator_InputShouldBeInvalid() {
+        makeInvalidatorAdded();
 
         boolean actual = sut.validate(input);
 
@@ -32,13 +27,8 @@ public class CompositeValidatorTest {
     }
 
     @Test
-    void AddedValidating_InputShouldBeInvalid() {
-        CompositeValidator sut = new CompositeValidator();
-        Input input = new Input(0, 1);
-        InputValidatorStub validator = new InputValidatorStub();
-        Input[] valid = { new Input (0, 1) };
-        validator.setValidInputs(valid);
-        sut.add(validator);
+    void AddedValidator_InputShouldBeInvalid() {
+        makeValidatorAdded();
 
         boolean actual = sut.validate(input);
 
@@ -46,9 +36,60 @@ public class CompositeValidatorTest {
     }
 
     @Test
-    void nextTestGoesHere() {
-        //second validator adding!
-        assertFalse(true);
+    void AddedValidatorAfterInvalidator_InputShouldBeFalse() {
+        makeInvalidatorAdded();
+        makeValidatorAdded();
+
+        boolean actual = sut.validate(input);
+
+        assertFalse(actual);
+    }
+
+     @Test
+     void AddedInvalidatorAfterValidator_InputShouldBeFalse() {
+        makeValidatorAdded();
+        makeInvalidatorAdded();
+
+        boolean actual = sut.validate(input);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void AddedInvalidatorInBetweenTwoValidators_InputShouldBeFalse() {
+        makeValidatorAdded();
+        makeInvalidatorAdded();
+        makeValidatorAdded();
+
+        boolean actual = sut.validate(input);
+
+        assertFalse(actual);
+    }
+
+    @Test
+    void AddedInvalidatorAfterTwoValidators_InputShouldBeFalse() {
+        makeValidatorAdded();
+        makeValidatorAdded();
+        makeInvalidatorAdded();
+
+        boolean actual = sut.validate(input);
+
+        assertFalse(actual);
+    }
+
+    private void makeValidatorAdded() {
+        InputValidatorStub validator = new InputValidatorStub();
+        Input[] valid = { input };
+        validator.setValidInputs(valid);
+        sut.add(validator);
+    }
+
+
+    private void makeInvalidatorAdded() {
+        InputValidatorStub validator = new InputValidatorStub();
+        Input[] valid = {};
+        validator.setValidInputs(valid);
+        sut.add(validator);
     }
 
 }

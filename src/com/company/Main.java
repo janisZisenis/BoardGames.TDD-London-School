@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
-import com.company.Core.InputGeneration.InputGeneration.ConsoleAlerter;
+import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.PromptingInputGenerator.DefaultInputGenerator;
