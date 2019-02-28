@@ -1,17 +1,19 @@
 package com.company;
 
-import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
-import com.company.Core.InputGeneration.InputValidator;
-import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
-import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.Constants.AlertingMessages;
+import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
+import com.company.CLI.InputGeneration.ConsoleAlerter;
+import com.company.Core.InputGeneration.CompositeValidator.CompositeValidator;
+import com.company.Core.InputGeneration.InputGenerator;
+import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.PromptingInputGenerator.DefaultInputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.Board.TicTacToeBoard;
+import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.TicTacToe.Field;
 import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
-import com.company.TicTacToe.Board.TicTacToeBoard;
-import com.company.Core.InputGeneration.InputGenerator;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import com.company.TicTacToe.Player.Player;
 import com.company.TicTacToe.Player.PlayerConfig;
 
@@ -20,13 +22,21 @@ public class Main {
     static TicTacToeBoard board = new TicTacToeBoard();
 
     private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
-        ConsoleAlerter alerter = new ConsoleAlerter(AlertingMessages.inputOutOfBounds);
-        InputValidator validator = new FieldExistsValidator(board);
-        InputValidator alerting = new AlertingValidator(validator, alerter);
+        ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
+        InputValidator notExistingValidator = new FieldExistsValidator(board);
+        InputValidator notExistingAlerting = new AlertingValidator(notExistingValidator, notExistingAlerter);
+
+        ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
+        InputValidator alreadyMarkedValidator = new FieldIsEmptyValidator(board);
+        InputValidator alreadyMarkedAlerting = new AlertingValidator(alreadyMarkedValidator, alreadyMarkedAlerter);
+
+        CompositeValidator validator = new CompositeValidator();
+        validator.add(notExistingAlerting);
+        validator.add(alreadyMarkedAlerting);
 
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new DefaultInputGenerator(prompter);
-        return new ValidatingInputGenerator(generator, alerting);
+        return new ValidatingInputGenerator(generator, validator);
     }
 
     private static Player makeHaley(TicTacToeBoard board, InputGenerator generator) {
