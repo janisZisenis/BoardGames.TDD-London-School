@@ -2,14 +2,16 @@ package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.TicTacToe.Field;
 
-public class FieldExistsProviderStub implements FieldExistsProvider {
-    private boolean fieldExists = false;
+import java.util.Arrays;
 
-    public void setFieldExists(boolean b) {
-        fieldExists = b;
+public class FieldExistsProviderStub implements FieldExistsProvider {
+    private Field[] existing = {};
+
+    public void setExistingFields(Field[] existing) {
+        this.existing = existing;
     }
 
-    public boolean exists(Field f) {
-        return fieldExists;
+    public boolean exists(Field field) {
+        return Arrays.asList(existing).contains(field);
     }
 }

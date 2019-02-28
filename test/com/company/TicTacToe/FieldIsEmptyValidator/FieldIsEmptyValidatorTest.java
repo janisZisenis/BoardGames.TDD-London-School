@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldIsEmptyValidatorTest {
 
-    FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
-    FieldIsEmptyValidator sut = new FieldIsEmptyValidator(provider);
-    Input input = new Input(0, 1);
+    private FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
+    private FieldIsEmptyValidator sut = new FieldIsEmptyValidator(provider);
+    private Input input = new Input(0, 1);
 
     @Test
     void IfInputRefersToAFreeField_ItShouldBeValid() {

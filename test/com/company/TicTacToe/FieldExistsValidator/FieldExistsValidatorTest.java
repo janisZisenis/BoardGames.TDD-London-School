@@ -1,18 +1,19 @@
 package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input;
+import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldExistsValidatorTest {
 
-    FieldExistsProviderStub board = new FieldExistsProviderStub();
-    FieldExistsValidator sut = new FieldExistsValidator(board);
-    Input input = new Input(0, 1);
+    private FieldExistsProviderStub provider = new FieldExistsProviderStub();
+    private FieldExistsValidator sut = new FieldExistsValidator(provider);
+    private Input input = new Input(0, 1);
 
     @Test
-    void IfUserInputIsOnBoard_ShouldBeTrue() {
-        makeUserInputIsOnBoard();
+    void IfUserInputRefersToAnExistingField_ShouldBeTrue() {
+        makeUserInputRefersToAnExistingField();
 
         boolean actual = sut.isValid(input);
 
@@ -20,20 +21,21 @@ public class FieldExistsValidatorTest {
     }
 
     @Test
-    void IfUserInputIsNotOnBoard_ShouldBeFalse() {
-        makeUserInputIsNotOnBoard();
+    void IfUserInputRefersToANonExistingField_ShouldBeFalse() {
+        makeUserInputRefersToANonExistingField();
 
-        Input input = new Input(0, 1);
         boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
-    private void makeUserInputIsOnBoard() {
-        board.setFieldExists(true);
+    private void makeUserInputRefersToAnExistingField() {
+        Field[] existing = { new Field (0, 1) };
+        provider.setExistingFields(existing);
     }
 
-    private void makeUserInputIsNotOnBoard() {
-        board.setFieldExists(false);
+    private void makeUserInputRefersToANonExistingField() {
+        Field[] existing = {};
+        provider.setExistingFields(existing);
     }
 }
