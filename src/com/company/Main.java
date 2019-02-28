@@ -19,24 +19,32 @@ import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
-    static TicTacToeBoard board = new TicTacToeBoard();
-
-    private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board) {
-        ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
-        InputValidator notExistingValidator = new FieldExistsValidator(board);
-        InputValidator notExistingAlerting = new AlertingValidator(notExistingValidator, notExistingAlerter);
-
-        ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
-        InputValidator alreadyMarkedValidator = new FieldIsEmptyValidator(board);
-        InputValidator alreadyMarkedAlerting = new AlertingValidator(alreadyMarkedValidator, alreadyMarkedAlerter);
-
-        CompositeValidator validator = new CompositeValidator();
-        validator.add(notExistingAlerting);
-        validator.add(alreadyMarkedAlerting);
-
+    private static InputGenerator makeTicTacToeInputGenerator(TicTacToeBoard board, InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new DefaultInputGenerator(prompter);
         return new ValidatingInputGenerator(generator, validator);
+    }
+
+    private static CompositeValidator makeTicTacToeValidator(TicTacToeBoard board) {
+        InputValidator existsValidator = makeAlertingFieldExistsValidator(board);
+        InputValidator isFreeValidator = makeAlertingFieldIsFreeValidator(board);
+
+        CompositeValidator validator = new CompositeValidator();
+        validator.add(existsValidator);
+        validator.add(isFreeValidator);
+        return validator;
+    }
+
+    private static InputValidator makeAlertingFieldIsFreeValidator(TicTacToeBoard board) {
+        ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
+        InputValidator alreadyMarkedValidator = new FieldIsEmptyValidator(board);
+        return new AlertingValidator(alreadyMarkedValidator, alreadyMarkedAlerter);
+    }
+
+    private static InputValidator makeAlertingFieldExistsValidator(TicTacToeBoard board) {
+        ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
+        InputValidator notExistingValidator = new FieldExistsValidator(board);
+        return new AlertingValidator(notExistingValidator, notExistingAlerter);
     }
 
     private static Player makeHaley(TicTacToeBoard board, InputGenerator generator) {
@@ -50,22 +58,23 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        InputGenerator generator = makeTicTacToeInputGenerator(board);
+        TicTacToeBoard board = new TicTacToeBoard();
+        InputValidator validator = makeTicTacToeValidator(board);
+        InputGenerator generator = makeTicTacToeInputGenerator(board, validator);
+
         Player john = makeJohn(board, generator);
         Player haley = makeHaley(board, generator);
 
+
         print(board);
 
         john.play();
-
         print(board);
 
         haley.play();
-
         print(board);
 
         john.play();
-
         print(board);
     }
 
@@ -82,7 +91,7 @@ public class Main {
                 System.out.print('.');
             }
             else {
-                char c = map(Main.board.getMarkAt(f));
+                char c = map(board.getMarkAt(f));
                 System.out.print(c);
             }
         }
