@@ -1,15 +1,14 @@
 package com.company;
 
 import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
-import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Constants.AlertingMessages;
-import com.company.Core.InputGeneration.DefaultInputGenerator.DefaultInputGenerator;
+import com.company.Core.InputGeneration.PromptingInputGenerator.DefaultInputGenerator;
 import com.company.TicTacToe.Field;
-import com.company.TicTacToe.IsOnBoardValidator.FieldExistsValidator;
+import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;

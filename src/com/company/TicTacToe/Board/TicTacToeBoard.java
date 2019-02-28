@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.IsOnBoardValidator.FieldExistsProvider;
+import com.company.TicTacToe.FieldExistsValidator.FieldExistsProvider;
 import com.company.TicTacToe.Field;
 import com.company.TicTacToe.Player.MarkFieldService;
 
