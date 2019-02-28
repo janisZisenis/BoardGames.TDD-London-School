@@ -13,8 +13,8 @@ public class FieldIsEmptyValidatorTest {
     private Input input = new Input(0, 1);
 
     @Test
-    void IfInputRefersToAFreeField_ItShouldBeValid() {
-        makeInputRefersToAFreeField();
+    void IfInputRefersToAnEmptyField_ItShouldBeValid() {
+        makeInputRefersToAnEmptyField();
 
         boolean actual = sut.isValid(input);
 
@@ -30,14 +30,14 @@ public class FieldIsEmptyValidatorTest {
         assertFalse(actual);
     }
 
-    private void makeInputRefersToAFreeField() {
-        Field[] occupied = {};
-        provider.setOccupiedFields(occupied);
+    private void makeInputRefersToAnEmptyField() {
+        Field[] empty = { new Field(0, 1) };
+        provider.setEmptyFields(empty);
     }
 
     private void makeInputRefersToAnOccupiedField() {
-        Field[] occupied = { new Field (0, 1) };
-        provider.setOccupiedFields(occupied);
+        Field[] empty = {};
+        provider.setEmptyFields(empty);
     }
 
 }

@@ -4,17 +4,13 @@ import com.company.TicTacToe.Field;
 import java.util.Arrays;
 
 public class FieldIsEmptyProviderStub implements FieldIsEmptyProvider {
-    private Field[] occupied = {};
+    private Field[] empty = {};
 
     public boolean isEmpty(Field field) {
-        return !OccupiedFieldsContain(field);
+        return Arrays.asList(empty).contains(field);
     }
 
-    private boolean OccupiedFieldsContain(Field field) {
-        return Arrays.asList(occupied).contains(field);
-    }
-
-    public void setOccupiedFields(Field[] occupied) {
-        this.occupied = occupied;
+    public void setEmptyFields(Field[] empty) {
+        this.empty = empty;
     }
 }
