@@ -72,10 +72,22 @@ public class Main {
 
         printBoard();
 
-        for(int i = 0; i < 9; i++) {
+        while(!isGameOver()) {
             playTurn();
         }
 
+    }
+
+    private static boolean isGameOver() {
+        return !hasFreeFieldLeft();
+    }
+
+    private static boolean hasFreeFieldLeft() {
+        for(int row = 0; row < 3; row++)
+            for(int col = 0; col < 3; col++)
+                if(board.isEmpty(new Field(row, col)))
+                    return true;
+        return false;
     }
 
     private static void playTurn() {
