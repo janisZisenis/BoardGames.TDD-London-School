@@ -1,9 +1,9 @@
-package com.company.TicTacToe.TicTacToeFieldExistsValidator;
+package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
 
-public class TicTacToeFieldExistsValidator implements InputValidator {
+public class FieldExistsValidator implements InputValidator {
 
     int lower = 0;
     int upper = 2;

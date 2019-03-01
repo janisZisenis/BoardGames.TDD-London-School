@@ -1,12 +1,12 @@
-package com.company.TicTacToe.TicTacToeFieldExistsValidator;
+package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TicTacToeFieldExistsValidatorTest {
+public class FieldExistsValidatorTest {
 
-    TicTacToeFieldExistsValidator sut = new TicTacToeFieldExistsValidator();
+    FieldExistsValidator sut = new FieldExistsValidator();
     Input input;
 
     @Test

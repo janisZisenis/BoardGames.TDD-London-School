@@ -15,7 +15,7 @@ import com.company.TicTacToe.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import com.company.TicTacToe.Player.Player;
 import com.company.TicTacToe.Player.PlayerConfig;
-import com.company.TicTacToe.TicTacToeFieldExistsValidator.TicTacToeFieldExistsValidator;
+import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 
 public class Main {
 
@@ -48,7 +48,7 @@ public class Main {
 
     private static InputValidator makeAlertingFieldExistsValidator() {
         ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
-        InputValidator notExistingValidator = new TicTacToeFieldExistsValidator();
+        InputValidator notExistingValidator = new FieldExistsValidator();
         return new AlertingValidator(notExistingValidator, notExistingAlerter);
     }
 
