@@ -13,8 +13,8 @@ public class PlayerTest {
     private Player sut;
 
     @Test
-    void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithHisMark() {
-        makeJohnMarksRow1Column1();
+    void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
+        makeJohnWillMarkRow1Column1();
         makeMockExpectsJohnMarksRow1Column1();
 
         sut.playMove();
@@ -23,8 +23,8 @@ public class PlayerTest {
     }
 
     @Test
-    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithHisMark() {
-        makeJohnMarksRow2Column0();
+    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn() {
+        makeJohnWillMarkRow2Column0();
         makeMockExpectsJohnMarksRow2Column0();
 
         sut.playMove();
@@ -33,8 +33,8 @@ public class PlayerTest {
     }
 
     @Test
-    void IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHerMark() {
-        makeHaleyMarksRow1Column1();
+    void IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley() {
+        makeHaleyWillMarkRow1Column1();
         makeMockExpectsHaleyMarksRow1Column1();
 
         sut.playMove();
@@ -61,17 +61,17 @@ public class PlayerTest {
     }
 
 
-    private void makeJohnMarksRow1Column1() {
+    private void makeJohnWillMarkRow1Column1() {
         makePlayerIsJohn();
         makeGeneratorReturnsRow1Column1();
     }
 
-    private void makeJohnMarksRow2Column0() {
+    private void makeJohnWillMarkRow2Column0() {
         makePlayerIsJohn();
         makeGeneratorReturnsRow2Column0();
     }
 
-    private void makeHaleyMarksRow1Column1() {
+    private void makeHaleyWillMarkRow1Column1() {
         makePlayerIsHaley();
         makeGeneratorReturnsRow1Column1();
     }
