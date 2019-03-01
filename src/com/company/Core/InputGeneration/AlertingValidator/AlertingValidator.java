@@ -6,14 +6,10 @@ import com.company.Core.InputGeneration.InputValidator;
 public class AlertingValidator implements InputValidator {
 
     private final InputValidator validator;
-    private Alerter alerter;
-
-    public AlertingValidator(InputValidator validator) {
-        this.validator = validator;
-    }
+    private final Alerter alerter;
 
     public AlertingValidator(InputValidator validator, Alerter alerter) {
-        this(validator);
+        this.validator = validator;
         this.alerter = alerter;
     }
 

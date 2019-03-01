@@ -1,26 +1,22 @@
 package com.company.TicTacToe.FieldExistsValidator;
 
-import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.Input;
-import com.company.TicTacToe.Field;
+import com.company.Core.InputGeneration.InputValidator;
 
 public class FieldExistsValidator implements InputValidator {
 
-    private final FieldExistsProvider board;
+    int lower = 0;
+    int upper = 2;
 
-    public FieldExistsValidator(FieldExistsProvider board) {
-        this.board = board;
+    public boolean isValid(Input input) {
+        int row = input.getRow();
+        int col = input.getColumn();
+
+        return isOutOfBounds(row) && isOutOfBounds(col);
     }
 
-    public boolean isValid(Input in) {
-        Field f = makeField(in);
-        return board.exists(f);
+    private boolean isOutOfBounds(int i) {
+        return i >= lower && i <= upper;
     }
 
-    private Field makeField(Input in) {
-        int row = in.getRow();
-        int column = in.getColumn();
-
-        return new Field(row, column);
-    }
 }

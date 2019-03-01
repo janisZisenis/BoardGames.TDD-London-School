@@ -5,8 +5,8 @@ import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
 
 public class ValidatingInputGenerator implements InputGenerator {
-    private InputGenerator generator;
-    private InputValidator validator;
+    private final InputGenerator generator;
+    private final InputValidator validator;
 
     public ValidatingInputGenerator(InputGenerator generator, InputValidator validator) {
         this.generator = generator;
@@ -16,7 +16,7 @@ public class ValidatingInputGenerator implements InputGenerator {
     public Input generateInput() {
         Input in = generator.generateInput();
 
-        while(!validator.isValid(in)) {
+        while(!validator.isValid(null)) {
             in = generator.generateInput();
         }
 

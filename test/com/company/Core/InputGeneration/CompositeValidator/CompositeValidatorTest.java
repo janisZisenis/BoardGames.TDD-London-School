@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CompositeValidatorTest {
 
-    CompositeValidator sut = new CompositeValidator();
-    Input input = new Input(0 ,1);
+    private CompositeValidator sut = new CompositeValidator();
+    private Input input = new Input(0 ,1);
 
     @Test
     void FreshInstance_InputShouldBeValid() {
@@ -77,13 +77,13 @@ public class CompositeValidatorTest {
         assertFalse(actual);
     }
 
+
     private void makeValidatorAdded() {
         InputValidatorStub validator = new InputValidatorStub();
         Input[] valid = { input };
         validator.setValidInputs(valid);
         sut.add(validator);
     }
-
 
     private void makeInvalidatorAdded() {
         InputValidatorStub validator = new InputValidatorStub();

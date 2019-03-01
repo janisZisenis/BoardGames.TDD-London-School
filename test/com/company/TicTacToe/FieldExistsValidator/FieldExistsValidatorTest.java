@@ -1,19 +1,17 @@
 package com.company.TicTacToe.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input;
-import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldExistsValidatorTest {
 
-    private FieldExistsProviderStub provider = new FieldExistsProviderStub();
-    private FieldExistsValidator sut = new FieldExistsValidator(provider);
-    private Input input = new Input(0, 1);
+    FieldExistsValidator sut = new FieldExistsValidator();
+    Input input;
 
     @Test
-    void IfUserInputRefersToAnExistingField_ShouldBeTrue() {
-        makeUserInputRefersToAnExistingField();
+    void IfInputHasRowAndColumnBetween0And2_ItShouldBeValid() {
+        input = new Input(0, 2);
 
         boolean actual = sut.isValid(input);
 
@@ -21,21 +19,39 @@ public class FieldExistsValidatorTest {
     }
 
     @Test
-    void IfUserInputRefersToANonExistingField_ShouldBeFalse() {
-        makeUserInputRefersToANonExistingField();
+    void IfInputHasNegativeRow_ItShouldNotBeValid() {
+        input = new Input(-1, 2);
 
         boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
-    private void makeUserInputRefersToAnExistingField() {
-        Field[] existing = { new Field (0, 1) };
-        provider.setExistingFields(existing);
+    @Test
+    void IfInputHasRowBiggerThan2_ItShouldNotBeValid() {
+        input = new Input(3, 2);
+
+        boolean actual = sut.isValid(input);
+
+        assertFalse(actual);
     }
 
-    private void makeUserInputRefersToANonExistingField() {
-        Field[] existing = {};
-        provider.setExistingFields(existing);
+    @Test
+    void IfInputHasNegativeColumn_ItShouldNotBeValid() {
+        input = new Input(0, -1);
+
+        boolean actual = sut.isValid(input);
+
+        assertFalse(actual);
     }
+
+    @Test
+    void IfInputHasColumnBiggerThan2_ItShouldNotBeValid() {
+        input = new Input(2, 3);
+
+        boolean actual = sut.isValid(input);
+
+        assertFalse(actual);
+    }
+
 }

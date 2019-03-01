@@ -2,10 +2,9 @@ package com.company.TicTacToe.Board;
 
 import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldMarkingTest {
 
@@ -13,6 +12,13 @@ public class FieldMarkingTest {
     private Field first = new Field(0, 1);
     private Field second = new Field(1, 2);
     private Field third = new Field(1, 1);
+
+    @Test
+    void FreshInstance_gettingAMark_ShouldThrowException() {
+        Executable act = () -> sut.getMarkAt(first);
+
+        assertThrows(TicTacToeBoard.FieldIsEmpty.class, act);
+    }
 
     @Test
     void IfJohnMarksField_ItShouldBeJohns() {

@@ -1,8 +1,8 @@
 package com.company.Core.InputGeneration;
 
 public class Input {
-    private int row;
-    private int column;
+    private final int row;
+    private final int column;
 
     public Input(int row, int column) {
         this.row = row;

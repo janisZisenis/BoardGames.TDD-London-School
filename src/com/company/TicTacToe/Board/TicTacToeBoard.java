@@ -1,65 +1,33 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.FieldExistsValidator.FieldExistsProvider;
 import com.company.TicTacToe.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class TicTacToeBoard implements FieldExistsProvider, MarkFieldService, FieldIsEmptyProvider {
-
-    private HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
-
-    public boolean exists(Field f) {
-        int row = f.getRow();
-        int col = f.getColumn();
-
-        if(isOutOfBounds(row) || isOutOfBounds(col))
-            return false;
-
-        return true;
-    }
+public class TicTacToeBoard implements MarkFieldService, FieldIsEmptyProvider {
+    private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean isEmpty(Field f) {
-        throwIfFieldDoesNotExist(f);
-        return fieldWasNotMarked(f);
-    }
-
-    public void mark(Field f, Mark m) {
-        throwIfFieldDoesNotExist(f);
-        store(f, m);
-    }
-
-    public Mark getMarkAt(Field f) {
-        throwIfFieldDoesNotExist(f);
-
-        if(fields.keySet().contains(f))
-            return fields.get(f);
-
-        throw new FieldIsEmpty();
-    }
-
-
-    private boolean isOutOfBounds(int pos) {
-        return pos < 0 || pos > 2;
-    }
-
-    private boolean fieldWasNotMarked(Field f) {
         return !fields.keySet().contains(f);
     }
 
-    private void throwIfFieldDoesNotExist(Field f) {
-        if(!exists(f))
-            throw new FieldDoesNotExist();
-    }
-
-
-    private void store(Field f, Mark m) {
+    public void mark(Field f, Mark m) {
         fields.put(f, m);
     }
 
-    public class FieldDoesNotExist extends RuntimeException {}
+    public Mark getMarkAt(Field f) {
+        throwIfFieldIsEmpty(f);
+
+        return fields.get(f);
+    }
+
+    private void throwIfFieldIsEmpty(Field f) {
+        if(isEmpty(f))
+            throw new FieldIsEmpty();
+    }
 
     public class FieldIsEmpty extends RuntimeException {}
+
 }

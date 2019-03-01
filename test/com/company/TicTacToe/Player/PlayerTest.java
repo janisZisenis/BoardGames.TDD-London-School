@@ -1,46 +1,43 @@
 package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input;
-import com.company.Core.InputGeneration.InputGeneratorStub;
+import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 public class PlayerTest {
 
-    InputGeneratorStub generator = new InputGeneratorStub();
-    MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    Player sut;
+    private CountingGeneratorStub generator = new CountingGeneratorStub();
+    private MarkFieldServiceMock markService = new MarkFieldServiceMock();
+    private Player sut;
 
     @Test
-    void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithHisMark() {
-        makeJohnMarksRow1Column1();
+    void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
+        makeJohnWillMarkRow1Column1();
         makeMockExpectsJohnMarksRow1Column1();
 
-        sut.play();
+        sut.playMove();
 
         markService.verifyAll();
     }
 
     @Test
-    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithHisMark() {
-        makeJohnMarksRow2Column0();
+    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn() {
+        makeJohnWillMarkRow2Column0();
         makeMockExpectsJohnMarksRow2Column0();
 
-        sut.play();
+        sut.playMove();
 
         markService.verifyAll();
     }
 
     @Test
-    void IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHerMark() {
-        makeHaleyMarksRow1Column1();
+    void IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley() {
+        makeHaleyWillMarkRow1Column1();
         makeMockExpectsHaleyMarksRow1Column1();
 
-        sut.play();
+        sut.playMove();
 
         markService.verifyAll();
     }
@@ -64,17 +61,17 @@ public class PlayerTest {
     }
 
 
-    private void makeJohnMarksRow1Column1() {
+    private void makeJohnWillMarkRow1Column1() {
         makePlayerIsJohn();
         makeGeneratorReturnsRow1Column1();
     }
 
-    private void makeJohnMarksRow2Column0() {
+    private void makeJohnWillMarkRow2Column0() {
         makePlayerIsJohn();
         makeGeneratorReturnsRow2Column0();
     }
 
-    private void makeHaleyMarksRow1Column1() {
+    private void makeHaleyWillMarkRow1Column1() {
         makePlayerIsHaley();
         makeGeneratorReturnsRow1Column1();
     }

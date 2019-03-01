@@ -17,7 +17,7 @@ public class Player {
         this.mark = config.getMark();
     }
 
-    public void play() {
+    public void playMove() {
         Input in = generateInput();
         Field f = makeField(in);
         mark(f);

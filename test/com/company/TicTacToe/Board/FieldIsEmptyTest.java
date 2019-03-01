@@ -60,7 +60,7 @@ public class FieldIsEmptyTest {
 
     @Test
     void IfThreeFieldsAreMarked_ThirdFieldShouldNotBeEmpty() {
-        markThreeFields();
+        makeThreeFieldsMarked();
 
         boolean actual = sut.isEmpty(third);
         assertFalse(actual);
@@ -76,7 +76,7 @@ public class FieldIsEmptyTest {
         sut.mark(second, Mark.John);
     }
 
-    private void markThreeFields() {
+    private void makeThreeFieldsMarked() {
         makeTwoFieldsMarked();
         sut.mark(third, Mark.John);
     }

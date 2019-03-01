@@ -10,10 +10,6 @@ public class Field {
         this.column = column;
     }
 
-    public int getRow() { return row; }
-
-    public int getColumn() { return column; }
-
     public boolean equals(Object o) {
         Field f = (Field) o;
         return f.row == row && f.column == column;

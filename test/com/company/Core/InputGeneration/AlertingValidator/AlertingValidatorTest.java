@@ -7,43 +7,54 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AlertingValidatorTest {
 
-    InputValidatorStub validator = new InputValidatorStub();
-    AlerterSpy alerter = new AlerterSpy();
+    private InputValidatorStub validator = new InputValidatorStub();
+    private AlerterSpy alerter = new AlerterSpy();
 
-    AlertingValidator sut = new AlertingValidator(validator, alerter);
+    private AlertingValidator sut = new AlertingValidator(validator, alerter);
 
     Input input = new Input(1, 2);
 
     @Test
     void IfInputIsValid_ShouldReturnTrue() {
-        Input[] valid = { new Input(1, 2) };
-        validator.setValidInputs(valid);
+        makeInputValid(input);
 
         boolean actual = sut.isValid(input);
+
         assertTrue(actual);
     }
 
     @Test
     void IfInputIsInvalid_ShouldReturnFalse() {
-        Input[] valid = {};
-        validator.setValidInputs(valid);
+        makeInputInvalid();
 
         boolean actual = sut.isValid(input);
+
         assertFalse(actual);
     }
 
     @Test
     void IfInputIsInvalid_ShouldAlert() {
-        Input[] valid = {};
-        validator.setValidInputs(valid);
+        makeInputInvalid();
 
         sut.isValid(input);
 
         assertHasAlerted();
     }
 
+
     private void assertHasAlerted() {
         boolean actual = alerter.hasAlerted();
         assertTrue(actual);
     }
+
+    private void makeInputValid(Input input) {
+        Input[] valid = { input };
+        validator.setValidInputs(valid);
+    }
+
+    private void makeInputInvalid() {
+        Input[] valid = {};
+        validator.setValidInputs(valid);
+    }
 }
+
