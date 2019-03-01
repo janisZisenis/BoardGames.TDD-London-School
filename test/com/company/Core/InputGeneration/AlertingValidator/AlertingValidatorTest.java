@@ -16,8 +16,7 @@ public class AlertingValidatorTest {
 
     @Test
     void IfInputIsValid_ShouldReturnTrue() {
-        Input[] valid = { new Input(1, 2) };
-        validator.setValidInputs(valid);
+        makeInputValid(input);
 
         boolean actual = sut.isValid(input);
         assertTrue(actual);
@@ -25,8 +24,7 @@ public class AlertingValidatorTest {
 
     @Test
     void IfInputIsInvalid_ShouldReturnFalse() {
-        Input[] valid = {};
-        validator.setValidInputs(valid);
+        makeInputInvalid();
 
         boolean actual = sut.isValid(input);
         assertFalse(actual);
@@ -34,8 +32,7 @@ public class AlertingValidatorTest {
 
     @Test
     void IfInputIsInvalid_ShouldAlert() {
-        Input[] valid = {};
-        validator.setValidInputs(valid);
+        makeInputInvalid();
 
         sut.isValid(input);
 
@@ -46,4 +43,16 @@ public class AlertingValidatorTest {
         boolean actual = alerter.hasAlerted();
         assertTrue(actual);
     }
+
+
+    private void makeInputValid(Input input) {
+        Input[] valid = { input };
+        validator.setValidInputs(valid);
+    }
+
+    private void makeInputInvalid() {
+        Input[] valid = {};
+        validator.setValidInputs(valid);
+    }
 }
+

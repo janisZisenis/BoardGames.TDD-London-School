@@ -1,14 +1,14 @@
 package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input;
-import com.company.Core.InputGeneration.InputGeneratorStub;
+import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field;
 import org.junit.jupiter.api.Test;
 
 public class PlayerTest {
 
-    private InputGeneratorStub generator = new InputGeneratorStub();
+    private CountingGeneratorStub generator = new CountingGeneratorStub();
     private MarkFieldServiceMock markService = new MarkFieldServiceMock();
     private Player sut;
 

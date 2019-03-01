@@ -1,7 +1,7 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.CountingValidatorStub;
-import com.company.Core.InputGeneration.InputGeneratorStub;
+import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.Core.InputGeneration.Input;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidatingInputGeneratorTest {
 
-    private InputGeneratorStub generator = new InputGeneratorStub();
+    private CountingGeneratorStub generator = new CountingGeneratorStub();
     private CountingValidatorStub validator = new CountingValidatorStub();
     private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 

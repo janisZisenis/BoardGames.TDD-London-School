@@ -11,42 +11,39 @@ public class PromptingInputGeneratorTest {
     private DefaultInputGenerator sut = new DefaultInputGenerator(prompter);
 
     @Test
-    void IfPrompterReturnsRow0AndColumn1_ShouldReturnUserInputWithRow0AndColumn1() {
-        makePrompterReturnsUserInputWith(0, 1);
+    void IfPrompterReturnsRow0AndColumn1_UserInputShouldHaveRow0AndColumn1() {
+        makePrompterReturns(0, 1);
 
         Input actual = sut.generateInput();
 
-        Input expected = createUserInput(0, 1);
+        Input expected = new Input(0, 1);
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfPrompterReturnsRow1AndColumn2_ShouldReturnUserInputWithRow1AndColumn2() {
-        makePrompterReturnsUserInputWith(1, 2);
+    void IfPrompterReturnsRow1AndColumn2_UserInputShouldHaveRow1AndColumn2() {
+        makePrompterReturns(1, 2);
 
         Input actual = sut.generateInput();
 
-        Input expected = createUserInput(1, 2);
+        Input expected = new Input(1, 2);
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfPrompterReturnsRow2AndColumn3_ShouldReturnUserInputWithRow2AndColumn3() {
-        makePrompterReturnsUserInputWith(2, 3);
+    void IfPrompterReturnsRow2AndColumn3_UserInputShouldHaveRow2AndColumn3() {
+        makePrompterReturns(2, 3);
 
         Input actual = sut.generateInput();
 
-        Input expected = createUserInput(2, 3);
+        Input expected = new Input(2, 3);
         assertEquals(expected, actual);
     }
 
-    private void makePrompterReturnsUserInputWith(int row, int col) {
-        Input input = createUserInput(row, col);
+
+    private void makePrompterReturns(int row, int column) {
+        Input input = new Input(row, column);
         prompter.setInput(input);
     }
-
-    private Input createUserInput(int row, int col) {
-        return new Input(row, col);
-    }
-
+    
 }
