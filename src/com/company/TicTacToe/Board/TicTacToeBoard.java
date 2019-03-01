@@ -26,7 +26,7 @@ public class TicTacToeBoard implements MarkFieldService, FieldIsEmptyProvider {
     private void throwIfFieldIsEmpty(Field f) {
         if(isEmpty(f))
             throw new FieldIsEmpty();
-    }   
+    }
 
     public class FieldIsEmpty extends RuntimeException {}
 

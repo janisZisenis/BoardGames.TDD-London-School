@@ -16,8 +16,8 @@ public class ValidatingInputGeneratorTest {
     private Input[] inputs;
 
     @Test
-    void IfFirstUserInputIsOnBoard_ShouldBeTheFirstUserInput() {
-        makeFirstUserInputIsOnBoard();
+    void IfFirstUserInputIsValid_ShouldBeTheFirstUserInput() {
+        makeFirstUserInputIsValid();
 
         Input actual = sut.generateInput();
 
@@ -26,8 +26,8 @@ public class ValidatingInputGeneratorTest {
     }
 
     @Test
-    void IfFirstUserInputIsNotOnBoard_ShouldBeTheSecondUserInput() {
-        makeFirstInputIsNotOnBoard();
+    void IfFirstUserInputIsNotValid_ShouldBeTheSecondUserInput() {
+        makeFirstInputIsNotValid();
 
         Input actual = sut.generateInput();
 
@@ -36,8 +36,8 @@ public class ValidatingInputGeneratorTest {
     }
 
     @Test
-    void IfFirstAndSecondUserInputIsNotOnBoard_ShouldBeTheThirdUserInput() {
-        makeFirstAndSecondInputIsNotOnBoard();
+    void IfFirstAndSecondUserInputIsNotValid_ShouldBeTheThirdUserInput() {
+        makeFirstAndSecondInputIsNotValid();
 
         Input actual = sut.generateInput();
 
@@ -45,27 +45,27 @@ public class ValidatingInputGeneratorTest {
         assertEquals(expected, actual);
     }
 
-    private void makeFirstUserInputIsOnBoard() {
+    private void makeFirstUserInputIsValid() {
         validator.setTimesUserInputIsInvalid(0);
 
         inputs = new Input[] { new Input(0, 1) };
         generator.setUserInputs(inputs);
     }
 
-    private void makeFirstInputIsNotOnBoard() {
+    private void makeFirstInputIsNotValid() {
         validator.setTimesUserInputIsInvalid(1);
 
         inputs = new Input[]{ new Input(0, 1),
-                                  new Input(1, 2) };
+                              new Input(1, 2) };
         generator.setUserInputs(inputs);
     }
 
-    private void makeFirstAndSecondInputIsNotOnBoard() {
+    private void makeFirstAndSecondInputIsNotValid() {
         validator.setTimesUserInputIsInvalid(2);
 
         inputs = new Input[]{ new Input(0, 1),
-                                  new Input(1, 2),
-                                  new Input(2, 3) };
+                              new Input(1, 2),
+                              new Input(2, 3) };
         generator.setUserInputs(inputs);
     }
 
