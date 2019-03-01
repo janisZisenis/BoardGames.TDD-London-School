@@ -19,10 +19,6 @@ import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 
 public class Main {
 
-    static Player john;
-    static Player haley;
-    static Player current;
-    static TicTacToeBoard board = new TicTacToeBoard();
 
     private static InputGenerator makeTicTacToeInputGenerator(InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
@@ -63,45 +59,32 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        TicTacToeBoard board = new TicTacToeBoard();
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
 
-        john = makeJohn(board, generator);
-        haley = makeHaley(board, generator);
-        current = john;
+        Player john = makeJohn(board, generator);
+        Player haley = makeHaley(board, generator);
 
-        printBoard();
-
-        while(!isGameOver()) {
-            playTurn();
-        }
-
-    }
-
-    private static boolean isGameOver() {
-        return !hasFreeFieldLeft();
-    }
-
-    private static boolean hasFreeFieldLeft() {
-        for(int row = 0; row < 3; row++)
-            for(int col = 0; col < 3; col++)
-                if(board.isEmpty(new Field(row, col)))
-                    return true;
-        return false;
-    }
-
-    private static void playTurn() {
-        current.playMove();
-        togglePlayer();
-        printBoard();
-    }
-
-    private static void printBoard() {
         print(board);
-    }
 
-    private static void togglePlayer() {
-        current = (current == john) ? haley : john;
+        john.playMove();
+        print(board);
+
+        haley.playMove();
+        print(board);
+
+        john.playMove();
+        print(board);
+
+        haley.playMove();
+        print(board);
+
+        john.playMove();
+        print(board);
+
+        haley.playMove();
+        print(board);
     }
 
     public static void print(TicTacToeBoard board) {
