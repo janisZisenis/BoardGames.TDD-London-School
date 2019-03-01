@@ -45,5 +45,5 @@ public class PromptingInputGeneratorTest {
         Input input = new Input(row, column);
         prompter.setInput(input);
     }
-    
+
 }

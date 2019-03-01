@@ -77,13 +77,13 @@ public class CompositeValidatorTest {
         assertFalse(actual);
     }
 
+
     private void makeValidatorAdded() {
         InputValidatorStub validator = new InputValidatorStub();
         Input[] valid = { input };
         validator.setValidInputs(valid);
         sut.add(validator);
     }
-
 
     private void makeInvalidatorAdded() {
         InputValidatorStub validator = new InputValidatorStub();

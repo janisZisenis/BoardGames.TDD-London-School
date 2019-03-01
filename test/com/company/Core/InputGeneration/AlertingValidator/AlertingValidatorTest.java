@@ -19,6 +19,7 @@ public class AlertingValidatorTest {
         makeInputValid(input);
 
         boolean actual = sut.isValid(input);
+
         assertTrue(actual);
     }
 
@@ -27,6 +28,7 @@ public class AlertingValidatorTest {
         makeInputInvalid();
 
         boolean actual = sut.isValid(input);
+
         assertFalse(actual);
     }
 
@@ -39,11 +41,11 @@ public class AlertingValidatorTest {
         assertHasAlerted();
     }
 
+
     private void assertHasAlerted() {
         boolean actual = alerter.hasAlerted();
         assertTrue(actual);
     }
-
 
     private void makeInputValid(Input input) {
         Input[] valid = { input };
