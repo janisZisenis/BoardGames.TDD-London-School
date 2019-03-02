@@ -2,15 +2,16 @@ package com.company.Core.InputGeneration;
 
 import com.company.Core.InputGeneration.Input.Input;
 
-public class CountingValidatorStub implements InputValidator {
-    private int indexOfUserInputBeingOnBoard = 0;
-    private int count = 0;
+import java.util.Arrays;
 
-    public void setTimesUserInputIsInvalid(int times) {
-        this.indexOfUserInputBeingOnBoard = times;
-    }
+public class CountingValidatorStub implements InputValidator {
+    private Input[] valid = {};
 
     public boolean isValid(Input input) {
-        return indexOfUserInputBeingOnBoard == count++;
+        return Arrays.asList(valid).contains(input);
+    }
+
+    public void setValidInputs(Input[] valid) {
+        this.valid = valid;
     }
 }
