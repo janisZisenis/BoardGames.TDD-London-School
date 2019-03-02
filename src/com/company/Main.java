@@ -6,7 +6,7 @@ import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
 import com.company.Core.InputGeneration.CompositeValidator.CompositeValidator;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
-import com.company.Core.InputGeneration.PromptingInputGenerator.DefaultInputGenerator;
+import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.TicTacToeBoard;
@@ -22,7 +22,7 @@ public class Main {
 
     private static InputGenerator makeTicTacToeInputGenerator(InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        InputGenerator generator = new DefaultInputGenerator(prompter);
+        InputGenerator generator = new PromptingInputGenerator(prompter);
         return new ValidatingInputGenerator(generator, validator);
     }
 
