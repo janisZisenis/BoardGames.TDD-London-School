@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PromptingInputGeneratorTest {
 
     private InputPrompterStub prompter = new InputPrompterStub();
-    private DefaultInputGenerator sut = new DefaultInputGenerator(prompter);
+    private PromptingInputGenerator sut = new PromptingInputGenerator(prompter);
 
     @Test
     void IfPrompterReturnsRow0AndColumn1_UserInputShouldHaveRow0AndColumn1() {

@@ -13,7 +13,7 @@ public class ValidatingInputGeneratorTest {
     private CountingValidatorStub validator = new CountingValidatorStub();
     private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
-    private Input[] inputs;
+    private Input[] generated;
 
     @Test
     void IfFirstUserInputIsValid_ShouldBeTheFirstUserInput() {
@@ -21,7 +21,7 @@ public class ValidatingInputGeneratorTest {
 
         Input actual = sut.generateInput();
 
-        Input expected = inputs[0];
+        Input expected = generated[0];
         assertEquals(expected, actual);
     }
 
@@ -31,7 +31,7 @@ public class ValidatingInputGeneratorTest {
 
         Input actual = sut.generateInput();
 
-        Input expected = inputs[1];
+        Input expected = generated[1];
         assertEquals(expected, actual);
     }
 
@@ -41,32 +41,36 @@ public class ValidatingInputGeneratorTest {
 
         Input actual = sut.generateInput();
 
-        Input expected = inputs[2];
+        Input expected = generated[2];
         assertEquals(expected, actual);
     }
 
     private void makeFirstUserInputIsValid() {
-        validator.setTimesUserInputIsInvalid(0);
+        generated = new Input[] { new Input(0, 1) };
 
-        inputs = new Input[] { new Input(0, 1) };
-        generator.setUserInputs(inputs);
+        generator.setUserInputs(generated);
+        validator.setValidInputs(generated);
     }
 
     private void makeFirstInputIsNotValid() {
-        validator.setTimesUserInputIsInvalid(1);
+        generated = new Input[] { new Input(0, 1),
+                                  new Input(1, 2) };
 
-        inputs = new Input[]{ new Input(0, 1),
-                              new Input(1, 2) };
-        generator.setUserInputs(inputs);
+        Input[] valid = { new Input(1, 2) };
+
+        generator.setUserInputs(generated);
+        validator.setValidInputs(valid);
     }
 
     private void makeFirstAndSecondInputIsNotValid() {
-        validator.setTimesUserInputIsInvalid(2);
+        generated = new Input[] { new Input(0, 1),
+                                  new Input(1, 2),
+                                  new Input(2, 3) };
 
-        inputs = new Input[]{ new Input(0, 1),
-                              new Input(1, 2),
-                              new Input(2, 3) };
-        generator.setUserInputs(inputs);
+        Input[] valid = { new Input(2, 3) };
+
+        generator.setUserInputs(generated);
+        validator.setValidInputs(valid);
     }
 
 

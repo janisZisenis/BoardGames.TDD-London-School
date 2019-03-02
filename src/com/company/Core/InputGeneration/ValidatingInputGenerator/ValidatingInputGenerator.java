@@ -14,12 +14,20 @@ public class ValidatingInputGenerator implements InputGenerator {
     }
 
     public Input generateInput() {
-        Input in = generator.generateInput();
+        Input in = getInput();
 
-        while(!validator.isValid(null)) {
-            in = generator.generateInput();
+        while(isNotValid(in)) {
+            in = getInput();
         }
 
         return in;
+    }
+
+    private Input getInput() {
+        return generator.generateInput();
+    }
+
+    private boolean isNotValid(Input in) {
+        return !validator.isValid(in);
     }
 }
