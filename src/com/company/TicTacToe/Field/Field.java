@@ -1,4 +1,4 @@
-package com.company.TicTacToe;
+package com.company.TicTacToe.Field;
 
 public class Field {
 
@@ -16,6 +16,6 @@ public class Field {
     }
 
     public int hashCode() {
-        return ("row: " + row + "column: " + column).hashCode();
+        return ("row: " + row + " column: " + column).hashCode();
     }
 }

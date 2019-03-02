@@ -11,7 +11,7 @@ import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInput
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.TicTacToeBoard;
 import com.company.TicTacToe.Constants.AlertingMessages;
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import com.company.TicTacToe.Player.Player;
 import com.company.TicTacToe.Player.PlayerConfig;

@@ -3,7 +3,7 @@ package com.company.TicTacToe.Player;
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 
 public class Player {
 

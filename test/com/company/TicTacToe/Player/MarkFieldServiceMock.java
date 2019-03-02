@@ -1,7 +1,7 @@
 package com.company.TicTacToe.Player;
 
 import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

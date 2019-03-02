@@ -1,6 +1,6 @@
 package com.company.TicTacToe.FieldIsEmptyValidator;
 
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 import java.util.Arrays;
 
 public class FieldIsEmptyProviderStub implements FieldIsEmptyProvider {

@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import com.company.TicTacToe.Player.MarkFieldService;
 

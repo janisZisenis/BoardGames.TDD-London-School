@@ -1,7 +1,7 @@
 package com.company.TicTacToe.FieldIsEmptyValidator;
 
 import com.company.Core.InputGeneration.Input;
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
