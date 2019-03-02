@@ -2,7 +2,7 @@ package com.company.TicTacToe.FieldIsEmptyValidator;
 
 import com.company.Core.InputGeneration.Input;
 import com.company.Core.InputGeneration.InputValidator;
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 
 public class FieldIsEmptyValidator implements InputValidator {
     private final FieldIsEmptyProvider provider;

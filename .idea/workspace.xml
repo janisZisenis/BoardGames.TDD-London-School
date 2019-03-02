@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/DifferentFieldsWithTheSameSumOfRowAndColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithDifferentRowAndSameColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndDifferentColumn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndSameColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,12 +65,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="890" />
-          <entry key="java" value="37031" />
+          <entry key="java" value="37720" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="37031" />
+          <entry key="JAVA" value="37720" />
           <entry key="PLAIN_TEXT" value="890" />
         </counts>
       </usages-collector>
@@ -75,13 +78,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="691" />
+          <entry key="java" value="700" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="691" />
+          <entry key="JAVA" value="700" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -90,44 +93,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithDifferentRowAndSameColumn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
-                <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
-                <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
-                <element signature="method#makeHaley#0;class#Main#0" />
-                <element signature="method#makeJohn#0;class#Main#0" />
-                <element signature="method#print#0;class#Main#0" />
-                <element signature="method#printRow#0;class#Main#0" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndDifferentColumn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-23">
-              <caret line="11" selection-start-line="11" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndSameColumn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -169,10 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldIsEmptyValidator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldIsEmptyProviderStub.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldIsEmptyValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldIsEmptyValidator.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldIsEmptyProvider.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldIsEmptyValidator/FieldIsEmptyProvider.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidatorTest.java" />
@@ -217,9 +200,13 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Player/FieldHashingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Field.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/DifferentFieldsWithTheSameSumOfRowAndColumn.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithDifferentRowAndSameColumn.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndDifferentColumn.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndSameColumn.java" />
       </list>
     </option>
   </component>
@@ -441,7 +428,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551463124446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551549233295" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -458,6 +445,7 @@
       <recent name="com.company.TicTacToe.FieldExistsValidator" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.TicTacToe" />
       <recent name="com.company.TicTacToe.Player" />
       <recent name="com.company.TicTacToeBoard" />
       <recent name="com.company.ConsoleInputPrompter" />
@@ -562,45 +550,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 54m 01s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 44m 57s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 54m 38s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 46m 13s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 54m 51s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 46m 43s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 54m 55s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 47m 57s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 55m 13s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 48m 10s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 55m 39s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 48m 39s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 56m 10s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 49m 10s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 56m 25s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 49m 27s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 57m 06s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 49m 35s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.01 at 18h 57m 44s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.02 at 18h 49m 55s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92378000" />
+    <option name="totallyTimeSpent" value="93882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35673353" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35673353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -609,7 +597,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2624204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2624204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25732484" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -672,27 +660,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar!/org/junit/jupiter/api/Assertions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/InputGeneration/ConsoleAlerter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CLI/InputGeneration/ConsoleInputPrompter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1033,7 +1000,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="530">
           <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1048,10 +1015,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldEqualityTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="11" selection-start-line="11" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/DifferentFieldsWithTheSameSumOfRowAndColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1060,22 +1037,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldHashingTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithDifferentRowAndSameColumn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndDifferentColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/FieldsWithSameRowAndSameColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>

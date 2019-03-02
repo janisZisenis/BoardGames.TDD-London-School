@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.Field;
+import com.company.TicTacToe.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
