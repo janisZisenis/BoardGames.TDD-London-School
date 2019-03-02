@@ -2,8 +2,8 @@ package com.company.TicTacToe.Field;
 
 public class Field {
 
-    private final int column;
     private final int row;
+    private final int column;
 
     public Field(int row, int column) {
         this.row = row;

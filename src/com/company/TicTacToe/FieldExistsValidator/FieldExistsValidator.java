@@ -5,8 +5,8 @@ import com.company.Core.InputGeneration.InputValidator;
 
 public class FieldExistsValidator implements InputValidator {
 
-    int lower = 0;
-    int upper = 2;
+    private final int lower = 0;
+    private final int upper = 2;
 
     public boolean isValid(Input input) {
         int row = input.getRow();
