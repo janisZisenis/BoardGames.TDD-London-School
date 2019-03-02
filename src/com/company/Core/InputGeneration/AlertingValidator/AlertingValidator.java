@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.AlertingValidator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputValidator;
 
 public class AlertingValidator implements InputValidator {

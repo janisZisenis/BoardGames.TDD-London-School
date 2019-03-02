@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration;
+package com.company.Core.InputGeneration.Input;
 
 public class Input {
     private final int row;
@@ -18,8 +18,11 @@ public class Input {
     }
 
     public boolean equals(Object o) {
-        Input in = (Input) o;
-        return in.row == this.row
-                && in.column == this.column;
+        Input i = (Input)o;
+        return i.row == row && i.column == column;
+    }
+
+    public int hashCode() {
+        return ("row: " + row + " column: " + column).hashCode();
     }
 }

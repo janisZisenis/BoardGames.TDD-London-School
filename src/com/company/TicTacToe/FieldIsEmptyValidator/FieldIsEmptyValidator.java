@@ -1,6 +1,6 @@
 package com.company.TicTacToe.FieldIsEmptyValidator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.TicTacToe.Field.Field;
 

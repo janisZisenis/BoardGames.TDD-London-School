@@ -2,7 +2,7 @@ package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.CountingValidatorStub;
 import com.company.Core.InputGeneration.CountingGeneratorStub;
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

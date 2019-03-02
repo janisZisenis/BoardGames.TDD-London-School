@@ -1,5 +1,7 @@
 package com.company.Core.InputGeneration;
 
+import com.company.Core.InputGeneration.Input.Input;
+
 public class CountingValidatorStub implements InputValidator {
     private int indexOfUserInputBeingOnBoard = 0;
     private int count = 0;

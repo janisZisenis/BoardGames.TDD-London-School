@@ -1,5 +1,7 @@
 package com.company.Core.InputGeneration;
 
+import com.company.Core.InputGeneration.Input.Input;
+
 import java.util.Arrays;
 
 public class InputValidatorStub implements InputValidator {

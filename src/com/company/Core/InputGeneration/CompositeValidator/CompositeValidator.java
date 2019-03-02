@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.CompositeValidator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputValidator;
 
 import java.util.LinkedList;

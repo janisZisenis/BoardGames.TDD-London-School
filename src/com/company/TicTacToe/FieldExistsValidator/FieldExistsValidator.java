@@ -1,6 +1,6 @@
 package com.company.TicTacToe.FieldExistsValidator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputValidator;
 
 public class FieldExistsValidator implements InputValidator {

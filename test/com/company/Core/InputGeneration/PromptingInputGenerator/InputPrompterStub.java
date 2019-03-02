@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.PromptingInputGenerator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 
 public class InputPrompterStub implements InputPrompter {
     private Input input;

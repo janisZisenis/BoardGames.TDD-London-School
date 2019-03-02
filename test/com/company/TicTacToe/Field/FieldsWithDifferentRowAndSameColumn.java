@@ -18,7 +18,7 @@ public class FieldsWithDifferentRowAndSameColumn {
     }
 
     @Test
-    void IfTwoFieldsHaveADifferentRow_TheyShouldNotHaveTheSameHashCode() {
+    void TheyShouldNotHaveTheSameHashCode() {
         int actual = sut.hashCode();
 
         int unexpected = field.hashCode();
