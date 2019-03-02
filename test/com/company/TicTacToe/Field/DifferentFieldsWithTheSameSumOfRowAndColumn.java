@@ -11,8 +11,6 @@ public class DifferentFieldsWithTheSameSumOfRowAndColumn {
 
     @Test
     void TheShouldNotHaveTheSameHashCode() {
-        field = new Field(-1, 1);
-
         int actual = sut.hashCode();
 
         int unexpected = field.hashCode();

@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
-import com.company.Core.InputGeneration.Input;
+import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
 
