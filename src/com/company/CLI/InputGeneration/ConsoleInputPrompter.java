@@ -9,11 +9,10 @@ public class ConsoleInputPrompter implements InputPrompter {
 
     private final String rowMessage = "Input row:";
     private final String columnMessage = "Input column:";
-    private final String errorMessage = "Error, please try again. ";
+    private final String errorMessage = "The input has to be an integer.";
 
     public int promptRow() {
-        int i = promptInt(rowMessage);
-        return i;
+        return promptInt(rowMessage);
     }
 
     public int promptColumn() {
@@ -21,14 +20,11 @@ public class ConsoleInputPrompter implements InputPrompter {
     }
 
     public int promptInt(String promptMessage) {
-        print(promptMessage);
+        printWithEndingSpace(promptMessage);
 
-        return scanInt();
-    }
-
-    private int scanInt() {
         while(noIntScanned()) {
-            print(errorMessage);
+            printWithLineBreak(errorMessage);
+            printWithEndingSpace(promptMessage);
             skipLastScanned();
         }
 
@@ -39,8 +35,12 @@ public class ConsoleInputPrompter implements InputPrompter {
         return !scanner.hasNextInt();
     }
 
-    private void print(String message) {
-        System.out.print(message);
+    private void printWithEndingSpace(String message) {
+        System.out.print(message + " ");
+    }
+
+    private void printWithLineBreak(String message) {
+        System.out.println(message);
     }
 
     private void skipLastScanned() {
