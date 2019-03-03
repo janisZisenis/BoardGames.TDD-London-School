@@ -19,6 +19,12 @@ import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
+    private static int timesPlayed = 0;
+    private static Player current;
+    private static Player john;
+    private static Player haley;
+    private static BoardPrinter printer = new BoardPrinter();
+
     private static InputGenerator makeTicTacToeInputGenerator(InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new PromptingInputGenerator(prompter);
@@ -61,30 +67,22 @@ public class Main {
         Board board = new Board();
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        BoardPrinter printer = new BoardPrinter();
 
-        Player john = makeJohn(board, generator);
-        Player haley = makeHaley(board, generator);
+        john = makeJohn(board, generator);
+        haley = makeHaley(board, generator);
+        current = john;
 
-        printer.print(board);
-        john.playMove();
-
-        printer.print(board);
-        haley.playMove();
-
-        printer.print(board);
-        john.playMove();
+        while(!isGameOver()) {
+            printer.print(board);
+            current.playMove();
+            current = current == john ? haley : john;
+        }
 
         printer.print(board);
-        haley.playMove();
+    }
 
-        printer.print(board);
-        john.playMove();
-
-        printer.print(board);
-        haley.playMove();
-
-        printer.print(board);
+    private static boolean isGameOver() {
+        return timesPlayed++ >= 9;
     }
 
 }
