@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class ConsoleInputPrompter implements InputPrompter {
     private final Scanner scanner = new Scanner(System.in);
 
-    private final String rowMessage = "Input row:";
-    private final String columnMessage = "Input column:";
-    private final String errorMessage = "The input has to be an integer.";
+    private final String rowMessage = PromptingMessages.rowMessage;
+    private final String columnMessage = PromptingMessages.columnMessage;
+    private final String notAnIntMessage = PromptingMessages.notAnIntMessage;
 
     public int promptRow() {
         return promptInt(rowMessage);
@@ -23,7 +23,7 @@ public class ConsoleInputPrompter implements InputPrompter {
         printWithEndingSpace(promptMessage);
 
         while(noIntScanned()) {
-            printWithLineBreak(errorMessage);
+            printWithLineBreak(notAnIntMessage);
             printWithEndingSpace(promptMessage);
             skipLastScanned();
         }
