@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldMarkingTest {
 
-    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Board sut = new Board();
     private Field first = new Field(0, 1);
     private Field second = new Field(1, 2);
     private Field third = new Field(1, 1);
@@ -17,7 +17,7 @@ public class FieldMarkingTest {
     void FreshInstance_gettingAMark_ShouldThrowException() {
         Executable act = () -> sut.getMarkAt(first);
 
-        assertThrows(TicTacToeBoard.FieldIsEmpty.class, act);
+        assertThrows(Board.FieldIsEmpty.class, act);
     }
 
     @Test
