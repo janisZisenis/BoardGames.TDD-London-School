@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/CountingReferee/CountingReferee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/CountingReferee/CountingRefereeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,12 +59,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1018" />
-          <entry key="java" value="43115" />
+          <entry key="java" value="43241" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="43115" />
+          <entry key="JAVA" value="43241" />
           <entry key="PLAIN_TEXT" value="1018" />
         </counts>
       </usages-collector>
@@ -78,13 +72,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="834" />
+          <entry key="java" value="836" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="834" />
+          <entry key="JAVA" value="836" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -93,47 +87,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/CountingReferee/CountingReferee.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding>
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-              <folding>
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#606#607#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="442">
+              <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
+                <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
+                <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
+                <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
+                <element signature="method#makeHaley#0;class#Main#0" />
+                <element signature="method#makeJohn#0;class#Main#0" />
+                <element signature="e#3824#3825#0" expanded="true" />
+                <element signature="e#3852#3853#0" expanded="true" />
+                <element signature="e#3819#3820#0" expanded="true" />
+                <element signature="e#3860#3861#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,12 +191,12 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/MoveLeftReferee/TicTacToeGameTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/MoveLeftReferee/TicTacToeGame.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/CountingReferee/CountingReferee.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/CountingReferee/CountingRefereeTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/CountingReferee/CountingReferee.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -405,37 +374,6 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="CountingReferee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="FieldExistsValidator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="FieldIsEmptyValidator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -501,7 +439,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="TicTacToe.Main" />
@@ -581,18 +519,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 06m 29s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 06m 40s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 07m 38s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 08m 54s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 12m 08s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
@@ -611,15 +537,27 @@
     <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 15m 13s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 18m 01s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 18m 30s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 18m 46s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.03 at 23h 19m 24s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110109000" />
+    <option name="totallyTimeSpent" value="110425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3624642" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3624642" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -628,7 +566,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2624204" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2624204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25732484" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -637,7 +575,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32866243" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1075,39 +1013,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="69" column="59" lean-forward="true" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
-            <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
-            <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
-            <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
-            <element signature="method#makeHaley#0;class#Main#0" />
-            <element signature="method#makeJohn#0;class#Main#0" />
-            <element signature="e#3620#3621#0" expanded="true" />
-            <element signature="e#3661#3662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
-          <folding>
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1123,11 +1032,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/CountingReferee/CountingReferee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/FieldExistsValidator/FieldExistsValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
+            <element signature="method#makeTicTacToeValidator#0;class#Main#0" />
+            <element signature="method#makeAlertingFieldIsFreeValidator#0;class#Main#0" />
+            <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
+            <element signature="method#makeHaley#0;class#Main#0" />
+            <element signature="method#makeJohn#0;class#Main#0" />
+            <element signature="e#3824#3825#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="e#3860#3861#0" expanded="true" />
           </folding>
         </state>
       </provider>

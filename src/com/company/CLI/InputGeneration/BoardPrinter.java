@@ -11,13 +11,13 @@ public class BoardPrinter {
     private final int rowColumn = BoardBoundaries.rowColumnCount;
 
     public void print(Board board) {
-        for(int row = 0; row <= rowColumn; row++) {
+        for(int row = 0; row < rowColumn; row++) {
             printRow(row, board);
         }
     }
 
     private void printRow(int row, Board board) {
-        for(int col = 0; col <= rowColumn; col++) {
+        for(int col = 0; col < rowColumn; col++) {
             printField(new Field(row, col), board);
         }
         System.out.println();

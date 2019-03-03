@@ -83,8 +83,4 @@ public class Main {
         printer.print(board);
     }
 
-    private static boolean isGameOver() {
-        return timesPlayed++ >= 9;
-    }
-
 }
