@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldIsEmptyTest {
 
-    private TicTacToeBoard sut = new TicTacToeBoard();
+    private Board sut = new Board();
     private Field first = new Field(1, 2);
     private Field second = new Field(0, 1);
     private Field third = new Field(2, 1);

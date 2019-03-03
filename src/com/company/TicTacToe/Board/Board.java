@@ -6,7 +6,7 @@ import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class TicTacToeBoard implements MarkFieldService, FieldIsEmptyProvider {
+public class Board implements MarkFieldService, FieldIsEmptyProvider {
     private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean isEmpty(Field f) {
