@@ -8,17 +8,16 @@ import com.company.TicTacToe.Field.Field;
 
 public class BoardPrinter {
 
-    private final int lower = BoardBoundaries.lower;
-    private final int upper = BoardBoundaries.upper;
+    private final int rowColumn = BoardBoundaries.rowColumnCount;
 
     public void print(Board board) {
-        for(int row = lower; row <= upper; row++) {
+        for(int row = 0; row <= rowColumn; row++) {
             printRow(row, board);
         }
     }
 
     private void printRow(int row, Board board) {
-        for(int col = lower; col <= upper; col++) {
+        for(int col = 0; col <= rowColumn; col++) {
             printField(new Field(row, col), board);
         }
         System.out.println();

@@ -6,8 +6,7 @@ import com.company.TicTacToe.Constants.BoardBoundaries;
 
 public class FieldExistsValidator implements InputValidator {
 
-    private final int lower = BoardBoundaries.lower;
-    private final int upper = BoardBoundaries.upper;
+    private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 
     public boolean isValid(Input input) {
         int row = input.getRow();
@@ -17,7 +16,7 @@ public class FieldExistsValidator implements InputValidator {
     }
 
     private boolean isOutOfBounds(int i) {
-        return i >= lower && i <= upper;
+        return i >= 0 && i < rowColumnCount;
     }
 
 }

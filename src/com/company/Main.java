@@ -12,6 +12,7 @@ import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInput
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Constants.AlertingMessages;
+import com.company.TicTacToe.CountingReferee.CountingReferee;
 import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import com.company.TicTacToe.Player.Player;
@@ -67,12 +68,13 @@ public class Main {
         Board board = new Board();
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
+        CountingReferee referee = new CountingReferee();
 
         john = makeJohn(board, generator);
         haley = makeHaley(board, generator);
         current = john;
 
-        while(!isGameOver()) {
+        while(referee.hasMovesLeft()) {
             printer.print(board);
             current.playMove();
             current = current == john ? haley : john;

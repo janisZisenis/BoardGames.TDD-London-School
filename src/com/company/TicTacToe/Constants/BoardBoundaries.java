@@ -2,7 +2,7 @@ package com.company.TicTacToe.Constants;
 
 public abstract class BoardBoundaries {
 
-    public static final int upper = 2;
-    public static final int lower = 0;
+    public static final int rowColumnCount = 3;
+    public static final int fieldCount = rowColumnCount * rowColumnCount;
 
 }
