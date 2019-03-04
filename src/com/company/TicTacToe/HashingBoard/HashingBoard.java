@@ -1,15 +1,12 @@
 package com.company.TicTacToe.HashingBoard;
 
-import com.company.TicTacToe.CountingReferee.MarkedFieldCountProvider;
-import com.company.TicTacToe.Field.Field;
-import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import com.company.TicTacToe.Board;
+import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.Mark;
-import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class HashingBoard implements Board, MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
+public class HashingBoard implements Board {
     private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean isEmpty(Field f) {
