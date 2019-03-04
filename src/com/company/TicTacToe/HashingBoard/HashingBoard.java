@@ -3,12 +3,13 @@ package com.company.TicTacToe.HashingBoard;
 import com.company.TicTacToe.CountingReferee.MarkedFieldCountProvider;
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
+import com.company.TicTacToe.ObservableBoard.Board;
 import com.company.TicTacToe.ObservableBoard.Mark;
 import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;
 
-public class HashingBoard implements MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
+public class HashingBoard implements Board, MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
     private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
 
     public boolean isEmpty(Field f) {
@@ -31,9 +32,7 @@ public class HashingBoard implements MarkFieldService, FieldIsEmptyProvider, Mar
 
     private void throwIfFieldIsEmpty(Field f) {
         if(isEmpty(f))
-            throw new FieldIsEmpty();
+            throw new Board.FieldIsEmpty();
     }
-
-    public class FieldIsEmpty extends RuntimeException {}
 
 }

@@ -4,10 +4,9 @@ import com.company.TicTacToe.Field.Field;
 
 import java.util.LinkedList;
 
-public class ObservableBoard {
+public class ObservableBoard implements Board {
 
     private final Board board;
-
     private LinkedList<Observer> observers = new LinkedList<>();
 
     public ObservableBoard(Board board) {
@@ -18,6 +17,14 @@ public class ObservableBoard {
         observers.add(o);
     }
 
+    public void detach(Observer o) {
+        observers.remove(o);
+    }
+
+    public boolean isEmpty(Field f) {
+        return board.isEmpty(f);
+    }
+
     public void mark(Field f, Mark m) {
         board.mark(f, m);
 
@@ -25,7 +32,12 @@ public class ObservableBoard {
             observers.get(i).update();
     }
 
-    public void detach(Observer o) {
-        observers.remove(o);
+    public Mark getMarkAt(Field f) {
+        return board.getMarkAt(f);
     }
+
+    public int getMarkedFieldCount() {
+        return board.getMarkedFieldCount();
+    }
+
 }

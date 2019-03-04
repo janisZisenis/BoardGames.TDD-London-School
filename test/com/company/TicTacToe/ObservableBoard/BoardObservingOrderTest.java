@@ -31,11 +31,24 @@ public class BoardObservingOrderTest implements Observer, Board {
         return logString;
     }
 
+    public void update() {
+        logString += "Updated";
+    }
+
     public void mark(Field f, Mark m) {
         logString += "Marked";
     }
 
-    public void update() {
-        logString += "Updated";
+    public boolean isEmpty(Field f) {
+        return false;
     }
+
+    public Mark getMarkAt(Field f) {
+        return null;
+    }
+
+    public int getMarkedFieldCount() {
+        return 0;
+    }
+
 }
