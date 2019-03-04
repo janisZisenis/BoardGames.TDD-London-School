@@ -5,18 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CountingRefereeTest {
 
-    CountingReferee sut = new CountingReferee();
+    MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
+    CountingReferee sut = new CountingReferee(provider);
 
     @Test
-    void FreshInstance_ShouldHaveAMovesLeft() {
+    void If0FieldsAreMarked_ShouldHaveMovesLeft() {
+        provider.setMarkedFieldCount(0);
+
         boolean actual = sut.hasMovesLeft();
 
         assertTrue(actual);
     }
 
     @Test
-    void IfItWasAskedNineTimes_TheTenthTimeShouldNotHaveMovesLeft() {
-        makeNineTimesAskedForMovesLeft();
+    void If9FieldsAreMarked_ShouldNotHaveMovesLeft() {
+        provider.setMarkedFieldCount(9);
 
         boolean actual = sut.hasMovesLeft();
 
@@ -24,8 +27,8 @@ public class CountingRefereeTest {
     }
 
     @Test
-    void IfItWasAskedOnce_TheSecondTimeShouldHaveMovesLeft() {
-        sut.hasMovesLeft();
+    void If1FieldIsMarked_ShouldHaveMovesLeft() {
+        provider.setMarkedFieldCount(1);
 
         boolean actual = sut.hasMovesLeft();
 
@@ -33,31 +36,21 @@ public class CountingRefereeTest {
     }
 
     @Test
-    void IfItWasAskedTwice_TheThirdTimeShouldHaveMovesLeft() {
-        makeTwiceAskedForMovesLeft();
+    void If2FieldAreMarked_ShouldHaveMovesLeft() {
+        provider.setMarkedFieldCount(2);
 
         boolean actual = sut.hasMovesLeft();
 
         assertTrue(actual);
     }
 
+    @Test
+    void If8FieldAreMarked_ShouldHaveMovesLeft() {
+        provider.setMarkedFieldCount(8);
 
-    private void makeTwiceAskedForMovesLeft() {
-        sut.hasMovesLeft();
-        sut.hasMovesLeft();
-    }
+        boolean actual = sut.hasMovesLeft();
 
-    private void makeNineTimesAskedForMovesLeft() {
-        makeTwiceAskedForMovesLeft();
-        sut.hasMovesLeft();
-
-        sut.hasMovesLeft();
-        sut.hasMovesLeft();
-        sut.hasMovesLeft();
-
-        sut.hasMovesLeft();
-        sut.hasMovesLeft();
-        sut.hasMovesLeft();
+        assertTrue(actual);
     }
 
 }

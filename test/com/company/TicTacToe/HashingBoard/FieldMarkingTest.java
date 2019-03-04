@@ -1,6 +1,7 @@
-package com.company.TicTacToe.Board;
+package com.company.TicTacToe.HashingBoard;
 
 import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.ObservableBoard.Mark;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldMarkingTest {
 
-    private Board sut = new Board();
+    private HashingBoard sut = new HashingBoard();
     private Field first = new Field(0, 1);
     private Field second = new Field(1, 2);
     private Field third = new Field(1, 1);
@@ -17,7 +18,7 @@ public class FieldMarkingTest {
     void FreshInstance_gettingAMark_ShouldThrowException() {
         Executable act = () -> sut.getMarkAt(first);
 
-        assertThrows(Board.FieldIsEmpty.class, act);
+        assertThrows(HashingBoard.FieldIsEmpty.class, act);
     }
 
     @Test
