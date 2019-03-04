@@ -1,7 +1,7 @@
 package com.company.CLI.InputGeneration;
 
 import com.company.TicTacToe.HashingBoard.HashingBoard;
-import com.company.TicTacToe.ObservableBoard.Mark;
+import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 import com.company.TicTacToe.Constants.FieldSymbols;
 import com.company.TicTacToe.Field.Field;

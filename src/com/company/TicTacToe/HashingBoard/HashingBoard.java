@@ -3,8 +3,8 @@ package com.company.TicTacToe.HashingBoard;
 import com.company.TicTacToe.CountingReferee.MarkedFieldCountProvider;
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyProvider;
-import com.company.TicTacToe.ObservableBoard.Board;
-import com.company.TicTacToe.ObservableBoard.Mark;
+import com.company.TicTacToe.Board;
+import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Player.MarkFieldService;
 
 import java.util.HashMap;

@@ -10,7 +10,7 @@ import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.TicTacToe.HashingBoard.HashingBoard;
-import com.company.TicTacToe.ObservableBoard.Mark;
+import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.TicTacToe.CountingReferee.CountingReferee;
 import com.company.TicTacToe.Field.Field;

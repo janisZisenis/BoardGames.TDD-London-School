@@ -2,7 +2,7 @@ package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.CountingGeneratorStub;
-import com.company.TicTacToe.ObservableBoard.Mark;
+import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Field.Field;
 import org.junit.jupiter.api.Test;
 

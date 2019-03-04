@@ -1,7 +1,7 @@
 package com.company.TicTacToe.HashingBoard;
 
 import com.company.TicTacToe.Field.Field;
-import com.company.TicTacToe.ObservableBoard.Mark;
+import com.company.TicTacToe.Mark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

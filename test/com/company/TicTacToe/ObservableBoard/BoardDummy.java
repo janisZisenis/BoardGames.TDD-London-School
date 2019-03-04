@@ -1,6 +1,8 @@
 package com.company.TicTacToe.ObservableBoard;
 
+import com.company.TicTacToe.Board;
 import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Mark;
 
 public class BoardDummy implements Board {
 
