@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/HashingBoard/HashingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/HashingBoard/HashingBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,12 +60,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1108" />
-          <entry key="java" value="47341" />
+          <entry key="java" value="47406" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="47341" />
+          <entry key="JAVA" value="47406" />
           <entry key="PLAIN_TEXT" value="1108" />
         </counts>
       </usages-collector>
@@ -75,13 +73,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="889" />
+          <entry key="java" value="890" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="889" />
+          <entry key="JAVA" value="890" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -89,7 +87,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="633">
@@ -101,6 +99,20 @@
                 <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
                 <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
                 <element signature="method#makeHaley#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#mark#0;class#ObservableBoard#0" />
+                <element signature="method#notifyObservers#0;class#ObservableBoard#0" />
               </folding>
             </state>
           </provider>
@@ -188,13 +200,13 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/ObservableBoard/BoardSpy.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/ObservableBoard/BoardForwardingTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/Board.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/ObservableBoard/BoardObservingOrderTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/ObservableBoard/BoardDummy.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/HashingBoard/HashingBoard.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/BoardPrinter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java" />
       </list>
     </option>
   </component>
@@ -374,33 +386,33 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
               <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -416,7 +428,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551726309522" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551726313904" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -571,7 +583,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117062000" />
+    <option name="totallyTimeSpent" value="117261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -586,7 +598,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2624204" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2624204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25732484" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1050,17 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#mark#0;class#ObservableBoard#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1113,6 +1114,18 @@
             <element signature="method#makeTicTacToeInputGenerator#0;class#Main#0" />
             <element signature="method#makeAlertingFieldExistsValidator#0;class#Main#0" />
             <element signature="method#makeHaley#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/ObservableBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mark#0;class#ObservableBoard#0" />
+            <element signature="method#notifyObservers#0;class#ObservableBoard#0" />
           </folding>
         </state>
       </provider>

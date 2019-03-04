@@ -23,15 +23,18 @@ public class ObservableBoard implements Board {
         observers.remove(o);
     }
 
-    public boolean isEmpty(Field f) {
-        return board.isEmpty(f);
-    }
-
     public void mark(Field f, Mark m) {
         board.mark(f, m);
+        notifyObservers();
+    }
 
+    private void notifyObservers() {
         for(int i = 0; i < observers.size(); i++)
             observers.get(i).update();
+    }
+
+    public boolean isEmpty(Field f) {
+        return board.isEmpty(f);
     }
 
     public Mark getMarkAt(Field f) {
