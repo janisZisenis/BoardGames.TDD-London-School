@@ -4,10 +4,15 @@ import com.company.TicTacToe.Constants.BoardBoundaries;
 
 public class CountingReferee {
 
-    private int numberOfMoves = BoardBoundaries.fieldCount;
+    private final int fieldCount = BoardBoundaries.fieldCount;
+    private final MarkedFieldCountProvider provider;
+
+    public CountingReferee(MarkedFieldCountProvider provider) {
+        this.provider = provider;
+    }
 
     public boolean hasMovesLeft() {
-        return numberOfMoves-- >= 1;
+        return provider.getMarkedFieldCount() < fieldCount;
     }
 
 }

@@ -9,22 +9,34 @@ import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.TicTacToe.Board.Board;
-import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.Board;
 import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.TicTacToe.CountingReferee.CountingReferee;
+import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import com.company.TicTacToe.HashingBoard.HashingBoard;
+import com.company.TicTacToe.Mark;
+import com.company.TicTacToe.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.Player.Player;
 import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
-    private static int timesPlayed = 0;
+    private static ObservableBoard board;
     private static Player current;
     private static Player john;
     private static Player haley;
-    private static BoardPrinter printer = new BoardPrinter();
+    private static BoardPrinter printer;
+
+    private static ObservableBoard makeBoard() {
+        Board hashing = new HashingBoard();
+        return new ObservableBoard(hashing);
+    }
+
+    private static BoardPrinter makeBoardPrinter(Board board) {
+        return new BoardPrinter(board);
+    }
 
     private static InputGenerator makeTicTacToeInputGenerator(InputValidator validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
@@ -65,26 +77,25 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Board board = new Board();
+        board = makeBoard();
+        printer = makeBoardPrinter(board);
+        board.attach(printer);
+
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        CountingReferee referee = new CountingReferee();
+        CountingReferee referee = new CountingReferee(board);
 
         john = makeJohn(board, generator);
         haley = makeHaley(board, generator);
         current = john;
 
+        printer.print();
+
         while(referee.hasMovesLeft()) {
-            printer.print(board);
             current.playMove();
             current = current == john ? haley : john;
         }
 
-        printer.print(board);
-    }
-
-    private static boolean isGameOver() {
-        return timesPlayed++ >= 9;
     }
 
 }

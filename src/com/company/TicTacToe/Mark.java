@@ -1,4 +1,4 @@
-package com.company.TicTacToe.Board;
+package com.company.TicTacToe;
 
 public enum Mark {
     John, Haley
