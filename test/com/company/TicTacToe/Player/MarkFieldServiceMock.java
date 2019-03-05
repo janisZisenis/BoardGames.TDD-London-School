@@ -26,9 +26,9 @@ public class MarkFieldServiceMock implements MarkFieldService {
         assertEquals(expectedField, markedField);
     }
 
-    public void mark(Field f, Mark p) {
+    public void mark(Field f, Mark m) {
         wasMarked = true;
         markedField = f;
-        markedMark = p;
+        markedMark = m;
     }
 }

@@ -7,7 +7,7 @@ import com.company.TicTacToe.Mark;
 import java.util.HashMap;
 
 public class HashingBoard implements Board {
-    private final HashMap<Field, Mark> fields = new HashMap<Field, Mark>();
+    private final HashMap<Field, Mark> fields = new HashMap<>();
 
     public boolean isEmpty(Field f) {
         return !fields.keySet().contains(f);

@@ -6,11 +6,11 @@ import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Field.Field;
 import org.junit.jupiter.api.Test;
 
-public class PlayerTest {
+public class PlayerImpTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
     private MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    private Player sut;
+    private PlayerImp sut;
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
@@ -43,21 +43,21 @@ public class PlayerTest {
     }
 
     private void makePlayerIsJohn() {
-        PlayerConfig config = makePlayerConfig(Mark.John);
+        PlayerImpConfig config = makePlayerConfig(Mark.John);
         sut = makePlayer(config);
     }
 
     private void makePlayerIsHaley() {
-        PlayerConfig config = makePlayerConfig(Mark.Haley);
+        PlayerImpConfig config = makePlayerConfig(Mark.Haley);
         sut = makePlayer(config);
     }
 
-    private Player makePlayer(PlayerConfig config) {
-        return new Player(config);
+    private PlayerImp makePlayer(PlayerImpConfig config) {
+        return new PlayerImp(config);
     }
 
-    private PlayerConfig makePlayerConfig(Mark mark) {
-        return new PlayerConfig(generator, markService, mark);
+    private PlayerImpConfig makePlayerConfig(Mark mark) {
+        return new PlayerImpConfig(generator, markService, mark);
     }
 
 
