@@ -1,15 +1,9 @@
 package com.company.TicTacToe.Game;
 
 public class PlayerSpy implements Player {
-    boolean played = false;
-    int count = 0;
-
-    public boolean hasPlayedMove() {
-        return played;
-    }
+    private int count = 0;
 
     public void playMove() {
-        this.played = true;
         count++;
     }
 
