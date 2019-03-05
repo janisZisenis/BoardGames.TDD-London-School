@@ -5,13 +5,13 @@ import com.company.Core.InputGeneration.InputGenerator;
 import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Field.Field;
 
-public class Player {
+public class PlayerImp {
 
     private final MarkFieldService markService;
     private final Mark mark;
     private final InputGenerator generator;
 
-    public Player(PlayerConfig config) {
+    public PlayerImp(PlayerImpConfig config) {
         this.generator = config.getGenerator();
         this.markService = config.getMarkService();
         this.mark = config.getMark();

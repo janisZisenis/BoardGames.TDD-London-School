@@ -3,13 +3,13 @@ package com.company.TicTacToe.Player;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.TicTacToe.Mark;
 
-public class PlayerConfig {
+public class PlayerImpConfig {
 
     private final InputGenerator generator;
     private final MarkFieldService markService;
     private final Mark mark;
 
-    public PlayerConfig(InputGenerator generator, MarkFieldService markService, Mark mark) {
+    public PlayerImpConfig(InputGenerator generator, MarkFieldService markService, Mark mark) {
         this.generator = generator;
         this.markService = markService;
         this.mark = mark;
