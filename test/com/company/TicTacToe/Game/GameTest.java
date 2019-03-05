@@ -26,10 +26,10 @@ public class GameTest {
     }
 
     @Test
-    void IfGamePlaysOnce_SecondPlayerShouldNotHavePlayedMove() {
-        sut.play();
+    void IfGamePlaysTwice_FirstPlayerShouldHavePlayedMoveOnce() {
+        playTwice();
 
-        assertPlayerHasPlayedTimes(second, 0);
+        assertPlayerHasPlayedTimes(first, 1);
     }
 
     @Test

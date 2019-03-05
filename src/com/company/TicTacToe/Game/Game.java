@@ -5,8 +5,6 @@ public class Game {
     private final Player second;
     private Player current;
 
-    private int count = 0;
-
     public Game(Player first, Player second) {
         this.first = first;
         this.second = second;
@@ -14,9 +12,15 @@ public class Game {
     }
 
     public void play() {
-        current.playMove();
-        current = current == first ? second : first;
+        playMove();
+        togglePlayer();
+    }
 
-        count++;
+    private void playMove() {
+        current.playMove();
+    }
+
+    private void togglePlayer() {
+        current = current == first ? second : first;
     }
 }

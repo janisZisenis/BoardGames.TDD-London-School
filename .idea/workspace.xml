@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Game/PlayerSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/HashingBoard/HashingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/HashingBoard/HashingBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/ObservableBoard/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/PlayerImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/PlayerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Player/PlayerImpConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceMock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/PlayerImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,12 +75,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1114" />
-          <entry key="java" value="48509" />
+          <entry key="java" value="48779" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="48509" />
+          <entry key="JAVA" value="48779" />
           <entry key="PLAIN_TEXT" value="1114" />
         </counts>
       </usages-collector>
@@ -99,13 +88,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="942" />
+          <entry key="java" value="944" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="942" />
+          <entry key="JAVA" value="944" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -113,16 +102,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+            <state relative-caret-position="374">
+              <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce#0;class#GameTest#0" />
                 <element signature="method#makePlayedTwice#0;class#GameTest#0" />
-                <element signature="method#makePlayedThreeTimes#0;class#GameTest#0" />
+                <element signature="method#playThreeTimes#0;class#GameTest#0" />
                 <element signature="method#makePlayedFourTimes#0;class#GameTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Game/PlayerSpy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+              <folding>
+                <element signature="e#127#128#0" expanded="true" />
+                <element signature="e#150#151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,8 +227,8 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Game/Game.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Player.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Game/PlayerSpy.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java" />
       </list>
     </option>
   </component>
@@ -454,7 +466,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551805609632" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551806098509" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -574,44 +586,44 @@
       <workItem from="1551372739521" duration="9837000" />
       <workItem from="1551446966626" duration="4504000" />
       <workItem from="1551764179700" duration="1546000" />
-      <workItem from="1551804837007" duration="689000" />
+      <workItem from="1551804837007" duration="1182000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 06h 59m 55s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 09m 48s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 07h 00m 08s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 10m 23s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 07h 00m 57s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 10m 43s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 07h 01m 18s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 10m 53s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 07h 01m 29s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 11m 24s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 07h 01m 39s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 11m 45s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 17h 54m 42s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 11m 57s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 17h 55m 01s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 12m 09s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 17h 56m 47s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 12m 33s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 03m 20s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.05 at 18h 12m 46s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119616000" />
+    <option name="totallyTimeSpent" value="120109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -1032,36 +1044,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Game/PlayerSpy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Game/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="374">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce#0;class#GameTest#0" />
             <element signature="method#makePlayedTwice#0;class#GameTest#0" />
-            <element signature="method#makePlayedThreeTimes#0;class#GameTest#0" />
+            <element signature="method#playThreeTimes#0;class#GameTest#0" />
             <element signature="method#makePlayedFourTimes#0;class#GameTest#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Game/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
