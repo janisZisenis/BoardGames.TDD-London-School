@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Main;
 
 import com.company.CLI.InputGeneration.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
@@ -14,6 +14,8 @@ import com.company.TicTacToe.Constants.AlertingMessages;
 import com.company.TicTacToe.CountingReferee.CountingReferee;
 import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
 import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import com.company.TicTacToe.Game.Game;
+import com.company.TicTacToe.Game.Player;
 import com.company.TicTacToe.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.ObservableBoard.ObservableBoard;
@@ -21,12 +23,6 @@ import com.company.TicTacToe.Player.PlayerImp;
 import com.company.TicTacToe.Player.PlayerImpConfig;
 
 public class Main {
-
-    private static ObservableBoard board;
-    private static PlayerImp current;
-    private static PlayerImp john;
-    private static PlayerImp haley;
-    private static BoardPrinter printer;
 
     private static ObservableBoard makeBoard() {
         Board hashing = new HashingBoard();
@@ -53,6 +49,10 @@ public class Main {
         return validator;
     }
 
+    private static CountingReferee makeTicTacToeReferee(ObservableBoard board) {
+        return new CountingReferee(board);
+    }
+
     private static InputValidator makeAlertingFieldIsFreeValidator(Board board) {
         ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
         InputValidator alreadyMarkedValidator = new FieldIsEmptyValidator(board);
@@ -75,24 +75,27 @@ public class Main {
         return new PlayerImp(config);
     }
 
+    private static Game makeGame(Player first, Player second) {
+        return new Game(first, second);
+    }
+
     public static void main(String[] args) {
-        board = makeBoard();
-        printer = makeBoardPrinter(board);
+        ObservableBoard board = makeBoard();
+        BoardPrinter printer = makeBoardPrinter(board);
         board.attach(printer);
 
         InputValidator validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        CountingReferee referee = new CountingReferee(board);
+        CountingReferee referee = makeTicTacToeReferee(board);
 
-        john = makeJohn(board, generator);
-        haley = makeHaley(board, generator);
-        current = john;
+        PlayerImp john = makeJohn(board, generator);
+        PlayerImp haley = makeHaley(board, generator);
+        Game game = makeGame(john, haley);
 
         printer.print();
 
         while(referee.hasMovesLeft()) {
-            current.playMove();
-            current = current == john ? haley : john;
+            game.play();
         }
 
     }

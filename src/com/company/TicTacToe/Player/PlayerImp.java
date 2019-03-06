@@ -2,10 +2,11 @@ package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputGenerator;
-import com.company.TicTacToe.Mark;
 import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Game.Player;
+import com.company.TicTacToe.Mark;
 
-public class PlayerImp {
+public class PlayerImp implements Player {
 
     private final MarkFieldService markService;
     private final Mark mark;
