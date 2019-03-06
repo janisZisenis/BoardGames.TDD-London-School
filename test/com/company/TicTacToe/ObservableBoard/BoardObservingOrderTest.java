@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BoardObservingOrderTest implements Observer, Board {
 
-    Board board = this;
-    ObservableBoard sut = new ObservableBoard(board);
-
-    String logString = "";
+    private Board board = this;
+    private ObservableBoard sut = new ObservableBoard(board);
+    
+    private String logString = "";
 
     @Test
     void IfOneObserverIsAttached_ItShouldBeUpdatedWhenMarkingAField() {
