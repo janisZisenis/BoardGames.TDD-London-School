@@ -1,4 +1,4 @@
 package com.company.TicTacToe.ObservableBoard;
 
-public class BoardSpy extends BoardDummy {
+public class BoardSpy extends BoardStub {
 }
