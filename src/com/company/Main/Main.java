@@ -1,6 +1,6 @@
 package com.company.Main;
 
-import com.company.CLI.InputGeneration.BoardPrinter;
+import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
@@ -9,18 +9,17 @@ import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputValidator;
 import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.TicTacToe.Board;
-import com.company.TicTacToe.Constants.AlertingMessages;
+import com.company.TicTacToe.Board.Board;
+import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.TicTacToe.CountingReferee.CountingReferee;
-import com.company.TicTacToe.FieldExistsValidator.FieldExistsValidator;
-import com.company.TicTacToe.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import com.company.TicTacToe.Game.Game;
-import com.company.TicTacToe.Game.Player;
-import com.company.TicTacToe.HashingBoard.HashingBoard;
-import com.company.TicTacToe.Mark;
-import com.company.TicTacToe.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.Player.PlayerImp;
-import com.company.TicTacToe.Player.PlayerImpConfig;
+import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsValidator;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import com.company.Core.Turn.Turn;
+import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
+import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
+import com.company.TicTacToe.Player.Player;
+import com.company.TicTacToe.Player.PlayerConfig;
 
 public class Main {
 
@@ -65,18 +64,18 @@ public class Main {
         return new AlertingValidator(notExistingValidator, notExistingAlerter);
     }
 
-    private static PlayerImp makeHaley(Board board, InputGenerator generator) {
-        PlayerImpConfig config = new PlayerImpConfig(generator, board, Mark.Haley);
-        return new PlayerImp(config);
+    private static Player makeHaley(Board board, InputGenerator generator) {
+        PlayerConfig config = new PlayerConfig(generator, board, Mark.Haley);
+        return new Player(config);
     }
 
-    private static PlayerImp makeJohn(Board board, InputGenerator generator) {
-        PlayerImpConfig config = new PlayerImpConfig(generator, board, Mark.John);
-        return new PlayerImp(config);
+    private static Player makeJohn(Board board, InputGenerator generator) {
+        PlayerConfig config = new PlayerConfig(generator, board, Mark.John);
+        return new Player(config);
     }
 
-    private static Game makeGame(Player first, Player second) {
-        return new Game(first, second);
+    private static Turn makeGame(com.company.Core.Turn.Player first, com.company.Core.Turn.Player second) {
+        return new Turn(first, second);
     }
 
     public static void main(String[] args) {
@@ -88,14 +87,14 @@ public class Main {
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
         CountingReferee referee = makeTicTacToeReferee(board);
 
-        PlayerImp john = makeJohn(board, generator);
-        PlayerImp haley = makeHaley(board, generator);
-        Game game = makeGame(john, haley);
+        Player john = makeJohn(board, generator);
+        Player haley = makeHaley(board, generator);
+        Turn turn = makeGame(john, haley);
 
         printer.print();
 
         while(referee.hasMovesLeft()) {
-            game.play();
+            turn.play();
         }
 
     }
