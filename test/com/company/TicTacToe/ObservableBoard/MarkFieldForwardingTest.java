@@ -1,11 +1,11 @@
 package com.company.TicTacToe.ObservableBoard;
 
-import com.company.TicTacToe.Board;
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.Mark;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MarkFieldForwardingTest {
 
@@ -44,7 +44,7 @@ public class MarkFieldForwardingTest {
         board.expectGetsMarkedWith(field, mark);
     }
 
-    private class BoardMock implements Board {
+    private class BoardMock extends BoardDummy {
 
         private boolean wasMarked = false;
         private Field expectedField;
@@ -57,22 +57,10 @@ public class MarkFieldForwardingTest {
             this.expectedMark = m;
         }
 
-        public boolean isEmpty(Field f) {
-            return false;
-        }
-
         public void mark(Field f, Mark m) {
             this.wasMarked = true;
             this.actualField = f;
             this.actualMark = m;
-        }
-
-        public Mark getMarkAt(Field f) {
-            return null;
-        }
-
-        public int getMarkedFieldCount() {
-            return 0;
         }
 
         public void verifyAll() {

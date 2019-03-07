@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BoardObservingTest {
+public class NotifyBoardObserverTest {
 
     private Board board = new BoardDummy();
     private ObserverSpy[] observers = {};

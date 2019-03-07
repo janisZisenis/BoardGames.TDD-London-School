@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BoardObservingOrderTest implements Observer, Board {
+public class BoardObservingOrderShuntTest implements Observer, Board {
 
     private Board board = this;
     private ObservableBoard sut = new ObservableBoard(board);

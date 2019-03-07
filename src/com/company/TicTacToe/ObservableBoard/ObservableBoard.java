@@ -38,7 +38,7 @@ public class ObservableBoard implements Board {
     }
 
     public Mark getMarkAt(Field f) {
-        return null;
+        return board.getMarkAt(f);
     }
 
     public int getMarkedFieldCount() {
