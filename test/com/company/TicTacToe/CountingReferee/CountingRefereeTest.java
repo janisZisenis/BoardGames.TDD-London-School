@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CountingRefereeTest {
 
-    MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
-    CountingReferee sut = new CountingReferee(provider);
+    private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
+    private CountingReferee sut = new CountingReferee(provider);
 
     @Test
     void If0FieldsAreMarked_ShouldHaveMovesLeft() {

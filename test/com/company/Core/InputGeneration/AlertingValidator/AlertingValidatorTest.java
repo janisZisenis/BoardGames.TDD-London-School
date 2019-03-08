@@ -12,7 +12,7 @@ public class AlertingValidatorTest {
 
     private AlertingValidator sut = new AlertingValidator(validator, alerter);
 
-    Input input = new Input(1, 2);
+    private Input input = new Input(1, 2);
 
     @Test
     void IfInputIsValid_ShouldReturnTrue() {

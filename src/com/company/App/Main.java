@@ -1,4 +1,4 @@
-package com.company.Main;
+package com.company.App;
 
 import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
