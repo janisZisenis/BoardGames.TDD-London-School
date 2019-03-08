@@ -18,8 +18,8 @@ import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.Player.Player;
-import com.company.TicTacToe.Player.PlayerConfig;
+import com.company.TicTacToe.Player.TicTacToePlayer;
+import com.company.TicTacToe.Player.PlayerContext;
 
 public class Main {
 
@@ -64,14 +64,14 @@ public class Main {
         return new AlertingValidator(notExistingValidator, notExistingAlerter);
     }
 
-    private static Player makeHaley(Board board, InputGenerator generator) {
-        PlayerConfig config = new PlayerConfig(generator, board, Mark.Haley);
-        return new Player(config);
+    private static TicTacToePlayer makeHaley(Board board, InputGenerator generator) {
+        PlayerContext config = new PlayerContext(generator, board, Mark.Haley);
+        return new TicTacToePlayer(config);
     }
 
-    private static Player makeJohn(Board board, InputGenerator generator) {
-        PlayerConfig config = new PlayerConfig(generator, board, Mark.John);
-        return new Player(config);
+    private static TicTacToePlayer makeJohn(Board board, InputGenerator generator) {
+        PlayerContext config = new PlayerContext(generator, board, Mark.John);
+        return new TicTacToePlayer(config);
     }
 
     private static Turn makeGame(com.company.Core.Turn.Player first, com.company.Core.Turn.Player second) {
@@ -87,8 +87,8 @@ public class Main {
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
         CountingReferee referee = makeTicTacToeReferee(board);
 
-        Player john = makeJohn(board, generator);
-        Player haley = makeHaley(board, generator);
+        TicTacToePlayer john = makeJohn(board, generator);
+        TicTacToePlayer haley = makeHaley(board, generator);
         Turn turn = makeGame(john, haley);
 
         printer.print();

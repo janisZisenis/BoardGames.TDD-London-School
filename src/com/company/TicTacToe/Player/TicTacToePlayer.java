@@ -2,16 +2,17 @@ package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputGenerator;
-import com.company.TicTacToe.Field.Field;
+import com.company.Core.Turn.Player;
 import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.Field.Field;
 
-public class Player implements com.company.Core.Turn.Player {
+public class TicTacToePlayer implements Player {
 
     private final MarkFieldService markService;
     private final Mark mark;
     private final InputGenerator generator;
 
-    public Player(PlayerConfig config) {
+    public TicTacToePlayer(PlayerContext config) {
         this.generator = config.getGenerator();
         this.markService = config.getMarkService();
         this.mark = config.getMark();
