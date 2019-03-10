@@ -20,8 +20,7 @@ public class InputValidatingGeneratorTest {
 
         Input actual = sut.generate();
 
-        Input expected = generated[0];
-        assertEquals(expected, actual);
+        assertIsFirstInput(actual);
     }
 
     @Test
@@ -30,8 +29,7 @@ public class InputValidatingGeneratorTest {
 
         Input actual = sut.generate();
 
-        Input expected = generated[1];
-        assertEquals(expected, actual);
+        assertIsSecondInput(actual);
     }
 
     @Test
@@ -40,9 +38,7 @@ public class InputValidatingGeneratorTest {
 
         sut.generate();
 
-        int actual = validator.getTimesAlerted();
-        int expected = 1;
-        assertEquals(expected, actual);
+        assertTimesAlerted(1);
     }
 
     @Test
@@ -51,9 +47,7 @@ public class InputValidatingGeneratorTest {
 
         sut.generate();
 
-        int actual = validator.getTimesAlerted();
-        int expected = 0;
-        assertEquals(expected, actual);
+        assertTimesAlerted(0);
     }
 
     @Test
@@ -62,8 +56,7 @@ public class InputValidatingGeneratorTest {
 
         Input actual = sut.generate();
 
-        Input expected = generated[2];
-        assertEquals(expected, actual);
+        assertIsThirdInput(actual);
     }
 
     @Test
@@ -72,9 +65,7 @@ public class InputValidatingGeneratorTest {
 
         sut.generate();
 
-        int actual = validator.getTimesAlerted();
-        int expected = 2;
-        assertEquals(expected, actual);
+        assertTimesAlerted(2);
     }
 
 
@@ -106,4 +97,24 @@ public class InputValidatingGeneratorTest {
         validator.setValidInputs(valid);
     }
 
+    private void assertTimesAlerted(int i) {
+        int actual = validator.getTimesAlerted();
+        int expected = i;
+        assertEquals(expected, actual);
+    }
+
+    private void assertIsFirstInput(Input actual) {
+        Input expected = generated[0];
+        assertEquals(expected, actual);
+    }
+
+    private void assertIsSecondInput(Input actual) {
+        Input expected = generated[1];
+        assertEquals(expected, actual);
+    }
+
+    private void assertIsThirdInput(Input actual) {
+        Input expected = generated[2];
+        assertEquals(expected, actual);
+    }
 }
