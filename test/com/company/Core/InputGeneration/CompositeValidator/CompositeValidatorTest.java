@@ -1,18 +1,18 @@
 package com.company.Core.InputGeneration.CompositeValidator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatorStub;
+import com.company.Core.InputGeneration.InputRuleStub;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CompositeValidatorTest {
 
-    private CompositeValidator sut = new CompositeValidator();
+    private CompositeRule sut = new CompositeRule();
     private Input input = new Input(0 ,1);
 
     @Test
     void FreshInstance_InputShouldBeValid() {
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertTrue(actual);
     }
@@ -21,7 +21,7 @@ public class CompositeValidatorTest {
     void AddedInvalidator_InputShouldBeInvalid() {
         makeInvalidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
@@ -30,7 +30,7 @@ public class CompositeValidatorTest {
     void AddedValidator_InputShouldBeInvalid() {
         makeValidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertTrue(actual);
     }
@@ -40,7 +40,7 @@ public class CompositeValidatorTest {
         makeInvalidatorAdded();
         makeValidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
@@ -50,7 +50,7 @@ public class CompositeValidatorTest {
         makeValidatorAdded();
         makeInvalidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
@@ -61,7 +61,7 @@ public class CompositeValidatorTest {
         makeInvalidatorAdded();
         makeValidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
@@ -72,21 +72,21 @@ public class CompositeValidatorTest {
         makeValidatorAdded();
         makeInvalidatorAdded();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
 
 
     private void makeValidatorAdded() {
-        InputValidatorStub validator = new InputValidatorStub();
+        InputRuleStub validator = new InputRuleStub();
         Input[] valid = { input };
         validator.setValidInputs(valid);
         sut.add(validator);
     }
 
     private void makeInvalidatorAdded() {
-        InputValidatorStub validator = new InputValidatorStub();
+        InputRuleStub validator = new InputRuleStub();
         Input[] valid = {};
         validator.setValidInputs(valid);
         sut.add(validator);

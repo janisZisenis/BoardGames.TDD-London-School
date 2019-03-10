@@ -3,17 +3,17 @@ package com.company.App;
 import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
-import com.company.Core.InputGeneration.AlertingValidator.AlertingValidator;
-import com.company.Core.InputGeneration.CompositeValidator.CompositeValidator;
-import com.company.Core.InputGeneration.InputGenerator;
-import com.company.Core.InputGeneration.InputValidator;
+import com.company.Core.InputGeneration.AlertingValidator.AlertingRule;
+import com.company.Core.InputGeneration.CompositeValidator.CompositeRule;
+import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.InputRule;
 import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.TicTacToe.Board.Board;
 import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.TicTacToe.CountingReferee.CountingReferee;
-import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsValidator;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
@@ -32,17 +32,17 @@ public class Main {
         return new BoardPrinter(board);
     }
 
-    private static InputGenerator makeTicTacToeInputGenerator(InputValidator validator) {
+    private static InputGenerator makeTicTacToeInputGenerator(InputRule validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
         InputGenerator generator = new PromptingInputGenerator(prompter);
         return new ValidatingInputGenerator(generator, validator);
     }
 
-    private static CompositeValidator makeTicTacToeValidator(Board board) {
-        InputValidator existsValidator = makeAlertingFieldExistsValidator();
-        InputValidator isFreeValidator = makeAlertingFieldIsFreeValidator(board);
+    private static CompositeRule makeTicTacToeValidator(Board board) {
+        InputRule existsValidator = makeAlertingFieldExistsValidator();
+        InputRule isFreeValidator = makeAlertingFieldIsFreeValidator(board);
 
-        CompositeValidator validator = new CompositeValidator();
+        CompositeRule validator = new CompositeRule();
         validator.add(existsValidator);
         validator.add(isFreeValidator);
         return validator;
@@ -52,16 +52,16 @@ public class Main {
         return new CountingReferee(board);
     }
 
-    private static InputValidator makeAlertingFieldIsFreeValidator(Board board) {
+    private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
         ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
-        InputValidator alreadyMarkedValidator = new FieldIsEmptyValidator(board);
-        return new AlertingValidator(alreadyMarkedValidator, alreadyMarkedAlerter);
+        InputRule alreadyMarkedValidator = new FieldIsEmptyRule(board);
+        return new AlertingRule(alreadyMarkedValidator, alreadyMarkedAlerter);
     }
 
-    private static InputValidator makeAlertingFieldExistsValidator() {
+    private static InputRule makeAlertingFieldExistsValidator() {
         ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
-        InputValidator notExistingValidator = new FieldExistsValidator();
-        return new AlertingValidator(notExistingValidator, notExistingAlerter);
+        InputRule notExistingValidator = new FieldExistsRule();
+        return new AlertingRule(notExistingValidator, notExistingAlerter);
     }
 
     private static TicTacToePlayer makeHaley(Board board, InputGenerator generator) {
@@ -83,7 +83,7 @@ public class Main {
         BoardPrinter printer = makeBoardPrinter(board);
         board.attach(printer);
 
-        InputValidator validator = makeTicTacToeValidator(board);
+        InputRule validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
         CountingReferee referee = makeTicTacToeReferee(board);
 

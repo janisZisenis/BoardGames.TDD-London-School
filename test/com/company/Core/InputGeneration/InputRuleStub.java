@@ -4,7 +4,7 @@ import com.company.Core.InputGeneration.Input.Input;
 
 import java.util.Arrays;
 
-public class InputValidatorStub implements InputValidator {
+public class InputRuleStub implements InputRule {
 
     private Input[] valid = {};
 
@@ -12,7 +12,7 @@ public class InputValidatorStub implements InputValidator {
         this.valid = valid;
     }
 
-    public boolean isValid(Input input) {
+    public boolean validates(Input input) {
         return Arrays.asList(valid).contains(input);
     }
 }

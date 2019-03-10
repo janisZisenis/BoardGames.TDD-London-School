@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.PromptingInputGenerator;
 
-import com.company.Core.InputGeneration.InputGenerator;
+import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
 import com.company.Core.InputGeneration.Input.Input;
 
 public class PromptingInputGenerator implements InputGenerator {
@@ -10,7 +10,7 @@ public class PromptingInputGenerator implements InputGenerator {
         this.prompter = prompter;
     }
 
-    public Input generateInput() {
+    public Input generate() {
         int row = prompter.promptRow();
         int col = prompter.promptColumn();
 

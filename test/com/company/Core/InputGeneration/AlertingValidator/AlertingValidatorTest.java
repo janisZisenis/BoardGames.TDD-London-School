@@ -1,16 +1,16 @@
 package com.company.Core.InputGeneration.AlertingValidator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatorStub;
+import com.company.Core.InputGeneration.InputRuleStub;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AlertingValidatorTest {
 
-    private InputValidatorStub validator = new InputValidatorStub();
+    private InputRuleStub validator = new InputRuleStub();
     private AlerterSpy alerter = new AlerterSpy();
 
-    private AlertingValidator sut = new AlertingValidator(validator, alerter);
+    private AlertingRule sut = new AlertingRule(validator, alerter);
 
     private Input input = new Input(1, 2);
 
@@ -18,7 +18,7 @@ public class AlertingValidatorTest {
     void IfInputIsValid_ShouldReturnTrue() {
         makeInputValid(input);
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertTrue(actual);
     }
@@ -27,7 +27,7 @@ public class AlertingValidatorTest {
     void IfInputIsInvalid_ShouldReturnFalse() {
         makeInputInvalid();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }
@@ -36,7 +36,7 @@ public class AlertingValidatorTest {
     void IfInputIsInvalid_ShouldAlert() {
         makeInputInvalid();
 
-        sut.isValid(input);
+        sut.validates(input);
 
         assertHasAlerted();
     }

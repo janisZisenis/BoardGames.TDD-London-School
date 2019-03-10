@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Player;
 
-import com.company.Core.InputGeneration.InputGenerator;
+import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
 import com.company.TicTacToe.Board.Mark;
 
 public class PlayerContext {

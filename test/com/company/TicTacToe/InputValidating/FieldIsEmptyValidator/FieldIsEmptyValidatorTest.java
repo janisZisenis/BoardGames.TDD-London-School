@@ -9,14 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FieldIsEmptyValidatorTest {
 
     private FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
-    private FieldIsEmptyValidator sut = new FieldIsEmptyValidator(provider);
+    private FieldIsEmptyRule sut = new FieldIsEmptyRule(provider);
     private Input input;
 
     @Test
     void IfInputRefersToAnEmptyField_ItShouldBeValid() {
         makeInputRefersToAnEmptyField();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertTrue(actual);
     }
@@ -25,7 +25,7 @@ public class FieldIsEmptyValidatorTest {
     void IfInputRefersToAnOccupiedField_ItShouldNotBeValid() {
         makeInputRefersToAnOccupiedField();
 
-        boolean actual = sut.isValid(input);
+        boolean actual = sut.validates(input);
 
         assertFalse(actual);
     }

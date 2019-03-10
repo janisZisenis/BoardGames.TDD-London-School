@@ -1,17 +1,16 @@
-package com.company.Core.InputGeneration.ValidatingInputGenerator;
+package com.company.Core.InputGeneration.InputValidatingGenerator;
 
-import com.company.Core.InputGeneration.CountingRuleStub;
 import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.Core.InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ValidatingInputGeneratorTest {
+public class InputValidatingGeneratorTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private CountingRuleStub validator = new CountingRuleStub();
-    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
+    private CountingInputValidatorSpy validator = new CountingInputValidatorSpy();
+    private InputValidatingGenerator sut = new InputValidatingGenerator(generator, validator);
 
     private Input[] generated;
 
@@ -36,6 +35,28 @@ public class ValidatingInputGeneratorTest {
     }
 
     @Test
+    void IfFirstUserInputIsNotValid_ShouldHaveAlertedOnce() {
+        makeFirstInputIsNotValid();
+
+        sut.generate();
+
+        int actual = validator.getTimesAlerted();
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void IfFirstUserInputIsValid_ShouldNotHaveAlerted() {
+        makeFirstUserInputIsValid();
+
+        sut.generate();
+
+        int actual = validator.getTimesAlerted();
+        int expected = 0;
+        assertEquals(expected, actual);
+    }
+
+    @Test
     void IfFirstAndSecondUserInputIsNotValid_ShouldBeTheThirdUserInput() {
         makeFirstAndSecondInputIsNotValid();
 
@@ -44,6 +65,18 @@ public class ValidatingInputGeneratorTest {
         Input expected = generated[2];
         assertEquals(expected, actual);
     }
+
+    @Test
+    void IfFirstAndSecondUserInputIsNotValid_ShouldHaveAlertedTwice() {
+        makeFirstAndSecondInputIsNotValid();
+
+        sut.generate();
+
+        int actual = validator.getTimesAlerted();
+        int expected = 2;
+        assertEquals(expected, actual);
+    }
+
 
     private void makeFirstUserInputIsValid() {
         generated = new Input[] { new Input(0, 1) };
@@ -54,7 +87,7 @@ public class ValidatingInputGeneratorTest {
 
     private void makeFirstInputIsNotValid() {
         generated = new Input[] { new Input(0, 1),
-                                  new Input(1, 2) };
+                new Input(1, 2) };
 
         Input[] valid = { new Input(1, 2) };
 
@@ -64,14 +97,13 @@ public class ValidatingInputGeneratorTest {
 
     private void makeFirstAndSecondInputIsNotValid() {
         generated = new Input[] { new Input(0, 1),
-                                  new Input(1, 2),
-                                  new Input(2, 3) };
+                new Input(1, 2),
+                new Input(2, 3) };
 
         Input[] valid = { new Input(2, 3) };
 
         generator.setUserInputs(generated);
         validator.setValidInputs(valid);
     }
-
 
 }

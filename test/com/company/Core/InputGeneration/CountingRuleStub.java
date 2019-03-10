@@ -4,10 +4,10 @@ import com.company.Core.InputGeneration.Input.Input;
 
 import java.util.Arrays;
 
-public class CountingValidatorStub implements InputValidator {
+public class CountingRuleStub implements InputRule {
     private Input[] valid = {};
 
-    public boolean isValid(Input input) {
+    public boolean validates(Input input) {
         return Arrays.asList(valid).contains(input);
     }
 

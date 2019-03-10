@@ -1,19 +1,19 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputGenerator;
-import com.company.Core.InputGeneration.InputValidator;
+import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.InputRule;
 
 public class ValidatingInputGenerator implements InputGenerator {
     private final InputGenerator generator;
-    private final InputValidator validator;
+    private final InputRule validator;
 
-    public ValidatingInputGenerator(InputGenerator generator, InputValidator validator) {
+    public ValidatingInputGenerator(InputGenerator generator, InputRule validator) {
         this.generator = generator;
         this.validator = validator;
     }
 
-    public Input generateInput() {
+    public Input generate() {
         Input in = getInput();
 
         while(isNotValid(in)) {
@@ -24,10 +24,10 @@ public class ValidatingInputGenerator implements InputGenerator {
     }
 
     private Input getInput() {
-        return generator.generateInput();
+        return generator.generate();
     }
 
     private boolean isNotValid(Input in) {
-        return !validator.isValid(in);
+        return !validator.validates(in);
     }
 }

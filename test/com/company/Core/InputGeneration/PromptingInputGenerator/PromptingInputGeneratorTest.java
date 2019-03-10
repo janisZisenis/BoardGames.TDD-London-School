@@ -14,7 +14,7 @@ public class PromptingInputGeneratorTest {
     void IfPrompterReturnsRow0AndColumn1_UserInputShouldHaveRow0AndColumn1() {
         makePrompterReturns(0, 1);
 
-        Input actual = sut.generateInput();
+        Input actual = sut.generate();
 
         Input expected = new Input(0, 1);
         assertEquals(expected, actual);
@@ -24,7 +24,7 @@ public class PromptingInputGeneratorTest {
     void IfPrompterReturnsRow1AndColumn2_UserInputShouldHaveRow1AndColumn2() {
         makePrompterReturns(1, 2);
 
-        Input actual = sut.generateInput();
+        Input actual = sut.generate();
 
         Input expected = new Input(1, 2);
         assertEquals(expected, actual);
@@ -34,7 +34,7 @@ public class PromptingInputGeneratorTest {
     void IfPrompterReturnsRow2AndColumn3_UserInputShouldHaveRow2AndColumn3() {
         makePrompterReturns(2, 3);
 
-        Input actual = sut.generateInput();
+        Input actual = sut.generate();
 
         Input expected = new Input(2, 3);
         assertEquals(expected, actual);
