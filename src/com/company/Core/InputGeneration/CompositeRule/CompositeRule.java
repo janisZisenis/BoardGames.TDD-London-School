@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.CompositeValidator;
+package com.company.Core.InputGeneration.CompositeRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRule;

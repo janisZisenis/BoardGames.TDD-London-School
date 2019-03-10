@@ -1,11 +1,11 @@
-package com.company.Core.InputGeneration.CompositeValidator;
+package com.company.Core.InputGeneration.CompositeRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRuleStub;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CompositeValidatorTest {
+public class CompositeRuleTest {
 
     private CompositeRule sut = new CompositeRule();
     private Input input = new Input(0 ,1);

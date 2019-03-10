@@ -4,7 +4,7 @@ import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.Core.InputGeneration.AlertingValidator.AlertingRule;
-import com.company.Core.InputGeneration.CompositeValidator.CompositeRule;
+import com.company.Core.InputGeneration.CompositeRule.CompositeRule;
 import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
 import com.company.Core.InputGeneration.InputRule;
 import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
