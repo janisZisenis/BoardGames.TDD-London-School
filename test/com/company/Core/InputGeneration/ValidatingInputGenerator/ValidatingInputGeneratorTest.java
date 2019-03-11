@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ValidatingInputGeneratorTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private CountingRuleStub validator = new CountingRuleStub();
-    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
+    private CountingRuleStub rule = new CountingRuleStub();
+    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, rule);
 
     private Input[] generated;
 
@@ -49,7 +49,7 @@ public class ValidatingInputGeneratorTest {
         generated = new Input[] { new Input(0, 1) };
 
         generator.setGeneratedInputs(generated);
-        validator.setValidInputs(generated);
+        rule.setValidInputs(generated);
     }
 
     private void makeFirstInputIsNotValid() {
@@ -59,7 +59,7 @@ public class ValidatingInputGeneratorTest {
         Input[] valid = { new Input(1, 2) };
 
         generator.setGeneratedInputs(generated);
-        validator.setValidInputs(valid);
+        rule.setValidInputs(valid);
     }
 
     private void makeFirstAndSecondInputIsNotValid() {
@@ -70,7 +70,7 @@ public class ValidatingInputGeneratorTest {
         Input[] valid = { new Input(2, 3) };
 
         generator.setGeneratedInputs(generated);
-        validator.setValidInputs(valid);
+        rule.setValidInputs(valid);
     }
 
 

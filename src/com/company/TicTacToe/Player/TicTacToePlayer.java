@@ -1,7 +1,7 @@
 package com.company.TicTacToe.Player;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 import com.company.Core.Turn.Player;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field.Field;

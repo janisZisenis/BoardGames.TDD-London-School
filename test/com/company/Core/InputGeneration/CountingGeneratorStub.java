@@ -1,7 +1,7 @@
 package com.company.Core.InputGeneration;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 
 public class CountingGeneratorStub implements InputGenerator {
     private int count = 0;

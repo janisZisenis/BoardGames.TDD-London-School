@@ -16,7 +16,7 @@ public class FieldIsEmptyValidatorTest {
     void IfInputRefersToAnEmptyField_ItShouldBeValid() {
         makeInputRefersToAnEmptyField();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
@@ -25,7 +25,7 @@ public class FieldIsEmptyValidatorTest {
     void IfInputRefersToAnOccupiedField_ItShouldNotBeValid() {
         makeInputRefersToAnOccupiedField();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }

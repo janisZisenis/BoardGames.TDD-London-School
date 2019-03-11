@@ -1,7 +1,7 @@
 package com.company.CLI.InputGeneration;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 
 import java.util.Scanner;
 

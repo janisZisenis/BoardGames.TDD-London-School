@@ -1,7 +1,7 @@
 package com.company.TicTacToe.InputValidating.FieldIsEmptyValidator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.CompositeValidator.InputRule;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.TicTacToe.Field.Field;
 
 public class FieldIsEmptyRule implements InputRule {
@@ -11,7 +11,7 @@ public class FieldIsEmptyRule implements InputRule {
         this.provider = provider;
     }
 
-    public boolean validates(Input input) {
+    public boolean isValid(Input input) {
         Field f = makeField(input);
         return provider.isEmpty(f);
     }

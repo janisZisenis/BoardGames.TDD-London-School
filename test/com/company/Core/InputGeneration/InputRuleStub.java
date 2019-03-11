@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration;
 
-import com.company.Core.InputGeneration.CompositeValidator.InputRule;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.Input.Input;
 
 import java.util.Arrays;
@@ -13,7 +13,7 @@ public class InputRuleStub implements InputRule {
         this.valid = valid;
     }
 
-    public boolean validates(Input input) {
+    public boolean isValid(Input input) {
         return Arrays.asList(valid).contains(input);
     }
 }

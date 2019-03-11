@@ -1,16 +1,14 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
-import com.company.Core.InputGeneration.CompositeValidator.InputRule;
 
 public class ValidatingInputGenerator implements InputGenerator {
     private final InputGenerator generator;
-    private final InputRule validator;
+    private final InputRule rule;
 
-    public ValidatingInputGenerator(InputGenerator generator, InputRule validator) {
+    public ValidatingInputGenerator(InputGenerator generator, InputRule rule) {
         this.generator = generator;
-        this.validator = validator;
+        this.rule = rule;
     }
 
     public Input generate() {
@@ -28,6 +26,6 @@ public class ValidatingInputGenerator implements InputGenerator {
     }
 
     private boolean isNotValid(Input in) {
-        return !validator.validates(in);
+        return !rule.isValid(in);
     }
 }

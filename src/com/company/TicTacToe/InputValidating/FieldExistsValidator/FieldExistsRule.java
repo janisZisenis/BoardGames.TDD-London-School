@@ -1,14 +1,14 @@
 package com.company.TicTacToe.InputValidating.FieldExistsValidator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.CompositeValidator.InputRule;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
 public class FieldExistsRule implements InputRule {
 
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 
-    public boolean validates(Input input) {
+    public boolean isValid(Input input) {
         int row = input.getRow();
         int col = input.getColumn();
 

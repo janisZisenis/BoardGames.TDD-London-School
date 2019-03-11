@@ -13,7 +13,7 @@ public class FieldExistsValidatorTest {
     void IfInputHasRowAndColumnBetween0And2_ItShouldBeValid() {
         input = new Input(0, 2);
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
@@ -22,7 +22,7 @@ public class FieldExistsValidatorTest {
     void IfInputHasNegativeRow_ItShouldNotBeValid() {
         input = new Input(-1, 2);
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -31,7 +31,7 @@ public class FieldExistsValidatorTest {
     void IfInputHasRowBiggerThan2_ItShouldNotBeValid() {
         input = new Input(3, 2);
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -40,7 +40,7 @@ public class FieldExistsValidatorTest {
     void IfInputHasNegativeColumn_ItShouldNotBeValid() {
         input = new Input(0, -1);
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
@@ -49,7 +49,7 @@ public class FieldExistsValidatorTest {
     void IfInputHasColumnBiggerThan2_ItShouldNotBeValid() {
         input = new Input(2, 3);
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }

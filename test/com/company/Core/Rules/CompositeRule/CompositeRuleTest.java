@@ -12,84 +12,84 @@ public class CompositeRuleTest {
 
     @Test
     void FreshInstance_InputShouldBeValid() {
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
 
     @Test
     void AddedInvalidator_InputShouldBeInvalid() {
-        makeInvalidatorAdded();
+        makeInvalidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
     @Test
     void AddedValidator_InputShouldBeInvalid() {
-        makeValidatorAdded();
+        makeValidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertTrue(actual);
     }
 
     @Test
     void AddedValidatorAfterInvalidator_InputShouldBeFalse() {
-        makeInvalidatorAdded();
-        makeValidatorAdded();
+        makeInvalidatingRuleAdded();
+        makeValidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
-     @Test
-     void AddedInvalidatorAfterValidator_InputShouldBeFalse() {
-        makeValidatorAdded();
-        makeInvalidatorAdded();
+    @Test
+    void AddedInvalidatorAfterValidator_InputShouldBeFalse() {
+        makeValidatingRuleAdded();
+        makeInvalidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
     @Test
     void AddedInvalidatorInBetweenTwoValidators_InputShouldBeFalse() {
-        makeValidatorAdded();
-        makeInvalidatorAdded();
-        makeValidatorAdded();
+        makeValidatingRuleAdded();
+        makeInvalidatingRuleAdded();
+        makeValidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
     @Test
     void AddedInvalidatorAfterTwoValidators_InputShouldBeFalse() {
-        makeValidatorAdded();
-        makeValidatorAdded();
-        makeInvalidatorAdded();
+        makeValidatingRuleAdded();
+        makeValidatingRuleAdded();
+        makeInvalidatingRuleAdded();
 
-        boolean actual = sut.validates(input);
+        boolean actual = sut.isValid(input);
 
         assertFalse(actual);
     }
 
 
-    private void makeValidatorAdded() {
-        InputRuleStub validator = new InputRuleStub();
+    private void makeValidatingRuleAdded() {
+        InputRuleStub rule = new InputRuleStub();
         Input[] valid = { input };
-        validator.setValidInputs(valid);
-        sut.add(validator);
+        rule.setValidInputs(valid);
+        sut.add(rule);
     }
 
-    private void makeInvalidatorAdded() {
-        InputRuleStub validator = new InputRuleStub();
+    private void makeInvalidatingRuleAdded() {
+        InputRuleStub rule = new InputRuleStub();
         Input[] valid = {};
-        validator.setValidInputs(valid);
-        sut.add(validator);
+        rule.setValidInputs(valid);
+        sut.add(rule);
     }
 
 }
