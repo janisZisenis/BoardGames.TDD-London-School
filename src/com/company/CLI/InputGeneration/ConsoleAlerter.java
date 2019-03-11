@@ -1,6 +1,6 @@
 package com.company.CLI.InputGeneration;
 
-import com.company.Core.InputGeneration.AlertingValidator.Alerter;
+import com.company.Core.Rules.AlertingRule.Alerter;
 
 public class ConsoleAlerter implements Alerter {
 

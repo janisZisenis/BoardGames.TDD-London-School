@@ -13,13 +13,25 @@ public class InputValidatingGenerator {
     }
 
     public Input generate() {
-        Input input = generator.generate();
+        Input input = getInput();
 
-        while(!validator.isValid(input)) {
-            validator.alert();
-            input = generator.generate();
+        while(isNotValid(input)) {
+            alert();
+            input = getInput();
         }
 
         return input;
+    }
+
+    private Input getInput() {
+        return generator.generate();
+    }
+
+    private void alert() {
+        validator.alert();
+    }
+
+    private boolean isNotValid(Input input) {
+        return !validator.isValid(input);
     }
 }

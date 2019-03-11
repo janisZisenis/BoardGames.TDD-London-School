@@ -1,8 +1,7 @@
 package com.company.Core.InputGeneration.CompositeValidator;
 
-import com.company.Core.InputGeneration.AlertingValidator.Alerter;
+import com.company.Core.Rules.AlertingRule.Alerter;
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputRule;
 
 import java.util.LinkedList;
 
@@ -12,9 +11,8 @@ public class CompositeValidator {
 
     public boolean isValid(Input input) {
 
-        for(int i = 0; i < rules.size(); i++) {
-            InputRule rule = rules.get(i);
-            if(!rule.validates(input))
+        for (InputRule rule : rules) {
+            if (!rule.validates(input))
                 return false;
         }
 

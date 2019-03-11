@@ -11,7 +11,7 @@ public class CountingGeneratorStub implements InputGenerator {
         return this.userInputs[count++];
     }
 
-    public void setUserInputs(Input[] inputs) {
+    public void setGeneratedInputs(Input[] inputs) {
         this.userInputs = inputs;
     }
 }

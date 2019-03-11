@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.AlertingValidator;
+package com.company.Core.Rules.AlertingRule;
 
 public class AlerterSpy implements Alerter {
     private boolean alerted = false;

@@ -72,7 +72,7 @@ public class InputValidatingGeneratorTest {
     private void makeFirstUserInputIsValid() {
         generated = new Input[] { new Input(0, 1) };
 
-        generator.setUserInputs(generated);
+        generator.setGeneratedInputs(generated);
         validator.setValidInputs(generated);
     }
 
@@ -82,7 +82,7 @@ public class InputValidatingGeneratorTest {
 
         Input[] valid = { new Input(1, 2) };
 
-        generator.setUserInputs(generated);
+        generator.setGeneratedInputs(generated);
         validator.setValidInputs(valid);
     }
 
@@ -93,7 +93,7 @@ public class InputValidatingGeneratorTest {
 
         Input[] valid = { new Input(2, 3) };
 
-        generator.setUserInputs(generated);
+        generator.setGeneratedInputs(generated);
         validator.setValidInputs(valid);
     }
 

@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.CompositeRule;
+package com.company.Core.Rules.CompositeRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRuleStub;

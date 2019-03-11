@@ -1,11 +1,11 @@
-package com.company.Core.InputGeneration.AlertingValidator;
+package com.company.Core.Rules.AlertingRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRuleStub;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AlertingValidatorTest {
+public class AlertingRuleTest {
 
     private InputRuleStub validator = new InputRuleStub();
     private AlerterSpy alerter = new AlerterSpy();

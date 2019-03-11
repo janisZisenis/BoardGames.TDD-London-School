@@ -2,7 +2,7 @@ package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
-import com.company.Core.InputGeneration.InputRule;
+import com.company.Core.InputGeneration.CompositeValidator.InputRule;
 
 public class ValidatingInputGenerator implements InputGenerator {
     private final InputGenerator generator;

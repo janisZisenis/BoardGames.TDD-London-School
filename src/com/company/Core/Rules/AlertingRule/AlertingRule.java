@@ -1,7 +1,7 @@
-package com.company.Core.InputGeneration.AlertingValidator;
+package com.company.Core.Rules.AlertingRule;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputRule;
+import com.company.Core.InputGeneration.CompositeValidator.InputRule;
 
 public class AlertingRule implements InputRule {
 

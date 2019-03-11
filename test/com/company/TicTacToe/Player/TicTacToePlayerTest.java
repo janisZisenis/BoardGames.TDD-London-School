@@ -80,13 +80,13 @@ public class TicTacToePlayerTest {
     private void makeGeneratorReturnsRow2Column0() {
         Input in = new Input(2, 0);
         Input[] inputs = { in };
-        generator.setUserInputs(inputs);
+        generator.setGeneratedInputs(inputs);
     }
 
     private void makeGeneratorReturnsRow1Column1() {
         Input in = new Input(1, 1);
         Input[] inputs = { in };
-        generator.setUserInputs(inputs);
+        generator.setGeneratedInputs(inputs);
     }
 
 

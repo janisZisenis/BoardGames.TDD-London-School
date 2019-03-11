@@ -1,25 +1,24 @@
 package com.company.App;
 
-import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
-import com.company.Core.InputGeneration.AlertingValidator.AlertingRule;
-import com.company.Core.InputGeneration.CompositeRule.CompositeRule;
-import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
-import com.company.Core.InputGeneration.InputRule;
-import com.company.Core.InputGeneration.PromptingInputGenerator.PromptingInputGenerator;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.TicTacToe.Board.Board;
 import com.company.CLI.TicTacToe.AlertingMessages;
-import com.company.TicTacToe.CountingReferee.CountingReferee;
-import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
+import com.company.CLI.TicTacToe.BoardPrinter;
+import com.company.Core.InputGeneration.CompositeValidator.InputRule;
+import com.company.Core.InputGeneration.InputValidatingGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import com.company.Core.Rules.AlertingRule.AlertingRule;
+import com.company.Core.Rules.CompositeRule.CompositeRule;
 import com.company.Core.Turn.Turn;
+import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.Player.TicTacToePlayer;
+import com.company.TicTacToe.CountingReferee.CountingReferee;
+import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
 import com.company.TicTacToe.Player.PlayerContext;
+import com.company.TicTacToe.Player.TicTacToePlayer;
 
 public class Main {
 
@@ -34,8 +33,7 @@ public class Main {
 
     private static InputGenerator makeTicTacToeInputGenerator(InputRule validator) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        InputGenerator generator = new PromptingInputGenerator(prompter);
-        return new ValidatingInputGenerator(generator, validator);
+        return new ValidatingInputGenerator(prompter, validator);
     }
 
     private static CompositeRule makeTicTacToeValidator(Board board) {

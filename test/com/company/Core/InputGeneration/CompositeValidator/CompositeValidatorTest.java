@@ -1,6 +1,6 @@
 package com.company.Core.InputGeneration.CompositeValidator;
 
-import com.company.Core.InputGeneration.AlertingValidator.AlerterSpy;
+import com.company.Core.Rules.AlertingRule.AlerterSpy;
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRuleStub;
 import org.junit.jupiter.api.Test;
@@ -48,8 +48,8 @@ public class CompositeValidatorTest {
         assertFalse(actual);
     }
 
-     @Test
-     void RegisteredInvalidatorAfterValidator_InputShouldBeInvalid() {
+    @Test
+    void RegisteredInvalidatorAfterValidator_InputShouldBeInvalid() {
          makeValidatingRuleAlerterPairRegistered();
          makeInvalidatingRuleAlerterPairRegistered();
 
@@ -71,14 +71,14 @@ public class CompositeValidatorTest {
     private void makeValidatingRuleAlerterPairRegistered() {
         InputRuleStub rule = makeValidatingRule();
 
-        AlerterSpy alerter = new AlerterSpy();
+        AlerterDummy alerter = new AlerterDummy();
         sut.register(rule, alerter);
     }
 
     private void makeInvalidatingRuleAlerterPairRegistered() {
         InputRuleStub rule = makeInvalidatingRule();
 
-        AlerterSpy alerter = new AlerterSpy();
+        AlerterDummy alerter = new AlerterDummy();
         sut.register(rule, alerter);
     }
 

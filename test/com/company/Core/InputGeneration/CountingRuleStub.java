@@ -1,5 +1,6 @@
 package com.company.Core.InputGeneration;
 
+import com.company.Core.InputGeneration.CompositeValidator.InputRule;
 import com.company.Core.InputGeneration.Input.Input;
 
 import java.util.Arrays;
