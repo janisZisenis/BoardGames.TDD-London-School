@@ -10,7 +10,7 @@ public class HashingBoard implements Board {
     private final HashMap<Field, Mark> fields = new HashMap<>();
 
     public boolean isEmpty(Field f) {
-        return !fields.keySet().contains(f);
+        return !fields.containsKey(f);
     }
 
     public void mark(Field f, Mark m) {
