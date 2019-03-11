@@ -1,13 +1,13 @@
-package com.company.TicTacToe.CountingReferee;
+package com.company.TicTacToe.NumberOfMovesReferee;
 
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
-public class CountingReferee {
+public class NumberOfMovesReferee {
 
     private final int fieldCount = BoardBoundaries.fieldCount;
     private final MarkedFieldCountProvider provider;
 
-    public CountingReferee(MarkedFieldCountProvider provider) {
+    public NumberOfMovesReferee(MarkedFieldCountProvider provider) {
         this.provider = provider;
     }
 

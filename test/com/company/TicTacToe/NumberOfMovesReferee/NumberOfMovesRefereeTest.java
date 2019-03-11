@@ -1,12 +1,12 @@
-package com.company.TicTacToe.CountingReferee;
+package com.company.TicTacToe.NumberOfMovesReferee;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CountingRefereeTest {
+public class NumberOfMovesRefereeTest {
 
     private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
-    private CountingReferee sut = new CountingReferee(provider);
+    private NumberOfMovesReferee sut = new NumberOfMovesReferee(provider);
 
     @Test
     void If0FieldsAreMarked_ShouldHaveMovesLeft() {

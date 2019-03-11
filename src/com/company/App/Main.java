@@ -14,7 +14,7 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.CountingReferee.CountingReferee;
+import com.company.TicTacToe.NumberOfMovesReferee.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
 import com.company.TicTacToe.Player.PlayerContext;
@@ -46,8 +46,8 @@ public class Main {
         return validator;
     }
 
-    private static CountingReferee makeTicTacToeReferee(ObservableBoard board) {
-        return new CountingReferee(board);
+    private static NumberOfMovesReferee makeTicTacToeReferee(ObservableBoard board) {
+        return new NumberOfMovesReferee(board);
     }
 
     private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
@@ -83,7 +83,7 @@ public class Main {
 
         InputRule validator = makeTicTacToeValidator(board);
         InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        CountingReferee referee = makeTicTacToeReferee(board);
+        NumberOfMovesReferee referee = makeTicTacToeReferee(board);
 
         TicTacToePlayer john = makeJohn(board, generator);
         TicTacToePlayer haley = makeHaley(board, generator);

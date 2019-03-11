@@ -21,6 +21,6 @@ public class Turn {
     }
 
     private void togglePlayer() {
-        current = current == first ? second : first;
+        current = (current == first) ? second : first;
     }
 }

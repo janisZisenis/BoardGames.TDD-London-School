@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldExistsValidatorTest {
 
-    FieldExistsRule sut = new FieldExistsRule();
-    Input input;
+    private FieldExistsRule sut = new FieldExistsRule();
+    private Input input;
 
     @Test
     void IfInputHasRowAndColumnBetween0And2_ItShouldBeValid() {
