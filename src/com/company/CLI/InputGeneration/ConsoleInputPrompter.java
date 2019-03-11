@@ -1,15 +1,23 @@
 package com.company.CLI.InputGeneration;
 
-import com.company.Core.InputGeneration.PromptingInputGenerator.InputPrompter;
+import com.company.Core.InputGeneration.Input.Input;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 
 import java.util.Scanner;
 
-public class ConsoleInputPrompter implements InputPrompter {
+public class ConsoleInputPrompter implements InputGenerator {
     private final Scanner scanner = new Scanner(System.in);
 
     private final String rowMessage = PromptingMessages.rowMessage;
     private final String columnMessage = PromptingMessages.columnMessage;
     private final String notAnIntMessage = PromptingMessages.notAnIntMessage;
+
+    public Input generate() {
+        int row = promptInt(rowMessage);
+        int column = promptInt(columnMessage);
+
+        return new Input(row, column);
+    }
 
     public int promptRow() {
         return promptInt(rowMessage);

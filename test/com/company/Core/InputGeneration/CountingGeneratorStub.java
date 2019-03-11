@@ -1,16 +1,17 @@
 package com.company.Core.InputGeneration;
 
 import com.company.Core.InputGeneration.Input.Input;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 
 public class CountingGeneratorStub implements InputGenerator {
     private int count = 0;
     private Input[] userInputs;
 
-    public Input generateInput() {
+    public Input generate() {
         return this.userInputs[count++];
     }
 
-    public void setUserInputs(Input[] inputs) {
+    public void setGeneratedInputs(Input[] inputs) {
         this.userInputs = inputs;
     }
 }

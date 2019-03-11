@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FieldIsEmptyValidatorTest {
 
     private FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
-    private FieldIsEmptyValidator sut = new FieldIsEmptyValidator(provider);
+    private FieldIsEmptyRule sut = new FieldIsEmptyRule(provider);
     private Input input;
 
     @Test
