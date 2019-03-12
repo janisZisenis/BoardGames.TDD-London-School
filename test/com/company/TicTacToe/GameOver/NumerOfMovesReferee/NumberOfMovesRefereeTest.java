@@ -1,7 +1,10 @@
-package com.company.TicTacToe.GameOver;
+package com.company.TicTacToe.GameOver.NumerOfMovesReferee;
 
+import com.company.TicTacToe.GameOver.NumberOfMovesReferee;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NumberOfMovesRefereeTest {
 

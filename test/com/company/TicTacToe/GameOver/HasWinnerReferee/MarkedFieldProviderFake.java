@@ -1,4 +1,4 @@
-package com.company.TicTacToe.Board.BoardFake;
+package com.company.TicTacToe.GameOver.HasWinnerReferee;
 
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.Mark;
@@ -6,28 +6,28 @@ import com.company.TicTacToe.Field.Field;
 
 import java.util.HashMap;
 
-public class BoardFake {
+public class MarkedFieldProviderFake {
 
     private static char john = 'J';
     private static char haley = 'H';
 
     private HashMap<Field, Mark> marks = new HashMap<>();
 
-    public static BoardFake fromChar(char[][] state) {
-        BoardFake fake = new BoardFake();
+    public static MarkedFieldProviderFake fromChar(char[][] state) {
+        MarkedFieldProviderFake fake = new MarkedFieldProviderFake();
 
         initialize(state, fake);
 
         return fake;
     }
 
-    private static void initialize(char[][] state, BoardFake fake) {
+    private static void initialize(char[][] state, MarkedFieldProviderFake fake) {
         for(int j = 0; j < state.length; j++)
             for(int i = 0; i < state[j].length; i++)
                 if (!isEmpty(state[j][i])) {
                     Field f = new Field(j, i);
                     Mark m = map(state[j][i]);
-                    fake.mark(f, m);
+                    fake.marks.put(f, m);
                 }
     }
 
@@ -40,11 +40,6 @@ public class BoardFake {
     }
 
 
-
-    public boolean isEmpty(Field f) {
-        return !marks.containsKey(f);
-    }
-
     public Mark getMarkAt(Field f) {
         throwIfFieldIsNotMarked(f);
 
@@ -52,15 +47,11 @@ public class BoardFake {
     }
 
     private void throwIfFieldIsNotMarked(Field f) {
-        if(isEmpty(f))
+        if(!isMarked(f))
             throw new Board.FieldIsNotMarked();
     }
 
-    public int getMarkedFieldCount() {
-        return marks.size();
-    }
-
-    public void mark(Field f, Mark m) {
-        marks.put(f, m);
+    public boolean isMarked(Field f) {
+        return marks.containsKey(f);
     }
 }
