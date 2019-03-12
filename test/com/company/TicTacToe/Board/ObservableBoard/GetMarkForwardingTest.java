@@ -1,23 +1,21 @@
 package com.company.TicTacToe.Board.ObservableBoard;
 
-import com.company.TicTacToe.Board.BoardDummy;
 import com.company.TicTacToe.Board.BoardStub;
-import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GetMarkForwardingTest {
 
     private BoardStub board = new BoardStub();
     private ObservableBoard sut = new ObservableBoard(board);
-    private Field field = new Field(0, 1);
+    private Field field;
 
     @Test
-    void IfBoardHasHaleyOnField_ItShouldGetTheMarkHaley() {
-        board.setMark(Mark.Haley);
+    void IfBoardHasHaleyOnRow0Column1_ItShouldGetTheMarkHaleyOnRow0Column1() {
+        makeBoardHasHaleyOnRow0Column1();
 
         Mark actual = sut.getMarkAt(field);
 
@@ -26,8 +24,8 @@ public class GetMarkForwardingTest {
     }
 
     @Test
-    void IfBoardHasJohnOnField_ItShouldGetTheMarkJohn() {
-        board.setMark(Mark.John);
+    void IfBoardHasJohnOnRow0Column1_ItShouldGetTheMarkJohnOnRow0Column1() {
+        makeBoardHasJohnOnRow0Column1();
 
         Mark actual = sut.getMarkAt(field);
 
@@ -36,37 +34,29 @@ public class GetMarkForwardingTest {
     }
 
     @Test
-    void IfBoardGetsAskedForMark_ItShouldAskTheBoardWithSameField() {
-        BoardMock board = new BoardMock();
-        ObservableBoard sut = new ObservableBoard(board);
-        Field field = new Field(0, 1);
-        board.expectGetMarkWith(field);
+    void IfBoardHasJohnOnRow1Column2_ItShouldGetTheMarkJohnOnRow0Column2() {
+        makeBoardHasJohnOnRow1Column2();
 
-        sut.getMarkAt(field);
+        Mark actual = sut.getMarkAt(field);
 
-        board.verifyAll();
+        Mark expected = Mark.John;
+        assertEquals(expected, actual);
     }
 
-    private class BoardMock extends BoardDummy {
 
-        private boolean wasAskedForMark = false;
-        private Field expectedField;
-        private Field actualField;
+    private void makeBoardHasHaleyOnRow0Column1() {
+        field = new Field(0, 1);
+        board.setMarkOnField(Mark.Haley, field);
+    }
 
-        public Mark getMarkAt(Field f) {
-            this.wasAskedForMark = true;
-            this.actualField = f;
-            return super.getMarkAt(f);
-        }
+    private void makeBoardHasJohnOnRow0Column1() {
+        field = new Field(0, 1);
+        board.setMarkOnField(Mark.John, field);
+    }
 
-        public void verifyAll() {
-            assertTrue(wasAskedForMark);
-            assertEquals(expectedField, actualField);
-        }
-
-        public void expectGetMarkWith(Field field) {
-            this.expectedField = field;
-        }
+    private void makeBoardHasJohnOnRow1Column2() {
+        field = new Field(1, 2);
+        board.setMarkOnField(Mark.John, field);
     }
 
 }

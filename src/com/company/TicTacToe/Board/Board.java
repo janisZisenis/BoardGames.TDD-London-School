@@ -8,6 +8,8 @@ import com.company.TicTacToe.Player.MarkFieldService;
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
 
     boolean isEmpty(Field f);
+    boolean isMarked(Field f);
+
     void mark(Field f, Mark m);
     Mark getMarkAt(Field f);
     int getMarkedFieldCount();
