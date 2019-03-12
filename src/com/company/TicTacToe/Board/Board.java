@@ -3,9 +3,10 @@ package com.company.TicTacToe.Board;
 import com.company.TicTacToe.GameOver.NumberOfMovesReferee.MarkedFieldCountProvider;
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyProvider;
+import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.Player.MarkFieldService;
 
-public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
+public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 
     boolean isEmpty(Field f);
     boolean isMarked(Field f);

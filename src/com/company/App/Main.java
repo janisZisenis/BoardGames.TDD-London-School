@@ -20,6 +20,8 @@ import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.LineEvaluator.Line;
+import com.company.TicTacToe.LineEvaluator.LineEvaluator;
+import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
 
@@ -89,6 +91,10 @@ public class Main {
         return makeTurn(john, haley);
     }
 
+    private static LineEvaluator makeLineEvaluator(MarkedFieldProvider provider) {
+        return new LineEvaluator(provider);
+    }
+
     private static void initializeBoard() {
         ObservableBoard board = makeBoard();
         BoardPrinter printer = makeBoardPrinter(board);
@@ -99,6 +105,7 @@ public class Main {
 
 
     private static Board board;
+    private static LineEvaluator evaluator;
 
     public static void main(String[] args) {
         initializeBoard();
@@ -106,7 +113,8 @@ public class Main {
         Turn turn = makeTicTacToeTurn(board);
 
         NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
-
+        evaluator = makeLineEvaluator(board);
+        
         while(movesReferee.hasMovesLeft() && !hasWinner()) {
             turn.play();
         }
@@ -121,24 +129,7 @@ public class Main {
 
         Line line = new Line(first, second, third);
 
-        return isWinningLine(line);
-    }
-
-    private static boolean isWinningLine(Line line) {
-        if(isNotFullyMarked(line))
-            return false;
-
-        Mark f1 = board.getMarkAt(line.getFirst());
-        Mark f2 = board.getMarkAt(line.getSecond());
-        Mark f3 = board.getMarkAt(line.getThird());
-
-        return f1 == f2 && f1 == f3;
-    }
-
-    private static boolean isNotFullyMarked(Line line) {
-        return board.isEmpty(line.getFirst())
-            || board.isEmpty(line.getSecond())
-            || board.isEmpty(line.getThird());
+        return evaluator.isWinningLine(line);
     }
 
 }

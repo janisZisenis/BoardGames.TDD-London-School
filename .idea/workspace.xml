@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/FieldIsEmptyForwardingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/BoardObservingOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/ObservingOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/IsEmptyForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/FieldIsMarkedForwardingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,12 +76,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1667" />
-          <entry key="java" value="65238" />
+          <entry key="java" value="65378" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="65238" />
+          <entry key="JAVA" value="65378" />
           <entry key="PLAIN_TEXT" value="1667" />
         </counts>
       </usages-collector>
@@ -95,13 +89,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1515" />
+          <entry key="java" value="1517" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="1515" />
+          <entry key="JAVA" value="1517" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -110,51 +104,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="method#IfBoardHasHaleyOnRow0Column1_ItShouldGetTheMarkHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-                <element signature="method#IfBoardHasJohnOnRow0Column1_ItShouldGetTheMarkJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-                <element signature="method#IfBoardHasJohnOnRow1Column2_ItShouldGetTheMarkJohnOnRow0Column2#0;class#GetMarkForwardingTest#0" />
-                <element signature="method#makeBoardHasHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-                <element signature="method#makeBoardHasJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-                <element signature="method#makeBoardHasJohnOnRow1Column2#0;class#GetMarkForwardingTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="577">
+              <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#994#995#0" expanded="true" />
+                <element signature="e#1562#1563#0" expanded="true" />
+                <element signature="e#1608#1609#0" expanded="true" />
+                <element signature="e#2290#2291#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#3491#3492#0" expanded="true" />
+                <element signature="e#3537#3538#0" expanded="true" />
+                <element signature="e#4108#4109#0" expanded="true" />
+                <element signature="e#4158#4159#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding>
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#430#431#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#500#501#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#922#923#0" expanded="true" />
-                <element signature="e#977#978#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -240,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/LineEvaluator/MarkedFieldProviderStub.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/LineEvaluator/IsWinningLineEvaluator.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/LineEvaluator/LineEvaluatorTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/LineEvaluator/LineEvaluator.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsNotMarkedTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/HashingBoard/HashingBoard.java" />
@@ -248,7 +220,6 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsEmptyTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsStateTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/MarkStoringTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardDummy.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/BoardObservingOrderShuntTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/FieldStateQueryForwardingTest.java" />
@@ -258,6 +229,8 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
       </list>
     </option>
   </component>
@@ -437,24 +410,7 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -466,30 +422,6 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -505,7 +437,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552408800805" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552409144684" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -548,7 +480,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.App.Main" />
       <module name="TicTacToe.Main" />
@@ -629,14 +561,11 @@
       <workItem from="1551889386110" duration="1003000" />
       <workItem from="1551891330015" duration="5317000" />
       <workItem from="1552286287007" duration="17769000" />
-      <workItem from="1552397794126" duration="11022000" />
+      <workItem from="1552397794126" duration="11230000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 17h 34m 08s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 17h 35m 30s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
@@ -664,9 +593,12 @@
     <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 17h 40m 04s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 17h 44m 23s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166131000" />
+    <option name="totallyTimeSpent" value="166339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
@@ -1030,21 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
-            <element signature="e#2344#2345#0" expanded="true" />
-            <element signature="e#3491#3492#0" expanded="true" />
-            <element signature="e#3537#3538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsMarkedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1095,13 +1012,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1171,6 +1081,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="method#IfBoardHasHaleyOnRow0Column1_ItShouldGetTheMarkHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
+            <element signature="method#IfBoardHasJohnOnRow0Column1_ItShouldGetTheMarkJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
+            <element signature="method#IfBoardHasJohnOnRow1Column2_ItShouldGetTheMarkJohnOnRow0Column2#0;class#GetMarkForwardingTest#0" />
+            <element signature="method#makeBoardHasHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
+            <element signature="method#makeBoardHasJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
+            <element signature="method#makeBoardHasJohnOnRow1Column2#0;class#GetMarkForwardingTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1188,29 +1125,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#994#995#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="577">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
           <folding>
-            <element signature="method#IfBoardHasHaleyOnRow0Column1_ItShouldGetTheMarkHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-            <element signature="method#IfBoardHasJohnOnRow0Column1_ItShouldGetTheMarkJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-            <element signature="method#IfBoardHasJohnOnRow1Column2_ItShouldGetTheMarkJohnOnRow0Column2#0;class#GetMarkForwardingTest#0" />
-            <element signature="method#makeBoardHasHaleyOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-            <element signature="method#makeBoardHasJohnOnRow0Column1#0;class#GetMarkForwardingTest#0" />
-            <element signature="method#makeBoardHasJohnOnRow1Column2#0;class#GetMarkForwardingTest#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1608#1609#0" expanded="true" />
+            <element signature="e#2290#2291#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#3491#3492#0" expanded="true" />
+            <element signature="e#3537#3538#0" expanded="true" />
+            <element signature="e#4108#4109#0" expanded="true" />
+            <element signature="e#4158#4159#0" expanded="true" />
           </folding>
         </state>
       </provider>
