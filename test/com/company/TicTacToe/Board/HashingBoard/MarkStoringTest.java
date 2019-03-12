@@ -8,7 +8,7 @@ import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FieldMarkingTest {
+public class MarkStoringTest {
 
     private HashingBoard sut = new HashingBoard();
     private Field first = new Field(0, 1);

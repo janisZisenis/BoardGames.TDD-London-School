@@ -30,4 +30,5 @@ public class LineEvaluator {
 
         return first == second && second == third;
     }
+
 }

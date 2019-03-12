@@ -32,4 +32,9 @@ public class HashingBoard implements Board {
             throw new FieldIsNotMarked();
     }
 
+    public boolean isMarked(Field f) {
+        if(fields.containsKey(f))
+            return true;
+        return false;
+    }
 }
