@@ -7,17 +7,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IsWinningLineEvaluatorTest {
+public class LineEvaluatorTest {
 
 
     private MarkedFieldProviderStub provider = new MarkedFieldProviderStub();
-    private IsWinningLineEvaluator sut = new IsWinningLineEvaluator(provider);
+    private LineEvaluator sut = new LineEvaluator(provider);
 
     private Field first = new Field(0, 1);
     private Field second = new Field(0, 2);
     private Field third = new Field(0, 3);
     private Line line = new Line(first, second, third);
-
 
     @Test
     void IfLineIsEquallyMarked_ItShouldBeTheWinningLine() {
@@ -41,8 +40,6 @@ public class IsWinningLineEvaluatorTest {
     void IfFirstOfLineIsNotMarked_ItShouldNotBeTheWinningLine() {
         makeFirstOfLineIsNotMarked();
 
-        line = new Line(first, second, third);
-
         boolean actual = sut.isWinningLine(line);
 
         assertFalse(actual);
@@ -52,8 +49,6 @@ public class IsWinningLineEvaluatorTest {
     void IfSecondOfLineIsNotMarked_ItShouldNotBeTheWinningLine() {
         makeSecondOfLineIsNotMarked();
 
-        line = new Line(first, second, third);
-
         boolean actual = sut.isWinningLine(line);
 
         assertFalse(actual);
@@ -62,8 +57,6 @@ public class IsWinningLineEvaluatorTest {
     @Test
     void IfThirdOfLineIsNotMarked_ItShouldNotBeTheWinningLine() {
         makeThirdOfLineIsNotMarked();
-
-        line = new Line(first, second, third);
 
         boolean actual = sut.isWinningLine(line);
 

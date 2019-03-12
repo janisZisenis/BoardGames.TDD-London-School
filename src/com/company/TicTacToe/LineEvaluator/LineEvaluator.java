@@ -3,24 +3,16 @@ package com.company.TicTacToe.LineEvaluator;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field.Field;
 
-public class IsWinningLineEvaluator {
+public class LineEvaluator {
 
     private final MarkedFieldProvider provider;
 
-    public IsWinningLineEvaluator(MarkedFieldProvider provider) {
+    public LineEvaluator(MarkedFieldProvider provider) {
         this.provider = provider;
     }
 
     public boolean isWinningLine(Line line) {
         return isFullyMarked(line) && isEquallyMarked(line);
-    }
-
-    private boolean isEquallyMarked(Line line) {
-        Mark first = provider.getMarkAt(line.getFirst());
-        Mark second = provider.getMarkAt(line.getSecond());
-        Mark third = provider.getMarkAt(line.getThird());
-
-        return first == second && second == third;
     }
 
     private boolean isFullyMarked(Line line) {
@@ -29,5 +21,13 @@ public class IsWinningLineEvaluator {
         Field third = line.getThird();
 
         return provider.isMarked(first) && provider.isMarked(second) && provider.isMarked(third);
+    }
+
+    private boolean isEquallyMarked(Line line) {
+        Mark first = provider.getMarkAt(line.getFirst());
+        Mark second = provider.getMarkAt(line.getSecond());
+        Mark third = provider.getMarkAt(line.getThird());
+
+        return first == second && second == third;
     }
 }
