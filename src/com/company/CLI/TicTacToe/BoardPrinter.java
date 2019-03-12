@@ -13,6 +13,7 @@ public class BoardPrinter implements Observer {
 
     public BoardPrinter(Board board) {
         this.board = board;
+        print();
     }
 
     public void print() {

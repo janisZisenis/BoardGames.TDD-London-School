@@ -15,9 +15,11 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.GameOver.NumberOfMovesReferee;
+import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
+import com.company.TicTacToe.LineEvaluator.Line;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
 
@@ -32,12 +34,12 @@ public class Main {
         return new BoardPrinter(board);
     }
 
-    private static InputGenerator makeTicTacToeInputGenerator(InputRule validator) {
+    private static InputGenerator makeTicTacToeInputGenerator(InputRule rule) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        return new ValidatingInputGenerator(prompter, validator);
+        return new ValidatingInputGenerator(prompter, rule);
     }
 
-    private static CompositeRule makeTicTacToeValidator(Board board) {
+    private static CompositeRule makeTicTacToeInputRule(Board board) {
         InputRule existsValidator = makeAlertingFieldExistsValidator();
         InputRule isFreeValidator = makeAlertingFieldIsFreeValidator(board);
 
@@ -47,7 +49,7 @@ public class Main {
         return validator;
     }
 
-    private static NumberOfMovesReferee makeTicTacToeReferee(ObservableBoard board) {
+    private static NumberOfMovesReferee makeTicTacToeReferee(Board board) {
         return new NumberOfMovesReferee(board);
     }
 
@@ -77,25 +79,66 @@ public class Main {
         return new Turn(first, second);
     }
 
-    public static void main(String[] args) {
-        ObservableBoard board = makeBoard();
-        BoardPrinter printer = makeBoardPrinter(board);
-        board.attach(printer);
-
-        InputRule validator = makeTicTacToeValidator(board);
-        InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        NumberOfMovesReferee referee = makeTicTacToeReferee(board);
+    private static Turn makeTicTacToeTurn(Board board) {
+        InputRule inputRule = makeTicTacToeInputRule(board);
+        InputGenerator generator = makeTicTacToeInputGenerator(inputRule);
 
         TicTacToePlayer john = makeJohn(board, generator);
         TicTacToePlayer haley = makeHaley(board, generator);
-        Turn turn = makeTurn(john, haley);
 
-        printer.print();
+        return makeTurn(john, haley);
+    }
 
-        while(referee.hasMovesLeft()) {
+    private static void initializeBoard() {
+        ObservableBoard board = makeBoard();
+        BoardPrinter printer = makeBoardPrinter(board);
+        board.attach(printer);
+        Main.board = board;
+    }
+
+
+
+    private static Board board;
+
+    public static void main(String[] args) {
+        initializeBoard();
+
+        Turn turn = makeTicTacToeTurn(board);
+
+        NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
+
+        while(movesReferee.hasMovesLeft() && !hasWinner()) {
             turn.play();
         }
 
+    }
+
+
+    private static boolean hasWinner() {
+        Field first = new Field(0, 0);
+        Field second = new Field(0, 1);
+        Field third = new Field(0, 2);
+
+        Line line = new Line(first, second, third);
+
+        return isWinningLine(line);
+    }
+
+    private static boolean isWinningLine(Line line) {
+        if(isNotFullyMarked(line))
+            return false;
+
+        Mark f1 = board.getMarkAt(line.getFirst());
+        Mark f2 = board.getMarkAt(line.getSecond());
+        Mark f3 = board.getMarkAt(line.getThird());
+
+        return f1 == f2 && f1 == f3;
+    }
+
+    private static boolean isNotFullyMarked(Line line) {
+        return board.isEmpty(line.getFirst())
+            || board.isEmpty(line.getSecond())
+            || board.isEmpty(line.getThird());
     }
 
 }

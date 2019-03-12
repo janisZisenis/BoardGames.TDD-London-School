@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOver;
+package com.company.TicTacToe.GameOver.NumberOfMovesReferee;
 
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
