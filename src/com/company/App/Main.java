@@ -16,8 +16,8 @@ import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.GameOver.NumberOfMovesReferee;
-import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
+import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
 

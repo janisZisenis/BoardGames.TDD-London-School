@@ -1,4 +1,4 @@
-package com.company.TicTacToe.InputValidating.FieldIsEmptyValidator;
+package com.company.TicTacToe.InputValidating.FieldIsEmptyRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;

@@ -1,4 +1,4 @@
-package com.company.TicTacToe.InputValidating.FieldIsEmptyValidator;
+package com.company.TicTacToe.InputValidating.FieldIsEmptyRule;
 
 import com.company.TicTacToe.Field.Field;
 import java.util.Arrays;

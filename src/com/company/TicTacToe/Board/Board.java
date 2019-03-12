@@ -2,7 +2,7 @@ package com.company.TicTacToe.Board;
 
 import com.company.TicTacToe.GameOver.MarkedFieldCountProvider;
 import com.company.TicTacToe.Field.Field;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyProvider;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyProvider;
 import com.company.TicTacToe.Player.MarkFieldService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider {
