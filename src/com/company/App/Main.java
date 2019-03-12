@@ -4,17 +4,18 @@ import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.CLI.TicTacToe.BoardPrinter;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Core.InputRules.AlertingRule.AlertingRule;
 import com.company.Core.InputRules.CompositeRule.CompositeRule;
+import com.company.Core.Turn.Player;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.NumberOfMovesReferee.NumberOfMovesReferee;
+import com.company.TicTacToe.GameOver.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
 import com.company.TicTacToe.Player.PlayerContext;
@@ -72,7 +73,7 @@ public class Main {
         return new TicTacToePlayer(config);
     }
 
-    private static Turn makeGame(com.company.Core.Turn.Player first, com.company.Core.Turn.Player second) {
+    private static Turn makeTurn(Player first, Player second) {
         return new Turn(first, second);
     }
 
@@ -87,7 +88,7 @@ public class Main {
 
         TicTacToePlayer john = makeJohn(board, generator);
         TicTacToePlayer haley = makeHaley(board, generator);
-        Turn turn = makeGame(john, haley);
+        Turn turn = makeTurn(john, haley);
 
         printer.print();
 

@@ -18,7 +18,6 @@ public class AlertingRule implements InputRule {
             return true;
 
         alerter.alert();
-
         return false;
     }
 }

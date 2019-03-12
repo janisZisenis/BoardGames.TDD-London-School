@@ -1,4 +1,4 @@
-package com.company.TicTacToe.NumberOfMovesReferee;
+package com.company.TicTacToe.GameOver;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

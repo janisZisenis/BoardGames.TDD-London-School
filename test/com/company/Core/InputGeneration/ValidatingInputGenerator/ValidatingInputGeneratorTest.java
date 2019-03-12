@@ -1,7 +1,5 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
-import com.company.Core.InputGeneration.CountingRuleStub;
-import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.Core.InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ValidatingInputGeneratorTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private CountingRuleStub rule = new CountingRuleStub();
+    private InputRuleStub rule = new InputRuleStub();
     private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, rule);
 
     private Input[] generated;

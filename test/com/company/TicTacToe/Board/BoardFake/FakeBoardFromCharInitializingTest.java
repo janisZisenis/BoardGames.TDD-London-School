@@ -178,7 +178,7 @@ public class FakeBoardFromCharInitializingTest {
     @Test
     void IfStateContainsJJJ_J_Row1Column0ShouldNotBeEmpty() {
         state = new char[][]{ {'J', 'J', 'J'},
-                                       {'J'} };
+                              {'J'} };
 
         sut = BoardFake.fromChar(state);
 
@@ -188,7 +188,7 @@ public class FakeBoardFromCharInitializingTest {
     @Test
     void IfStateContainsJJJ_Dot_Row1Column0ShouldBeEmpty() {
         state = new char[][]{ {'J', 'J', 'J'},
-                                       {'.'} };
+                              {'.'} };
 
         sut = BoardFake.fromChar(state);
 
@@ -198,7 +198,7 @@ public class FakeBoardFromCharInitializingTest {
     @Test
     void IfStateContainsJJJ_HH_Row1Column1ShouldNotBeEmpty() {
         state = new char[][]{ {'J', 'J', 'J'},
-                                       {'H', 'H'} };
+                              {'H', 'H'} };
 
         sut = BoardFake.fromChar(state);
 
@@ -208,7 +208,7 @@ public class FakeBoardFromCharInitializingTest {
     @Test
     void IfStateContainsJJJ_HDot_Row1Column1ShouldNotBeEmpty() {
         state = new char[][]{ {'J', 'J', 'J'},
-                                       {'H', '.'} };
+                              {'H', '.'} };
 
         sut = BoardFake.fromChar(state);
 

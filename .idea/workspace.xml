@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardIsEmptyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/HashingBoard/HashingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/HashingBoard/HashingBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFake.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFakeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/BoardPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/BoardPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Core/InputRules/AlertingRule/AlertingRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Core/InputRules/AlertingRule/AlertingRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Core/InputRules/CompositeRule/CompositeRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Core/InputRules/CompositeRule/CompositeRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/NumberOfMovesReferee/MarkedFieldCountProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOver/MarkedFieldCountProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/NumberOfMovesReferee/NumberOfMovesReferee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOver/NumberOfMovesReferee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/CountingGeneratorStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/CountingGeneratorStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/CountingRuleStub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputRuleStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/InputRuleStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlertingRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlertingRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputRules/CompositeRule/CompositeRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputRules/CompositeRule/CompositeRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/Rules/AlertingRule/AlertingRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/Rules/AlertingRule/AlertingRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/Rules/CompositeRule/CompositeRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/Rules/CompositeRule/CompositeRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/NumberOfMovesReferee/MarkedFieldCountProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/MarkedFieldCountProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/NumberOfMovesReferee/NumberOfMovesRefereeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/NumberOfMovesRefereeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/TicTacToePlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/Player/TicTacToePlayerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,12 +93,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1420" />
-          <entry key="java" value="60572" />
+          <entry key="java" value="60740" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="60572" />
+          <entry key="JAVA" value="60740" />
           <entry key="PLAIN_TEXT" value="1420" />
         </counts>
       </usages-collector>
@@ -92,13 +106,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1276" />
+          <entry key="java" value="1374" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="1276" />
+          <entry key="JAVA" value="1374" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -107,63 +121,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardIsEmptyTest.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/NumberOfMovesRefereeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="130" selection-start-line="130" selection-end-line="150" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#IfStateContainsOnlyDot_Row0Column0ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsOnlyJ_Row0Column1ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJ_Row0Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJH_Row0Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJ_Row0Column2ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJJ_Row0Column2ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJH_Row0Column2ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJJ_J_Row1Column0ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJJ_Dot_Row1Column0ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJJ_HH_Row1Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#IfStateContainsJJJ_HDot_Row1Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#assertIsNotEmpty#0;class#FakeBoardIsEmptyTest#0" />
-                <element signature="method#assertIsEmpty#0;class#FakeBoardIsEmptyTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="239" column="30" selection-start-line="239" selection-start-column="30" selection-end-line="239" selection-end-column="30" />
-              <folding>
-                <element signature="method#IfStateIsEmpty_ShouldBeEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-                <element signature="method#assertHasMarkedFieldCountOf#0;class#FakeBoardFromCharInitializingTest#0" />
-                <element signature="method#assertIsNotEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-                <element signature="method#assertIsEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-                <element signature="method#assertIsHaleys#0;class#FakeBoardFromCharInitializingTest#0" />
-                <element signature="method#assertIsJohns#0;class#FakeBoardFromCharInitializingTest#0" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFake.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsValidatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#fromChar#0;class#BoardFake#0" />
-                <element signature="method#initialize#0;class#BoardFake#0" />
-                <element signature="method#getMarkAt#0;class#BoardFake#0" />
-                <element signature="method#throwIfFieldIsNotMarked#0;class#BoardFake#0" />
-                <element signature="e#1444#1445#0" expanded="true" />
-                <element signature="e#1468#1469#0" expanded="true" />
-                <element signature="e#1520#1521#0" expanded="true" />
-                <element signature="e#1546#1547#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyProviderStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyValidatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceMock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/MarkedFieldCountProviderStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -195,12 +201,13 @@
       <find>Field</find>
       <find>Spy</find>
       <find>char[][]</find>
-      <find>char[][]</find>
+      <find>or</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
       <replace>Mark</replace>
       <replace>Input</replace>
+      <replace>ingRule</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/com/company/Core/InputGeneration</dir>
@@ -212,13 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java" />
-        <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/AlertingValidator/AlertingValidatorTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/CountingReferee/CountingRefereeTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/PlayerContext.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/Player/TicTacToePlayer.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Player/TicTacToePlayerTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/ValidatingInputGenerator/InputValidatingGenerator.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputRuleStub.java" />
@@ -242,16 +242,13 @@
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/CompositeValidator/CompositeValidatorTestImpl.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/CompositeValidator/CompositeValidator.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/CompositeValidator/CompositeValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/InputGeneration/ConsoleInputPrompter.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputValidatingGenerator/CountingInputValidatorSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/ValidatingInputGenerator/InputRule.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputValidatingGenerator/CountingInputRuleSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/Rules/AlertingRule/AlertingRule.java" />
-        <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/CountingGeneratorStub.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/Rules/AlertingRule/AlertingRuleTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/Core/Rules/CompositeRule/CompositeRuleTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsValidatorTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/Turn/Turn.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java" />
@@ -263,6 +260,16 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardIsEmptyTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFake.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/BoardPrinter.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Core/InputRules/AlertingRule/AlertingRule.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Core/InputRules/CompositeRule/CompositeRule.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Core/InputRules/InputRuleStub.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlertingRuleTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/InputRuleStub.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Core/Rules/CompositeRule/CompositeRuleTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java" />
       </list>
     </option>
   </component>
@@ -454,6 +461,13 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -462,7 +476,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
+              <item name="InputValidating" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -470,8 +484,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="BoardFake" type="462c0819:PsiDirectoryNode" />
+              <item name="Player" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,7 +499,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552338631778" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552376496830" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -497,10 +510,10 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.company.Core.InputGeneration.ValidatingInputGenerator" />
+      <recent name="com.company.Core.InputRules.AlertingRule" />
+      <recent name="com.company.Core.InputRules" />
       <recent name="com.company.Core" />
       <recent name="com.company.Core.InputGeneration.Rules" />
-      <recent name="com.company.Core.InputGeneration" />
-      <recent name="com.company.Core.InputGeneration.CompositeValidator" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.company.TicTacToe.Board.BoardFake" />
@@ -609,50 +622,49 @@
       <workItem from="1551804837007" duration="1182000" />
       <workItem from="1551889386110" duration="1003000" />
       <workItem from="1551891330015" duration="5317000" />
-      <workItem from="1552286287007" duration="13294000" />
+      <workItem from="1552286287007" duration="17769000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 21h 53m 27s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 08m 47s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 21h 57m 22s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 09m 21s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 00m 20s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 04m 38s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 03m 22s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 04m 51s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 03m 29s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 15m 14s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 03m 35s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 28m 14s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 04m 22s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 29m 56s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 04m 34s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 30m 00s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 07m 10s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 30m 14s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.11 at 22h 07m 16s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.12 at 08h 39m 58s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148015000" />
+    <option name="totallyTimeSpent" value="152490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24253732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24253732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -660,8 +672,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2134715" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2134715" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2569948" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -735,12 +747,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java</url>
           <line>82</line>
           <properties />
           <option name="timeStamp" value="10" />
@@ -749,14 +755,80 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputRules/CompositeRule/CompositeRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyRule.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObserverSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/Mark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Field/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOver/MarkedFieldCountProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOver/NumberOfMovesReferee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -770,17 +842,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsRule.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyRule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Constants/BoardBoundaries.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/MarkFieldService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -794,6 +866,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Player/PlayerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/DifferentInputsWithTheSameSumOfRowAndColumn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -801,10 +880,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithDifferentRowAndSameColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithSameRowAndDifferentColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithSameRowAndSameColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/CountingGeneratorStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/CountingRuleStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/InputRuleStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="method#IfFirstUserInputIsValid_ShouldBeTheFirstUserInput#0;class#ValidatingInputGeneratorTest#0" />
+            <element signature="method#IfFirstUserInputIsNotValid_ShouldBeTheSecondUserInput#0;class#ValidatingInputGeneratorTest#0" />
+            <element signature="method#IfFirstAndSecondUserInputIsNotValid_ShouldBeTheThirdUserInput#0;class#ValidatingInputGeneratorTest#0" />
+            <element signature="method#makeFirstUserInputIsValid#0;class#ValidatingInputGeneratorTest#0" />
+            <element signature="method#makeFirstInputIsNotValid#0;class#ValidatingInputGeneratorTest#0" />
+            <element signature="method#makeFirstAndSecondInputIsNotValid#0;class#ValidatingInputGeneratorTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlerterSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlertingRuleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputRules/CompositeRule/CompositeRuleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="method#FreshInstance_InputShouldBeValid#0;class#CompositeRuleTest#0" />
             <element signature="method#AddedInvalidator_InputShouldBeInvalid#0;class#CompositeRuleTest#0" />
@@ -819,86 +989,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlertingRuleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputRules/AlertingRule/AlerterSpy.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/Rules/AlertingRule/AlerterSpy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputRuleStub.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="40" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/BoardObservingOrderShuntTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/CountingRuleStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/CountingGeneratorStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-          <folding>
-            <element signature="method#IfFirstUserInputIsNotValid_ShouldBeTheSecondUserInput#0;class#ValidatingInputGeneratorTest#0" />
-            <element signature="method#IfFirstAndSecondUserInputIsNotValid_ShouldBeTheThirdUserInput#0;class#ValidatingInputGeneratorTest#0" />
-            <element signature="method#makeFirstUserInputIsValid#0;class#ValidatingInputGeneratorTest#0" />
-            <element signature="method#makeFirstInputIsNotValid#0;class#ValidatingInputGeneratorTest#0" />
-            <element signature="method#makeFirstAndSecondInputIsNotValid#0;class#ValidatingInputGeneratorTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithSameRowAndSameColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithSameRowAndDifferentColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/Input/InputsWithDifferentRowAndSameColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/Core/Turn/TurnTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
             <element signature="method#IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce#0;class#TurnTest#0" />
             <element signature="method#IfGamePlaysTwice_SecondPlayerShouldHavePlayedMoveOnce#0;class#TurnTest#0" />
@@ -920,38 +1035,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsNotMarkedTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/Rules/AlertingRule/AlertingRuleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/MarkedFieldCountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/BoardObservingOrderShuntTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/GetMarkForwardingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -962,67 +1049,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/MarkedFieldCountForwardingTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/Rules/CompositeRule/CompositeRuleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/MarkFieldForwardingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/NotifyBoardObserverTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Player/TicTacToePlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        <state>
+          <caret column="23" selection-start-column="21" selection-end-column="23" />
           <folding>
-            <element signature="method#IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makePlayerIsJohn#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makePlayerIsHaley#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeJohnWillMarkRow1Column1#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeJohnWillMarkRow2Column0#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeHaleyWillMarkRow1Column1#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeGeneratorReturnsRow2Column0#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeGeneratorReturnsRow1Column1#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeMockExpectsJohnMarksRow1Column1#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeMockExpectsHaleyMarksRow1Column1#0;class#TicTacToePlayerTest#0" />
-            <element signature="method#makeMockExpectsJohnMarksRow2Column0#0;class#TicTacToePlayerTest#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceMock.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldIsNotMarkedTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyValidatorTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldMarkingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1054,10 +1101,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/ObservableBoard/NotifyBoardObserverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-201">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1067,137 +1121,56 @@
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardDummy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/Turn/Turn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/NumberOfMovesReferee/NumberOfMovesReferee.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/MarkedFieldCountTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/NumberOfMovesReferee/MarkedFieldCountProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/WinningReferee/WinningReferee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObservableBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/HashingBoard/HashingBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Field/Field.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/MarkedFieldCountProviderStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOver/NumberOfMovesRefereeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding>
-            <element signature="method#ValidatingInputGenerator#0;class#ValidatingInputGenerator#0" />
-            <element signature="method#generate#0;class#ValidatingInputGenerator#0" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/HashingBoard/FieldMarkingTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldExistsValidator/FieldExistsValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardIsEmptyTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyProviderStub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="130" selection-start-line="130" selection-end-line="150" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#IfStateContainsOnlyDot_Row0Column0ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsOnlyJ_Row0Column1ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJ_Row0Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJH_Row0Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJ_Row0Column2ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJJ_Row0Column2ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJH_Row0Column2ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJJ_J_Row1Column0ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJJ_Dot_Row1Column0ShouldBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJJ_HH_Row1Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#IfStateContainsJJJ_HDot_Row1Column1ShouldNotBeEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#assertIsNotEmpty#0;class#FakeBoardIsEmptyTest#0" />
-            <element signature="method#assertIsEmpty#0;class#FakeBoardIsEmptyTest#0" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/BoardFake.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/InputValidating/FieldIsEmptyValidator/FieldIsEmptyValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fromChar#0;class#BoardFake#0" />
-            <element signature="method#initialize#0;class#BoardFake#0" />
-            <element signature="method#getMarkAt#0;class#BoardFake#0" />
-            <element signature="method#throwIfFieldIsNotMarked#0;class#BoardFake#0" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Board/BoardFake/FakeBoardFromCharInitializingTest.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/Player/MarkFieldServiceMock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="239" column="30" selection-start-line="239" selection-start-column="30" selection-end-line="239" selection-end-column="30" />
-          <folding>
-            <element signature="method#IfStateIsEmpty_ShouldBeEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-            <element signature="method#assertHasMarkedFieldCountOf#0;class#FakeBoardFromCharInitializingTest#0" />
-            <element signature="method#assertIsNotEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-            <element signature="method#assertIsEmpty#0;class#FakeBoardFromCharInitializingTest#0" />
-            <element signature="method#assertIsHaleys#0;class#FakeBoardFromCharInitializingTest#0" />
-            <element signature="method#assertIsJohns#0;class#FakeBoardFromCharInitializingTest#0" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
