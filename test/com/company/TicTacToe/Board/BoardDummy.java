@@ -8,6 +8,10 @@ public class BoardDummy implements Board {
         return false;
     }
 
+    public boolean isMarked(Field f) {
+        return false;
+    }
+
     public void mark(Field f, Mark m) {
 
     }

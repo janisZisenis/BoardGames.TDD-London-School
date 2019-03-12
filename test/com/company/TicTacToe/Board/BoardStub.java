@@ -3,12 +3,14 @@ package com.company.TicTacToe.Board;
 import com.company.TicTacToe.Field.Field;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class BoardStub extends BoardDummy {
 
     private Field[] empty = {};
+    private Field[] marked = {};
     private int count;
-    private Mark mark;
+    private HashMap<Field, Mark> marks = new HashMap<>();
 
     public void setEmptyFields(Field[] empty) {
         this.empty = empty;
@@ -16,6 +18,14 @@ public class BoardStub extends BoardDummy {
 
     public boolean isEmpty(Field f) {
         return Arrays.asList(empty).contains(f);
+    }
+
+    public void setMarkedFields(Field[] marked) {
+        this.marked = marked;
+    }
+
+    public boolean isMarked(Field f) {
+        return Arrays.asList(marked).contains(f);
     }
 
     public void setMarkedFieldCount(int count) {
@@ -26,11 +36,11 @@ public class BoardStub extends BoardDummy {
         return this.count;
     }
 
-    public void setMark(Mark mark) {
-        this.mark = mark;
+    public void setMarkOnField(Mark m, Field f) {
+        marks.put(f, m);
     }
 
     public Mark getMarkAt(Field f) {
-        return mark;
+        return marks.get(f);
     }
 }

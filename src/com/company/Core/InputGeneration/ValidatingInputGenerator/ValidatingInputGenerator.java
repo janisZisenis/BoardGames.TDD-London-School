@@ -14,9 +14,8 @@ public class ValidatingInputGenerator implements InputGenerator {
     public Input generate() {
         Input in = getInput();
 
-        while(isNotValid(in)) {
+        while(isNotValid(in))
             in = getInput();
-        }
 
         return in;
     }

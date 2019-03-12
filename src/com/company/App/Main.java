@@ -4,19 +4,24 @@ import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.CLI.TicTacToe.BoardPrinter;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Core.InputRules.AlertingRule.AlertingRule;
 import com.company.Core.InputRules.CompositeRule.CompositeRule;
+import com.company.Core.Turn.Player;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.NumberOfMovesReferee.NumberOfMovesReferee;
-import com.company.TicTacToe.InputValidating.FieldExistsValidator.FieldExistsRule;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyValidator.FieldIsEmptyRule;
+import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
+import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
+import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
+import com.company.TicTacToe.LineEvaluator.Line;
+import com.company.TicTacToe.LineEvaluator.LineEvaluator;
+import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
 
@@ -31,12 +36,12 @@ public class Main {
         return new BoardPrinter(board);
     }
 
-    private static InputGenerator makeTicTacToeInputGenerator(InputRule validator) {
+    private static InputGenerator makeTicTacToeInputGenerator(InputRule rule) {
         ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        return new ValidatingInputGenerator(prompter, validator);
+        return new ValidatingInputGenerator(prompter, rule);
     }
 
-    private static CompositeRule makeTicTacToeValidator(Board board) {
+    private static CompositeRule makeTicTacToeInputRule(Board board) {
         InputRule existsValidator = makeAlertingFieldExistsValidator();
         InputRule isFreeValidator = makeAlertingFieldIsFreeValidator(board);
 
@@ -46,7 +51,7 @@ public class Main {
         return validator;
     }
 
-    private static NumberOfMovesReferee makeTicTacToeReferee(ObservableBoard board) {
+    private static NumberOfMovesReferee makeTicTacToeReferee(Board board) {
         return new NumberOfMovesReferee(board);
     }
 
@@ -72,29 +77,59 @@ public class Main {
         return new TicTacToePlayer(config);
     }
 
-    private static Turn makeGame(com.company.Core.Turn.Player first, com.company.Core.Turn.Player second) {
+    private static Turn makeTurn(Player first, Player second) {
         return new Turn(first, second);
     }
 
-    public static void main(String[] args) {
-        ObservableBoard board = makeBoard();
-        BoardPrinter printer = makeBoardPrinter(board);
-        board.attach(printer);
-
-        InputRule validator = makeTicTacToeValidator(board);
-        InputGenerator generator = makeTicTacToeInputGenerator(validator);
-        NumberOfMovesReferee referee = makeTicTacToeReferee(board);
+    private static Turn makeTicTacToeTurn(Board board) {
+        InputRule inputRule = makeTicTacToeInputRule(board);
+        InputGenerator generator = makeTicTacToeInputGenerator(inputRule);
 
         TicTacToePlayer john = makeJohn(board, generator);
         TicTacToePlayer haley = makeHaley(board, generator);
-        Turn turn = makeGame(john, haley);
 
-        printer.print();
+        return makeTurn(john, haley);
+    }
 
-        while(referee.hasMovesLeft()) {
+    private static LineEvaluator makeLineEvaluator(MarkedFieldProvider provider) {
+        return new LineEvaluator(provider);
+    }
+
+    private static void initializeBoard() {
+        ObservableBoard board = makeBoard();
+        BoardPrinter printer = makeBoardPrinter(board);
+        board.attach(printer);
+        Main.board = board;
+    }
+
+
+
+    private static Board board;
+    private static LineEvaluator evaluator;
+
+    public static void main(String[] args) {
+        initializeBoard();
+
+        Turn turn = makeTicTacToeTurn(board);
+
+        NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
+        evaluator = makeLineEvaluator(board);
+        
+        while(movesReferee.hasMovesLeft() && !hasWinner()) {
             turn.play();
         }
 
+    }
+
+
+    private static boolean hasWinner() {
+        Field first = new Field(0, 0);
+        Field second = new Field(0, 1);
+        Field third = new Field(0, 2);
+
+        Line line = new Line(first, second, third);
+
+        return evaluator.isWinningLine(line);
     }
 
 }

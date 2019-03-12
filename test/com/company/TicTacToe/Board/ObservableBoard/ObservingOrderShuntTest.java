@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class BoardObservingOrderShuntTest implements Observer, Board {
+public class ObservingOrderShuntTest implements Observer, Board {
 
     private Board board = this;
     private ObservableBoard sut = new ObservableBoard(board);
@@ -42,6 +42,10 @@ public class BoardObservingOrderShuntTest implements Observer, Board {
     }
 
     public boolean isEmpty(Field f) {
+        return false;
+    }
+
+    public boolean isMarked(Field f) {
         return false;
     }
 

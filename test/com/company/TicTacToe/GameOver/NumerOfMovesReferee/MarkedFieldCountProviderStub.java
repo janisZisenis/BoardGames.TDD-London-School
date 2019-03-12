@@ -1,4 +1,6 @@
-package com.company.TicTacToe.NumberOfMovesReferee;
+package com.company.TicTacToe.GameOver.NumerOfMovesReferee;
+
+import com.company.TicTacToe.GameOver.NumberOfMovesReferee.MarkedFieldCountProvider;
 
 public class MarkedFieldCountProviderStub implements MarkedFieldCountProvider {
     private int count = 0;

@@ -13,6 +13,7 @@ public class BoardPrinter implements Observer {
 
     public BoardPrinter(Board board) {
         this.board = board;
+        print();
     }
 
     public void print() {
@@ -30,9 +31,10 @@ public class BoardPrinter implements Observer {
 
     private void printField(Field f) {
         String s = FieldSymbols.empty;
-        if(!board.isEmpty(f)) {
+
+        if(!board.isEmpty(f))
             s = map(board.getMarkAt(f));
-        }
+
         System.out.print(s);
     }
 

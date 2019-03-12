@@ -1,4 +1,4 @@
-package com.company.TicTacToe.InputValidating.FieldExistsValidator;
+package com.company.TicTacToe.InputValidating.FieldExistsRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;

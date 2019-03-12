@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FieldIsNotMarkedTest {
+public class FieldIsStateTest {
 
     private HashingBoard sut = new HashingBoard();
     private Field first = new Field(1, 2);
@@ -65,6 +65,20 @@ public class FieldIsNotMarkedTest {
 
         boolean actual = sut.isEmpty(third);
         assertFalse(actual);
+    }
+
+    @Test
+    void FreshInstance_FieldShouldBeNotBeMarked() {
+        boolean actual = sut.isMarked(first);
+        assertFalse(actual);
+    }
+
+    @Test
+    void IfOneFieldIsMarked_ItShouldBeMarked() {
+        makeOneFieldMarked();
+
+        boolean actual = sut.isMarked(first);
+        assertTrue(actual);
     }
 
 

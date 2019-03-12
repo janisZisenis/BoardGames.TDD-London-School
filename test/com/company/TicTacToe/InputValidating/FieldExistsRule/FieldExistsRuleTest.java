@@ -1,10 +1,10 @@
-package com.company.TicTacToe.InputValidating.FieldExistsValidator;
+package com.company.TicTacToe.InputValidating.FieldExistsRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FieldExistsValidatorTest {
+public class FieldExistsRuleTest {
 
     private FieldExistsRule sut = new FieldExistsRule();
     private Input input;

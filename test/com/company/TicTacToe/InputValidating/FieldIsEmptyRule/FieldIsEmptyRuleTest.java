@@ -1,4 +1,4 @@
-package com.company.TicTacToe.InputValidating.FieldIsEmptyValidator;
+package com.company.TicTacToe.InputValidating.FieldIsEmptyRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.TicTacToe.Field.Field;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FieldIsEmptyValidatorTest {
+public class FieldIsEmptyRuleTest {
 
     private FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
     private FieldIsEmptyRule sut = new FieldIsEmptyRule(provider);
