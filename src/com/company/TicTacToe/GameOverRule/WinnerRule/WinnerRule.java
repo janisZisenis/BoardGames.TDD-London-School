@@ -1,13 +1,13 @@
-package com.company.TicTacToe.GameOver.GameHasWinnerReferee;
+package com.company.TicTacToe.GameOverRule.WinnerRule;
 
 
 import com.company.TicTacToe.Line;
 
-public class GameHasWinnerReferee {
+public class WinnerRule {
     private final LineProvider provider;
     private final LineEvaluator evaluator;
 
-    public GameHasWinnerReferee(LineProvider provider, LineEvaluator evaluator) {
+    public WinnerRule(LineProvider provider, LineEvaluator evaluator) {
         this.provider = provider;
         this.evaluator = evaluator;
     }

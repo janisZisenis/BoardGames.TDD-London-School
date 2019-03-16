@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOver.GameHasWinnerReferee;
+package com.company.TicTacToe.GameOverRule.WinnerRule;
 
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.Line;
@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GameHasWinnerRefereeTest {
+public class WinnerRuleTest {
 
     private LineProviderStub provider = new LineProviderStub();
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();
-    private GameHasWinnerReferee sut = new GameHasWinnerReferee(provider, evaluator);
+    private WinnerRule sut = new WinnerRule(provider, evaluator);
 
     @Test
     void IfLineProviderHasNoLines_GameShouldHaveNoWinnerLine(){

@@ -15,11 +15,10 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.GameOver.GameHasWinnerReferee.GameHasWinnerReferee;
-import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
+import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
+import com.company.TicTacToe.GameOverRule.TieGameRule.TieGameRule;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
@@ -50,8 +49,8 @@ public class Main {
         return validator;
     }
 
-    private static NumberOfMovesReferee makeTicTacToeReferee(Board board) {
-        return new NumberOfMovesReferee(board);
+    private static TieGameRule makeTicTacToeReferee(Board board) {
+        return new TieGameRule(board);
     }
 
     private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
@@ -90,10 +89,10 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static GameHasWinnerReferee makeGameHasWinnerReferee(Board board) {
+    private static WinnerRule makeGameHasWinnerReferee(Board board) {
         TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        return new GameHasWinnerReferee(provider, evaluator);
+        return new WinnerRule(provider, evaluator);
     }
 
     private static void initializeBoard() {
@@ -112,8 +111,8 @@ public class Main {
 
         Turn turn = makeTicTacToeTurn(board);
 
-        NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
-        GameHasWinnerReferee winnerReferee = makeGameHasWinnerReferee(board);
+        TieGameRule movesReferee = makeTicTacToeReferee(board);
+        WinnerRule winnerReferee = makeGameHasWinnerReferee(board);
 
 
         while(movesReferee.hasMovesLeft() && !winnerReferee.hasWinner()) {

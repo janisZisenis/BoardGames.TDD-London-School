@@ -2,7 +2,7 @@ package com.company.TicTacToe.LineEvaluator;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field.Field;
-import com.company.TicTacToe.GameOver.GameHasWinnerReferee.LineEvaluator;
+import com.company.TicTacToe.GameOverRule.WinnerRule.LineEvaluator;
 import com.company.TicTacToe.Line;
 
 public class TicTacToeLineEvaluator implements LineEvaluator {

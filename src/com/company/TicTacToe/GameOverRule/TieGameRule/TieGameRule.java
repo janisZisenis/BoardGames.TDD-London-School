@@ -1,13 +1,13 @@
-package com.company.TicTacToe.GameOver.NumberOfMovesReferee;
+package com.company.TicTacToe.GameOverRule.TieGameRule;
 
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
-public class NumberOfMovesReferee {
+public class TieGameRule {
 
     private final int fieldCount = BoardBoundaries.fieldCount;
     private final MarkedFieldCountProvider provider;
 
-    public NumberOfMovesReferee(MarkedFieldCountProvider provider) {
+    public TieGameRule(MarkedFieldCountProvider provider) {
         this.provider = provider;
     }
 

@@ -1,15 +1,14 @@
-package com.company.TicTacToe.GameOver.NumerOfMovesReferee;
+package com.company.TicTacToe.GameOverRule.TieGameRule;
 
-import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NumberOfMovesRefereeTest {
+public class TieGameRuleTest {
 
     private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
-    private NumberOfMovesReferee sut = new NumberOfMovesReferee(provider);
+    private TieGameRule sut = new TieGameRule(provider);
 
     @Test
     void If0FieldsAreMarked_ShouldHaveMovesLeft() {
