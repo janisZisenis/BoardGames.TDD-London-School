@@ -16,7 +16,7 @@ import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
-import com.company.TicTacToe.GameOverRule.TieGameRule.TieGameRule;
+import com.company.TicTacToe.GameOverRule.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
@@ -49,8 +49,8 @@ public class Main {
         return validator;
     }
 
-    private static TieGameRule makeTicTacToeReferee(Board board) {
-        return new TieGameRule(board);
+    private static NumberOfMovesRule makeTicTacToeReferee(Board board) {
+        return new NumberOfMovesRule(board);
     }
 
     private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
@@ -105,7 +105,7 @@ public class Main {
 
 
     private static Board board;
-    private static TieGameRule tieRule;
+    private static NumberOfMovesRule tieRule;
     private static WinnerRule winnerRule;
 
     public static void main(String[] args) {
@@ -124,7 +124,7 @@ public class Main {
     }
 
     private static boolean isGameOver() {
-        return tieRule.hasMovesLeft() && !winnerRule.hasWinner();
+        return !tieRule.hasMoveLeft() && !winnerRule.hasWinner();
     }
 
 }

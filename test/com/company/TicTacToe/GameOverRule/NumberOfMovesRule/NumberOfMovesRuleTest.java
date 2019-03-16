@@ -1,20 +1,20 @@
-package com.company.TicTacToe.GameOverRule.TieGameRule;
+package com.company.TicTacToe.GameOverRule.NumberOfMovesRule;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class TieGameRuleTest {
+public class NumberOfMovesRuleTest {
 
     private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
-    private TieGameRule sut = new TieGameRule(provider);
+    private NumberOfMovesRule sut = new NumberOfMovesRule(provider);
 
     @Test
     void If0FieldsAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(0);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -23,7 +23,7 @@ public class TieGameRuleTest {
     void If9FieldsAreMarked_ShouldNotHaveMovesLeft() {
         provider.setMarkedFieldCount(9);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertFalse(actual);
     }
@@ -32,7 +32,7 @@ public class TieGameRuleTest {
     void If1FieldIsMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(1);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -41,7 +41,7 @@ public class TieGameRuleTest {
     void If2FieldAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(2);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -50,7 +50,7 @@ public class TieGameRuleTest {
     void If8FieldAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(8);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
