@@ -1,6 +1,6 @@
 package com.company.TicTacToe.Board;
 
-import com.company.TicTacToe.GameOverRule.NumberOfMovesRule.MarkedFieldCountProvider;
+import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.MarkedFieldCountProvider;
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyProvider;
 import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;

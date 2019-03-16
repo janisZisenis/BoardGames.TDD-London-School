@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRule.WinnerRule;
+package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
 import com.company.TicTacToe.Field.Field;
 import com.company.TicTacToe.Line;
@@ -7,60 +7,60 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class WinnerRuleTest {
+public class WinningLineRuleTest {
 
     private LineProviderStub provider = new LineProviderStub();
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();
-    private WinnerRule sut = new WinnerRule(provider, evaluator);
+    private WinningLineRule sut = new WinningLineRule(provider, evaluator);
 
     @Test
-    void IfLineProviderHasNoLines_GameShouldHaveNoWinnerLine(){
-        boolean actual = sut.hasWinner();
+    void IfLineProviderHasNoLines_GameShouldNotBeOver(){
+        boolean actual = sut.isGameOver();
 
         assertFalse(actual);
     }
 
     @Test
-    void IfLineProviderHas1WinningLine_GameShouldHaveAWinnerLine(){
+    void IfLineProviderHas1WinningLine_GameShouldBeOver(){
         makeProviderHas1WinningLine();
 
-        boolean actual = sut.hasWinner();
+        boolean actual = sut.isGameOver();
 
         assertTrue(actual);
     }
 
     @Test
-    void IfLineProviderHas1NotWinningLine_GameShouldHaveNoWinnerLine(){
+    void IfLineProviderHas1NotWinningLine_GameShouldNotBeOver(){
         makeProviderHas1NotWinningLine();
 
-        boolean actual = sut.hasWinner();
+        boolean actual = sut.isGameOver();
 
         assertFalse(actual);
     }
 
     @Test
-    void IfLineProviderHas2WinningLines_GameShouldHaveWinnerLine(){
+    void IfLineProviderHas2WinningLines_GameShouldBeOver(){
         makeProviderHas2WinningLines();
 
-        boolean actual = sut.hasWinner();
+        boolean actual = sut.isGameOver();
 
         assertTrue(actual);
     }
 
     @Test
-    void IfLineProviderHas2NotWinningLines_GameShouldNotHaveWinnerLine(){
+    void IfLineProviderHas2NotWinningLines_GameShouldNotBeOver(){
         makeProviderHas2NotWinningLines();
 
-        boolean actual = sut.hasWinner();
+        boolean actual = sut.isGameOver();
 
         assertFalse(actual);
     }
 
     @Test
-    void IfLineProviderHas1NotWinningAnd1WinningLine_GameShouldHaveWinnerLine(){
+    void IfLineProviderHas1NotWinningAnd1WinningLine_GameShouldBeOver(){
         makeProviderHasOneNotWinningAndOneWinningLine();
 
-        boolean actual = sut.hasWinner();
+        boolean actual = sut.isGameOver();
 
         assertTrue(actual);
     }

@@ -2,6 +2,7 @@ package com.company.App;
 
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.CLI.TicTacToe.BoardPrinter;
+import com.company.Core.CompositeGameOverRule.CompositeGameOverRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
@@ -12,8 +13,8 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.GameOverRule.NumberOfMovesRule.NumberOfMovesRule;
-import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
+import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
@@ -75,10 +76,20 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static WinnerRule makeWinnerRule(Board board) {
+    private static WinningLineRule makeWinningLineRule(Board board) {
         TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        return new WinnerRule(provider, evaluator);
+        return new WinningLineRule(provider, evaluator);
+    }
+
+    private static CompositeGameOverRule makeTicTacToeGameOverRule(Board board) {
+        NumberOfMovesRule numberOfMovesRule = makeNumberOfMovesRule(board);
+        WinningLineRule winningLineRule = makeWinningLineRule(board);
+
+        CompositeGameOverRule rule = new CompositeGameOverRule();
+        rule.add(numberOfMovesRule);
+        rule.add(winningLineRule);
+        return rule;
     }
 
     private static void initializeBoard() {
@@ -89,25 +100,17 @@ public class Main {
     }
 
     private static Board board;
-    private static NumberOfMovesRule numberOfMovesRule;
-    private static WinnerRule winnerRule;
 
     public static void main(String[] args) {
         initializeBoard();
 
         Turn turn = makeTicTacToeTurn(board);
+        CompositeGameOverRule rule = makeTicTacToeGameOverRule(board);
 
-        numberOfMovesRule = makeNumberOfMovesRule(board);
-        winnerRule = makeWinnerRule(board);
-
-        while(isGameOver()) {
+        while(!rule.isGameOver()) {
             turn.play();
         }
 
-    }
-
-    private static boolean isGameOver() {
-        return numberOfMovesRule.hasMoveLeft() && !winnerRule.hasWinner();
     }
 
 }

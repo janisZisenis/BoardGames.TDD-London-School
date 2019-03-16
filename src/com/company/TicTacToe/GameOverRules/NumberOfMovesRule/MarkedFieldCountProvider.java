@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRule.NumberOfMovesRule;
+package com.company.TicTacToe.GameOverRules.NumberOfMovesRule;
 
 public interface MarkedFieldCountProvider {
     int getMarkedFieldCount();
