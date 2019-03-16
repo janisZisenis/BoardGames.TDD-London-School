@@ -1,4 +1,4 @@
-package com.company.TicTacToe.LineEvaluator;
+package com.company.TicTacToe;
 
 import com.company.TicTacToe.Field.Field;
 

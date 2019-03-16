@@ -15,13 +15,12 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.GameOver.GameHasWinnerReferee.GameHasWinnerReferee;
 import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.LineEvaluator.Line;
-import com.company.TicTacToe.LineEvaluator.LineEvaluator;
 import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
+import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
 
@@ -91,8 +90,10 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static LineEvaluator makeLineEvaluator(MarkedFieldProvider provider) {
-        return new LineEvaluator(provider);
+    private static GameHasWinnerReferee makeGameHasWinnerReferee(Board board) {
+        TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
+        TicTacToeLineProvider provider = new TicTacToeLineProvider();
+        return new GameHasWinnerReferee(provider, evaluator);
     }
 
     private static void initializeBoard() {
@@ -105,7 +106,6 @@ public class Main {
 
 
     private static Board board;
-    private static LineEvaluator evaluator;
 
     public static void main(String[] args) {
         initializeBoard();
@@ -113,23 +113,13 @@ public class Main {
         Turn turn = makeTicTacToeTurn(board);
 
         NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
-        evaluator = makeLineEvaluator(board);
-        
-        while(movesReferee.hasMovesLeft() && !hasWinner()) {
+        GameHasWinnerReferee winnerReferee = makeGameHasWinnerReferee(board);
+
+
+        while(movesReferee.hasMovesLeft() && !winnerReferee.hasWinner()) {
             turn.play();
         }
 
-    }
-
-
-    private static boolean hasWinner() {
-        Field first = new Field(0, 0);
-        Field second = new Field(0, 1);
-        Field third = new Field(0, 2);
-
-        Line line = new Line(first, second, third);
-
-        return evaluator.isWinningLine(line);
     }
 
 }

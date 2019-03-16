@@ -18,7 +18,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedInvalidator_InputShouldBeInvalid() {
+    void AddedInvalidatingRule_InputShouldBeInvalid() {
         makeInvalidatingRuleAdded();
 
         boolean actual = sut.isValid(input);
@@ -27,7 +27,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedValidator_InputShouldBeInvalid() {
+    void AddedValidatingRule_InputShouldBeInvalid() {
         makeValidatingRuleAdded();
 
         boolean actual = sut.isValid(input);
@@ -36,7 +36,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedValidatorAfterInvalidator_InputShouldBeFalse() {
+    void AddedValidatingRuleAfterInvalidatingRule_InputShouldBeFalse() {
         makeInvalidatingRuleAdded();
         makeValidatingRuleAdded();
 
@@ -46,7 +46,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedInvalidatorAfterValidator_InputShouldBeFalse() {
+    void AddedInvalidatingRuleAfterValidatingRule_InputShouldBeFalse() {
         makeValidatingRuleAdded();
         makeInvalidatingRuleAdded();
 
@@ -56,7 +56,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedInvalidatorInBetweenTwoValidators_InputShouldBeFalse() {
+    void AddedInvalidatingRuleInBetweenTwoValidatingRules_InputShouldBeFalse() {
         makeValidatingRuleAdded();
         makeInvalidatingRuleAdded();
         makeValidatingRuleAdded();
@@ -67,7 +67,7 @@ public class CompositeRuleTest {
     }
 
     @Test
-    void AddedInvalidatorAfterTwoValidators_InputShouldBeFalse() {
+    void AddedInvalidatingRuleAfterTwoValidatingRules_InputShouldBeFalse() {
         makeValidatingRuleAdded();
         makeValidatingRuleAdded();
         makeInvalidatingRuleAdded();
