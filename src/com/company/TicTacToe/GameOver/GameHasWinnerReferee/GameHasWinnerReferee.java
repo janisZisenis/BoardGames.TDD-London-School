@@ -1,6 +1,8 @@
 package com.company.TicTacToe.GameOver.GameHasWinnerReferee;
 
 
+import com.company.TicTacToe.Line;
+
 public class GameHasWinnerReferee {
     private final LineProvider provider;
     private final LineEvaluator evaluator;

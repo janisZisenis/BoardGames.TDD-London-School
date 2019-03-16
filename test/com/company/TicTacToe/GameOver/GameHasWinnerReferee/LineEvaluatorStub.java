@@ -1,5 +1,7 @@
 package com.company.TicTacToe.GameOver.GameHasWinnerReferee;
 
+import com.company.TicTacToe.Line;
+
 import java.util.Arrays;
 
 public class LineEvaluatorStub implements LineEvaluator {

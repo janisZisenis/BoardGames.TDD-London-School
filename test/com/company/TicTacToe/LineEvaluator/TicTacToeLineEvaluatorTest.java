@@ -2,6 +2,7 @@ package com.company.TicTacToe.LineEvaluator;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
