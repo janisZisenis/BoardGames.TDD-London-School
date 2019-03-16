@@ -1,18 +1,19 @@
-package com.company.TicTacToe.GameOverRule.WinnerRule;
+package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
 
+import com.company.Core.CompositeGameOverRule.GameOverRule;
 import com.company.TicTacToe.Line;
 
-public class WinnerRule {
+public class WinningLineRule implements GameOverRule {
     private final LineProvider provider;
     private final LineEvaluator evaluator;
 
-    public WinnerRule(LineProvider provider, LineEvaluator evaluator) {
+    public WinningLineRule(LineProvider provider, LineEvaluator evaluator) {
         this.provider = provider;
         this.evaluator = evaluator;
     }
 
-    public boolean hasWinner() {
+    public boolean isGameOver() {
 
         for(int i = 0; i < provider.getLineCount(); i++) {
             Line line = provider.getLine(i);

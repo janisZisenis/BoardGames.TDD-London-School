@@ -1,8 +1,9 @@
-package com.company.TicTacToe.GameOverRule.NumberOfMovesRule;
+package com.company.TicTacToe.GameOverRules.NumberOfMovesRule;
 
+import com.company.Core.CompositeGameOverRule.GameOverRule;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
-public class NumberOfMovesRule {
+public class NumberOfMovesRule implements GameOverRule {
 
     private final int fieldCount = BoardBoundaries.fieldCount;
     private final MarkedFieldCountProvider provider;
@@ -11,8 +12,8 @@ public class NumberOfMovesRule {
         this.provider = provider;
     }
 
-    public boolean hasMoveLeft() {
-        return provider.getMarkedFieldCount() < fieldCount;
+    public boolean isGameOver() {
+        return provider.getMarkedFieldCount() >= fieldCount;
     }
 
 }

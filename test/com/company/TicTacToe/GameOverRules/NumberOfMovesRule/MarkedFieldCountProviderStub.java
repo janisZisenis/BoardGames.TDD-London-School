@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRule.NumberOfMovesRule;
+package com.company.TicTacToe.GameOverRules.NumberOfMovesRule;
 
 public class MarkedFieldCountProviderStub implements MarkedFieldCountProvider {
     private int count = 0;
