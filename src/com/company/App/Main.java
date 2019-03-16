@@ -1,13 +1,10 @@
 package com.company.App;
 
-import com.company.CLI.InputGeneration.ConsoleAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
-import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.Core.InputRules.AlertingRule.AlertingRule;
 import com.company.Core.InputRules.CompositeRule.CompositeRule;
 import com.company.Core.Turn.Player;
 import com.company.Core.Turn.Turn;
@@ -15,8 +12,8 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
 import com.company.TicTacToe.GameOverRule.NumberOfMovesRule.NumberOfMovesRule;
+import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
@@ -39,30 +36,19 @@ public class Main {
         return new ValidatingInputGenerator(prompter, rule);
     }
 
-    private static CompositeRule makeTicTacToeInputRule(Board board) {
-        InputRule existsValidator = makeAlertingFieldExistsValidator();
-        InputRule isFreeValidator = makeAlertingFieldIsFreeValidator(board);
+    private static InputRule makeTicTacToeInputRule(Board board) {
+        InputRule existsValidator = new FieldExistsRule();
+        InputRule isFreeValidator = new FieldIsEmptyRule(board);
 
-        CompositeRule validator = new CompositeRule();
-        validator.add(existsValidator);
-        validator.add(isFreeValidator);
-        return validator;
+        CompositeRule composite = new CompositeRule();
+        composite.add(existsValidator);
+        composite.add(isFreeValidator);
+
+        return composite;
     }
 
     private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
         return new NumberOfMovesRule(board);
-    }
-
-    private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
-        ConsoleAlerter alreadyMarkedAlerter = new ConsoleAlerter(AlertingMessages.inputAlreadyMarked);
-        InputRule alreadyMarkedValidator = new FieldIsEmptyRule(board);
-        return new AlertingRule(alreadyMarkedValidator, alreadyMarkedAlerter);
-    }
-
-    private static InputRule makeAlertingFieldExistsValidator() {
-        ConsoleAlerter notExistingAlerter = new ConsoleAlerter(AlertingMessages.inputDoesNotExist);
-        InputRule notExistingValidator = new FieldExistsRule();
-        return new AlertingRule(notExistingValidator, notExistingAlerter);
     }
 
     private static TicTacToePlayer makeHaley(Board board, InputGenerator generator) {
@@ -101,8 +87,6 @@ public class Main {
         board.attach(printer);
         Main.board = board;
     }
-
-
 
     private static Board board;
     private static NumberOfMovesRule numberOfMovesRule;
