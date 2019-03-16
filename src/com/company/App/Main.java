@@ -20,7 +20,7 @@ import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.LineEvaluator.Line;
-import com.company.TicTacToe.LineEvaluator.LineEvaluator;
+import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
 import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
@@ -91,8 +91,8 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static LineEvaluator makeLineEvaluator(MarkedFieldProvider provider) {
-        return new LineEvaluator(provider);
+    private static TicTacToeLineEvaluator makeLineEvaluator(MarkedFieldProvider provider) {
+        return new TicTacToeLineEvaluator(provider);
     }
 
     private static void initializeBoard() {
@@ -105,7 +105,7 @@ public class Main {
 
 
     private static Board board;
-    private static LineEvaluator evaluator;
+    private static TicTacToeLineEvaluator evaluator;
 
     public static void main(String[] args) {
         initializeBoard();

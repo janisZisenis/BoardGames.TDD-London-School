@@ -3,11 +3,11 @@ package com.company.TicTacToe.LineEvaluator;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Field.Field;
 
-public class LineEvaluator {
+public class TicTacToeLineEvaluator {
 
     private final MarkedFieldProvider provider;
 
-    public LineEvaluator(MarkedFieldProvider provider) {
+    public TicTacToeLineEvaluator(MarkedFieldProvider provider) {
         this.provider = provider;
     }
 

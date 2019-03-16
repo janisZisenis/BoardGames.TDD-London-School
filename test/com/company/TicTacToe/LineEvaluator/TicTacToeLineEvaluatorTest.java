@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LineEvaluatorTest {
+public class TicTacToeLineEvaluatorTest {
 
 
     private MarkedFieldProviderStub provider = new MarkedFieldProviderStub();
-    private LineEvaluator sut = new LineEvaluator(provider);
+    private TicTacToeLineEvaluator sut = new TicTacToeLineEvaluator(provider);
 
     private Field first = new Field(0, 1);
     private Field second = new Field(0, 2);
