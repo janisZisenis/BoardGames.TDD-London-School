@@ -5,7 +5,7 @@ import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
-import com.company.Core.InputRules.CompositeRule.CompositeRule;
+import com.company.Core.CompositeInputRule.CompositeInputRule;
 import com.company.Core.Turn.Player;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.Board;
@@ -40,7 +40,7 @@ public class Main {
         InputRule existsValidator = new FieldExistsRule();
         InputRule isFreeValidator = new FieldIsEmptyRule(board);
 
-        CompositeRule composite = new CompositeRule();
+        CompositeInputRule composite = new CompositeInputRule();
         composite.add(existsValidator);
         composite.add(isFreeValidator);
 

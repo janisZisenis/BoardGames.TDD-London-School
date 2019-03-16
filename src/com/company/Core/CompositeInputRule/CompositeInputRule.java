@@ -1,11 +1,11 @@
-package com.company.Core.InputRules.CompositeRule;
+package com.company.Core.CompositeInputRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
 
 import java.util.LinkedList;
 
-public class CompositeRule implements InputRule {
+public class CompositeInputRule implements InputRule {
 
     private final LinkedList<InputRule> rules = new LinkedList<InputRule>();
 
