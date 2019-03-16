@@ -105,20 +105,26 @@ public class Main {
 
 
     private static Board board;
+    private static TieGameRule tieRule;
+    private static WinnerRule winnerRule;
 
     public static void main(String[] args) {
         initializeBoard();
 
         Turn turn = makeTicTacToeTurn(board);
 
-        TieGameRule movesReferee = makeTicTacToeReferee(board);
-        WinnerRule winnerReferee = makeGameHasWinnerReferee(board);
+        tieRule = makeTicTacToeReferee(board);
+        winnerRule = makeGameHasWinnerReferee(board);
 
 
-        while(movesReferee.hasMovesLeft() && !winnerReferee.hasWinner()) {
+        while(isGameOver()) {
             turn.play();
         }
 
+    }
+
+    private static boolean isGameOver() {
+        return tieRule.hasMovesLeft() && !winnerRule.hasWinner();
     }
 
 }
