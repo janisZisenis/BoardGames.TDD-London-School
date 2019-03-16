@@ -1,21 +1,20 @@
-package com.company.TicTacToe.GameOver.NumerOfMovesReferee;
+package com.company.TicTacToe.GameOverRule.NumberOfMovesRule;
 
-import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NumberOfMovesRefereeTest {
+public class NumberOfMovesRuleTest {
 
     private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
-    private NumberOfMovesReferee sut = new NumberOfMovesReferee(provider);
+    private NumberOfMovesRule sut = new NumberOfMovesRule(provider);
 
     @Test
     void If0FieldsAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(0);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -24,7 +23,7 @@ public class NumberOfMovesRefereeTest {
     void If9FieldsAreMarked_ShouldNotHaveMovesLeft() {
         provider.setMarkedFieldCount(9);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertFalse(actual);
     }
@@ -33,7 +32,7 @@ public class NumberOfMovesRefereeTest {
     void If1FieldIsMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(1);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -42,7 +41,7 @@ public class NumberOfMovesRefereeTest {
     void If2FieldAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(2);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }
@@ -51,7 +50,7 @@ public class NumberOfMovesRefereeTest {
     void If8FieldAreMarked_ShouldHaveMovesLeft() {
         provider.setMarkedFieldCount(8);
 
-        boolean actual = sut.hasMovesLeft();
+        boolean actual = sut.hasMoveLeft();
 
         assertTrue(actual);
     }

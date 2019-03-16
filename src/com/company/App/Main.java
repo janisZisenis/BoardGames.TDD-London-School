@@ -15,11 +15,10 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.GameOver.GameHasWinnerReferee.GameHasWinnerReferee;
-import com.company.TicTacToe.GameOver.NumberOfMovesReferee.NumberOfMovesReferee;
+import com.company.TicTacToe.GameOverRule.WinnerRule.WinnerRule;
+import com.company.TicTacToe.GameOverRule.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.LineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
 import com.company.TicTacToe.Player.PlayerContext;
 import com.company.TicTacToe.Player.TicTacToePlayer;
@@ -50,8 +49,8 @@ public class Main {
         return validator;
     }
 
-    private static NumberOfMovesReferee makeTicTacToeReferee(Board board) {
-        return new NumberOfMovesReferee(board);
+    private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
+        return new NumberOfMovesRule(board);
     }
 
     private static InputRule makeAlertingFieldIsFreeValidator(Board board) {
@@ -90,10 +89,10 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static GameHasWinnerReferee makeGameHasWinnerReferee(Board board) {
+    private static WinnerRule makeWinnerRule(Board board) {
         TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        return new GameHasWinnerReferee(provider, evaluator);
+        return new WinnerRule(provider, evaluator);
     }
 
     private static void initializeBoard() {
@@ -106,20 +105,25 @@ public class Main {
 
 
     private static Board board;
+    private static NumberOfMovesRule numberOfMovesRule;
+    private static WinnerRule winnerRule;
 
     public static void main(String[] args) {
         initializeBoard();
 
         Turn turn = makeTicTacToeTurn(board);
 
-        NumberOfMovesReferee movesReferee = makeTicTacToeReferee(board);
-        GameHasWinnerReferee winnerReferee = makeGameHasWinnerReferee(board);
+        numberOfMovesRule = makeNumberOfMovesRule(board);
+        winnerRule = makeWinnerRule(board);
 
-
-        while(movesReferee.hasMovesLeft() && !winnerReferee.hasWinner()) {
+        while(isGameOver()) {
             turn.play();
         }
 
+    }
+
+    private static boolean isGameOver() {
+        return numberOfMovesRule.hasMoveLeft() && !winnerRule.hasWinner();
     }
 
 }
