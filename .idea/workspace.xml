@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/TieGameRule/MarkedFieldCountProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/MarkedFieldCountProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/TieGameRule/TieGameRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/TieGameRule/MarkedFieldCountProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/MarkedFieldCountProviderStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/TieGameRule/TieGameRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRuleTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,12 +75,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1773" />
-          <entry key="java" value="67960" />
+          <entry key="java" value="68014" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="67960" />
+          <entry key="JAVA" value="68014" />
           <entry key="PLAIN_TEXT" value="1773" />
         </counts>
       </usages-collector>
@@ -94,13 +88,13 @@
         <counts>
           <entry key="class" value="5" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1602" />
+          <entry key="java" value="1603" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="1602" />
+          <entry key="JAVA" value="1603" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -108,33 +102,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
+            <state relative-caret-position="368">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="e#4850#4851#0" expanded="true" />
                 <element signature="e#4919#4920#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRuleTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -234,10 +210,10 @@
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/WinnerRule/WinnerRule.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/TieGameRule/TieGameRuleTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/TieGameRule/TieGameRule.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/TieGameRule/NumberOfMovesRuleTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRuleTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRule.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
       </list>
     </option>
   </component>
@@ -492,7 +468,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552732162907" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552732620069" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -535,7 +511,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.App.Main" />
       <module name="TicTacToe.Main" />
@@ -623,9 +599,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.03.16 at 11h 19m 07s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TicTacToe_Main - 2019.03.16 at 11h 19m 25s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
@@ -653,15 +626,18 @@
     <history-entry file="All_in_TicTacToe_Main - 2019.03.16 at 11h 28m 46s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.03.16 at 11h 29m 21s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173791000" />
+    <option name="totallyTimeSpent" value="174124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33954155" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33954155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -670,7 +646,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21273886" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21273886" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2569948" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1038,16 +1014,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeLineProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/LineEvaluator/TicTacToeLineEvaluator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1087,28 +1053,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-          <folding>
-            <element signature="e#4850#4851#0" expanded="true" />
-            <element signature="e#4919#4920#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRuleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
+        <state relative-caret-position="765">
           <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRule/NumberOfMovesRule/NumberOfMovesRule.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeLineProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#4850#4851#0" expanded="true" />
+            <element signature="e#4919#4920#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

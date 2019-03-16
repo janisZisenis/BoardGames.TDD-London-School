@@ -49,7 +49,7 @@ public class Main {
         return validator;
     }
 
-    private static NumberOfMovesRule makeTicTacToeReferee(Board board) {
+    private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
         return new NumberOfMovesRule(board);
     }
 
@@ -89,7 +89,7 @@ public class Main {
         return makeTurn(john, haley);
     }
 
-    private static WinnerRule makeGameHasWinnerReferee(Board board) {
+    private static WinnerRule makeWinnerRule(Board board) {
         TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
         return new WinnerRule(provider, evaluator);
@@ -105,7 +105,7 @@ public class Main {
 
 
     private static Board board;
-    private static NumberOfMovesRule tieRule;
+    private static NumberOfMovesRule numberOfMovesRule;
     private static WinnerRule winnerRule;
 
     public static void main(String[] args) {
@@ -113,9 +113,8 @@ public class Main {
 
         Turn turn = makeTicTacToeTurn(board);
 
-        tieRule = makeTicTacToeReferee(board);
-        winnerRule = makeGameHasWinnerReferee(board);
-
+        numberOfMovesRule = makeNumberOfMovesRule(board);
+        winnerRule = makeWinnerRule(board);
 
         while(isGameOver()) {
             turn.play();
@@ -124,7 +123,7 @@ public class Main {
     }
 
     private static boolean isGameOver() {
-        return !tieRule.hasMoveLeft() && !winnerRule.hasWinner();
+        return numberOfMovesRule.hasMoveLeft() && !winnerRule.hasWinner();
     }
 
 }
