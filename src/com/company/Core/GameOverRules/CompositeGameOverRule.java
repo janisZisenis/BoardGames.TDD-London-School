@@ -2,7 +2,7 @@ package com.company.Core.GameOverRules;
 
 import java.util.LinkedList;
 
-public class CompositeGameOverRule {
+public class CompositeGameOverRule implements GameOverRule {
 
     private LinkedList<GameOverRule> rules = new LinkedList<>();
 
