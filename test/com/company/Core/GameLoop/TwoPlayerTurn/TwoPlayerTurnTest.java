@@ -1,15 +1,15 @@
-package com.company.Core.Turn;
+package com.company.Core.GameLoop.TwoPlayerTurn;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TurnTest {
+public class TwoPlayerTurnTest {
 
     private PlayerSpy first = new PlayerSpy();
     private PlayerSpy second = new PlayerSpy();
-    private Turn sut = new Turn(first, second);
+    private TwoPlayerTurn sut = new TwoPlayerTurn(first, second);
 
     @Test
     void IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce() {
