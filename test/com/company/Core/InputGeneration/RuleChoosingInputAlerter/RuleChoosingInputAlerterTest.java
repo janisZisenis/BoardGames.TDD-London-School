@@ -1,12 +1,10 @@
 package com.company.Core.InputGeneration.RuleChoosingInputAlerter;
 
+import com.company.Core.InputGeneration.InpuAlerter.InputAlerterDummy;
+import com.company.Core.InputGeneration.InpuAlerter.InputAlerterMock;
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.InputRefereeImp.InputAlerter;
-import com.company.Core.InputGeneration.InputRefereeImp.InputAlerterDummy;
 import com.company.Core.InputGeneration.InputRule.InputRuleStub;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RuleChoosingInputAlerterTest {
 
@@ -104,33 +102,5 @@ public class RuleChoosingInputAlerterTest {
         rule.setValidInputs(valids);
         return rule;
     }
-
-    private class InputAlerterMock implements InputAlerter {
-
-        private boolean expectedHasAlerted = false;
-        private boolean actualHasAlerted = false;
-        private Input expectedAlertedInput;
-        private Input actualAlertedInput;
-
-        public void verifyAll() {
-            assertEquals(expectedHasAlerted, actualHasAlerted);
-            assertEquals(expectedAlertedInput, actualAlertedInput);
-        }
-
-        public void expectAlertedInput(Input input) {
-            this.expectedHasAlerted = true;
-            this.expectedAlertedInput = input;
-        }
-
-        public void alert(Input input) {
-            actualHasAlerted = true;
-            actualAlertedInput = input;
-        }
-
-        public void expectHasNotAlerted() {
-            expectedHasAlerted = false;
-        }
-    }
-
 
 }

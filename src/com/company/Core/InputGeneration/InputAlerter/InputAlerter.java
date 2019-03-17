@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.InputRefereeImp;
+package com.company.Core.InputGeneration.InputAlerter;
 
 import com.company.Core.InputGeneration.Input.Input;
 

@@ -1,5 +1,6 @@
 package com.company.Core.InputGeneration.InputRefereeImp;
 
+import com.company.Core.InputGeneration.InpuAlerter.InputAlerterDummy;
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputRule.InputRuleStub;
 import org.junit.jupiter.api.Test;
