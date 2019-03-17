@@ -1,7 +1,7 @@
 package com.company.Core.InputGeneration.VerboseValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.CountingGeneratorStub;
+import com.company.Core.InputGeneration.CountingGeneratorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

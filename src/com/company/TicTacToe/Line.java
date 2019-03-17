@@ -1,6 +1,6 @@
 package com.company.TicTacToe;
 
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Board.Field.Field;
 
 public class Line {
 

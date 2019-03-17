@@ -1,7 +1,7 @@
 package com.company.Core.InputGeneration.VerboseValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
+import com.company.Core.InputGeneration.InputGenerator;
 
 public class VerboseValidatingInputGenerator implements InputGenerator {
 
