@@ -9,6 +9,7 @@ import com.company.Core.GameLoop.Turn;
 import com.company.Core.GameLoop.TwoPlayerTurn.Player;
 import com.company.Core.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 import com.company.Core.GameOverRules.CompositeGameOverRule;
+import com.company.Core.GameOverRules.GameOverRule;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule;
 import com.company.Core.InputGeneration.InputRule.InputRule;
@@ -40,11 +41,11 @@ public class TicTacToeFactory {
     
     public GameLoop makeTicTacToeGameLoop(Board board) {
         Turn turn = makeTicTacToeTurn(board);
-        CompositeGameOverRule rule = makeTicTacToeGameOverRule(board);
+        GameOverRule rule = makeTicTacToeGameOverRule(board);
         return new GameLoop(turn, rule);
     }
 
-    private TwoPlayerTurn makeTicTacToeTurn(Board board) {
+    private Turn makeTicTacToeTurn(Board board) {
         Player john = makeTicTacToePlayer(board, Mark.John);
         Player haley = makeTicTacToePlayer(board, Mark.Haley);
 
@@ -66,13 +67,13 @@ public class TicTacToeFactory {
     }
 
     private InputReferee makeTicTacToeInputReferee(Board board) {
-        RuleChoosingInputAlerter alerter = makeTicTacToeInputAlerter(board);
+        InputAlerter alerter = makeTicTacToeInputAlerter(board);
         InputRule rule = makeTicTacToeInputRule(board);
 
         return new InputRefereeImp(rule, alerter);
     }
 
-    private RuleChoosingInputAlerter makeTicTacToeInputAlerter(Board board) {
+    private InputAlerter makeTicTacToeInputAlerter(Board board) {
         InputRule existsRule = makeTicTacToeFieldExistsRule();
         InputAlerter existsAlerter = makeTicTacToeFieldExistsAlerter();
         InputRule isFreeRule = makeTicTacToeFieldIsEmptyRule(board);
@@ -111,13 +112,13 @@ public class TicTacToeFactory {
         return composite;
     }
 
-    private ConsoleInputGenerator makeConsoleGenerator() {
+    private InputGenerator makeConsoleGenerator() {
         return new ConsoleInputGenerator();
     }
 
-    private CompositeGameOverRule makeTicTacToeGameOverRule(Board board) {
-        NumberOfMovesRule numberOfMovesRule = makeNumberOfMovesRule(board);
-        WinningLineRule winningLineRule = makeWinningLineRule(board);
+    private GameOverRule makeTicTacToeGameOverRule(Board board) {
+        GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
+        GameOverRule winningLineRule = makeWinningLineRule(board);
 
         CompositeGameOverRule rule = new CompositeGameOverRule();
         rule.add(numberOfMovesRule);
@@ -126,11 +127,11 @@ public class TicTacToeFactory {
         return rule;
     }
 
-    private NumberOfMovesRule makeNumberOfMovesRule(Board board) {
+    private GameOverRule makeNumberOfMovesRule(Board board) {
         return new NumberOfMovesRule(board);
     }
 
-    private WinningLineRule makeWinningLineRule(Board board) {
+    public GameOverRule makeWinningLineRule(Board board) {
         LineEvaluatorImp evaluator = new LineEvaluatorImp(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
         return new WinningLineRule(provider, evaluator);
