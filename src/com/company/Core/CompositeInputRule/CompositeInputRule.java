@@ -1,7 +1,7 @@
 package com.company.Core.CompositeInputRule;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
+import com.company.Core.InputGeneration.InputRule.InputRule;
 
 import java.util.LinkedList;
 

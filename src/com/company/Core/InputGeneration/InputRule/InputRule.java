@@ -1,4 +1,4 @@
-package com.company.Core.InputGeneration.ValidatingInputGenerator;
+package com.company.Core.InputGeneration.InputRule;
 
 import com.company.Core.InputGeneration.Input.Input;
 

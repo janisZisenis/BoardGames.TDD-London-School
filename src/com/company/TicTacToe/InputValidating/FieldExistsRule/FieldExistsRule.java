@@ -1,7 +1,7 @@
 package com.company.TicTacToe.InputValidating.FieldExistsRule;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
+import com.company.Core.InputGeneration.InputRule.InputRule;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
 public class FieldExistsRule implements InputRule {

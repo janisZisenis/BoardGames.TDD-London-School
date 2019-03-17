@@ -1,7 +1,7 @@
 package com.company.Core.CompositeInputRule;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRuleStub;
+import com.company.Core.InputGeneration.InputRule.InputRuleStub;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
