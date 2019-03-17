@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/ValidInputGenerationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputReferee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputRefereeStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/ValidInputGenerationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/ValidInputGenerationTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,27 +81,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="1868" />
-          <entry key="java" value="73360" />
+          <entry key="dummy" value="1875" />
+          <entry key="java" value="73375" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="73360" />
-          <entry key="PLAIN_TEXT" value="1868" />
+          <entry key="JAVA" value="73375" />
+          <entry key="PLAIN_TEXT" value="1875" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="7" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1658" />
+          <entry key="java" value="1661" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="1658" />
+          <entry key="JAVA" value="1661" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -110,7 +109,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/ValidInputGenerationTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -121,6 +120,38 @@
                 <element signature="method#IfValidatorInvalidatesFirstAndSecondInput_ItShouldBeTheThird#0;class#ValidInputGenerationTest#0" />
                 <element signature="method#makeFirstGeneratedInputIsValid#0;class#ValidInputGenerationTest#0" />
                 <element signature="method#makeSecondGeneratedInputIsValid#0;class#ValidInputGenerationTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+              <folding>
+                <element signature="method#IfSecondInputIsValid_ShouldAlertTheFirstInput#0;class#InvalidInputAlertingTest#0" />
+                <element signature="method#IfThirdInputIsValid_ShouldAlertTheSecondInput#0;class#InvalidInputAlertingTest#0" />
+                <element signature="method#makeSecondInputIsValid#0;class#InvalidInputAlertingTest#0" />
+                <element signature="method#makeThirdInputIsValid#0;class#InvalidInputAlertingTest#0" />
+                <element signature="class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+                <element signature="method#alertIsInvalid#0;class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+                <element signature="method#verifyAll#0;class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,9 +253,9 @@
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidator.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorStub.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/ValidInputGenerationTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" />
       </list>
     </option>
   </component>
@@ -382,7 +413,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -423,23 +453,7 @@
               <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
               <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="Input" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
               <item name="VerboseValidatingInputGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -480,6 +494,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,7 +503,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552752369175" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552801833590" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -615,6 +630,7 @@
       <workItem from="1552397794126" duration="12388000" />
       <workItem from="1552473763046" duration="470000" />
       <workItem from="1552720666536" duration="4534000" />
+      <workItem from="1552801702070" duration="131000" />
     </task>
     <servers />
   </component>
@@ -651,7 +667,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183914000" />
+    <option name="totallyTimeSpent" value="183988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -821,10 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,10 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding>
-            <element signature="e#317#318#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,9 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,10 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="46" selection-start-column="46" selection-end-column="46" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -923,10 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,9 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,13 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,13 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
-          <folding>
-            <element signature="method#makeProviderHas2WinningLines#0;class#WinnerRuleTest#0" />
-            <element signature="method#makeProviderHas1WinningLine#0;class#WinnerRuleTest#0" />
-            <element signature="method#makeProviderHas1NotWinningLine#0;class#WinnerRuleTest#0" />
-            <element signature="method#makeProviderHas2NotWinningLines#0;class#WinnerRuleTest#0" />
-            <element signature="method#makeProviderHasOneNotWinningAndOneWinningLine#0;class#WinnerRuleTest#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,20 +969,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/GameLoop/GameLoopTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/GameLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/GameLoop/GameLoopTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/GameLoop.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1024,9 +992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,14 +1016,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorStub.java">
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorMock.java" />
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputRefereeStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
@@ -1070,38 +1029,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputReferee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,6 +1046,34 @@
             <element signature="method#IfValidatorInvalidatesFirstAndSecondInput_ItShouldBeTheThird#0;class#ValidInputGenerationTest#0" />
             <element signature="method#makeFirstGeneratedInputIsValid#0;class#ValidInputGenerationTest#0" />
             <element signature="method#makeSecondGeneratedInputIsValid#0;class#ValidInputGenerationTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding>
+            <element signature="method#IfSecondInputIsValid_ShouldAlertTheFirstInput#0;class#InvalidInputAlertingTest#0" />
+            <element signature="method#IfThirdInputIsValid_ShouldAlertTheSecondInput#0;class#InvalidInputAlertingTest#0" />
+            <element signature="method#makeSecondInputIsValid#0;class#InvalidInputAlertingTest#0" />
+            <element signature="method#makeThirdInputIsValid#0;class#InvalidInputAlertingTest#0" />
+            <element signature="class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+            <element signature="method#alertIsInvalid#0;class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+            <element signature="method#verifyAll#0;class#InputValidatorMock#0;class#InvalidInputAlertingTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
           </folding>
         </state>
       </provider>

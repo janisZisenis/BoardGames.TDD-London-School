@@ -4,7 +4,7 @@ import com.company.Core.InputGeneration.Input.Input;
 
 import java.util.Arrays;
 
-public class InputValidatorStub implements InputValidator {
+public class InputRefereeStub implements InputReferee {
 
     private Input[] valids = {};
 

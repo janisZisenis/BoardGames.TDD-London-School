@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class InvalidInputAlertingTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private InputValidatorMock validator = new InputValidatorMock();
-    private VerboseValidatingInputGenerator sut = new VerboseValidatingInputGenerator(generator, validator);
+    private InputRefereeMock referee = new InputRefereeMock();
+    private VerboseValidatingInputGenerator sut = new VerboseValidatingInputGenerator(generator, referee);
 
     private Input[] generated;
     private Input[] valids;
@@ -20,22 +20,22 @@ public class InvalidInputAlertingTest {
     void IfSecondInputIsValid_ShouldAlertTheFirstInput() {
         makeSecondInputIsValid();
 
-        validator.expectLastAlertedIs(new Input(0, 0));
+        referee.expectLastAlertedIs(new Input(0, 0));
 
         sut.generate();
 
-        validator.verifyAll();
+        referee.verifyAll();
     }
 
     @Test
     void IfThirdInputIsValid_ShouldAlertTheSecondInput() {
         makeThirdInputIsValid();
 
-        validator.expectLastAlertedIs(new Input(0, 1));
+        referee.expectLastAlertedIs(new Input(0, 1));
 
         sut.generate();
 
-        validator.verifyAll();
+        referee.verifyAll();
     }
 
     private void makeSecondInputIsValid() {
@@ -44,7 +44,7 @@ public class InvalidInputAlertingTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[1] };
-        validator.setValidInputs(valids);
+        referee.setValidInputs(valids);
     }
 
     private void makeThirdInputIsValid() {
@@ -54,11 +54,11 @@ public class InvalidInputAlertingTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[2] };
-        validator.setValidInputs(valids);
+        referee.setValidInputs(valids);
     }
 
 
-    public class InputValidatorMock extends InputValidatorStub {
+    public class InputRefereeMock extends InputRefereeStub {
 
         private Input expectedLastAlerted;
         private Input actualLastAlerted;

@@ -6,11 +6,11 @@ import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 public class VerboseValidatingInputGenerator {
 
     private final InputGenerator generator;
-    private InputValidator validator;
+    private InputReferee referee;
 
-    public VerboseValidatingInputGenerator(InputGenerator generator, InputValidator validator) {
+    public VerboseValidatingInputGenerator(InputGenerator generator, InputReferee referee) {
         this.generator = generator;
-        this.validator = validator;
+        this.referee = referee;
     }
 
     public Input generate() {
@@ -25,7 +25,7 @@ public class VerboseValidatingInputGenerator {
     }
 
     private void alertInvalid(Input input) {
-        validator.alertIsInvalid(input);
+        referee.alertIsInvalid(input);
     }
 
     private Input getInput() {
@@ -33,6 +33,6 @@ public class VerboseValidatingInputGenerator {
     }
 
     private boolean isNotValid(Input input) {
-        return !validator.isValid(input);
+        return !referee.isValid(input);
     }
 }

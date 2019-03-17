@@ -8,15 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidInputGenerationTest {
 
-    private InputValidatorStub validator = new InputValidatorStub();
+    private InputRefereeStub referee = new InputRefereeStub();
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private VerboseValidatingInputGenerator sut = new VerboseValidatingInputGenerator(generator, validator);
+    private VerboseValidatingInputGenerator sut = new VerboseValidatingInputGenerator(generator, referee);
 
     private Input[] generated;
     private Input[] valids;
 
     @Test
-    void IfValidatorValidatesFirstInput_ItShouldBeTheFirst() {
+    void IfRefereeValidatesFirstInput_ItShouldBeTheFirst() {
         makeFirstGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -26,7 +26,7 @@ public class ValidInputGenerationTest {
     }
 
     @Test
-    void IfValidatorInvalidatesFirstInput_ItShouldBeTheSecond() {
+    void IfRefereeInvalidatesFirstInput_ItShouldBeTheSecond() {
         makeSecondGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -36,7 +36,7 @@ public class ValidInputGenerationTest {
     }
 
     @Test
-    void IfValidatorInvalidatesFirstAndSecondInput_ItShouldBeTheThird() {
+    void IfRefereeInvalidatesFirstAndSecondInput_ItShouldBeTheThird() {
         makeThirdGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -50,7 +50,7 @@ public class ValidInputGenerationTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[0] };
-        validator.setValidInputs(valids);
+        referee.setValidInputs(valids);
     }
 
     private void makeSecondGeneratedInputIsValid() {
@@ -59,7 +59,7 @@ public class ValidInputGenerationTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[1] };
-        validator.setValidInputs(valids);
+        referee.setValidInputs(valids);
     }
 
     private void makeThirdGeneratedInputIsValid() {
@@ -69,7 +69,7 @@ public class ValidInputGenerationTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[2] };
-        validator.setValidInputs(valids);
+        referee.setValidInputs(valids);
     }
 
 }
