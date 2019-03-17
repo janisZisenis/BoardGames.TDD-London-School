@@ -6,7 +6,7 @@ import com.company.Core.InputGeneration.InputRule.InputRule;
 
 import java.util.HashMap;
 
-public class RuleChoosingInputAlerter {
+public class RuleChoosingInputAlerter implements InputAlerter {
 
     private HashMap<InputRule, InputAlerter> pairs = new HashMap<>();
 

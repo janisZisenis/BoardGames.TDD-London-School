@@ -1,13 +1,16 @@
 package com.company.App;
 
+import com.company.CLI.InputGeneration.ConsoleInputAlerter;
 import com.company.CLI.InputGeneration.ConsoleInputPrompter;
+import com.company.CLI.TicTacToe.AlertingMessages;
 import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.Core.CompositeGameOverRule.CompositeGameOverRule;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
-import com.company.Core.InputGeneration.InputRule.InputRule;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Core.CompositeInputRule.CompositeInputRule;
-import com.company.Core.Turn.Player;
+import com.company.Core.InputGeneration.InputRefereeImp.InputRefereeImp;
+import com.company.Core.InputGeneration.InputRule.InputRule;
+import com.company.Core.InputGeneration.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
+import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
@@ -32,26 +35,6 @@ public class Main {
         return new BoardPrinter(board);
     }
 
-    private static InputGenerator makeTicTacToeInputGenerator(InputRule rule) {
-        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
-        return new ValidatingInputGenerator(prompter, rule);
-    }
-
-    private static InputRule makeTicTacToeInputRule(Board board) {
-        InputRule existsValidator = new FieldExistsRule();
-        InputRule isFreeValidator = new FieldIsEmptyRule(board);
-
-        CompositeInputRule composite = new CompositeInputRule();
-        composite.add(existsValidator);
-        composite.add(isFreeValidator);
-
-        return composite;
-    }
-
-    private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
-        return new NumberOfMovesRule(board);
-    }
-
     private static TicTacToePlayer makeHaley(Board board, InputGenerator generator) {
         PlayerContext config = new PlayerContext(generator, board, Mark.Haley);
         return new TicTacToePlayer(config);
@@ -62,18 +45,32 @@ public class Main {
         return new TicTacToePlayer(config);
     }
 
-    private static Turn makeTurn(Player first, Player second) {
-        return new Turn(first, second);
-    }
-
     private static Turn makeTicTacToeTurn(Board board) {
-        InputRule inputRule = makeTicTacToeInputRule(board);
-        InputGenerator generator = makeTicTacToeInputGenerator(inputRule);
+        InputRule existsRule = new FieldExistsRule();
+        ConsoleInputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
+        InputRule isFreeRule = new FieldIsEmptyRule(board);
+        ConsoleInputAlerter isFreeAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
+
+        RuleChoosingInputAlerter choosing = new RuleChoosingInputAlerter();
+        choosing.register(existsRule, existsAlerter);
+        choosing.register(isFreeRule, isFreeAlerter);
+
+        CompositeInputRule composite = new CompositeInputRule();
+        composite.add(existsRule);
+        composite.add(isFreeRule);
+
+        InputRefereeImp referee = new InputRefereeImp(composite, choosing);
+        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
+        InputGenerator generator = new VerboseValidatingInputGenerator(prompter, referee);
 
         TicTacToePlayer john = makeJohn(board, generator);
         TicTacToePlayer haley = makeHaley(board, generator);
 
-        return makeTurn(john, haley);
+        return new Turn(john, haley);
+    }
+
+    private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
+        return new NumberOfMovesRule(board);
     }
 
     private static WinningLineRule makeWinningLineRule(Board board) {

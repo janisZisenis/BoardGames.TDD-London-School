@@ -3,7 +3,7 @@ package com.company.Core.InputGeneration.VerboseValidatingInputGenerator;
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
 
-public class VerboseValidatingInputGenerator {
+public class VerboseValidatingInputGenerator implements InputGenerator {
 
     private final InputGenerator generator;
     private InputReferee referee;

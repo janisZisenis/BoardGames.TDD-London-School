@@ -3,8 +3,9 @@ package com.company.Core.InputGeneration.InputRefereeImp;
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputAlerter.InputAlerter;
 import com.company.Core.InputGeneration.InputRule.InputRule;
+import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputReferee;
 
-public class InputRefereeImp {
+public class InputRefereeImp implements InputReferee {
 
     private InputRule rule;
     private final InputAlerter alerter;
