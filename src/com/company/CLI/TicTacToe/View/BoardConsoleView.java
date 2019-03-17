@@ -6,12 +6,12 @@ import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.Observer;
 
-public class BoardView implements Observer {
+public class BoardConsoleView implements Observer {
 
     private final int rowColumn = BoardBoundaries.rowColumnCount;
     private final Board board;
 
-    public BoardView(Board board) {
+    public BoardConsoleView(Board board) {
         this.board = board;
         print();
     }

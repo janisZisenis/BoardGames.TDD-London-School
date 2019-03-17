@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,27 +80,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="1987" />
-          <entry key="java" value="78211" />
+          <entry key="dummy" value="2245" />
+          <entry key="java" value="78691" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="78211" />
-          <entry key="PLAIN_TEXT" value="1987" />
+          <entry key="JAVA" value="78691" />
+          <entry key="PLAIN_TEXT" value="2245" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="7" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1774" />
+          <entry key="java" value="1776" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="7" />
-          <entry key="JAVA" value="1774" />
+          <entry key="JAVA" value="1776" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -109,35 +111,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
+            <state relative-caret-position="303">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="method#makeBoard#0;class#Main#0" />
-                <element signature="method#makeHaley#0;class#Main#0" />
-                <element signature="method#makeJohn#0;class#Main#0" />
-                <element signature="method#makeTicTacToeTurn#0;class#Main#0" />
-                <element signature="method#makeWinningLineRule#0;class#Main#0" />
-                <element signature="method#makeTicTacToeGameOverRule#0;class#Main#0" />
-                <element signature="method#initializeBoard#0;class#Main#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/GameLoop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="-69">
+              <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#makeDisplayedBoard#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeGameLoop#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeTurn#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToePlayer#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeVerboseTicTacToeInputGenerator#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeInputReferee#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeInputAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeFieldExistsAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeFieldIsEmptyAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeInputRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeGameOverRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeWinningLineRule#0;class#TicTacToeFactory#0" />
+                <element signature="e#6155#6156#0" expanded="true" />
+                <element signature="e#6205#6206#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,8 +151,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -190,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidator.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputValidatorStub.java" />
         <option value="$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" />
@@ -239,8 +242,9 @@
         <option value="$PROJECT_DIR$/test/com/company/Core/GameLoop/GameLoopTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/TwoPlayerTurn/TwoPlayerTurn.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/GameOverRules/CompositeGameOverRule.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" />
       </list>
     </option>
   </component>
@@ -421,29 +425,7 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
-              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,7 +440,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552813630809" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552815636216" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -585,7 +567,7 @@
       <workItem from="1552397794126" duration="12388000" />
       <workItem from="1552473763046" duration="470000" />
       <workItem from="1552720666536" duration="4534000" />
-      <workItem from="1552801702070" duration="11776000" />
+      <workItem from="1552801702070" duration="13699000" />
     </task>
     <servers />
   </component>
@@ -622,7 +604,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195633000" />
+    <option name="totallyTimeSpent" value="197556000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -725,22 +707,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-          <folding>
-            <element signature="method#IfSecondInputIsValid_ShouldAlertTheFirstInput#0;class#InvalidInputAlertingTest#0" />
-            <element signature="method#IfThirdInputIsValid_ShouldAlertTheSecondInput#0;class#InvalidInputAlertingTest#0" />
-            <element signature="method#makeSecondInputIsValid#0;class#InvalidInputAlertingTest#0" />
-            <element signature="method#makeThirdInputIsValid#0;class#InvalidInputAlertingTest#0" />
-            <element signature="class#InputRefereeMock#0;class#InvalidInputAlertingTest#0" />
-            <element signature="method#alertIsInvalid#0;class#InputRefereeMock#0;class#InvalidInputAlertingTest#0" />
-            <element signature="method#verifyAll#0;class#InputRefereeMock#0;class#InvalidInputAlertingTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/InputRule/InputRuleDummy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1129,19 +1095,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
-          <folding>
-            <element signature="method#makeBoard#0;class#Main#0" />
-            <element signature="method#makeHaley#0;class#Main#0" />
-            <element signature="method#makeJohn#0;class#Main#0" />
-            <element signature="method#makeTicTacToeTurn#0;class#Main#0" />
-            <element signature="method#makeWinningLineRule#0;class#Main#0" />
-            <element signature="method#makeTicTacToeGameOverRule#0;class#Main#0" />
-            <element signature="method#initializeBoard#0;class#Main#0" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1152,10 +1109,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="303">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#makeDisplayedBoard#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeGameLoop#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeTurn#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToePlayer#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeVerboseTicTacToeInputGenerator#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeInputReferee#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeInputAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeFieldExistsAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeFieldIsEmptyAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeInputRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeGameOverRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeWinningLineRule#0;class#TicTacToeFactory#0" />
+            <element signature="e#6155#6156#0" expanded="true" />
+            <element signature="e#6205#6206#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
