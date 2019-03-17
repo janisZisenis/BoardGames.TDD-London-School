@@ -1,7 +1,7 @@
 package com.company.TicTacToe.InputValidating.FieldIsEmptyRule;
 
 import com.company.Core.InputGeneration.Input.Input;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
+import com.company.Core.InputGeneration.InputRule.InputRule;
 import com.company.TicTacToe.Field.Field;
 
 public class FieldIsEmptyRule implements InputRule {

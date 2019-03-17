@@ -4,7 +4,7 @@ import com.company.CLI.InputGeneration.ConsoleInputPrompter;
 import com.company.CLI.TicTacToe.BoardPrinter;
 import com.company.Core.CompositeGameOverRule.CompositeGameOverRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputRule;
+import com.company.Core.InputGeneration.InputRule.InputRule;
 import com.company.Core.InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Core.CompositeInputRule.CompositeInputRule;
 import com.company.Core.Turn.Player;
