@@ -1,6 +1,6 @@
 package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
 

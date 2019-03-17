@@ -1,6 +1,7 @@
 package com.company.Core.InputGeneration.ValidatingInputGenerator;
 
 import com.company.Core.InputGeneration.Input.Input;
+import com.company.Core.InputGeneration.CountingGeneratorStub;
 import com.company.Core.InputGeneration.InputRule.InputRuleStub;
 import org.junit.jupiter.api.Test;
 

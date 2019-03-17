@@ -2,7 +2,7 @@ package com.company.TicTacToe.Board.ObservableBoard;
 
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.BoardDummy;
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
 import org.junit.jupiter.api.Test;
 

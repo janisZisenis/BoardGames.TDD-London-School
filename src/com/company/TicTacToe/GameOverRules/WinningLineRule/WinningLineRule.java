@@ -1,7 +1,7 @@
 package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
 
-import com.company.Core.CompositeGameOverRule.GameOverRule;
+import com.company.Core.GameOverRules.GameOverRule;
 import com.company.TicTacToe.Line;
 
 public class WinningLineRule implements GameOverRule {

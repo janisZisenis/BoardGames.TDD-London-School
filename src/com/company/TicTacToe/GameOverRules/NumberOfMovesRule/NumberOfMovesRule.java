@@ -1,6 +1,6 @@
 package com.company.TicTacToe.GameOverRules.NumberOfMovesRule;
 
-import com.company.Core.CompositeGameOverRule.GameOverRule;
+import com.company.Core.GameOverRules.GameOverRule;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 
 public class NumberOfMovesRule implements GameOverRule {

@@ -1,15 +1,15 @@
 package com.company.App;
 
-import com.company.CLI.InputGeneration.ConsoleInputAlerter;
-import com.company.CLI.InputGeneration.ConsoleInputPrompter;
-import com.company.CLI.TicTacToe.AlertingMessages;
-import com.company.CLI.TicTacToe.BoardPrinter;
-import com.company.Core.CompositeGameOverRule.CompositeGameOverRule;
-import com.company.Core.CompositeInputRule.CompositeInputRule;
-import com.company.Core.InputGeneration.InputRefereeImp.InputRefereeImp;
+import com.company.CLI.Core.InputGeneration.ConsoleInputAlerter;
+import com.company.CLI.Core.InputGeneration.ConsoleInputGenerator;
+import com.company.CLI.TicTacToe.View.AlertingMessages;
+import com.company.CLI.TicTacToe.View.BoardView;
+import com.company.Core.GameOverRules.CompositeGameOverRule;
+import com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule;
+import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
 import com.company.Core.InputGeneration.InputRule.InputRule;
-import com.company.Core.InputGeneration.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import com.company.Core.InputGeneration.ValidatingInputGenerator.InputGenerator;
+import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
 import com.company.Core.Turn.Turn;
 import com.company.TicTacToe.Board.Board;
@@ -18,11 +18,11 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
-import com.company.TicTacToe.InputValidating.FieldExistsRule.FieldExistsRule;
-import com.company.TicTacToe.InputValidating.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.LineEvaluator.TicTacToeLineEvaluator;
-import com.company.TicTacToe.Player.PlayerContext;
-import com.company.TicTacToe.Player.TicTacToePlayer;
+import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
+import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp.LineEvaluatorImp;
+import com.company.TicTacToe.PlayerImp.PlayerContext;
+import com.company.TicTacToe.PlayerImp.PlayerImp;
 
 public class Main {
 
@@ -31,18 +31,18 @@ public class Main {
         return new ObservableBoard(hashing);
     }
 
-    private static BoardPrinter makeBoardPrinter(Board board) {
-        return new BoardPrinter(board);
+    private static BoardView makeBoardPrinter(Board board) {
+        return new BoardView(board);
     }
 
-    private static TicTacToePlayer makeHaley(Board board, InputGenerator generator) {
+    private static PlayerImp makeHaley(Board board, InputGenerator generator) {
         PlayerContext config = new PlayerContext(generator, board, Mark.Haley);
-        return new TicTacToePlayer(config);
+        return new PlayerImp(config);
     }
 
-    private static TicTacToePlayer makeJohn(Board board, InputGenerator generator) {
+    private static PlayerImp makeJohn(Board board, InputGenerator generator) {
         PlayerContext config = new PlayerContext(generator, board, Mark.John);
-        return new TicTacToePlayer(config);
+        return new PlayerImp(config);
     }
 
     private static Turn makeTicTacToeTurn(Board board) {
@@ -60,11 +60,11 @@ public class Main {
         composite.add(isFreeRule);
 
         InputRefereeImp referee = new InputRefereeImp(composite, choosing);
-        ConsoleInputPrompter prompter = new ConsoleInputPrompter();
+        ConsoleInputGenerator prompter = new ConsoleInputGenerator();
         InputGenerator generator = new VerboseValidatingInputGenerator(prompter, referee);
 
-        TicTacToePlayer john = makeJohn(board, generator);
-        TicTacToePlayer haley = makeHaley(board, generator);
+        PlayerImp john = makeJohn(board, generator);
+        PlayerImp haley = makeHaley(board, generator);
 
         return new Turn(john, haley);
     }
@@ -74,7 +74,7 @@ public class Main {
     }
 
     private static WinningLineRule makeWinningLineRule(Board board) {
-        TicTacToeLineEvaluator evaluator = new TicTacToeLineEvaluator(board);
+        LineEvaluatorImp evaluator = new LineEvaluatorImp(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
         return new WinningLineRule(provider, evaluator);
     }
@@ -91,7 +91,7 @@ public class Main {
 
     private static void initializeBoard() {
         ObservableBoard board = makeBoard();
-        BoardPrinter printer = makeBoardPrinter(board);
+        BoardView printer = makeBoardPrinter(board);
         board.attach(printer);
         Main.board = board;
     }

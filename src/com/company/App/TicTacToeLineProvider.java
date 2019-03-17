@@ -1,6 +1,6 @@
 package com.company.App;
 
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProvider;
 import com.company.TicTacToe.Line;
 

@@ -1,7 +1,7 @@
 package com.company.TicTacToe.Board.ObservableBoard;
 
 import com.company.TicTacToe.Board.BoardStub;
-import com.company.TicTacToe.Field.Field;
+import com.company.TicTacToe.Board.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
