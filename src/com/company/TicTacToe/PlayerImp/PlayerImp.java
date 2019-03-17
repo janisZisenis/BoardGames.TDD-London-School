@@ -2,7 +2,7 @@ package com.company.TicTacToe.PlayerImp;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputGenerator;
-import com.company.Core.Turn.Player;
+import com.company.Core.GameLoop.TwoPlayerTurn.Player;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
 

@@ -11,7 +11,7 @@ import com.company.Core.InputGeneration.InputRule.InputRule;
 import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
-import com.company.Core.Turn.Turn;
+import com.company.Core.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
@@ -45,7 +45,7 @@ public class Main {
         return new PlayerImp(config);
     }
 
-    private static Turn makeTicTacToeTurn(Board board) {
+    private static TwoPlayerTurn makeTicTacToeTurn(Board board) {
         InputRule existsRule = new FieldExistsRule();
         ConsoleInputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
         InputRule isFreeRule = new FieldIsEmptyRule(board);
@@ -66,7 +66,7 @@ public class Main {
         PlayerImp john = makeJohn(board, generator);
         PlayerImp haley = makeHaley(board, generator);
 
-        return new Turn(john, haley);
+        return new TwoPlayerTurn(john, haley);
     }
 
     private static NumberOfMovesRule makeNumberOfMovesRule(Board board) {
@@ -101,9 +101,9 @@ public class Main {
     public static void main(String[] args) {
         initializeBoard();
 
-        Turn turn = makeTicTacToeTurn(board);
+        TwoPlayerTurn turn = makeTicTacToeTurn(board);
         CompositeGameOverRule rule = makeTicTacToeGameOverRule(board);
-
+        
         while(!rule.isGameOver()) {
             turn.play();
         }
