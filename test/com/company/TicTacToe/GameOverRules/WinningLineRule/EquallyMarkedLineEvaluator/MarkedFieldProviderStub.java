@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp;
+package com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;

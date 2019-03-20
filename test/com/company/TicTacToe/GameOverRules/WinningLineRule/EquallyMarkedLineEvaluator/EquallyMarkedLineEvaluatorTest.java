@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp;
+package com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LineEvaluatorImpTest {
+public class EquallyMarkedLineEvaluatorTest {
 
 
     private MarkedFieldProviderStub provider = new MarkedFieldProviderStub();
-    private LineEvaluatorImp sut = new LineEvaluatorImp(provider);
+    private EquallyMarkedLineEvaluator sut = new EquallyMarkedLineEvaluator(provider);
 
     private Field first = new Field(0, 1);
     private Field second = new Field(0, 2);

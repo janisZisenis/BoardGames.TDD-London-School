@@ -1,15 +1,15 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp;
+package com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
 import com.company.TicTacToe.Line;
 
-public class LineEvaluatorImp implements LineEvaluator {
+public class EquallyMarkedLineEvaluator implements LineEvaluator {
 
     private final MarkedFieldProvider provider;
 
-    public LineEvaluatorImp(MarkedFieldProvider provider) {
+    public EquallyMarkedLineEvaluator(MarkedFieldProvider provider) {
         this.provider = provider;
     }
 

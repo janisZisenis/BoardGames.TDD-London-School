@@ -3,7 +3,6 @@ package com.company.App;
 import com.company.CLI.Core.InputGeneration.ConsoleInputAlerter;
 import com.company.CLI.Core.InputGeneration.ConsoleInputGenerator;
 import com.company.CLI.TicTacToe.View.AlertingMessages;
-import com.company.CLI.TicTacToe.View.BoardConsoleView;
 import com.company.Core.GameLoop.GameLoop;
 import com.company.Core.GameLoop.Turn;
 import com.company.Core.GameLoop.TwoPlayerTurn.Player;
@@ -23,7 +22,7 @@ import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp.LineEvaluatorImp;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
 import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
@@ -32,10 +31,8 @@ import com.company.TicTacToe.PlayerImp.PlayerImp;
 
 public class TicTacToeFactory {
 
-    public Board makeDisplayedBoard() {
+    public ObservableBoard makeDisplayedBoard() {
         ObservableBoard board = makeBoard();
-        BoardConsoleView printer = makeBoardConsoleView(board);
-        board.attach(printer);
         return board;
     }
     
@@ -132,7 +129,7 @@ public class TicTacToeFactory {
     }
 
     public GameOverRule makeWinningLineRule(Board board) {
-        LineEvaluatorImp evaluator = new LineEvaluatorImp(board);
+        EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
         return new WinningLineRule(provider, evaluator);
     }
@@ -142,8 +139,4 @@ public class TicTacToeFactory {
         return new ObservableBoard(hashing);
     }
 
-    private BoardConsoleView makeBoardConsoleView(Board board) {
-        return new BoardConsoleView(board);
-    }
-    
 }
