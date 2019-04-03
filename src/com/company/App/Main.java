@@ -5,40 +5,44 @@ import com.company.Core.GameLoop.GameLoop;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
+import com.company.TicTacToe.BoardPresenter.BoardPresenter;
+import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
 import com.company.TicTacToe.Line;
 
 public class Main {
 
     private static TicTacToeLineProvider provider;
-    private static EquallyMarkedLineEvaluator evaluator;
+    private static LineEvaluator evaluator;
     private static ObservableBoard board;
+
+    private static BoardConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
+        BoardConsoleView view = new BoardConsoleView();
+        WinningLineProvider winningLineProvider = factory.makeWinningLineProvider(board);
+        BoardPresenter presenter = new BoardPresenter(view, board, winningLineProvider);
+        board.attach(presenter);
+        return view;
+    }
 
     public static void main(String[] args) {
         TicTacToeFactory factory = new TicTacToeFactory();
-        board = factory.makeDisplayedBoard();
 
+        board = factory.makeDisplayedBoard();
         provider = new TicTacToeLineProvider();
         evaluator = new EquallyMarkedLineEvaluator(board);
 
-        BoardConsoleView view = new BoardConsoleView();
-        //BoardEvaluator evaluator = new BoardEvaluator(board, provider);
-        //BoardPresenter presenter = new BoardPresenter(view, board);
-        //board.attach(presenter);
+        BoardConsoleView view = makePresentedBoardConsoleView(factory);
         view.display(board);
 
-        System.out.println("Welcome to TicTacToe");
-
+        showSalutation(view);
         GameLoop loop = factory.makeTicTacToeGameLoop(board);
         loop.play();
-
-        for(int i = 0; i < provider.getLineCount(); i++) {
-            Line line = provider.getLine(i);
-            if(evaluator.isWinningLine(line))
-                view.display(board, line);
-        }
-
         showLeaveTaking();
+    }
+
+    private static void showSalutation(BoardConsoleView view) {
+        System.out.println("Welcome to TicTacToe");
     }
 
     private static void showLeaveTaking() {

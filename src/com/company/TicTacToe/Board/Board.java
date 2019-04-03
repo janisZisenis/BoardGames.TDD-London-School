@@ -4,7 +4,7 @@ import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.MarkedFieldCountPro
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import com.company.TicTacToe.PlayerImp.MarkFieldService;
+import com.company.TicTacToe.TicTacToePlayer.MarkFieldService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 

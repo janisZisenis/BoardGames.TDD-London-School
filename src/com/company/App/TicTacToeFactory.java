@@ -21,13 +21,17 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
+import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProvider;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
 import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.PlayerImp.PlayerContext;
-import com.company.TicTacToe.PlayerImp.PlayerImp;
+import com.company.TicTacToe.TicTacToePlayer.PlayerContext;
+import com.company.TicTacToe.TicTacToePlayer.TicTacToePlayer;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.TicTacToeWinningLineProvider;
 
 public class TicTacToeFactory {
 
@@ -35,7 +39,13 @@ public class TicTacToeFactory {
         ObservableBoard board = makeBoard();
         return board;
     }
-    
+
+    public WinningLineProvider makeWinningLineProvider(Board board) {
+        LineProvider provider = new TicTacToeLineProvider();
+        LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
+        return new TicTacToeWinningLineProvider(provider, evaluator);
+    }
+
     public GameLoop makeTicTacToeGameLoop(Board board) {
         Turn turn = makeTicTacToeTurn(board);
         GameOverRule rule = makeTicTacToeGameOverRule(board);
@@ -53,7 +63,7 @@ public class TicTacToeFactory {
         InputGenerator generator = makeVerboseTicTacToeInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
-        return new PlayerImp(context);
+        return new TicTacToePlayer(context);
     }
 
     private InputGenerator makeVerboseTicTacToeInputGenerator(Board board) {

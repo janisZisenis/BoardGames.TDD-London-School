@@ -1,4 +1,4 @@
-package com.company.TicTacToe.PlayerImp;
+package com.company.TicTacToe.TicTacToePlayer;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.CountingGeneratorStub;
@@ -6,11 +6,11 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
 import org.junit.jupiter.api.Test;
 
-public class PlayerImpTest {
+public class TicTacToePlayerTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
     private MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    private PlayerImp sut;
+    private TicTacToePlayer sut;
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
@@ -52,8 +52,8 @@ public class PlayerImpTest {
         sut = makePlayer(config);
     }
 
-    private PlayerImp makePlayer(PlayerContext context) {
-        return new PlayerImp(context);
+    private TicTacToePlayer makePlayer(PlayerContext context) {
+        return new TicTacToePlayer(context);
     }
 
     private PlayerContext makePlayerContext(Mark mark) {

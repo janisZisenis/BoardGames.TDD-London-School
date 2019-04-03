@@ -65,13 +65,6 @@ public class WinningLineRuleTest {
         assertTrue(actual);
     }
 
-    private void makeProviderHas2WinningLines() {
-        Line first = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
-        Line second = new Line(new Field(1, 0), new Field(1, 1), new Field(1, 2));
-        provider.setLines(new Line[] { first, second });
-        evaluator.setWinningLines(new Line[]{ first, second });
-    }
-
     private void makeProviderHas1WinningLine() {
         Line line = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         provider.setLines(new Line[] { line });
@@ -82,6 +75,13 @@ public class WinningLineRuleTest {
         Line line = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         provider.setLines(new Line[] { line });
         evaluator.setWinningLines(new Line[]{ });
+    }
+
+    private void makeProviderHas2WinningLines() {
+        Line first = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
+        Line second = new Line(new Field(1, 0), new Field(1, 1), new Field(1, 2));
+        provider.setLines(new Line[] { first, second });
+        evaluator.setWinningLines(new Line[]{ first, second });
     }
 
     private void makeProviderHas2NotWinningLines() {

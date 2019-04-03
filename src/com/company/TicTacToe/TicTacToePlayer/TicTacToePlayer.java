@@ -1,4 +1,4 @@
-package com.company.TicTacToe.PlayerImp;
+package com.company.TicTacToe.TicTacToePlayer;
 
 import com.company.Core.InputGeneration.Input.Input;
 import com.company.Core.InputGeneration.InputGenerator;
@@ -6,13 +6,13 @@ import com.company.Core.GameLoop.TwoPlayerTurn.Player;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
 
-public class PlayerImp implements Player {
+public class TicTacToePlayer implements Player {
 
     private final MarkFieldService markService;
     private final Mark mark;
     private final InputGenerator generator;
 
-    public PlayerImp(PlayerContext config) {
+    public TicTacToePlayer(PlayerContext config) {
         this.generator = config.getGenerator();
         this.markService = config.getMarkService();
         this.mark = config.getMark();

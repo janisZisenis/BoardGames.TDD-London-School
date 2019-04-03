@@ -1,4 +1,4 @@
-package com.company.TicTacToe.PlayerImp;
+package com.company.TicTacToe.TicTacToePlayer;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;

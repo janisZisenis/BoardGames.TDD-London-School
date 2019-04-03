@@ -1,4 +1,4 @@
-package com.company.TicTacToe.PlayerImp;
+package com.company.TicTacToe.TicTacToePlayer;
 
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.TicTacToe.Board.Mark;
