@@ -10,18 +10,15 @@ public class CompositeInputRule implements InputRule {
     private final LinkedList<InputRule> rules = new LinkedList<InputRule>();
 
     public boolean isValid(Input input) {
-        boolean isValid = true;
+        for (InputRule r : rules)
+            if(!r.isValid(input))
+                return false;
 
-        for(int i = 0; rules.size() > i; i++) {
-            InputRule r = rules.get(i);
-            isValid = isValid && r.isValid(input);
-        }
-
-        return isValid;
+        return true;
     }
 
-    public void add(InputRule validator) {
-        rules.add(validator);
+    public void add(InputRule rule) {
+        rules.add(rule);
     }
 
 }
