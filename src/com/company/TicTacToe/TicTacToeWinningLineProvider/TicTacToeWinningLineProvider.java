@@ -36,4 +36,14 @@ public class TicTacToeWinningLineProvider implements WinningLineProvider {
         Line line = provider.getLine(index);
         return evaluator.isWinningLine(line);
     }
+
+    public boolean hasWinner() {
+        for(int i = 0; i < provider.getLineCount(); i++) {
+            Line line = provider.getLine(i);
+            if(evaluator.isWinningLine(line))
+            return true;
+        }
+
+        return false;
+    }
 }

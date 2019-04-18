@@ -11,7 +11,7 @@ import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TicTacToeWinningLineProviderTest {
+public class WinningLineProvidingTest {
 
     private LineProviderStub provider = new LineProviderStub();
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();

@@ -33,15 +33,16 @@ public class Main {
         evaluator = new EquallyMarkedLineEvaluator(board);
 
         BoardConsoleView view = makePresentedBoardConsoleView(factory);
+
+        showSalutation();
         view.display(board);
 
-        showSalutation(view);
         GameLoop loop = factory.makeTicTacToeGameLoop(board);
         loop.play();
         showLeaveTaking();
     }
 
-    private static void showSalutation(BoardConsoleView view) {
+    private static void showSalutation() {
         System.out.println("Welcome to TicTacToe");
     }
 
