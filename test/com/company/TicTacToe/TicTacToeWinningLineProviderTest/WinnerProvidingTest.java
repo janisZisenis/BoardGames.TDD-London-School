@@ -18,15 +18,15 @@ public class WinnerProvidingTest {
     private Line[] lines = {};
 
     @Test
-    void IfNoLinesAreAvailable_ShouldNotHaveAWinner(){
+    void IfNoLinesAreProvided_ShouldNotHaveAWinner(){
         boolean actual = sut.hasWinner();
 
         assertFalse(actual);
     }
 
     @Test
-    void IfFirstLineIsWinning_ShouldHaveAWinner(){
-        makeFirstLineIsWinning();
+    void IfFirstProvidedLineIsWinning_ShouldHaveAWinner(){
+        makeFirstProvidedLineIsWinning();
 
         boolean actual = sut.hasWinner();
 
@@ -34,8 +34,8 @@ public class WinnerProvidingTest {
     }
 
     @Test
-    void IfFirstLineIsNotWinning_ShouldNotHaveAWinner(){
-        makeFirstLineIsNotWinning();
+    void IfFirstProvidedLineIsNotWinning_ShouldNotHaveAWinner(){
+        makeFirstProvidedLineIsNotWinning();
 
         boolean actual = sut.hasWinner();
 
@@ -43,8 +43,8 @@ public class WinnerProvidingTest {
     }
 
     @Test
-    void IfSecondLineIsWinning_ShouldHaveAWinningLine(){
-        makeFirstLineIsNotWinningWhileSecondIs();
+    void IfSecondProvidedLineIsWinningWhileFirstIsNot_ShouldHaveAWinningLine(){
+        makeSecondProvidedLineIsWinningWhileFirstIsNot();
 
         boolean actual = sut.hasWinner();
 
@@ -62,13 +62,13 @@ public class WinnerProvidingTest {
 
 
 
-    private void makeFirstLineIsNotWinning() {
+    private void makeFirstProvidedLineIsNotWinning() {
         initializeOneLine();
         provider.setLines(lines);
         evaluator.setWinningLines(new Line[]{ });
     }
 
-    private void makeFirstLineIsWinning() {
+    private void makeFirstProvidedLineIsWinning() {
         initializeOneLine();
         provider.setLines(lines);
         evaluator.setWinningLines(lines);
@@ -87,7 +87,7 @@ public class WinnerProvidingTest {
         return new Line(first, second, third);
     }
 
-    private void makeFirstLineIsNotWinningWhileSecondIs() {
+    private void makeSecondProvidedLineIsWinningWhileFirstIsNot() {
         initializeTwoLines();
         provider.setLines(new Line[] { lines[0], lines[1] });
         evaluator.setWinningLines(new Line[]{ lines[1] });
