@@ -1,6 +1,5 @@
 package com.company.TicTacToe.TicTacToeWinningLineProviderTest;
 
-import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorStub;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProviderStub;
@@ -17,7 +16,7 @@ public class WinningLineProvidingTest {
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();
     private TicTacToeWinningLineProvider sut = new TicTacToeWinningLineProvider(provider, evaluator);
 
-    private Line[] lines = {};
+    private WinningLinesConfigurator configurator = new WinningLinesConfigurator(provider, evaluator);
 
     @Test
     void IfNoLinesAreAvailable_ShouldNotHaveAWinningLine(){
@@ -27,8 +26,8 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfFirstLineIsWinning_ShouldHaveAWinningLine(){
-        makeFirstLineIsWinning();
+    void IfFirstProvidedLineIsWinning_ShouldHaveAWinningLine(){
+        configurator.makeFirstProvidedLineIsWinning();
 
         boolean actual = sut.hasWinningLine();
 
@@ -36,8 +35,8 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfFirstLineIsNotWinning_ShouldNotHaveAWinningLine(){
-        makeFirstLineIsNotWinning();
+    void IfFirstProvidedLineIsNotWinning_ShouldNotHaveAWinningLine(){
+        configurator.makeFirstProvidedLineIsNotWinning();
 
         boolean actual = sut.hasWinningLine();
 
@@ -45,8 +44,8 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfSecondLineIsWinning_ShouldHaveAWinningLine(){
-        makeFirstLineIsNotWinningWhileSecondIs();
+    void IfSecondProvidedLineIsWinningWhileFirstIsNot_ShouldHaveAWinningLine(){
+        configurator.makeSecondProvidedLineIsWinningWhileFirstIsNot();
 
         boolean actual = sut.hasWinningLine();
 
@@ -54,17 +53,8 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfFirstLineIsWinningAndSecondNot_ShouldHaveAWinningLine(){
-        makeFirstLineIsWinningWhileSecondIsNot();
-
-        boolean actual = sut.hasWinningLine();
-
-        assertTrue(actual);
-    }
-
-    @Test
-    void IfTwoNotWinningLinesAreAvailable_ShouldNotHaveAWinningLine(){
-        makeTwoNotWinningLinesAreAvailable();
+    void IfTwoNotWinningLinesAreProvided_ShouldNotHaveAWinningLine(){
+        configurator.makeTwoNotWinningLinesAreProvided();
 
         boolean actual = sut.hasWinningLine();
 
@@ -74,44 +64,25 @@ public class WinningLineProvidingTest {
 
 
     @Test
-    void IfNoLinesAreAvailable_GettingTheWinningLineShouldThrowException() {
+    void IfNoLinesAreProvided_GettingTheWinningLineShouldThrowException() {
         Executable act = () -> sut.getWinningLine();
 
         assertThrows(WinningLineProvider.NoWinningLineAvailable.class, act);
     }
 
     @Test
-    void IfFirstLineIsWinning_ShouldProvideTheFirstLine() {
-        makeFirstLineIsWinning();
+    void IfFirstProvidedLineIsWinning_ShouldProvideTheFirstLine() {
+        configurator.makeFirstProvidedLineIsWinning();
 
         Line actual = sut.getWinningLine();
 
-        Line expected = lines[0];
+        Line expected = configurator.getProvidedLine(0);
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfFirstLineIsNotWinning_GettingTheWinningLineShouldThrowException() {
-        makeFirstLineIsNotWinning();
-
-        Executable act = () -> sut.getWinningLine();
-
-        assertThrows(WinningLineProvider.NoWinningLineAvailable.class, act);
-    }
-
-    @Test
-    void IfSecondLineIsWinning_ShouldProvideTheSecondLine() {
-        makeFirstLineIsNotWinningWhileSecondIs();
-
-        Line actual = sut.getWinningLine();
-
-        Line expected = lines[1];
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void IfTwoNotWinningLinesAreAvailable_GettingTheWinningLineShouldThrowException() {
-        makeTwoNotWinningLinesAreAvailable();
+    void IfFirstProvidedLineIsNotWinning_GettingTheWinningLineShouldThrowException() {
+        configurator.makeFirstProvidedLineIsNotWinning();
 
         Executable act = () -> sut.getWinningLine();
 
@@ -119,79 +90,32 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfLineProviderHas2WinningLines_ShouldProvideTheFirst(){
-        makeFirstAndSecondLineAreWinning();
+    void IfSecondProvidedLineIsWinningWhileFirstIsNot_ShouldProvideTheSecondLine() {
+        configurator.makeSecondProvidedLineIsWinningWhileFirstIsNot();
 
         Line actual = sut.getWinningLine();
 
-        Line expected = lines[0];
+        Line expected = configurator.getProvidedLine(1);
         assertEquals(expected, actual);
     }
 
+    @Test
+    void IfTwoNotWinningLinesAreProvided_GettingTheWinningLineShouldThrowException() {
+        configurator.makeTwoNotWinningLinesAreProvided();
 
-    private void makeFirstLineIsWinning() {
-        initializeOneLine();
-        provider.setLines(lines);
-        evaluator.setWinningLines(lines);
+        Executable act = () -> sut.getWinningLine();
+
+        assertThrows(WinningLineProvider.NoWinningLineAvailable.class, act);
     }
 
-    private void makeFirstLineIsNotWinning() {
-        initializeOneLine();
-        provider.setLines(lines);
-        evaluator.setWinningLines(new Line[]{ });
+    @Test
+    void IfTwoWinningLinesAreProvided_ShouldProvideTheFirst(){
+        configurator.makeTwoWinningLinesAreProvided();
+
+        Line actual = sut.getWinningLine();
+
+        Line expected = configurator.getProvidedLine(0);
+        assertEquals(expected, actual);
     }
 
-    private void makeFirstAndSecondLineAreWinning() {
-        Line first = makeFirstLine();
-        Line second = makeSecondLine();
-        lines = new Line[]{ first, second };
-        provider.setLines(lines);
-        evaluator.setWinningLines(lines);
-    }
-
-    private void makeTwoNotWinningLinesAreAvailable() {
-        Line first = makeFirstLine();
-        Line second = makeSecondLine();
-        provider.setLines(new Line[] { first, second });
-        evaluator.setWinningLines(new Line[]{});
-    }
-
-    private void makeFirstLineIsNotWinningWhileSecondIs() {
-        initializeTwoLines();
-        provider.setLines(new Line[] { lines[0], lines[1] });
-        evaluator.setWinningLines(new Line[]{ lines[1] });
-    }
-
-    private void makeFirstLineIsWinningWhileSecondIsNot() {
-        initializeTwoLines();
-        provider.setLines(new Line[] { lines[0], lines[1] });
-        evaluator.setWinningLines(new Line[]{ lines[0] });
-    }
-
-    private Line makeFirstLine() {
-        Field first = new Field(0, 0);
-        Field second = new Field(0, 1);
-        Field third = new Field(0, 2);
-
-        return new Line(first, second, third);
-    }
-
-    private Line makeSecondLine() {
-        Field first = new Field(1, 0);
-        Field second = new Field(1, 1);
-        Field third = new Field(1, 2);
-
-        return new Line(first, second, third);
-    }
-
-    private void initializeOneLine() {
-        Line first = makeFirstLine();
-        lines = new Line[]{ first };
-    }
-
-    private void initializeTwoLines() {
-        Line first = makeFirstLine();
-        Line second = makeSecondLine();
-        lines = new Line[]{ first, second };
-    }
 }

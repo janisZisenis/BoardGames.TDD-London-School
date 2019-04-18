@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/NumberOfMovesRule/NumberOfMovesRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/NumberOfMovesRule/NumberOfMovesRuleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/TicTacToeWinningLineProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,12 +79,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2399" />
-          <entry key="java" value="87334" />
+          <entry key="java" value="88261" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="87334" />
+          <entry key="JAVA" value="88261" />
           <entry key="PLAIN_TEXT" value="2399" />
         </counts>
       </usages-collector>
@@ -97,13 +92,13 @@
         <counts>
           <entry key="class" value="8" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1879" />
+          <entry key="java" value="1884" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="JAVA" value="1879" />
+          <entry key="JAVA" value="1884" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -111,20 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="156" column="5" lean-forward="true" selection-start-line="151" selection-start-column="4" selection-end-line="156" selection-end-column="5" />
+            <state relative-caret-position="-43">
+              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -132,10 +118,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="212">
+              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#IfNoLinesAreAvailable_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
+                <element signature="method#IfFirstProvidedLineIsWinning_ShouldHaveAWinner#0;class#WinnerProvidingTest#0" />
+                <element signature="method#IfFirstLineIsNotWinning_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
+                <element signature="method#IfSecondProvidedLineIsWinningWhileFirstIsNot_ShouldHaveAWinningLine#0;class#WinnerProvidingTest#0" />
+                <element signature="method#IfTwoNotWinningLinesAreProvided_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="method#IfNoLinesAreAvailable_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfFirstLineIsWinning_ShouldHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfFirstLineIsNotWinning_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfSecondLineIsWinning_ShouldHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfTwoNotWinningLinesAreAvailable_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfNoLinesAreAvailable_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfFirstLineIsWinning_ShouldProvideTheFirstLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfFirstLineIsNotWinning_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfSecondLineIsWinning_ShouldProvideTheSecondLine#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfTwoNotWinningLinesAreProvided_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+                <element signature="method#IfTwoNotWinningLinesAreProvided_ShouldProvideTheFirst#0;class#WinningLineProvidingTest#0" />
               </folding>
             </state>
           </provider>
@@ -191,10 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/InputGeneration/InputGenerators/ValidatingInputGenerator/ValidatingInputGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/InputGeneration/InputGenerators/VerboseValidatingInputGenerator/InputRefereeImp/InputRefereeImp.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/InputGeneration/InputGenerations/VerboseValidatingInputGenerator/InputRefereeImp/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/InputGeneration/InputGeneration/VerboseValidatingInputGenerator/InputRefereeImp/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/GameTermination/CompositeGameOverRule/CompositeGameOverRule.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/GameOver/CompositeGameOverRule.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/Gaming/GameOverRules/CompositeGameOverRule.java" />
@@ -239,9 +248,13 @@
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/NumberOfMovesRule/NumberOfMovesRuleTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/WinningLineRule.java" />
         <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/TicTacToeWinningProviderFixture.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningProviderFixture.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/StubConfigurator.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLinesConfigurator.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" />
       </list>
     </option>
   </component>
@@ -479,7 +492,7 @@
     <property name="SearchEverywhereHistoryKey" value="COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555583432806" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555585843076" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -613,44 +626,44 @@
       <workItem from="1553111748288" duration="2145000" />
       <workItem from="1554310932145" duration="9748000" />
       <workItem from="1554716171787" duration="251000" />
-      <workItem from="1555077027993" duration="3516000" />
+      <workItem from="1555077027993" duration="5867000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 23m 29s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 01m 15s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 25m 11s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 01m 31s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 25m 22s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 02m 11s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 26m 03s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 04m 25s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 26m 54s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 05m 08s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 27m 04s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 05m 51s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 29m 15s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 06m 04s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 29m 41s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 07m 47s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 30m 01s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 08m 50s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 12h 30m 36s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 09m 14s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220232000" />
+    <option name="totallyTimeSpent" value="222583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -759,13 +772,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputRefereeImp/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InputRefereeImp/InputRefereeImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1103,27 +1109,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        <state relative-caret-position="-43">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLinesConfigurator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#WinningLinesConfigurator#0;class#WinningLinesConfigurator#0" />
+            <element signature="method#makeFirstProvidedLineIsWinning#0;class#WinningProviderFixture#0" />
+            <element signature="method#makeFirstProvidedLineIsNotWinning#0;class#StubConfigurator#0" />
+            <element signature="method#makeSecondProvidedLineIsWinningWhileFirstIsNot#0;class#StubConfigurator#0" />
+            <element signature="method#makeTwoNotWinningLinesAreProvided#0;class#StubConfigurator#0" />
+            <element signature="method#makeTwoNotWinningLinesAreProvided#1;class#WinningLinesConfigurator#0" />
+            <element signature="method#initializeOneLine#0;class#WinningProviderFixture#0" />
+            <element signature="method#initializeTwoLines#0;class#WinningProviderFixture#0" />
+            <element signature="method#makeFirstLine#0;class#WinningLinesConfigurator#0" />
+            <element signature="method#makeSecondLine#0;class#WinningProviderFixture#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IfNoLinesAreAvailable_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
+            <element signature="method#IfFirstProvidedLineIsWinning_ShouldHaveAWinner#0;class#WinnerProvidingTest#0" />
+            <element signature="method#IfFirstLineIsNotWinning_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
+            <element signature="method#IfSecondProvidedLineIsWinningWhileFirstIsNot_ShouldHaveAWinningLine#0;class#WinnerProvidingTest#0" />
+            <element signature="method#IfTwoNotWinningLinesAreProvided_ShouldNotHaveAWinner#0;class#WinnerProvidingTest#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="156" column="5" lean-forward="true" selection-start-line="151" selection-start-column="4" selection-end-line="156" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeWinningLineProvider/TicTacToeWinningLineProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="72">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="method#IfNoLinesAreAvailable_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfFirstLineIsWinning_ShouldHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfFirstLineIsNotWinning_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfSecondLineIsWinning_ShouldHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfTwoNotWinningLinesAreAvailable_ShouldNotHaveAWinningLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfNoLinesAreAvailable_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfFirstLineIsWinning_ShouldProvideTheFirstLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfFirstLineIsNotWinning_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfSecondLineIsWinning_ShouldProvideTheSecondLine#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfTwoNotWinningLinesAreProvided_GettingTheWinningLineShouldThrowException#0;class#WinningLineProvidingTest#0" />
+            <element signature="method#IfTwoNotWinningLinesAreProvided_ShouldProvideTheFirst#0;class#WinningLineProvidingTest#0" />
+          </folding>
         </state>
       </provider>
     </entry>

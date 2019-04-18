@@ -5,7 +5,7 @@ import com.company.TicTacToe.Line;
 public class LineProviderStub implements LineProvider {
     private Line[] lines = {};
 
-    public void setLines(Line[] lines) {
+    public void setProvidedLines(Line[] lines) {
         this.lines = lines;
     }
 
