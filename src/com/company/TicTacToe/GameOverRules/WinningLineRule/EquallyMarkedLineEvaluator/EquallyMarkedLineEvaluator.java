@@ -33,4 +33,10 @@ public class EquallyMarkedLineEvaluator implements LineEvaluator {
         return first == second && second == third;
     }
 
+    public Mark getWinner(Line line) {
+        if(!isWinningLine(line))
+            throw new LineEvaluator.NoWinnerForLineAvailable();
+
+        return provider.getMarkAt(line.getFirst());
+    }
 }

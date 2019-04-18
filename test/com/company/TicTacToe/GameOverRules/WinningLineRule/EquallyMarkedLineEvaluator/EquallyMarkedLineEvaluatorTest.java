@@ -1,12 +1,13 @@
 package com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator;
 
-import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.Field.Field;
+import com.company.TicTacToe.Board.Mark;
+import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
 import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class EquallyMarkedLineEvaluatorTest {
 
@@ -21,7 +22,7 @@ public class EquallyMarkedLineEvaluatorTest {
 
     @Test
     void IfLineIsEquallyMarked_ItShouldBeTheWinningLine() {
-        makeLineIsEquallyMarked();
+        makeLineIsEquallyMarkedWith(Mark.John);
 
         boolean actual = sut.isWinningLine(line);
 
@@ -64,16 +65,75 @@ public class EquallyMarkedLineEvaluatorTest {
         assertFalse(actual);
     }
 
+
+
+
+    @Test
+    void IfFirstOfLineIsNotMarked_GettingTheWinnerShouldThrow() {
+        makeFirstOfLineIsNotMarked();
+
+        Executable act = () -> sut.getWinner(line);
+
+        assertThrows(LineEvaluator.NoWinnerForLineAvailable.class, act);
+    }
+
+    @Test
+    void IfLineIsEquallyMarkedWithJohn_JohnShouldBeTheWinner() {
+        makeLineIsEquallyMarkedWith(Mark.John);
+
+        Mark actual = sut.getWinner(line);
+
+        Mark expected = Mark.John;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void IfLineIsEquallyMarkedWithHaley_HaleyShouldBeTheWinner() {
+        makeLineIsEquallyMarkedWith(Mark.Haley);
+
+        Mark actual = sut.getWinner(line);
+
+        Mark expected = Mark.Haley;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void IfSecondOfLineIsNotMarked_GettingTheWinnerShouldThrow() {
+        makeSecondOfLineIsNotMarked();
+
+        Executable act = () -> sut.getWinner(line);
+
+        assertThrows(LineEvaluator.NoWinnerForLineAvailable.class, act);
+    }
+
+    @Test
+    void IfThirdOfLineIsNotMarked_GettingTheWinnerShouldThrow() {
+        makeThirdOfLineIsNotMarked();
+
+        Executable act = () -> sut.getWinner(line);
+
+        assertThrows(LineEvaluator.NoWinnerForLineAvailable.class, act);
+    }
+
+    @Test
+    void IfLineIsNotEquallyMarked_GettingTheWinnerShouldThrow() {
+        makeLineIsNotEquallyMarked();
+
+        Executable act = () -> sut.getWinner(line);
+
+        assertThrows(LineEvaluator.NoWinnerForLineAvailable.class, act);
+    }
+
+    private void makeLineIsEquallyMarkedWith(Mark m) {
+        provider.addMarkedField(first, m);
+        provider.addMarkedField(second, m);
+        provider.addMarkedField(third, m);
+    }
+
     private void makeLineIsNotEquallyMarked() {
         provider.addMarkedField(first, Mark.Haley);
         provider.addMarkedField(second, Mark.John);
         provider.addMarkedField(third, Mark.Haley);
-    }
-
-    private void makeLineIsEquallyMarked() {
-        provider.addMarkedField(first, Mark.John);
-        provider.addMarkedField(second, Mark.John);
-        provider.addMarkedField(third, Mark.John);
     }
 
     private void makeFirstOfLineIsNotMarked() {

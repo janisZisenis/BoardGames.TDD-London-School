@@ -64,7 +64,7 @@ public class WinningLineProvidingTest {
 
 
     @Test
-    void IfNoLinesAreProvided_GettingTheWinningLineShouldThrowException() {
+    void IfNoLinesAreProvided_GettingTheWinningLineShouldThrow() {
         Executable act = () -> sut.getWinningLine();
 
         assertThrows(WinningLineProvider.NoWinningLineAvailable.class, act);
@@ -81,7 +81,7 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfFirstProvidedLineIsNotWinning_GettingTheWinningLineShouldThrowException() {
+    void IfFirstProvidedLineIsNotWinning_GettingTheWinningLineShouldThrow() {
         configurator.makeFirstProvidedLineIsNotWinning();
 
         Executable act = () -> sut.getWinningLine();
@@ -100,7 +100,7 @@ public class WinningLineProvidingTest {
     }
 
     @Test
-    void IfTwoNotWinningLinesAreProvided_GettingTheWinningLineShouldThrowException() {
+    void IfTwoNotWinningLinesAreProvided_GettingTheWinningLineShouldThrow() {
         configurator.makeTwoNotWinningLinesAreProvided();
 
         Executable act = () -> sut.getWinningLine();
