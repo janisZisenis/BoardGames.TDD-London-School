@@ -79,13 +79,13 @@ public class WinningLinesConfigurator {
 
     public void makeJohnWinsWithFirstLine() {
         makeFirstProvidedLineIsWinning();
-        evaluator.setWinner(Mark.John);
+        evaluator.setWinnerForLine(Mark.John, getProvidedLine(0));
 
     }
 
     public void makeHaleyWinsWithFirstLine() {
         makeFirstProvidedLineIsWinning();
-        evaluator.setWinner(Mark.Haley);
+        evaluator.setWinnerForLine(Mark.Haley, getProvidedLine(0));
     }
 
     public Line getProvidedLine(int index) {
@@ -94,11 +94,11 @@ public class WinningLinesConfigurator {
 
     public void makeJohnWinsWithSecondLine() {
         makeSecondProvidedLineIsWinningWhileFirstIsNot();
-        evaluator.setWinner(Mark.John);
+        evaluator.setWinnerForLine(Mark.John, getProvidedLine(1));
     }
 
     public void makeHaleyWinsWithSecondLine() {
         makeSecondProvidedLineIsWinningWhileFirstIsNot();
-        evaluator.setWinner(Mark.Haley);
+        evaluator.setWinnerForLine(Mark.Haley, getProvidedLine(1));
     }
 }
