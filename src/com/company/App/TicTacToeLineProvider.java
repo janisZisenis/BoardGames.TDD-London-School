@@ -1,7 +1,7 @@
 package com.company.App;
 
 import com.company.TicTacToe.Board.Field.Field;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
+import com.company.TicTacToe.WinningProvider.LineProvider;
 import com.company.TicTacToe.Line;
 
 public class TicTacToeLineProvider implements LineProvider {

@@ -1,16 +1,16 @@
-package com.company.TicTacToe.TicTacToeWinningLineProvider;
+package com.company.TicTacToe.WinningProvider;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.WinnerRule.HasWinnerProvider;
 import com.company.TicTacToe.Line;
 
-public class TicTacToeWinningLineProvider implements WinningLineProvider, HasWinnerProvider {
+public class WinningProvider implements WinningLineProvider, HasWinnerProvider {
 
     private final LineEvaluator evaluator;
     private final LineProvider provider;
 
-    public TicTacToeWinningLineProvider(LineProvider provider, LineEvaluator evaluator) {
+    public WinningProvider(LineProvider provider, LineEvaluator evaluator) {
         this.provider = provider;
         this.evaluator = evaluator;
     }

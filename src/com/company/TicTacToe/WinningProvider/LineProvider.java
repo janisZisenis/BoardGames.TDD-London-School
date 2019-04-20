@@ -1,4 +1,4 @@
-package com.company.TicTacToe.TicTacToeWinningLineProvider;
+package com.company.TicTacToe.WinningProvider;
 
 import com.company.TicTacToe.Line;
 

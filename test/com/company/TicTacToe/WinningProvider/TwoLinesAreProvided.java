@@ -1,4 +1,4 @@
-package com.company.TicTacToe.TicTacToeWinningLineProvider;
+package com.company.TicTacToe.WinningProvider;
 
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
@@ -14,7 +14,7 @@ public class TwoLinesAreProvided {
 
     private LineProviderStub provider = new LineProviderStub();
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();
-    private TicTacToeWinningLineProvider sut = new TicTacToeWinningLineProvider(provider, evaluator);
+    private WinningProvider sut = new WinningProvider(provider, evaluator);
 
     private Line[] lines = {};
 

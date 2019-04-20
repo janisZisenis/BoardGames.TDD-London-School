@@ -1,6 +1,5 @@
-package com.company.TicTacToe.TicTacToeWinningLineProvider;
+package com.company.TicTacToe.WinningProvider;
 
-import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
 import com.company.TicTacToe.Line;
 
 public class LineProviderStub implements LineProvider {

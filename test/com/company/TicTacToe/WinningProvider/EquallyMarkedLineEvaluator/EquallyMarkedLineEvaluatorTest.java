@@ -1,8 +1,8 @@
-package com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator;
+package com.company.TicTacToe.WinningProvider.EquallyMarkedLineEvaluator;
 
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
+import com.company.TicTacToe.WinningProvider.LineEvaluator;
 import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
