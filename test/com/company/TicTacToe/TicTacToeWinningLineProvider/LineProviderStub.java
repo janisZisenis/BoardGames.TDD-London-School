@@ -1,5 +1,6 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule;
+package com.company.TicTacToe.TicTacToeWinningLineProvider;
 
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
 import com.company.TicTacToe.Line;
 
 public class LineProviderStub implements LineProvider {

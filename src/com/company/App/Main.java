@@ -7,8 +7,8 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.BoardPresenter.BoardPresenter;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
 import com.company.TicTacToe.TicTacToeWinningLineProvider.TicTacToeWinningLineProvider;
 
 public class Main {

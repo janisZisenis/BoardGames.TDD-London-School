@@ -3,6 +3,8 @@ package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
 import com.company.Core.GameOverRules.GameOverRule;
 import com.company.TicTacToe.Line;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
 
 public class WinningLineRule implements GameOverRule {
     private final LineProvider provider;

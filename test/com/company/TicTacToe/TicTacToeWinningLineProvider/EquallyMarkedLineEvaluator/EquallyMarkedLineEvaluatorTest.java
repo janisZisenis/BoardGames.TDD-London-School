@@ -1,8 +1,8 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule.EquallyMarkedLineEvaluator;
+package com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator;
 
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
 import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
@@ -124,6 +124,8 @@ public class EquallyMarkedLineEvaluatorTest {
         assertThrows(LineEvaluator.NoWinnerForLineAvailable.class, act);
     }
 
+
+    
     private void makeLineIsEquallyMarkedWith(Mark m) {
         provider.addMarkedField(first, m);
         provider.addMarkedField(second, m);

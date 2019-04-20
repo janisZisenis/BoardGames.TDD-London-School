@@ -2,8 +2,6 @@ package com.company.TicTacToe.TicTacToeWinningLineProvider;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluator;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProvider;
 import com.company.TicTacToe.Line;
 
 public class TicTacToeWinningLineProvider implements WinningLineProvider {

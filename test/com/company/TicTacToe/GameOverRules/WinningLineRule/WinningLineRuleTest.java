@@ -3,6 +3,8 @@ package com.company.TicTacToe.GameOverRules.WinningLineRule;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Line;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluatorStub;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProviderStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

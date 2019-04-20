@@ -1,9 +1,6 @@
-package com.company.TicTacToe.TicTacToeWinningLineProviderTest;
+package com.company.TicTacToe.TicTacToeWinningLineProvider;
 
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorStub;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProviderStub;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.TicTacToeWinningLineProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

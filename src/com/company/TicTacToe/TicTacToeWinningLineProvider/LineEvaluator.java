@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule;
+package com.company.TicTacToe.TicTacToeWinningLineProvider;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Line;
