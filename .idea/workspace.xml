@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/test/com/company/Core/InputGeneration/VerboseValidatingInputGenerator/InvalidInputAlertingTest.java" line="39" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/LineEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/LineEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLineProvidingTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,12 +77,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2399" />
-          <entry key="java" value="88932" />
+          <entry key="java" value="88999" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="88932" />
+          <entry key="JAVA" value="88999" />
           <entry key="PLAIN_TEXT" value="2399" />
         </counts>
       </usages-collector>
@@ -96,13 +90,13 @@
         <counts>
           <entry key="class" value="8" />
           <entry key="gitignore" value="2" />
-          <entry key="java" value="1889" />
+          <entry key="java" value="1890" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="8" />
-          <entry key="JAVA" value="1889" />
+          <entry key="JAVA" value="1890" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -110,42 +104,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="107" column="22" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+            <state relative-caret-position="408">
+              <caret line="123" column="72" selection-start-line="123" selection-start-column="72" selection-end-line="123" selection-end-column="72" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#IfLineIsEquallyMarked_ItShouldBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
+                <element signature="method#IfLineIsNotEquallyMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#IfFirstOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#IfSecondOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#IfThirdOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
+                <element signature="method#IfLineIsEquallyMarkedWithJohn_JohnShouldBeTheWinner#0;class#EquallyMarkedLineEvaluatorTest#0" />
+                <element signature="method#makeLineIsEquallyMarkedWith#0;class#EquallyMarkedLineEvaluatorTest#0" />
+                <element signature="method#makeLineIsNotEquallyMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#makeFirstOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#makeSecondOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
                 <element signature="method#makeThirdOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-              <folding>
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/LineEvaluator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -431,6 +407,21 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToeWinningLineProvider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -494,7 +485,7 @@
     <property name="SearchEverywhereHistoryKey" value="COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555587179252" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555763558787" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -633,27 +624,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 25m 59s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 26m 36s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 27m 08s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 27m 50s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 28m 00s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 28m 35s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 28m 55s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 29m 17s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
@@ -663,15 +633,35 @@
     <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 29m 54s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 30m 32s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 31m 14s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 32m 11s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 32m 24s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 32m 37s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 32m 47s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.18 at 13h 33m 03s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223584000" />
+    <option name="totallyTimeSpent" value="224123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27793697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27793697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -680,7 +670,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32866243" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21146497" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21146497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44713375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -689,7 +679,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007163" side_tool="true" weight="0.32866243" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.4031088" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.40254778" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1145,6 +1135,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/LineEvaluator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1154,27 +1155,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="107" column="22" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+        <state relative-caret-position="408">
+          <caret line="123" column="72" selection-start-line="123" selection-start-column="72" selection-end-line="123" selection-end-column="72" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#IfLineIsEquallyMarked_ItShouldBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
+            <element signature="method#IfLineIsNotEquallyMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#IfFirstOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#IfSecondOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#IfThirdOfLineIsNotMarked_ItShouldNotBeTheWinningLine#0;class#EquallyMarkedLineEvaluatorTest#0" />
+            <element signature="method#IfLineIsEquallyMarkedWithJohn_JohnShouldBeTheWinner#0;class#EquallyMarkedLineEvaluatorTest#0" />
+            <element signature="method#makeLineIsEquallyMarkedWith#0;class#EquallyMarkedLineEvaluatorTest#0" />
+            <element signature="method#makeLineIsNotEquallyMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#makeFirstOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#makeSecondOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
             <element signature="method#makeThirdOfLineIsNotMarked#0;class#EquallyMarkedLineEvaluatorTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/GameOverRules/WinningLineRule/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
-          <folding>
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
           </folding>
         </state>
       </provider>

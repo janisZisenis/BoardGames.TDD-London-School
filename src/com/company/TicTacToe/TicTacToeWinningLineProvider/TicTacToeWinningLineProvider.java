@@ -16,11 +16,7 @@ public class TicTacToeWinningLineProvider implements WinningLineProvider {
     }
 
     public boolean hasWinningLine() {
-        for(int i = 0; i < provider.getLineCount(); i++)
-            if (isWinningLine(i))
-                return true;
-
-        return false;
+        return hasWinner();
     }
 
 
@@ -38,11 +34,9 @@ public class TicTacToeWinningLineProvider implements WinningLineProvider {
     }
 
     public boolean hasWinner() {
-        for(int i = 0; i < provider.getLineCount(); i++) {
-            Line line = provider.getLine(i);
-            if(evaluator.isWinningLine(line))
-            return true;
-        }
+        for(int i = 0; i < provider.getLineCount(); i++)
+            if (isWinningLine(i))
+                return true;
 
         return false;
     }
