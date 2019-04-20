@@ -1,10 +1,12 @@
 package com.company.TicTacToe.GameOverRules.WinnerRule;
 
-public class HasWinnerRule {
+import com.company.Core.GameOverRules.GameOverRule;
+
+public class WinnerRule implements GameOverRule {
 
     private final HasWinnerProvider provider;
 
-    public HasWinnerRule(HasWinnerProvider provider) {
+    public WinnerRule(HasWinnerProvider provider) {
         this.provider = provider;
     }
 

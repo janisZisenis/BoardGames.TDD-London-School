@@ -23,14 +23,14 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
-import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
-import com.company.TicTacToe.GameOverRules.WinnerRule.WinningLineRule;
+import com.company.TicTacToe.GameOverRules.WinnerRule.WinnerRule;
 import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.TicTacToePlayer.PlayerContext;
 import com.company.TicTacToe.TicTacToePlayer.TicTacToePlayer;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
+import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
 import com.company.TicTacToe.TicTacToeWinningLineProvider.TicTacToeWinningLineProvider;
 
 public class TicTacToeFactory {
@@ -141,7 +141,8 @@ public class TicTacToeFactory {
     public GameOverRule makeWinningLineRule(Board board) {
         EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        return new WinningLineRule(provider, evaluator);
+        TicTacToeWinningLineProvider winningLineProvider = new TicTacToeWinningLineProvider(provider, evaluator);
+        return new WinnerRule(winningLineProvider);
     }
     
     private ObservableBoard makeBoard() {
