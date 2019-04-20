@@ -6,4 +6,5 @@ public interface WinningLineProvider {
     Line getWinningLine();
 
     class NoWinningLineAvailable extends RuntimeException {}
+    class NoWinnerAvailable extends RuntimeException {}
 }

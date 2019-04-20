@@ -1,6 +1,7 @@
 package com.company.TicTacToe.TicTacToeWinningLineProviderTest;
 
 import com.company.TicTacToe.Board.Field.Field;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorStub;
 import com.company.TicTacToe.GameOverRules.WinningLineRule.LineProviderStub;
 import com.company.TicTacToe.Line;
@@ -76,8 +77,28 @@ public class WinningLinesConfigurator {
         return new Line(first, second, third);
     }
 
+    public void makeJohnWinsWithFirstLine() {
+        makeFirstProvidedLineIsWinning();
+        evaluator.setWinner(Mark.John);
+
+    }
+
+    public void makeHaleyWinsWithFirstLine() {
+        makeFirstProvidedLineIsWinning();
+        evaluator.setWinner(Mark.Haley);
+    }
 
     public Line getProvidedLine(int index) {
         return lines[index];
+    }
+
+    public void makeJohnWinsWithSecondLine() {
+        makeSecondProvidedLineIsWinningWhileFirstIsNot();
+        evaluator.setWinner(Mark.John);
+    }
+
+    public void makeHaleyWinsWithSecondLine() {
+        makeSecondProvidedLineIsWinningWhileFirstIsNot();
+        evaluator.setWinner(Mark.Haley);
     }
 }
