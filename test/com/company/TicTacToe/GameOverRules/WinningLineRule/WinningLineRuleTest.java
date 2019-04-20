@@ -1,6 +1,7 @@
 package com.company.TicTacToe.GameOverRules.WinningLineRule;
 
 import com.company.TicTacToe.Board.Field.Field;
+import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Line;
 import org.junit.jupiter.api.Test;
 
@@ -68,33 +69,32 @@ public class WinningLineRuleTest {
     private void makeProviderHas1WinningLine() {
         Line line = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         provider.setProvidedLines(new Line[] { line });
-        evaluator.setWinningLines(new Line[]{ line });
+        evaluator.setWinnerForLine(Mark.John, line);
     }
 
     private void makeProviderHas1NotWinningLine() {
         Line line = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         provider.setProvidedLines(new Line[] { line });
-        evaluator.setWinningLines(new Line[]{ });
     }
 
     private void makeProviderHas2WinningLines() {
         Line first = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         Line second = new Line(new Field(1, 0), new Field(1, 1), new Field(1, 2));
         provider.setProvidedLines(new Line[] { first, second });
-        evaluator.setWinningLines(new Line[]{ first, second });
+        evaluator.setWinnerForLine(Mark.John, first);
+        evaluator.setWinnerForLine(Mark.Haley, second);
     }
 
     private void makeProviderHas2NotWinningLines() {
         Line first = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         Line second = new Line(new Field(1, 0), new Field(1, 1), new Field(1, 2));
         provider.setProvidedLines(new Line[] { first, second });
-        evaluator.setWinningLines(new Line[]{});
     }
 
     private void makeProviderHasOneNotWinningAndOneWinningLine() {
         Line first = new Line(new Field(0, 0), new Field(0, 1), new Field(0, 2));
         Line second = new Line(new Field(1, 0), new Field(1, 1), new Field(1, 2));
         provider.setProvidedLines(new Line[] { first, second });
-        evaluator.setWinningLines(new Line[]{ second });
+        evaluator.setWinnerForLine(Mark.Haley, second);
     }
 }
