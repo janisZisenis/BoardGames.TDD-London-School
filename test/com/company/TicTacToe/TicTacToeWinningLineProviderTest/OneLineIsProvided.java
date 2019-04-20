@@ -42,21 +42,6 @@ public class OneLineIsProvided {
         assertFalse(actual);
     }
 
-    @Test
-    void IfLineHasWinner_ShouldHaveAWinner(){
-        evaluator.setWinnerForLine(Mark.John, line);
-
-        boolean actual = sut.hasWinner();
-
-        assertTrue(actual);
-    }
-
-    @Test
-    void IfLineHasNoWinner_ShouldNotHaveAWinner(){
-        boolean actual = sut.hasWinner();
-
-        assertFalse(actual);
-    }
 
     @Test
     void IfLineHasWinner_ShouldProvideItAsWinningLine() {
@@ -74,6 +59,27 @@ public class OneLineIsProvided {
 
         assertThrows(WinningLineProvider.NoWinningLineAvailable.class, act);
     }
+
+
+
+
+
+    @Test
+    void IfLineHasWinner_ShouldHaveAWinner(){
+        evaluator.setWinnerForLine(Mark.John, line);
+
+        boolean actual = sut.hasWinner();
+
+        assertTrue(actual);
+    }
+
+    @Test
+    void IfLineHasNoWinner_ShouldNotHaveAWinner(){
+        boolean actual = sut.hasWinner();
+
+        assertFalse(actual);
+    }
+
 
     @Test
     void IfJohnIsWinnerOfLine_ShouldProvideJohnAsWinner() {

@@ -38,13 +38,14 @@ public class TwoLinesAreProvided {
     }
 
     @Test
-    void IfSecondHasWinner_ShouldHaveAWinningLine(){
+    void IfSecondLineHasWinner_ShouldHaveAWinningLine(){
         evaluator.setWinnerForLine(Mark.John, lines[1]);
 
         boolean actual = sut.hasWinningLine();
 
         assertTrue(actual);
     }
+
 
     @Test
     void IfSecondLineHasWinner_ShouldProvideTheSecondAsWinningLine() {
@@ -76,6 +77,7 @@ public class TwoLinesAreProvided {
 
 
 
+
     @Test
     void IfSecondLineHasWinner_ShouldHaveAWinner(){
         evaluator.setWinnerForLine(Mark.John, lines[1]);
@@ -91,6 +93,7 @@ public class TwoLinesAreProvided {
 
         assertFalse(actual);
     }
+
 
     @Test
     void IfJohnWinsWithSecondLine_ShouldProvideJohnAsWinner() {
