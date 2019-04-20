@@ -26,7 +26,7 @@ import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.TicTacToe.TicTacToeWinningLineProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import com.company.TicTacToe.TicTacToeWinningLineProvider.LineEvaluator;
 import com.company.TicTacToe.TicTacToeWinningLineProvider.LineProvider;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
+import com.company.TicTacToe.GameOverRules.WinnerRule.WinningLineRule;
 import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.TicTacToePlayer.PlayerContext;

@@ -125,7 +125,7 @@ public class EquallyMarkedLineEvaluatorTest {
     }
 
 
-    
+
     private void makeLineIsEquallyMarkedWith(Mark m) {
         provider.addMarkedField(first, m);
         provider.addMarkedField(second, m);

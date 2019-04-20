@@ -1,4 +1,4 @@
-package com.company.TicTacToe.GameOverRules.WinningLineRule;
+package com.company.TicTacToe.GameOverRules.WinnerRule;
 
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class WinningLineRuleTest {
+public class WinnerRuleTest {
 
     private LineProviderStub provider = new LineProviderStub();
     private LineEvaluatorStub evaluator = new LineEvaluatorStub();
