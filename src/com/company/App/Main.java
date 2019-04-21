@@ -41,7 +41,7 @@ public class Main {
         showSalutation();
         view.display(board);
 
-        GameLoop loop = factory.makeTicTacToeGameLoop(board);
+        GameLoop loop = factory.makeGameLoop(board);
         loop.play();
         showLeaveTaking();
     }
