@@ -12,7 +12,7 @@ public class GameLoop {
         this.rule = rule;
     }
 
-    public void play() {
+    public void run() {
         while(!rule.isGameOver())
             turn.play();
     }

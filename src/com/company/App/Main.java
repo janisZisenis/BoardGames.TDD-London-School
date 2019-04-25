@@ -47,7 +47,7 @@ public class Main {
         view.display(board);
 
         GameLoop loop = factory.makeGameLoop(board);
-        loop.play();
+        loop.run();
         showLeaveTaking();
     }
 

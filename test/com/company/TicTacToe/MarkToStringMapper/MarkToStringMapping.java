@@ -1,4 +1,4 @@
-package com.company.TicTacToe.View;
+package com.company.TicTacToe.MarkToStringMapper;
 
 import com.company.TicTacToe.Board.Mark;
 import com.company.View.MarkToXOMapper;
