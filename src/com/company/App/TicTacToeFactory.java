@@ -1,37 +1,38 @@
 package com.company.App;
 
-import com.company.CLI.Core.InputGeneration.ConsoleInputAlerter;
-import com.company.CLI.Core.InputGeneration.ConsoleInputGenerator;
-import com.company.CLI.TicTacToe.View.AlertingMessages;
-import com.company.Core.GameLoop.GameLoop;
-import com.company.Core.GameLoop.Turn;
-import com.company.Core.GameLoop.TwoPlayerTurn.Player;
-import com.company.Core.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
-import com.company.Core.GameOverRules.CompositeGameOverRule;
-import com.company.Core.GameOverRules.GameOverRule;
-import com.company.Core.InputGeneration.InputGenerator;
-import com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule;
-import com.company.Core.InputGeneration.InputRule.InputRule;
-import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputReferee;
-import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;
-import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
-import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import com.company.Core.InputGeneration.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
-import com.company.TicTacToe.Board.Board;
-import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
-import com.company.TicTacToe.Board.Mark;
-import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
-import com.company.TicTacToe.GameOverRules.WinnerRule.WinnerRule;
-import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
-import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.TicTacToePlayer.PlayerContext;
-import com.company.TicTacToe.TicTacToePlayer.TicTacToePlayer;
-import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.GameEvaluator.LineEvaluator;
-import com.company.TicTacToe.GameEvaluator.LineProvider;
-import com.company.TicTacToe.GameEvaluator.GameEvaluator;
+import com.company.CLI.View.Core.InputGeneration.ConsoleInputAlerter;
+import com.company.CLI.View.Core.InputGeneration.ConsoleInputGenerator;
+import com.company.CLI.View.TicTacToe.View.AlertingMessages;
+import com.company.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.Model.GameEvaluation.GameEvaluator.GameEvaluator;
+import com.company.Model.GameEvaluation.GameEvaluator.LineEvaluator;
+import com.company.Model.GameEvaluation.GameEvaluator.LineProvider;
+import com.company.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import com.company.Model.GameLoop.GameLoop;
+import com.company.Model.GameLoop.Turn;
+import com.company.Model.GameLoop.TwoPlayerTurn.Player;
+import com.company.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
+import com.company.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
+import com.company.Model.GameLoop.GameOverRule;
+import com.company.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
+import com.company.Model.GameOverRules.WinnerRule.WinnerRule;
+import com.company.Model.Players.InputGenerator;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
+import com.company.Model.InputRules.CompositeInputRule.CompositeInputRule;
+import com.company.Model.InputRules.FieldExistsRule.FieldExistsRule;
+import com.company.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
+import com.company.Model.Board.Board;
+import com.company.Model.Board.HashingBoard.HashingBoard;
+import com.company.Data.Mark;
+import com.company.Model.Board.ObservableBoard.ObservableBoard;
+import com.company.Presentation.BoardPresenter.WinningLineProvider;
+import com.company.Model.Players.PlayerContext;
+import com.company.Model.Players.PlayerImp;
 
 public class TicTacToeFactory {
 
@@ -41,7 +42,7 @@ public class TicTacToeFactory {
     }
 
     public WinningLineProvider makeWinningLineProvider(Board board) {
-        LineProvider provider = new TicTacToeLineProvider();
+        LineProvider provider = new HumbleLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         return new GameEvaluator(provider, evaluator);
     }
@@ -63,7 +64,7 @@ public class TicTacToeFactory {
         InputGenerator generator = makeVerboseInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
-        return new TicTacToePlayer(context);
+        return new PlayerImp(context);
     }
 
     private InputGenerator makeVerboseInputGenerator(Board board) {
@@ -142,7 +143,7 @@ public class TicTacToeFactory {
 
     public GameOverRule makeWinningLineRule(Board board) {
         EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        TicTacToeLineProvider provider = new TicTacToeLineProvider();
+        HumbleLineProvider provider = new HumbleLineProvider();
         GameEvaluator winningLineProvider = new GameEvaluator(provider, evaluator);
         return new WinnerRule(winningLineProvider);
     }
