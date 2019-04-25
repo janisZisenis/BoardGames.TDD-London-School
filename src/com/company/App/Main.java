@@ -14,7 +14,7 @@ import com.company.TicTacToe.GameEvaluator.GameEvaluator;
 public class Main {
 
     private static ObservableBoard board;
-    private static GameEvaluator winnerProvider;
+    private static GameEvaluator gameEvaluator;
 
     private static BoardConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
         BoardConsoleView view = new BoardConsoleView();
@@ -34,7 +34,7 @@ public class Main {
         TicTacToeFactory factory = new TicTacToeFactory();
 
         board = factory.makeDisplayedBoard();
-        winnerProvider = makeTicTacToeWinningLineProvider(board);
+        gameEvaluator = makeTicTacToeWinningLineProvider(board);
 
         BoardConsoleView view = makePresentedBoardConsoleView(factory);
 
@@ -52,8 +52,8 @@ public class Main {
 
     private static void showLeaveTaking() {
         String leaveTaking;
-        if(winnerProvider.hasWinner()) {
-            Mark winner = winnerProvider.getWinner();
+        if(gameEvaluator.hasWinner()) {
+            Mark winner = gameEvaluator.getWinner();
             leaveTaking = "The Winner is " + mapToString(winner) + "!";
         } else {
             leaveTaking = "Draw!";
