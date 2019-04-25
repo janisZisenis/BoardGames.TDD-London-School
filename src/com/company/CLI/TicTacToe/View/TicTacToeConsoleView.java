@@ -1,6 +1,6 @@
 package com.company.CLI.TicTacToe.View;
 
-import com.company.LeaveTaker.LeaveTakerView;
+import com.company.TicTacToe.LeaveTaker.LeaveTakerView;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;

@@ -1,6 +1,5 @@
 package com.company.TicTacToe.LeaveTaker;
 
-import com.company.LeaveTaker.LeaveTakerView;
 import com.company.TicTacToe.Board.Mark;
 
 public class LeaveTakerViewSpy implements LeaveTakerView {

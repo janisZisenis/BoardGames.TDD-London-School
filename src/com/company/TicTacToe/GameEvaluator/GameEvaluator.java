@@ -1,6 +1,6 @@
 package com.company.TicTacToe.GameEvaluator;
 
-import com.company.LeaveTaker.WinnerProvider;
+import com.company.TicTacToe.LeaveTaker.WinnerProvider;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.WinnerRule.HasWinnerProvider;
