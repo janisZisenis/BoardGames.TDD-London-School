@@ -3,12 +3,12 @@ package com.company.App;
 import com.company.CLI.Core.InputGeneration.ConsoleInputAlerter;
 import com.company.CLI.Core.InputGeneration.ConsoleInputGenerator;
 import com.company.CLI.TicTacToe.View.AlertingMessages;
-import com.company.CLI.TicTacToe.View.BoardConsoleView;
 import com.company.Core.GameLoop.GameLoop;
 import com.company.Core.GameLoop.Turn;
 import com.company.Core.GameLoop.TwoPlayerTurn.Player;
 import com.company.Core.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 import com.company.Core.GameOverRules.CompositeGameOverRule;
+import com.company.Core.GameOverRules.GameOverRule;
 import com.company.Core.InputGeneration.InputGenerator;
 import com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule;
 import com.company.Core.InputGeneration.InputRule.InputRule;
@@ -21,62 +21,70 @@ import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.HashingBoard.HashingBoard;
 import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
+import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.LineEvaluatorImp.LineEvaluatorImp;
-import com.company.TicTacToe.GameOverRules.WinningLineRule.WinningLineRule;
+import com.company.TicTacToe.GameOverRules.WinnerRule.WinnerRule;
 import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.TicTacToe.PlayerImp.PlayerContext;
-import com.company.TicTacToe.PlayerImp.PlayerImp;
+import com.company.TicTacToe.TicTacToePlayer.PlayerContext;
+import com.company.TicTacToe.TicTacToePlayer.TicTacToePlayer;
+import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineProvider;
+import com.company.TicTacToe.GameEvaluator.GameEvaluator;
 
 public class TicTacToeFactory {
 
-    public Board makeDisplayedBoard() {
-        ObservableBoard board = makeBoard();
-        BoardConsoleView printer = makeBoardConsoleView(board);
-        board.attach(printer);
+    public ObservableBoard makeDisplayedBoard() {
+        ObservableBoard board = makeObservableBoard();
         return board;
     }
-    
-    public GameLoop makeTicTacToeGameLoop(Board board) {
-        Turn turn = makeTicTacToeTurn(board);
-        CompositeGameOverRule rule = makeTicTacToeGameOverRule(board);
+
+    public WinningLineProvider makeWinningLineProvider(Board board) {
+        LineProvider provider = new TicTacToeLineProvider();
+        LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
+        return new GameEvaluator(provider, evaluator);
+    }
+
+    public GameLoop makeGameLoop(Board board) {
+        Turn turn = makeTurn(board);
+        GameOverRule rule = makeTicTacToeGameOverRule(board);
         return new GameLoop(turn, rule);
     }
 
-    private TwoPlayerTurn makeTicTacToeTurn(Board board) {
-        Player john = makeTicTacToePlayer(board, Mark.John);
-        Player haley = makeTicTacToePlayer(board, Mark.Haley);
+    private Turn makeTurn(Board board) {
+        Player john = makePlayer(board, Mark.John);
+        Player haley = makePlayer(board, Mark.Haley);
 
         return new TwoPlayerTurn(john, haley);
     }
 
-    private Player makeTicTacToePlayer(Board board, Mark mark) {
-        InputGenerator generator = makeVerboseTicTacToeInputGenerator(board);
+    private Player makePlayer(Board board, Mark mark) {
+        InputGenerator generator = makeVerboseInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
-        return new PlayerImp(context);
+        return new TicTacToePlayer(context);
     }
 
-    private InputGenerator makeVerboseTicTacToeInputGenerator(Board board) {
-        InputReferee referee = makeTicTacToeInputReferee(board);
+    private InputGenerator makeVerboseInputGenerator(Board board) {
+        InputReferee referee = makeInputReferee(board);
         InputGenerator generator = makeConsoleGenerator();
 
         return new VerboseValidatingInputGenerator(generator, referee);
     }
 
-    private InputReferee makeTicTacToeInputReferee(Board board) {
-        RuleChoosingInputAlerter alerter = makeTicTacToeInputAlerter(board);
-        InputRule rule = makeTicTacToeInputRule(board);
+    private InputReferee makeInputReferee(Board board) {
+        InputAlerter alerter = makeInputAlerter(board);
+        InputRule rule = makeInputRule(board);
 
         return new InputRefereeImp(rule, alerter);
     }
 
-    private RuleChoosingInputAlerter makeTicTacToeInputAlerter(Board board) {
-        InputRule existsRule = makeTicTacToeFieldExistsRule();
-        InputAlerter existsAlerter = makeTicTacToeFieldExistsAlerter();
-        InputRule isFreeRule = makeTicTacToeFieldIsEmptyRule(board);
-        InputAlerter isFreeAlerter = makeTicTacToeFieldIsEmptyAlerter();
+    private InputAlerter makeInputAlerter(Board board) {
+        InputRule existsRule = makeFieldExistsRule();
+        InputAlerter existsAlerter = makeFieldExistsAlerter();
+        InputRule isFreeRule = makeFieldIsEmptyRule(board);
+        InputAlerter isFreeAlerter = makeFieldIsEmptyAlerter();
 
         RuleChoosingInputAlerter choosing = new RuleChoosingInputAlerter();
         choosing.register(existsRule, existsAlerter);
@@ -84,25 +92,25 @@ public class TicTacToeFactory {
         return choosing;
     }
 
-    private InputRule makeTicTacToeFieldExistsRule() {
+    private InputRule makeFieldExistsRule() {
         return new FieldExistsRule();
     }
 
-    private InputAlerter makeTicTacToeFieldExistsAlerter() {
+    private InputAlerter makeFieldExistsAlerter() {
         return new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
     }
 
-    private InputRule makeTicTacToeFieldIsEmptyRule(Board board) {
+    private InputRule makeFieldIsEmptyRule(Board board) {
         return new FieldIsEmptyRule(board);
     }
 
-    private InputAlerter makeTicTacToeFieldIsEmptyAlerter() {
+    private InputAlerter makeFieldIsEmptyAlerter() {
         return new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
     }
 
-    private InputRule makeTicTacToeInputRule(Board board) {
-        InputRule existsRule = makeTicTacToeFieldExistsRule();
-        InputRule isFreeRule = makeTicTacToeFieldIsEmptyRule(board);
+    private InputRule makeInputRule(Board board) {
+        InputRule existsRule = makeFieldExistsRule();
+        InputRule isFreeRule = makeFieldIsEmptyRule(board);
 
         CompositeInputRule composite = new CompositeInputRule();
         composite.add(existsRule);
@@ -111,13 +119,15 @@ public class TicTacToeFactory {
         return composite;
     }
 
-    private ConsoleInputGenerator makeConsoleGenerator() {
+    private InputGenerator makeConsoleGenerator() {
         return new ConsoleInputGenerator();
     }
 
-    private CompositeGameOverRule makeTicTacToeGameOverRule(Board board) {
-        NumberOfMovesRule numberOfMovesRule = makeNumberOfMovesRule(board);
-        WinningLineRule winningLineRule = makeWinningLineRule(board);
+
+
+    private GameOverRule makeTicTacToeGameOverRule(Board board) {
+        GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
+        GameOverRule winningLineRule = makeWinningLineRule(board);
 
         CompositeGameOverRule rule = new CompositeGameOverRule();
         rule.add(numberOfMovesRule);
@@ -126,23 +136,20 @@ public class TicTacToeFactory {
         return rule;
     }
 
-    private NumberOfMovesRule makeNumberOfMovesRule(Board board) {
+    private GameOverRule makeNumberOfMovesRule(Board board) {
         return new NumberOfMovesRule(board);
     }
 
-    private WinningLineRule makeWinningLineRule(Board board) {
-        LineEvaluatorImp evaluator = new LineEvaluatorImp(board);
+    public GameOverRule makeWinningLineRule(Board board) {
+        EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        return new WinningLineRule(provider, evaluator);
+        GameEvaluator winningLineProvider = new GameEvaluator(provider, evaluator);
+        return new WinnerRule(winningLineProvider);
     }
     
-    private ObservableBoard makeBoard() {
+    private ObservableBoard makeObservableBoard() {
         Board hashing = new HashingBoard();
         return new ObservableBoard(hashing);
     }
 
-    private BoardConsoleView makeBoardConsoleView(Board board) {
-        return new BoardConsoleView(board);
-    }
-    
 }

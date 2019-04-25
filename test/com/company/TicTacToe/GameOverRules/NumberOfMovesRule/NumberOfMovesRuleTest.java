@@ -10,6 +10,10 @@ public class NumberOfMovesRuleTest {
     private MarkedFieldCountProviderStub provider = new MarkedFieldCountProviderStub();
     private NumberOfMovesRule sut = new NumberOfMovesRule(provider);
 
+    public NumberOfMovesRuleTest() {
+        int i = 0;
+    }
+
     @Test
     void If0FieldsAreMarked_ShouldNotBeGameOver() {
         provider.setMarkedFieldCount(0);

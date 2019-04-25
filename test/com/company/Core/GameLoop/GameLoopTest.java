@@ -11,10 +11,10 @@ public class GameLoopTest {
     private GameLoop sut = new GameLoop(turn, rule);
 
     @Test
-    void IfGameIsOverAfterOneTurn_TheShouldHavePlayedOnce() {
+    void IfGameIsOverAfterOneTurn_TheTurnShouldHavePlayedOnce() {
         rule.setTimesNotGameOver(1);
 
-        sut.play();
+        sut.run();
 
         assertTurnHasPlayedTimes(1);
     }
@@ -23,7 +23,7 @@ public class GameLoopTest {
     void IfGameIsOverImmediately_TheTurnShouldNotHavePlayed() {
         rule.setTimesNotGameOver(0);
 
-        sut.play();
+        sut.run();
 
         assertTurnHasPlayedTimes(0);
     }
@@ -32,7 +32,7 @@ public class GameLoopTest {
     void IfGameIsOverAfterTwoTurns_TheShouldHavePlayedTwice() {
         rule.setTimesNotGameOver(2);
 
-        sut.play();
+        sut.run();
 
         assertTurnHasPlayedTimes(2);
     }
@@ -41,7 +41,7 @@ public class GameLoopTest {
     void IfGameIsOverAfterThreeTurns_TheShouldHavePlayedThreeTimes() {
         rule.setTimesNotGameOver(3);
 
-        sut.play();
+        sut.run();
 
         assertTurnHasPlayedTimes(3);
     }
