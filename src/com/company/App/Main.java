@@ -1,17 +1,18 @@
 package com.company.App;
 
-import com.company.CLI.TicTacToe.View.TicTacToeConsoleView;
-import com.company.Core.GameLoop.GameLoop;
-import com.company.LeaveTaker.LeaveTaker;
-import com.company.TicTacToe.Board.Board;
-import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
-import com.company.TicTacToe.BoardPresenter.BoardPresenter;
-import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.GameEvaluator.GameEvaluator;
-import com.company.TicTacToe.GameEvaluator.LineEvaluator;
-import com.company.View.MarkToStringMapper;
-import com.company.View.MarkToXOMapper;
+import com.company.CLI.View.TicTacToe.View.TicTacToeConsoleView;
+import com.company.Model.GameLoop.GameLoop;
+import com.company.Presentation.LeaveTaker.LeaveTaker;
+import com.company.Model.Board.Board;
+import com.company.Model.Board.ObservableBoard.ObservableBoard;
+import com.company.Presentation.BoardPresenter.BoardPresenter;
+import com.company.Presentation.BoardPresenter.WinningLineProvider;
+import com.company.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.Model.GameEvaluation.GameEvaluator.GameEvaluator;
+import com.company.Model.GameEvaluation.GameEvaluator.LineEvaluator;
+import com.company.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import com.company.Presentation.MarkToStringMapper.MarkToStringMapper;
+import com.company.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class Main {
 
@@ -29,7 +30,7 @@ public class Main {
     }
 
     private static GameEvaluator makeTicTacToeWinningLineProvider(Board board) {
-        TicTacToeLineProvider provider = new TicTacToeLineProvider();
+        HumbleLineProvider provider = new HumbleLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         return new GameEvaluator(provider, evaluator);
     }
