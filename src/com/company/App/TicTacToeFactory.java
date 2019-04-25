@@ -28,10 +28,10 @@ import com.company.TicTacToe.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import com.company.TicTacToe.TicTacToePlayer.PlayerContext;
 import com.company.TicTacToe.TicTacToePlayer.TicTacToePlayer;
-import com.company.TicTacToe.WinningProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.WinningProvider.LineEvaluator;
-import com.company.TicTacToe.WinningProvider.LineProvider;
-import com.company.TicTacToe.WinningProvider.WinningProvider;
+import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineProvider;
+import com.company.TicTacToe.GameEvaluator.GameEvaluator;
 
 public class TicTacToeFactory {
 
@@ -43,7 +43,7 @@ public class TicTacToeFactory {
     public WinningLineProvider makeWinningLineProvider(Board board) {
         LineProvider provider = new TicTacToeLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        return new WinningProvider(provider, evaluator);
+        return new GameEvaluator(provider, evaluator);
     }
 
     public GameLoop makeGameLoop(Board board) {
@@ -123,7 +123,7 @@ public class TicTacToeFactory {
         return new ConsoleInputGenerator();
     }
 
-    
+
 
     private GameOverRule makeTicTacToeGameOverRule(Board board) {
         GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
@@ -143,7 +143,7 @@ public class TicTacToeFactory {
     public GameOverRule makeWinningLineRule(Board board) {
         EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
-        WinningProvider winningLineProvider = new WinningProvider(provider, evaluator);
+        GameEvaluator winningLineProvider = new GameEvaluator(provider, evaluator);
         return new WinnerRule(winningLineProvider);
     }
     

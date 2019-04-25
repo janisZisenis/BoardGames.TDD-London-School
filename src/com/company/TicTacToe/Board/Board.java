@@ -3,7 +3,7 @@ package com.company.TicTacToe.Board;
 import com.company.TicTacToe.GameOverRules.NumberOfMovesRule.MarkedFieldCountProvider;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
-import com.company.TicTacToe.WinningProvider.EquallyMarkedLineEvaluator.MarkedFieldProvider;
+import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import com.company.TicTacToe.TicTacToePlayer.MarkFieldService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {

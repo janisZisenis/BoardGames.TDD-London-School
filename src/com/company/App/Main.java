@@ -7,14 +7,14 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.BoardPresenter.BoardPresenter;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
-import com.company.TicTacToe.WinningProvider.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.WinningProvider.LineEvaluator;
-import com.company.TicTacToe.WinningProvider.WinningProvider;
+import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineEvaluator;
+import com.company.TicTacToe.GameEvaluator.GameEvaluator;
 
 public class Main {
 
     private static ObservableBoard board;
-    private static WinningProvider winnerProvider;
+    private static GameEvaluator winnerProvider;
 
     private static BoardConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
         BoardConsoleView view = new BoardConsoleView();
@@ -24,10 +24,10 @@ public class Main {
         return view;
     }
 
-    private static WinningProvider makeTicTacToeWinningLineProvider(Board board) {
+    private static GameEvaluator makeTicTacToeWinningLineProvider(Board board) {
         TicTacToeLineProvider provider = new TicTacToeLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        return new WinningProvider(provider, evaluator);
+        return new GameEvaluator(provider, evaluator);
     }
 
     public static void main(String[] args) {
