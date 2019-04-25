@@ -7,13 +7,13 @@ import com.company.TicTacToe.BoardPresenter.BoardView;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 import com.company.TicTacToe.Line;
 
-public class BoardConsoleView implements BoardView {
+public class TicTacToeConsoleView implements BoardView {
 
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
     private final int rowColumn = BoardBoundaries.rowColumnCount;
 
-    public BoardConsoleView() {}
+    public TicTacToeConsoleView() {}
 
     public void display(Board board) {
         for(int row = 0; row < rowColumn; row++) {
@@ -63,6 +63,14 @@ public class BoardConsoleView implements BoardView {
         return f.equals(line.getFirst())
                 || f.equals(line.getSecond())
                 || f.equals(line.getThird());
+    }
+
+    public void showSalutation(String salutation) {
+        System.out.println(salutation);
+    }
+
+    public void showLeaveTaking(String leaveTaking) {
+        System.out.println(leaveTaking);
     }
 
 }

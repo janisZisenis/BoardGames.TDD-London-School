@@ -1,6 +1,6 @@
 package com.company.App;
 
-import com.company.CLI.TicTacToe.View.BoardConsoleView;
+import com.company.CLI.TicTacToe.View.TicTacToeConsoleView;
 import com.company.Core.GameLoop.GameLoop;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.Mark;
@@ -10,14 +10,17 @@ import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import com.company.TicTacToe.GameEvaluator.LineEvaluator;
 import com.company.TicTacToe.GameEvaluator.GameEvaluator;
+import com.company.View.MarkToXOMapper;
 
 public class Main {
 
     private static ObservableBoard board;
     private static GameEvaluator gameEvaluator;
+    private static MarkToXOMapper mapper;
+    private static TicTacToeConsoleView view;
 
-    private static BoardConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
-        BoardConsoleView view = new BoardConsoleView();
+    private static TicTacToeConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
+        TicTacToeConsoleView view = new TicTacToeConsoleView();
         WinningLineProvider winningLineProvider = factory.makeWinningLineProvider(board);
         BoardPresenter presenter = new BoardPresenter(view, board, winningLineProvider);
         board.attach(presenter);
@@ -35,8 +38,8 @@ public class Main {
 
         board = factory.makeDisplayedBoard();
         gameEvaluator = makeTicTacToeWinningLineProvider(board);
-
-        BoardConsoleView view = makePresentedBoardConsoleView(factory);
+        mapper = new MarkToXOMapper();
+        view = makePresentedBoardConsoleView(factory);
 
         showSalutation();
         view.display(board);
@@ -47,22 +50,18 @@ public class Main {
     }
 
     private static void showSalutation() {
-        System.out.println("Welcome to TicTacToe");
+        view.showSalutation("Welcome to TicTacToe");
     }
 
     private static void showLeaveTaking() {
         String leaveTaking;
         if(gameEvaluator.hasWinner()) {
             Mark winner = gameEvaluator.getWinner();
-            leaveTaking = "The Winner is " + mapToString(winner) + "!";
+            leaveTaking = "The Winner is " + mapper.map(winner) + "!";
         } else {
             leaveTaking = "Draw!";
         }
-        System.out.println(leaveTaking);
-    }
-
-    private static String mapToString(Mark m) {
-        return m == Mark.John ? "X" : "O";
+        view.showLeaveTaking(leaveTaking);
     }
 
 }
