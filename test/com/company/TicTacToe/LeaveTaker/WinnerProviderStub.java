@@ -1,6 +1,6 @@
-package com.company.TicTacToe.LeaveTaking;
+package com.company.TicTacToe.LeaveTaker;
 
-import com.company.LeaveTaking.WinnerProvider;
+import com.company.LeaveTaker.WinnerProvider;
 import com.company.TicTacToe.Board.Mark;
 
 public class WinnerProviderStub implements WinnerProvider {

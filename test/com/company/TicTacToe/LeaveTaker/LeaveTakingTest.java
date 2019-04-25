@@ -1,6 +1,6 @@
-package com.company.TicTacToe.LeaveTaking;
+package com.company.TicTacToe.LeaveTaker;
 
-import com.company.LeaveTaking.LeaveTaker;
+import com.company.LeaveTaker.LeaveTaker;
 import com.company.TicTacToe.Board.Mark;
 import org.junit.jupiter.api.Test;
 

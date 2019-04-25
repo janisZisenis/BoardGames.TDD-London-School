@@ -1,5 +1,6 @@
 package com.company.CLI.TicTacToe.View;
 
+import com.company.LeaveTaker.LeaveTakerView;
 import com.company.TicTacToe.Board.Board;
 import com.company.TicTacToe.Board.Field.Field;
 import com.company.TicTacToe.Board.Mark;
@@ -8,7 +9,7 @@ import com.company.TicTacToe.Constants.BoardBoundaries;
 import com.company.TicTacToe.Line;
 import com.company.View.MarkToStringMapper;
 
-public class TicTacToeConsoleView implements BoardView {
+public class TicTacToeConsoleView implements BoardView, LeaveTakerView {
 
     public static final String salutation = "Welcome to TicTacToe";
     public static final String draw = "Draw";

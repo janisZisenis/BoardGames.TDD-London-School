@@ -1,4 +1,4 @@
-package com.company.LeaveTaking;
+package com.company.LeaveTaker;
 
 import com.company.TicTacToe.Board.Mark;
 
