@@ -6,14 +6,20 @@ import com.company.TicTacToe.Board.Mark;
 import com.company.TicTacToe.BoardPresenter.BoardView;
 import com.company.TicTacToe.Constants.BoardBoundaries;
 import com.company.TicTacToe.Line;
+import com.company.View.MarkToStringMapper;
 
 public class TicTacToeConsoleView implements BoardView {
 
+    public static final String salutation = "Welcome to TicTacToe";
+    public static final String draw = "Draw";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_RESET = "\u001B[0m";
     private final int rowColumn = BoardBoundaries.rowColumnCount;
+    private final MarkToStringMapper mapper;
 
-    public TicTacToeConsoleView() {}
+    public TicTacToeConsoleView(MarkToStringMapper mapper) {
+        this.mapper = mapper;
+    }
 
     public void display(Board board) {
         for(int row = 0; row < rowColumn; row++) {
@@ -65,12 +71,16 @@ public class TicTacToeConsoleView implements BoardView {
                 || f.equals(line.getThird());
     }
 
-    public void showSalutation(String salutation) {
+    public void showSalutation() {
         System.out.println(salutation);
     }
 
-    public void showLeaveTaking(String leaveTaking) {
-        System.out.println(leaveTaking);
+    public void showWinner(Mark winner) {
+        System.out.println("The Winner is " + mapper.map(winner) + "!");
+    }
+
+    public void showDraw() {
+        System.out.println(draw);
     }
 
 }

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,12 +85,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2431" />
-          <entry key="java" value="93125" />
+          <entry key="java" value="93551" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="93125" />
+          <entry key="JAVA" value="93551" />
           <entry key="PLAIN_TEXT" value="2431" />
         </counts>
       </usages-collector>
@@ -95,13 +98,13 @@
         <counts>
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="2010" />
+          <entry key="java" value="2012" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="2010" />
+          <entry key="JAVA" value="2012" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -110,32 +113,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+            <state>
+              <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="method#printRow#0;class#BoardConsoleView#0" />
+                <element signature="method#display#1;class#BoardConsoleView#0" />
+                <element signature="method#lineContains#0;class#BoardConsoleView#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
-                <element signature="method#display#0;class#BoardConsoleView#0" />
-                <element signature="method#printRow#0;class#BoardConsoleView#0" />
-                <element signature="method#printField#0;class#BoardConsoleView#0" />
-                <element signature="method#display#1;class#BoardConsoleView#0" />
-                <element signature="method#lineContains#0;class#BoardConsoleView#0" />
-                <element signature="e#2026#2027#0" expanded="true" />
-                <element signature="e#2072#2073#0" expanded="true" />
-                <element signature="e#2131#2132#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
+                <element signature="e#160#161#0" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,7 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/WinningLineProviderTest/TicTacToeWinningLineProvider.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/WinningLineProviderTest/WinningLineDetectingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/WinningLineProviderTest/HasWinningLineTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/WinningLineProviderTest/TicTacToeWinningLineProviderTest.java" />
@@ -240,11 +248,12 @@
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/BoardEvaluator/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/View/MarkToStringMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/View/MarkToStringMapping.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java" />
       </list>
     </option>
   </component>
@@ -439,6 +448,13 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -460,7 +476,7 @@
     <property name="SearchEverywhereHistoryKey" value="COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556205297516" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556205973603" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -477,11 +493,11 @@
       <recent name="com.company.TicTacToe.GameOverRules.NumberOfMovesRule" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.View" />
       <recent name="com.company.App" />
       <recent name="com.company.TicTacToe.GameOverRules.WinnerRule" />
       <recent name="com.company.TicTacToe.TicTacToeWinningLineProviderTest" />
       <recent name="com.company.Core.InputGeneration.InputRefereeImp" />
-      <recent name="com.company.TicTacToe.Board.ObservableBoard" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company.TicTacToe.View" />
@@ -503,7 +519,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.App.Main" />
       <module name="TicTacToe.Main" />
@@ -596,17 +612,11 @@
       <workItem from="1554716171787" duration="251000" />
       <workItem from="1555077027993" duration="5867000" />
       <workItem from="1556202920891" duration="830000" />
-      <workItem from="1556203869320" duration="1308000" />
+      <workItem from="1556203869320" duration="2075000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.20 at 17h 12m 38s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.20 at 17h 13m 25s.xml">
-      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_TicTacToe_Main - 2019.04.20 at 17h 14m 05s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
@@ -631,15 +641,21 @@
     <history-entry file="All_in_TicTacToe_Main - 2019.04.25 at 17h 10m 41s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.25 at 17h 15m 01s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.25 at 17h 25m 37s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237553000" />
+    <option name="totallyTimeSpent" value="238320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28411514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28411514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -648,7 +664,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32866243" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21139896" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21139896" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44713375" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -657,7 +673,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007163" side_tool="true" weight="0.32866243" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.40254778" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.40207255" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -740,7 +756,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/App/Main.java</url>
-          <line>29</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
@@ -748,13 +764,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="304" selection-start-line="304" selection-end-line="304" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinnerProvidingTest.java" />
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeWinningLineProviderTest/WinningLinesConfigurator.java" />
     <entry file="file://$PROJECT_DIR$/test/com/company/TicTacToe/GameEvaluator/TwoLinesAreProvided.java">
@@ -1131,41 +1140,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding>
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        <state relative-caret-position="191">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state>
+          <caret column="39" lean-forward="true" selection-start-column="39" selection-end-column="39" />
           <folding>
-            <element signature="method#display#0;class#BoardConsoleView#0" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
             <element signature="method#printRow#0;class#BoardConsoleView#0" />
-            <element signature="method#printField#0;class#BoardConsoleView#0" />
             <element signature="method#display#1;class#BoardConsoleView#0" />
             <element signature="method#lineContains#0;class#BoardConsoleView#0" />
-            <element signature="e#2026#2027#0" expanded="true" />
-            <element signature="e#2072#2073#0" expanded="true" />
-            <element signature="e#2131#2132#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -8,8 +8,9 @@ import com.company.TicTacToe.Board.ObservableBoard.ObservableBoard;
 import com.company.TicTacToe.BoardPresenter.BoardPresenter;
 import com.company.TicTacToe.BoardPresenter.WinningLineProvider;
 import com.company.TicTacToe.GameEvaluator.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import com.company.TicTacToe.GameEvaluator.LineEvaluator;
 import com.company.TicTacToe.GameEvaluator.GameEvaluator;
+import com.company.TicTacToe.GameEvaluator.LineEvaluator;
+import com.company.View.MarkToStringMapper;
 import com.company.View.MarkToXOMapper;
 
 public class Main {
@@ -20,7 +21,8 @@ public class Main {
     private static TicTacToeConsoleView view;
 
     private static TicTacToeConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
-        TicTacToeConsoleView view = new TicTacToeConsoleView();
+        MarkToStringMapper mapper = new MarkToXOMapper();
+        TicTacToeConsoleView view = new TicTacToeConsoleView(mapper);
         WinningLineProvider winningLineProvider = factory.makeWinningLineProvider(board);
         BoardPresenter presenter = new BoardPresenter(view, board, winningLineProvider);
         board.attach(presenter);
@@ -50,18 +52,16 @@ public class Main {
     }
 
     private static void showSalutation() {
-        view.showSalutation("Welcome to TicTacToe");
+        view.showSalutation();
     }
 
     private static void showLeaveTaking() {
-        String leaveTaking;
         if(gameEvaluator.hasWinner()) {
             Mark winner = gameEvaluator.getWinner();
-            leaveTaking = "The Winner is " + mapper.map(winner) + "!";
+            view.showWinner(winner);
         } else {
-            leaveTaking = "Draw!";
+            view.showDraw();
         }
-        view.showLeaveTaking(leaveTaking);
     }
 
 }
