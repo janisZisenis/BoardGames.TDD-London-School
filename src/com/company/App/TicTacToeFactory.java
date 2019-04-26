@@ -65,14 +65,14 @@ public class TicTacToeFactory {
         return new TwoPlayerTurn(john, haley);
     }
 
-    private Player makeHumanPlayer(Board board, Mark mark) {
+    public Player makeHumanPlayer(Board board, Mark mark) {
         InputGenerator generator = makeConsoleInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
-    private Player makeComputerPlayer(Board board, Mark mark) {
+    public Player makeComputerPlayer(Board board, Mark mark) {
         InputGenerator generator = makeComputerInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
@@ -145,7 +145,7 @@ public class TicTacToeFactory {
 
 
 
-    private GameOverRule makeTicTacToeGameOverRule(Board board) {
+    public GameOverRule makeTicTacToeGameOverRule(Board board) {
         GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
         GameOverRule winningLineRule = makeWinningLineRule(board);
 

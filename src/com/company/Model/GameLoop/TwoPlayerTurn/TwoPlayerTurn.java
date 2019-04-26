@@ -7,9 +7,8 @@ public class TwoPlayerTurn implements Turn {
     private Player current;
 
     public TwoPlayerTurn(Player first, Player second) {
-        this.first = first;
+        this.first = this.current = first;
         this.second = second;
-        this.current = first;
     }
 
     public void play() {
