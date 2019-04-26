@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class TwoPlayerTurnTest {
+public class AlternatePlayingTest {
 
     private PlayerSpy first = new PlayerSpy();
     private PlayerSpy second = new PlayerSpy();
