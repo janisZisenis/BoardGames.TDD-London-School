@@ -31,7 +31,7 @@ public class PresentingInputGeneratorTest {
 
         sut.generate();
 
-        Input actual = presenter.getPresentedInput();
+        Input actual = presenter.getShownInput();
         Input expected = inputs[0];
         assertEquals(expected, actual);
     }

@@ -3,12 +3,12 @@ package com.company.Model.InputGenerators.PresentingInputGenerator;
 import com.company.Data.Input.Input;
 
 public class InputPresenterSpy extends InputPresenterDummy {
-    private Input presented;
+    private Input shown;
 
     public void present(Input input) {
-        presented = input;
+        shown = input;
     }
-    public Input getPresentedInput() {
-        return presented;
+    public Input getShownInput() {
+        return shown;
     }
 }
