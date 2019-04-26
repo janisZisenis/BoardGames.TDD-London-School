@@ -1,38 +1,40 @@
 package com.company.App;
 
-import com.company.CLI.View.Core.InputGeneration.ConsoleInputAlerter;
-import com.company.CLI.View.Core.InputGeneration.ConsoleInputGenerator;
-import com.company.CLI.View.TicTacToe.View.AlertingMessages;
+import com.company.CLI.View.InputGenerators.ConsoleInputAlerter;
+import com.company.CLI.View.InputGenerators.ConsoleInputGenerator;
+import com.company.CLI.View.TicTacToeView.AlertingMessages;
+import com.company.Data.Mark;
+import com.company.Model.Board.Board;
+import com.company.Model.Board.HashingBoard.HashingBoard;
+import com.company.Model.Board.ObservableBoard.ObservableBoard;
 import com.company.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import com.company.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import com.company.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import com.company.Model.GameEvaluation.GameEvaluator.LineProvider;
 import com.company.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import com.company.Model.GameLoop.GameLoop;
+import com.company.Model.GameLoop.GameOverRule;
 import com.company.Model.GameLoop.Turn;
 import com.company.Model.GameLoop.TwoPlayerTurn.Player;
 import com.company.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 import com.company.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import com.company.Model.GameLoop.GameOverRule;
 import com.company.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.Model.GameOverRules.WinnerRule.WinnerRule;
-import com.company.Model.Players.InputGenerator;
+import com.company.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
+import com.company.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
+import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
 import com.company.Model.InputRules.CompositeInputRule.CompositeInputRule;
 import com.company.Model.InputRules.FieldExistsRule.FieldExistsRule;
 import com.company.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
-import com.company.Model.Board.Board;
-import com.company.Model.Board.HashingBoard.HashingBoard;
-import com.company.Data.Mark;
-import com.company.Model.Board.ObservableBoard.ObservableBoard;
-import com.company.Presentation.BoardPresenter.WinningLineProvider;
+import com.company.Model.Players.InputGenerator;
 import com.company.Model.Players.PlayerContext;
 import com.company.Model.Players.PlayerImp;
+import com.company.Presentation.BoardPresenter.WinningLineProvider;
 
 public class TicTacToeFactory {
 
@@ -54,17 +56,30 @@ public class TicTacToeFactory {
     }
 
     private Turn makeTurn(Board board) {
-        Player john = makePlayer(board, Mark.John);
-        Player haley = makePlayer(board, Mark.Haley);
+        Player john = makeHumanPlayer(board, Mark.John);
+        Player haley = makeComputerPlayer(board, Mark.Haley);
 
         return new TwoPlayerTurn(john, haley);
     }
 
-    private Player makePlayer(Board board, Mark mark) {
+    private Player makeHumanPlayer(Board board, Mark mark) {
         InputGenerator generator = makeVerboseInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
+    }
+
+    private Player makeComputerPlayer(Board board, Mark mark) {
+        InputGenerator generator = makeRandomInputGenerator(board);
+        PlayerContext context = new PlayerContext(generator, board, mark);
+
+        return new PlayerImp(context);
+    }
+
+    private InputGenerator makeRandomInputGenerator(Board board) {
+        InputGenerator generator = new RandomInputGenerator();
+        InputRule rule = makeInputRule(board);
+        return new ValidatingInputGenerator(generator, rule);
     }
 
     private InputGenerator makeVerboseInputGenerator(Board board) {
