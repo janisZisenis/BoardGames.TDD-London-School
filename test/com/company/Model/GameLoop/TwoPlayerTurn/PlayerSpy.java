@@ -1,6 +1,6 @@
 package com.company.Model.GameLoop.TwoPlayerTurn;
 
-public class PlayerSpy implements Player {
+public class PlayerSpy extends PlayerDummy {
     private int count = 0;
 
     public void playMove() {

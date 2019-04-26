@@ -3,6 +3,7 @@ package com.company.App;
 import com.company.CLI.View.InputGenerators.ConsoleInputAlerter;
 import com.company.CLI.View.InputGenerators.ConsoleInputGenerator;
 import com.company.CLI.View.InputGenerators.ConsoleInputPresenter;
+import com.company.CLI.View.InputGenerators.ConsoleTurnMessageView;
 import com.company.CLI.View.TicTacToeView.AlertingMessages;
 import com.company.Data.Mark;
 import com.company.Model.Board.Board;
@@ -17,7 +18,7 @@ import com.company.Model.GameLoop.GameLoop;
 import com.company.Model.GameLoop.GameOverRule;
 import com.company.Model.GameLoop.Turn;
 import com.company.Model.GameLoop.TwoPlayerTurn.Player;
-import com.company.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
+import com.company.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import com.company.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import com.company.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.Model.GameOverRules.WinnerRule.WinnerRule;
@@ -62,17 +63,20 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        return new TwoPlayerTurn(john, haley);
+        ConsoleTurnMessageView view = new ConsoleTurnMessageView();
+        view.register(john, "X");
+        view.register(haley, "O");
+        return new VerboseTwoPlayerTurn(john, haley, view);
     }
 
-    private Player makeHumanPlayer(Board board, Mark mark) {
+    public Player makeHumanPlayer(Board board, Mark mark) {
         InputGenerator generator = makeConsoleInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
-    private Player makeComputerPlayer(Board board, Mark mark) {
+    public Player makeComputerPlayer(Board board, Mark mark) {
         InputGenerator generator = makeComputerInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
@@ -145,7 +149,7 @@ public class TicTacToeFactory {
 
 
 
-    private GameOverRule makeTicTacToeGameOverRule(Board board) {
+    public GameOverRule makeTicTacToeGameOverRule(Board board) {
         GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
         GameOverRule winningLineRule = makeWinningLineRule(board);
 

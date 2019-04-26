@@ -11,10 +11,10 @@ import com.company.Presentation.MarkToStringMapper.MarkToStringMapper;
 
 public class TicTacToeConsoleView implements BoardView, LeaveTakerView {
 
-    public static final String salutation = "Welcome to Presentation";
-    public static final String draw = "Draw";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_RESET = "\u001B[0m";
+    private static final String salutation = "Welcome to Presentation";
+    private static final String draw = "Draw";
+    private static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_RESET = "\u001B[0m";
     private final int rowColumn = BoardBoundaries.rowColumnCount;
     private final MarkToStringMapper mapper;
 

@@ -1,24 +1,27 @@
 package com.company.App;
 
 import com.company.CLI.View.TicTacToeView.TicTacToeConsoleView;
-import com.company.Model.GameLoop.GameLoop;
-import com.company.Presentation.LeaveTaker.LeaveTaker;
 import com.company.Model.Board.Board;
 import com.company.Model.Board.ObservableBoard.ObservableBoard;
-import com.company.Presentation.BoardPresenter.BoardPresenter;
-import com.company.Presentation.BoardPresenter.WinningLineProvider;
 import com.company.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import com.company.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import com.company.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import com.company.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import com.company.Model.GameLoop.GameLoop;
+import com.company.Presentation.BoardPresenter.BoardPresenter;
+import com.company.Presentation.BoardPresenter.WinningLineProvider;
+import com.company.Presentation.LeaveTaker.LeaveTaker;
 import com.company.Presentation.MarkToStringMapper.MarkToStringMapper;
 import com.company.Presentation.MarkToStringMapper.MarkToXOMapper;
+
+import java.util.HashMap;
 
 public class Main {
 
     private static ObservableBoard board;
     private static GameEvaluator gameEvaluator;
     private static TicTacToeConsoleView view;
+    private static HashMap<Object, String> mapping = new HashMap<>();
 
     private static TicTacToeConsoleView makePresentedBoardConsoleView(TicTacToeFactory factory) {
         MarkToStringMapper mapper = new MarkToXOMapper();
@@ -48,6 +51,7 @@ public class Main {
 
         GameLoop loop = factory.makeGameLoop(board);
         loop.run();
+
         leaveTaker.showLeaveTaking();
     }
 
