@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/CLI/View/TicTacToeView/TicTacToeConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/CLI/View/TicTacToeView/TicTacToeConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/PlayerTogglingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewSpy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShunt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Presentation/MarkToStringMapper/MarkToStringMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Presentation/MarkToStringMapper/MarkToStringMappingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,27 +90,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="2451" />
-          <entry key="java" value="98110" />
+          <entry key="dummy" value="2494" />
+          <entry key="java" value="100844" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="98110" />
-          <entry key="PLAIN_TEXT" value="2451" />
+          <entry key="JAVA" value="100844" />
+          <entry key="PLAIN_TEXT" value="2494" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="2135" />
+          <entry key="java" value="2156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="2135" />
+          <entry key="JAVA" value="2156" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -111,64 +118,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/PlayerTogglingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-504">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerSpy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewDummy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShunt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+            <state relative-caret-position="375">
+              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2798#2799#0" expanded="true" />
-                <element signature="e#2835#2836#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java">
+        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewSpy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="105">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputAlerter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurnTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-20">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -208,9 +235,11 @@
       <find>WinnerRule</find>
       <find>new WinningLine</find>
       <find>showed</find>
-      <find>Showed</find>
       <find>player</find>
       <find>TicTacToe</find>
+      <find>Showed</find>
+      <find>TwoPlayerTurn</find>
+      <find>Shunt</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -230,24 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/WinningProvider/GameEvaluator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/WinningProvider/TicTacToeEvaluator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeEvaluator/TicTacToeEvaluator.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/TicTacToeEvaluator/NoLinesAreProvided.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/TicTacToeEvaluator/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/BoardEvaluator/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Core/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/View/MarkToStringMapper.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/View/MarkToStringMapping.java" />
-        <option value="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/BoardConsoleView.java" />
-        <option value="$PROJECT_DIR$/src/com/company/View/MarkToStringMapper.java" />
-        <option value="$PROJECT_DIR$/src/com/company/View/MarkToXOMapper.java" />
-        <option value="$PROJECT_DIR$/test/com/company/Core/GameLoop/GameLoopTest.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/LeaveTaking/LeaveTakingViewSpy.java" />
-        <option value="$PROJECT_DIR$/src/com/company/LeaveTaking/LeaveTakerView.java" />
-        <option value="$PROJECT_DIR$/src/com/company/LeaveTaking/WinnerProvider.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/LeaveTaking/WinnerProviderStub.java" />
-        <option value="$PROJECT_DIR$/test/com/company/TicTacToe/LeaveTaking/LeaveTakingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/TicTacToe/LeaveTaking/LeaveTakerViewSpy.java" />
         <option value="$PROJECT_DIR$/src/com/company/LeaveTaking/LeaveTaker.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/TicTacToe/View/TicTacToeConsoleView.java" />
@@ -281,6 +292,24 @@
         <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
         <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/View/TicTacToeView/TicTacToeConsoleView.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Presentation/ObjectToStringMapper/ObjectToStringMapper.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Presentation/ObjectToStringMapper/ObjectToStringMappingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/VerboseTwoPlayerTurn/TurnMessageView.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/TurnMessageViewDummy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/VerboseTwoPlayerTurnTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/PlayerTogglingTest.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/PlayerDummy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerSpy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerDummy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/TurnMessageViewSpy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/VerboseTwoPlayerTurn/TurnMessagingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageView.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewSpy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewDummy.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" />
+        <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShunt.java" />
       </list>
     </option>
   </component>
@@ -467,6 +496,33 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+              <item name="VerboseTwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -499,6 +555,16 @@
               <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
               <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+              <item name="VerboseTwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -513,7 +579,7 @@
     <property name="SearchEverywhereHistoryKey" value="InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556290604682" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556295699478" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -523,25 +589,28 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company.Model.GameLoop.TwoPlayerTurn" />
       <recent name="com.company.Model.InputGenerators.PresentingInputGenerator" />
       <recent name="com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter" />
       <recent name="com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp" />
       <recent name="com.company.Model.Players" />
-      <recent name="com.company.Model.GameLoop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/com/company/Model/GameLoop" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn" />
+      <recent name="com.company.Model.GameLoop.VerboseTwoPlayerTurn" />
+      <recent name="com.company.Presentation.ObjectToStringMapper" />
       <recent name="com.company.Model.InputGenerators.RandomInputGenerator" />
       <recent name="com.company.View" />
-      <recent name="com.company.App" />
-      <recent name="com.company.TicTacToe.GameOverRules.WinnerRule" />
-      <recent name="com.company.TicTacToe.TicTacToeWinningLineProviderTest" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.Model.GameLoop.VerboseTwoPlayerTurn" />
+      <recent name="com.company.Presentation.ObjectToStringMapper" />
       <recent name="com.company.Model.InputGenerators.PresentingInputGenerator" />
       <recent name="com.company.LeaveTaking" />
       <recent name="com.company.TicTacToe.LeaveTaking" />
-      <recent name="com.company.TicTacToe.View" />
-      <recent name="com.company.TicTacToe.GameOverRules.WinnerRule" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -556,7 +625,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in TicTacToe.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.App.Main" />
       <module name="TicTacToe.Main" />
@@ -586,12 +655,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObjectToStringMappingTest.IfOneObjectIsRegistered_ShouldMapToTheRegisteredString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Presentation.ObjectToStringMapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.Presentation.ObjectToStringMapper" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Presentation.ObjectToStringMapper.ObjectToStringMappingTest" />
+      <option name="METHOD_NAME" value="IfOneObjectIsRegistered_ShouldMapToTheRegisteredString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ObjectToStringMappingTest.IfTwoObjectsAreRegistered_TheFirstObjectShouldBeRegistered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TicTacToe.Main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Presentation.ObjectToStringMapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.Presentation.ObjectToStringMapper" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Presentation.ObjectToStringMapper.ObjectToStringMappingTest" />
+      <option name="METHOD_NAME" value="IfTwoObjectsAreRegistered_TheFirstObjectShouldBeRegistered" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.All in TicTacToe.Main" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ObjectToStringMappingTest.IfOneObjectIsRegistered_ShouldMapToTheRegisteredString" />
+      <item itemvalue="JUnit.ObjectToStringMappingTest.IfTwoObjectsAreRegistered_TheFirstObjectShouldBeRegistered" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ObjectToStringMappingTest.IfTwoObjectsAreRegistered_TheFirstObjectShouldBeRegistered" />
+        <item itemvalue="JUnit.ObjectToStringMappingTest.IfOneObjectIsRegistered_ShouldMapToTheRegisteredString" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -655,42 +760,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 48m 11s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 01m 13s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 48m 52s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 03m 43s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 51m 46s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 13m 46s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 54m 02s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 15m 26s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 54m 23s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 15m 36s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 54m 28s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 15m 43s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 07h 56m 11s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 16m 04s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 08h 07m 03s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 16m 16s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 08h 07m 46s.xml">
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 16m 32s.xml">
       <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VerboseTwoPlayerTurnTest - 2019.04.26 at 15h 32m 24s.xml">
-      <configuration name="VerboseTwoPlayerTurnTest" configurationId="JUnit" />
+    <history-entry file="All_in_TicTacToe_Main - 2019.04.26 at 18h 16m 51s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257109000" />
+    <option name="totallyTimeSpent" value="261200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38180515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -702,7 +808,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40382165" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42038217" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44663212" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44585988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -710,7 +816,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007163" side_tool="true" weight="0.32866243" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.40103626" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928367" weight="0.4" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -795,79 +901,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputRules/FieldExistsRule/FieldExistsRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputRules/FieldIsEmptyRule/FieldIsEmptyRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/Players/PlayerImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameEvaluation/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Presentation/BoardPresenter/BoardPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Data/Mark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameEvaluation/GameEvaluator/GameEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="92" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameOverRules/CompositeGameOverRule/CompositeGameOverRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/Board/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="89" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameOverRules/NumberOfMovesRule/MarkedFieldCountProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/LeaveTaker/LeaveTaker.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/LeaveTaker/WinnerProvider.java" />
     <entry file="file://$PROJECT_DIR$/test/com/company/Model/Players/MarkFieldServiceMock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1105,30 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurnTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1150,14 +1159,160 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Presentation/MarkToStringMapper/MarkToStringMappingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Presentation/ObjectToStringMapper/ObjectToStringMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Presentation/ObjectToStringMapper/ObjectToStringMappingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IfNoObjectsAreRegistered_AnObjectShouldNotBeRegistered#0;class#ObjectToStringMappingTest#0" />
+            <element signature="method#IfNoObjectsAreRegistered_AnObjectShouldNotBeRegistered#1;class#ObjectToStringMappingTest#0" />
+            <element signature="method#IfOneObjectsIsRegistered_ItObjectShouldBeRegistered#1;class#ObjectToStringMappingTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
+        <state relative-caret-position="158">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2798#2799#0" expanded="true" />
             <element signature="e#2835#2836#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurnTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="10" lean-forward="true" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Presentation/MarkToStringMapper/MarkToXOMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerDummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/PlayerTogglingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/PlayerSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessageViewDummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShunt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
           </folding>
         </state>
       </provider>
