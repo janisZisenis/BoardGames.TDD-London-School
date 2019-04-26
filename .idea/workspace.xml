@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleTurnMessageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,12 +82,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2498" />
-          <entry key="java" value="101235" />
+          <entry key="java" value="101303" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="101235" />
+          <entry key="JAVA" value="101303" />
           <entry key="PLAIN_TEXT" value="2498" />
         </counts>
       </usages-collector>
@@ -97,13 +95,13 @@
         <counts>
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="2159" />
+          <entry key="java" value="2161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="2159" />
+          <entry key="JAVA" value="2161" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -133,7 +131,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
@@ -141,6 +139,27 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -247,7 +266,6 @@
         <option value="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakingTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/PresentingInputGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/View/TicTacToeView/TicTacToeConsoleView.java" />
         <option value="$PROJECT_DIR$/src/com/company/Presentation/ObjectToStringMapper/ObjectToStringMapper.java" />
         <option value="$PROJECT_DIR$/test/com/company/Presentation/ObjectToStringMapper/ObjectToStringMappingTest.java" />
@@ -267,10 +285,11 @@
         <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingTest.java" />
         <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShunt.java" />
         <option value="$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/TurnMessagingOrderShuntTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" />
         <option value="$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleTurnMessageView.java" />
         <option value="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" />
         <option value="$PROJECT_DIR$/src/com/company/App/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java" />
       </list>
     </option>
   </component>
@@ -452,7 +471,34 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+              <item name="VerboseTwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -479,7 +525,7 @@
     <property name="SearchEverywhereHistoryKey" value="InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556296413021" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556296564341" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -656,13 +702,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262030000" />
+    <option name="totallyTimeSpent" value="262131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38180515" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38180515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -671,7 +717,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40382165" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42038217" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42038217" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44585988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1038,13 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurnTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1101,16 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-504">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1180,6 +1209,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/VerboseTwoPlayerTurn/VerboseTwoPlayerTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/GameLoop/TwoPlayerTurn/TwoPlayerTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>

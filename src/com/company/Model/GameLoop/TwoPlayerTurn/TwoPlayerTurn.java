@@ -4,7 +4,7 @@ import com.company.Model.GameLoop.Turn;
 public class TwoPlayerTurn implements Turn {
     private final Player first;
     private final Player second;
-    private Player current;
+    protected Player current;
 
     public TwoPlayerTurn(Player first, Player second) {
         this.first = this.current = first;

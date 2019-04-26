@@ -1,31 +1,19 @@
 package com.company.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn;
 
-import com.company.Model.GameLoop.Turn;
 import com.company.Model.GameLoop.TwoPlayerTurn.Player;
+import com.company.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 
-public class VerboseTwoPlayerTurn implements Turn {
-    private final Player first;
-    private final Player second;
-    private Player current;
+public class VerboseTwoPlayerTurn extends TwoPlayerTurn {
     private TurnMessageView view;
 
     public VerboseTwoPlayerTurn(Player first, Player second, TurnMessageView view) {
-        this.first = this.current = first;
-        this.second = second;
+        super(first, second);
         this.view = view;
     }
 
     public void play() {
         view.showTurnMessageFor(current);
-        playMove();
-        togglePlayer();
+        super.play();
     }
 
-    private void playMove() {
-        current.playMove();
-    }
-
-    private void togglePlayer() {
-        current = (current == first) ? second : first;
-    }
 }
