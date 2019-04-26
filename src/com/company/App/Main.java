@@ -1,6 +1,6 @@
 package com.company.App;
 
-import com.company.CLI.View.TicTacToe.View.TicTacToeConsoleView;
+import com.company.CLI.View.TicTacToeView.TicTacToeConsoleView;
 import com.company.Model.GameLoop.GameLoop;
 import com.company.Presentation.LeaveTaker.LeaveTaker;
 import com.company.Model.Board.Board;

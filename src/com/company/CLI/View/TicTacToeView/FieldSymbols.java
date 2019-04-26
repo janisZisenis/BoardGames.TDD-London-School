@@ -1,4 +1,4 @@
-package com.company.CLI.View.TicTacToe.View;
+package com.company.CLI.View.TicTacToeView;
 
 public abstract class FieldSymbols {
 

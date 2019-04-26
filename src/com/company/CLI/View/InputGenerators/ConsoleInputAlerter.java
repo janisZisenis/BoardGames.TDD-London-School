@@ -1,4 +1,4 @@
-package com.company.CLI.View.Core.InputGeneration;
+package com.company.CLI.View.InputGenerators;
 
 import com.company.Data.Input.Input;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;

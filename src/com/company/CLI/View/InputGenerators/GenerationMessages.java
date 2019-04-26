@@ -1,4 +1,4 @@
-package com.company.CLI.View.Core.InputGeneration;
+package com.company.CLI.View.InputGenerators;
 
 public abstract class GenerationMessages {
 

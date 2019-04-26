@@ -1,4 +1,4 @@
-package com.company.CLI.View.TicTacToe.View;
+package com.company.CLI.View.TicTacToeView;
 
 import com.company.Presentation.LeaveTaker.LeaveTakerView;
 import com.company.Model.Board.Board;
