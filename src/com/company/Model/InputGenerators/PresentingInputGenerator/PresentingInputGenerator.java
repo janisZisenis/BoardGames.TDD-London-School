@@ -3,7 +3,7 @@ package com.company.Model.InputGenerators.PresentingInputGenerator;
 import com.company.Data.Input.Input;
 import com.company.Model.Players.InputGenerator;
 
-public class PresentingInputGenerator {
+public class PresentingInputGenerator implements InputGenerator {
 
 
     private final InputGenerator generator;
@@ -16,7 +16,7 @@ public class PresentingInputGenerator {
 
     public Input generate() {
         Input input = generator.generate();
-        presenter.present(input);
+        presenter.show(input);
         return input;
     }
 }

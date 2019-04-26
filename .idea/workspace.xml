@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/PresentingInputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/PresentingInputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterDummy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/PresentingInputGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/PresentingInputGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakerViewSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakerViewSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakingTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,12 +86,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2451" />
-          <entry key="java" value="97103" />
+          <entry key="java" value="97356" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="97103" />
+          <entry key="JAVA" value="97356" />
           <entry key="PLAIN_TEXT" value="2451" />
         </counts>
       </usages-collector>
@@ -97,13 +99,13 @@
         <counts>
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="2124" />
+          <entry key="java" value="2127" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="2124" />
+          <entry key="JAVA" value="2127" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
@@ -147,11 +149,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakingTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="85" column="67" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#makeDisplayedBoard#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeWinningLineProvider#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeInputReferee#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeInputAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeFieldExistsAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeFieldIsEmptyAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTicTacToeGameOverRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeWinningLineRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeObservableBoard#0;class#TicTacToeFactory#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,7 +255,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/TicTacToe/WinningProvider/LineProvider.java" />
         <option value="$PROJECT_DIR$/src/com/company/App/CoreFactory.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/WinningProvider/WinningProvider.java" />
         <option value="$PROJECT_DIR$/src/com/company/TicTacToe/WinningProvider/GameEvaluator.java" />
@@ -260,7 +294,6 @@
         <option value="$PROJECT_DIR$/test/com/company/Presentation/BoardPresenter/BoardPresenterTest.java" />
         <option value="$PROJECT_DIR$/src/com/company/Model/InputGenerators/RandomInputGenerator/RandomInputGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Model/InputGenerators/RandomInputGenerator/LogginInputGenerator.java" />
-        <option value="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" />
         <option value="$PROJECT_DIR$/src/com/company/Model/InputGenerators/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterDummy.java" />
         <option value="$PROJECT_DIR$/test/com/company/Model/Board/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" />
@@ -271,6 +304,8 @@
         <option value="$PROJECT_DIR$/test/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenterSpy.java" />
         <option value="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakerViewSpy.java" />
         <option value="$PROJECT_DIR$/test/com/company/Presentation/LeaveTaker/LeaveTakingTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java" />
       </list>
     </option>
   </component>
@@ -459,6 +494,21 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="InputGenerators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -527,7 +577,7 @@
     <property name="SearchEverywhereHistoryKey" value="COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556258485961" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556258818934" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
@@ -664,7 +714,7 @@
       <workItem from="1555077027993" duration="5867000" />
       <workItem from="1556202920891" duration="830000" />
       <workItem from="1556203869320" duration="14957000" />
-      <workItem from="1556254820559" duration="3616000" />
+      <workItem from="1556254820559" duration="3896000" />
     </task>
     <servers />
   </component>
@@ -701,13 +751,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254744000" />
+    <option name="totallyTimeSpent" value="255024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28411514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28411514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -716,7 +766,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40382165" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20932643" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20932643" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44663212" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -810,13 +860,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/com/company/Model/Players/PlayerImpTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TicTacToe/Board/ObservableBoard/ObserverSpy.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Data/Field/Field.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1051,25 +1094,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputGenerators/RandomInputGenerator/LogginInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="68" column="38" lean-forward="true" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#makeDisplayedBoard#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeWinningLineProvider#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeInputReferee#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeInputAlerter#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeFieldExistsAlerter#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeFieldIsEmptyAlerter#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeTicTacToeGameOverRule#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeWinningLineRule#0;class#TicTacToeFactory#0" />
-            <element signature="method#makeObservableBoard#0;class#TicTacToeFactory#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputGenerators/VerboseValidatingInputGenerator/VerboseValidatingInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1105,13 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-41">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1163,6 +1180,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/App/TicTacToeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="85" column="67" selection-start-line="85" selection-start-column="67" selection-end-line="85" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#makeDisplayedBoard#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeWinningLineProvider#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeInputReferee#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeInputAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeFieldExistsAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeFieldIsEmptyAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTicTacToeGameOverRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeWinningLineRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeObservableBoard#0;class#TicTacToeFactory#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Model/InputGenerators/PresentingInputGenerator/InputPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
