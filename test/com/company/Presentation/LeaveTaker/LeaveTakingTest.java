@@ -15,16 +15,16 @@ public class LeaveTakingTest {
     void IfNoWinnerIsProvided_ShouldShowDraw() {
         sut.showLeaveTaking();
 
-        assertShowedDraw();
+        assertHasShownDraw();
     }
 
     @Test
-    void IfWinnerIsProvided_ShouldNotHaveShowedDraw() {
+    void IfWinnerIsProvided_ShouldNotShowDraw() {
         provider.setWinner(Mark.John);
 
         sut.showLeaveTaking();
 
-        assertHasNotShowedDraw();
+        assertHasNotShownDraw();
     }
 
     @Test
@@ -33,7 +33,7 @@ public class LeaveTakingTest {
 
         sut.showLeaveTaking();
 
-        assertShowedWinner(Mark.John);
+        assertShownWinnerIs(Mark.John);
     }
 
     @Test
@@ -42,33 +42,33 @@ public class LeaveTakingTest {
 
         sut.showLeaveTaking();
 
-        assertShowedWinner(Mark.Haley);
+        assertShownWinnerIs(Mark.Haley);
     }
 
     @Test
-    void IfNoWinnerIsProvided_ShouldNotHaveShowedAWinner() {
+    void IfNoWinnerIsProvided_ShouldNotShowAWinner() {
         sut.showLeaveTaking();
 
-        assertHasNotShowedAWinner();
+        assertHasNotShownAWinner();
     }
 
-    private void assertShowedDraw() {
-        boolean actual = view.showedDraw();
+    private void assertHasShownDraw() {
+        boolean actual = view.hasShownDraw();
         assertTrue(actual);
     }
 
-    private void assertHasNotShowedDraw() {
-        boolean actual = view.showedDraw();
+    private void assertHasNotShownDraw() {
+        boolean actual = view.hasShownDraw();
         assertFalse(actual);
     }
 
-    private void assertShowedWinner(Mark expected) {
-        Mark actual = view.getShowedWinner();
+    private void assertShownWinnerIs(Mark expected) {
+        Mark actual = view.getShownWinner();
         assertEquals(expected, actual);
     }
 
-    private void assertHasNotShowedAWinner() {
-        boolean actual = view.hasShowedWinner();
+    private void assertHasNotShownAWinner() {
+        boolean actual = view.hasShownWinner();
         assertFalse(actual);
     }
 

@@ -2,6 +2,7 @@ package com.company.App;
 
 import com.company.CLI.View.InputGenerators.ConsoleInputAlerter;
 import com.company.CLI.View.InputGenerators.ConsoleInputGenerator;
+import com.company.CLI.View.InputGenerators.ConsoleInputPresenter;
 import com.company.CLI.View.TicTacToeView.AlertingMessages;
 import com.company.Data.Mark;
 import com.company.Model.Board.Board;
@@ -20,6 +21,8 @@ import com.company.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
 import com.company.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import com.company.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import com.company.Model.GameOverRules.WinnerRule.WinnerRule;
+import com.company.Model.InputGenerators.PresentingInputGenerator.InputPresenter;
+import com.company.Model.InputGenerators.PresentingInputGenerator.PresentingInputGenerator;
 import com.company.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import com.company.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import com.company.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
@@ -63,29 +66,30 @@ public class TicTacToeFactory {
     }
 
     private Player makeHumanPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeVerboseInputGenerator(board);
+        InputGenerator generator = makeConsoleInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
     private Player makeComputerPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeRandomInputGenerator(board);
+        InputGenerator generator = makeComputerInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
-    private InputGenerator makeRandomInputGenerator(Board board) {
+    private InputGenerator makeComputerInputGenerator(Board board) {
         InputGenerator generator = new RandomInputGenerator();
         InputRule rule = makeInputRule(board);
-        return new ValidatingInputGenerator(generator, rule);
+        InputGenerator validating = new ValidatingInputGenerator(generator, rule);
+        InputPresenter presenter = new ConsoleInputPresenter();
+        return new PresentingInputGenerator(validating, presenter);
     }
 
-    private InputGenerator makeVerboseInputGenerator(Board board) {
+    private InputGenerator makeConsoleInputGenerator(Board board) {
         InputReferee referee = makeInputReferee(board);
         InputGenerator generator = makeConsoleGenerator();
-
         return new VerboseValidatingInputGenerator(generator, referee);
     }
 
