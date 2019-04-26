@@ -66,20 +66,20 @@ public class TicTacToeFactory {
     }
 
     private Player makeHumanPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeVerboseInputGenerator(board);
+        InputGenerator generator = makeConsoleInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
     private Player makeComputerPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeRandomInputGenerator(board);
+        InputGenerator generator = makeComputerInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
-    private InputGenerator makeRandomInputGenerator(Board board) {
+    private InputGenerator makeComputerInputGenerator(Board board) {
         InputGenerator generator = new RandomInputGenerator();
         InputRule rule = makeInputRule(board);
         InputGenerator validating = new ValidatingInputGenerator(generator, rule);
@@ -87,10 +87,9 @@ public class TicTacToeFactory {
         return new PresentingInputGenerator(validating, presenter);
     }
 
-    private InputGenerator makeVerboseInputGenerator(Board board) {
+    private InputGenerator makeConsoleInputGenerator(Board board) {
         InputReferee referee = makeInputReferee(board);
         InputGenerator generator = makeConsoleGenerator();
-
         return new VerboseValidatingInputGenerator(generator, referee);
     }
 
