@@ -11,10 +11,10 @@ public class PlayerImp implements Player {
     private final Mark mark;
     private final InputGenerator generator;
 
-    public PlayerImp(PlayerContext config) {
-        this.generator = config.getGenerator();
-        this.markService = config.getMarkService();
-        this.mark = config.getMark();
+    public PlayerImp(PlayerContext context) {
+        this.generator = context.getGenerator();
+        this.markService = context.getMarkService();
+        this.mark = context.getMark();
     }
 
     public void playMove() {
