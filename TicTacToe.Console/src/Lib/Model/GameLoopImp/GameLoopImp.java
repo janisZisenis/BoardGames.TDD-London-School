@@ -1,6 +1,8 @@
 package Lib.Model.GameLoopImp;
 
-public class GameLoopImp {
+import Lib.Model.TicTacToe.GameLoop;
+
+public class GameLoopImp implements GameLoop {
 
     private final Game game;
 
