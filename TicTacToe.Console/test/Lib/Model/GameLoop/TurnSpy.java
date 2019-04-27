@@ -1,13 +1,17 @@
 package Lib.Model.GameLoop;
 
 public class TurnSpy implements Turn {
-    int count = 0;
+    int timesPlayed = 0;
 
     public int getPlayedTimes() {
-        return count;
+        return timesPlayed;
     }
 
     public void play() {
-        count++;
+        timesPlayed++;
+    }
+
+    public boolean hasPlayed() {
+        return timesPlayed > 0;
     }
 }
