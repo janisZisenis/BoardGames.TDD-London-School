@@ -1,4 +1,6 @@
-package Lib.Model.GameLoop;
+package Lib.Model.RenderingGameLoop;
+
+import Lib.Model.RenderingGameLoop.GameImp.Turn;
 
 public class TurnSpy implements Turn {
     int timesPlayed = 0;

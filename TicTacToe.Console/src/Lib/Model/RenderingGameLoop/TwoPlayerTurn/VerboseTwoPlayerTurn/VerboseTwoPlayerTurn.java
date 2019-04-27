@@ -1,7 +1,7 @@
-package Lib.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn;
 
-import Lib.Model.GameLoop.TwoPlayerTurn.Player;
-import Lib.Model.GameLoop.TwoPlayerTurn.TwoPlayerTurn;
+import Lib.Model.RenderingGameLoop.TwoPlayerTurn.Player;
+import Lib.Model.RenderingGameLoop.TwoPlayerTurn.TwoPlayerTurn;
 
 public class VerboseTwoPlayerTurn extends TwoPlayerTurn {
     private TurnMessageView view;

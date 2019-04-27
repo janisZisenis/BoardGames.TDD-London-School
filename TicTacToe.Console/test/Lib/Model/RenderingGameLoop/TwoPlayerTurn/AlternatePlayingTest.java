@@ -1,4 +1,4 @@
-package Lib.Model.GameLoop.TwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.TwoPlayerTurn;
 
 import org.junit.jupiter.api.Test;
 

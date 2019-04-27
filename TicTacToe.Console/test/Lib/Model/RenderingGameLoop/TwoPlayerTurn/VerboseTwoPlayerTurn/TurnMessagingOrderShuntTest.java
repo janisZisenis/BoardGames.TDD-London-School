@@ -1,6 +1,6 @@
-package Lib.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn;
 
-import Lib.Model.GameLoop.TwoPlayerTurn.Player;
+import Lib.Model.RenderingGameLoop.TwoPlayerTurn.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

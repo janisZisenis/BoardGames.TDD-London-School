@@ -1,4 +1,4 @@
-package Lib.Model.GameLoop;
+package Lib.Model.RenderingGameLoop;
 
 import Lib.Model.RenderingGameLoop.GameImp.GameOverRuleDummy;
 

@@ -1,4 +1,4 @@
-package Lib.Model.GameLoop.TwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.TwoPlayerTurn;
 
 public class PlayerSpy extends PlayerDummy {
     private int count = 0;

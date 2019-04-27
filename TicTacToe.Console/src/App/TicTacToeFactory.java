@@ -15,11 +15,10 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.GameLoop.GameLoop;
-import Lib.Model.GameLoop.GameOverRule;
-import Lib.Model.GameLoop.Turn;
-import Lib.Model.GameLoop.TwoPlayerTurn.Player;
-import Lib.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
+import Lib.Model.RenderingGameLoop.GameImp.GameOverRule;
+import Lib.Model.RenderingGameLoop.GameImp.Turn;
+import Lib.Model.RenderingGameLoop.TwoPlayerTurn.Player;
+import Lib.Model.RenderingGameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
@@ -51,12 +50,6 @@ public class TicTacToeFactory {
         LineProvider provider = new HumbleLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         return new GameEvaluator(provider, evaluator);
-    }
-
-    public GameLoop makeGameLoop(Board board) {
-        Turn turn = makeTurn(board);
-        GameOverRule rule = makeTicTacToeGameOverRule(board);
-        return new GameLoop(turn, rule);
     }
 
     public RenderingGameLoop makeRenderingGameLoop(Board board) {

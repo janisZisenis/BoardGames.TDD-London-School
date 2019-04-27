@@ -1,7 +1,5 @@
 package Lib.Model.RenderingGameLoop.GameImp;
 
-import Lib.Model.GameLoop.GameOverRule;
-import Lib.Model.GameLoop.Turn;
 import Lib.Model.RenderingGameLoop.Game;
 
 public class GameImp implements Game {

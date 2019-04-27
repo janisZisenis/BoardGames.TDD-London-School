@@ -1,5 +1,5 @@
-package Lib.Model.GameLoop.TwoPlayerTurn;
-import Lib.Model.GameLoop.Turn;
+package Lib.Model.RenderingGameLoop.TwoPlayerTurn;
+import Lib.Model.RenderingGameLoop.GameImp.Turn;
 
 public class TwoPlayerTurn implements Turn {
     private final Player first;

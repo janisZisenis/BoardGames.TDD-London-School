@@ -1,4 +1,6 @@
-package Lib.Model.GameLoop;
+package Lib.Model.RenderingGameLoop;
+
+import Lib.Model.RenderingGameLoop.GameImp.GameOverRule;
 
 public class CountingGameOverRuleStub implements GameOverRule {
 
