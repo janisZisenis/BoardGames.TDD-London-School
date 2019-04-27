@@ -6,19 +6,25 @@ import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 import Lib.CLI.View.InputGenerators.ConsoleTurnMessageView;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
 import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
+import Lib.CLI.View.TicTacToeView.ConsoleReceptionist;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
 import Lib.Model.BoardRenderer.BoardRenderer;
+import Lib.Model.BoardRenderer.WinningLineProvider;
 import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Lib.Model.GameLoopImp.Game;
+import Lib.Model.GameLoopImp.GameImp.GameImp;
 import Lib.Model.GameLoopImp.GameImp.GameOverRule;
+import Lib.Model.GameLoopImp.GameImp.Renderer;
 import Lib.Model.GameLoopImp.GameImp.Turn;
 import Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.Player;
 import Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
+import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
@@ -36,23 +42,28 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Model.GameLoopImp.Game;
-import Lib.Model.GameLoopImp.GameImp.GameImp;
-import Lib.Model.GameLoopImp.GameImp.Renderer;
-import Lib.Model.GameLoopImp.GameLoopImp;
-import Lib.Model.BoardRenderer.WinningLineProvider;
+import Lib.Model.TicTacToe.TicTacToe;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
-    public WinningLineProvider makeWinningLineProvider(Board board) {
+    public TicTacToe makeTicTacToe() {
+        Board board = makeBoard();
+
+        ConsoleReceptionist receptionist = new ConsoleReceptionist();
+        Renderer renderer = makeBoardRenderer(board);
+        GameLoopImp loop = makeRenderingGameLoop(board);
+        return new TicTacToe(receptionist, renderer, loop);
+    }
+
+    private WinningLineProvider makeWinningLineProvider(Board board) {
         LineProvider provider = new HumbleLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         return new GameEvaluator(provider, evaluator);
     }
 
-    public GameLoopImp makeRenderingGameLoop(Board board) {
+    private GameLoopImp makeRenderingGameLoop(Board board) {
         Turn turn = makeTurn(board);
         GameOverRule rule = makeTicTacToeGameOverRule(board);
         Renderer renderer = makeBoardRenderer(board);
@@ -61,7 +72,7 @@ public class TicTacToeFactory {
         return new GameLoopImp(game);
     }
 
-    public Renderer makeBoardRenderer(Board board) {
+    private Renderer makeBoardRenderer(Board board) {
         MarkToStringMapper mapper = new MarkToXOMapper();
         ConsoleBoardView view = new ConsoleBoardView(board, mapper);
         WinningLineProvider provider = makeWinningLineProvider(board);
@@ -78,14 +89,14 @@ public class TicTacToeFactory {
         return new VerboseTwoPlayerTurn(john, haley, view);
     }
 
-    public Player makeHumanPlayer(Board board, Mark mark) {
+    private Player makeHumanPlayer(Board board, Mark mark) {
         InputGenerator generator = makeConsoleInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
         return new PlayerImp(context);
     }
 
-    public Player makeComputerPlayer(Board board, Mark mark) {
+    private Player makeComputerPlayer(Board board, Mark mark) {
         InputGenerator generator = makeComputerInputGenerator(board);
         PlayerContext context = new PlayerContext(generator, board, mark);
 
@@ -156,7 +167,7 @@ public class TicTacToeFactory {
 
 
 
-    public GameOverRule makeTicTacToeGameOverRule(Board board) {
+    private GameOverRule makeTicTacToeGameOverRule(Board board) {
         GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
         GameOverRule winningLineRule = makeWinningLineRule(board);
 
@@ -171,14 +182,14 @@ public class TicTacToeFactory {
         return new NumberOfMovesRule(board);
     }
 
-    public GameOverRule makeWinningLineRule(Board board) {
+    private GameOverRule makeWinningLineRule(Board board) {
         EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         HumbleLineProvider provider = new HumbleLineProvider();
         GameEvaluator winningLineProvider = new GameEvaluator(provider, evaluator);
         return new WinnerRule(winningLineProvider);
     }
-    
-    public Board makeBoard() {
+
+    private Board makeBoard() {
         return new HashingBoard();
     }
 
