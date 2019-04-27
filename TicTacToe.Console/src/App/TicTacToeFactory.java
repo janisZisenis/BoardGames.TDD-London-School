@@ -15,10 +15,10 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.RenderingGameLoop.GameImp.GameOverRule;
-import Lib.Model.RenderingGameLoop.GameImp.Turn;
-import Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn.Player;
-import Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
+import Lib.Model.GameLoop.GameImp.GameOverRule;
+import Lib.Model.GameLoop.GameImp.Turn;
+import Lib.Model.GameLoop.GameImp.TwoPlayerTurn.Player;
+import Lib.Model.GameLoop.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
@@ -36,10 +36,10 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Model.RenderingGameLoop.Game;
-import Lib.Model.RenderingGameLoop.GameImp.GameImp;
-import Lib.Model.RenderingGameLoop.GameImp.Renderer;
-import Lib.Model.RenderingGameLoop.RenderingGameLoop;
+import Lib.Model.GameLoop.Game;
+import Lib.Model.GameLoop.GameImp.GameImp;
+import Lib.Model.GameLoop.GameImp.Renderer;
+import Lib.Model.GameLoop.GameLoop;
 import Lib.Model.BoardRenderer.WinningLineProvider;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
@@ -52,13 +52,13 @@ public class TicTacToeFactory {
         return new GameEvaluator(provider, evaluator);
     }
 
-    public RenderingGameLoop makeRenderingGameLoop(Board board) {
+    public GameLoop makeRenderingGameLoop(Board board) {
         Turn turn = makeTurn(board);
         GameOverRule rule = makeTicTacToeGameOverRule(board);
         Renderer renderer = makeBoardRenderer(board);
         Game game = new GameImp(turn, rule, renderer);
 
-        return new RenderingGameLoop(game);
+        return new GameLoop(game);
     }
 
     public Renderer makeBoardRenderer(Board board) {

@@ -1,7 +1,7 @@
 package Lib.Model.GameOverRules.NumberOfMovesRule;
 
 import Lib.Data.BoardBoundaries;
-import Lib.Model.RenderingGameLoop.GameImp.GameOverRule;
+import Lib.Model.GameLoop.GameImp.GameOverRule;
 
 public class NumberOfMovesRule implements GameOverRule {
 

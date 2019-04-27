@@ -6,8 +6,8 @@ import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEval
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.RenderingGameLoop.GameImp.Renderer;
-import Lib.Model.RenderingGameLoop.RenderingGameLoop;
+import Lib.Model.GameLoop.GameImp.Renderer;
+import Lib.Model.GameLoop.GameLoop;
 import Lib.Presentation.LeaveTaker.LeaveTaker;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
@@ -35,7 +35,7 @@ public class Main {
         Renderer renderer = factory.makeBoardRenderer(board);
         renderer.render();
 
-        RenderingGameLoop loop = factory.makeRenderingGameLoop(board);
+        GameLoop loop = factory.makeRenderingGameLoop(board);
         loop.run();
 
         leaveTaker.showLeaveTaking();
