@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CompositeGameOverRuleTest {
 
-    CompositeGameOverRule sut = new CompositeGameOverRule();
+    private CompositeGameOverRule sut = new CompositeGameOverRule();
 
     @Test
     void FreshInstance_GameShouldBeOver() {
