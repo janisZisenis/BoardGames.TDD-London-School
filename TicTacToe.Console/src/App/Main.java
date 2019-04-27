@@ -1,11 +1,12 @@
 package App;
 
-import Lib.CLI.View.TicTacToeView.TicTacToeConsoleView;
+import Lib.CLI.View.TicTacToeView.ConsoleLeaveTakerView;
 import Lib.Model.Board.Board;
 import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Lib.Model.RenderingGameLoop.GameImp.Renderer;
 import Lib.Model.RenderingGameLoop.RenderingGameLoop;
 import Lib.Presentation.LeaveTaker.LeaveTaker;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
@@ -13,7 +14,7 @@ import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 public class Main {
 
     private static GameEvaluator gameEvaluator;
-    private static TicTacToeConsoleView view;
+    private static ConsoleLeaveTakerView view;
 
     private static GameEvaluator makeTicTacToeWinningLineProvider(Board board) {
         HumbleLineProvider provider = new HumbleLineProvider();
@@ -25,12 +26,14 @@ public class Main {
         TicTacToeFactory factory = new TicTacToeFactory();
         Board board = factory.makeBoard();
 
+
         gameEvaluator = makeTicTacToeWinningLineProvider(board);
-        view = new TicTacToeConsoleView(new MarkToXOMapper());
+        view = new ConsoleLeaveTakerView(new MarkToXOMapper());
         LeaveTaker leaveTaker = new LeaveTaker(gameEvaluator, view);
 
         showSalutation();
-        view.display(board);
+        Renderer renderer = factory.makeBoardRenderer(board);
+        renderer.render();
 
         RenderingGameLoop loop = factory.makeRenderingGameLoop(board);
         loop.run();

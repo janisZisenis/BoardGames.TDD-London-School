@@ -61,7 +61,7 @@ public class TicTacToeFactory {
         return new RenderingGameLoop(game);
     }
 
-    private Renderer makeBoardRenderer(Board board) {
+    public Renderer makeBoardRenderer(Board board) {
         MarkToStringMapper mapper = new MarkToXOMapper();
         ConsoleBoardView view = new ConsoleBoardView(board, mapper);
         WinningLineProvider provider = makeWinningLineProvider(board);
