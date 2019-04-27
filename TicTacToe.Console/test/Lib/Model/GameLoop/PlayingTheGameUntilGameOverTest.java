@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class GameLoopTest {
+public class PlayingTheGameUntilGameOverTest {
 
     private CountingGameOverRuleStub rule = new CountingGameOverRuleStub();
     private TurnSpy turn = new TurnSpy();
