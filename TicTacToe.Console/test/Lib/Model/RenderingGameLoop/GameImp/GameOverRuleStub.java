@@ -1,8 +1,6 @@
-package Lib.Model.RenderingGameLoop;
+package Lib.Model.RenderingGameLoop.GameImp;
 
-import Lib.Model.RenderingGameLoop.GameImp.GameOverRuleDummy;
-
-public class GameOverRuleStub extends GameOverRuleDummy {
+public class GameOverRuleStub implements GameOverRule {
     private boolean isOver;
 
     public void setGameIsOver(boolean isOver) {
