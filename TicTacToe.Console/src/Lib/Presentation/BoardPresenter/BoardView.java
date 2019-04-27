@@ -8,4 +8,6 @@ public interface BoardView {
     void display(Board board);
     void display(Board board, Line line);
 
+    void showBoard();
+    void showWinningLine(Line line);
 }

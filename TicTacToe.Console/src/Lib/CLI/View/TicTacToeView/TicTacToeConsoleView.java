@@ -66,6 +66,16 @@ public class TicTacToeConsoleView implements BoardView, LeaveTakerView {
         }
     }
 
+    @Override
+    public void showBoard() {
+
+    }
+
+    @Override
+    public void showWinningLine(Line line) {
+
+    }
+
     private boolean lineContains(Field f, Line line) {
         return f.equals(line.getFirst())
                 || f.equals(line.getSecond())

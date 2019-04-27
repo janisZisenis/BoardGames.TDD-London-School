@@ -67,6 +67,16 @@ public class BoardPresenterTest {
             actualLine = line;
         }
 
+        @Override
+        public void showBoard() {
+
+        }
+
+        @Override
+        public void showWinningLine(Line line) {
+
+        }
+
         public void expectHasDisplayedWithLine(Board board, Line line) {
             this.expectedDisplayedWithLine = true;
             this.expectedBoard = board;
