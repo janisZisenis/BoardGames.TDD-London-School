@@ -7,7 +7,7 @@ import Lib.Model.GameOverRules.NumberOfMovesRule.MarkedFieldCountProvider;
 import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
 import Lib.Model.Players.MarkFieldService;
 
-public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
+public interface Board extends ReadOnlyBoard, MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 
     boolean isEmpty(Field f);
     boolean isMarked(Field f);

@@ -2,16 +2,16 @@ package Lib.Model.GameLoop;
 
 public class GameLoop {
 
-    private Turn turn;
-    private final GameOverRule rule;
+    private final Game game;
 
-    public GameLoop(Turn turn, GameOverRule rule) {
-        this.turn = turn;
-        this.rule = rule;
+    public GameLoop(Game game) {
+        this.game = game;
     }
 
     public void run() {
-        while(!rule.isGameOver())
-            turn.play();
+        while(!game.isOver()) {
+            game.playTurn();
+            game.render();
+        }
     }
 }

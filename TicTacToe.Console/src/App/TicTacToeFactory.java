@@ -5,20 +5,20 @@ import Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 import Lib.CLI.View.InputGenerators.ConsoleTurnMessageView;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
+import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
-import Lib.Model.Board.ObservableBoard.ObservableBoard;
+import Lib.Model.BoardRenderer.BoardRenderer;
 import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.GameLoop.GameLoop;
-import Lib.Model.GameLoop.GameOverRule;
-import Lib.Model.GameLoop.Turn;
-import Lib.Model.GameLoop.TwoPlayerTurn.Player;
-import Lib.Model.GameLoop.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
+import Lib.Model.GameLoop.GameImp.GameOverRule;
+import Lib.Model.GameLoop.GameImp.Turn;
+import Lib.Model.GameLoop.GameImp.TwoPlayerTurn.Player;
+import Lib.Model.GameLoop.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
@@ -36,14 +36,15 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Presentation.BoardPresenter.WinningLineProvider;
+import Lib.Model.GameLoop.Game;
+import Lib.Model.GameLoop.GameImp.GameImp;
+import Lib.Model.GameLoop.GameImp.Renderer;
+import Lib.Model.GameLoop.GameLoop;
+import Lib.Model.BoardRenderer.WinningLineProvider;
+import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
+import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
-
-    public ObservableBoard makeDisplayedBoard() {
-        ObservableBoard board = makeObservableBoard();
-        return board;
-    }
 
     public WinningLineProvider makeWinningLineProvider(Board board) {
         LineProvider provider = new HumbleLineProvider();
@@ -51,10 +52,20 @@ public class TicTacToeFactory {
         return new GameEvaluator(provider, evaluator);
     }
 
-    public GameLoop makeGameLoop(Board board) {
+    public GameLoop makeRenderingGameLoop(Board board) {
         Turn turn = makeTurn(board);
         GameOverRule rule = makeTicTacToeGameOverRule(board);
-        return new GameLoop(turn, rule);
+        Renderer renderer = makeBoardRenderer(board);
+        Game game = new GameImp(turn, rule, renderer);
+
+        return new GameLoop(game);
+    }
+
+    public Renderer makeBoardRenderer(Board board) {
+        MarkToStringMapper mapper = new MarkToXOMapper();
+        ConsoleBoardView view = new ConsoleBoardView(board, mapper);
+        WinningLineProvider provider = makeWinningLineProvider(board);
+        return new BoardRenderer(view, provider);
     }
 
     private Turn makeTurn(Board board) {
@@ -167,9 +178,8 @@ public class TicTacToeFactory {
         return new WinnerRule(winningLineProvider);
     }
     
-    private ObservableBoard makeObservableBoard() {
-        Board hashing = new HashingBoard();
-        return new ObservableBoard(hashing);
+    public Board makeBoard() {
+        return new HashingBoard();
     }
 
 }

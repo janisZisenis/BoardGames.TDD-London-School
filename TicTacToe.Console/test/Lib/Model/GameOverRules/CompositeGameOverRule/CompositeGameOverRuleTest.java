@@ -1,13 +1,13 @@
 package Lib.Model.GameOverRules.CompositeGameOverRule;
 
-import Lib.Model.GameLoop.GameOverRuleStub;
+import Lib.Model.GameLoop.GameImp.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CompositeGameOverRuleTest {
 
-    CompositeGameOverRule sut = new CompositeGameOverRule();
+    private CompositeGameOverRule sut = new CompositeGameOverRule();
 
     @Test
     void FreshInstance_GameShouldBeOver() {
