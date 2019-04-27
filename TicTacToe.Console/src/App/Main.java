@@ -6,36 +6,41 @@ import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEval
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.GameLoop.GameImp.Renderer;
-import Lib.Model.GameLoop.GameLoop;
+import Lib.Model.GameLoopImp.GameImp.Renderer;
+import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Presentation.LeaveTaker.LeaveTaker;
+import Lib.Presentation.LeaveTaker.LeaveTakerView;
+import Lib.Presentation.LeaveTaker.WinnerProvider;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class Main {
 
-    private static GameEvaluator gameEvaluator;
-    private static ConsoleLeaveTakerView view;
+    private static ConsoleLeaveTakerView view = new ConsoleLeaveTakerView(new MarkToXOMapper());
+    private static LeaveTaker leaveTaker;
 
-    private static GameEvaluator makeTicTacToeWinningLineProvider(Board board) {
+    private static WinnerProvider makeWinnerProvider(Board board) {
         HumbleLineProvider provider = new HumbleLineProvider();
         LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
         return new GameEvaluator(provider, evaluator);
+    }
+
+    private static LeaveTaker makeLeaveTaker(LeaveTakerView view, Board board) {
+        WinnerProvider provider = makeWinnerProvider(board);
+        return new LeaveTaker(provider, view);
     }
 
     public static void main(String[] args) {
         TicTacToeFactory factory = new TicTacToeFactory();
         Board board = factory.makeBoard();
 
-
-        gameEvaluator = makeTicTacToeWinningLineProvider(board);
-        view = new ConsoleLeaveTakerView(new MarkToXOMapper());
-        LeaveTaker leaveTaker = new LeaveTaker(gameEvaluator, view);
+        leaveTaker = makeLeaveTaker(view, board);
 
         showSalutation();
+
         Renderer renderer = factory.makeBoardRenderer(board);
         renderer.render();
 
-        GameLoop loop = factory.makeRenderingGameLoop(board);
+        GameLoopImp loop = factory.makeRenderingGameLoop(board);
         loop.run();
 
         leaveTaker.showLeaveTaking();

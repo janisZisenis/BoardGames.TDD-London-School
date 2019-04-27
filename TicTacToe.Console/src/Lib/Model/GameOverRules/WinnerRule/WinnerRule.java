@@ -1,6 +1,6 @@
 package Lib.Model.GameOverRules.WinnerRule;
 
-import Lib.Model.GameLoop.GameImp.GameOverRule;
+import Lib.Model.GameLoopImp.GameImp.GameOverRule;
 
 public class WinnerRule implements GameOverRule {
 
