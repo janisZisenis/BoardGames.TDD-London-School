@@ -49,148 +49,57 @@ import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 public class TicTacToeFactory {
 
     public TicTacToe makeTicTacToe() {
-        Board board = makeBoard();
+
+        Board board = new HashingBoard();
 
         ConsoleReceptionist receptionist = new ConsoleReceptionist();
-        Renderer renderer = makeBoardRenderer(board);
-        GameLoopImp loop = makeRenderingGameLoop(board);
-        return new TicTacToe(receptionist, renderer, loop);
-    }
-
-    private WinningLineProvider makeWinningLineProvider(Board board) {
-        LineProvider provider = new HumbleLineProvider();
-        LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        return new GameEvaluator(provider, evaluator);
-    }
-
-    private GameLoopImp makeRenderingGameLoop(Board board) {
-        Turn turn = makeTurn(board);
-        GameOverRule rule = makeTicTacToeGameOverRule(board);
-        Renderer renderer = makeBoardRenderer(board);
-        Game game = new GameImp(turn, rule, renderer);
-
-        return new GameLoopImp(game);
-    }
-
-    private Renderer makeBoardRenderer(Board board) {
         MarkToStringMapper mapper = new MarkToXOMapper();
         ConsoleBoardView view = new ConsoleBoardView(board, mapper);
-        WinningLineProvider provider = makeWinningLineProvider(board);
-        return new BoardRenderer(view, provider);
-    }
+        LineProvider lineProvider = new HumbleLineProvider();
+        LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
+        WinningLineProvider provider = new GameEvaluator(lineProvider, evaluator);
+        Renderer renderer = new BoardRenderer(view, provider);
 
-    private Turn makeTurn(Board board) {
-        Player john = makeHumanPlayer(board, Mark.John);
-        Player haley = makeComputerPlayer(board, Mark.Haley);
+        InputRule existsRule = new FieldExistsRule();
+        InputRule isFreeRule = new FieldIsEmptyRule(board);
+        InputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
+        InputAlerter isFreeAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
 
-        ConsoleTurnMessageView view = new ConsoleTurnMessageView();
-        view.register(john, "X");
-        view.register(haley, "O");
-        return new VerboseTwoPlayerTurn(john, haley, view);
-    }
+        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
+        alerter.register(existsRule, existsAlerter);
+        alerter.register(isFreeRule, isFreeAlerter);
 
-    private Player makeHumanPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeConsoleInputGenerator(board);
-        PlayerContext context = new PlayerContext(generator, board, mark);
+        CompositeInputRule inputRule = new CompositeInputRule();
+        inputRule.add(existsRule);
+        inputRule.add(isFreeRule);
 
-        return new PlayerImp(context);
-    }
+        InputReferee referee = new InputRefereeImp(inputRule, alerter);
+        InputGenerator consoleGenerator = new ConsoleInputGenerator();
+        InputGenerator humanGenerator = new VerboseValidatingInputGenerator(consoleGenerator, referee);
+        PlayerContext johnContext = new PlayerContext(humanGenerator, board, Mark.John);
+        Player john = new PlayerImp(johnContext);
 
-    private Player makeComputerPlayer(Board board, Mark mark) {
-        InputGenerator generator = makeComputerInputGenerator(board);
-        PlayerContext context = new PlayerContext(generator, board, mark);
+        InputGenerator randomGenerator = new RandomInputGenerator();
+        InputGenerator computerGenerator = new ValidatingInputGenerator(randomGenerator, inputRule);
+        PlayerContext haleyContext = new PlayerContext(computerGenerator, board, Mark.Haley);
+        Player haley = new PlayerImp(haleyContext);
 
-        return new PlayerImp(context);
-    }
+        ConsoleTurnMessageView turnMessageView = new ConsoleTurnMessageView();
+        turnMessageView.register(john, "X");
+        turnMessageView.register(haley, "O");
+        Turn turn = new VerboseTwoPlayerTurn(john, haley, turnMessageView);
 
-    private InputGenerator makeComputerInputGenerator(Board board) {
-        InputGenerator generator = new RandomInputGenerator();
-        InputRule rule = makeInputRule(board);
-        return new ValidatingInputGenerator(generator, rule);
-    }
+        CompositeGameOverRule gameOverRule = new CompositeGameOverRule();
+        GameOverRule numberOfMovesRule = new NumberOfMovesRule(board);
+        gameOverRule.add(numberOfMovesRule);
+        GameEvaluator winningLineProvider = new GameEvaluator(lineProvider, evaluator);
+        GameOverRule winningLineRule = new WinnerRule(winningLineProvider);
+        gameOverRule.add(winningLineRule);
 
-    private InputGenerator makeConsoleInputGenerator(Board board) {
-        InputReferee referee = makeInputReferee(board);
-        InputGenerator generator = makeConsoleGenerator();
-        return new VerboseValidatingInputGenerator(generator, referee);
-    }
+        Game game = new GameImp(turn, gameOverRule, renderer);
 
-    private InputReferee makeInputReferee(Board board) {
-        InputAlerter alerter = makeInputAlerter(board);
-        InputRule rule = makeInputRule(board);
-
-        return new InputRefereeImp(rule, alerter);
-    }
-
-    private InputAlerter makeInputAlerter(Board board) {
-        InputRule existsRule = makeFieldExistsRule();
-        InputAlerter existsAlerter = makeFieldExistsAlerter();
-        InputRule isFreeRule = makeFieldIsEmptyRule(board);
-        InputAlerter isFreeAlerter = makeFieldIsEmptyAlerter();
-
-        RuleChoosingInputAlerter choosing = new RuleChoosingInputAlerter();
-        choosing.register(existsRule, existsAlerter);
-        choosing.register(isFreeRule, isFreeAlerter);
-        return choosing;
-    }
-
-    private InputRule makeFieldExistsRule() {
-        return new FieldExistsRule();
-    }
-
-    private InputAlerter makeFieldExistsAlerter() {
-        return new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
-    }
-
-    private InputRule makeFieldIsEmptyRule(Board board) {
-        return new FieldIsEmptyRule(board);
-    }
-
-    private InputAlerter makeFieldIsEmptyAlerter() {
-        return new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
-    }
-
-    private InputRule makeInputRule(Board board) {
-        InputRule existsRule = makeFieldExistsRule();
-        InputRule isFreeRule = makeFieldIsEmptyRule(board);
-
-        CompositeInputRule composite = new CompositeInputRule();
-        composite.add(existsRule);
-        composite.add(isFreeRule);
-
-        return composite;
-    }
-
-    private InputGenerator makeConsoleGenerator() {
-        return new ConsoleInputGenerator();
-    }
-
-
-
-    private GameOverRule makeTicTacToeGameOverRule(Board board) {
-        GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
-        GameOverRule winningLineRule = makeWinningLineRule(board);
-
-        CompositeGameOverRule rule = new CompositeGameOverRule();
-        rule.add(numberOfMovesRule);
-        rule.add(winningLineRule);
-
-        return rule;
-    }
-
-    private GameOverRule makeNumberOfMovesRule(Board board) {
-        return new NumberOfMovesRule(board);
-    }
-
-    private GameOverRule makeWinningLineRule(Board board) {
-        EquallyMarkedLineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        HumbleLineProvider provider = new HumbleLineProvider();
-        GameEvaluator winningLineProvider = new GameEvaluator(provider, evaluator);
-        return new WinnerRule(winningLineProvider);
-    }
-
-    private Board makeBoard() {
-        return new HashingBoard();
+        GameLoopImp loop = new GameLoopImp(game);
+        return new TicTacToe(receptionist, renderer, loop);
     }
 
 }
