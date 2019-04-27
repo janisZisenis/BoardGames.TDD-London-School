@@ -1,4 +1,4 @@
-package Lib.Model.RenderingGameLoop.TwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn;
 import Lib.Model.RenderingGameLoop.GameImp.Turn;
 
 public class TwoPlayerTurn implements Turn {

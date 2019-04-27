@@ -3,7 +3,7 @@ package Lib.Model.Players;
 import Lib.Data.Field.Field;
 import Lib.Data.Input.Input;
 import Lib.Data.Mark;
-import Lib.Model.RenderingGameLoop.TwoPlayerTurn.Player;
+import Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn.Player;
 
 public class PlayerImp implements Player {
 

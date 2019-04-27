@@ -1,15 +1,17 @@
-package Lib.Model.RenderingGameLoop.TwoPlayerTurn;
+package Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn;
 
+import Lib.Model.RenderingGameLoop.GameImp.TwoPlayerTurn.PlayerSpy;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class AlternatePlayingTest {
+public class VerboseAlternatePlayingTest {
 
     private PlayerSpy first = new PlayerSpy();
     private PlayerSpy second = new PlayerSpy();
-    private TwoPlayerTurn sut = new TwoPlayerTurn(first, second);
+    private TurnMessageViewDummy view = new TurnMessageViewDummy();
+    private VerboseTwoPlayerTurn sut = new VerboseTwoPlayerTurn(first, second, view);
 
     @Test
     void IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce() {
