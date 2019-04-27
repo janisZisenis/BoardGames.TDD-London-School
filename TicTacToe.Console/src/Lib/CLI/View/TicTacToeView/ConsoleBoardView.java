@@ -4,8 +4,7 @@ import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.Model.Board.Board;
-import Lib.Presentation.BoardPresenter.BoardView;
+import Lib.Model.BoardRenderer.BoardView;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
@@ -26,13 +25,6 @@ public class ConsoleBoardView implements BoardView {
         for(int row = 0; row < rowColumn; row++) {
             printRow(row);
         }
-    }
-
-    @Override
-    public void display(Board board) {
-//        for(int row = 0; row < rowColumn; row++) {
-//            printRow(row, board);
-//        }
     }
 
     private void printRow(int row) {
@@ -67,26 +59,6 @@ public class ConsoleBoardView implements BoardView {
             }
             System.out.println();
         }
-    }
-
-
-    @Override
-    public void display(Board board, Line line) {
-//        for(int row = 0; row < rowColumn; row++) {
-//            for(int col = 0; col < rowColumn; col++) {
-//                Field f = new Field(row, col);
-//                String s = FieldSymbols.empty;
-//
-//                if(board.isMarked(f))
-//                    s = map(board.getMarkAt(f));
-//
-//                if(lineContains(f, line))
-//                    s = ANSI_GREEN + s + ANSI_RESET;
-//
-//                System.out.print(s);
-//            }
-//            System.out.println();
-//        }
     }
 
     private boolean lineContains(Field f, Line line) {

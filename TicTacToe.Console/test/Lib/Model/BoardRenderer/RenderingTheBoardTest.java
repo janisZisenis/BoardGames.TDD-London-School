@@ -2,16 +2,15 @@ package Lib.Model.BoardRenderer;
 
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
-import Lib.Presentation.BoardPresenter.WinningLineProviderStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RenderingTheBoardTest {
 
-    BoardViewSpy view = new BoardViewSpy();
-    WinningLineProviderStub provider = new WinningLineProviderStub();
-    BoardRenderer sut = new BoardRenderer(view, provider);
+    private BoardViewSpy view = new BoardViewSpy();
+    private WinningLineProviderStub provider = new WinningLineProviderStub();
+    private BoardRenderer sut = new BoardRenderer(view, provider);
 
     @Test
     void IfNoWinningLineIsProvided_ShouldShowTheBoard() {

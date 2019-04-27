@@ -40,7 +40,7 @@ import Lib.Model.RenderingGameLoop.Game;
 import Lib.Model.RenderingGameLoop.GameImp.GameImp;
 import Lib.Model.RenderingGameLoop.GameImp.Renderer;
 import Lib.Model.RenderingGameLoop.RenderingGameLoop;
-import Lib.Presentation.BoardPresenter.WinningLineProvider;
+import Lib.Model.BoardRenderer.WinningLineProvider;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 

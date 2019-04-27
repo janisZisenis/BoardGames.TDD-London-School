@@ -1,6 +1,6 @@
 package Lib.Model.GameEvaluation.GameEvaluator;
 
-import Lib.Presentation.BoardPresenter.WinningLineProvider;
+import Lib.Model.BoardRenderer.WinningLineProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

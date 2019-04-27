@@ -1,24 +1,12 @@
 package Lib.Model.BoardRenderer;
 
 import Lib.Data.Line;
-import Lib.Model.Board.Board;
-import Lib.Presentation.BoardPresenter.BoardView;
 
 public class BoardViewSpy implements BoardView {
 
     private boolean didShowBoard = false;
     private boolean didShowWinningLine = false;
     private Line shownWinningLine = null;
-
-    @Override
-    public void display(Board board) {
-
-    }
-
-    @Override
-    public void display(Board board, Line line) {
-
-    }
 
     public void showBoard() {
         didShowBoard = true;

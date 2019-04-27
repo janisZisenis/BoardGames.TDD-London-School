@@ -1,4 +1,4 @@
-package Lib.Presentation.BoardPresenter;
+package Lib.Model.BoardRenderer;
 
 import Lib.Data.Line;
 
