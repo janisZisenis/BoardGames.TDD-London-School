@@ -2,8 +2,9 @@ package Lib.Model.RenderingGameLoop.GameImp;
 
 import Lib.Model.GameLoop.GameOverRule;
 import Lib.Model.GameLoop.Turn;
+import Lib.Model.RenderingGameLoop.Game;
 
-public class GameImp {
+public class GameImp implements Game {
 
     private final Turn turn;
     private final GameOverRule rule;

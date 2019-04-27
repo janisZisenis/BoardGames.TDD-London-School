@@ -5,10 +5,11 @@ import Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 import Lib.CLI.View.InputGenerators.ConsoleTurnMessageView;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
+import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
-import Lib.Model.Board.ObservableBoard.ObservableBoard;
+import Lib.Model.BoardRenderer.BoardRenderer;
 import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
@@ -36,14 +37,15 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
+import Lib.Model.RenderingGameLoop.Game;
+import Lib.Model.RenderingGameLoop.GameImp.GameImp;
+import Lib.Model.RenderingGameLoop.GameImp.Renderer;
+import Lib.Model.RenderingGameLoop.RenderingGameLoop;
 import Lib.Presentation.BoardPresenter.WinningLineProvider;
+import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
+import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
-
-    public ObservableBoard makeDisplayedBoard() {
-        ObservableBoard board = makeObservableBoard();
-        return board;
-    }
 
     public WinningLineProvider makeWinningLineProvider(Board board) {
         LineProvider provider = new HumbleLineProvider();
@@ -55,6 +57,22 @@ public class TicTacToeFactory {
         Turn turn = makeTurn(board);
         GameOverRule rule = makeTicTacToeGameOverRule(board);
         return new GameLoop(turn, rule);
+    }
+
+    public RenderingGameLoop makeRenderingGameLoop(Board board) {
+        Turn turn = makeTurn(board);
+        GameOverRule rule = makeTicTacToeGameOverRule(board);
+        Renderer renderer = makeBoardRenderer(board);
+        Game game = new GameImp(turn, rule, renderer);
+
+        return new RenderingGameLoop(game);
+    }
+
+    private Renderer makeBoardRenderer(Board board) {
+        MarkToStringMapper mapper = new MarkToXOMapper();
+        ConsoleBoardView view = new ConsoleBoardView(board, mapper);
+        WinningLineProvider provider = makeWinningLineProvider(board);
+        return new BoardRenderer(view, provider);
     }
 
     private Turn makeTurn(Board board) {
@@ -167,9 +185,8 @@ public class TicTacToeFactory {
         return new WinnerRule(winningLineProvider);
     }
     
-    private ObservableBoard makeObservableBoard() {
-        Board hashing = new HashingBoard();
-        return new ObservableBoard(hashing);
+    public Board makeBoard() {
+        return new HashingBoard();
     }
 
 }
