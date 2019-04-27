@@ -1,4 +1,4 @@
-package Lib.CLI.View.TicTacToeView;
+package Lib.Model.Board;
 
 import Lib.Data.Field.Field;
 import Lib.Data.Mark;

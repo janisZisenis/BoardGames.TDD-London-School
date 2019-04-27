@@ -1,6 +1,5 @@
 package Lib.Model.Board;
 
-import Lib.CLI.View.TicTacToeView.ReadOnlyBoard;
 import Lib.Data.Field.Field;
 import Lib.Data.Mark;
 import Lib.Model.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
