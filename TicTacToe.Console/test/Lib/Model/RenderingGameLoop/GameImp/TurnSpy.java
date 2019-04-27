@@ -1,6 +1,4 @@
-package Lib.Model.RenderingGameLoop;
-
-import Lib.Model.RenderingGameLoop.GameImp.Turn;
+package Lib.Model.RenderingGameLoop.GameImp;
 
 public class TurnSpy implements Turn {
 

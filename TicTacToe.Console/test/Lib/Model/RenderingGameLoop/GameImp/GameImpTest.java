@@ -1,7 +1,6 @@
 package Lib.Model.RenderingGameLoop.GameImp;
 
 import Lib.Model.RenderingGameLoop.GameOverRuleStub;
-import Lib.Model.RenderingGameLoop.TurnSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

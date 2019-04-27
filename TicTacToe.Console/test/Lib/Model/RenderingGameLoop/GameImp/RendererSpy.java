@@ -1,6 +1,6 @@
 package Lib.Model.RenderingGameLoop.GameImp;
 
-public class RendererSpy extends RendererDummy {
+public class RendererSpy implements Renderer {
 
     private boolean didRender = false;
 
