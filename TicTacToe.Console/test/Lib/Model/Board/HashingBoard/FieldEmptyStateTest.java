@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class FieldIsStateTest {
+public class FieldEmptyStateTest {
 
     private HashingBoard sut = new HashingBoard();
     private Field first = new Field(1, 2);
