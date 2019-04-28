@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,12 +60,13 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="38" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="7" />
           <entry key="project.open.time.11" value="8" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.5" value="2" />
@@ -72,19 +74,19 @@
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="7" />
-          <entry key="project.opened" value="43" />
+          <entry key="project.opened" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="2689" />
-          <entry key="java" value="108376" />
+          <entry key="dummy" value="3164" />
+          <entry key="java" value="109622" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="108376" />
-          <entry key="PLAIN_TEXT" value="2689" />
+          <entry key="JAVA" value="109622" />
+          <entry key="PLAIN_TEXT" value="3164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -92,7 +94,7 @@
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="1" />
-          <entry key="java" value="2464" />
+          <entry key="java" value="2466" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -100,7 +102,7 @@
         <counts>
           <entry key="CLASS" value="9" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="2464" />
+          <entry key="JAVA" value="2466" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -108,14 +110,31 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="414">
+              <caret line="172" column="5" lean-forward="true" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#makeTicTacToe#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeGameLoop#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeGame#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeRenderer#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeConsoleBoardView#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeGameOverRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeWinnerRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeGameEvaluator#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeTurn#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeHumanPlayer#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeComputerPlayer#0;class#TicTacToeFactory#0" />
+                <element signature="method#makePlayer#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeComputerInputGenerator#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeHumanInputGenerator#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeInputRule#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeInputAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeConsoleInputAlerter#0;class#TicTacToeFactory#0" />
+                <element signature="method#makeInputReferee#0;class#TicTacToeFactory#0" />
               </folding>
             </state>
           </provider>
@@ -133,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_</find>
       <find>-</find>
       <find>fields.</find>
       <find>Player</find>
@@ -163,6 +181,7 @@
       <find>com.</find>
       <find>makeOb</find>
       <find>makeBoard</find>
+      <find>NumberOfMovesRule</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -244,9 +263,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="158" />
-    <option name="width" value="1440" />
-    <option name="height" value="899" />
+    <option name="y" value="157" />
+    <option name="width" value="1442" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -390,7 +409,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -421,6 +439,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,7 +449,7 @@
     <property name="SearchEverywhereHistoryKey" value="Counting&#9;PSI&#9;JAVA://Lib.Model.RenderingGameLoop.CountingGameOverRuleStub&#10;TurnDummy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Console/test/Lib/Model/RenderingGameLoop/GameImp/TurnDummy.java&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556402222194" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556440897155" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -607,7 +626,8 @@
       <workItem from="1556203869320" duration="14957000" />
       <workItem from="1556254820559" duration="4147000" />
       <workItem from="1556376080767" duration="2946000" />
-      <workItem from="1556400293234" duration="1920000" />
+      <workItem from="1556400293234" duration="1974000" />
+      <workItem from="1556402309720" duration="2810000" />
     </task>
     <servers />
   </component>
@@ -644,13 +664,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280857000" />
+    <option name="totallyTimeSpent" value="283721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29157782" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2947761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -659,7 +679,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40382165" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41968912" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41968912" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44585988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -774,9 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,9 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,13 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="method#IfNoWinningLineIsProvided_ShouldShowTheBoard#0;class#RenderingTheBoardTest#0" />
-            <element signature="method#IfWinningLineIsProvided_ShouldNotShowTheBoard#0;class#RenderingTheBoardTest#0" />
-            <element signature="method#IfWinningLineIsProvided_ShouldShowTheWinningLine#0;class#RenderingTheBoardTest#0" />
-            <element signature="method#makeWinningLineIsProvided#0;class#RenderingTheBoardTest#0" />
-            <element signature="method#makeLine#0;class#RenderingTheBoardTest#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,9 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,10 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding>
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,16 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="method#IfGameIsOverAfterOneTurn_ShouldPlayOnce#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#IfGameIsOverAfterOneTurn_ShouldRenderOnce#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#IfGameIsOverImmediately_ShouldHavePlay#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#IfGameIsOverImmediately_ShouldNotRender#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#IfGameIsOverAfterTwoTurns_ShouldPlayTwice#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#IfGameIsOverAfterOneTurn_ShouldRenderTwice#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#assertHasPlayedTurnTimes#0;class#LoopingUntilGameOverTest#0" />
-            <element signature="method#assertHasRenderedTimes#0;class#LoopingUntilGameOverTest#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,9 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,9 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-59">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,17 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1084,20 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/GameOverRules/WinnerRule/WinnerRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,12 +1074,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/GameOverRules/WinnerRule/WinnerRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="414">
+          <caret line="172" column="5" lean-forward="true" selection-start-line="172" selection-start-column="5" selection-end-line="172" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#makeTicTacToe#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeGameLoop#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeGame#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeRenderer#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeConsoleBoardView#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeGameOverRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeWinnerRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeGameEvaluator#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeTurn#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeHumanPlayer#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeComputerPlayer#0;class#TicTacToeFactory#0" />
+            <element signature="method#makePlayer#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeComputerInputGenerator#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeHumanInputGenerator#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeInputRule#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeInputAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeConsoleInputAlerter#0;class#TicTacToeFactory#0" />
+            <element signature="method#makeInputReferee#0;class#TicTacToeFactory#0" />
           </folding>
         </state>
       </provider>

@@ -27,6 +27,7 @@ import Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseT
 import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
+import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
@@ -42,6 +43,7 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
+import Lib.Model.TicTacToe.Receptionist;
 import Lib.Model.TicTacToe.TicTacToe;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
@@ -49,57 +51,182 @@ import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 public class TicTacToeFactory {
 
     public TicTacToe makeTicTacToe() {
+        Board board = makeBoard();
 
-        Board board = new HashingBoard();
+        Receptionist receptionist = makeReceptionist();
+        Renderer renderer = makeRenderer(board);
+        GameLoopImp loop = makeGameLoop(board);
 
-        ConsoleReceptionist receptionist = new ConsoleReceptionist();
-        MarkToStringMapper mapper = new MarkToXOMapper();
-        ConsoleBoardView view = new ConsoleBoardView(board, mapper);
-        LineProvider lineProvider = new HumbleLineProvider();
-        LineEvaluator evaluator = new EquallyMarkedLineEvaluator(board);
-        WinningLineProvider provider = new GameEvaluator(lineProvider, evaluator);
-        Renderer renderer = new BoardRenderer(view, provider);
+        return new TicTacToe(receptionist, renderer, loop);
+    }
 
-        InputRule existsRule = new FieldExistsRule();
-        InputRule isFreeRule = new FieldIsEmptyRule(board);
-        InputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputAlerter isFreeAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
+    private HashingBoard makeBoard() {
+        return new HashingBoard();
+    }
 
-        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
-        alerter.register(existsRule, existsAlerter);
-        alerter.register(isFreeRule, isFreeAlerter);
+    private ConsoleReceptionist makeReceptionist() {
+        return new ConsoleReceptionist();
+    }
+
+    private GameLoopImp makeGameLoop(Board board) {
+        Game game = makeGame(board);
+        return new GameLoopImp(game);
+    }
+
+    private Game makeGame(Board board) {
+        Turn turn = makeTurn(board);
+        GameOverRule gameOverRule = makeGameOverRule(board);
+        Renderer renderer = makeRenderer(board);
+        return new GameImp(turn, gameOverRule, renderer);
+    }
+
+    private Renderer makeRenderer(Board board) {
+        ConsoleBoardView view = makeConsoleBoardView(board);
+        WinningLineProvider provider = makeWinningLineProvider(board);
+        return new BoardRenderer(view, provider);
+    }
+
+    private ConsoleBoardView makeConsoleBoardView(Board board) {
+        MarkToStringMapper mapper = makeMarkToStringMapper();
+        return new ConsoleBoardView(board, mapper);
+    }
+
+    private MarkToXOMapper makeMarkToStringMapper() {
+        return new MarkToXOMapper();
+    }
+
+    private WinningLineProvider makeWinningLineProvider(Board board) {
+        return makeGameEvaluator(board);
+    }
+
+    private EquallyMarkedLineEvaluator makeLineEvaluator(Board board) {
+        return new EquallyMarkedLineEvaluator(board);
+    }
+
+    private LineProvider makeLineProvider() {
+        return new HumbleLineProvider();
+    }
+
+    private GameOverRule makeGameOverRule(Board board) {
+        GameOverRule numberOfMovesRule = makeNumberOfMovesRule(board);
+        GameOverRule winningLineRule = makeWinnerRule(board);
+
+        CompositeGameOverRule composite = new CompositeGameOverRule();
+        composite.add(numberOfMovesRule);
+        composite.add(winningLineRule);
+        return composite;
+    }
+
+    private GameOverRule makeWinnerRule(Board board) {
+        HasWinnerProvider winningLineProvider = makeHasWinnerProvider(board);
+        return new WinnerRule(winningLineProvider);
+    }
+
+    private NumberOfMovesRule makeNumberOfMovesRule(Board board) {
+        return new NumberOfMovesRule(board);
+    }
+
+    private HasWinnerProvider makeHasWinnerProvider(Board board) {
+        return makeGameEvaluator(board);
+    }
+
+    private GameEvaluator makeGameEvaluator(Board board) {
+        LineProvider provider = makeLineProvider();
+        LineEvaluator evaluator = makeLineEvaluator(board);
+        return new GameEvaluator(provider, evaluator);
+    }
+
+
+    private Turn makeTurn(Board board) {
+        Player john = makeHumanPlayer(board, Mark.John);
+        Player haley = makeComputerPlayer(board, Mark.Haley);
+
+        ConsoleTurnMessageView turnMessageView = makeConsoleTurnMessageView();
+        turnMessageView.register(john, "X");
+        turnMessageView.register(haley, "O");
+        return new VerboseTwoPlayerTurn(john, haley, turnMessageView);
+    }
+
+    private ConsoleTurnMessageView makeConsoleTurnMessageView() {
+        return new ConsoleTurnMessageView();
+    }
+
+    private Player makeHumanPlayer(Board board, Mark m) {
+        InputGenerator humanGenerator = makeHumanInputGenerator(board);
+        return makePlayer(board, humanGenerator, m);
+    }
+
+    private Player makeComputerPlayer(Board board, Mark m) {
+        InputGenerator computerGenerator = makeComputerInputGenerator(board);
+        return makePlayer(board, computerGenerator, m);
+    }
+
+    private Player makePlayer(Board board, InputGenerator generator, Mark m) {
+        PlayerContext johnContext = new PlayerContext(generator, board, m);
+        return new PlayerImp(johnContext);
+    }
+
+    private InputGenerator makeComputerInputGenerator(Board board) {
+        InputRule inputRule = makeInputRule(board);
+        InputGenerator randomGenerator = makeRandomInputGenerator();
+        return new ValidatingInputGenerator(randomGenerator, inputRule);
+    }
+
+    private RandomInputGenerator makeRandomInputGenerator() {
+        return new RandomInputGenerator();
+    }
+
+    private InputGenerator makeHumanInputGenerator(Board board) {
+        InputReferee referee = makeInputReferee(board);
+        InputGenerator consoleGenerator = makeConsoleInputGenerator();
+        return new VerboseValidatingInputGenerator(consoleGenerator, referee);
+    }
+
+    private ConsoleInputGenerator makeConsoleInputGenerator() {
+        return new ConsoleInputGenerator();
+    }
+
+
+    private InputRule makeInputRule(Board board) {
+        InputRule existsRule = makeFieldExistsRule();
+        InputRule isFreeRule = makeFieldIsEmptyRule(board);
 
         CompositeInputRule inputRule = new CompositeInputRule();
         inputRule.add(existsRule);
         inputRule.add(isFreeRule);
 
-        InputReferee referee = new InputRefereeImp(inputRule, alerter);
-        InputGenerator consoleGenerator = new ConsoleInputGenerator();
-        InputGenerator humanGenerator = new VerboseValidatingInputGenerator(consoleGenerator, referee);
-        PlayerContext johnContext = new PlayerContext(humanGenerator, board, Mark.John);
-        Player john = new PlayerImp(johnContext);
+        return inputRule;
+    }
 
-        InputGenerator randomGenerator = new RandomInputGenerator();
-        InputGenerator computerGenerator = new ValidatingInputGenerator(randomGenerator, inputRule);
-        PlayerContext haleyContext = new PlayerContext(computerGenerator, board, Mark.Haley);
-        Player haley = new PlayerImp(haleyContext);
+    private FieldExistsRule makeFieldExistsRule() {
+        return new FieldExistsRule();
+    }
 
-        ConsoleTurnMessageView turnMessageView = new ConsoleTurnMessageView();
-        turnMessageView.register(john, "X");
-        turnMessageView.register(haley, "O");
-        Turn turn = new VerboseTwoPlayerTurn(john, haley, turnMessageView);
+    private InputAlerter makeInputAlerter(Board board) {
+        InputRule existsRule = makeFieldExistsRule();
+        InputRule isFreeRule = makeFieldIsEmptyRule(board);
+        InputAlerter existsAlerter = makeConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
+        InputAlerter isFreeAlerter = makeConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
 
-        CompositeGameOverRule gameOverRule = new CompositeGameOverRule();
-        GameOverRule numberOfMovesRule = new NumberOfMovesRule(board);
-        gameOverRule.add(numberOfMovesRule);
-        GameEvaluator winningLineProvider = new GameEvaluator(lineProvider, evaluator);
-        GameOverRule winningLineRule = new WinnerRule(winningLineProvider);
-        gameOverRule.add(winningLineRule);
+        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
+        alerter.register(existsRule, existsAlerter);
+        alerter.register(isFreeRule, isFreeAlerter);
 
-        Game game = new GameImp(turn, gameOverRule, renderer);
+        return alerter;
+    }
 
-        GameLoopImp loop = new GameLoopImp(game);
-        return new TicTacToe(receptionist, renderer, loop);
+    private ConsoleInputAlerter makeConsoleInputAlerter(String inputDoesNotExist) {
+        return new ConsoleInputAlerter(inputDoesNotExist);
+    }
+
+    private FieldIsEmptyRule makeFieldIsEmptyRule(Board board) {
+        return new FieldIsEmptyRule(board);
+    }
+
+    private InputReferee makeInputReferee(Board board) {
+        InputRule rule = makeInputRule(board);
+        InputAlerter alerter = makeInputAlerter(board);
+        return new InputRefereeImp(rule, alerter);
     }
 
 }
