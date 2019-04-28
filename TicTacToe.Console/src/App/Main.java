@@ -1,6 +1,6 @@
 package App;
 
-import Lib.Model.Games.MessagingGame.Game;
+import Lib.Games.MessagingGame.Game;
 
 public class Main {
 
