@@ -1,8 +1,8 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerterDummy;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerterMock;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputAlerterDummy;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputAlerterMock;
 import org.junit.jupiter.api.Test;
 
 public class RuleChoosingInputAlerterTest {

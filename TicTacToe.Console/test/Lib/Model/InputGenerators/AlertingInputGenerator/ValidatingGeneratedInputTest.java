@@ -1,4 +1,4 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator;
+package Lib.Model.InputGenerators.AlertingInputGenerator;
 
 import Lib.Data.Input.Input;
 import Lib.Model.Players.CountingGeneratorStub;
@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ValidInputGenerationTest {
+public class ValidatingGeneratedInputTest {
 
     private InputRefereeStub referee = new InputRefereeStub();
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private VerboseValidatingInputGenerator sut = new VerboseValidatingInputGenerator(generator, referee);
+    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, referee);
 
     private Input[] generated;
     private Input[] valids;

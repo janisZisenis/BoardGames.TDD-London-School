@@ -1,4 +1,4 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
 
 import Lib.Data.Input.Input;
 

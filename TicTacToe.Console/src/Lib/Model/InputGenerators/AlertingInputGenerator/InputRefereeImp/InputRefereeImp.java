@@ -1,7 +1,7 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputReferee;
 
 public class InputRefereeImp implements InputReferee {
 

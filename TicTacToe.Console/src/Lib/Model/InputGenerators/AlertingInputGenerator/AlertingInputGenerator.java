@@ -1,14 +1,14 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator;
+package Lib.Model.InputGenerators.AlertingInputGenerator;
 
 import Lib.Data.Input.Input;
 import Lib.Model.Players.InputGenerator;
 
-public class VerboseValidatingInputGenerator implements InputGenerator {
+public class AlertingInputGenerator implements InputGenerator {
 
     private final InputGenerator generator;
     private InputReferee referee;
 
-    public VerboseValidatingInputGenerator(InputGenerator generator, InputReferee referee) {
+    public AlertingInputGenerator(InputGenerator generator, InputReferee referee) {
         this.generator = generator;
         this.referee = referee;
     }

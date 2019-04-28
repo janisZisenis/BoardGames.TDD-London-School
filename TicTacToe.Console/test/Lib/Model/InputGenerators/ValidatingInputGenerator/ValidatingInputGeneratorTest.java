@@ -2,7 +2,7 @@ package Lib.Model.InputGenerators.ValidatingInputGenerator;
 
 import Lib.Data.Input.Input;
 import Lib.Model.Players.CountingGeneratorStub;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.InputRuleStub;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.InputRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

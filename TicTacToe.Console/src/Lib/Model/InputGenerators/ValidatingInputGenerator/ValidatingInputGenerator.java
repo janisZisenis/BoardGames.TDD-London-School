@@ -1,7 +1,7 @@
 package Lib.Model.InputGenerators.ValidatingInputGenerator;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRule;
 import Lib.Model.Players.InputGenerator;
 
 public class ValidatingInputGenerator implements InputGenerator {

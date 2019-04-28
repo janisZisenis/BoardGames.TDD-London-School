@@ -28,12 +28,12 @@ import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputReferee;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRefereeImp;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.Model.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.Model.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
@@ -173,7 +173,7 @@ public class TicTacToeFactory {
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputReferee referee = makeInputReferee(board);
         InputGenerator consoleGenerator = makeConsoleInputGenerator();
-        return new VerboseValidatingInputGenerator(consoleGenerator, referee);
+        return new AlertingInputGenerator(consoleGenerator, referee);
     }
 
     private ConsoleInputGenerator makeConsoleInputGenerator() {

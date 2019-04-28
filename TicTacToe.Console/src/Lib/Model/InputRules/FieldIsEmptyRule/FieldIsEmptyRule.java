@@ -2,7 +2,7 @@ package Lib.Model.InputRules.FieldIsEmptyRule;
 
 import Lib.Data.Field.Field;
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRule;
 
 public class FieldIsEmptyRule implements InputRule {
     private final FieldIsEmptyProvider provider;

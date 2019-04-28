@@ -1,7 +1,7 @@
-package Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.InputRuleDummy;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.InputRuleDummy;
 import org.junit.jupiter.api.Test;
 
 public class InputRefereeImpAlertingTest {
