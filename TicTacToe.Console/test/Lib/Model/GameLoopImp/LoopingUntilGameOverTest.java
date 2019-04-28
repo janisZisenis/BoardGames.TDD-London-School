@@ -1,15 +1,15 @@
-package Lib.Model.SelfActingGameLoop;
+package Lib.Model.GameLoopImp;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SelfActingGameLoop_LoopingUntilGameOverTest {
+public class LoopingUntilGameOverTest {
 
     private TurnSpy turn = new TurnSpy();
     private RendererSpy renderer = new RendererSpy();
     private CountingGameOverRuleStub rule = new CountingGameOverRuleStub();
-    private SelfActingGameLoop sut = new SelfActingGameLoop(rule, turn, renderer);
+    private GameLoopImp sut = new GameLoopImp(rule, turn, renderer);
 
     @Test
     void IfGameIsOverImmediately_ShouldHavePlay() {

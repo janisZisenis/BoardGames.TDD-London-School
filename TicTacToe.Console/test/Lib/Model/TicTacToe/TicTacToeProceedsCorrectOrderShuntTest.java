@@ -1,6 +1,6 @@
 package Lib.Model.TicTacToe;
 
-import Lib.Model.SelfActingGameLoop.Renderer;
+import Lib.Model.GameLoopImp.Renderer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

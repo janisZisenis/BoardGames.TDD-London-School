@@ -1,4 +1,4 @@
-package Lib.Model.SelfActingGameLoop;
+package Lib.Model.GameLoopImp;
 
 public class RendererSpy implements Renderer {
 

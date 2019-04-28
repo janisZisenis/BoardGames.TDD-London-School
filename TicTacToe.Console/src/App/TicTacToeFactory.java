@@ -17,9 +17,9 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.SelfActingGameLoop.GameOverRule;
-import Lib.Model.SelfActingGameLoop.Renderer;
-import Lib.Model.SelfActingGameLoop.Turn;
+import Lib.Model.GameLoopImp.GameOverRule;
+import Lib.Model.GameLoopImp.Renderer;
+import Lib.Model.GameLoopImp.Turn;
 import Lib.Model.TwoPlayerTurn.Player;
 import Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
@@ -40,7 +40,7 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Model.SelfActingGameLoop.SelfActingGameLoop;
+import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.TicTacToe.GameLoop;
 import Lib.Model.TicTacToe.Receptionist;
 import Lib.Model.TicTacToe.TicTacToe;
@@ -71,7 +71,7 @@ public class TicTacToeFactory {
         GameOverRule rule = makeGameOverRule(board);
         Turn turn = makeTurn(board);
         Renderer renderer = makeRenderer(board);
-        return new SelfActingGameLoop(rule, turn, renderer);
+        return new GameLoopImp(rule, turn, renderer);
     }
 
     private Renderer makeRenderer(Board board) {

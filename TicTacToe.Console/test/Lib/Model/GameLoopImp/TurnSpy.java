@@ -1,6 +1,4 @@
-package Lib.Model.SelfActingGameLoop;
-
-import Lib.Model.SelfActingGameLoop.Turn;
+package Lib.Model.GameLoopImp;
 
 public class TurnSpy implements Turn {
 

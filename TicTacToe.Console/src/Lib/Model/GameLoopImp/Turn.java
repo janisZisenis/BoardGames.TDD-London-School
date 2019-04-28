@@ -1,4 +1,4 @@
-package Lib.Model.SelfActingGameLoop;
+package Lib.Model.GameLoopImp;
 
 public interface Turn {
     void play();

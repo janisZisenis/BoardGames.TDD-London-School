@@ -1,13 +1,13 @@
-package Lib.Model.SelfActingGameLoop;
+package Lib.Model.GameLoopImp;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SelfActingGameLoop_PlayingBeforeRenderingShuntTest implements Turn, Renderer {
+public class PlayingBeforeRenderingShuntTest implements Turn, Renderer {
 
     private CountingGameOverRuleStub rule = new CountingGameOverRuleStub();
-    private SelfActingGameLoop sut = new SelfActingGameLoop(rule, this, this);
+    private GameLoopImp sut = new GameLoopImp(rule, this, this);
 
     private String logString = "";
 

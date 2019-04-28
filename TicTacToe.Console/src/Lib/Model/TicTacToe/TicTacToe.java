@@ -1,6 +1,6 @@
 package Lib.Model.TicTacToe;
 
-import Lib.Model.SelfActingGameLoop.Renderer;
+import Lib.Model.GameLoopImp.Renderer;
 
 public class TicTacToe {
 
