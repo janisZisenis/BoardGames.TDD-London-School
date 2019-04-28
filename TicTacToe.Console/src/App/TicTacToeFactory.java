@@ -6,7 +6,6 @@ import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
 import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
-import Lib.CLI.View.TicTacToeView.ConsoleReceptionist;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
@@ -42,7 +41,6 @@ import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
 import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.Game.GameLoop;
-import Lib.Model.Game.Receptionist;
 import Lib.Model.Game.Game;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
@@ -52,19 +50,14 @@ public class TicTacToeFactory {
     public Game makeTicTacToe() {
         Board board = makeBoard();
 
-        Receptionist receptionist = makeReceptionist();
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
 
-        return new Game(receptionist, renderer, loop);
+        return new Game(renderer, loop);
     }
 
     private HashingBoard makeBoard() {
         return new HashingBoard();
-    }
-
-    private ConsoleReceptionist makeReceptionist() {
-        return new ConsoleReceptionist();
     }
 
     private GameLoop makeGameLoop(Board board) {
