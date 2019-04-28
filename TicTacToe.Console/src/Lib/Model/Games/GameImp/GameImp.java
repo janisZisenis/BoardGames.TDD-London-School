@@ -1,13 +1,13 @@
-package Lib.Model.Game;
+package Lib.Model.Games.GameImp;
 
 import Lib.Model.GameLoopImp.Renderer;
 
-public class Game {
+public class GameImp {
 
     private final GameLoop loop;
     private final Renderer renderer;
 
-    public Game(Renderer renderer, GameLoop loop) {
+    public GameImp(Renderer renderer, GameLoop loop) {
         this.renderer = renderer;
         this.loop = loop;
     }

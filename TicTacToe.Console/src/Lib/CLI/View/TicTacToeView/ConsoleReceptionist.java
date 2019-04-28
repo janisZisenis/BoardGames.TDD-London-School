@@ -2,8 +2,8 @@
 //
 //public class ConsoleReceptionist implements Receptionist {
 //
-//    private final String salutation = "Welcome To Game";
-//    private final String leaveTaking = "Welcome To Game";
+//    private final String salutation = "Welcome To Games";
+//    private final String leaveTaking = "Welcome To Games";
 //
 //    public void salute() {
 //        System.out.println(salutation);

@@ -40,20 +40,20 @@ import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
 import Lib.Model.GameLoopImp.GameLoopImp;
-import Lib.Model.Game.GameLoop;
-import Lib.Model.Game.Game;
+import Lib.Model.Games.GameImp.GameLoop;
+import Lib.Model.Games.GameImp.GameImp;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
-    public Game makeTicTacToe() {
+    public GameImp makeTicTacToe() {
         Board board = makeBoard();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
 
-        return new Game(renderer, loop);
+        return new GameImp(renderer, loop);
     }
 
     private HashingBoard makeBoard() {

@@ -1,4 +1,4 @@
-package Lib.Model.Game;
+package Lib.Model.Games.GameImp;
 
 import Lib.Model.GameLoopImp.Renderer;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ public class RenderingBeforeStartingTheGameTest implements Renderer, GameLoop {
 
     @Test
     void FreshInstance_ShouldFirstRenderTheGameOnceBeforeRunningTheLoop() {
-        Game sut = new Game(this, this);
+        GameImp sut = new GameImp(this, this);
 
         sut.play();
 

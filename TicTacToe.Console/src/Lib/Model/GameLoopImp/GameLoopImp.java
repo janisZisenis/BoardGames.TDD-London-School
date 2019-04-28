@@ -1,6 +1,6 @@
 package Lib.Model.GameLoopImp;
 
-import Lib.Model.Game.GameLoop;
+import Lib.Model.Games.GameImp.GameLoop;
 
 public class GameLoopImp implements GameLoop {
 
