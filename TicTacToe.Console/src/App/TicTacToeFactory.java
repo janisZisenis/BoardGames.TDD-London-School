@@ -3,10 +3,10 @@ package App;
 
 import Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
-import Lib.CLI.View.InputGenerators.ConsoleTurnMessageView;
+import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
 import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
-import Lib.CLI.View.TicTacToeView.ConsoleReceptionist;
+import Lib.CLI.View.TicTacToeView.ConsoleGameMessenger;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
@@ -17,54 +17,55 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.GameLoopImp.GameOverRule;
 import Lib.Model.GameLoopImp.Renderer;
 import Lib.Model.GameLoopImp.Turn;
-import Lib.Model.TwoPlayerTurn.Player;
-import Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
+import Lib.Model.Games.GameImp.GameImp;
+import Lib.Model.Games.GameImp.GameLoop;
+import Lib.Model.Games.MessagingGame.Game;
+import Lib.Model.Games.MessagingGame.GameMessenger;
+import Lib.Model.Games.MessagingGame.MessagingGame;
+import Lib.Model.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidator;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputReferee;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputAlerter;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRefereeImp;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.VerboseValidatingInputGenerator;
 import Lib.Model.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.Model.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Model.GameLoopImp.GameLoopImp;
-import Lib.Model.Game.GameLoop;
-import Lib.Model.Game.Receptionist;
-import Lib.Model.Game.Game;
+import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
+import Lib.Model.TwoPlayerTurn.Player;
+import Lib.Presentation.LeaveTaker.WinnerProvider;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
-    public Game makeTicTacToe() {
+    public Game makeGame() {
         Board board = makeBoard();
 
-        Receptionist receptionist = makeReceptionist();
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
-
-        return new Game(receptionist, renderer, loop);
+        Game game = new GameImp(renderer, loop);
+        MarkToStringMapper mapper = makeMarkToStringMapper();
+        WinnerProvider provider = makeGameEvaluator(board);
+        GameMessenger messenger = new ConsoleGameMessenger(provider, mapper);
+        return new MessagingGame(game, messenger);
     }
 
     private HashingBoard makeBoard() {
         return new HashingBoard();
-    }
-
-    private ConsoleReceptionist makeReceptionist() {
-        return new ConsoleReceptionist();
     }
 
     private GameLoop makeGameLoop(Board board) {
@@ -85,7 +86,7 @@ public class TicTacToeFactory {
         return new ConsoleBoardView(board, mapper);
     }
 
-    private MarkToXOMapper makeMarkToStringMapper() {
+    private MarkToStringMapper makeMarkToStringMapper() {
         return new MarkToXOMapper();
     }
 
@@ -135,14 +136,14 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        ConsoleTurnMessageView turnMessageView = makeConsoleTurnMessageView();
+        ConsoleTurnMessenger turnMessageView = makeConsoleTurnMessageView();
         turnMessageView.register(john, "X");
         turnMessageView.register(haley, "O");
-        return new VerboseTwoPlayerTurn(john, haley, turnMessageView);
+        return new MessagingTwoPlayerTurn(john, haley, turnMessageView);
     }
 
-    private ConsoleTurnMessageView makeConsoleTurnMessageView() {
-        return new ConsoleTurnMessageView();
+    private ConsoleTurnMessenger makeConsoleTurnMessageView() {
+        return new ConsoleTurnMessenger();
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {
@@ -171,9 +172,9 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        InputReferee referee = makeInputReferee(board);
+        InputValidator validator = makeInputValidator(board);
         InputGenerator consoleGenerator = makeConsoleInputGenerator();
-        return new VerboseValidatingInputGenerator(consoleGenerator, referee);
+        return new AlertingInputGenerator(consoleGenerator, validator);
     }
 
     private ConsoleInputGenerator makeConsoleInputGenerator() {
@@ -217,10 +218,10 @@ public class TicTacToeFactory {
         return new FieldIsEmptyRule(board);
     }
 
-    private InputReferee makeInputReferee(Board board) {
+    private InputValidator makeInputValidator(Board board) {
         InputRule rule = makeInputRule(board);
         InputAlerter alerter = makeInputAlerter(board);
-        return new InputRefereeImp(rule, alerter);
+        return new InputValidatorImp(rule, alerter);
     }
 
 }

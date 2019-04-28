@@ -2,7 +2,7 @@ package Lib.Model.InputRules.FieldExistsRule;
 
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.VerboseValidatingInputGenerator.InputRefereeImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 
 public class FieldExistsRule implements InputRule {
 
