@@ -3,6 +3,7 @@ package Lib.Model.GameLoopImp.GameImp;
 public class RendererSpy implements Renderer {
 
     private boolean didRender = false;
+    private int timesRendered = 0;
 
     public boolean hasRendered() {
         return didRender;
@@ -10,5 +11,10 @@ public class RendererSpy implements Renderer {
 
     public void render() {
         didRender = true;
+        timesRendered++;
+    }
+
+    public int getTimesRendered() {
+        return timesRendered;
     }
 }

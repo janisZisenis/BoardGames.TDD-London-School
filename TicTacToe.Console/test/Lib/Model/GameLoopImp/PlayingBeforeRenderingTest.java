@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayingBeforeRenderingTest {
 
-    CountingGameSpy game = new CountingGameSpy();
-    GameLoopImp sut = new GameLoopImp(game);
+    private CountingGameSpy game = new CountingGameSpy();
+    private GameLoopImp sut = new GameLoopImp(game);
 
     @Test
     void IfGameIsOverAfterOneTurn_ShouldPlayATurnBeforeRendering() {
