@@ -1,4 +1,4 @@
-package Lib.Model.TicTacToe;
+package Lib.Model.Game;
 
 public interface Receptionist {
     void salute();

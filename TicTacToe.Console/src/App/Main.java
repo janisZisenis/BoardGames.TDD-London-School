@@ -1,14 +1,14 @@
 package App;
 
-import Lib.Model.TicTacToe.TicTacToe;
+import Lib.Model.Game.Game;
 
 public class Main {
 
     public static void main(String[] args) {
         TicTacToeFactory factory = new TicTacToeFactory();
-        TicTacToe ticTacToe = factory.makeTicTacToe();
+        Game ticTacToe = factory.makeTicTacToe();
 
-        ticTacToe.proceed();
+        ticTacToe.play();
     }
 
 }

@@ -1,19 +1,19 @@
-package Lib.Model.TicTacToe;
+package Lib.Model.Game;
 
 import Lib.Model.GameLoopImp.Renderer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TicTacToeProceedsCorrectOrderShuntTest implements Receptionist, Renderer, GameLoop {
+public class GameProceedsCorrectOrderShuntTest implements Receptionist, Renderer, GameLoop {
 
     private String logString = "";
 
     @Test
-    void IfGetsProceeded__ShouldShowSalutation_RenderTheGame_RunGameLoop_ShowLeaveTaking_InCorrectOrder() {
-        TicTacToe sut = new TicTacToe(this, this, this);
+    void IfGetsPlayed__ShouldShowSalutation_RenderTheGame_RunGameLoop_ShowLeaveTaking_InCorrectOrder() {
+        Game sut = new Game(this, this, this);
 
-        sut.proceed();
+        sut.play();
 
         String actual = logString;
         String expected = "salute render run takeLeave ";

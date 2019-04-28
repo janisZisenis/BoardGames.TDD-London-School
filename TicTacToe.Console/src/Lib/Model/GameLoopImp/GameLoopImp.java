@@ -1,6 +1,6 @@
 package Lib.Model.GameLoopImp;
 
-import Lib.Model.TicTacToe.GameLoop;
+import Lib.Model.Game.GameLoop;
 
 public class GameLoopImp implements GameLoop {
 

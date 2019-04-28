@@ -1,11 +1,11 @@
 package Lib.CLI.View.TicTacToeView;
 
-import Lib.Model.TicTacToe.Receptionist;
+import Lib.Model.Game.Receptionist;
 
 public class ConsoleReceptionist implements Receptionist {
 
-    private final String salutation = "Welcome To TicTacToe";
-    private final String leaveTaking = "Welcome To TicTacToe";
+    private final String salutation = "Welcome To Game";
+    private final String leaveTaking = "Welcome To Game";
 
     public void salute() {
         System.out.println(salutation);

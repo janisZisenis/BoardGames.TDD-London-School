@@ -6,7 +6,7 @@ import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 
 public class ConsoleLeaveTakerView implements LeaveTakerView {
 
-    private static final String salutation = "Welcome to TicTacToe";
+    private static final String salutation = "Welcome to Game";
     private static final String draw = "Draw";
     private final MarkToStringMapper mapper;
 

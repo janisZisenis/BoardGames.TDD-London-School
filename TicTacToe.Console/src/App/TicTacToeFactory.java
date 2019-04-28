@@ -41,22 +41,22 @@ import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
 import Lib.Model.GameLoopImp.GameLoopImp;
-import Lib.Model.TicTacToe.GameLoop;
-import Lib.Model.TicTacToe.Receptionist;
-import Lib.Model.TicTacToe.TicTacToe;
+import Lib.Model.Game.GameLoop;
+import Lib.Model.Game.Receptionist;
+import Lib.Model.Game.Game;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
-    public TicTacToe makeTicTacToe() {
+    public Game makeTicTacToe() {
         Board board = makeBoard();
 
         Receptionist receptionist = makeReceptionist();
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
 
-        return new TicTacToe(receptionist, renderer, loop);
+        return new Game(receptionist, renderer, loop);
     }
 
     private HashingBoard makeBoard() {
