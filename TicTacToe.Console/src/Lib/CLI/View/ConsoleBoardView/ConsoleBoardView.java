@@ -1,4 +1,4 @@
-package Lib.CLI.View.TicTacToeView;
+package Lib.CLI.View.ConsoleBoardView;
 
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
@@ -6,13 +6,14 @@ import Lib.Data.Line;
 import Lib.Data.Mark;
 import Lib.Model.Board.ReadOnlyBoard;
 import Lib.Model.BoardRenderer.BoardView;
-import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 
-    private static final String ANSI_GREEN = "\u001B[32m";
-    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String winningColor = FieldSymbols.winningColor;
+    private static final String colorReset = FieldSymbols.colorReset;
+    private static final String empty = FieldSymbols.empty;
     private final int rowColumn = BoardBoundaries.rowColumnCount;
+
     private final MarkToStringMapper mapper;
     private final ReadOnlyBoard board;
 
@@ -51,7 +52,7 @@ public class ConsoleBoardView implements BoardView {
     }
 
     private String getField(Field f) {
-        return board.isMarked(f) ? mapper.map(board.getMarkAt(f)) : FieldSymbols.empty;
+        return board.isMarked(f) ? mapper.map(board.getMarkAt(f)) : empty;
     }
 
     private String map(Mark m) {
@@ -85,9 +86,9 @@ public class ConsoleBoardView implements BoardView {
 
     private String getWinningField(Field f) {
         StringBuilder s = new StringBuilder();
-        s.append(ANSI_GREEN);
+        s.append(winningColor);
         s.append(getField(f));
-        s.append(ANSI_RESET);
+        s.append(colorReset);
 
         return s.toString();
     }

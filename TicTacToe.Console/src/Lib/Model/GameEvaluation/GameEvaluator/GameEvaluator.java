@@ -4,7 +4,7 @@ import Lib.Data.Line;
 import Lib.Data.Mark;
 import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.BoardRenderer.WinningLineProvider;
-import Lib.Presentation.LeaveTaker.WinnerProvider;
+import Lib.Model.GameEvaluation.WinnerProvider;
 
 public class GameEvaluator implements WinningLineProvider, HasWinnerProvider, WinnerProvider {
 

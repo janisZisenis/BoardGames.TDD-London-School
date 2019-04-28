@@ -1,4 +1,4 @@
-package Lib.CLI.View.InputGenerators;
+package Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 
 import Lib.Data.Input.Input;
 import Lib.Model.Players.InputGenerator;
@@ -17,14 +17,6 @@ public class ConsoleInputGenerator implements InputGenerator {
         int column = promptInt(columnMessage);
 
         return new Input(row, column);
-    }
-
-    public int promptRow() {
-        return promptInt(rowMessage);
-    }
-
-    public int promptColumn() {
-        return promptInt(columnMessage);
     }
 
     public int promptInt(String promptMessage) {

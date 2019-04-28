@@ -1,12 +1,13 @@
 package App;
 
 
-import Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
-import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
-import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
-import Lib.CLI.View.TicTacToeView.AlertingMessages;
-import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
-import Lib.CLI.View.TicTacToeView.ConsoleGameMessenger;
+import Lib.CLI.View.ConsoleBoardView.FieldSymbols;
+import Lib.CLI.View.InputGenerators.ConsoleInputAlerter.ConsoleInputAlerter;
+import Lib.CLI.View.InputGenerators.ConsoleInputGenerator.ConsoleInputGenerator;
+import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger.ConsoleTurnMessenger;
+import Lib.CLI.View.InputGenerators.ConsoleInputAlerter.AlertingMessages;
+import Lib.CLI.View.ConsoleBoardView.ConsoleBoardView;
+import Lib.CLI.View.InputGenerators.ConsoleGameMessenger.ConsoleGameMessenger;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
@@ -46,9 +47,9 @@ import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
 import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.Model.TwoPlayerTurn.Player;
-import Lib.Presentation.LeaveTaker.WinnerProvider;
-import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
-import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
+import Lib.Model.GameEvaluation.WinnerProvider;
+import Lib.CLI.View.ConsoleBoardView.MarkToStringMapper;
+import Lib.CLI.View.ConsoleBoardView.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
@@ -137,8 +138,8 @@ public class TicTacToeFactory {
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
         ConsoleTurnMessenger turnMessageView = makeConsoleTurnMessageView();
-        turnMessageView.register(john, "X");
-        turnMessageView.register(haley, "O");
+        turnMessageView.register(john, FieldSymbols.john);
+        turnMessageView.register(haley, FieldSymbols.haley);
         return new MessagingTwoPlayerTurn(john, haley, turnMessageView);
     }
 

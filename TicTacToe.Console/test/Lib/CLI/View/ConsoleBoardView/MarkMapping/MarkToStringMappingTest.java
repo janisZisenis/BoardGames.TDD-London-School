@@ -1,5 +1,6 @@
-package Lib.Presentation.MarkToStringMapper;
+package Lib.CLI.View.ConsoleBoardView.MarkMapping;
 
+import Lib.CLI.View.ConsoleBoardView.MarkToXOMapper;
 import Lib.Data.Mark;
 import org.junit.jupiter.api.Test;
 

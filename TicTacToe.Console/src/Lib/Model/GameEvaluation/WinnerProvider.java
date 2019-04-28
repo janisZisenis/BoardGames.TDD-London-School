@@ -1,4 +1,4 @@
-package Lib.Presentation.LeaveTaker;
+package Lib.Model.GameEvaluation;
 
 import Lib.Data.Mark;
 

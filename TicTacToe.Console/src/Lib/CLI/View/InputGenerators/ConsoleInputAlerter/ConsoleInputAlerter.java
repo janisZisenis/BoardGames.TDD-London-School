@@ -1,4 +1,4 @@
-package Lib.CLI.View.InputGenerators;
+package Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 
 import Lib.Data.Input.Input;
 import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;

@@ -1,4 +1,4 @@
-package Lib.CLI.View.InputGenerators;
+package Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 
 public abstract class GenerationMessages {
 

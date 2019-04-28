@@ -1,9 +1,9 @@
-package Lib.CLI.View.TicTacToeView;
+package Lib.CLI.View.InputGenerators.ConsoleGameMessenger;
 
 import Lib.Data.Mark;
 import Lib.Model.Games.MessagingGame.GameMessenger;
-import Lib.Presentation.LeaveTaker.WinnerProvider;
-import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
+import Lib.Model.GameEvaluation.WinnerProvider;
+import Lib.CLI.View.ConsoleBoardView.MarkToStringMapper;
 
 public class ConsoleGameMessenger implements GameMessenger {
 

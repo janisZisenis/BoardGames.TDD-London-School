@@ -1,4 +1,4 @@
-package Lib.Presentation.MarkToStringMapper;
+package Lib.CLI.View.ConsoleBoardView;
 
 
 import Lib.Data.Mark;

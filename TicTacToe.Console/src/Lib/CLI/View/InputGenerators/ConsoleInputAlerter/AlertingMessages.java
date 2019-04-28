@@ -1,4 +1,4 @@
-package Lib.CLI.View.TicTacToeView;
+package Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 
 public abstract class AlertingMessages {
 
