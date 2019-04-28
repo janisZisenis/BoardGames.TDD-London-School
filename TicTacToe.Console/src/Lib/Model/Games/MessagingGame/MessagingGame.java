@@ -11,8 +11,8 @@ public class MessagingGame {
     }
 
     public void play() {
-//        messenger.publishBeginningMessage();
-//        game.play();
-//        messenger.publishGameOverMessage();
+        messenger.publishBeginningMessage();
+        game.play();
+        messenger.publishGameOverMessage();
     }
 }
