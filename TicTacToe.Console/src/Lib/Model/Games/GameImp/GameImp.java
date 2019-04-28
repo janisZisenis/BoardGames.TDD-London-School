@@ -1,8 +1,9 @@
 package Lib.Model.Games.GameImp;
 
 import Lib.Model.GameLoopImp.Renderer;
+import Lib.Model.Games.MessagingGame.Game;
 
-public class GameImp {
+public class GameImp implements Game {
 
     private final GameLoop loop;
     private final Renderer renderer;
