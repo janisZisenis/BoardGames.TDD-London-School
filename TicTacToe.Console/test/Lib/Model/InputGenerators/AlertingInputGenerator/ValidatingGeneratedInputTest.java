@@ -8,15 +8,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidatingGeneratedInputTest {
 
-    private InputRefereeStub referee = new InputRefereeStub();
+    private InputValidatorStub validator = new InputValidatorStub();
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, referee);
+    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator);
 
     private Input[] generated;
     private Input[] valids;
 
     @Test
-    void IfRefereeValidatesFirstInput_ItShouldBeTheFirst() {
+    void IfFirstInputIsValid_ItShouldBeTheFirst() {
         makeFirstGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -26,7 +26,7 @@ public class ValidatingGeneratedInputTest {
     }
 
     @Test
-    void IfRefereeInvalidatesFirstInput_ItShouldBeTheSecond() {
+    void IfFirstInputIsInvalid_ItShouldBeTheSecond() {
         makeSecondGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -36,7 +36,7 @@ public class ValidatingGeneratedInputTest {
     }
 
     @Test
-    void IfRefereeInvalidatesFirstAndSecondInput_ItShouldBeTheThird() {
+    void IfFirstAndSecondInputAreInvalid_ItShouldBeTheThird() {
         makeThirdGeneratedInputIsValid();
 
         Input actual = sut.generate();
@@ -50,7 +50,7 @@ public class ValidatingGeneratedInputTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[0] };
-        referee.setValidInputs(valids);
+        validator.setValidInputs(valids);
     }
 
     private void makeSecondGeneratedInputIsValid() {
@@ -59,7 +59,7 @@ public class ValidatingGeneratedInputTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[1] };
-        referee.setValidInputs(valids);
+        validator.setValidInputs(valids);
     }
 
     private void makeThirdGeneratedInputIsValid() {
@@ -69,7 +69,7 @@ public class ValidatingGeneratedInputTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[2] };
-        referee.setValidInputs(valids);
+        validator.setValidInputs(valids);
     }
 
 }

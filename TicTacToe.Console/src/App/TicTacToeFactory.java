@@ -28,11 +28,11 @@ import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputReferee;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputAlerter;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRefereeImp;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRule;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidator;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import Lib.Model.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.Model.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.Model.InputRules.FieldExistsRule.FieldExistsRule;
@@ -171,9 +171,9 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        InputReferee referee = makeInputReferee(board);
+        InputValidator validator = makeInputValidator(board);
         InputGenerator consoleGenerator = makeConsoleInputGenerator();
-        return new AlertingInputGenerator(consoleGenerator, referee);
+        return new AlertingInputGenerator(consoleGenerator, validator);
     }
 
     private ConsoleInputGenerator makeConsoleInputGenerator() {
@@ -217,10 +217,10 @@ public class TicTacToeFactory {
         return new FieldIsEmptyRule(board);
     }
 
-    private InputReferee makeInputReferee(Board board) {
+    private InputValidator makeInputValidator(Board board) {
         InputRule rule = makeInputRule(board);
         InputAlerter alerter = makeInputAlerter(board);
-        return new InputRefereeImp(rule, alerter);
+        return new InputValidatorImp(rule, alerter);
     }
 
 }

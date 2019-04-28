@@ -1,8 +1,8 @@
-package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputAlerter;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 
 import java.util.HashMap;
 

@@ -1,16 +1,16 @@
-package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp.RuleChoosingInputAlerter.InputRuleStub;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.InputRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class InputRefereeImpValidatingTest {
+public class InputValidatorImpValidatingTest {
 
     private InputRuleStub rule = new InputRuleStub();
     private InputAlerterDummy alerter = new InputAlerterDummy();
-    private InputRefereeImp sut = new InputRefereeImp(rule, alerter);
+    private InputValidatorImp sut = new InputValidatorImp(rule, alerter);
 
     private Input input = new Input(0, 1);
 

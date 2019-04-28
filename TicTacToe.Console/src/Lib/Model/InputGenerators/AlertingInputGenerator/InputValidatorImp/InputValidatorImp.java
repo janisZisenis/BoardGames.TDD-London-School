@@ -1,14 +1,14 @@
-package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
 import Lib.Data.Input.Input;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputReferee;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidator;
 
-public class InputRefereeImp implements InputReferee {
+public class InputValidatorImp implements InputValidator {
 
     private InputRule rule;
     private final InputAlerter alerter;
 
-    public InputRefereeImp(InputRule rule, InputAlerter alerter) {
+    public InputValidatorImp(InputRule rule, InputAlerter alerter) {
         this.rule = rule;
         this.alerter = alerter;
     }

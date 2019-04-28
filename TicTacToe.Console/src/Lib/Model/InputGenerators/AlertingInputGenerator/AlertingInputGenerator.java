@@ -6,11 +6,11 @@ import Lib.Model.Players.InputGenerator;
 public class AlertingInputGenerator implements InputGenerator {
 
     private final InputGenerator generator;
-    private InputReferee referee;
+    private InputValidator validator;
 
-    public AlertingInputGenerator(InputGenerator generator, InputReferee referee) {
+    public AlertingInputGenerator(InputGenerator generator, InputValidator validator) {
         this.generator = generator;
-        this.referee = referee;
+        this.validator = validator;
     }
 
     public Input generate() {
@@ -25,7 +25,7 @@ public class AlertingInputGenerator implements InputGenerator {
     }
 
     private void alertInvalid(Input input) {
-        referee.alertIsInvalid(input);
+        validator.alertIsInvalid(input);
     }
 
     private Input getInput() {
@@ -33,6 +33,6 @@ public class AlertingInputGenerator implements InputGenerator {
     }
 
     private boolean isNotValid(Input input) {
-        return !referee.isValid(input);
+        return !validator.isValid(input);
     }
 }

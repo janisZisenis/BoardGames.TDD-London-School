@@ -1,4 +1,4 @@
-package Lib.Model.InputGenerators.AlertingInputGenerator.InputRefereeImp;
+package Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
 import Lib.Data.Input.Input;
 

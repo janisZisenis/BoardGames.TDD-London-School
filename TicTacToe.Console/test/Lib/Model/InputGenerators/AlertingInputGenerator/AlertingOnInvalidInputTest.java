@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AlertingOnInvalidInputTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private InputRefereeMock referee = new InputRefereeMock();
-    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, referee);
+    private InputValidatorMock validator = new InputValidatorMock();
+    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator);
 
     private Input[] generated;
     private Input[] valids;
@@ -20,22 +20,22 @@ public class AlertingOnInvalidInputTest {
     void IfSecondInputIsValid_ShouldAlertTheFirstInput() {
         makeSecondInputIsValid();
 
-        referee.expectLastAlertedIs(new Input(0, 0));
+        validator.expectLastAlertedIs(new Input(0, 0));
 
         sut.generate();
 
-        referee.verifyAll();
+        validator.verifyAll();
     }
 
     @Test
     void IfThirdInputIsValid_ShouldAlertTheSecondInput() {
         makeThirdInputIsValid();
 
-        referee.expectLastAlertedIs(new Input(0, 1));
+        validator.expectLastAlertedIs(new Input(0, 1));
 
         sut.generate();
 
-        referee.verifyAll();
+        validator.verifyAll();
     }
 
     private void makeSecondInputIsValid() {
@@ -44,7 +44,7 @@ public class AlertingOnInvalidInputTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[1] };
-        referee.setValidInputs(valids);
+        validator.setValidInputs(valids);
     }
 
     private void makeThirdInputIsValid() {
@@ -54,11 +54,11 @@ public class AlertingOnInvalidInputTest {
         generator.setGeneratedInputs(generated);
 
         valids = new Input[] { generated[2] };
-        referee.setValidInputs(valids);
+        validator.setValidInputs(valids);
     }
 
 
-    public class InputRefereeMock extends InputRefereeStub {
+    public class InputValidatorMock extends InputValidatorStub {
 
         private Input expectedLastAlerted;
         private Input actualLastAlerted;
