@@ -1,9 +1,10 @@
 package Lib.Model.GameOverRules.CompositeGameOverRule;
 
-import Lib.Model.GameLoopImp.GameImp.GameOverRuleStub;
+import Lib.Model.SelfActingGameLoop.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CompositeGameOverRuleTest {
 

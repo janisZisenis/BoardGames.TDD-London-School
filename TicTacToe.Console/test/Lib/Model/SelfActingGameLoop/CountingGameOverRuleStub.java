@@ -1,7 +1,5 @@
 package Lib.Model.SelfActingGameLoop;
 
-import Lib.Model.GameLoopImp.GameImp.GameOverRule;
-
 public class CountingGameOverRuleStub implements GameOverRule {
 
     private int count = 0;

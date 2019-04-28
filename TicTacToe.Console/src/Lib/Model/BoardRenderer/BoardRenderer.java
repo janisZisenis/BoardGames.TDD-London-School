@@ -1,7 +1,7 @@
 package Lib.Model.BoardRenderer;
 
 import Lib.Data.Line;
-import Lib.Model.GameLoopImp.GameImp.Renderer;
+import Lib.Model.SelfActingGameLoop.Renderer;
 
 public class BoardRenderer implements Renderer {
 

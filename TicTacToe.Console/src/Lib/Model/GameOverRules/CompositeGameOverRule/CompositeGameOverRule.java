@@ -1,6 +1,6 @@
 package Lib.Model.GameOverRules.CompositeGameOverRule;
 
-import Lib.Model.GameLoopImp.GameImp.GameOverRule;
+import Lib.Model.SelfActingGameLoop.GameOverRule;
 
 import java.util.LinkedList;
 

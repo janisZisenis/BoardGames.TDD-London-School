@@ -1,7 +1,5 @@
 package Lib.Model.SelfActingGameLoop;
 
-import Lib.Model.GameLoopImp.GameImp.Renderer;
-import Lib.Model.GameLoopImp.GameImp.Turn;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,4 +1,4 @@
-package Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn;
 
 public class TurnMessageViewSpy implements TurnMessageView {
     private Object shownPlayer;

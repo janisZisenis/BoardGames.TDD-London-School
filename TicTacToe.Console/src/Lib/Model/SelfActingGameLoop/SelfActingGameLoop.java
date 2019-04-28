@@ -1,8 +1,5 @@
 package Lib.Model.SelfActingGameLoop;
 
-import Lib.Model.GameLoopImp.GameImp.GameOverRule;
-import Lib.Model.GameLoopImp.GameImp.Renderer;
-import Lib.Model.GameLoopImp.GameImp.Turn;
 import Lib.Model.TicTacToe.GameLoop;
 
 public class SelfActingGameLoop implements GameLoop {

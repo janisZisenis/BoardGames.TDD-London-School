@@ -1,4 +1,4 @@
-package Lib.Model.GameLoopImp.GameImp;
+package Lib.Model.SelfActingGameLoop;
 
 public class GameOverRuleStub implements GameOverRule {
     private boolean isOver;
