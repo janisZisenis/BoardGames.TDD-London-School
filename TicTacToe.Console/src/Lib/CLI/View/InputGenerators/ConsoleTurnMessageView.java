@@ -1,6 +1,6 @@
 package Lib.CLI.View.InputGenerators;
 
-import Lib.Model.GameLoop.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.TurnMessageView;
+import Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn.TurnMessageView;
 
 import java.util.HashMap;
 
