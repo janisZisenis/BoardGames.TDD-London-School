@@ -8,7 +8,7 @@ import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 public class ConsoleGameMessenger implements GameMessenger {
 
     private final String beginningMessage = "Welcome To TicTacToe!";
-    private final String winnerMessage = ", wins!";
+    private final String winnerMessage = " wins!";
     private final String drawMessage = "Draw!";
 
     private final WinnerProvider provider;
@@ -31,10 +31,6 @@ public class ConsoleGameMessenger implements GameMessenger {
         }
     }
 
-    private void publishDraw() {
-        System.out.println(drawMessage);
-    }
-
     private boolean hasWinner() {
         return provider.hasWinner();
     }
@@ -42,5 +38,9 @@ public class ConsoleGameMessenger implements GameMessenger {
     private void publishWinner() {
         Mark winner = provider.getWinner();
         System.out.println(mapper.map(winner) + winnerMessage);
+    }
+
+    private void publishDraw() {
+        System.out.println(drawMessage);
     }
 }

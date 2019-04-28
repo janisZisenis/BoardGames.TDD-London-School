@@ -1,6 +1,6 @@
 package Lib.Model.Games.MessagingGame;
 
-public class MessagingGame {
+public class MessagingGame implements Game {
 
     private final Game game;
     private final GameMessenger messenger;

@@ -23,9 +23,11 @@ public class ConsoleBoardView implements BoardView {
 
 
     public void showBoard() {
+        System.out.println();
         for(int row = 0; row < rowColumn; row++) {
             printRow(row);
         }
+        System.out.println();
     }
 
     private void printRow(int row) {
@@ -69,7 +71,7 @@ public class ConsoleBoardView implements BoardView {
     }
 
     private String map(Mark m) {
-        return (m == Mark.John) ? FieldSymbols.john : FieldSymbols.haley;
+        return mapper.map(m);
     }
 
 }

@@ -6,6 +6,7 @@ import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
 import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
+import Lib.CLI.View.TicTacToeView.ConsoleGameMessenger;
 import Lib.Data.Mark;
 import Lib.Model.Board.Board;
 import Lib.Model.Board.HashingBoard.HashingBoard;
@@ -16,44 +17,51 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.GameLoopImp.GameOverRule;
 import Lib.Model.GameLoopImp.Renderer;
 import Lib.Model.GameLoopImp.Turn;
-import Lib.Model.TwoPlayerTurn.Player;
-import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.Model.GameOverRules.WinnerRule.WinnerRule;
-import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
-import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
+import Lib.Model.Games.GameImp.GameImp;
+import Lib.Model.Games.GameImp.GameLoop;
+import Lib.Model.Games.MessagingGame.Game;
+import Lib.Model.Games.MessagingGame.GameMessenger;
+import Lib.Model.Games.MessagingGame.MessagingGame;
+import Lib.Model.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidator;
 import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
-import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
 import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
 import Lib.Model.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import Lib.Model.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
+import Lib.Model.InputGenerators.RandomInputGenerator.RandomInputGenerator;
+import Lib.Model.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Lib.Model.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.Model.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
-import Lib.Model.GameLoopImp.GameLoopImp;
-import Lib.Model.Games.GameImp.GameLoop;
-import Lib.Model.Games.GameImp.GameImp;
+import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
+import Lib.Model.TwoPlayerTurn.Player;
+import Lib.Presentation.LeaveTaker.WinnerProvider;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
 import Lib.Presentation.MarkToStringMapper.MarkToXOMapper;
 
 public class TicTacToeFactory {
 
-    public GameImp makeTicTacToe() {
+    public Game makeGame() {
         Board board = makeBoard();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
-
-        return new GameImp(renderer, loop);
+        Game game = new GameImp(renderer, loop);
+        MarkToStringMapper mapper = makeMarkToStringMapper();
+        WinnerProvider provider = makeGameEvaluator(board);
+        GameMessenger messenger = new ConsoleGameMessenger(provider, mapper);
+        return new MessagingGame(game, messenger);
     }
 
     private HashingBoard makeBoard() {
@@ -78,7 +86,7 @@ public class TicTacToeFactory {
         return new ConsoleBoardView(board, mapper);
     }
 
-    private MarkToXOMapper makeMarkToStringMapper() {
+    private MarkToStringMapper makeMarkToStringMapper() {
         return new MarkToXOMapper();
     }
 
