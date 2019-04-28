@@ -1,7 +1,7 @@
 package Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
 
 import Lib.Data.Input.Input;
-import Lib.Model.Players.InputGenerator;
+import Lib.Players.InputGenerator;
 
 import java.util.Scanner;
 

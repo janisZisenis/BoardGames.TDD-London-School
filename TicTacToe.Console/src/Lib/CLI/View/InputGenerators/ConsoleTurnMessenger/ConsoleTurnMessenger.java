@@ -1,6 +1,6 @@
 package Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
 
-import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
+import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 
 import java.util.HashMap;
 

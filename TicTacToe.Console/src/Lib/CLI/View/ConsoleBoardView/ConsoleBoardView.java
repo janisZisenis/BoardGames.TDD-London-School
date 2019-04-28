@@ -4,8 +4,8 @@ import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.Model.Board.ReadOnlyBoard;
-import Lib.Model.BoardRenderer.BoardView;
+import Lib.Board.ReadOnlyBoard;
+import Lib.BoardRenderer.BoardView;
 
 public class ConsoleBoardView implements BoardView {
 
