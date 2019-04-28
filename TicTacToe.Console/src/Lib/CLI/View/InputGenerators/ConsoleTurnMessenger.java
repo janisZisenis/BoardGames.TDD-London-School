@@ -1,10 +1,10 @@
 package Lib.CLI.View.InputGenerators;
 
-import Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn.TurnMessageView;
+import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 
 import java.util.HashMap;
 
-public class ConsoleTurnMessageView implements TurnMessageView {
+public class ConsoleTurnMessenger implements TurnMessenger {
 
     private final HashMap<Object, String> names = new HashMap<Object, String>();
     private final String messageEnding = ", it's your turn!";
@@ -13,7 +13,7 @@ public class ConsoleTurnMessageView implements TurnMessageView {
         names.put(player, name);
     }
 
-    public void showTurnMessageFor(Object player) {
+    public void publishTurnMessageFor(Object player) {
         String name = names.get(player);
         System.out.println(name + messageEnding);
     }

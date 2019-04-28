@@ -3,7 +3,7 @@ package App;
 
 import Lib.CLI.View.InputGenerators.ConsoleInputAlerter;
 import Lib.CLI.View.InputGenerators.ConsoleInputGenerator;
-import Lib.CLI.View.InputGenerators.ConsoleTurnMessageView;
+import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger;
 import Lib.CLI.View.TicTacToeView.AlertingMessages;
 import Lib.CLI.View.TicTacToeView.ConsoleBoardView;
 import Lib.CLI.View.TicTacToeView.ConsoleReceptionist;
@@ -21,7 +21,7 @@ import Lib.Model.GameLoopImp.GameOverRule;
 import Lib.Model.GameLoopImp.Renderer;
 import Lib.Model.GameLoopImp.Turn;
 import Lib.Model.TwoPlayerTurn.Player;
-import Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
+import Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
@@ -135,14 +135,14 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        ConsoleTurnMessageView turnMessageView = makeConsoleTurnMessageView();
+        ConsoleTurnMessenger turnMessageView = makeConsoleTurnMessageView();
         turnMessageView.register(john, "X");
         turnMessageView.register(haley, "O");
-        return new VerboseTwoPlayerTurn(john, haley, turnMessageView);
+        return new MessagingTwoPlayerTurn(john, haley, turnMessageView);
     }
 
-    private ConsoleTurnMessageView makeConsoleTurnMessageView() {
-        return new ConsoleTurnMessageView();
+    private ConsoleTurnMessenger makeConsoleTurnMessageView() {
+        return new ConsoleTurnMessenger();
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {

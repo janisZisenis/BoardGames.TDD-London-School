@@ -1,4 +1,4 @@
-package Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn;
 
 import Lib.Model.TwoPlayerTurn.PlayerDummy;
 import org.junit.jupiter.api.Test;
@@ -10,24 +10,24 @@ public class TurnMessagingTest {
 
     private PlayerDummy first = new PlayerDummy();
     private PlayerDummy second = new PlayerDummy();
-    private TurnMessageViewSpy view = new TurnMessageViewSpy();
-    private VerboseTwoPlayerTurn sut = new VerboseTwoPlayerTurn(first, second, view);
+    private TurnMessengerSpy view = new TurnMessengerSpy();
+    private MessagingTwoPlayerTurn sut = new MessagingTwoPlayerTurn(first, second, view);
 
     @Test
-    void IfPlayedOnce_ShouldShowTurnMessageWithFirstPlayer() {
+    void IfPlayedOnce_ShouldPublishTurnMessageWithFirstPlayer() {
         sut.play();
 
-        Object actual = view.getShownPlayer();
+        Object actual = view.getPlayerForPublishedTurnMessage();
         Object expected = first;
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfPlayedTwice_ShouldShowTurnMessageWithSecondPlayer() {
+    void IfPlayedTwice_ShouldPublishTurnMessageWithSecondPlayer() {
         sut.play();
         sut.play();
 
-        Object actual = view.getShownPlayer();
+        Object actual = view.getPlayerForPublishedTurnMessage();
         Object expected = second;
         assertEquals(expected, actual);
     }

@@ -1,4 +1,4 @@
-package Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn;
 
 import Lib.Model.TwoPlayerTurn.Player;
 import org.junit.jupiter.api.Test;
@@ -6,18 +6,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class TurnMessagingOrderShuntTest implements Player, TurnMessageView {
+public class TurnMessagingOrderShuntTest implements Player, TurnMessenger {
 
     private String logString = "";
 
     @Test
     void IfPlayedOnce_ShouldShowTurnMessageBeforePlaying() {
-        VerboseTwoPlayerTurn sut = new VerboseTwoPlayerTurn(this, this, this);
+        MessagingTwoPlayerTurn sut = new MessagingTwoPlayerTurn(this, this, this);
 
         sut.play();
 
         String actual = logString;
-        String expected = "showTurnMessageFor play ";
+        String expected = "publishTurnMessageFor play ";
         assertEquals(expected, actual);
     }
 
@@ -25,7 +25,7 @@ public class TurnMessagingOrderShuntTest implements Player, TurnMessageView {
         logString += "play ";
     }
 
-    public void showTurnMessageFor(Object player) {
-        logString += "showTurnMessageFor ";
+    public void publishTurnMessageFor(Object player) {
+        logString += "publishTurnMessageFor ";
     }
 }

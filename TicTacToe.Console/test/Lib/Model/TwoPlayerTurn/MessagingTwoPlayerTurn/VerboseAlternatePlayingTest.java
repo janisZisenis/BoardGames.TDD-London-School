@@ -1,4 +1,4 @@
-package Lib.Model.TwoPlayerTurn.VerboseTwoPlayerTurn;
+package Lib.Model.TwoPlayerTurn.MessagingTwoPlayerTurn;
 
 import Lib.Model.TwoPlayerTurn.PlayerSpy;
 import org.junit.jupiter.api.Test;
@@ -10,8 +10,8 @@ public class VerboseAlternatePlayingTest {
 
     private PlayerSpy first = new PlayerSpy();
     private PlayerSpy second = new PlayerSpy();
-    private TurnMessageViewDummy view = new TurnMessageViewDummy();
-    private VerboseTwoPlayerTurn sut = new VerboseTwoPlayerTurn(first, second, view);
+    private TurnMessengerDummy view = new TurnMessengerDummy();
+    private MessagingTwoPlayerTurn sut = new MessagingTwoPlayerTurn(first, second, view);
 
     @Test
     void IfGamePlaysOnce_FirstPlayerShouldHavePlayedMoveOnce() {
