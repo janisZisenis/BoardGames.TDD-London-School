@@ -21,47 +21,27 @@ public class ConsoleBoardView implements BoardView {
         this.mapper = mapper;
     }
 
-
     public void showBoard() {
-        System.out.println();
-        for(int row = 0; row < rowColumn; row++) {
-            printRow(row);
-        }
-        System.out.println();
+        StringBuilder board = new StringBuilder();
+        board.append("+-----+\n");
+
+        for(int i = 0; i < rowColumn; i++)
+            board.append("| ").append(getRow(i)).append(" |\n");
+
+        board.append("+-----+");
+
+        System.out.println(board);
     }
 
-    private void printRow(int row) {
-        for(int col = 0; col < rowColumn; col++) {
-            printField(new Field(row, col));
+    private String getRow(int row) {
+        StringBuilder s = new StringBuilder();
+
+        for(int i = 0; i < rowColumn; i++) {
+            Field f = new Field(i, row);
+            s.append(getField(f));
         }
-        System.out.println();
-    }
 
-    private void printField(Field f) {
-        String s = FieldSymbols.empty;
-
-        if(board.isMarked(f))
-            s = map(board.getMarkAt(f));
-
-        System.out.print(s);
-    }
-
-    public void showWinningLine(Line line) {
-        for(int row = 0; row < rowColumn; row++) {
-            for(int col = 0; col < rowColumn; col++) {
-                Field f = new Field(row, col);
-                String s = FieldSymbols.empty;
-
-                if(board.isMarked(f))
-                    s = map(board.getMarkAt(f));
-
-                if(lineContains(f, line))
-                    s = ANSI_GREEN + s + ANSI_RESET;
-
-                System.out.print(s);
-            }
-            System.out.println();
-        }
+        return s.toString();
     }
 
     private boolean lineContains(Field f, Line line) {
@@ -70,8 +50,46 @@ public class ConsoleBoardView implements BoardView {
                 || f.equals(line.getThird());
     }
 
+    private String getField(Field f) {
+        return board.isMarked(f) ? mapper.map(board.getMarkAt(f)) : FieldSymbols.empty;
+    }
+
     private String map(Mark m) {
         return mapper.map(m);
+    }
+
+
+    public void showWinningLine(Line line) {
+        StringBuilder board = new StringBuilder();
+        board.append("+-----+\n");
+
+        for(int i = 0; i < rowColumn; i++)
+            board.append("| " + getRow(i, line) + " |\n");
+
+        board.append("+-----+");
+
+        System.out.println(board);
+    }
+
+    private String getRow(int row, Line line) {
+        StringBuilder s = new StringBuilder();
+
+        for(int i = 0; i < rowColumn; i++) {
+            Field f = new Field(i, row);
+            String field = lineContains(f, line) ? getWinningField(f) : getField(f);
+            s.append(field);
+        }
+
+        return s.toString();
+    }
+
+    private String getWinningField(Field f) {
+        StringBuilder s = new StringBuilder();
+        s.append(ANSI_GREEN);
+        s.append(getField(f));
+        s.append(ANSI_RESET);
+
+        return s.toString();
     }
 
 }
