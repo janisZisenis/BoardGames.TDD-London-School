@@ -17,14 +17,11 @@ import Lib.Model.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.Model.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.Model.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.Model.GameLoopImp.Game;
-import Lib.Model.GameLoopImp.GameImp.GameImp;
 import Lib.Model.GameLoopImp.GameImp.GameOverRule;
 import Lib.Model.GameLoopImp.GameImp.Renderer;
 import Lib.Model.GameLoopImp.GameImp.Turn;
 import Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.Player;
 import Lib.Model.GameLoopImp.GameImp.TwoPlayerTurn.VerboseTwoPlayerTurn.VerboseTwoPlayerTurn;
-import Lib.Model.GameLoopImp.GameLoopImp;
 import Lib.Model.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.Model.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.Model.GameOverRules.WinnerRule.HasWinnerProvider;
@@ -43,6 +40,8 @@ import Lib.Model.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.Model.Players.InputGenerator;
 import Lib.Model.Players.PlayerContext;
 import Lib.Model.Players.PlayerImp;
+import Lib.Model.SelfActingGameLoop.SelfActingGameLoop;
+import Lib.Model.TicTacToe.GameLoop;
 import Lib.Model.TicTacToe.Receptionist;
 import Lib.Model.TicTacToe.TicTacToe;
 import Lib.Presentation.MarkToStringMapper.MarkToStringMapper;
@@ -55,7 +54,7 @@ public class TicTacToeFactory {
 
         Receptionist receptionist = makeReceptionist();
         Renderer renderer = makeRenderer(board);
-        GameLoopImp loop = makeGameLoop(board);
+        GameLoop loop = makeGameLoop(board);
 
         return new TicTacToe(receptionist, renderer, loop);
     }
@@ -68,16 +67,11 @@ public class TicTacToeFactory {
         return new ConsoleReceptionist();
     }
 
-    private GameLoopImp makeGameLoop(Board board) {
-        Game game = makeGame(board);
-        return new GameLoopImp(game);
-    }
-
-    private Game makeGame(Board board) {
+    private GameLoop makeGameLoop(Board board) {
+        GameOverRule rule = makeGameOverRule(board);
         Turn turn = makeTurn(board);
-        GameOverRule gameOverRule = makeGameOverRule(board);
         Renderer renderer = makeRenderer(board);
-        return new GameImp(turn, gameOverRule, renderer);
+        return new SelfActingGameLoop(rule, turn, renderer);
     }
 
     private Renderer makeRenderer(Board board) {
