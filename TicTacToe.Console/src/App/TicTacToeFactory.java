@@ -1,23 +1,17 @@
 package App;
 
 
-import Lib.CLI.View.ConsoleBoardView.FieldSymbols;
-import Lib.CLI.View.InputGenerators.ConsoleInputAlerter.ConsoleInputAlerter;
-import Lib.CLI.View.InputGenerators.ConsoleInputGenerator.ConsoleInputGenerator;
-import Lib.CLI.View.InputGenerators.ConsoleTurnMessenger.ConsoleTurnMessenger;
-import Lib.CLI.View.InputGenerators.ConsoleInputAlerter.AlertingMessages;
-import Lib.CLI.View.ConsoleBoardView.ConsoleBoardView;
-import Lib.CLI.View.InputGenerators.ConsoleGameMessenger.ConsoleGameMessenger;
-import Lib.Data.Mark;
 import Lib.Board.Board;
 import Lib.Board.HashingBoard.HashingBoard;
 import Lib.BoardRenderer.BoardRenderer;
 import Lib.BoardRenderer.WinningLineProvider;
+import Lib.Data.Mark;
 import Lib.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Lib.GameEvaluation.WinnerProvider;
 import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
@@ -47,9 +41,15 @@ import Lib.Players.PlayerContext;
 import Lib.Players.PlayerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
-import Lib.GameEvaluation.WinnerProvider;
-import Lib.CLI.View.ConsoleBoardView.MarkToStringMapper;
-import Lib.CLI.View.ConsoleBoardView.MarkToXOMapper;
+import View.ConsoleBoardView.ConsoleBoardView;
+import Lib.MarkToStringMapper.FieldSymbols;
+import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.MarkToStringMapper.MarkToXOMapper;
+import View.InputGenerators.ConsoleGameMessenger.ConsoleGameMessenger;
+import Lib.Messages.AlertingMessages;
+import View.InputGenerators.ConsoleInputAlerter.ConsoleInputAlerter;
+import View.InputGenerators.ConsoleInputGenerator.ConsoleInputGenerator;
+import View.InputGenerators.ConsoleTurnMessenger.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
