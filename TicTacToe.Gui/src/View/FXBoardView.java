@@ -5,14 +5,19 @@ import Lib.BoardRenderer.BoardView;
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
+import Lib.Data.Mark;
 import Lib.MarkToStringMapper.MarkToStringMapper;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
 public class FXBoardView extends Pane implements BoardView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<Field, FXTile>();
+
+    private final Font normal = Font.font("Arial", 20);
+    private final Font winning = Font.font("Arial Bold", 40);
 
     private final int sideLength;
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
@@ -55,15 +60,26 @@ public class FXBoardView extends Pane implements BoardView {
         for(int row = 0; row < rowColumnCount; row++) {
             for(int col = 0; col < rowColumnCount; col++) {
                 Field f = new Field(row, col);
-                if(board.isMarked(f)) {
-                    String s = mapper.map(board.getMarkAt(f));
-                    tiles.get(f).setText(s);
-                }
+                if(board.isMarked(f))
+                    setFieldText(f, normal);
             }
         }
     }
 
     public void showWinningLine(Line line) {
+        showBoard();
+        highlight(line);
+    }
 
+    private void highlight(Line line) {
+        setFieldText(line.getFirst(), winning);
+        setFieldText(line.getSecond(), winning);
+        setFieldText(line.getThird(), winning);
+    }
+
+    private void setFieldText(Field field, Font font) {
+        Mark m = board.getMarkAt(field);
+        String s = mapper.map(m);
+        tiles.get(field).setText(s, font);
     }
 }

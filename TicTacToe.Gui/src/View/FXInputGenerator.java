@@ -9,16 +9,14 @@ import javafx.scene.layout.Pane;
 import java.util.Optional;
 
 
-public class FXInputView extends Pane implements InputGenerator {
-
-    private final TextInputDialog d = new TextInputDialog();
+public class FXInputGenerator extends Pane implements InputGenerator {
 
     private final String rowMessage = GenerationMessages.rowMessage;
     private final String columnMessage = GenerationMessages.columnMessage;
 
     private final String title = "Input Dialog!";
 
-    public FXInputView() {}
+    public FXInputGenerator() {}
 
     public Input generate() {
         int row = promptInt(rowMessage);
@@ -50,10 +48,11 @@ public class FXInputView extends Pane implements InputGenerator {
     }
 
     private Optional<String> prompt(String promptMessage) {
+        TextInputDialog d = new TextInputDialog();
         d.setTitle(title);
         d.setHeaderText(promptMessage);
         d.getEditor().setText("");
-
+        d.setX(d.getX() - 20);
         return d.showAndWait();
     }
 }

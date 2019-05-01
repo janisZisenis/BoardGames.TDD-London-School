@@ -4,11 +4,12 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 public class FXTile extends StackPane {
 
-    Text text = new Text();
+    private Text text = new Text();
 
     public FXTile(int sideLength) {
         Rectangle border = new Rectangle(sideLength, sideLength);
@@ -19,7 +20,8 @@ public class FXTile extends StackPane {
         getChildren().addAll(text, border);
     }
 
-    public void setText(String s) {
+    public void setText(String s, Font f) {
         text.setText(s);
+        text.setFont(f);
     }
 }

@@ -15,7 +15,7 @@ public class FXInputAlerter implements InputAlerter {
 
     public void alert(Input input) {
         Alert a = new Alert(Alert.AlertType.ERROR, message, ButtonType.CLOSE);
-        a.show();
+        a.showAndWait();
     }
 
 }
