@@ -1,4 +1,4 @@
-package View.InputGenerators.ConsoleTurnMessenger;
+package View;
 
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 
