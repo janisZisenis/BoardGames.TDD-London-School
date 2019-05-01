@@ -1,4 +1,4 @@
-package View.ConsoleBoardView;
+package View;
 
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
@@ -26,12 +26,13 @@ public class ConsoleBoardView implements BoardView {
 
     public void showBoard() {
         StringBuilder board = new StringBuilder();
-        board.append("+-----+\n");
+        board.append("  R 012  \n");
+        board.append("C +-----+\n");
 
         for(int i = 0; i < rowColumn; i++)
-            board.append("| ").append(getRow(i)).append(" |\n");
+            board.append(i + " | ").append(getRow(i)).append(" |\n");
 
-        board.append("+-----+");
+        board.append("  +-----+");
 
         System.out.println(board);
     }

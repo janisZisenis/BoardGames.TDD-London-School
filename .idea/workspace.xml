@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView/ConsoleBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleGameMessenger/ConsoleGameMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleGameMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleInputAlerter/ConsoleInputAlerter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputAlerter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleInputGenerator/ConsoleInputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleTurnMessenger/ConsoleTurnMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleTurnMessenger.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,13 +83,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2891" />
-          <entry key="java" value="110222" />
+          <entry key="java" value="110245" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="110222" />
+          <entry key="JAVA" value="110245" />
           <entry key="PLAIN_TEXT" value="2892" />
         </counts>
       </usages-collector>
@@ -93,7 +98,7 @@
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="2" />
-          <entry key="java" value="2525" />
+          <entry key="java" value="2530" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -101,7 +106,7 @@
         <counts>
           <entry key="CLASS" value="9" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="2525" />
+          <entry key="JAVA" value="2530" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -114,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#165#166#0" expanded="true" />
@@ -160,11 +165,68 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleGameMessenger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputAlerter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleTurnMessenger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -231,7 +293,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/GameLoopImp/RendererSpy.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/GameLoopImp/TurnSpy.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/TwoPlayerTurn/MessagingTwoPlayerTurn/TurnMessenger.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/TwoPlayerTurn/MessagingTwoPlayerTurn/TurnMessagingTest.java" />
@@ -282,6 +343,7 @@
         <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXBoardView.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputGenerator.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" />
       </list>
     </option>
   </component>
@@ -463,25 +525,18 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -553,7 +608,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main.GUI">
+  <component name="RunManager" selected="Application.Main.Console">
     <configuration name="Main.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="TicTacToe.Console" />
@@ -624,9 +679,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main.Console" />
         <item itemvalue="Application.Main.GUI" />
         <item itemvalue="JUnit.Core" />
-        <item itemvalue="Application.Main.Console" />
       </list>
     </recent_temporary>
   </component>
@@ -724,7 +779,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286914000" />
+    <option name="totallyTimeSpent" value="287172000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1733" height="1057" extended-state="0" />
@@ -863,48 +918,10 @@
     <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Presentation/LeaveTaker/LeaveTaker.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/CLI/View/TicTacToeView/ConsoleLeaveTakerView.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Presentation/LeaveTaker/LeaveTakerView.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleGameMessenger/ConsoleGameMessenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleInputAlerter/ConsoleInputAlerter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleInputGenerator/ConsoleInputGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView/ConsoleBoardView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/MarkToStringMapper/FieldSymbols.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/InputGenerators/ConsoleTurnMessenger/ConsoleTurnMessenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1043,7 +1060,7 @@
     <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/App/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#165#166#0" expanded="true" />
@@ -1085,7 +1102,54 @@
     <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleGameMessenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputAlerter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleTurnMessenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

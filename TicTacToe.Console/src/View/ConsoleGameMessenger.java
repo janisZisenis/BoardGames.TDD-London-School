@@ -1,4 +1,4 @@
-package View.InputGenerators.ConsoleGameMessenger;
+package View;
 
 import Lib.Data.Mark;
 import Lib.Games.MessagingGame.GameMessenger;

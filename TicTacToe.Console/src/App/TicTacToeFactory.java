@@ -41,15 +41,15 @@ import Lib.Players.PlayerContext;
 import Lib.Players.PlayerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
-import View.ConsoleBoardView.ConsoleBoardView;
+import View.ConsoleBoardView;
 import Lib.MarkToStringMapper.FieldSymbols;
 import Lib.MarkToStringMapper.MarkToStringMapper;
 import Lib.MarkToStringMapper.MarkToXOMapper;
-import View.InputGenerators.ConsoleGameMessenger.ConsoleGameMessenger;
+import View.ConsoleGameMessenger;
 import Lib.Messages.AlertingMessages;
-import View.InputGenerators.ConsoleInputAlerter.ConsoleInputAlerter;
-import View.InputGenerators.ConsoleInputGenerator.ConsoleInputGenerator;
-import View.InputGenerators.ConsoleTurnMessenger.ConsoleTurnMessenger;
+import View.ConsoleInputAlerter;
+import View.ConsoleInputGenerator;
+import View.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
