@@ -54,7 +54,6 @@ public class TicTacToeFactory {
     public FXShell shell;
 
     public Game makeGame() {
-
         Board board = makeBoard();
         WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
@@ -172,11 +171,6 @@ public class TicTacToeFactory {
         InputGenerator consoleGenerator = inputView;
         return new AlertingInputGenerator(consoleGenerator, validator);
     }
-
-    private InputGenerator makeFXInputGenerator() {
-        return new FXInputPopup();
-    }
-
 
     private InputRule makeInputRule(Board board) {
         InputRule existsRule = makeFieldExistsRule();
