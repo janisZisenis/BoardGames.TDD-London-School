@@ -1,5 +1,7 @@
-package View;
+package App;
 
+import View.FXBoardView;
+import View.FXMessengerView;
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;

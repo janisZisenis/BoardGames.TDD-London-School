@@ -1,4 +1,4 @@
-package View;
+package App;
 
 import Lib.Data.Input.Input;
 import Lib.Players.InputGenerator;
