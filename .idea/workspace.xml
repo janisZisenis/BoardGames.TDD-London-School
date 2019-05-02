@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/MessagingPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/PlayerMessenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MarkFieldServiceDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MarkingTheInputFieldTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerSpy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveOrderShuntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/PlayerImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MarkingTheInputFieldTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,48 +46,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="80">
-                    <caret line="174" selection-start-line="174" selection-end-line="174" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="e#3107#3108#0" expanded="true" />
-                      <element signature="e#3148#3149#0" expanded="true" />
-                      <element signature="e#3638#3639#0" expanded="true" />
-                      <element signature="e#3681#3682#0" expanded="true" />
-                      <element signature="e#3753#3754#0" expanded="true" />
-                      <element signature="e#3800#3801#0" expanded="true" />
-                      <element signature="e#3873#3874#0" expanded="true" />
-                      <element signature="e#3933#3934#0" expanded="true" />
-                      <element signature="e#3980#3981#0" expanded="true" />
-                      <element signature="e#4027#4028#0" expanded="true" />
-                      <element signature="e#4664#4665#0" expanded="true" />
-                      <element signature="e#4715#4716#0" expanded="true" />
-                      <element signature="e#4783#4784#0" expanded="true" />
-                      <element signature="e#4830#4831#0" expanded="true" />
-                      <element signature="e#6337#6338#0" expanded="true" />
-                      <element signature="e#6386#6387#0" expanded="true" />
-                      <element signature="e#7129#7130#0" expanded="true" />
-                      <element signature="e#7173#7174#0" expanded="true" />
-                      <element signature="e#7946#7947#0" expanded="true" />
-                      <element signature="e#7996#7997#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1905313316">
@@ -120,15 +87,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="2909" />
-          <entry key="java" value="114448" />
+          <entry key="dummy" value="3087" />
+          <entry key="java" value="116175" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="114448" />
-          <entry key="PLAIN_TEXT" value="2910" />
+          <entry key="JAVA" value="116175" />
+          <entry key="PLAIN_TEXT" value="3088" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -136,7 +103,7 @@
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="2" />
-          <entry key="java" value="2609" />
+          <entry key="java" value="2641" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -144,7 +111,7 @@
         <counts>
           <entry key="CLASS" value="9" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="2609" />
+          <entry key="JAVA" value="2641" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -153,18 +120,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MarkingTheInputFieldTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="215" lean-forward="true" selection-start-line="215" selection-end-line="215" />
+            <state relative-caret-position="145">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+              <folding>
+                <element signature="method#IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn#0;class#MessagingPlayerTest#0" />
+                <element signature="method#IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn#0;class#MessagingPlayerTest#0" />
+                <element signature="method#IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makePlayerIsJohn#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makePlayerIsHaley#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeMessagingPlayer#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeJohnWillMarkRow1Column1#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeJohnWillMarkRow2Column0#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeHaleyWillMarkRow1Column1#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeGeneratorReturnsRow2Column0#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeGeneratorReturnsRow1Column1#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeMockExpectsJohnMarksRow1Column1#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeMockExpectsHaleyMarksRow1Column1#0;class#MessagingPlayerTest#0" />
+                <element signature="method#makeMockExpectsJohnMarksRow2Column0#0;class#MessagingPlayerTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerDummy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerSpy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3024#3025#0" expanded="true" />
-                <element signature="e#3065#3066#0" expanded="true" />
-                <element signature="method#makeHumanPlayer#0;class#TicTacToeFactory#0" />
-                <element signature="method#makeComputerPlayer#0;class#TicTacToeFactory#0" />
-                <element signature="method#makeConsoleInputAlerter#0;class#TicTacToeFactory#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveOrderShuntTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#IfGetsPlayed_ShouldMarkTheFieldBeforePublishing#0;class#PublishingTheMoveOrderShuntTest#0" />
+                <element signature="method#makeMessagingPlayer#0;class#PublishingTheMoveOrderShuntTest#0" />
+                <element signature="method#makePlayerContext#0;class#PublishingTheMoveOrderShuntTest#0" />
               </folding>
             </state>
           </provider>
@@ -182,8 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LineEvaluator</find>
-      <find>or</find>
       <find>WinningRule</find>
       <find>makeFirstLineNot</find>
       <find>Exception</find>
@@ -196,7 +205,6 @@
       <find>TwoPlayerTurn</find>
       <find>Shunt</find>
       <find>junit</find>
-      <find>PlayerImp</find>
       <find>d</find>
       <find>com.</find>
       <find>GameLoop</find>
@@ -212,6 +220,9 @@
       <find>boardView</find>
       <find>messenger</find>
       <find>FXInputGe</find>
+      <find>makePlayer</find>
+      <find>Config</find>
+      <find>PlayerImp</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -232,21 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/InputGenerators/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/InputGenerators/AlertingInputGenerator/InputRefereeImp/InputValidatorImpAlertingTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/InputRules/CompositeInputRule/CompositeInputRuleTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/InputGenerators/AlertingInputGenerator/AlertingInputGenerator.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/InputGenerators/AlertingInputGenerator/ValidatingGeneratedInputTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/InputGenerators/AlertingInputGenerator/AlertingOnInvalidInputTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/TwoPlayerTurn/MessagingTwoPlayerTurn/MessagingAlternatePlayingTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Game/GameProceedsCorrectOrderShuntTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Game/RenderingOnceBeforeStartingTheGameLoop.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Game/RenderingBeforeStartingTheGameLoopTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Game/RenderingBeforeStartingTheGameTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/Game/Game.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/CLI/View/TicTacToeView/ConsoleReceptionist.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Games/MessagingGame/GameMessagingTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/Games/MessagingGame/Game.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/Model/Games/MessagingGame/GameMessenger.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/test/Lib/Model/Games/MessagingGame/MessagingGameTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/Lib/CLI/View/TicTacToeView/GameMessenger.java" />
@@ -283,6 +279,21 @@
         <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/VerbosePlayer/VerbosePlayerTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/VerbosePlayer/MessagingPlayerTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MessagingPlayerTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/PlayerImpTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessagingOrderShuntTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MarkFieldServiceDummy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/PlayerMessenger.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerDummy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerSpy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessagingTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerImp.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/MessagingPlayer.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MarkingTheInputFieldTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveOrderShuntTest.java" />
       </list>
     </option>
   </component>
@@ -461,21 +472,84 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Players" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Players" type="462c0819:PsiDirectoryNode" />
+              <item name="MessagingPlayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Players" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Players" type="462c0819:PsiDirectoryNode" />
+              <item name="MessagingPlayer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Core" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Lib" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
+              <item name="MessagingTwoPlayerTurn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -496,7 +570,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Gui/src/View/FXTextSizeTransition.java&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556749065985" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556834456370" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -509,25 +583,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Lib.Players" />
       <recent name="Lib.MarkToStringMapper" />
       <recent name="Lib.CLI.View.ConsoleBoardView" />
       <recent name="Lib.Model.GameEvaluation" />
       <recent name="Lib.Model.Games.GameImp" />
-      <recent name="Lib.Model.SelfActingGameLoop" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="View" />
-      <recent name="Lib.Model.Games.MessagingGame" />
-      <recent name="Lib.Model.SelfActingGameLoop" />
-      <recent name="Lib.Model.BoardRenderer" />
-      <recent name="Lib.Model.RenderingGameLoop.GameImp" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="View" />
-      <recent name="App" />
-      <recent name="Lib.Model.GameLoop" />
-      <recent name="com.company.Model.Players.VerbosePlayer" />
-      <recent name="com.company.Model.GameLoop.TwoPlayerTurn" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TicTacToe.Core/test" />
@@ -535,6 +595,20 @@
       <recent name="$PROJECT_DIR$/TicTacToe.Gui/src/View" />
       <recent name="$PROJECT_DIR$/TicTacToe.Gui/src/App" />
       <recent name="$PROJECT_DIR$/TicTacToe.Console/src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Lib.Players.MessagingPlayer" />
+      <recent name="View" />
+      <recent name="App" />
+      <recent name="Lib.Model.GameLoop" />
+      <recent name="com.company.Model.Players.VerbosePlayer" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Lib.Players.MessagingPlayer" />
+      <recent name="View" />
+      <recent name="Lib.Model.Games.MessagingGame" />
+      <recent name="Lib.Model.SelfActingGameLoop" />
+      <recent name="Lib.Model.BoardRenderer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -549,7 +623,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main.Console">
+  <component name="RunManager" selected="JUnit.Core">
     <configuration name="Main.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="TicTacToe.Console" />
@@ -620,9 +694,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Core" />
         <item itemvalue="Application.Main.Console" />
         <item itemvalue="Application.Main.GUI" />
-        <item itemvalue="JUnit.Core" />
       </list>
     </recent_temporary>
   </component>
@@ -688,45 +762,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Console - 2019.04.28 at 15h 37m 01s.xml">
-      <configuration name="Console" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Console - 2019.04.28 at 15h 59m 58s.xml">
-      <configuration name="Console" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Console - 2019.04.28 at 16h 09m 27s.xml">
-      <configuration name="Console" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Console - 2019.04.28 at 16h 13m 05s.xml">
-      <configuration name="Console" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FieldsWithSameRowAndSameColumn - 2019.05.01 at 23h 44m 46s.xml">
-      <configuration name="FieldsWithSameRowAndSameColumn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Core - 2019.05.01 at 23h 44m 53s.xml">
+    <history-entry file="Core - 2019.05.02 at 23h 48m 28s.xml">
       <configuration name="Core" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Core - 2019.05.01 at 23h 45m 07s.xml">
+    <history-entry file="Core - 2019.05.02 at 23h 49m 47s.xml">
       <configuration name="Core" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Core - 2019.05.01 at 23h 47m 07s.xml">
+    <history-entry file="Core - 2019.05.02 at 23h 50m 01s.xml">
       <configuration name="Core" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Console - 2019.05.01 at 23h 54m 16s.xml">
-      <configuration name="Console" configurationId="JUnit" />
+    <history-entry file="Core - 2019.05.02 at 23h 51m 19s.xml">
+      <configuration name="Core" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Core - 2019.05.01 at 23h 54m 28s.xml">
+    <history-entry file="Core - 2019.05.02 at 23h 51m 27s.xml">
+      <configuration name="Core" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Core - 2019.05.02 at 23h 51m 35s.xml">
+      <configuration name="Core" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Core - 2019.05.02 at 23h 57m 09s.xml">
+      <configuration name="Core" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Core - 2019.05.02 at 23h 57m 26s.xml">
+      <configuration name="Core" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Core - 2019.05.02 at 23h 58m 35s.xml">
+      <configuration name="Core" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Core - 2019.05.02 at 23h 59m 45s.xml">
       <configuration name="Core" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="298641000" />
+    <option name="totallyTimeSpent" value="301089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1918" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17929563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22465315" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -835,38 +909,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Presentation/LeaveTaker/LeaveTaker.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/CLI/View/TicTacToeView/ConsoleLeaveTakerView.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/Lib/Presentation/LeaveTaker/LeaveTakerView.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/MarkToStringMapper/FieldSymbols.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/TicTacToe.Gui.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/GameLoopImp/GameOverRule.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/GameEvaluation/HumbleLineProvider/HumbleLineProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/GameEvaluation/EquallyMarkedLineEvaluator/EquallyMarkedLineEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/InputValidatorImp/InputValidatorImp.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputRules/FieldIsEmptyRule/FieldIsEmptyRule.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputRules/FieldExistsRule/FieldExistsRule.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Data/Field/Field.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1035,19 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/TwoPlayerTurn/TwoPlayerTurn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1080,16 +1109,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXGame.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXShell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1100,16 +1120,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXTile.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXBoardView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1267,6 +1278,138 @@
             <element signature="method#makeHumanPlayer#0;class#TicTacToeFactory#0" />
             <element signature="method#makeComputerPlayer#0;class#TicTacToeFactory#0" />
             <element signature="method#makeConsoleInputAlerter#0;class#TicTacToeFactory#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/TwoPlayerTurn/MessagingTwoPlayerTurn/TurnMessagingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/TwoPlayerTurn/MessagingTwoPlayerTurn/TurnMessagingOrderShuntTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MarkFieldServiceDummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MarkingTheInputFieldTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/MessagingPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="45" lean-forward="true" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/PlayerImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/Players/MessagingPlayer/PlayerMessenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IfRow0Column1GetsMarked_ShouldPublishTheMarkedFieldWithRow0Column1#0;class#PlayerMessagingTest#0" />
+            <element signature="method#IfRow2Column2GetsMarked_ShouldPublishTheMarkedFieldWithRow2Column2#0;class#PlayerMessagingTest#0" />
+            <element signature="method#IfPlayedMove_ShouldPublishItsMark#0;class#PlayerMessagingTest#0" />
+            <element signature="method#IfHaleyPlayedMove_ShouldPublishItsMark#0;class#PlayerMessagingTest#0" />
+            <element signature="method#makeHaleyWillMarkRow2Column2#0;class#PlayerMessagingTest#0" />
+            <element signature="method#makeJohnWillMarkRow0Column1#0;class#PlayerMessagingTest#0" />
+            <element signature="method#makePlayerIs#0;class#PlayerMessagingTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/MarkingTheInputFieldTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="method#IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn#0;class#MessagingPlayerTest#0" />
+            <element signature="method#IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn#0;class#MessagingPlayerTest#0" />
+            <element signature="method#IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makePlayerIsJohn#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makePlayerIsHaley#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeMessagingPlayer#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeJohnWillMarkRow1Column1#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeJohnWillMarkRow2Column0#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeHaleyWillMarkRow1Column1#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeGeneratorReturnsRow2Column0#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeGeneratorReturnsRow1Column1#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeMockExpectsJohnMarksRow1Column1#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeMockExpectsHaleyMarksRow1Column1#0;class#MessagingPlayerTest#0" />
+            <element signature="method#makeMockExpectsJohnMarksRow2Column0#0;class#MessagingPlayerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerDummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PlayerMessengerSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/Players/MessagingPlayer/PublishingTheMoveOrderShuntTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IfGetsPlayed_ShouldMarkTheFieldBeforePublishing#0;class#PublishingTheMoveOrderShuntTest#0" />
+            <element signature="method#makeMessagingPlayer#0;class#PublishingTheMoveOrderShuntTest#0" />
+            <element signature="method#makePlayerContext#0;class#PublishingTheMoveOrderShuntTest#0" />
           </folding>
         </state>
       </provider>
