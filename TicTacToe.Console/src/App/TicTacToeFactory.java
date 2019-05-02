@@ -23,7 +23,6 @@ import Lib.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Games.GameImp.GameImp;
 import Lib.Games.GameImp.GameLoop;
 import Lib.Games.MessagingGame.Game;
-import Lib.Games.MessagingGame.GameMessenger;
 import Lib.Games.MessagingGame.MessagingGame;
 import Lib.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidator;
@@ -36,33 +35,39 @@ import Lib.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import Lib.MarkToStringMapper.FieldSymbols;
+import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.MarkToStringMapper.MarkToXOMapper;
+import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
 import Lib.Players.PlayerContext;
 import Lib.Players.PlayerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
-import View.ConsoleBoardView;
-import Lib.MarkToStringMapper.FieldSymbols;
-import Lib.MarkToStringMapper.MarkToStringMapper;
-import Lib.MarkToStringMapper.MarkToXOMapper;
-import View.ConsoleGameMessenger;
-import Lib.Messages.AlertingMessages;
-import View.ConsoleInputAlerter;
-import View.ConsoleInputGenerator;
-import View.ConsoleTurnMessenger;
+import View.*;
 
 public class TicTacToeFactory {
 
+    private ConsoleBoardView boardView;
+    private ConsoleInputGenerator inputView;
+    private ConsoleGameMessenger gameMessenger;
+    private ConsoleTurnMessenger turnMessenger;
+
     public Game makeGame() {
         Board board = makeBoard();
+        WinnerProvider provider = makeGameEvaluator(board);
+        MarkToStringMapper mapper = makeMarkToStringMapper();
+
+        boardView = new ConsoleBoardView(board, mapper);
+        inputView = new ConsoleInputGenerator();
+        gameMessenger = new ConsoleGameMessenger(provider, mapper);
+        turnMessenger = new ConsoleTurnMessenger();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
         Game game = new GameImp(renderer, loop);
-        MarkToStringMapper mapper = makeMarkToStringMapper();
-        WinnerProvider provider = makeGameEvaluator(board);
-        GameMessenger messenger = new ConsoleGameMessenger(provider, mapper);
-        return new MessagingGame(game, messenger);
+
+        return new MessagingGame(game, gameMessenger);
     }
 
     private HashingBoard makeBoard() {
@@ -77,14 +82,8 @@ public class TicTacToeFactory {
     }
 
     private Renderer makeRenderer(Board board) {
-        ConsoleBoardView view = makeConsoleBoardView(board);
         WinningLineProvider provider = makeWinningLineProvider(board);
-        return new BoardRenderer(view, provider);
-    }
-
-    private ConsoleBoardView makeConsoleBoardView(Board board) {
-        MarkToStringMapper mapper = makeMarkToStringMapper();
-        return new ConsoleBoardView(board, mapper);
+        return new BoardRenderer(boardView, provider);
     }
 
     private MarkToStringMapper makeMarkToStringMapper() {
@@ -137,14 +136,9 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        ConsoleTurnMessenger turnMessageView = makeConsoleTurnMessageView();
-        turnMessageView.register(john, FieldSymbols.john);
-        turnMessageView.register(haley, FieldSymbols.haley);
-        return new MessagingTwoPlayerTurn(john, haley, turnMessageView);
-    }
-
-    private ConsoleTurnMessenger makeConsoleTurnMessageView() {
-        return new ConsoleTurnMessenger();
+        turnMessenger.register(john, FieldSymbols.john);
+        turnMessenger.register(haley, FieldSymbols.haley);
+        return new MessagingTwoPlayerTurn(john, haley, turnMessenger);
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {
@@ -174,14 +168,9 @@ public class TicTacToeFactory {
 
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputValidator validator = makeInputValidator(board);
-        InputGenerator consoleGenerator = makeConsoleInputGenerator();
+        InputGenerator consoleGenerator = inputView;
         return new AlertingInputGenerator(consoleGenerator, validator);
     }
-
-    private ConsoleInputGenerator makeConsoleInputGenerator() {
-        return new ConsoleInputGenerator();
-    }
-
 
     private InputRule makeInputRule(Board board) {
         InputRule existsRule = makeFieldExistsRule();
