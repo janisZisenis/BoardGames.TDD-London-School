@@ -29,7 +29,7 @@ public class PublishingTheMoveOrderShuntTest implements MarkFieldService, Player
         logString += "mark ";
     }
 
-    public void publishPlayedMove(Mark m, Field f) {
+    public void publishPlayedMove(Field f) {
         logString += "publishPlayedMove ";
     }
 

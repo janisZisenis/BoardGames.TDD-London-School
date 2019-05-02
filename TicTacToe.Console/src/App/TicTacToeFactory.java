@@ -63,7 +63,7 @@ public class TicTacToeFactory {
         inputView = new ConsoleInputGenerator();
         gameMessenger = new ConsoleGameMessenger(provider, mapper);
         turnMessenger = new ConsoleTurnMessenger();
-        playerMessenger = new ConsolePlayerMessenger(mapper);
+        playerMessenger = new ConsolePlayerMessenger();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);

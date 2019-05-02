@@ -70,18 +70,17 @@ public class FXMessengerView extends Pane implements GameMessenger, TurnMessenge
         });
     }
 
-    public void publishPlayedMove(Mark m, Field f) {
-        String message = getMessage(m, f);
+    public void publishPlayedMove(Field f) {
+        String message = getMessage(f);
         Platform.runLater(() ->{
             text.appendText(message);
         });
     }
 
-    private String getMessage(Mark m, Field f) {
-        String mark = mapper.map(m);
+    private String getMessage(Field f) {
         int row = f.getRow();
         int col = f.getColumn();
 
-        return mark + " marked the field [" + row + ", " + col + "]\n";
+        return "Field [" + row + ", " + col + "] was marked!\n";
     }
 }

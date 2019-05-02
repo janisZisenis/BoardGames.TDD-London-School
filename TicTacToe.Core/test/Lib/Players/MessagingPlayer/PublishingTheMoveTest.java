@@ -20,7 +20,7 @@ public class PublishingTheMoveTest {
 
     @Test
     void IfRow0Column1GetsMarked_ShouldPublishTheMarkedFieldWithRow0Column1() {
-        makeJohnWillMarkRow0Column1();
+        makePlayerWillMarkRow0Column1();
 
         sut.playMove();
 
@@ -31,7 +31,7 @@ public class PublishingTheMoveTest {
 
     @Test
     void IfRow2Column2GetsMarked_ShouldPublishTheMarkedFieldWithRow2Column2() {
-        makeHaleyWillMarkRow2Column2();
+        makePlayerWillMarkRow2Column2();
 
         sut.playMove();
 
@@ -40,43 +40,22 @@ public class PublishingTheMoveTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    void IfJohnPlayedMove_ShouldPublishItsMark() {
-        makeJohnWillMarkRow0Column1();
 
-        sut.playMove();
-
-        Mark actual = messenger.getPublishedMark();
-        Mark expected = Mark.John;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void IfHaleyPlayedMove_ShouldPublishItsMark() {
-        makeHaleyWillMarkRow2Column2();
-
-        sut.playMove();
-
-        Mark actual = messenger.getPublishedMark();
-        Mark expected = Mark.Haley;
-        assertEquals(expected, actual);
-    }
-
-    private void makeHaleyWillMarkRow2Column2() {
-        makePlayerIs(Mark.Haley);
+    private void makePlayerWillMarkRow2Column2() {
+        makePlayer();
         Input[] inputs = { new Input(2, 2) };
         generator.setGeneratedInputs(inputs);
     }
 
 
-    private void makeJohnWillMarkRow0Column1() {
-        makePlayerIs(Mark.John);
+    private void makePlayerWillMarkRow0Column1() {
+        makePlayer();
         Input[] inputs = { new Input(0, 1) };
         generator.setGeneratedInputs(inputs);
     }
 
-    private void makePlayerIs(Mark m) {
-        PlayerContext context = new PlayerContext(generator, markService, m);
+    private void makePlayer() {
+        PlayerContext context = new PlayerContext(generator, markService, Mark.John);
         sut = new MessagingPlayer(context, messenger);
     }
 

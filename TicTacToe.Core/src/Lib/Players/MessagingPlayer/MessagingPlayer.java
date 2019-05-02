@@ -15,7 +15,7 @@ public class MessagingPlayer extends PlayerImp {
 
     protected void mark(Field f) {
         super.mark(f);
-        messenger.publishPlayedMove(mark, f);
+        messenger.publishPlayedMove(f);
     }
 
 }
