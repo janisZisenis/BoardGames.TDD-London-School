@@ -8,8 +8,8 @@ import Lib.TwoPlayerTurn.Player;
 public class PlayerImp implements Player {
 
     private final MarkFieldService markService;
-    private final Mark mark;
     private final InputGenerator generator;
+    protected final Mark mark;
 
     public PlayerImp(PlayerContext context) {
         this.generator = context.getGenerator();
@@ -23,7 +23,7 @@ public class PlayerImp implements Player {
         mark(f);
     }
 
-    private void mark(Field f) {
+    protected void mark(Field f) {
         markService.mark(f, mark);
     }
 

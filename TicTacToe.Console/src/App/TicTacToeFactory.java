@@ -40,8 +40,8 @@ import Lib.MarkToStringMapper.MarkToStringMapper;
 import Lib.MarkToStringMapper.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
+import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
-import Lib.Players.PlayerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
 import View.*;
@@ -52,6 +52,7 @@ public class TicTacToeFactory {
     private ConsoleInputGenerator inputView;
     private ConsoleGameMessenger gameMessenger;
     private ConsoleTurnMessenger turnMessenger;
+    private ConsolePlayerMessenger playerMessenger;
 
     public Game makeGame() {
         Board board = makeBoard();
@@ -62,6 +63,7 @@ public class TicTacToeFactory {
         inputView = new ConsoleInputGenerator();
         gameMessenger = new ConsoleGameMessenger(provider, mapper);
         turnMessenger = new ConsoleTurnMessenger();
+        playerMessenger = new ConsolePlayerMessenger();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
@@ -152,8 +154,8 @@ public class TicTacToeFactory {
     }
 
     private Player makePlayer(Board board, InputGenerator generator, Mark m) {
-        PlayerContext johnContext = new PlayerContext(generator, board, m);
-        return new PlayerImp(johnContext);
+        PlayerContext context = new PlayerContext(generator, board, m);
+        return new MessagingPlayer(context, playerMessenger);
     }
 
     private InputGenerator makeComputerInputGenerator(Board board) {

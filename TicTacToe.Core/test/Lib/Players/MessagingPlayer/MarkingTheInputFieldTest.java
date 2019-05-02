@@ -1,15 +1,18 @@
-package Lib.Players;
+package Lib.Players.MessagingPlayer;
 
+import Lib.Data.Field.Field;
 import Lib.Data.Input.Input;
 import Lib.Data.Mark;
-import Lib.Data.Field.Field;
+import Lib.Players.CountingGeneratorStub;
+import Lib.Players.MarkFieldServiceMock;
+import Lib.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 
-public class PlayerImpTest {
-
+public class MarkingTheInputFieldTest {
     private CountingGeneratorStub generator = new CountingGeneratorStub();
     private MarkFieldServiceMock markService = new MarkFieldServiceMock();
-    private PlayerImp sut;
+    private PlayerMessengerDummy messenger = new PlayerMessengerDummy();
+    private MessagingPlayer sut;
 
     @Test
     void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
@@ -43,16 +46,16 @@ public class PlayerImpTest {
 
     private void makePlayerIsJohn() {
         PlayerContext config = makePlayerContext(Mark.John);
-        sut = makePlayer(config);
+        sut = makeMessagingPlayer(config, messenger);
     }
 
     private void makePlayerIsHaley() {
         PlayerContext config = makePlayerContext(Mark.Haley);
-        sut = makePlayer(config);
+        sut = makeMessagingPlayer(config, messenger);
     }
 
-    private PlayerImp makePlayer(PlayerContext context) {
-        return new PlayerImp(context);
+    private MessagingPlayer makeMessagingPlayer(PlayerContext context, PlayerMessenger messenger) {
+        return new MessagingPlayer(context, messenger);
     }
 
     private PlayerContext makePlayerContext(Mark mark) {

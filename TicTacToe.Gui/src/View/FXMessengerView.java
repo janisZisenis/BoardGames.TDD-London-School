@@ -1,9 +1,11 @@
 package View;
 
+import Lib.Data.Field.Field;
 import Lib.Data.Mark;
 import Lib.GameEvaluation.WinnerProvider;
 import Lib.Games.MessagingGame.GameMessenger;
 import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
@@ -11,7 +13,7 @@ import javafx.scene.layout.Pane;
 
 import java.util.HashMap;
 
-public class FXLoggerView extends Pane implements GameMessenger, TurnMessenger {
+public class FXMessengerView extends Pane implements GameMessenger, TurnMessenger, PlayerMessenger {
 
     private final HashMap<Object, String> names = new HashMap<Object, String>();
 
@@ -23,9 +25,9 @@ public class FXLoggerView extends Pane implements GameMessenger, TurnMessenger {
     private final WinnerProvider provider;
     private final MarkToStringMapper mapper;
 
-    TextArea text = new TextArea();
+    private final TextArea text = new TextArea();
 
-    public FXLoggerView(int width, WinnerProvider provider, MarkToStringMapper mapper) {
+    public FXMessengerView(int width, WinnerProvider provider, MarkToStringMapper mapper) {
         this.provider = provider;
         this.mapper = mapper;
 
@@ -68,4 +70,17 @@ public class FXLoggerView extends Pane implements GameMessenger, TurnMessenger {
         });
     }
 
+    public void publishPlayedMove(Field f) {
+        String message = getMessage(f);
+        Platform.runLater(() ->{
+            text.appendText(message);
+        });
+    }
+
+    private String getMessage(Field f) {
+        int row = f.getRow();
+        int col = f.getColumn();
+
+        return "Field [" + row + ", " + col + "] was marked!\n";
+    }
 }
