@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane;
 
 public class FXShell extends Pane {
 
-    public FXShell(FXBoardView board, FXInputView input, FXLoggerView logger) {
+    public FXShell(FXBoardView board, FXInputView input, FXMessengerView logger) {
         GridPane grid = makeGrid();
 
         GridPane.setConstraints(board, 0, 0);

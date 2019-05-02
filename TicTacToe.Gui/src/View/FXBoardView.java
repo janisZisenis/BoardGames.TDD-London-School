@@ -89,7 +89,7 @@ public class FXBoardView extends Pane implements BoardView {
         }
     }
 
-
+ 
 
     public void showWinningLine(Line line) {
         Platform.runLater(() -> {

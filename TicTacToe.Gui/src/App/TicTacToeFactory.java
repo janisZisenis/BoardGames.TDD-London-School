@@ -40,15 +40,15 @@ import Lib.MarkToStringMapper.MarkToStringMapper;
 import Lib.MarkToStringMapper.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
+import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
-import Lib.Players.PlayerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
 import View.*;
 
 public class TicTacToeFactory {
 
-    private FXLoggerView messenger;
+    private FXMessengerView messenger;
     private FXBoardView boardView;
     private FXInputView inputView;
     public FXShell shell;
@@ -60,7 +60,7 @@ public class TicTacToeFactory {
 
         boardView = new FXBoardView(200, board, mapper);
         inputView = new FXInputView(200);
-        messenger = new FXLoggerView(450, provider, mapper);
+        messenger = new FXMessengerView(450, provider, mapper);
         shell = new FXShell(boardView, inputView, messenger);
 
         Renderer renderer = makeRenderer(board);
@@ -152,8 +152,8 @@ public class TicTacToeFactory {
     }
 
     private Player makePlayer(Board board, InputGenerator generator, Mark m) {
-        PlayerContext johnContext = new PlayerContext(generator, board, m);
-        return new PlayerImp(johnContext);
+        PlayerContext context = new PlayerContext(generator, board, m);
+        return new MessagingPlayer(context, messenger);
     }
 
     private InputGenerator makeComputerInputGenerator(Board board) {
