@@ -10,6 +10,14 @@ public class Field {
         this.column = column;
     }
 
+    public int getRow() {
+        return this.row;
+    }
+
+    public int getColumn() {
+        return this.column;
+    }
+
     public boolean equals(Object o) {
         Field f = (Field)o;
         return f.row == row && f.column == column;
@@ -18,4 +26,5 @@ public class Field {
     public int hashCode() {
         return ("row: " + row + " column: " + column).hashCode();
     }
+
 }

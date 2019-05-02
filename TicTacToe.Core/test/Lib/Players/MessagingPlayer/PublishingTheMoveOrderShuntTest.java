@@ -3,14 +3,14 @@ package Lib.Players.MessagingPlayer;
 import Lib.Data.Field.Field;
 import Lib.Data.Input.Input;
 import Lib.Data.Mark;
-import Lib.Players.CountingGeneratorStub;
+import Lib.Players.InputGenerator;
 import Lib.Players.MarkFieldService;
 import Lib.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PublishingTheMoveOrderShuntTest implements MarkFieldService, PlayerMessenger {
+public class PublishingTheMoveOrderShuntTest implements MarkFieldService, PlayerMessenger, InputGenerator {
 
     private String logString = "";
 
@@ -33,15 +33,13 @@ public class PublishingTheMoveOrderShuntTest implements MarkFieldService, Player
         logString += "publishPlayedMove ";
     }
 
+    public Input generate() {
+        return new Input(0, 1);
+    }
 
     private MessagingPlayer makeMessagingPlayer() {
-        PlayerContext context = makePlayerContext();
+        PlayerContext context = new PlayerContext(this, this, Mark.John);
         return new MessagingPlayer(context, this);
     }
 
-    private PlayerContext makePlayerContext() {
-        CountingGeneratorStub generator = new CountingGeneratorStub();
-        generator.setGeneratedInputs(new Input[]{ new Input(0, 1)});
-        return new PlayerContext(generator, this, Mark.John);
-    }
 }
