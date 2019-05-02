@@ -5,6 +5,7 @@ import Lib.GameEvaluation.WinnerProvider;
 import Lib.Games.MessagingGame.GameMessenger;
 import Lib.MarkToStringMapper.MarkToStringMapper;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
+import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
@@ -41,22 +42,30 @@ public class FXLoggerView extends Pane implements GameMessenger, TurnMessenger {
     }
 
     public void publishGameOverMessage() {
+        String message;
         if(provider.hasWinner()) {
             Mark winner = provider.getWinner();
             String s = mapper.map(winner);
-            text.appendText(s + winnerMessage + "\n");
+            message = s + winnerMessage + "\n";
         } else {
-            text.appendText(drawMessage + "\n");
+            message = drawMessage + "\n";
         }
+        append(message);
     }
 
     public void publishTurnMessageFor(Object player) {
         String name = names.get(player);
-        text.appendText(name + turnMessageEnding + "\n");
+        append(name + turnMessageEnding + "\n");
     }
 
     public void register(Object player, String name) {
         names.put(player, name);
+    }
+
+    public void append(String s) {
+        Platform.runLater(() ->{
+            text.appendText(s);
+        });
     }
 
 }

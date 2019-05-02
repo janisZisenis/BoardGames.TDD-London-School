@@ -20,6 +20,12 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
 
-        game.play();
+        Thread t = new Thread() {
+            public void run(){
+                game.play();
+            }
+        };
+        t.start();
+
     }
 }

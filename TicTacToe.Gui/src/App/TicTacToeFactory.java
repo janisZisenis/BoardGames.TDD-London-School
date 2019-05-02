@@ -50,6 +50,7 @@ public class TicTacToeFactory {
 
     private FXLoggerView messenger;
     private FXBoardView boardView;
+    private FXInputView inputView;
     public FXShell shell;
 
     public Game makeGame() {
@@ -58,9 +59,10 @@ public class TicTacToeFactory {
         WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
 
-        boardView = new FXBoardView(400, board, mapper);
-        messenger = new FXLoggerView(400, provider, mapper);
-        shell = new FXShell(boardView, messenger);
+        boardView = new FXBoardView(200, board, mapper);
+        inputView = new FXInputView(200);
+        messenger = new FXLoggerView(450, provider, mapper);
+        shell = new FXShell(boardView, inputView, messenger);
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
@@ -167,12 +169,12 @@ public class TicTacToeFactory {
 
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputValidator validator = makeInputValidator(board);
-        InputGenerator consoleGenerator = makeFXInputGenerator();
+        InputGenerator consoleGenerator = inputView;
         return new AlertingInputGenerator(consoleGenerator, validator);
     }
 
     private InputGenerator makeFXInputGenerator() {
-        return new FXInputGenerator();
+        return new FXInputPopup();
     }
 
 
