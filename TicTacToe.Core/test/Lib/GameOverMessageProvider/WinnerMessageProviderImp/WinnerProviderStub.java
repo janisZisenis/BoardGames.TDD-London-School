@@ -1,7 +1,6 @@
 package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
-import Lib.GameEvaluation.WinnerProvider;
 
 public class WinnerProviderStub implements WinnerProvider {
 

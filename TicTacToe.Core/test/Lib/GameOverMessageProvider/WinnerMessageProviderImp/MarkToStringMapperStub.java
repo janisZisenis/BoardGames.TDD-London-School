@@ -1,7 +1,6 @@
 package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
-import Lib.MarkToStringMapper.MarkToStringMapper;
 
 import java.util.HashMap;
 

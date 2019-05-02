@@ -1,4 +1,4 @@
-package Lib.MarkToStringMapper;
+package Lib.MarkToStringMappers;
 
 public abstract class FieldSymbols {
 

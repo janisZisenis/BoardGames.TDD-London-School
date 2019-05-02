@@ -2,9 +2,9 @@ package View;
 
 import Lib.Data.Field.Field;
 import Lib.Data.Mark;
-import Lib.GameEvaluation.WinnerProvider;
+import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
 import Lib.Games.MessagingGame.GameMessenger;
-import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import javafx.application.Platform;

@@ -1,14 +1,13 @@
-package Lib.MarkToStringMapper;
+package Lib.MarkToStringMappers;
 
-import Lib.MarkToStringMapper.MarkToXOMapper;
 import Lib.Data.Mark;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MarkToStringMappingTest {
+public class MarkToMessageMappingTest {
 
-    MarkToXOMapper sut = new MarkToXOMapper();
+    private MarkToXOMapper sut = new MarkToXOMapper();
 
     @Test
     void IfJohnIsGiven_ShouldMapToX() {

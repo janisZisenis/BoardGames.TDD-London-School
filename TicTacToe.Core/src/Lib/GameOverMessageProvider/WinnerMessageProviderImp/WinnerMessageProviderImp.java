@@ -1,9 +1,7 @@
 package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
-import Lib.GameEvaluation.WinnerProvider;
 import Lib.GameOverMessageProvider.WinnerMessageProvider;
-import Lib.MarkToStringMapper.MarkToStringMapper;
 
 public class WinnerMessageProviderImp implements WinnerMessageProvider {
 

@@ -1,6 +1,7 @@
-package Lib.MarkToStringMapper;
+package Lib.MarkToStringMappers;
 
 import Lib.Data.Mark;
+import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
 
 public class MarkToXOMapper implements MarkToStringMapper {
     public String map(Mark m) {

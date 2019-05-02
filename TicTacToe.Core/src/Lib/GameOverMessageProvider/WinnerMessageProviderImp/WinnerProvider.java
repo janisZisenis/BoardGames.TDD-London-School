@@ -1,4 +1,4 @@
-package Lib.GameEvaluation;
+package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
 

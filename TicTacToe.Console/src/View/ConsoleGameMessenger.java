@@ -2,8 +2,8 @@ package View;
 
 import Lib.Data.Mark;
 import Lib.Games.MessagingGame.GameMessenger;
-import Lib.GameEvaluation.WinnerProvider;
-import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
+import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
 
 public class ConsoleGameMessenger implements GameMessenger {
 
