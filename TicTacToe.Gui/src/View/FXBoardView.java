@@ -6,7 +6,7 @@ import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package Lib.MarkToStringMapper;
+package Lib.GameOverMessageProviderImp.WinnerMessageProviderImp;
 
 
 import Lib.Data.Mark;

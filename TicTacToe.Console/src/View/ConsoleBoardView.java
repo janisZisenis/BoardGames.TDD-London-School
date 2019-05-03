@@ -6,8 +6,8 @@ import Lib.Data.Line;
 import Lib.Data.Mark;
 import Lib.Board.ReadOnlyBoard;
 import Lib.BoardRenderer.BoardView;
-import Lib.MarkToStringMapper.FieldSymbols;
-import Lib.MarkToStringMapper.MarkToStringMapper;
+import Lib.MarkToStringMappers.FieldSymbols;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 
