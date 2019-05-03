@@ -1,6 +1,6 @@
 package App;
 
-import Lib.Games.MessagingGame.Game;
+import Lib.GameImp.Game;
 
 public class Main {
 

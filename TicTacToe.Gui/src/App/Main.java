@@ -1,7 +1,7 @@
 package App;
 
 
-import Lib.Games.MessagingGame.Game;
+import Lib.GameImp.Game;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

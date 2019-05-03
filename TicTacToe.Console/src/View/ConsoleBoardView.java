@@ -1,19 +1,19 @@
 package View;
 
+import Lib.Board.ReadOnlyBoard;
+import Lib.BoardRenderer.BoardView;
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.Board.ReadOnlyBoard;
-import Lib.BoardRenderer.BoardView;
-import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
+import Messaging.Mapping.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 
-    private static final String winningColor = FieldSymbols.winningColor;
-    private static final String colorReset = FieldSymbols.colorReset;
-    private static final String empty = FieldSymbols.empty;
+    private final String empty = "\u00B7";
+    private final String winningColor = "\u001B[32m";
+    private final String colorReset = "\u001B[0m";
+
     private final int rowColumn = BoardBoundaries.rowColumnCount;
 
     private final MarkToStringMapper mapper;

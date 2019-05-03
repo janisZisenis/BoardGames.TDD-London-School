@@ -1,21 +1,21 @@
 package App;
 
 import View.FXBoardView;
-import View.FXMessengerView;
+import View.FXMessenger;
 import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 public class FXShell extends Pane {
 
-    public FXShell(FXBoardView board, FXInputView input, FXMessengerView logger) {
+    public FXShell(FXBoardView board, FXInputView input, FXMessenger messenger) {
         GridPane grid = makeGrid();
 
         GridPane.setConstraints(board, 0, 0);
         GridPane.setConstraints(input, 1, 0);
-        GridPane.setConstraints(logger, 0, 1, 2, 1);
+        GridPane.setConstraints(messenger, 0, 1, 2, 1);
 
-        grid.getChildren().addAll(board, input, logger);
+        grid.getChildren().addAll(board, input, messenger);
 
         getChildren().add(grid);
     }

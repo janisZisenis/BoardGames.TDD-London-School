@@ -1,32 +1,37 @@
 package App;
 
 
+import Messages.OnePlayerModeMessages;
+import Messaging.Game.GameMessengerImp.GameMessengerImp;
+import Messaging.Messenger;
+import Messaging.Game.GameOverMessageProviderImp.GameOverMessageProviderImp;
+import Messaging.Game.MessagingGame.GameMessenger;
+import Messaging.Game.MessagingGame.MessagingGame;
+import Messaging.Mapping.MarkToStringMapper;
+import Messaging.Game.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Lib.Board.Board;
 import Lib.Board.HashingBoard.HashingBoard;
 import Lib.BoardRenderer.BoardRenderer;
+import Lib.BoardRenderer.BoardView;
 import Lib.BoardRenderer.WinningLineProvider;
 import Lib.Data.Mark;
 import Lib.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineProvider;
+import Lib.GameEvaluation.GameEvaluator.WinnerProvider;
 import Lib.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
 import Lib.GameLoopImp.Turn;
-import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.GameOverRules.WinnerRule.HasWinnerProvider;
 import Lib.GameOverRules.WinnerRule.WinnerRule;
-import Lib.Games.GameImp.GameImp;
-import Lib.Games.GameImp.GameLoop;
-import Lib.Games.MessagingGame.Game;
-import Lib.Games.MessagingGame.MessagingGame;
+import Lib.GameImp.Game;
+import Lib.GameImp.GameImp;
+import Lib.GameImp.GameLoop;
 import Lib.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidator;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
@@ -38,47 +43,70 @@ import Lib.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.MarkToStringMappers.MarkToMessageMapper;
-import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
-import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
-import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
+import Messaging.Mapping.MarkToStringMappers.MarkToMessageMapper;
+import Messaging.Mapping.MarkToStringMappers.MarkToXOMapper;
+import Messaging.Mapping.ObjectToStringMappers.ObjectToMessageMapper;
+import Messaging.Mapping.ObjectToStringMapper;
+import Messaging.Player.MessagingPlayer.MessagingPlayer;
+import Messaging.Player.MessagingPlayer.PlayerMessenger;
+import Messaging.Player.PlayerMessengerImp.MarkedFieldMessageProviderImp;
+import Messaging.Player.PlayerMessengerImp.PlayerMessengerImp;
+import Messaging.Turn.MessagingTurn.MessagingTwoPlayerTurn;
+import Messaging.Turn.MessagingTurn.TurnMessenger;
+import Messaging.Turn.TurnMessengerImp.TurnMessengerImp;
 import View.ConsoleBoardView;
-import View.ConsoleGameMessenger;
-import View.ConsoleTurnMessenger;
+import View.ConsoleInputAlerter;
+import View.ConsoleInputGenerator;
+import View.ConsoleMessenger;
 
 public class TicTacToeFactory {
 
-    private ConsoleBoardView boardView;
-    private ConsoleInputGenerator inputView;
-    private ConsoleGameMessenger gameMessenger;
-    private ConsoleTurnMessenger turnMessenger;
-    private ConsolePlayerMessenger playerMessenger;
+    private final String humanWinMessage = OnePlayerModeMessages.humanWinMessage;
+    private final String computerWinMessage = OnePlayerModeMessages.computerWinMessage;
+    private final String drawMessage = OnePlayerModeMessages.drawMessage;
+    private final String salutation = OnePlayerModeMessages.salutation;
+    private final String humanTurnMessage = OnePlayerModeMessages.humanTurnMessage;
+    private final String computerTurnMessage = OnePlayerModeMessages.computerTurnMessage;
+
+    private Messenger messenger;
+    private BoardView boardView;
+    private InputGenerator inputView;
 
     public Game makeGame() {
         Board board = makeBoard();
-        WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
 
         boardView = new ConsoleBoardView(board, mapper);
         inputView = new ConsoleInputGenerator();
-
-        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
-        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
-        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
-        gameMessenger = new ConsoleGameMessenger(goMessageProvider);
-        turnMessenger = new ConsoleTurnMessenger();
-        playerMessenger = new ConsolePlayerMessenger();
+        messenger = new ConsoleMessenger();
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
         Game game = new GameImp(renderer, loop);
 
+        GameMessenger gameMessenger = makeGameMessenger(board);
         return new MessagingGame(game, gameMessenger);
+    }
+
+    private PlayerMessenger makePlayerMessenger() {
+        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
+        return new PlayerMessengerImp(messenger, fieldProvider);
+    }
+
+    private TurnMessenger makeTurnMessenger(ObjectToStringMapper mapper) {
+        return new TurnMessengerImp(messenger, mapper);
+    }
+
+    private GameMessenger makeGameMessenger(Board board) {
+        WinnerProvider provider = makeGameEvaluator(board);
+        MarkToStringMapper messageMapper = new MarkToMessageMapper(humanWinMessage, computerWinMessage);
+        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
+        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, drawMessage);
+        return new GameMessengerImp(messenger, goMessageProvider, salutation);
     }
 
     private HashingBoard makeBoard() {
@@ -147,9 +175,12 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        turnMessenger.register(john, FieldSymbols.john);
-        turnMessenger.register(haley, FieldSymbols.haley);
-        return new MessagingTwoPlayerTurn(john, haley, turnMessenger);
+        ObjectToMessageMapper objectMapper = new ObjectToMessageMapper();
+        objectMapper.register(john, humanTurnMessage);
+        objectMapper.register(haley, computerTurnMessage);
+        TurnMessenger messenger = makeTurnMessenger(objectMapper);
+
+        return new MessagingTwoPlayerTurn(john, haley, messenger);
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {
@@ -164,7 +195,8 @@ public class TicTacToeFactory {
 
     private Player makePlayer(Board board, InputGenerator generator, Mark m) {
         PlayerContext context = new PlayerContext(generator, board, m);
-        return new MessagingPlayer(context, playerMessenger);
+        PlayerMessenger messenger = makePlayerMessenger();
+        return new MessagingPlayer(context, messenger);
     }
 
     private InputGenerator makeComputerInputGenerator(Board board) {
