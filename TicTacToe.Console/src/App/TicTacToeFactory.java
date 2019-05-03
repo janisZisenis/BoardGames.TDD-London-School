@@ -38,10 +38,10 @@ import Lib.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Lib.MarkToStringMappers.FieldSymbols;
 import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
+import Lib.ObjectToStringMapper.ObjectToMessageMapper;
 import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
@@ -58,6 +58,7 @@ public class TicTacToeFactory {
     private ConsoleGameMessenger gameMessenger;
     private ConsoleTurnMessenger turnMessenger;
     private ConsolePlayerMessenger playerMessenger;
+    private ObjectToMessageMapper objectMapper;
 
     public Game makeGame() {
         Board board = makeBoard();
@@ -71,7 +72,9 @@ public class TicTacToeFactory {
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
         GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
         gameMessenger = new ConsoleGameMessenger(goMessageProvider);
-        turnMessenger = new ConsoleTurnMessenger();
+
+        objectMapper = new ObjectToMessageMapper();
+        turnMessenger = new ConsoleTurnMessenger(objectMapper);
         playerMessenger = new ConsolePlayerMessenger();
 
         Renderer renderer = makeRenderer(board);
@@ -146,9 +149,9 @@ public class TicTacToeFactory {
     private Turn makeTurn(Board board) {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
+        objectMapper.register(john, "It's your turn!");
+        objectMapper.register(haley, "It's computer's turn");
 
-        turnMessenger.register(john, FieldSymbols.john);
-        turnMessenger.register(haley, FieldSymbols.haley);
         return new MessagingTwoPlayerTurn(john, haley, turnMessenger);
     }
 
