@@ -1,4 +1,4 @@
-package App;
+package View;
 
 import Lib.Data.Input.Input;
 import Lib.Messages.GenerationMessages;
