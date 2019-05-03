@@ -1,14 +1,12 @@
 package Messaging.Player.PlayerMessengerImp;
 
-import Messaging.MessengerSpy;
 import Lib.Data.Field.Field;
+import Messaging.MessengerMock;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlayerMessengerImpTest {
 
-    private MessengerSpy messenger = new MessengerSpy();
+    private MessengerMock messenger = new MessengerMock();
     private MarkedFieldMessageProviderStub provider = new MarkedFieldMessageProviderStub();
     private PlayerMessengerImp sut = new PlayerMessengerImp(messenger, provider);
 
@@ -17,15 +15,11 @@ public class PlayerMessengerImpTest {
     @Test
     void IfMarkedFieldGetsPublished_ShouldPublishTheProvidedMessage() {
         provider.setMessageForField("Message", field);
+        messenger.expectPublishMessage("Message");
 
         sut.publishPlayedMove(field);
 
-        assertPublishedMessageEquals("Message");
-    }
-
-    private void assertPublishedMessageEquals(String expected) {
-        String actual = messenger.getPublishedMessage();
-        assertEquals(expected, actual);
+        messenger.verifyAll();
     }
 
 }
