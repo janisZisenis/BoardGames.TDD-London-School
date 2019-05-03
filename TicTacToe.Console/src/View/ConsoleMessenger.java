@@ -1,6 +1,6 @@
 package View;
 
-import Lib.GameMessengerImp.Messenger;
+import Game.GameMessengerImp.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 

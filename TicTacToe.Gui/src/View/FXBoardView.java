@@ -1,12 +1,12 @@
 package View;
 
+import Game.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.Board.ReadOnlyBoard;
 import Lib.BoardRenderer.BoardView;
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

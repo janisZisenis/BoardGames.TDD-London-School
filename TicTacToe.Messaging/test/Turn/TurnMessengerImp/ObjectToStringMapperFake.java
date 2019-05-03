@@ -1,6 +1,6 @@
 package Turn.TurnMessengerImp;
 
-import Lib.ObjectToStringMapper.ObjectToStringMapper;
+import Mapping.ObjectToStringMapper.ObjectToStringMapper;
 
 import java.util.HashMap;
 

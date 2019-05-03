@@ -1,6 +1,6 @@
 package Turn.TurnMessengerImp;
 
-import Lib.GameMessengerImp.MessengerSpy;
+import Game.GameMessengerImp.MessengerSpy;
 import Turn.MessagingTurn.TurnMessenger;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

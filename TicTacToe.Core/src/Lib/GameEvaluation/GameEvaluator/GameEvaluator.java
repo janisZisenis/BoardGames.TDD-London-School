@@ -3,7 +3,6 @@ package Lib.GameEvaluation.GameEvaluator;
 import Lib.BoardRenderer.WinningLineProvider;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameOverRules.WinnerRule.HasWinnerProvider;
 
 public class GameEvaluator implements WinningLineProvider, HasWinnerProvider, WinnerProvider {

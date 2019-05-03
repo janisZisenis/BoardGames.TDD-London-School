@@ -1,7 +1,7 @@
 package Player.PlayerMessengerImp;
 
+import Game.GameMessengerImp.MessengerSpy;
 import Lib.Data.Field.Field;
-import Lib.GameMessengerImp.MessengerSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

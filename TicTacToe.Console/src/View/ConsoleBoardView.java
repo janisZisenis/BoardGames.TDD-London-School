@@ -1,13 +1,13 @@
 package View;
 
+import Game.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.Board.ReadOnlyBoard;
+import Lib.BoardRenderer.BoardView;
 import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Lib.Board.ReadOnlyBoard;
-import Lib.BoardRenderer.BoardView;
-import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
+import Mapping.MarkToStringMappers.FieldSymbols;
 
 public class ConsoleBoardView implements BoardView {
 
