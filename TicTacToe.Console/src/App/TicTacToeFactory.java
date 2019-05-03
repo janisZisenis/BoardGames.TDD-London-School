@@ -46,6 +46,7 @@ import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.ObjectToStringMapper.ObjectToMessageMapper;
+import Lib.ObjectToStringMapper.ObjectToStringMapper;
 import Lib.PlayerMessengerImp.MarkedFieldMessageProviderImp;
 import Lib.PlayerMessengerImp.PlayerMessengerImp;
 import Lib.Players.InputGenerator;
@@ -66,35 +67,38 @@ public class TicTacToeFactory {
     private Messenger messenger;
     private BoardView boardView;
     private InputGenerator inputView;
-    private GameMessenger gameMessenger;
-    private TurnMessenger turnMessenger;
-    private PlayerMessenger playerMessenger;
-    private ObjectToMessageMapper objectMapper;
 
     public Game makeGame() {
         Board board = makeBoard();
-        WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
 
         boardView = new ConsoleBoardView(board, mapper);
         inputView = new ConsoleInputGenerator();
-
-        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
-        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
-        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
         messenger = new ConsoleMessenger();
-        gameMessenger = new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
-
-        objectMapper = new ObjectToMessageMapper();
-        turnMessenger = new TurnMessengerImp(messenger, objectMapper);
-        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
-        playerMessenger = new PlayerMessengerImp(messenger, fieldProvider);
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
         Game game = new GameImp(renderer, loop);
 
+        GameMessenger gameMessenger = makeGameMessenger(board);
         return new MessagingGame(game, gameMessenger);
+    }
+
+    private PlayerMessenger makePlayerMessenger() {
+        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
+        return new PlayerMessengerImp(messenger, fieldProvider);
+    }
+
+    private TurnMessenger makeTurnMessenger(ObjectToStringMapper mapper) {
+        return new TurnMessengerImp(messenger, mapper);
+    }
+
+    private GameMessenger makeGameMessenger(Board board) {
+        WinnerProvider provider = makeGameEvaluator(board);
+        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
+        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
+        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
+        return new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
     }
 
     private HashingBoard makeBoard() {
@@ -162,10 +166,13 @@ public class TicTacToeFactory {
     private Turn makeTurn(Board board) {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
+
+        ObjectToMessageMapper objectMapper = new ObjectToMessageMapper();
         objectMapper.register(john, "It's your turn!");
         objectMapper.register(haley, "It's computer's turn");
+        TurnMessenger messenger = makeTurnMessenger(objectMapper);
 
-        return new MessagingTwoPlayerTurn(john, haley, turnMessenger);
+        return new MessagingTwoPlayerTurn(john, haley, messenger);
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {
@@ -180,7 +187,8 @@ public class TicTacToeFactory {
 
     private Player makePlayer(Board board, InputGenerator generator, Mark m) {
         PlayerContext context = new PlayerContext(generator, board, m);
-        return new MessagingPlayer(context, playerMessenger);
+        PlayerMessenger messenger = makePlayerMessenger();
+        return new MessagingPlayer(context, messenger);
     }
 
     private InputGenerator makeComputerInputGenerator(Board board) {
