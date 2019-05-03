@@ -46,6 +46,8 @@ import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.ObjectToStringMapper.ObjectToMessageMapper;
+import Lib.PlayerMessengerImp.MarkedFieldMessageProviderImp;
+import Lib.PlayerMessengerImp.PlayerMessengerImp;
 import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.MessagingPlayer.PlayerMessenger;
@@ -58,7 +60,6 @@ import View.ConsoleBoardView;
 import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;
 import View.ConsoleMessenger;
-import View.Messaging.ConsolePlayerMessenger;
 
 public class TicTacToeFactory {
 
@@ -86,7 +87,8 @@ public class TicTacToeFactory {
 
         objectMapper = new ObjectToMessageMapper();
         turnMessenger = new TurnMessengerImp(messenger, objectMapper);
-        playerMessenger = new ConsolePlayerMessenger();
+        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
+        playerMessenger = new PlayerMessengerImp(messenger, fieldProvider);
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
