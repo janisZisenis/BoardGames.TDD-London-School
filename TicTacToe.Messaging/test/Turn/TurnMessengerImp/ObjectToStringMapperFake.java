@@ -16,7 +16,7 @@ public class ObjectToStringMapperFake implements ObjectToStringMapper {
 
     private void throwIfIsNotMappable(Object o) {
         if(!isMappable(o))
-            throw new ObjectNotRegisteredForMapping();
+            throw new ObjectNotMappableToString();
     }
 
     public boolean isMappable(Object o) {

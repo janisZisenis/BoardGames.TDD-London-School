@@ -8,9 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MappingObjectToMessagesTest {
 
 
+    private ObjectToMessageMapper sut = new ObjectToMessageMapper();
+
     @Test
-    void IfNoObjectIsRegistered_NoObjectShouldNotBeRegistered() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
+    void IfNoObjectIsRegistered_NoObjectShouldBeMappable() {
         Object o = new Object();
 
         boolean actual = sut.isMappable(o);
@@ -19,18 +20,16 @@ public class MappingObjectToMessagesTest {
 
     @Test
     void IfNoObjectsAreRegistered_MappingShouldThrowException() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object o = new Object();
 
         Executable act = () -> { sut.map(o); };
 
-        assertThrows(ObjectToStringMapper.ObjectNotRegisteredForMapping.class, act);
+        assertThrows(ObjectToStringMapper.ObjectNotMappableToString.class, act);
     }
 
 
     @Test
-    void IfOneObjectIsRegistered_TheObjectShouldBeRegistered() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
+    void IfOneObjectIsRegistered_TheObjectShouldBeMappable() {
         Object o = new Object();
         sut.register(o, "");
 
@@ -40,7 +39,6 @@ public class MappingObjectToMessagesTest {
 
     @Test
     void IfOneObjectIsRegistered_ShouldMapToItsRegisteredString() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object o = new Object();
         sut.register(o, "Object");
 
@@ -52,8 +50,7 @@ public class MappingObjectToMessagesTest {
 
 
     @Test
-    void IfOneObjectIsRegistered_ASecondObjectShouldNotBeRegistered() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
+    void IfOneObjectIsRegistered_ASecondObjectShouldNotBeMappable() {
         Object first = new Object();
         Object second = new Object();
         sut.register(first, "");
@@ -64,20 +61,18 @@ public class MappingObjectToMessagesTest {
 
     @Test
     void IfOneObjectIsRegistered_MappingAnotherObjectShouldThrowException() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object first = new Object();
         Object second = new Object();
         sut.register(first, "");
 
         Executable act = () -> { sut.map(second); };
 
-        assertThrows(ObjectToStringMapper.ObjectNotRegisteredForMapping.class, act);
+        assertThrows(ObjectToStringMapper.ObjectNotMappableToString.class, act);
     }
 
 
     @Test
     void IfTwoObjectsAreRegistered_ShouldMapTheSecondObjectToTheSecondString() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object first = new Object();
         Object second = new Object();
         sut.register(first, "First");
@@ -91,8 +86,7 @@ public class MappingObjectToMessagesTest {
 
 
     @Test
-    void IfTwoObjectsAreRegistered_AThirdObjectShouldNotBeRegistered() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
+    void IfTwoObjectsAreRegistered_AThirdObjectShouldNotBeMappable() {
         Object first = new Object();
         Object second = new Object();
         Object third = new Object();
@@ -105,7 +99,6 @@ public class MappingObjectToMessagesTest {
 
     @Test
     void IfTwoObjectAreRegistered_MappingThirdObjectShouldThrowException() {
-        ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object first = new Object();
         Object second = new Object();
         Object third = new Object();
@@ -114,7 +107,7 @@ public class MappingObjectToMessagesTest {
 
         Executable act = () -> { sut.map(third); };
 
-        assertThrows(ObjectToStringMapper.ObjectNotRegisteredForMapping.class, act);
+        assertThrows(ObjectToStringMapper.ObjectNotMappableToString.class, act);
     }
 
 }

@@ -14,7 +14,7 @@ public class ObjectToMessageMapper implements ObjectToStringMapper {
 
     private void throwIfIsNotRegistered(Object o) {
         if(!messages.containsKey(o))
-            throw new ObjectNotRegisteredForMapping();
+            throw new ObjectNotMappableToString();
     }
 
     public boolean isMappable(Object o) {
