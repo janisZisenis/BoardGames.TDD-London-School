@@ -15,10 +15,20 @@ public class FXInputAlerter implements InputAlerter {
     }
 
     public void alert(Input input) {
+        sleep(50);
+
         Platform.runLater(() -> {
             Alert a = new Alert(Alert.AlertType.ERROR, message, ButtonType.CLOSE);
             a.showAndWait();
         });
+    }
+
+    private void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }
