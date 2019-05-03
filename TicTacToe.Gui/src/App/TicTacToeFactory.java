@@ -1,6 +1,5 @@
 package App;
 
-
 import Lib.Board.Board;
 import Lib.Board.HashingBoard.HashingBoard;
 import Lib.BoardRenderer.BoardRenderer;
@@ -11,13 +10,14 @@ import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
 import Lib.GameLoopImp.Turn;
+import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.GameOverRules.WinnerRule.HasWinnerProvider;
@@ -37,23 +37,24 @@ import Lib.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
+import Lib.ObjectToStringMapper.ObjectToMessageMapper;
 import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
-import View.*;
+import View.FXBoardView;
+import View.FXMessengerView;
 
 public class TicTacToeFactory {
 
     private FXMessengerView messenger;
     private FXBoardView boardView;
     private FXInputView inputView;
+    private ObjectToMessageMapper objectMapper;
     public FXShell shell;
 
     public Game makeGame() {
@@ -65,9 +66,10 @@ public class TicTacToeFactory {
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
         GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
 
+        objectMapper = new ObjectToMessageMapper();
         boardView = new FXBoardView(200, board, mapper);
         inputView = new FXInputView(200);
-        messenger = new FXMessengerView(450, goMessageProvider);
+        messenger = new FXMessengerView(450, goMessageProvider, objectMapper);
         shell = new FXShell(boardView, inputView, messenger);
 
         Renderer renderer = makeRenderer(board);
@@ -143,8 +145,8 @@ public class TicTacToeFactory {
         Player john = makeHumanPlayer(board, Mark.John);
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
-        messenger.register(john, FieldSymbols.john);
-        messenger.register(haley, FieldSymbols.haley);
+        objectMapper.register(john, "It's your turn!");
+        objectMapper.register(haley, "It's computer's turn!");
         return new MessagingTwoPlayerTurn(john, haley, messenger);
     }
 
