@@ -14,6 +14,7 @@ import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
 import Lib.GameLoopImp.Turn;
+import Lib.GameMessengerImp.GameMessengerImp;
 import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
 import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
@@ -25,6 +26,7 @@ import Lib.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Games.GameImp.GameImp;
 import Lib.Games.GameImp.GameLoop;
 import Lib.Games.MessagingGame.Game;
+import Lib.Games.MessagingGame.GameMessenger;
 import Lib.Games.MessagingGame.MessagingGame;
 import Lib.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidator;
@@ -41,19 +43,29 @@ import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.ObjectToStringMapper.ObjectToMessageMapper;
+import Lib.PlayerMessengerImp.MarkedFieldMessageProviderImp;
+import Lib.PlayerMessengerImp.PlayerMessengerImp;
 import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
+import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.Players.PlayerContext;
+import Lib.TurnMessengerImp.TurnMessengerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
+import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import Lib.TwoPlayerTurn.Player;
 import View.FXBoardView;
-import View.FXMessengerView;
+import View.FXMessenger;
 
 public class TicTacToeFactory {
 
-    private FXMessengerView messenger;
+    private FXMessenger messenger;
     private FXBoardView boardView;
     private FXInputView inputView;
+    private GameMessenger gameMessenger;
+    private TurnMessenger turnMessenger;
+    private PlayerMessenger playerMessenger;
+
+
     private ObjectToMessageMapper objectMapper;
     public FXShell shell;
 
@@ -62,21 +74,27 @@ public class TicTacToeFactory {
         WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
 
+        boardView = new FXBoardView(200, board, mapper);
+        inputView = new FXInputView(200);
+
         MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
         GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
+        messenger = new FXMessenger(450);
+        gameMessenger = new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
 
         objectMapper = new ObjectToMessageMapper();
-        boardView = new FXBoardView(200, board, mapper);
-        inputView = new FXInputView(200);
-        messenger = new FXMessengerView(450, goMessageProvider, objectMapper);
+        turnMessenger = new TurnMessengerImp(messenger, objectMapper);
+        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
+        playerMessenger = new PlayerMessengerImp(messenger, fieldProvider);
+
         shell = new FXShell(boardView, inputView, messenger);
 
         Renderer renderer = makeRenderer(board);
         GameLoop loop = makeGameLoop(board);
         Game game = new GameImp(renderer, loop);
 
-        return new MessagingGame(game, messenger);
+        return new MessagingGame(game, gameMessenger);
     }
 
     private HashingBoard makeBoard() {
@@ -146,8 +164,8 @@ public class TicTacToeFactory {
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
         objectMapper.register(john, "It's your turn!");
-        objectMapper.register(haley, "It's computer's turn!");
-        return new MessagingTwoPlayerTurn(john, haley, messenger);
+        objectMapper.register(haley, "It's computer's turn");
+        return new MessagingTwoPlayerTurn(john, haley, turnMessenger);
     }
 
     private Player makeHumanPlayer(Board board, Mark m) {
@@ -162,7 +180,7 @@ public class TicTacToeFactory {
 
     private Player makePlayer(Board board, InputGenerator generator, Mark m) {
         PlayerContext context = new PlayerContext(generator, board, m);
-        return new MessagingPlayer(context, messenger);
+        return new MessagingPlayer(context, playerMessenger);
     }
 
     private InputGenerator makeComputerInputGenerator(Board board) {

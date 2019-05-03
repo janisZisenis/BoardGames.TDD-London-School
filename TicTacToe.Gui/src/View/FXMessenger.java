@@ -20,8 +20,8 @@ public class FXMessenger extends Pane implements Messenger {
     }
 
     public void publish(String message) {
-        Platform.runLater(() ->{
-            text.appendText(message);
+        Platform.runLater(() -> {
+            text.appendText(message + "\n");
         });
     }
 }
