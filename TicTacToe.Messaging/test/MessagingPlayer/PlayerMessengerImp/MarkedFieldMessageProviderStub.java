@@ -1,6 +1,7 @@
-package Lib.PlayerMessengerImp;
+package MessagingPlayer.PlayerMessengerImp;
 
 import Lib.Data.Field.Field;
+import Player.PlayerMessengerImp.MarkedFieldMessageProvider;
 
 import java.util.HashMap;
 

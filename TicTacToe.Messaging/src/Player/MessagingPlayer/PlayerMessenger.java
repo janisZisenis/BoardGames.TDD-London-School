@@ -1,4 +1,4 @@
-package Lib.Players.MessagingPlayer;
+package Player.MessagingPlayer;
 
 import Lib.Data.Field.Field;
 
