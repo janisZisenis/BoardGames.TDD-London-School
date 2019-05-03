@@ -7,7 +7,7 @@ import Lib.Data.Mark;
 import Lib.Board.ReadOnlyBoard;
 import Lib.BoardRenderer.BoardView;
 import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 

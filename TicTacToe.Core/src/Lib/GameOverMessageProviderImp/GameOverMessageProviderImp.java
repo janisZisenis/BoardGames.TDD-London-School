@@ -1,11 +1,11 @@
-package Lib.GameOverMessageProvider;
+package Lib.GameOverMessageProviderImp;
 
-public class GameOverMessageProvider {
+public class GameOverMessageProviderImp implements GameOverMessageProvider {
 
     private final String drawMessage;
     private final WinnerMessageProvider provider;
 
-    public GameOverMessageProvider(WinnerMessageProvider provider, String drawMessage) {
+    public GameOverMessageProviderImp(WinnerMessageProvider provider, String drawMessage) {
         this.provider = provider;
         this.drawMessage = drawMessage;
     }

@@ -1,7 +1,7 @@
-package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
+package Lib.GameOverMessageProviderImp.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
-import Lib.GameOverMessageProvider.WinnerMessageProvider;
+import Lib.GameOverMessageProviderImp.WinnerMessageProvider;
 
 public class WinnerMessageProviderImp implements WinnerMessageProvider {
 
@@ -18,7 +18,14 @@ public class WinnerMessageProviderImp implements WinnerMessageProvider {
     }
 
     public String getWinningMessage() {
+        throwIfHasNoWinner();
+
         Mark winner = provider.getWinner();
         return mapper.map(winner);
+    }
+
+    private void throwIfHasNoWinner() {
+        if(!hasWinner())
+            throw new NoWinnerAvailable();
     }
 }

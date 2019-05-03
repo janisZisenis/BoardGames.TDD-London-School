@@ -1,22 +1,15 @@
 package View;
 
-import Lib.Data.Mark;
+import Lib.GameOverMessageProviderImp.GameOverMessageProvider;
 import Lib.Games.MessagingGame.GameMessenger;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
 
 public class ConsoleGameMessenger implements GameMessenger {
 
     private final String beginningMessage = "Welcome To TicTacToe!";
-    private final String winnerMessage = " wins!";
-    private final String drawMessage = "Draw!";
+    private final GameOverMessageProvider provider;
 
-    private final WinnerProvider provider;
-    private final MarkToStringMapper mapper;
-
-    public ConsoleGameMessenger(WinnerProvider provider, MarkToStringMapper mapper) {
+    public ConsoleGameMessenger(GameOverMessageProvider provider) {
         this.provider = provider;
-        this.mapper = mapper;
     }
 
     public void publishBeginningMessage() {
@@ -24,23 +17,8 @@ public class ConsoleGameMessenger implements GameMessenger {
     }
 
     public void publishGameOverMessage() {
-        if(hasWinner()) {
-            publishWinner();
-        } else {
-            publishDraw();
-        }
+        String message = provider.getGameOverMessage();
+        System.out.println(message);
     }
 
-    private boolean hasWinner() {
-        return provider.hasWinner();
-    }
-
-    private void publishWinner() {
-        Mark winner = provider.getWinner();
-        System.out.println(mapper.map(winner) + winnerMessage);
-    }
-
-    private void publishDraw() {
-        System.out.println(drawMessage);
-    }
 }

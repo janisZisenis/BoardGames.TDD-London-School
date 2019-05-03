@@ -1,16 +1,16 @@
-package Lib.GameOverMessageProvider;
+package Lib.GameOverMessageProviderImp;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GameOverMessageProviderTest {
+public class ProvidingTheGameOverMessageTest {
 
     private WinnerMessageProviderStub provider = new WinnerMessageProviderStub();
 
     @Test
     void IfNoWinnerIsProvided_ShouldProvideTheDrawMessage() {
-        GameOverMessageProvider sut = new GameOverMessageProvider(provider, "DrawMessage");
+        GameOverMessageProviderImp sut = new GameOverMessageProviderImp(provider, "DrawMessage");
         provider.setHasWinner(false);
 
         String actual = sut.getGameOverMessage();
@@ -20,7 +20,7 @@ public class GameOverMessageProviderTest {
 
     @Test
     void IfWinnerIsProvided_ShouldProvideTheWinningMessage() {
-        GameOverMessageProvider sut = new GameOverMessageProvider(provider, "");
+        GameOverMessageProviderImp sut = new GameOverMessageProviderImp(provider, "");
         provider.setHasWinner(true);
         provider.setWinningMessage("WinningMessage");
 

@@ -1,8 +1,9 @@
 package Lib.MarkToStringMappers;
 
 import Lib.Data.Mark;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 
-public class MarkToMessageMapper {
+public class MarkToMessageMapper implements MarkToStringMapper {
     private String johnMessage;
     private String haleyMessage;
 

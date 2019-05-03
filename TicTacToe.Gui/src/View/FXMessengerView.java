@@ -1,10 +1,8 @@
 package View;
 
 import Lib.Data.Field.Field;
-import Lib.Data.Mark;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
+import Lib.GameOverMessageProviderImp.GameOverMessageProvider;
 import Lib.Games.MessagingGame.GameMessenger;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import javafx.application.Platform;
@@ -18,18 +16,13 @@ public class FXMessengerView extends Pane implements GameMessenger, TurnMessenge
     private final HashMap<Object, String> names = new HashMap<Object, String>();
 
     private final String beginningMessage = "Welcome to TicTacToe!";
-    private final String winnerMessage = " wins!";
-    private final String drawMessage = "Draw!";
     private final String turnMessageEnding = ", it's your turn!";
 
-    private final WinnerProvider provider;
-    private final MarkToStringMapper mapper;
-
     private final TextArea text = new TextArea();
+    private final GameOverMessageProvider provider;
 
-    public FXMessengerView(int width, WinnerProvider provider, MarkToStringMapper mapper) {
+    public FXMessengerView(int width, GameOverMessageProvider provider) {
         this.provider = provider;
-        this.mapper = mapper;
 
         setPrefWidth(width);
         text.setDisable(true);
@@ -44,14 +37,7 @@ public class FXMessengerView extends Pane implements GameMessenger, TurnMessenge
     }
 
     public void publishGameOverMessage() {
-        String message;
-        if(provider.hasWinner()) {
-            Mark winner = provider.getWinner();
-            String s = mapper.map(winner);
-            message = s + winnerMessage + "\n";
-        } else {
-            message = drawMessage + "\n";
-        }
+        String message = provider.getGameOverMessage();
         append(message);
     }
 

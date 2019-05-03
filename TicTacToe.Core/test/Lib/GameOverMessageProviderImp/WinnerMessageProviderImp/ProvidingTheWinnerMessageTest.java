@@ -1,15 +1,26 @@
-package Lib.GameOverMessageProvider.WinnerMessageProviderImp;
+package Lib.GameOverMessageProviderImp.WinnerMessageProviderImp;
 
 import Lib.Data.Mark;
+import Lib.GameOverMessageProviderImp.WinnerMessageProvider;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class WinnerMessageProviderImpTest {
+public class ProvidingTheWinnerMessageTest {
 
     private WinnerProviderStub provider = new WinnerProviderStub();
     private MarkToStringMapperStub mapper = new MarkToStringMapperStub();
     private WinnerMessageProviderImp sut = new WinnerMessageProviderImp(provider, mapper);
+
+    @Test
+    void IfNoWinnerIsProvided_GettingTheMessageShouldThrowException() {
+        provider.setHasWinner(false);
+
+        Executable act = () -> { sut.getWinningMessage(); };
+
+        assertThrows(WinnerMessageProvider.NoWinnerAvailable.class, act);
+    }
 
     @Test
     void IfNoWinnerIsProvided_ShouldNotProvideAWinnerEither() {

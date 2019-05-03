@@ -11,11 +11,14 @@ import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
 import Lib.GameLoopImp.Turn;
+import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Lib.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Lib.GameOverRules.WinnerRule.HasWinnerProvider;
@@ -36,7 +39,7 @@ import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
@@ -44,7 +47,9 @@ import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.PlayerContext;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
-import View.*;
+import View.ConsoleBoardView;
+import View.ConsoleGameMessenger;
+import View.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
@@ -61,7 +66,11 @@ public class TicTacToeFactory {
 
         boardView = new ConsoleBoardView(board, mapper);
         inputView = new ConsoleInputGenerator();
-        gameMessenger = new ConsoleGameMessenger(provider, mapper);
+
+        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
+        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
+        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
+        gameMessenger = new ConsoleGameMessenger(goMessageProvider);
         turnMessenger = new ConsoleTurnMessenger();
         playerMessenger = new ConsolePlayerMessenger();
 

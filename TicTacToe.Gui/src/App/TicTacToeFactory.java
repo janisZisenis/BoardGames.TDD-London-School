@@ -11,7 +11,9 @@ import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineProvider;
 import Lib.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.WinnerProvider;
+import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerProvider;
 import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
@@ -36,7 +38,8 @@ import Lib.InputRules.CompositeInputRule.CompositeInputRule;
 import Lib.InputRules.FieldExistsRule.FieldExistsRule;
 import Lib.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
 import Lib.MarkToStringMappers.FieldSymbols;
-import Lib.GameOverMessageProvider.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
+import Lib.MarkToStringMappers.MarkToMessageMapper;
 import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.Players.InputGenerator;
@@ -58,9 +61,13 @@ public class TicTacToeFactory {
         WinnerProvider provider = makeGameEvaluator(board);
         MarkToStringMapper mapper = makeMarkToStringMapper();
 
+        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
+        WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
+        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
+
         boardView = new FXBoardView(200, board, mapper);
         inputView = new FXInputView(200);
-        messenger = new FXMessengerView(450, provider, mapper);
+        messenger = new FXMessengerView(450, goMessageProvider);
         shell = new FXShell(boardView, inputView, messenger);
 
         Renderer renderer = makeRenderer(board);
