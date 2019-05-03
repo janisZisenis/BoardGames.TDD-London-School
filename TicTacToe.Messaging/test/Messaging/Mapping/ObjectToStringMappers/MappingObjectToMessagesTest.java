@@ -1,4 +1,4 @@
-package Messaging.Mapping.ObjectToStringMapper;
+package Messaging.Mapping.ObjectToStringMappers;
 
 import Messaging.Mapping.ObjectToStringMapper;
 import org.junit.jupiter.api.Test;

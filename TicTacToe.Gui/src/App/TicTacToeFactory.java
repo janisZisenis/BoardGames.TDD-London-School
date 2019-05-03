@@ -1,5 +1,6 @@
 package App;
 
+import Messages.OnePlayerModeMessages;
 import Messaging.Game.GameMessengerImp.GameMessengerImp;
 import Messaging.Game.GameOverMessageProviderImp.GameOverMessageProviderImp;
 import Messaging.Game.MessagingGame.GameMessenger;
@@ -45,7 +46,7 @@ import Lib.Players.PlayerContext;
 import Lib.TwoPlayerTurn.Player;
 import Messaging.Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Messaging.Mapping.MarkToStringMappers.MarkToXOMapper;
-import Messaging.Mapping.ObjectToStringMapper.ObjectToMessageMapper;
+import Messaging.Mapping.ObjectToStringMappers.ObjectToMessageMapper;
 import Messaging.Mapping.ObjectToStringMapper;
 import Messaging.Player.MessagingPlayer.MessagingPlayer;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
@@ -58,6 +59,13 @@ import View.FXBoardView;
 import View.FXMessenger;
 
 public class TicTacToeFactory {
+
+    private final String humanWinMessage = OnePlayerModeMessages.humanWinMessage;
+    private final String computerWinMessage = OnePlayerModeMessages.computerWinMessage;
+    private final String drawMessage = OnePlayerModeMessages.drawMessage;
+    private final String salutation = OnePlayerModeMessages.salutation;
+    private final String humanTurnMessage = OnePlayerModeMessages.humanTurnMessage;
+    private final String computerTurnMessage = OnePlayerModeMessages.computerTurnMessage;
 
     private FXMessenger messenger;
     private FXBoardView boardView;
@@ -93,10 +101,10 @@ public class TicTacToeFactory {
 
     private GameMessenger makeGameMessenger(Board board) {
         WinnerProvider provider = makeGameEvaluator(board);
-        MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
+        MarkToStringMapper messageMapper = new MarkToMessageMapper(humanWinMessage, computerWinMessage);
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
-        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
-        return new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
+        GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, drawMessage);
+        return new GameMessengerImp(messenger, goMessageProvider, salutation);
     }
 
 
@@ -167,8 +175,8 @@ public class TicTacToeFactory {
         Player haley = makeComputerPlayer(board, Mark.Haley);
 
         ObjectToMessageMapper objectMapper = new ObjectToMessageMapper();
-        objectMapper.register(john, "It's your turn!");
-        objectMapper.register(haley, "It's computer's turn");
+        objectMapper.register(john, humanTurnMessage);
+        objectMapper.register(haley, computerTurnMessage);
         TurnMessenger messenger = makeTurnMessenger(objectMapper);
 
         return new MessagingTwoPlayerTurn(john, haley, messenger);

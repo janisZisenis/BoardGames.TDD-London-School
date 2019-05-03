@@ -5,7 +5,7 @@ import Messaging.Mapping.MarkToStringMapper;
 
 public class MarkToXOMapper implements MarkToStringMapper {
     public String map(Mark m) {
-        return m == Mark.John ? FieldSymbols.john : FieldSymbols.haley;
+        return m == Mark.John ? PlayerSymbols.john : PlayerSymbols.haley;
     }
 
 }
