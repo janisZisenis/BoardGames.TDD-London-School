@@ -50,6 +50,7 @@ import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
 import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.Players.PlayerContext;
+import Lib.TurnMessengerImp.TurnMessengerImp;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import Lib.TwoPlayerTurn.Player;
@@ -58,7 +59,6 @@ import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;
 import View.ConsoleMessenger;
 import View.Messaging.ConsolePlayerMessenger;
-import View.Messaging.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
@@ -85,7 +85,7 @@ public class TicTacToeFactory {
         gameMessenger = new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
 
         objectMapper = new ObjectToMessageMapper();
-        turnMessenger = new ConsoleTurnMessenger(objectMapper);
+        turnMessenger = new TurnMessengerImp(messenger, objectMapper);
         playerMessenger = new ConsolePlayerMessenger();
 
         Renderer renderer = makeRenderer(board);
