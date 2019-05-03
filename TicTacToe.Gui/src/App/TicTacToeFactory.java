@@ -55,8 +55,7 @@ import Messaging.Player.PlayerMessengerImp.PlayerMessengerImp;
 import Messaging.Turn.MessagingTurn.MessagingTwoPlayerTurn;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
 import Messaging.Turn.TurnMessengerImp.TurnMessengerImp;
-import View.FXBoardView;
-import View.FXMessenger;
+import View.*;
 
 public class TicTacToeFactory {
 

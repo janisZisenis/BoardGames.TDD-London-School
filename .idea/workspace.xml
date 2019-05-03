@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/FXInputAlerter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputAlerter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/FXInputPopup.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputPopup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/FXInputView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/FXShell.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXShell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Gui/src/App/TicTacToeFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,13 +84,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3290" />
-          <entry key="java" value="127613" />
+          <entry key="java" value="127616" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="127613" />
+          <entry key="JAVA" value="127616" />
           <entry key="PLAIN_TEXT" value="3291" />
         </counts>
       </usages-collector>
@@ -94,7 +99,7 @@
           <entry key="class" value="9" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="2" />
-          <entry key="java" value="2971" />
+          <entry key="java" value="2981" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -102,7 +107,7 @@
         <counts>
           <entry key="CLASS" value="9" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="2971" />
+          <entry key="JAVA" value="2981" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -111,14 +116,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+            <state relative-caret-position="163">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/AlertingInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#803#804#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/InputValidatorImp/InputValidatorImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#595#596#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/InputValidatorImp/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputAlerter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -186,7 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/Player/PlayerMessengerImp/MarkedFieldMessageProvider.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/test/MessagingPlayer/PlayerMessengerImp/PlayerMessengerImpTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/test/MessagingPlayer/PlayerMessengerImp/MarkedFieldMessageProviderStub.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/Turn/MessagingTwoPlayerTurn.java" />
@@ -237,6 +282,7 @@
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/Messages/OnePlayerModeMessages.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/App/TicTacToeFactory.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java" />
       </list>
     </option>
   </component>
@@ -417,6 +463,13 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -427,20 +480,15 @@
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Gui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Messages" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -540,7 +588,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in TicTacToe.Main" type="JUnit" factoryName="JUnit">
+    <configuration name="AllTest" type="JUnit" factoryName="JUnit">
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.OnBoardInputGenerator.OnBoardInputGeneratorTest" />
@@ -584,7 +632,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="Messaging" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -594,7 +642,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in TicTacToe.Main" />
+      <item itemvalue="JUnit.AllTest" />
       <item itemvalue="Application.Main.GUI" />
       <item itemvalue="Application.Main.Console" />
       <item itemvalue="JUnit.CoreTest" />
@@ -603,9 +651,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main.GUI" />
-        <item itemvalue="Application.Main.Console" />
         <item itemvalue="JUnit.MessagingTest" />
         <item itemvalue="JUnit.CoreTest" />
+        <item itemvalue="Application.Main.Console" />
       </list>
     </recent_temporary>
   </component>
@@ -674,39 +722,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 23m 07s.xml">
+    <history-entry file="CoreTest - 2019.05.03 at 15h 04m 39s.xml">
+      <configuration name="CoreTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.05.03 at 15h 04m 51s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.05.03 at 15h 05m 41s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.05.03 at 15h 05m 50s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.05.03 at 15h 06m 10s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_TicTacToe_Main - 2019.05.03 at 15h 06m 31s.xml">
+      <configuration name="All in TicTacToe.Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoreTest - 2019.05.03 at 15h 06m 51s.xml">
+      <configuration name="CoreTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessagingTest - 2019.05.03 at 15h 06m 57s.xml">
       <configuration name="MessagingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 23m 21s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
+    <history-entry file="AllTest - 2019.05.03 at 15h 07m 35s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 23m 32s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 25m 45s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 26m 00s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 27m 39s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 28m 05s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 28m 14s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 28m 19s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessagingTest - 2019.05.03 at 14h 30m 23s.xml">
-      <configuration name="MessagingTest" configurationId="JUnit" />
+    <history-entry file="AllTest - 2019.05.03 at 15h 08m 30s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324733000" />
+    <option name="totallyTimeSpent" value="325543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
@@ -722,7 +770,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40207255" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33989638" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44444445" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44352332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -817,31 +865,22 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputAlerter.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/GameImp/Game.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/Messaging/Messenger.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/GameEvaluation/GameEvaluator/WinnerProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/test/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProviderStub.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/test/Messaging/Mapping/MarkToStringMapperStub.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/test/Messaging/Game/WinnerMessageProviderImp/WinnerProviderStub.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/Messaging/Game/GameMessengerImp/GameOverMessageProviderStub.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -921,8 +960,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXBoardView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1960">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+        <state relative-caret-position="276">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -965,10 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,6 +1177,70 @@
             <element signature="method#makeComputerPlayer#0;class#TicTacToeFactory#0" />
             <element signature="method#makeConsoleInputAlerter#0;class#TicTacToeFactory#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/test/Lib/InputGenerators/AlertingInputGenerator/AlertingOnInvalidInputTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputPopup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXShell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/AlertingInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/InputValidatorImp/InputValidatorImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#595#596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Core/src/Lib/InputGenerators/AlertingInputGenerator/InputValidatorImp/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Gui/src/View/FXInputAlerter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
         </state>
       </provider>
     </entry>
