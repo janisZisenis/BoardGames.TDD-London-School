@@ -26,8 +26,8 @@ public class ConsoleBoardView implements BoardView {
 
     public void showBoard() {
         StringBuilder board = new StringBuilder();
-        board.append("  R 012  \n");
-        board.append("C +-----+\n");
+        board.append("  C 012  \n");
+        board.append("R +-----+\n");
 
         for(int i = 0; i < rowColumn; i++)
             board.append(i + " | ").append(getRow(i)).append(" |\n");
@@ -41,7 +41,7 @@ public class ConsoleBoardView implements BoardView {
         StringBuilder s = new StringBuilder();
 
         for(int i = 0; i < rowColumn; i++) {
-            Field f = new Field(i, row);
+            Field f = new Field(row, i);
             s.append(getField(f));
         }
 
@@ -79,7 +79,7 @@ public class ConsoleBoardView implements BoardView {
         StringBuilder s = new StringBuilder();
 
         for(int i = 0; i < rowColumn; i++) {
-            Field f = new Field(i, row);
+            Field f = new Field(row, i);
             String field = lineContains(f, line) ? getWinningField(f) : getField(f);
             s.append(field);
         }
