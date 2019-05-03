@@ -24,7 +24,7 @@ public class GameMessengerImpTest {
         GameMessengerImp sut = makeGameMessengerImp();
         provider.setGameOverMessage("GameOver");
 
-        sut.publishGameOverMessage();
+        sut.publishEndingMessage();
 
         assertPublishedMessageEquals("GameOver");
     }

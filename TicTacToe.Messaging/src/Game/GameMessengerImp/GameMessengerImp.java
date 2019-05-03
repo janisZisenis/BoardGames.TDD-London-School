@@ -19,7 +19,7 @@ public class GameMessengerImp implements GameMessenger {
         messenger.publish(salutation);
     }
 
-    public void publishGameOverMessage() {
+    public void publishEndingMessage() {
         String message = provider.getGameOverMessage();
         messenger.publish(message);
     }

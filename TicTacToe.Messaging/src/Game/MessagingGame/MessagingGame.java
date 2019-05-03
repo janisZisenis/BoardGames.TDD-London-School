@@ -15,6 +15,6 @@ public class MessagingGame implements Game {
     public void play() {
         messenger.publishBeginningMessage();
         game.play();
-        messenger.publishGameOverMessage();
+        messenger.publishEndingMessage();
     }
 }

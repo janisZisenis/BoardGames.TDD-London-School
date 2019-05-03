@@ -15,7 +15,7 @@ public class MessagingGameTest implements Game, GameMessenger {
 
         sut.play();
 
-        assertLogStringIs("publishBeginningMessage play publishGameOverMessage ");
+        assertLogStringIs("publishBeginningMessage play publishEndingMessage ");
     }
 
     private void assertLogStringIs(String expected) {
@@ -31,7 +31,7 @@ public class MessagingGameTest implements Game, GameMessenger {
         logString += "publishBeginningMessage ";
     }
 
-    public void publishGameOverMessage() {
-        logString += "publishGameOverMessage ";
+    public void publishEndingMessage() {
+        logString += "publishEndingMessage ";
     }
 }
