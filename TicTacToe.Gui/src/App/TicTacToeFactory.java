@@ -46,16 +46,16 @@ import Lib.ObjectToStringMapper.ObjectToMessageMapper;
 import Lib.ObjectToStringMapper.ObjectToStringMapper;
 import Lib.Players.InputGenerator;
 import Lib.Players.PlayerContext;
-import Lib.TurnMessengerImp.TurnMessengerImp;
-import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
-import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import Lib.TwoPlayerTurn.Player;
+import Player.MessagingPlayer.MessagingPlayer;
 import Player.MessagingPlayer.PlayerMessenger;
 import Player.PlayerMessengerImp.MarkedFieldMessageProviderImp;
 import Player.PlayerMessengerImp.PlayerMessengerImp;
+import Turn.MessagingTurn.TurnMessenger;
+import Turn.TurnMessengerImp.TurnMessengerImp;
 import View.FXBoardView;
 import View.FXMessenger;
-import Player.MessagingPlayer.MessagingPlayer;
+import Turn.MessagingTurn.MessagingTwoPlayerTurn;
 
 public class TicTacToeFactory {
 

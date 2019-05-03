@@ -47,20 +47,20 @@ import Lib.MarkToStringMappers.MarkToXOMapper;
 import Lib.Messages.AlertingMessages;
 import Lib.ObjectToStringMapper.ObjectToMessageMapper;
 import Lib.ObjectToStringMapper.ObjectToStringMapper;
-import Lib.PlayerMessengerImp.MarkedFieldMessageProviderImp;
-import Lib.PlayerMessengerImp.PlayerMessengerImp;
 import Lib.Players.InputGenerator;
-import Lib.Players.MessagingPlayer.MessagingPlayer;
-import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.Players.PlayerContext;
-import Lib.TurnMessengerImp.TurnMessengerImp;
-import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
-import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
+import Turn.TurnMessengerImp.TurnMessengerImp;
+import Turn.MessagingTurn.MessagingTwoPlayerTurn;
+import Turn.MessagingTurn.TurnMessenger;
 import Lib.TwoPlayerTurn.Player;
+import Player.MessagingPlayer.PlayerMessenger;
+import Player.PlayerMessengerImp.MarkedFieldMessageProviderImp;
+import Player.PlayerMessengerImp.PlayerMessengerImp;
 import View.ConsoleBoardView;
 import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;
 import View.ConsoleMessenger;
+import Player.MessagingPlayer.MessagingPlayer;
 
 public class TicTacToeFactory {
 

@@ -1,4 +1,4 @@
-package Lib.TwoPlayerTurn.MessagingTwoPlayerTurn;
+package Turn.MessagingTurn;
 
 public interface TurnMessenger {
     void publishTurnMessageFor(Object player);

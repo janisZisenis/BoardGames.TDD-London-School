@@ -1,4 +1,4 @@
-package Lib.TurnMessengerImp;
+package Turn.TurnMessengerImp;
 
 import Lib.ObjectToStringMapper.ObjectToStringMapper;
 

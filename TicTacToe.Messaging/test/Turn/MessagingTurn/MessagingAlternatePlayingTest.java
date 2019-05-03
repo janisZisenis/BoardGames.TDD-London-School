@@ -1,4 +1,4 @@
-package Lib.TwoPlayerTurn.MessagingTwoPlayerTurn;
+package Turn.MessagingTurn;
 
 import Lib.TwoPlayerTurn.PlayerSpy;
 import org.junit.jupiter.api.Test;

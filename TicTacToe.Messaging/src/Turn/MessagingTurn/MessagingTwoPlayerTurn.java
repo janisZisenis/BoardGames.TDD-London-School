@@ -1,4 +1,4 @@
-package Lib.TwoPlayerTurn.MessagingTwoPlayerTurn;
+package Turn.MessagingTurn;
 
 import Lib.TwoPlayerTurn.Player;
 import Lib.TwoPlayerTurn.TwoPlayerTurn;

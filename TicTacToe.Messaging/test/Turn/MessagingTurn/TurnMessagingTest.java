@@ -1,9 +1,9 @@
-package Lib.TwoPlayerTurn.MessagingTwoPlayerTurn;
+package Turn.MessagingTurn;
 
 import Lib.TwoPlayerTurn.PlayerDummy;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class TurnMessagingTest {

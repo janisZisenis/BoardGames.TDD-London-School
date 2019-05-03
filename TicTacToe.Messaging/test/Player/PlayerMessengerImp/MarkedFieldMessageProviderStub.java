@@ -1,4 +1,4 @@
-package MessagingPlayer.PlayerMessengerImp;
+package Player.PlayerMessengerImp;
 
 import Lib.Data.Field.Field;
 import Player.PlayerMessengerImp.MarkedFieldMessageProvider;
