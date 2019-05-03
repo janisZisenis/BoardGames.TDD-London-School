@@ -13,7 +13,7 @@ public class MappingObjectToMessagesTest {
         ObjectToMessageMapper sut = new ObjectToMessageMapper();
         Object o = new Object();
 
-        boolean actual = sut.isRegistered(o);
+        boolean actual = sut.isMappable(o);
         assertFalse(actual);
     }
 
@@ -34,7 +34,7 @@ public class MappingObjectToMessagesTest {
         Object o = new Object();
         sut.register(o, "");
 
-        boolean actual = sut.isRegistered(o);
+        boolean actual = sut.isMappable(o);
         assertTrue(actual);
     }
 
@@ -58,7 +58,7 @@ public class MappingObjectToMessagesTest {
         Object second = new Object();
         sut.register(first, "");
 
-        boolean actual = sut.isRegistered(second);
+        boolean actual = sut.isMappable(second);
         assertFalse(actual);
     }
 
@@ -99,7 +99,7 @@ public class MappingObjectToMessagesTest {
         sut.register(first, "");
         sut.register(second, "");
 
-        boolean actual = sut.isRegistered(third);
+        boolean actual = sut.isMappable(third);
         assertFalse(actual);
     }
 
