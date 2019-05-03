@@ -1,7 +1,7 @@
 package Messaging.Turn.TurnMessengerImp;
 
+import Mappers.ObjectToStringMapper;
 import Messaging.Messenger;
-import Messaging.Mapping.ObjectToStringMapper;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
 
 public class TurnMessengerImp implements TurnMessenger {

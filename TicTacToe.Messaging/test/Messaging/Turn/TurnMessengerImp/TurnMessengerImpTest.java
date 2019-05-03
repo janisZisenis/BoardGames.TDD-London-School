@@ -1,6 +1,6 @@
 package Messaging.Turn.TurnMessengerImp;
 
-import Messaging.Mapping.ObjectToStringMapperFake;
+import Mappers.ObjectToStringMapperFake;
 import Messaging.MessengerMock;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
 import org.junit.jupiter.api.Test;
