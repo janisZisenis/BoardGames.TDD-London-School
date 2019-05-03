@@ -1,4 +1,4 @@
-package View;
+package View.Messaging;
 
 import Lib.ObjectToStringMapper.ObjectToStringMapper;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;

@@ -1,4 +1,4 @@
-package View;
+package View.Messaging;
 
 import Lib.GameOverMessageProviderImp.GameOverMessageProvider;
 import Lib.Games.MessagingGame.GameMessenger;

@@ -48,8 +48,11 @@ import Lib.Players.PlayerContext;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
 import Lib.TwoPlayerTurn.Player;
 import View.ConsoleBoardView;
-import View.ConsoleGameMessenger;
-import View.ConsoleTurnMessenger;
+import View.ConsoleInputAlerter;
+import View.ConsoleInputGenerator;
+import View.Messaging.ConsoleGameMessenger;
+import View.Messaging.ConsolePlayerMessenger;
+import View.Messaging.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
