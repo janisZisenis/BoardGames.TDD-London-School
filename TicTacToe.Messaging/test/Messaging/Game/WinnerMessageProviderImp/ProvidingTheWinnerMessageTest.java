@@ -1,8 +1,8 @@
 package Messaging.Game.WinnerMessageProviderImp;
 
-import Messaging.Game.GameOverMessageProviderImp.WinnerMessageProvider;
 import Lib.Data.Mark;
-import Messaging.Mapping.MarkToStringMapperStub;
+import Mappers.MarkToStringMapperStub;
+import Messaging.Game.GameOverMessageProviderImp.WinnerMessageProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

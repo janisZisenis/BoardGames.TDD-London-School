@@ -6,7 +6,7 @@ import Lib.Data.BoardBoundaries;
 import Lib.Data.Field.Field;
 import Lib.Data.Line;
 import Lib.Data.Mark;
-import Messaging.Mapping.MarkToStringMapper;
+import Mappers.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 
