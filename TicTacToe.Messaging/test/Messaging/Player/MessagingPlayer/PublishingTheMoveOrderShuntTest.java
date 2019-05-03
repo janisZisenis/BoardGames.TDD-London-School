@@ -21,7 +21,7 @@ public class PublishingTheMoveOrderShuntTest implements MarkFieldService, Player
         sut.playMove();
 
         String actual = logString;
-        String expected = "mark publishPlayedMove ";
+        String expected = "mark publishMarkedField ";
         assertEquals(expected, actual);
     }
 
@@ -29,8 +29,8 @@ public class PublishingTheMoveOrderShuntTest implements MarkFieldService, Player
         logString += "mark ";
     }
 
-    public void publishPlayedMove(Field f) {
-        logString += "publishPlayedMove ";
+    public void publishMarkedField(Field f) {
+        logString += "publishMarkedField ";
     }
 
     public Input generate() {

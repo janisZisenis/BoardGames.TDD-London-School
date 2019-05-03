@@ -14,8 +14,8 @@ public class PlayerMessengerImp implements PlayerMessenger {
         this.provider = provider;
     }
 
-    public void publishPlayedMove(Field field) {
-        String message = provider.getMarkedFieldMessage(field);
+    public void publishMarkedField(Field f) {
+        String message = provider.getMarkedFieldMessage(f);
         messenger.publish(message);
     }
 

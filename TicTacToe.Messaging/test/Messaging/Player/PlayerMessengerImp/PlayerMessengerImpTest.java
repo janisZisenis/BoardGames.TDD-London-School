@@ -17,7 +17,7 @@ public class PlayerMessengerImpTest {
         provider.setMessageForField("Message", field);
         messenger.expectPublishMessage("Message");
 
-        sut.publishPlayedMove(field);
+        sut.publishMarkedField(field);
 
         messenger.verifyAll();
     }

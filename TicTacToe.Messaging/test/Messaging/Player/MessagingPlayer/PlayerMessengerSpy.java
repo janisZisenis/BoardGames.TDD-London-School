@@ -10,7 +10,7 @@ public class PlayerMessengerSpy extends PlayerMessengerDummy {
         return publishedField;
     }
 
-    public void publishPlayedMove(Field f) {
+    public void publishMarkedField(Field f) {
         publishedField = f;
     }
 }

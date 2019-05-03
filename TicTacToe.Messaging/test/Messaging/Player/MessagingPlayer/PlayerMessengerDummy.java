@@ -3,5 +3,5 @@ package Messaging.Player.MessagingPlayer;
 import Lib.Data.Field.Field;
 
 public class PlayerMessengerDummy implements PlayerMessenger {
-    public void publishPlayedMove(Field field) {}
+    public void publishMarkedField(Field f) {}
 }
