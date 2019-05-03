@@ -100,20 +100,41 @@ public class FXBoardView extends Pane implements BoardView {
     private void showWinningLineHelper(Line line) {
         showBoard();
         highlight(line);
+        lowlightOther(line);
     }
 
     private void highlight(Line line) {
-        tiles.get(line.getFirst()).animate();
-        tiles.get(line.getSecond()).animate();
-        tiles.get(line.getThird()).animate();
+        tiles.get(line.getFirst()).highlight();
+        tiles.get(line.getSecond()).highlight();
+        tiles.get(line.getThird()).highlight();
     }
 
-    
+    private void lowlightOther(Line line) {
+        for(int i = 0; i < rowColumnCount; i++) {
+            for(int j = 0; j < rowColumnCount; j++) {
+                Field f = new Field(i, j);
+                if(!lineContainsField(line, f))
+                    tiles.get(f).lowlight();
+            }
+        }
+    }
+
+    private boolean lineContainsField(Line line, Field f) {
+        Field first = line.getFirst();
+        Field second = line.getSecond();
+        Field third = line.getThird();
+
+        return first.equals(f) || second.equals(f) || third.equals(f);
+    }
+
+
+
 
     private class FXTile extends StackPane {
 
         private final double fontRatio = 0.33;
-        private final double fontEndRatio = 0.9;
+        private final double fontHighlightRatio = 0.9;
+        private final double fontLowlightRatio = 0.1;
         private final String fontFamily = "Arial";
         private final int duration = 500;
 
@@ -121,6 +142,7 @@ public class FXBoardView extends Pane implements BoardView {
         private Label label;
         private Rectangle border;
         private FXTextSizeTransition growing;
+        private FXTextSizeTransition shrinking;
 
 
         public FXTile(int sideLength) {
@@ -131,7 +153,7 @@ public class FXBoardView extends Pane implements BoardView {
             this.sideLength = sideLength;
 
             initLabel();
-            initTextSizeTransition();
+            initTextSizeTransitions();
             initBorder(sideLength);
             addControls();
 
@@ -143,8 +165,9 @@ public class FXBoardView extends Pane implements BoardView {
             label.setFont(Font.font(fontFamily, getFontSize()));
         }
 
-        private void initTextSizeTransition() {
-            growing = new FXTextSizeTransition(label, getFontSize(), getAnimationEndSize(), duration);
+        private void initTextSizeTransitions() {
+            growing = new FXTextSizeTransition(label, getFontSize(), getHighlightSize(), duration);
+            shrinking = new FXTextSizeTransition(label, getFontSize(), getLowlightSize(), duration);
         }
 
         private void initBorder(int sideLength) {
@@ -162,16 +185,24 @@ public class FXBoardView extends Pane implements BoardView {
             label.setText(s);
         }
 
-        public void animate() {
+        public void highlight() {
             growing.play();
+        }
+
+        public void lowlight() {
+            shrinking.play();
         }
 
         public int getFontSize() {
             return (int)(sideLength * fontRatio);
         }
 
-        public int getAnimationEndSize() {
-            return (int)(sideLength * fontEndRatio);
+        public int getHighlightSize() {
+            return (int)(sideLength * fontHighlightRatio);
+        }
+
+        private int getLowlightSize() {
+            return (int)(sideLength * fontLowlightRatio);
         }
     }
 }

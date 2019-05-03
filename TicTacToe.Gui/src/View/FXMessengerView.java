@@ -25,7 +25,8 @@ public class FXMessengerView extends Pane implements GameMessenger, TurnMessenge
         this.provider = provider;
 
         setPrefWidth(width);
-        text.setDisable(true);
+        text.setEditable(false);
+        text.setFocusTraversable(false);
 
         text.setPrefWidth(width);
         getChildren().addAll(text);
