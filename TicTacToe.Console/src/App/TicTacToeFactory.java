@@ -4,6 +4,7 @@ package App;
 import Lib.Board.Board;
 import Lib.Board.HashingBoard.HashingBoard;
 import Lib.BoardRenderer.BoardRenderer;
+import Lib.BoardRenderer.BoardView;
 import Lib.BoardRenderer.WinningLineProvider;
 import Lib.Data.Mark;
 import Lib.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
@@ -15,6 +16,8 @@ import Lib.GameLoopImp.GameLoopImp;
 import Lib.GameLoopImp.GameOverRule;
 import Lib.GameLoopImp.Renderer;
 import Lib.GameLoopImp.Turn;
+import Lib.GameMessengerImp.GameMessengerImp;
+import Lib.GameMessengerImp.Messenger;
 import Lib.GameOverMessageProviderImp.GameOverMessageProviderImp;
 import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.MarkToStringMapper;
 import Lib.GameOverMessageProviderImp.WinnerMessageProviderImp.WinnerMessageProviderImp;
@@ -26,6 +29,7 @@ import Lib.GameOverRules.WinnerRule.WinnerRule;
 import Lib.Games.GameImp.GameImp;
 import Lib.Games.GameImp.GameLoop;
 import Lib.Games.MessagingGame.Game;
+import Lib.Games.MessagingGame.GameMessenger;
 import Lib.Games.MessagingGame.MessagingGame;
 import Lib.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidator;
@@ -44,23 +48,26 @@ import Lib.Messages.AlertingMessages;
 import Lib.ObjectToStringMapper.ObjectToMessageMapper;
 import Lib.Players.InputGenerator;
 import Lib.Players.MessagingPlayer.MessagingPlayer;
+import Lib.Players.MessagingPlayer.PlayerMessenger;
 import Lib.Players.PlayerContext;
 import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.MessagingTwoPlayerTurn;
+import Lib.TwoPlayerTurn.MessagingTwoPlayerTurn.TurnMessenger;
 import Lib.TwoPlayerTurn.Player;
 import View.ConsoleBoardView;
 import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;
-import View.Messaging.ConsoleGameMessenger;
+import View.ConsoleMessenger;
 import View.Messaging.ConsolePlayerMessenger;
 import View.Messaging.ConsoleTurnMessenger;
 
 public class TicTacToeFactory {
 
-    private ConsoleBoardView boardView;
-    private ConsoleInputGenerator inputView;
-    private ConsoleGameMessenger gameMessenger;
-    private ConsoleTurnMessenger turnMessenger;
-    private ConsolePlayerMessenger playerMessenger;
+    private Messenger messenger;
+    private BoardView boardView;
+    private InputGenerator inputView;
+    private GameMessenger gameMessenger;
+    private TurnMessenger turnMessenger;
+    private PlayerMessenger playerMessenger;
     private ObjectToMessageMapper objectMapper;
 
     public Game makeGame() {
@@ -74,7 +81,8 @@ public class TicTacToeFactory {
         MarkToStringMapper messageMapper = new MarkToMessageMapper("You win!", "Computer wins!");
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
         GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, "Draw!");
-        gameMessenger = new ConsoleGameMessenger(goMessageProvider);
+        messenger = new ConsoleMessenger();
+        gameMessenger = new GameMessengerImp(messenger, goMessageProvider, "Welcome To TicTacToe!");
 
         objectMapper = new ObjectToMessageMapper();
         turnMessenger = new ConsoleTurnMessenger(objectMapper);
