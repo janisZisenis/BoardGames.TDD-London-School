@@ -1,6 +1,6 @@
 package View;
 
-import Game.GameMessengerImp.Messenger;
+import Messaging.Messenger;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
