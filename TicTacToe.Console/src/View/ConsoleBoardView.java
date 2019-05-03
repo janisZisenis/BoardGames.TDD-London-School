@@ -1,6 +1,6 @@
 package View;
 
-import Messaging.Game.WinnerMessageProviderImp.MarkToStringMapper;
+import Messaging.Mapping.MarkToStringMapper;
 import Lib.Board.ReadOnlyBoard;
 import Lib.BoardRenderer.BoardView;
 import Lib.Data.BoardBoundaries;

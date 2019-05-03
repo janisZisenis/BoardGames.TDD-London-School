@@ -1,4 +1,4 @@
-package Messaging.Game.WinnerMessageProviderImp;
+package Messaging.Mapping;
 
 import Lib.Data.Mark;
 

@@ -1,5 +1,7 @@
 package Messaging.Mapping.ObjectToStringMapper;
 
+import Messaging.Mapping.ObjectToStringMapper;
+
 import java.util.HashMap;
 
 public class ObjectToMessageMapper implements ObjectToStringMapper {

@@ -1,6 +1,4 @@
-package Messaging.Turn.TurnMessengerImp;
-
-import Messaging.Mapping.ObjectToStringMapper.ObjectToStringMapper;
+package Messaging.Mapping;
 
 import java.util.HashMap;
 

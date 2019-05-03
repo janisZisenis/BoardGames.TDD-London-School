@@ -1,5 +1,6 @@
 package Messaging.Mapping.ObjectToStringMapper;
 
+import Messaging.Mapping.ObjectToStringMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

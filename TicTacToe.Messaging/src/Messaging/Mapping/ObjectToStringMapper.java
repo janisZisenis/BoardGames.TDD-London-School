@@ -1,4 +1,4 @@
-package Messaging.Mapping.ObjectToStringMapper;
+package Messaging.Mapping;
 
 public interface ObjectToStringMapper {
     String map(Object o);
