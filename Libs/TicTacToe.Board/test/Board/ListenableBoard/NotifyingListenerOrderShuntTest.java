@@ -25,7 +25,7 @@ public class NotifyingListenerOrderShuntTest implements BoardListener, Board {
         assertEquals(expected, actual);
     }
 
-    public void udpateField(Field f) {
+    public void updateField(Field f) {
         logString += "updatedField ";
     }
 

@@ -7,7 +7,6 @@ import GuiGaming.GuiTurn.GuiPlayer;
 
 public class GuiPlayerImp implements GuiPlayer {
 
-
     private final MarkFieldService service;
     private final Mark mark;
 

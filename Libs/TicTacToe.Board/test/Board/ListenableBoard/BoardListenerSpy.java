@@ -9,7 +9,7 @@ public class BoardListenerSpy implements BoardListener {
     public Field getUpdatedField() {
         return updatedField;
     }
-    public void udpateField(Field f) {
+    public void updateField(Field f) {
         updatedField = f;
     }
 }

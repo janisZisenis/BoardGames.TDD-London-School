@@ -1,13 +1,10 @@
 package View;
 
-import App.BoardDelegate;
-import Board.Board;
+import App.BoardViewDelegate;
 import Board.BoardBoundaries;
 import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Gaming.BoardRenderer.BoardView;
-import Gaming.Input.Input;
 import Mappers.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -19,29 +16,23 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane implements BoardView {
+public class FXBoardView extends Pane {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
     private final HashMap<FXTile, Field> fields = new HashMap<>();
 
     private final int sideLength;
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
-
-    private final Board board;
     private final MarkToStringMapper mapper;
-    private BoardDelegate delegate;
 
-    public FXBoardView(Board board, MarkToStringMapper mapper) {
-        this.board = board;
-        this.mapper = mapper;
+    private BoardViewDelegate delegate;
+
+    public FXBoardView(MarkToStringMapper mapper) {
         this.sideLength = getRoundedSideLength(250);
+        this.mapper = mapper;
 
         initTiles();
         setPrefSize(sideLength, sideLength);
-    }
-
-    public void setDelegate(BoardDelegate delegate) {
-        this.delegate = delegate;
     }
 
     private int getRoundedSideLength(int preferredSideLength) {
@@ -73,50 +64,9 @@ public class FXBoardView extends Pane implements BoardView {
         getChildren().add(t);
     }
 
-    public void showBoard() {
-        for(int row = 0; row < rowColumnCount; row++) {
-            for(int col = 0; col < rowColumnCount; col++) {
-                Field f = new Field(row, col);
-                updateField(f);
-            }
-        }
-    }
 
-    private void updateField(Field field) {
-        if(board.isMarked(field)) {
-            Mark m = board.getMarkAt(field);
-            String s = mapper.map(m);
-            tiles.get(field).setText(s);
-        }
-    }
-
-    public void showWinningLine(Line line) {
-        highlight(line);
-        lowlightOther(line);
-    }
-
-    private void highlight(Line line) {
-        tiles.get(line.getFirst()).highlight();
-        tiles.get(line.getSecond()).highlight();
-        tiles.get(line.getThird()).highlight();
-    }
-
-    private void lowlightOther(Line line) {
-        for(int i = 0; i < rowColumnCount; i++) {
-            for(int j = 0; j < rowColumnCount; j++) {
-                Field f = new Field(i, j);
-                if(!lineContainsField(line, f))
-                    tiles.get(f).lowlight();
-            }
-        }
-    }
-
-    private boolean lineContainsField(Line line, Field f) {
-        Field first = line.getFirst();
-        Field second = line.getSecond();
-        Field third = line.getThird();
-
-        return first.equals(f) || second.equals(f) || third.equals(f);
+    public void setDelegate(BoardViewDelegate delegate) {
+        this.delegate = delegate;
     }
 
     private void onTileClicked(FXTile tile) {
@@ -124,15 +74,54 @@ public class FXBoardView extends Pane implements BoardView {
             return;
 
         Field f = fields.get(tile);
-        Input input = makeInput(f);
-
-        delegate.onInputGenerated(input);
-    }
-
-    private Input makeInput(Field f) {
         int row = f.getRow();
         int col = f.getColumn();
-        return new Input(row, col);
+
+        delegate.onTileClicked(row, col);
+    }
+
+
+    public void setFieldMark(Field f, Mark m) {
+        FXTile tile = tiles.get(f);
+        String text = mapper.map(m);
+        tile.setText(text);
+    }
+
+    public void showWinningLine(Line line) {
+        highlight(line);
+        lowlightOtherFields(line);
+    }
+
+    private void highlight(Line line) {
+        highlightTile(line.getFirst());
+        highlightTile(line.getSecond());
+        highlightTile(line.getThird());
+    }
+
+    private void highlightTile(Field f) {
+        FXTile tile = tiles.get(f);
+        tile.highlight();
+    }
+
+    private void lowlightOtherFields(Line line) {
+        for(Field f : tiles.keySet()) {
+            if(!lineContains(line, f)) {
+                lowlightField(f);
+            }
+        }
+    }
+
+    private boolean lineContains(Line line, Field f) {
+        Field first = line.getFirst();
+        Field second = line.getSecond();
+        Field third = line.getThird();
+
+        return first.equals(f) || second.equals(f) || third.equals(f);
+    }
+
+    private void lowlightField(Field f) {
+        FXTile tile = tiles.get(f);
+        tile.lowlight();
     }
 
     private class FXTile extends StackPane {

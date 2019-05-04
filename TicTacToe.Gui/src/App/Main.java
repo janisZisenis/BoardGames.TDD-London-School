@@ -60,8 +60,9 @@ public class Main extends Application {
         GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
         GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
         InputProcessor processor = new ValidatingInputProcessor(turn, validator);
-        FXBoardView boardView = new FXBoardView(board, mapper);
-        BoardPresenter presenter = new BoardPresenter(boardView, processor, gameOverRule, evaluator);
+        FXBoardView boardView = new FXBoardView(mapper);
+        BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
+        BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
         boardView.setDelegate(presenter);
         board.setListener(presenter);
         ///// new to Gui App /////
