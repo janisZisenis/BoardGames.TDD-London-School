@@ -10,7 +10,7 @@ public class DifferentFieldsWithTheSameSumOfRowAndColumn {
     private Field field = new Field(-1, 1);
 
     @Test
-    void TheShouldNotHaveTheSameHashCode() {
+    void ShouldNotHaveTheSameHashCode() {
         int actual = sut.hashCode();
 
         int unexpected = field.hashCode();

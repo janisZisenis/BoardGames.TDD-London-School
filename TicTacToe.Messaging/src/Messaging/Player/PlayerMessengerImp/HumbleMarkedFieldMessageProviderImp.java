@@ -2,7 +2,7 @@ package Messaging.Player.PlayerMessengerImp;
 
 import Lib.Data.Field.Field;
 
-public class MarkedFieldMessageProviderImp implements MarkedFieldMessageProvider {
+public class HumbleMarkedFieldMessageProviderImp implements MarkedFieldMessageProvider {
 
     public String getMarkedFieldMessage(Field field) {
         int row = field.getRow();
