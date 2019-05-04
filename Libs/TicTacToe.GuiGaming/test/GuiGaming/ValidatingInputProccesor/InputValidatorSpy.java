@@ -1,7 +1,7 @@
 package GuiGaming.ValidatingInputProccesor;
 
-import Bussiness.Input.Input;
-import Bussiness.InputGenerators.AlertingInputGenerator.InputValidatorStub;
+import Domain.Input.Input;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidatorStub;
 
 public class InputValidatorSpy extends InputValidatorStub {
 

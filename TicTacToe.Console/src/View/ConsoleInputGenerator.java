@@ -1,8 +1,8 @@
 package View;
 
-import Bussiness.Input.Input;
-import Bussiness.Messages.GenerationMessages;
-import Bussiness.Players.InputGenerator;
+import Domain.Messages.GenerationMessages;
+import Domain.Input.Input;
+import Domain.Players.InputGenerator;
 
 import java.util.Scanner;
 

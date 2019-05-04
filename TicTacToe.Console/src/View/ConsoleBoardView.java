@@ -1,11 +1,11 @@
 package View;
 
-import Api.MarkedFieldProvider;
-import Board.BoardBoundaries;
-import Board.Mark;
 import Bussiness.BoardRenderer.BoardView;
 import Data.Field.Field;
 import Data.Line.Line;
+import Domain.Board.Api.MarkedFieldProvider;
+import Domain.Board.BoardBoundaries;
+import Domain.Board.Mark;
 import Mappers.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {

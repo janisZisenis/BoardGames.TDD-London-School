@@ -1,11 +1,11 @@
 package Messaging.Player.MessagingPlayer;
 
-import Api.MarkFieldService;
-import Board.Mark;
 import Data.Field.Field;
-import Bussiness.Input.Input;
-import Bussiness.Players.InputGenerator;
-import Bussiness.Players.PlayerContext;
+import Domain.Board.Api.MarkFieldService;
+import Domain.Board.Mark;
+import Domain.Input.Input;
+import Domain.Players.InputGenerator;
+import Domain.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

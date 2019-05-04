@@ -1,7 +1,7 @@
 package View;
 
-import Bussiness.Input.Input;
-import Bussiness.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
+import Domain.Input.Input;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputAlerter;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 

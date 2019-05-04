@@ -1,7 +1,7 @@
 package View;
 
-import Bussiness.Input.Input;
-import Bussiness.Players.InputGenerator;
+import Domain.Input.Input;
+import Domain.Players.InputGenerator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

@@ -1,20 +1,20 @@
 package App;
 
 
-import Board.HashingBoard.HashingBoard;
-import Board.ListenableBoard.ListenableBoard;
-import Board.Mark;
-import Bussiness.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import Bussiness.GameEvaluation.GameEvaluator.GameEvaluator;
-import Bussiness.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Bussiness.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
-import Bussiness.InputGenerators.AlertingInputGenerator.InputValidator;
-import Bussiness.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
-import Bussiness.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import Bussiness.InputRules.CompositeInputRule.CompositeInputRule;
-import Bussiness.InputRules.FieldExistsRule.FieldExistsRule;
-import Bussiness.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Bussiness.Messages.AlertingMessages;
+import Domain.Board.HashingBoard.HashingBoard;
+import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Board.Mark;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
+import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidator;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import Domain.InputRules.CompositeInputRule.CompositeInputRule;
+import Domain.InputRules.FieldExistsRule.FieldExistsRule;
+import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import Domain.Messages.AlertingMessages;
+import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Gaming.CompositeGameOverRule.CompositeGameOverRule;
 import Gaming.WinnerRule.WinnerRule;
 import GuiGaming.GuiPlayerImp.GuiPlayerImp;

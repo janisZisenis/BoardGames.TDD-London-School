@@ -1,6 +1,6 @@
 package Mappers;
 
-import Board.Mark;
+import Domain.Board.Mark;
 
 import java.util.HashMap;
 

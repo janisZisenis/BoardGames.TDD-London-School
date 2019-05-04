@@ -1,11 +1,11 @@
 package App;
 
-import Api.MarkedFieldProvider;
-import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Bussiness.BoardRenderer.WinningLineProvider;
-import Bussiness.Input.Input;
+import Domain.Board.Api.MarkedFieldProvider;
+import Domain.Board.Mark;
+import Domain.GameEvaluation.GameEvaluator.WinningLineProvider;
+import Domain.Input.Input;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 
 public class BoardViewInteractor {
