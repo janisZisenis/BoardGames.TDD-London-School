@@ -1,9 +1,9 @@
 package Lib.GameEvaluation.GameEvaluator;
 
+import Board.Mark;
 import Data.Field.Field;
-import Lib.Board.Mark;
-import Lib.BoardRenderer.WinningLineProvider;
 import Data.Line.Line;
+import Lib.BoardRenderer.WinningLineProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

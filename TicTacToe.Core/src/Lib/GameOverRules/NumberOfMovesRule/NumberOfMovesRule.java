@@ -1,6 +1,7 @@
 package Lib.GameOverRules.NumberOfMovesRule;
 
-import Lib.Board.BoardBoundaries;
+import Api.MarkedFieldCountProvider;
+import Board.BoardBoundaries;
 import Lib.GameLoopImp.GameOverRule;
 
 public class NumberOfMovesRule implements GameOverRule {

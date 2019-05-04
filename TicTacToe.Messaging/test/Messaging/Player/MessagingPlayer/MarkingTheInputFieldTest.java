@@ -1,10 +1,10 @@
 package Messaging.Player.MessagingPlayer;
 
+import Api.MarkFieldServiceMock;
+import Board.Mark;
 import Data.Field.Field;
 import Lib.Input.Input;
-import Lib.Board.Mark;
 import Lib.Players.CountingGeneratorStub;
-import Lib.Players.MarkFieldServiceMock;
 import Lib.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 

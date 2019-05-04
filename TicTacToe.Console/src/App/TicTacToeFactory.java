@@ -1,12 +1,12 @@
 package App;
 
 
-import Lib.Board.Board;
-import Lib.Board.HashingBoard.HashingBoard;
+import Board.Board;
+import Board.HashingBoard.HashingBoard;
+import Board.Mark;
 import Lib.BoardRenderer.BoardRenderer;
 import Lib.BoardRenderer.BoardView;
 import Lib.BoardRenderer.WinningLineProvider;
-import Lib.Board.Mark;
 import Lib.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
@@ -55,9 +55,9 @@ import Messaging.Player.MessagingPlayer.MessagingPlayer;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
 import Messaging.Player.PlayerMessengerImp.HumbleMarkedFieldMessageProviderImp;
 import Messaging.Player.PlayerMessengerImp.PlayerMessengerImp;
+import Messaging.Turn.MappingTurnMessenger.MappingTurnMessenger;
 import Messaging.Turn.MessagingTurn.MessagingTwoPlayerTurn;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
-import Messaging.Turn.MappingTurnMessenger.MappingTurnMessenger;
 import View.ConsoleBoardView;
 import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;

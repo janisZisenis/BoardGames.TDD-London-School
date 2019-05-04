@@ -1,8 +1,8 @@
 package Lib.GameEvaluation.GameEvaluator;
 
-import Lib.BoardRenderer.WinningLineProvider;
+import Board.Mark;
 import Data.Line.Line;
-import Lib.Board.Mark;
+import Lib.BoardRenderer.WinningLineProvider;
 import Lib.GameOverRules.WinnerRule.HasWinnerProvider;
 
 public class GameEvaluator implements WinningLineProvider, HasWinnerProvider, WinnerProvider {

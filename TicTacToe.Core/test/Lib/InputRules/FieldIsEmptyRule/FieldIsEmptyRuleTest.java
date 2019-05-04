@@ -1,10 +1,12 @@
 package Lib.InputRules.FieldIsEmptyRule;
 
-import Lib.Input.Input;
+import Api.FieldIsEmptyProviderStub;
 import Data.Field.Field;
+import Lib.Input.Input;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FieldIsEmptyRuleTest {
 

@@ -1,8 +1,9 @@
 package Lib.Players;
 
+import Api.MarkFieldService;
+import Board.Mark;
 import Data.Field.Field;
 import Lib.Input.Input;
-import Lib.Board.Mark;
 import Lib.TwoPlayerTurn.Player;
 
 public class PlayerImp implements Player {

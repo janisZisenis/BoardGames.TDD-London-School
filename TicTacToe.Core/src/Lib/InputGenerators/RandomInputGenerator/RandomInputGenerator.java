@@ -1,6 +1,6 @@
 package Lib.InputGenerators.RandomInputGenerator;
 
-import Lib.Board.BoardBoundaries;
+import Board.BoardBoundaries;
 import Lib.Input.Input;
 import Lib.Players.InputGenerator;
 

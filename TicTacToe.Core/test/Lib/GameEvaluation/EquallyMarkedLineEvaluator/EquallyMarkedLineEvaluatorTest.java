@@ -1,8 +1,9 @@
 package Lib.GameEvaluation.EquallyMarkedLineEvaluator;
 
+import Api.MarkedFieldProviderStub;
+import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Lib.Board.Mark;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

@@ -1,6 +1,7 @@
 package Lib.Players;
 
-import Lib.Board.Mark;
+import Api.MarkFieldService;
+import Board.Mark;
 
 public class PlayerContext {
 

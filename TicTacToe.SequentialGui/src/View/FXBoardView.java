@@ -1,11 +1,11 @@
 package View;
 
-import Lib.Board.ReadOnlyBoard;
-import Lib.BoardRenderer.BoardView;
-import Lib.Board.BoardBoundaries;
+import Api.ReadOnlyBoard;
+import Board.BoardBoundaries;
+import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Lib.Board.Mark;
+import Lib.BoardRenderer.BoardView;
 import Mappers.MarkToStringMapper;
 import javafx.application.Platform;
 import javafx.geometry.Pos;

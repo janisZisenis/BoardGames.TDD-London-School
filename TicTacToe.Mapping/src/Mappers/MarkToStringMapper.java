@@ -1,6 +1,6 @@
 package Mappers;
 
-import Lib.Board.Mark;
+import Board.Mark;
 
 public interface MarkToStringMapper {
     String map(Mark m);

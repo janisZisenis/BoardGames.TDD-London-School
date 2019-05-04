@@ -1,6 +1,6 @@
 package Mappers;
 
-import Lib.Board.Mark;
+import Board.Mark;
 
 import java.util.HashMap;
 

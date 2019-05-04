@@ -1,8 +1,9 @@
 package Lib.Players;
 
-import Lib.Input.Input;
-import Lib.Board.Mark;
+import Api.MarkFieldServiceMock;
+import Board.Mark;
 import Data.Field.Field;
+import Lib.Input.Input;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {
