@@ -16,35 +16,35 @@ public class AlternateMarkingTest {
 
     @Test
     void IfGameProcessesOnce_FirstPlayerShouldHaveMarkedOnce() {
-        sut.process(field);
+        sut.play(field);
 
         assertFirstHasMarkedTimes(1);
     }
 
     @Test
     void IfGameProcessesTwice_FirstPlayerShouldHaveMarkedOnce() {
-        processTwice(field);
+        playTwice(field);
 
         assertFirstHasMarkedTimes(1);
     }
 
     @Test
     void IfGameProcessesTwice_SecondPlayerShouldHaveMarkedOnce() {
-        processTwice(field);
+        playTwice(field);
 
         assertSecondHasMarkedTimes(1);
     }
 
     @Test
     void IfGameProcessesThreeTimes_FirstPlayerShouldHaveMarkedTwice() {
-        processThreeTimes(field);
+        playThreeTimes(field);
 
         assertFirstHasMarkedTimes(2);
     }
 
     @Test
     void IfGameProcessesFourTimes_SecondPlayerShouldHaveMarkedTwice() {
-        processFourTimes(field);
+        playFourTimes(field);
 
         assertSecondHasMarkedTimes(2);
     }
@@ -61,19 +61,19 @@ public class AlternateMarkingTest {
         assertEquals(expected, actual);
     }
 
-    private void processTwice(Field field) {
-        sut.process(field);
-        sut.process(field);
+    private void playTwice(Field field) {
+        sut.play(field);
+        sut.play(field);
     }
 
-    private void processThreeTimes(Field field) {
-        processTwice(field);
-        sut.process(field);
+    private void playThreeTimes(Field field) {
+        playTwice(field);
+        sut.play(field);
     }
 
-    private void processFourTimes(Field field) {
-        processThreeTimes(field);
-        sut.process(field);
+    private void playFourTimes(Field field) {
+        playThreeTimes(field);
+        sut.play(field);
     }
 
 }

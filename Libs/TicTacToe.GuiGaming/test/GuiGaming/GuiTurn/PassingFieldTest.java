@@ -15,7 +15,7 @@ public class PassingFieldTest {
     void IfFieldIsR0C1_ShouldPassFieldR0C1ToFirst() {
         Field field = new Field(0, 1);
 
-        sut.process(field);
+        sut.play(field);
 
         Field actual = first.getMarkedField();
         Field expected = field;
