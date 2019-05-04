@@ -2,17 +2,18 @@ package App;
 
 import Board.Board;
 import Board.Mark;
+import Data.Field.Field;
 import Gaming.BoardRenderer.BoardView;
 import Gaming.Input.Input;
-import Data.Field.Field;
+import GuiGaming.GuiPlayer;
 
 public class BoardPresenter implements BoardDelegate {
 
     private BoardView view;
 
-    private Player john;
-    private Player haley;
-    private Player current;
+    private GuiPlayer john;
+    private GuiPlayer haley;
+    private GuiPlayer current;
 
     public BoardPresenter(BoardView view, Board board) {
         this.view = view;
@@ -20,8 +21,8 @@ public class BoardPresenter implements BoardDelegate {
     }
 
     private void initGame(Board board) {
-        john = current = new Player(Mark.John, board);
-        haley = new Player(Mark.Haley, board);
+        john = current = new GuiPlayer(Mark.John, board);
+        haley = new GuiPlayer(Mark.Haley, board);
     }
 
     public void onInputGenerated(Input input) {
