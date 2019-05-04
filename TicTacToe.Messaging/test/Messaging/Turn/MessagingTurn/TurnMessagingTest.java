@@ -1,6 +1,6 @@
 package Messaging.Turn.MessagingTurn;
 
-import Lib.TwoPlayerTurn.PlayerDummy;
+import Core.TwoPlayerTurn.PlayerDummy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

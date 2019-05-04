@@ -1,6 +1,6 @@
 package Messaging.Game.MessagingGame;
 
-import Lib.GameImp.Game;
+import Core.GameImp.Game;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

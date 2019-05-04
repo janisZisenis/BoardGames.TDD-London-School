@@ -1,7 +1,7 @@
 package Messaging.Turn.MessagingTurn;
 
-import Lib.TwoPlayerTurn.Player;
-import Lib.TwoPlayerTurn.TwoPlayerTurn;
+import Core.TwoPlayerTurn.Player;
+import Core.TwoPlayerTurn.TwoPlayerTurn;
 
 public class MessagingTwoPlayerTurn extends TwoPlayerTurn {
     private TurnMessenger view;

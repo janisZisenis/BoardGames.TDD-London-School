@@ -5,7 +5,7 @@ import Board.BoardBoundaries;
 import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Lib.BoardRenderer.BoardView;
+import Core.BoardRenderer.BoardView;
 import Mappers.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {

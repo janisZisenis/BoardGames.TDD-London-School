@@ -1,8 +1,8 @@
 package View;
 
-import Lib.Input.Input;
-import Lib.Messages.GenerationMessages;
-import Lib.Players.InputGenerator;
+import Core.Input.Input;
+import Core.Messages.GenerationMessages;
+import Core.Players.InputGenerator;
 
 import java.util.Scanner;
 

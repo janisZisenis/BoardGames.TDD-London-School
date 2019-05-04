@@ -1,6 +1,6 @@
 package Messaging.Game.MessagingGame;
 
-import Lib.GameImp.Game;
+import Core.GameImp.Game;
 
 public class MessagingGame implements Game {
 

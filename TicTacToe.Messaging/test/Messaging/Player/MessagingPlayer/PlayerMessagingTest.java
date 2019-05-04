@@ -3,9 +3,9 @@ package Messaging.Player.MessagingPlayer;
 import Api.MarkFieldServiceDummy;
 import Board.Mark;
 import Data.Field.Field;
-import Lib.Input.Input;
-import Lib.Players.CountingGeneratorStub;
-import Lib.Players.PlayerContext;
+import Core.Input.Input;
+import Core.Players.CountingGeneratorStub;
+import Core.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
