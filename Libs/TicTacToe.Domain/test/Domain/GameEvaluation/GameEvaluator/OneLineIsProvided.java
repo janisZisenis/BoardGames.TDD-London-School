@@ -3,6 +3,7 @@ package Domain.GameEvaluation.GameEvaluator;
 import Data.Field.Field;
 import Data.Line.Line;
 import Domain.Board.Mark;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

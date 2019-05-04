@@ -1,7 +1,6 @@
 package Domain.Players;
 
 import Data.Field.Field;
-import Domain.Board.Api.MarkFieldServiceMock;
 import Domain.Board.Mark;
 import Domain.Input.Input;
 import org.junit.jupiter.api.Test;

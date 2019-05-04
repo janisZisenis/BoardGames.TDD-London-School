@@ -1,7 +1,7 @@
 package Messaging.Game.WinnerMessageProviderImp;
 
 import Domain.Board.Mark;
-import Domain.GameEvaluation.GameEvaluator.WinnerProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Mappers.MarkToStringMapper;
 import Messaging.Game.GameOverMessageProviderImp.WinnerMessageProvider;
 

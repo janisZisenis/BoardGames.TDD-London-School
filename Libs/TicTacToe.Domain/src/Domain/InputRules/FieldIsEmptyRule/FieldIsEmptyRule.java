@@ -1,7 +1,6 @@
 package Domain.InputRules.FieldIsEmptyRule;
 
 import Data.Field.Field;
-import Domain.Board.Api.FieldIsEmptyProvider;
 import Domain.Input.Input;
 import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 

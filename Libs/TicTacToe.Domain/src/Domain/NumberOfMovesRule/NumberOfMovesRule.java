@@ -1,6 +1,5 @@
 package Domain.NumberOfMovesRule;
 
-import Domain.Board.Api.MarkedFieldCountProvider;
 import Domain.Board.BoardBoundaries;
 import Gaming.GameLoopImp.GameOverRule;
 

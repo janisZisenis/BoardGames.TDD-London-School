@@ -1,10 +1,10 @@
 package Domain.Board;
 
 import Data.Field.Field;
-import Domain.Board.Api.FieldIsEmptyProvider;
-import Domain.Board.Api.MarkFieldService;
-import Domain.Board.Api.MarkedFieldCountProvider;
-import Domain.Board.Api.MarkedFieldProvider;
+import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
+import Domain.Players.MarkFieldService;
+import Domain.NumberOfMovesRule.MarkedFieldCountProvider;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 

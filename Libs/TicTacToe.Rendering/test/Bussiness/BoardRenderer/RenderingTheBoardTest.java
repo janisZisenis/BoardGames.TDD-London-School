@@ -2,7 +2,7 @@ package Bussiness.BoardRenderer;
 
 import Data.Field.Field;
 import Data.Line.Line;
-import Domain.GameEvaluation.GameEvaluator.WinningLineProviderStub;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProviderStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

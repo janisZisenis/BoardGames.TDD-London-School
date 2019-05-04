@@ -6,6 +6,8 @@ import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Board.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.*;
+import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Domain.InputGenerators.AlertingInputGenerator.InputValidator;

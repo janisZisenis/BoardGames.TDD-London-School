@@ -1,6 +1,5 @@
 package Domain.Players;
 
-import Domain.Board.Api.MarkFieldService;
 import Domain.Board.Mark;
 
 public class PlayerContext {

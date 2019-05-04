@@ -2,7 +2,6 @@ package Domain.GameEvaluation.EquallyMarkedLineEvaluator;
 
 import Data.Field.Field;
 import Data.Line.Line;
-import Domain.Board.Api.MarkedFieldProvider;
 import Domain.Board.Mark;
 import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 

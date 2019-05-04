@@ -1,4 +1,4 @@
-package Domain.Board.Api;
+package Domain.GameEvaluation.EquallyMarkedLineEvaluator;
 
 import Data.Field.Field;
 import Domain.Board.Mark;

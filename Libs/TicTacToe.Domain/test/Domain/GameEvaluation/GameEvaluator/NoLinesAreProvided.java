@@ -1,5 +1,6 @@
 package Domain.GameEvaluation.GameEvaluator;
 
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

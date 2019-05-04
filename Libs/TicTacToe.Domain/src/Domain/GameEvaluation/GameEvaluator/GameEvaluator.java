@@ -1,10 +1,12 @@
 package Domain.GameEvaluation.GameEvaluator;
 
+import Gaming.WinnerRule.HasWinnerProvider;
 import Data.Line.Line;
 import Domain.Board.Mark;
-import Gaming.WinnerRule.HasWinnerProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 
-public class GameEvaluator implements WinningLineProvider, HasWinnerProvider, WinnerProvider {
+public class GameEvaluator implements HasWinnerProvider, WinningLineProvider, WinnerProvider {
 
     private final LineEvaluator evaluator;
     private final LineProvider provider;

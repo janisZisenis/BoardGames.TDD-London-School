@@ -3,7 +3,7 @@ package View;
 import Bussiness.BoardRenderer.BoardView;
 import Data.Field.Field;
 import Data.Line.Line;
-import Domain.Board.Api.MarkedFieldProvider;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.Board.BoardBoundaries;
 import Domain.Board.Mark;
 import Mappers.MarkToStringMapper;

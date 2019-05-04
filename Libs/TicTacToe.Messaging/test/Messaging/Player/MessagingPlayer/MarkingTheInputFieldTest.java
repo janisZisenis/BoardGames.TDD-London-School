@@ -1,7 +1,7 @@
 package Messaging.Player.MessagingPlayer;
 
 import Data.Field.Field;
-import Domain.Board.Api.MarkFieldServiceMock;
+import Domain.Players.MarkFieldServiceMock;
 import Domain.Board.Mark;
 import Domain.Input.Input;
 import Domain.Players.CountingGeneratorStub;

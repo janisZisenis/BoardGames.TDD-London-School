@@ -1,4 +1,4 @@
-package Domain.GameEvaluation.GameEvaluator;
+package Domain.GameEvaluation.GameEvaluator.Api;
 
 import Domain.Board.Mark;
 

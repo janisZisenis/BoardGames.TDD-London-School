@@ -1,4 +1,4 @@
-package Domain.Board.Api;
+package Domain.NumberOfMovesRule;
 
 public interface MarkedFieldCountProvider {
     int getMarkedFieldCount();

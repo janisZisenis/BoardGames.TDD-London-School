@@ -1,7 +1,7 @@
 package Bussiness.BoardRenderer;
 
 import Data.Line.Line;
-import Domain.GameEvaluation.GameEvaluator.WinningLineProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Gaming.GameLoopImp.Renderer;
 
 public class BoardRenderer implements Renderer {

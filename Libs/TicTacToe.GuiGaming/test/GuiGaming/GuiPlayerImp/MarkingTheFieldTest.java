@@ -1,7 +1,7 @@
 package GuiGaming.GuiPlayerImp;
 
 import Data.Field.Field;
-import Domain.Board.Api.MarkFieldServiceSpy;
+import Domain.Players.MarkFieldServiceSpy;
 import Domain.Board.Mark;
 import org.junit.jupiter.api.Test;
 

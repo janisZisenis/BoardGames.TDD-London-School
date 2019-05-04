@@ -1,4 +1,4 @@
-package Domain.Board.Api;
+package Domain.Players;
 
 import Data.Field.Field;
 import Domain.Board.Mark;

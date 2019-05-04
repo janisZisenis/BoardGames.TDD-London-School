@@ -1,4 +1,4 @@
-package Domain.Board.Api;
+package Domain.InputRules.FieldIsEmptyRule;
 
 import Data.Field.Field;
 

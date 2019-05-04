@@ -1,7 +1,7 @@
 package GuiGaming.GuiPlayerImp;
 
 import Data.Field.Field;
-import Domain.Board.Api.MarkFieldService;
+import Domain.Players.MarkFieldService;
 import Domain.Board.Mark;
 import GuiGaming.GuiTurn.GuiPlayer;
 

@@ -2,9 +2,9 @@ package App;
 
 import Data.Field.Field;
 import Data.Line.Line;
-import Domain.Board.Api.MarkedFieldProvider;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.Board.Mark;
-import Domain.GameEvaluation.GameEvaluator.WinningLineProvider;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.Input.Input;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 
