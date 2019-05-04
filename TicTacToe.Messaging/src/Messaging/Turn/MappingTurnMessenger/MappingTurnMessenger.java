@@ -1,15 +1,15 @@
-package Messaging.Turn.TurnMessengerImp;
+package Messaging.Turn.MappingTurnMessenger;
 
 import Mappers.ObjectToStringMapper;
 import Messaging.Messenger;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
 
-public class TurnMessengerImp implements TurnMessenger {
+public class MappingTurnMessenger implements TurnMessenger {
 
     private final Messenger messenger;
     private final ObjectToStringMapper mapper;
 
-    public TurnMessengerImp(Messenger messenger, ObjectToStringMapper mapper) {
+    public MappingTurnMessenger(Messenger messenger, ObjectToStringMapper mapper) {
         this.messenger = messenger;
         this.mapper = mapper;
     }

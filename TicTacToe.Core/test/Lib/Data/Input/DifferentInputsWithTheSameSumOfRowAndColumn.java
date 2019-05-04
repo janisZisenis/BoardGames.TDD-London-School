@@ -10,7 +10,7 @@ public class DifferentInputsWithTheSameSumOfRowAndColumn {
     private Input input = new Input(-1, 1);
 
     @Test
-    void TheShouldNotHaveTheSameHashCode() {
+    void ShouldNotHaveTheSameHashCode() {
         int actual = sut.hashCode();
 
         int unexpected = input.hashCode();

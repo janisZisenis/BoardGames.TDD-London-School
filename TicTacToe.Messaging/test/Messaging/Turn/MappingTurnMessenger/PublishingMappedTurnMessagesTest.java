@@ -1,4 +1,4 @@
-package Messaging.Turn.TurnMessengerImp;
+package Messaging.Turn.MappingTurnMessenger;
 
 import Mappers.ObjectToStringMapperFake;
 import Messaging.MessengerMock;
@@ -8,11 +8,11 @@ import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TurnMessengerImpTest {
+public class PublishingMappedTurnMessagesTest {
 
     private MessengerMock messenger = new MessengerMock();
     private ObjectToStringMapperFake mapper = new ObjectToStringMapperFake();
-    private TurnMessengerImp sut = new TurnMessengerImp(messenger, mapper);
+    private MappingTurnMessenger sut = new MappingTurnMessenger(messenger, mapper);
 
     @Test
     void IfNoMappableObjectsAreAvailable_ShouldThrow() {

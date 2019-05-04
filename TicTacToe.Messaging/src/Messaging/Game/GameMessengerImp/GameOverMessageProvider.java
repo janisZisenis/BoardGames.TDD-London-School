@@ -1,4 +1,4 @@
-package Messaging.Game.GameOverMessageProviderImp;
+package Messaging.Game.GameMessengerImp;
 
 public interface GameOverMessageProvider {
     public String getGameOverMessage();

@@ -1,7 +1,5 @@
 package Messaging.Game.GameMessengerImp;
 
-import Messaging.Game.GameOverMessageProviderImp.GameOverMessageProvider;
-
 public class GameOverMessageProviderStub implements GameOverMessageProvider {
 
     private String gameOverMessage = "";

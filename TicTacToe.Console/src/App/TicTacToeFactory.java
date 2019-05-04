@@ -53,11 +53,11 @@ import Messaging.Game.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Messaging.Messenger;
 import Messaging.Player.MessagingPlayer.MessagingPlayer;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
-import Messaging.Player.PlayerMessengerImp.MarkedFieldMessageProviderImp;
+import Messaging.Player.PlayerMessengerImp.HumbleMarkedFieldMessageProviderImp;
 import Messaging.Player.PlayerMessengerImp.PlayerMessengerImp;
 import Messaging.Turn.MessagingTurn.MessagingTwoPlayerTurn;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
-import Messaging.Turn.TurnMessengerImp.TurnMessengerImp;
+import Messaging.Turn.MappingTurnMessenger.MappingTurnMessenger;
 import View.ConsoleBoardView;
 import View.ConsoleInputAlerter;
 import View.ConsoleInputGenerator;
@@ -93,12 +93,12 @@ public class TicTacToeFactory {
     }
 
     private PlayerMessenger makePlayerMessenger() {
-        MarkedFieldMessageProviderImp fieldProvider = new MarkedFieldMessageProviderImp();
+        HumbleMarkedFieldMessageProviderImp fieldProvider = new HumbleMarkedFieldMessageProviderImp();
         return new PlayerMessengerImp(messenger, fieldProvider);
     }
 
     private TurnMessenger makeTurnMessenger(ObjectToStringMapper mapper) {
-        return new TurnMessengerImp(messenger, mapper);
+        return new MappingTurnMessenger(messenger, mapper);
     }
 
     private GameMessenger makeGameMessenger(Board board) {

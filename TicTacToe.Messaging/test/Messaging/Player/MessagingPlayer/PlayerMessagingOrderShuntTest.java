@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PublishingTheMoveOrderShuntTest implements MarkFieldService, PlayerMessenger, InputGenerator {
+public class PlayerMessagingOrderShuntTest implements MarkFieldService, PlayerMessenger, InputGenerator {
 
     private String logString = "";
 

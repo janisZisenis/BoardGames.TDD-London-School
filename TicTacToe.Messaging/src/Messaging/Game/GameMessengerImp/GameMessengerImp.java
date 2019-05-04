@@ -1,7 +1,6 @@
 package Messaging.Game.GameMessengerImp;
 
 import Messaging.Game.MessagingGame.GameMessenger;
-import Messaging.Game.GameOverMessageProviderImp.GameOverMessageProvider;
 import Messaging.Messenger;
 
 public class GameMessengerImp implements GameMessenger {

@@ -1,5 +1,7 @@
 package Messaging.Game.GameOverMessageProviderImp;
 
+import Messaging.Game.GameMessengerImp.GameOverMessageProvider;
+
 public class GameOverMessageProviderImp implements GameOverMessageProvider {
 
     private final String drawMessage;

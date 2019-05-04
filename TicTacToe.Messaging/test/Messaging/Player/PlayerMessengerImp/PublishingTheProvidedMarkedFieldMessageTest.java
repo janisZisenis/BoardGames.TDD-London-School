@@ -4,7 +4,7 @@ import Lib.Data.Field.Field;
 import Messaging.MessengerMock;
 import org.junit.jupiter.api.Test;
 
-public class PlayerMessengerImpTest {
+public class PublishingTheProvidedMarkedFieldMessageTest {
 
     private MessengerMock messenger = new MessengerMock();
     private MarkedFieldMessageProviderStub provider = new MarkedFieldMessageProviderStub();
