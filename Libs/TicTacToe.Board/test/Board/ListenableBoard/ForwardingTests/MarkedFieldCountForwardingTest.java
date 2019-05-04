@@ -1,7 +1,7 @@
-package Board.ObservableBoard.ForwardingTests;
+package Board.ListenableBoard.ForwardingTests;
 
 import Board.BoardStub;
-import Board.ObservableBoard.ObservableBoard;
+import Board.ListenableBoard.ListenableBoard;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MarkedFieldCountForwardingTest {
 
     private BoardStub board = new BoardStub();
-    private ObservableBoard sut = new ObservableBoard(board);
+    private ListenableBoard sut = new ListenableBoard(board);
 
     private int actual;
     private int expected;

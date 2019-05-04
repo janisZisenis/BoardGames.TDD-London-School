@@ -63,7 +63,7 @@ public class Main extends Application {
         BoardPresenter presenter = new BoardPresenter(boardView, processor, gameOverRule, evaluator);
         boardView.setDelegate(presenter);
         ///// new to Gui App /////
-        
+
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(boardView));
         primaryStage.setResizable(false);

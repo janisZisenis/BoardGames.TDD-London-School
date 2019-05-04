@@ -1,17 +1,16 @@
-package Board.ObservableBoard.ForwardingTests;
+package Board.ListenableBoard.ForwardingTests;
 
 import Board.BoardStub;
-import Board.ObservableBoard.ObservableBoard;
+import Board.ListenableBoard.ListenableBoard;
 import Data.Field.Field;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldIsMarkedForwardingTest {
 
     private BoardStub board = new BoardStub();
-    private ObservableBoard sut = new ObservableBoard(board);
+    private ListenableBoard sut = new ListenableBoard(board);
 
     private Field field = new Field(0, 0);
     private boolean actual;
@@ -36,5 +35,4 @@ public class FieldIsMarkedForwardingTest {
         Field[] fields = new Field[] { field };
         board.setMarkedFields(fields);
     }
-
 }
