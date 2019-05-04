@@ -1,4 +1,4 @@
-package Bussiness.GameOverRules.WinnerRule;
+package Gaming.WinnerRule;
 
 import Gaming.GameLoopImp.GameOverRule;
 

@@ -1,4 +1,4 @@
-package Bussiness.GameOverRules.WinnerRule;
+package Gaming.WinnerRule;
 
 public interface HasWinnerProvider {
     boolean hasWinner();

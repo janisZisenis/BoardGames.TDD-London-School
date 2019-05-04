@@ -1,4 +1,4 @@
-package Bussiness.GameOverRules.CompositeGameOverRule;
+package Gaming.CompositeGameOverRule;
 
 import Gaming.GameLoopImp.GameOverRule;
 

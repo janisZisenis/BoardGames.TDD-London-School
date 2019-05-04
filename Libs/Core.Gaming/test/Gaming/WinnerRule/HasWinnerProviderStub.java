@@ -1,4 +1,4 @@
-package Bussiness.GameOverRules.WinnerRule;
+package Gaming.WinnerRule;
 
 public class HasWinnerProviderStub implements HasWinnerProvider {
     boolean hasWinner = false;

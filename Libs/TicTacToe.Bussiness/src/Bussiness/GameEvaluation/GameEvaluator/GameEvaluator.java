@@ -1,9 +1,9 @@
 package Bussiness.GameEvaluation.GameEvaluator;
 
 import Board.Mark;
-import Data.Line.Line;
 import Bussiness.BoardRenderer.WinningLineProvider;
-import Bussiness.GameOverRules.WinnerRule.HasWinnerProvider;
+import Data.Line.Line;
+import Gaming.WinnerRule.HasWinnerProvider;
 
 public class GameEvaluator implements WinningLineProvider, HasWinnerProvider, WinnerProvider {
 
