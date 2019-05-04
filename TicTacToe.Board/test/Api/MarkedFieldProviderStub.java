@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class MarkedFieldProviderStub implements MarkedFieldProvider {
 
-    HashMap<Field, Mark> marks = new HashMap<>();
+    private HashMap<Field, Mark> marks = new HashMap<>();
 
     public void addMarkedField(Field f, Mark m) {
         marks.put(f, m);
@@ -17,7 +17,7 @@ public class MarkedFieldProviderStub implements MarkedFieldProvider {
         if(isMarked(f))
             return marks.get(f);
 
-        throw new FieldIsNotMarkedException();
+        throw new FieldIsNotMarked();
     }
 
     public boolean isMarked(Field f) {

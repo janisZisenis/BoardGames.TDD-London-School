@@ -65,8 +65,6 @@ public class FXBoardView extends Pane {
         getChildren().add(t);
     }
 
-
-
     public void showBoard() {
         for(int row = 0; row < rowColumnCount; row++) {
             for(int col = 0; col < rowColumnCount; col++) {

@@ -1,13 +1,12 @@
 package Board;
 
-import Api.ReadOnlyBoard;
-import Data.Field.Field;
-import Api.MarkedFieldProvider;
-import Api.MarkedFieldCountProvider;
 import Api.FieldIsEmptyProvider;
 import Api.MarkFieldService;
+import Api.MarkedFieldCountProvider;
+import Api.MarkedFieldProvider;
+import Data.Field.Field;
 
-public interface Board extends ReadOnlyBoard, MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
+public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 
     boolean isEmpty(Field f);
     boolean isMarked(Field f);

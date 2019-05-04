@@ -1,11 +1,11 @@
 package View;
 
-import Api.ReadOnlyBoard;
+import Api.MarkedFieldProvider;
 import Board.BoardBoundaries;
 import Board.Mark;
+import Core.BoardRenderer.BoardView;
 import Data.Field.Field;
 import Data.Line.Line;
-import Core.BoardRenderer.BoardView;
 import Mappers.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
@@ -17,10 +17,10 @@ public class ConsoleBoardView implements BoardView {
     private final int rowColumn = BoardBoundaries.rowColumnCount;
 
     private final MarkToStringMapper mapper;
-    private final ReadOnlyBoard board;
+    private final MarkedFieldProvider fieldProvider;
 
-    public ConsoleBoardView(ReadOnlyBoard board, MarkToStringMapper mapper) {
-        this.board = board;
+    public ConsoleBoardView(MarkedFieldProvider fieldProvider, MarkToStringMapper mapper) {
+        this.fieldProvider = fieldProvider;
         this.mapper = mapper;
     }
 
@@ -55,7 +55,7 @@ public class ConsoleBoardView implements BoardView {
     }
 
     private String getField(Field f) {
-        return board.isMarked(f) ? mapper.map(board.getMarkAt(f)) : empty;
+        return fieldProvider.isMarked(f) ? mapper.map(fieldProvider.getMarkAt(f)) : empty;
     }
 
     private String map(Mark m) {

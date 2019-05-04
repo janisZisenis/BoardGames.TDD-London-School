@@ -1,11 +1,11 @@
 package View;
 
-import Api.ReadOnlyBoard;
+import Api.MarkedFieldProvider;
 import Board.BoardBoundaries;
 import Board.Mark;
+import Core.BoardRenderer.BoardView;
 import Data.Field.Field;
 import Data.Line.Line;
-import Core.BoardRenderer.BoardView;
 import Mappers.MarkToStringMapper;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
@@ -25,11 +25,11 @@ public class FXBoardView extends Pane implements BoardView {
     private final int sideLength;
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 
-    private final ReadOnlyBoard board;
+    private final MarkedFieldProvider fieldProvider;
     private final MarkToStringMapper mapper;
 
-    public FXBoardView(int prefSideLength, ReadOnlyBoard board, MarkToStringMapper mapper) {
-        this.board = board;
+    public FXBoardView(int prefSideLength, MarkedFieldProvider fieldProvider, MarkToStringMapper mapper) {
+        this.fieldProvider = fieldProvider;
         this.mapper = mapper;
         this.sideLength = getRoundedSideLength(prefSideLength);
 
@@ -82,8 +82,8 @@ public class FXBoardView extends Pane implements BoardView {
     }
 
     private void updateField(Field field) {
-        if(board.isMarked(field)) {
-            Mark m = board.getMarkAt(field);
+        if(fieldProvider.isMarked(field)) {
+            Mark m = fieldProvider.getMarkAt(field);
             String s = mapper.map(m);
             tiles.get(field).setText(s);
         }
