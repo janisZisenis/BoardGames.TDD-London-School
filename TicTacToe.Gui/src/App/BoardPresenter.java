@@ -1,31 +1,51 @@
 package App;
 
 import Board.Board;
-import Board.Mark;
 import Data.Field.Field;
 import Gaming.BoardRenderer.BoardView;
 import Gaming.Input.Input;
-import GuiGaming.GuiPlayerImp.GuiPlayerImp;
-import GuiGaming.GuiTurn.GuiPlayer;
-import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
+import Gaming.InputGenerators.AlertingInputGenerator.InputValidator;
+import Gaming.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
+import Gaming.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import Gaming.InputRules.CompositeInputRule.CompositeInputRule;
+import Gaming.InputRules.FieldExistsRule.FieldExistsRule;
+import Gaming.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import Gaming.Messages.AlertingMessages;
+import GuiGaming.GuiTurn.GuiTurn;
+import View.FXInputAlerter;
 
 public class BoardPresenter implements BoardDelegate {
 
     private BoardView view;
-    private GuiTwoPlayerTurn turn;
+    private GuiTurn turn;
+    private InputValidator validator;
 
-    public BoardPresenter(BoardView view, Board board) {
+    public BoardPresenter(BoardView view, GuiTurn turn, Board board) {
+        this.turn = turn;
         this.view = view;
         initGame(board);
     }
 
     private void initGame(Board board) {
-        GuiPlayer john = new GuiPlayerImp(Mark.John, board);
-        GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
-        turn = new GuiTwoPlayerTurn(john, haley);
+        CompositeInputRule rule = new CompositeInputRule();
+        rule.add(new FieldIsEmptyRule(board));
+        rule.add(new FieldExistsRule());
+        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
+        alerter.register(new FieldIsEmptyRule(board), new FXInputAlerter(AlertingMessages.inputAlreadyMarked));
+        alerter.register(new FieldExistsRule(), new FXInputAlerter(AlertingMessages.inputDoesNotExist));
+
+        validator = new InputValidatorImp(rule, alerter);
     }
 
     public void onInputGenerated(Input input) {
+        if(validator.isValid(input)) {
+            process(input);
+        } else {
+            validator.alertIsInvalid(input);
+        }
+    }
+
+    private void process(Input input) {
         Field f = makeField(input);
         turn.process(f);
 

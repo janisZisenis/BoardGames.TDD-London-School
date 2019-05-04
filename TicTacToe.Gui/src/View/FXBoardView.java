@@ -31,10 +31,10 @@ public class FXBoardView extends Pane implements BoardView {
     private final MarkToStringMapper mapper;
     private BoardDelegate delegate;
 
-    public FXBoardView(int prefSideLength, HashingBoard board, MarkToStringMapper mapper) {
+    public FXBoardView(HashingBoard board, MarkToStringMapper mapper) {
         this.board = board;
         this.mapper = mapper;
-        this.sideLength = getRoundedSideLength(prefSideLength);
+        this.sideLength = getRoundedSideLength(250);
 
         initTiles();
         setPrefSize(sideLength, sideLength);

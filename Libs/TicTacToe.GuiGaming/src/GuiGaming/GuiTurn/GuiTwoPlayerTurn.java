@@ -3,7 +3,7 @@ package GuiGaming.GuiTurn;
 
 import Data.Field.Field;
 
-public class GuiTwoPlayerTurn {
+public class GuiTwoPlayerTurn implements GuiTurn {
 
     private final GuiPlayer first;
     private final GuiPlayer second;

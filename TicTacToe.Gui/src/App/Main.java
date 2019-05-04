@@ -2,6 +2,10 @@ package App;
 
 
 import Board.HashingBoard.HashingBoard;
+import Board.Mark;
+import GuiGaming.GuiPlayerImp.GuiPlayerImp;
+import GuiGaming.GuiTurn.GuiPlayer;
+import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import Mappers.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import javafx.application.Application;
@@ -17,8 +21,12 @@ public class Main extends Application {
         HashingBoard board = new HashingBoard();
         MarkToXOMapper mapper = new MarkToXOMapper();
 
-        FXBoardView boardView = new FXBoardView(250, board, mapper);
-        BoardPresenter presenter = new BoardPresenter(boardView, board);
+        GuiPlayer john = new GuiPlayerImp(Mark.John, board);
+        GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
+        GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
+
+        FXBoardView boardView = new FXBoardView(board, mapper);
+        BoardPresenter presenter = new BoardPresenter(boardView, turn, board);
         boardView.setDelegate(presenter);
 
         primaryStage.setTitle("TicTacToe");
