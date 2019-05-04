@@ -1,6 +1,8 @@
 package App;
 
 
+import Board.HashingBoard.HashingBoard;
+import Mappers.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import View.FXMessenger;
 import View.FXShell;
@@ -14,10 +16,12 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        FXBoardView boardView = new FXBoardView(250);
+        HashingBoard board = new HashingBoard();
+        MarkToXOMapper mapper = new MarkToXOMapper();
+
+        FXBoardView boardView = new FXBoardView(250, board, mapper);
         FXMessenger messenger = new FXMessenger(250);
         FXShell shell = new FXShell(boardView, messenger);
-
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(shell));
