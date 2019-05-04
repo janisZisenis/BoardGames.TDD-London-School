@@ -1,6 +1,6 @@
 package Domain.Board.ListenableBoard;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Board.Board;
 import Domain.Board.Mark;
 import org.junit.jupiter.api.Test;

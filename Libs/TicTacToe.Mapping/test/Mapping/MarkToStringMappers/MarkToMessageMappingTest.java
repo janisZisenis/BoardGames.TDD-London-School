@@ -1,4 +1,4 @@
-package Mappers.MarkToStringMappers;
+package Mapping.MarkToStringMappers;
 
 import Domain.Board.Mark;
 import org.junit.jupiter.api.Test;

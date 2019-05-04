@@ -1,6 +1,6 @@
 package Domain.Board.ObservableBoard;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Board.BoardDummy;
 import Domain.Board.Mark;
 import org.junit.jupiter.api.Test;

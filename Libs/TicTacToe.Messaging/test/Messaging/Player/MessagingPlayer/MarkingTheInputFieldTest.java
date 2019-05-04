@@ -1,6 +1,6 @@
 package Messaging.Player.MessagingPlayer;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Players.MarkFieldServiceMock;
 import Domain.Board.Mark;
 import Domain.Input.Input;

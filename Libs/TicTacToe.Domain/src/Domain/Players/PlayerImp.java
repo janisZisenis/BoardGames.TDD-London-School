@@ -1,6 +1,6 @@
 package Domain.Players;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Board.Mark;
 import Domain.Input.Input;
 import Gaming.TwoPlayerTurn.Player;

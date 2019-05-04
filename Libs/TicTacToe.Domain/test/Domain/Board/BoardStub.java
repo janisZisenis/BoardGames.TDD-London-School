@@ -1,6 +1,6 @@
 package Domain.Board;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 
 import java.util.Arrays;
 import java.util.HashMap;

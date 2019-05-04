@@ -1,6 +1,6 @@
 package GuiGaming.GuiPlayerImp;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Players.MarkFieldService;
 import Domain.Board.Mark;
 import GuiGaming.GuiTurn.GuiPlayer;

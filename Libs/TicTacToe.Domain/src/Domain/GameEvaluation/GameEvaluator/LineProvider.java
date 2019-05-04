@@ -1,6 +1,6 @@
 package Domain.GameEvaluation.GameEvaluator;
 
-import Data.Line.Line;
+import Domain.Data.Line.Line;
 
 public interface LineProvider {
     int getLineCount();

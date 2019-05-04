@@ -1,11 +1,11 @@
 package View;
 
 import App.BoardViewDelegate;
-import Data.Field.Field;
-import Data.Line.Line;
+import Domain.Data.Field.Field;
+import Domain.Data.Line.Line;
 import Domain.Board.BoardBoundaries;
 import Domain.Board.Mark;
-import Mappers.MarkToStringMapper;
+import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;

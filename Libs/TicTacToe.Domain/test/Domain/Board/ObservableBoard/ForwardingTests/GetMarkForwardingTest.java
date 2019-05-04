@@ -1,6 +1,6 @@
 package Domain.Board.ObservableBoard.ForwardingTests;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Board.BoardStub;
 import Domain.Board.Mark;
 import Domain.Board.ObservableBoard.ObservableBoard;

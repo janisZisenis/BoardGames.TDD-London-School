@@ -1,6 +1,6 @@
 package Domain.Board.ListenableBoard.ForwardingTests;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Board.BoardStub;
 import Domain.Board.ListenableBoard.ListenableBoard;
 import Domain.Board.Mark;

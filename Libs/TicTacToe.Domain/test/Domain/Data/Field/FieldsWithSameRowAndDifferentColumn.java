@@ -1,14 +1,14 @@
-package Data.Field;
+package Domain.Data.Field;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class FieldsWithDifferentRowAndSameColumn {
+public class FieldsWithSameRowAndDifferentColumn {
 
     private Field sut = new Field(-1, 1);
-    private Field field = new Field(1, 1);
+    private Field field = new Field(-1, -1);
 
     @Test
     void TheyShouldNotEqualEachOther() {

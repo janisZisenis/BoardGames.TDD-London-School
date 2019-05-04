@@ -1,6 +1,6 @@
 package Domain.Board.ListenableBoard;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 
 public interface BoardListener {
     void updateField(Field f);

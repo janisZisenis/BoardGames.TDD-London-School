@@ -1,4 +1,4 @@
-package Mappers;
+package Mapping;
 
 import Domain.Board.Mark;
 

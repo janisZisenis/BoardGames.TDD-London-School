@@ -1,6 +1,6 @@
 package GuiGaming.GuiTurn;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 
 public interface GuiPlayer {
     void mark(Field field);

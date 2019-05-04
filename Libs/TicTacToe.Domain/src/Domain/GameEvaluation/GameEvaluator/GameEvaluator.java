@@ -1,7 +1,7 @@
 package Domain.GameEvaluation.GameEvaluator;
 
 import Gaming.WinnerRule.HasWinnerProvider;
-import Data.Line.Line;
+import Domain.Data.Line.Line;
 import Domain.Board.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;

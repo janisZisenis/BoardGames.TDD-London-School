@@ -1,6 +1,6 @@
-package Mappers.ObjectToStringMappers;
+package Mapping.ObjectToStringMappers;
 
-import Mappers.ObjectToStringMapper;
+import Mapping.ObjectToStringMapper;
 
 import java.util.HashMap;
 

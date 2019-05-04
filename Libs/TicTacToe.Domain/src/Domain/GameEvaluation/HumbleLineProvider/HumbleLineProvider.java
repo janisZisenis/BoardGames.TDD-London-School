@@ -1,7 +1,7 @@
 package Domain.GameEvaluation.HumbleLineProvider;
 
-import Data.Field.Field;
-import Data.Line.Line;
+import Domain.Data.Field.Field;
+import Domain.Data.Line.Line;
 import Domain.GameEvaluation.GameEvaluator.LineProvider;
 
 public class HumbleLineProvider implements LineProvider {

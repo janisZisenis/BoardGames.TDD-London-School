@@ -22,7 +22,7 @@ import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
-import Mappers.MarkToStringMappers.MarkToXOMapper;
+import Mapping.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import View.FXInputAlerter;
 import javafx.application.Application;

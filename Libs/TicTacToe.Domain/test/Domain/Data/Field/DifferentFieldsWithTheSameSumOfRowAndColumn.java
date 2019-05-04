@@ -1,4 +1,4 @@
-package Data.Field;
+package Domain.Data.Field;
 
 import org.junit.jupiter.api.Test;
 

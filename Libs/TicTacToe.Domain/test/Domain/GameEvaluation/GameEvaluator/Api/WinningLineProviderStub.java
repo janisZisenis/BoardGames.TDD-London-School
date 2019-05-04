@@ -1,6 +1,6 @@
 package Domain.GameEvaluation.GameEvaluator.Api;
 
-import Data.Line.Line;
+import Domain.Data.Line.Line;
 
 public class WinningLineProviderStub implements WinningLineProvider {
     private Line winning = null;

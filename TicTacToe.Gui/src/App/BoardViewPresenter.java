@@ -1,7 +1,7 @@
 package App;
 
-import Data.Field.Field;
-import Data.Line.Line;
+import Domain.Data.Field.Field;
+import Domain.Data.Line.Line;
 import Domain.Board.ListenableBoard.BoardListener;
 import Domain.Board.Mark;
 import Domain.Input.Input;

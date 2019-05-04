@@ -1,6 +1,6 @@
 package Bussiness.BoardRenderer;
 
-import Data.Line.Line;
+import Domain.Data.Line.Line;
 
 public interface BoardView {
     void showBoard();

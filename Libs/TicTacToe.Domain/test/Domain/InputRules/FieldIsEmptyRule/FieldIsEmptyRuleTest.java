@@ -1,6 +1,6 @@
 package Domain.InputRules.FieldIsEmptyRule;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Input.Input;
 import org.junit.jupiter.api.Test;
 

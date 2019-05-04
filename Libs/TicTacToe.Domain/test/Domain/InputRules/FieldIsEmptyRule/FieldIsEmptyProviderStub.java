@@ -1,7 +1,6 @@
 package Domain.InputRules.FieldIsEmptyRule;
 
-import Data.Field.Field;
-import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
+import Domain.Data.Field.Field;
 
 import java.util.Arrays;
 

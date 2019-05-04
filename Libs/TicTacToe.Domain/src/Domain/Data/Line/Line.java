@@ -1,6 +1,6 @@
-package Data.Line;
+package Domain.Data.Line;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 
 public class Line {
 

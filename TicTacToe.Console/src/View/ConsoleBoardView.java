@@ -1,12 +1,12 @@
 package View;
 
 import Bussiness.BoardRenderer.BoardView;
-import Data.Field.Field;
-import Data.Line.Line;
+import Domain.Data.Field.Field;
+import Domain.Data.Line.Line;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.Board.BoardBoundaries;
 import Domain.Board.Mark;
-import Mappers.MarkToStringMapper;
+import Mapping.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 

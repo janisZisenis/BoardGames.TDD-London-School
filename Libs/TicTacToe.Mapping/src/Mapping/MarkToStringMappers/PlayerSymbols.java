@@ -1,4 +1,4 @@
-package Mappers.MarkToStringMappers;
+package Mapping.MarkToStringMappers;
 
 public abstract class PlayerSymbols {
 

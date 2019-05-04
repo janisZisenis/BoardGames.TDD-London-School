@@ -1,6 +1,6 @@
-package Mappers.ObjectToStringMappers;
+package Mapping.ObjectToStringMappers;
 
-import Mappers.ObjectToStringMapper;
+import Mapping.ObjectToStringMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

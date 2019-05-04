@@ -1,6 +1,6 @@
 package Messaging.Player.MessagingPlayer;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Domain.Players.PlayerContext;
 import Domain.Players.PlayerImp;
 
