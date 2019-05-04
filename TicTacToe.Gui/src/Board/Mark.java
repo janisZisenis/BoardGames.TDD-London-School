@@ -1,4 +1,4 @@
-package Lib.Data;
+package Board;
 
 public enum Mark {
     John, Haley

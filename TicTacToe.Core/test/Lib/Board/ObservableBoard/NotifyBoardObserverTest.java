@@ -2,8 +2,8 @@ package Lib.Board.ObservableBoard;
 
 import Lib.Board.Board;
 import Lib.Board.BoardDummy;
-import Lib.Data.Field.Field;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Lib.Board.Mark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

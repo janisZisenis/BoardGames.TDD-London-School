@@ -2,10 +2,10 @@ package View;
 
 import Lib.Board.ReadOnlyBoard;
 import Lib.BoardRenderer.BoardView;
-import Lib.Data.BoardBoundaries;
-import Lib.Data.Field.Field;
-import Lib.Data.Line;
-import Lib.Data.Mark;
+import Lib.Board.BoardBoundaries;
+import Data.Field.Field;
+import Data.Line.Line;
+import Lib.Board.Mark;
 import Mappers.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {

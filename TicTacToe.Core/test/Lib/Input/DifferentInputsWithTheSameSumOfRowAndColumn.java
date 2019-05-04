@@ -1,4 +1,4 @@
-package Lib.Data.Input;
+package Lib.Input;
 
 import org.junit.jupiter.api.Test;
 

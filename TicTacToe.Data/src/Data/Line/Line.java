@@ -1,6 +1,6 @@
-package Lib.Data;
+package Data.Line;
 
-import Lib.Data.Field.Field;
+import Data.Field.Field;
 
 public class Line {
 

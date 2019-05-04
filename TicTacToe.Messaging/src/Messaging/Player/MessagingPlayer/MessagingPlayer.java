@@ -1,7 +1,6 @@
 package Messaging.Player.MessagingPlayer;
 
-
-import Lib.Data.Field.Field;
+import Data.Field.Field;
 import Lib.Players.PlayerContext;
 import Lib.Players.PlayerImp;
 

@@ -1,8 +1,8 @@
 package Lib.Players;
 
-import Lib.Data.Input.Input;
-import Lib.Data.Mark;
-import Lib.Data.Field.Field;
+import Lib.Input.Input;
+import Lib.Board.Mark;
+import Data.Field.Field;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {

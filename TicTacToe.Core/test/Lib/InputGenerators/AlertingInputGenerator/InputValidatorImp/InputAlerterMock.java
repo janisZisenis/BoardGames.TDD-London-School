@@ -1,6 +1,6 @@
 package Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

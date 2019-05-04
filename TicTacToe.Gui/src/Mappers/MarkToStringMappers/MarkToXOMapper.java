@@ -1,6 +1,6 @@
 package Mappers.MarkToStringMappers;
 
-import Data.Mark;
+import Board.Mark;
 import Mappers.MarkToStringMapper;
 
 public class MarkToXOMapper implements MarkToStringMapper {

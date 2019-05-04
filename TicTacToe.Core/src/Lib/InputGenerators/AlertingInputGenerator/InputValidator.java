@@ -1,6 +1,6 @@
 package Lib.InputGenerators.AlertingInputGenerator;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 
 public interface InputValidator {
     boolean isValid(Input input);

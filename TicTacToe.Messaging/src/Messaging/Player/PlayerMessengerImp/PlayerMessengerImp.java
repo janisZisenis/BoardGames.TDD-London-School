@@ -1,7 +1,7 @@
 package Messaging.Player.PlayerMessengerImp;
 
 import Messaging.Messenger;
-import Lib.Data.Field.Field;
+import Data.Field.Field;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
 
 public class PlayerMessengerImp implements PlayerMessenger {

@@ -1,6 +1,6 @@
 package Lib.Players;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 
 public class CountingGeneratorStub implements InputGenerator {
     private int count = 0;

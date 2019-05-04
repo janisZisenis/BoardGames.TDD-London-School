@@ -1,7 +1,7 @@
 package Lib.BoardRenderer;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Line;
+import Data.Field.Field;
+import Data.Line.Line;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

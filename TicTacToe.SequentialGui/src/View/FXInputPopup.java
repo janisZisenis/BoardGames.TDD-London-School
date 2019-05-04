@@ -1,6 +1,6 @@
 package View;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 import Lib.Messages.GenerationMessages;
 import Lib.Players.InputGenerator;
 import javafx.scene.control.TextInputDialog;

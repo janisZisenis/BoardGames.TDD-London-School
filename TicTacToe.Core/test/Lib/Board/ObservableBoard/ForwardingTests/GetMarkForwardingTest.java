@@ -1,8 +1,8 @@
 package Lib.Board.ObservableBoard.ForwardingTests;
 
 import Lib.Board.BoardStub;
-import Lib.Data.Mark;
-import Lib.Data.Field.Field;
+import Lib.Board.Mark;
+import Data.Field.Field;
 import Lib.Board.ObservableBoard.ObservableBoard;
 import org.junit.jupiter.api.Test;
 

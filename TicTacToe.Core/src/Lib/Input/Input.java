@@ -1,4 +1,4 @@
-package Data.Input;
+package Lib.Input;
 
 public class Input {
     private final int row;

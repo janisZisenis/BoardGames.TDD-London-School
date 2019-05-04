@@ -4,7 +4,7 @@ import Lib.Board.Board;
 import Lib.Board.HashingBoard.HashingBoard;
 import Lib.BoardRenderer.BoardRenderer;
 import Lib.BoardRenderer.WinningLineProvider;
-import Lib.Data.Mark;
+import Lib.Board.Mark;
 import Lib.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Lib.GameEvaluation.GameEvaluator.GameEvaluator;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;

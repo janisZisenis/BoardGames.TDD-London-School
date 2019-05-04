@@ -1,8 +1,8 @@
 package Lib.GameEvaluation.EquallyMarkedLineEvaluator;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Line;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Data.Line.Line;
+import Lib.Board.Mark;
 import Lib.GameEvaluation.GameEvaluator.LineEvaluator;
 
 public class EquallyMarkedLineEvaluator implements LineEvaluator {

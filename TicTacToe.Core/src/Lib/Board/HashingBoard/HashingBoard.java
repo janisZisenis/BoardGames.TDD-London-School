@@ -1,8 +1,8 @@
 package Lib.Board.HashingBoard;
 
 import Lib.Board.Board;
-import Lib.Data.Field.Field;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Lib.Board.Mark;
 
 import java.util.HashMap;
 

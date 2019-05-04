@@ -1,7 +1,7 @@
 package Lib.InputRules.FieldExistsRule;
 
-import Lib.Data.BoardBoundaries;
-import Lib.Data.Input.Input;
+import Lib.Board.BoardBoundaries;
+import Lib.Input.Input;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 
 public class FieldExistsRule implements InputRule {

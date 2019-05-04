@@ -1,8 +1,8 @@
 package Messaging.Player.MessagingPlayer;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Input.Input;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Lib.Input.Input;
+import Lib.Board.Mark;
 import Lib.Players.InputGenerator;
 import Lib.Players.MarkFieldService;
 import Lib.Players.PlayerContext;

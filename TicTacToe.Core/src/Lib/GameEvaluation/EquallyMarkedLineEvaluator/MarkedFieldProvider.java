@@ -1,7 +1,7 @@
 package Lib.GameEvaluation.EquallyMarkedLineEvaluator;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Lib.Board.Mark;
 
 public interface MarkedFieldProvider {
 

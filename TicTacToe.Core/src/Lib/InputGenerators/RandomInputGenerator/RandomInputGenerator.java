@@ -1,7 +1,7 @@
 package Lib.InputGenerators.RandomInputGenerator;
 
-import Lib.Data.BoardBoundaries;
-import Lib.Data.Input.Input;
+import Lib.Board.BoardBoundaries;
+import Lib.Input.Input;
 import Lib.Players.InputGenerator;
 
 import java.util.Random;

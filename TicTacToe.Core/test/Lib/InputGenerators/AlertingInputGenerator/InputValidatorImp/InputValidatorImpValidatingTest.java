@@ -1,6 +1,6 @@
 package Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.InputRuleStub;
 import org.junit.jupiter.api.Test;
 

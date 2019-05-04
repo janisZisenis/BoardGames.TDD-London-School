@@ -1,6 +1,6 @@
 package Lib.BoardRenderer;
 
-import Lib.Data.Line;
+import Data.Line.Line;
 
 public class BoardViewSpy implements BoardView {
 

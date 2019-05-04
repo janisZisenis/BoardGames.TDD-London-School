@@ -1,7 +1,6 @@
 package Lib.Board;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Mark;
+import Data.Field.Field;
 
 public interface ReadOnlyBoard {
 

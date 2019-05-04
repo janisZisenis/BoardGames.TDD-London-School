@@ -1,10 +1,10 @@
 package View;
 
 import Board.HashingBoard.HashingBoard;
-import Data.BoardBoundaries;
+import Board.BoardBoundaries;
 import Data.Field.Field;
-import Data.Line;
-import Data.Mark;
+import Data.Line.Line;
+import Board.Mark;
 import Mappers.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

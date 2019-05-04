@@ -1,7 +1,7 @@
 package Lib.GameEvaluation.EquallyMarkedLineEvaluator;
 
-import Lib.Data.Mark;
-import Lib.Data.Field.Field;
+import Lib.Board.Mark;
+import Data.Field.Field;
 
 import java.util.HashMap;
 

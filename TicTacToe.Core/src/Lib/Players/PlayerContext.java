@@ -1,6 +1,6 @@
 package Lib.Players;
 
-import Lib.Data.Mark;
+import Lib.Board.Mark;
 
 public class PlayerContext {
 

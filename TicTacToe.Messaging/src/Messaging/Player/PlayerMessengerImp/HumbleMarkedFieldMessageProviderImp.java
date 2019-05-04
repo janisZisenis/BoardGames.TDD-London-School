@@ -1,6 +1,6 @@
 package Messaging.Player.PlayerMessengerImp;
 
-import Lib.Data.Field.Field;
+import Data.Field.Field;
 
 public class HumbleMarkedFieldMessageProviderImp implements MarkedFieldMessageProvider {
 
@@ -8,7 +8,7 @@ public class HumbleMarkedFieldMessageProviderImp implements MarkedFieldMessagePr
         int row = field.getRow();
         int col = field.getColumn();
 
-        return "Field [" + row + ", " + col + "] was marked!";
+        return "Data.Field [" + row + ", " + col + "] was marked!";
     }
 
 }

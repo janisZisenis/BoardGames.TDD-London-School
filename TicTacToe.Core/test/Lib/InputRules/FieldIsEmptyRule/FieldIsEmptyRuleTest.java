@@ -1,7 +1,7 @@
 package Lib.InputRules.FieldIsEmptyRule;
 
-import Lib.Data.Input.Input;
-import Lib.Data.Field.Field;
+import Lib.Input.Input;
+import Data.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

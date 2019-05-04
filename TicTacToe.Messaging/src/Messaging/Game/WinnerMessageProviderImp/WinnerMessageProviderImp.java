@@ -1,6 +1,6 @@
 package Messaging.Game.WinnerMessageProviderImp;
 
-import Lib.Data.Mark;
+import Lib.Board.Mark;
 import Lib.GameEvaluation.GameEvaluator.WinnerProvider;
 import Mappers.MarkToStringMapper;
 import Messaging.Game.GameOverMessageProviderImp.WinnerMessageProvider;

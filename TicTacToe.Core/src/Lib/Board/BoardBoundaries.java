@@ -1,4 +1,4 @@
-package Data;
+package Lib.Board;
 
 public abstract class BoardBoundaries {
 

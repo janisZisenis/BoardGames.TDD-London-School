@@ -1,6 +1,6 @@
 package Lib.GameEvaluation.GameEvaluator;
 
-import Lib.Data.Line;
+import Data.Line.Line;
 
 public class LineProviderStub implements LineProvider {
     private Line[] lines = {};

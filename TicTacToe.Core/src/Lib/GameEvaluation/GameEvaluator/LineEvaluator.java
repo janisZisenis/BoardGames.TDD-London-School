@@ -1,7 +1,7 @@
 package Lib.GameEvaluation.GameEvaluator;
 
-import Lib.Data.Line;
-import Lib.Data.Mark;
+import Data.Line.Line;
+import Lib.Board.Mark;
 
 public interface LineEvaluator {
     boolean isWinningLine(Line line);

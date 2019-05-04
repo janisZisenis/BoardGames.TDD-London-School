@@ -1,6 +1,6 @@
 package Lib.InputRules.CompositeInputRule;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 
 import java.util.LinkedList;

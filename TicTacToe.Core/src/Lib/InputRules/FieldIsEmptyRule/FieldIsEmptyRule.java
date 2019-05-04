@@ -1,7 +1,7 @@
 package Lib.InputRules.FieldIsEmptyRule;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Input.Input;
+import Data.Field.Field;
+import Lib.Input.Input;
 import Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
 
 public class FieldIsEmptyRule implements InputRule {

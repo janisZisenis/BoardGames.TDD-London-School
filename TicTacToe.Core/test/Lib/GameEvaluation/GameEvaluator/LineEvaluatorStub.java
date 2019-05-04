@@ -1,7 +1,7 @@
 package Lib.GameEvaluation.GameEvaluator;
 
-import Lib.Data.Mark;
-import Lib.Data.Line;
+import Lib.Board.Mark;
+import Data.Line.Line;
 
 import java.util.HashMap;
 

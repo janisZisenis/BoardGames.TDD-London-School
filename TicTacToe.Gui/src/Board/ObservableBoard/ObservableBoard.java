@@ -1,8 +1,8 @@
 package Board.ObservableBoard;
 
 import Board.Board;
+import Board.Mark;
 import Data.Field.Field;
-import Data.Mark;
 
 import java.util.LinkedList;
 

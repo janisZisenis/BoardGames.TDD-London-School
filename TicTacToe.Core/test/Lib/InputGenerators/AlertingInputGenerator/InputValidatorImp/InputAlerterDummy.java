@@ -1,6 +1,6 @@
 package Lib.InputGenerators.AlertingInputGenerator.InputValidatorImp;
 
-import Lib.Data.Input.Input;
+import Lib.Input.Input;
 
 public class InputAlerterDummy implements InputAlerter {
 

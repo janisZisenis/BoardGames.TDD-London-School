@@ -1,8 +1,8 @@
 package Lib.Players;
 
-import Lib.Data.Field.Field;
-import Lib.Data.Input.Input;
-import Lib.Data.Mark;
+import Data.Field.Field;
+import Lib.Input.Input;
+import Lib.Board.Mark;
 import Lib.TwoPlayerTurn.Player;
 
 public class PlayerImp implements Player {

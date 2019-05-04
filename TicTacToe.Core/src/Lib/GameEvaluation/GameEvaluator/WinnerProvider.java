@@ -1,6 +1,6 @@
 package Lib.GameEvaluation.GameEvaluator;
 
-import Lib.Data.Mark;
+import Lib.Board.Mark;
 
 public interface WinnerProvider {
     Mark getWinner();

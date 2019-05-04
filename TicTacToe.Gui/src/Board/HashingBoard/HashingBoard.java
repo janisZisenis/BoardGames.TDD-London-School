@@ -2,7 +2,7 @@ package Board.HashingBoard;
 
 import Board.Board;
 import Data.Field.Field;
-import Data.Mark;
+import Board.Mark;
 
 import java.util.HashMap;
 
