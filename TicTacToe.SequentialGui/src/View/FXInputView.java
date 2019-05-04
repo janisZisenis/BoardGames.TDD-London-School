@@ -1,7 +1,7 @@
 package View;
 
-import Core.Input.Input;
-import Core.Players.InputGenerator;
+import Gaming.Input.Input;
+import Gaming.Players.InputGenerator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

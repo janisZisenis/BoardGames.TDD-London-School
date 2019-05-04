@@ -1,8 +1,11 @@
 package View;
 
+import App.BoardDelegate;
 import Board.BoardBoundaries;
 import Board.HashingBoard.HashingBoard;
 import Board.Mark;
+import Gaming.BoardRenderer.BoardView;
+import Gaming.Input.Input;
 import Data.Field.Field;
 import Data.Line.Line;
 import Mappers.MarkToStringMapper;
@@ -16,7 +19,7 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane {
+public class FXBoardView extends Pane implements BoardView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
     private final HashMap<FXTile, Field> fields = new HashMap<>();
@@ -26,6 +29,7 @@ public class FXBoardView extends Pane {
 
     private final HashingBoard board;
     private final MarkToStringMapper mapper;
+    private BoardDelegate delegate;
 
     public FXBoardView(int prefSideLength, HashingBoard board, MarkToStringMapper mapper) {
         this.board = board;
@@ -34,6 +38,10 @@ public class FXBoardView extends Pane {
 
         initTiles();
         setPrefSize(sideLength, sideLength);
+    }
+
+    public void setDelegate(BoardDelegate delegate) {
+        this.delegate = delegate;
     }
 
     private int getRoundedSideLength(int preferredSideLength) {
@@ -112,16 +120,20 @@ public class FXBoardView extends Pane {
         return first.equals(f) || second.equals(f) || third.equals(f);
     }
 
-    int counter = 0;
     private void onTileClicked(FXTile tile) {
-        Field f = fields.get(tile);
-        Mark m = Mark.John;
-        if(counter % 2 != 0)
-            m = Mark.Haley;
+        if(delegate ==  null)
+            return;
 
-        board.mark(f, m);
-        showBoard();
-        counter++;
+        Field f = fields.get(tile);
+        Input input = makeInput(f);
+
+        delegate.onInputGenerated(input);
+    }
+
+    private Input makeInput(Field f) {
+        int row = f.getRow();
+        int col = f.getColumn();
+        return new Input(row, col);
     }
 
     private class FXTile extends StackPane {

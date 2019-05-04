@@ -1,7 +1,7 @@
 package App;
 
 
-import Core.GameImp.Game;
+import Gaming.GameImp.Game;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

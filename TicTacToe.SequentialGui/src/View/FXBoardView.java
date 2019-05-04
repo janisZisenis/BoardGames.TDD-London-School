@@ -3,7 +3,7 @@ package View;
 import Api.MarkedFieldProvider;
 import Board.BoardBoundaries;
 import Board.Mark;
-import Core.BoardRenderer.BoardView;
+import Gaming.BoardRenderer.BoardView;
 import Data.Field.Field;
 import Data.Line.Line;
 import Mappers.MarkToStringMapper;

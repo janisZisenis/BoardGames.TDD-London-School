@@ -1,6 +1,6 @@
 package App;
 
-import Core.GameImp.Game;
+import Gaming.GameImp.Game;
 
 public class Main {
 
