@@ -1,4 +1,4 @@
-package Board.ObservableBoard;
+package Board.ListenableBoard;
 
 import Board.Board;
 import Board.Mark;
@@ -7,34 +7,30 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ObservingOrderShuntTest implements Observer, Board {
+public class NotifyingListenerOrderShuntTest implements BoardListener, Board {
 
     private Board board = this;
-    private ObservableBoard sut = new ObservableBoard(board);
+    private ListenableBoard sut = new ListenableBoard(board);
     
     private String logString = "";
 
     @Test
-    void IfOneObserverIsAttached_ItShouldBeUpdatedWhenMarkingAField() {
-        makeShuntIsAttachedAsObserver();
+    void IfListenerIsSet_ItShouldBeUpdatedWhenAfterMarkingTheField() {
+        sut.setListener(this);
 
         sut.mark(new Field(0, 0), Mark.John);
 
         String actual = logString;
-        String expected = "MarkedUpdated";
+        String expected = "marked updatedField ";
         assertEquals(expected, actual);
     }
 
-    private void makeShuntIsAttachedAsObserver() {
-        sut.attach(this);
-    }
-
-    public void update() {
-        logString += "Updated";
+    public void udpateField(Field f) {
+        logString += "updatedField ";
     }
 
     public void mark(Field f, Mark m) {
-        logString += "Marked";
+        logString += "marked ";
     }
 
     public boolean isEmpty(Field f) {

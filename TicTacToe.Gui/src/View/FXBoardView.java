@@ -1,13 +1,13 @@
 package View;
 
 import App.BoardDelegate;
+import Board.Board;
 import Board.BoardBoundaries;
-import Board.HashingBoard.HashingBoard;
 import Board.Mark;
-import Gaming.BoardRenderer.BoardView;
-import Gaming.Input.Input;
 import Data.Field.Field;
 import Data.Line.Line;
+import Gaming.BoardRenderer.BoardView;
+import Gaming.Input.Input;
 import Mappers.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -27,11 +27,11 @@ public class FXBoardView extends Pane implements BoardView {
     private final int sideLength;
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 
-    private final HashingBoard board;
+    private final Board board;
     private final MarkToStringMapper mapper;
     private BoardDelegate delegate;
 
-    public FXBoardView(HashingBoard board, MarkToStringMapper mapper) {
+    public FXBoardView(Board board, MarkToStringMapper mapper) {
         this.board = board;
         this.mapper = mapper;
         this.sideLength = getRoundedSideLength(250);
@@ -91,7 +91,6 @@ public class FXBoardView extends Pane implements BoardView {
     }
 
     public void showWinningLine(Line line) {
-        showBoard();
         highlight(line);
         lowlightOther(line);
     }

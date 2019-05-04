@@ -1,15 +1,15 @@
-package Board.ObservableBoard.ForwardingTests;
+package Board.ListenableBoard.ForwardingTests;
 
 import Board.BoardMock;
+import Board.ListenableBoard.ListenableBoard;
 import Board.Mark;
-import Board.ObservableBoard.ObservableBoard;
 import Data.Field.Field;
 import org.junit.jupiter.api.Test;
 
 public class MarkFieldForwardingTest {
 
     private BoardMock board = new BoardMock();
-    private ObservableBoard sut = new ObservableBoard(board);
+    private ListenableBoard sut = new ListenableBoard(board);
     private Field field;
     private Mark mark;
 
