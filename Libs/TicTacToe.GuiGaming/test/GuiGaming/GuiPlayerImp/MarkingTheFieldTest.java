@@ -1,15 +1,16 @@
-package GuiGaming;
+package GuiGaming.GuiPlayerImp;
 
+import Api.MarkFieldServiceSpy;
 import Board.Mark;
 import Data.Field.Field;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class GuiPlayerTest {
+public class MarkingTheFieldTest {
 
     private MarkFieldServiceSpy service = new MarkFieldServiceSpy();
-    private GuiPlayer sut;
+    private GuiPlayerImp sut;
 
     @Test
     void IfPlayerIsJohn_ShouldMarkAsJohn() {
@@ -62,11 +63,11 @@ public class GuiPlayerTest {
     }
 
     private void makeGuiPlayerIsJohn() {
-        sut = new GuiPlayer(Mark.John, service);
+        sut = new GuiPlayerImp(Mark.John, service);
     }
 
     private void makeGuiPlayerIsHaley() {
-        sut = new GuiPlayer(Mark.Haley, service);
+        sut = new GuiPlayerImp(Mark.Haley, service);
     }
 
 }

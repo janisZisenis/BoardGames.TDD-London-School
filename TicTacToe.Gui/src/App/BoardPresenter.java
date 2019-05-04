@@ -5,15 +5,14 @@ import Board.Mark;
 import Data.Field.Field;
 import Gaming.BoardRenderer.BoardView;
 import Gaming.Input.Input;
-import GuiGaming.GuiPlayer;
+import GuiGaming.GuiPlayerImp.GuiPlayerImp;
+import GuiGaming.GuiTurn.GuiPlayer;
+import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 
 public class BoardPresenter implements BoardDelegate {
 
     private BoardView view;
-
-    private GuiPlayer john;
-    private GuiPlayer haley;
-    private GuiPlayer current;
+    private GuiTwoPlayerTurn turn;
 
     public BoardPresenter(BoardView view, Board board) {
         this.view = view;
@@ -21,15 +20,14 @@ public class BoardPresenter implements BoardDelegate {
     }
 
     private void initGame(Board board) {
-        john = current = new GuiPlayer(Mark.John, board);
-        haley = new GuiPlayer(Mark.Haley, board);
+        GuiPlayer john = new GuiPlayerImp(Mark.John, board);
+        GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
+        turn = new GuiTwoPlayerTurn(john, haley);
     }
 
     public void onInputGenerated(Input input) {
         Field f = makeField(input);
-
-        current.mark(f);
-        current = current == john ? haley : john;
+        turn.process(f);
 
         view.showBoard();
     }

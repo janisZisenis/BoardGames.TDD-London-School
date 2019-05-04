@@ -1,6 +1,5 @@
-package GuiGaming;
+package Api;
 
-import Api.MarkFieldService;
 import Board.Mark;
 import Data.Field.Field;
 
