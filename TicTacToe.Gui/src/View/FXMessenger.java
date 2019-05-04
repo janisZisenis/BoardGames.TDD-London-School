@@ -1,11 +1,10 @@
 package View;
 
-import Messaging.Messenger;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
-public class FXMessenger extends Pane implements Messenger {
+public class FXMessenger extends Pane {
 
     private final TextArea text = new TextArea();
 
@@ -19,7 +18,7 @@ public class FXMessenger extends Pane implements Messenger {
         getChildren().addAll(text);
     }
 
-    public void publish(String message) {
+    public void publish(Object message) {
         Platform.runLater(() -> {
             text.appendText(message + "\n");
         });

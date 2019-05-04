@@ -6,14 +6,13 @@ import javafx.scene.layout.Pane;
 
 public class FXShell extends Pane {
 
-    public FXShell(FXBoardView board, FXInputView input, FXMessenger messenger) {
+    public FXShell(FXBoardView board, FXMessenger messenger) {
         GridPane grid = makeGrid();
 
         GridPane.setConstraints(board, 0, 0);
-        GridPane.setConstraints(input, 1, 0);
-        GridPane.setConstraints(messenger, 0, 1, 2, 1);
+        GridPane.setConstraints(messenger, 0, 1);
 
-        grid.getChildren().addAll(board, input, messenger);
+        grid.getChildren().addAll(board, messenger);
 
         getChildren().add(grid);
     }

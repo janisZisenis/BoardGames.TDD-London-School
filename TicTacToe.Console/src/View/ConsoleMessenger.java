@@ -4,7 +4,7 @@ import Messaging.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 
-    public void publish(String message) {
+    public void publish(Object message) {
         System.out.println(message);
     }
 

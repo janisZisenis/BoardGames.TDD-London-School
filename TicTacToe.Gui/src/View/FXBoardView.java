@@ -1,13 +1,14 @@
 package View;
 
-import Lib.Board.ReadOnlyBoard;
-import Lib.BoardRenderer.BoardView;
-import Lib.Data.BoardBoundaries;
-import Lib.Data.Field.Field;
-import Lib.Data.Line;
-import Lib.Data.Mark;
+import App.BoardDelegate;
+import Board.BoardBoundaries;
+import Board.HashingBoard.HashingBoard;
+import Board.Mark;
+import Gaming.BoardRenderer.BoardView;
+import Gaming.Input.Input;
+import Data.Field.Field;
+import Data.Line.Line;
 import Mappers.MarkToStringMapper;
-import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -21,20 +22,26 @@ import java.util.HashMap;
 public class FXBoardView extends Pane implements BoardView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
+    private final HashMap<FXTile, Field> fields = new HashMap<>();
 
     private final int sideLength;
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 
-    private final ReadOnlyBoard board;
+    private final HashingBoard board;
     private final MarkToStringMapper mapper;
+    private BoardDelegate delegate;
 
-    public FXBoardView(int prefSideLength, ReadOnlyBoard board, MarkToStringMapper mapper) {
+    public FXBoardView(HashingBoard board, MarkToStringMapper mapper) {
         this.board = board;
         this.mapper = mapper;
-        this.sideLength = getRoundedSideLength(prefSideLength);
+        this.sideLength = getRoundedSideLength(250);
 
         initTiles();
         setPrefSize(sideLength, sideLength);
+    }
+
+    public void setDelegate(BoardDelegate delegate) {
+        this.delegate = delegate;
     }
 
     private int getRoundedSideLength(int preferredSideLength) {
@@ -56,23 +63,17 @@ public class FXBoardView extends Pane implements BoardView {
         FXTile tile = new FXTile(tileLength);
         tile.setTranslateX((double)(col * sideLength / rowColumnCount));
         tile.setTranslateY((double)(row * sideLength / rowColumnCount));
+        tile.setClickedDelegate(this);
         return tile;
     }
 
     private void addTile(Field f, FXTile t) {
         tiles.put(f, t);
+        fields.put(t ,f);
         getChildren().add(t);
     }
 
-
-
     public void showBoard() {
-        Platform.runLater(() -> {
-            showBoardHelper();
-        });
-    }
-
-    private void showBoardHelper() {
         for(int row = 0; row < rowColumnCount; row++) {
             for(int col = 0; col < rowColumnCount; col++) {
                 Field f = new Field(row, col);
@@ -89,15 +90,7 @@ public class FXBoardView extends Pane implements BoardView {
         }
     }
 
- 
-
     public void showWinningLine(Line line) {
-        Platform.runLater(() -> {
-            showWinningLineHelper(line);
-        });
-    }
-
-    private void showWinningLineHelper(Line line) {
         showBoard();
         highlight(line);
         lowlightOther(line);
@@ -127,8 +120,21 @@ public class FXBoardView extends Pane implements BoardView {
         return first.equals(f) || second.equals(f) || third.equals(f);
     }
 
+    private void onTileClicked(FXTile tile) {
+        if(delegate ==  null)
+            return;
 
+        Field f = fields.get(tile);
+        Input input = makeInput(f);
 
+        delegate.onInputGenerated(input);
+    }
+
+    private Input makeInput(Field f) {
+        int row = f.getRow();
+        int col = f.getColumn();
+        return new Input(row, col);
+    }
 
     private class FXTile extends StackPane {
 
@@ -143,6 +149,7 @@ public class FXBoardView extends Pane implements BoardView {
         private Rectangle border;
         private FXTextSizeTransition growing;
         private FXTextSizeTransition shrinking;
+        private FXBoardView delegate = null;
 
 
         public FXTile(int sideLength) {
@@ -156,6 +163,7 @@ public class FXBoardView extends Pane implements BoardView {
             initTextSizeTransitions();
             initBorder(sideLength);
             addControls();
+            registerClickedHandler();
 
             setAlignment(Pos.CENTER);
         }
@@ -180,6 +188,14 @@ public class FXBoardView extends Pane implements BoardView {
             getChildren().addAll(label, border);
         }
 
+        private void registerClickedHandler() {
+            setOnMouseClicked(e -> onMouseClicked());
+        }
+
+        private void onMouseClicked() {
+            if(delegate != null)
+                delegate.onTileClicked(this);
+        }
 
         public void setText(String s) {
             label.setText(s);
@@ -204,5 +220,10 @@ public class FXBoardView extends Pane implements BoardView {
         private int getLowlightSize() {
             return (int)(sideLength * fontLowlightRatio);
         }
+
+        public void setClickedDelegate(FXBoardView delegate) {
+            this.delegate = delegate;
+        }
     }
+
 }
