@@ -1,8 +1,8 @@
 package View;
 
-import Gaming.Input.Input;
-import Gaming.Messages.GenerationMessages;
-import Gaming.Players.InputGenerator;
+import Bussiness.Input.Input;
+import Bussiness.Messages.GenerationMessages;
+import Bussiness.Players.InputGenerator;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.Pane;
 

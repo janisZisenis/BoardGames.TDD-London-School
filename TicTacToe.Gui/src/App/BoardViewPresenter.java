@@ -4,7 +4,7 @@ import Board.ListenableBoard.BoardListener;
 import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Gaming.Input.Input;
+import Bussiness.Input.Input;
 import View.FXBoardView;
 
 public class BoardViewPresenter implements BoardViewDelegate, BoardListener {

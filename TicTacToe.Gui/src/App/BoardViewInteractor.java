@@ -4,8 +4,8 @@ import Api.MarkedFieldProvider;
 import Board.Mark;
 import Data.Field.Field;
 import Data.Line.Line;
-import Gaming.BoardRenderer.WinningLineProvider;
-import Gaming.Input.Input;
+import Bussiness.BoardRenderer.WinningLineProvider;
+import Bussiness.Input.Input;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 
 public class BoardViewInteractor {
