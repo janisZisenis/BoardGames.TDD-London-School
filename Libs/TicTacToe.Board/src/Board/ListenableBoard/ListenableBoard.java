@@ -30,8 +30,8 @@ public class ListenableBoard implements Board {
     }
 
     public void mark(Field f, Mark m) {
-        notify(f);
         board.mark(f, m);
+        notify(f);
     }
 
     private void notify(Field f) {

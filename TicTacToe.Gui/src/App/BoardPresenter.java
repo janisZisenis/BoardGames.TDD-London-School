@@ -1,5 +1,6 @@
 package App;
 
+import Board.ListenableBoard.BoardListener;
 import Data.Field.Field;
 import Data.Line.Line;
 import Gaming.BoardRenderer.BoardView;
@@ -9,7 +10,7 @@ import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Gaming.Input.Input;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 
-public class BoardPresenter implements BoardDelegate {
+public class BoardPresenter implements BoardDelegate, BoardListener {
 
     private final BoardView view;
     private final InputProcessor processor;
@@ -26,12 +27,10 @@ public class BoardPresenter implements BoardDelegate {
     public void onInputGenerated(Input input) {
         if(!rule.isGameOver()) {
             processor.process(input);
-
-            onFieldMarked(new Field(input.getRow(), input.getColumn()));
         }
     }
 
-    private void onFieldMarked(Field f) {
+    public void udpateField(Field f) {
         view.showBoard();
 
         if(rule.isGameOver() && provider.hasWinningLine()) {
@@ -39,5 +38,4 @@ public class BoardPresenter implements BoardDelegate {
             view.showWinningLine(line);
         }
     }
-
 }

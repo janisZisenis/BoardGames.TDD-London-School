@@ -2,6 +2,7 @@ package App;
 
 
 import Board.HashingBoard.HashingBoard;
+import Board.ListenableBoard.ListenableBoard;
 import Board.Mark;
 import Gaming.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Gaming.GameEvaluation.GameEvaluator.GameEvaluator;
@@ -34,7 +35,7 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        HashingBoard board = new HashingBoard();
+        ListenableBoard board = new ListenableBoard(new HashingBoard());
         MarkToXOMapper mapper = new MarkToXOMapper();
 
         CompositeInputRule inputRule = new CompositeInputRule();
@@ -62,6 +63,7 @@ public class Main extends Application {
         FXBoardView boardView = new FXBoardView(board, mapper);
         BoardPresenter presenter = new BoardPresenter(boardView, processor, gameOverRule, evaluator);
         boardView.setDelegate(presenter);
+        board.setListener(presenter);
         ///// new to Gui App /////
 
         primaryStage.setTitle("TicTacToe");
