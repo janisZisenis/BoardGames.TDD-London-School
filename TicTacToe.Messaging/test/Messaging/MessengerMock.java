@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MessengerMock implements Messenger {
 
     private boolean didPublish = false;
-    private String actual = "";
+    private Object actual = "";
     private String expected = "";
 
-    public void publish(String message) {
+    public void publish(Object message) {
         this.didPublish = true;
         this.actual = message;
     }

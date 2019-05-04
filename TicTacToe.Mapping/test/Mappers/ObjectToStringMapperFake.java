@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class ObjectToStringMapperFake implements ObjectToStringMapper {
 
-    private HashMap<Object, String> strings = new HashMap();
+    private HashMap<Object, String> strings = new HashMap<>();
 
     public String map(Object o) {
         throwIfIsNotMappable(o);
