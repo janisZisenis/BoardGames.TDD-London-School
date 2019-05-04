@@ -91,7 +91,6 @@ public class FXBoardView extends Pane implements BoardView {
     }
 
     public void showWinningLine(Line line) {
-        showBoard();
         highlight(line);
         lowlightOther(line);
     }
