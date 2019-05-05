@@ -1,12 +1,11 @@
 package GuiGaming.GuiPlayerImp;
 
-import Api.MarkFieldService;
-import Board.Mark;
-import Data.Field.Field;
+import Domain.Data.Field.Field;
+import Domain.Players.MarkFieldService;
+import Domain.Data.Mark;
 import GuiGaming.GuiTurn.GuiPlayer;
 
 public class GuiPlayerImp implements GuiPlayer {
-
 
     private final MarkFieldService service;
     private final Mark mark;

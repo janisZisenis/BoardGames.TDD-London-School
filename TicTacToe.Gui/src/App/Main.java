@@ -1,28 +1,28 @@
 package App;
 
 
-import Board.HashingBoard.HashingBoard;
-import Board.ListenableBoard.ListenableBoard;
-import Board.Mark;
-import Gaming.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import Gaming.GameEvaluation.GameEvaluator.GameEvaluator;
-import Gaming.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Domain.Board.HashingBoard.HashingBoard;
+import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Data.Mark;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
+import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
+import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Domain.InputGenerators.AlertingInputGenerator.InputValidator;
+import Domain.InputRules.CompositeInputRule.CompositeInputRule;
+import Domain.InputRules.FieldExistsRule.FieldExistsRule;
+import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import Domain.InputValidatorImp.InputValidatorImp;
+import Domain.NumberOfMovesRule.NumberOfMovesRule;
+import Domain.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import Gaming.GameOverRules.NumberOfMovesRule.NumberOfMovesRule;
 import Gaming.GameOverRules.WinnerRule.WinnerRule;
-import Gaming.InputGenerators.AlertingInputGenerator.InputValidator;
-import Gaming.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputValidatorImp;
-import Gaming.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
-import Gaming.InputRules.CompositeInputRule.CompositeInputRule;
-import Gaming.InputRules.FieldExistsRule.FieldExistsRule;
-import Gaming.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Gaming.Messages.AlertingMessages;
 import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
-import Mappers.MarkToStringMappers.MarkToXOMapper;
+import Mapping.MarkToStringMappers.MarkToXOMapper;
+import Messages.AlertingMessages;
 import View.FXBoardView;
 import View.FXInputAlerter;
 import javafx.application.Application;
@@ -60,8 +60,9 @@ public class Main extends Application {
         GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
         GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
         InputProcessor processor = new ValidatingInputProcessor(turn, validator);
-        FXBoardView boardView = new FXBoardView(board, mapper);
-        BoardPresenter presenter = new BoardPresenter(boardView, processor, gameOverRule, evaluator);
+        FXBoardView boardView = new FXBoardView(mapper);
+        BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
+        BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
         boardView.setDelegate(presenter);
         board.setListener(presenter);
         ///// new to Gui App /////

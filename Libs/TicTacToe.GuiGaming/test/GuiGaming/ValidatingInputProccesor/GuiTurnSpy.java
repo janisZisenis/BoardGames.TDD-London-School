@@ -1,6 +1,6 @@
 package GuiGaming.ValidatingInputProccesor;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import GuiGaming.ValidatingInputProcessor.GuiTurn;
 
 public class GuiTurnSpy implements GuiTurn {

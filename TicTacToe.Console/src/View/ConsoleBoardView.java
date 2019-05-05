@@ -1,12 +1,12 @@
 package View;
 
-import Api.MarkedFieldProvider;
-import Board.BoardBoundaries;
-import Board.Mark;
-import Gaming.BoardRenderer.BoardView;
-import Data.Field.Field;
-import Data.Line.Line;
-import Mappers.MarkToStringMapper;
+import Bussiness.BoardRenderer.BoardView;
+import Domain.Data.Field.Field;
+import Domain.Data.Line.Line;
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
+import Domain.Data.BoardBoundaries;
+import Domain.Data.Mark;
+import Mapping.MarkToStringMapper;
 
 public class ConsoleBoardView implements BoardView {
 

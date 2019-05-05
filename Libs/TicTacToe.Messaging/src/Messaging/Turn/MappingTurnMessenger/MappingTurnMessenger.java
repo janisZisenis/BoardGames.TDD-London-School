@@ -1,6 +1,6 @@
 package Messaging.Turn.MappingTurnMessenger;
 
-import Mappers.ObjectToStringMapper;
+import Mapping.ObjectToStringMapper;
 import Messaging.Messenger;
 import Messaging.Turn.MessagingTurn.TurnMessenger;
 

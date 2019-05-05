@@ -8,9 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="TicTacToe.Gaming" />
-    <orderEntry type="module" module-name="TicTacToe.Mapping" />
-    <orderEntry type="module" module-name="TicTacToe.Data" />
     <orderEntry type="module-library" scope="TEST">
       <library name="JUnit5.2">
         <CLASSES>
@@ -23,6 +20,9 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="TicTacToe.Board" />
+    <orderEntry type="module" module-name="TicTacToe.Domain" />
+    <orderEntry type="module" module-name="Core.Gaming" />
+    <orderEntry type="module" module-name="TicTacToe.Mapping" />
+    <orderEntry type="module" module-name="TicTacToe.Messages" />
   </component>
 </module>

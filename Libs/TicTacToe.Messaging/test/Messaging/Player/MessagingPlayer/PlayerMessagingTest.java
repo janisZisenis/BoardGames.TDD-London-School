@@ -1,11 +1,11 @@
 package Messaging.Player.MessagingPlayer;
 
-import Api.MarkFieldServiceDummy;
-import Board.Mark;
-import Data.Field.Field;
-import Gaming.Input.Input;
-import Gaming.Players.CountingGeneratorStub;
-import Gaming.Players.PlayerContext;
+import Domain.Data.Field.Field;
+import Domain.Players.MarkFieldServiceDummy;
+import Domain.Data.Mark;
+import Domain.Input.Input;
+import Domain.Players.CountingGeneratorStub;
+import Domain.Players.PlayerContext;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

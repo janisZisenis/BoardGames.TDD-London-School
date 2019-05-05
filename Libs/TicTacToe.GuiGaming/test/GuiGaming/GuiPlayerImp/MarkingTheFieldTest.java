@@ -1,11 +1,11 @@
 package GuiGaming.GuiPlayerImp;
 
-import Api.MarkFieldServiceSpy;
-import Board.Mark;
-import Data.Field.Field;
+import Domain.Data.Field.Field;
+import Domain.Players.MarkFieldServiceSpy;
+import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MarkingTheFieldTest {
 

@@ -1,6 +1,6 @@
 package GuiGaming.ValidatingInputProcessor;
 
-import Gaming.Input.Input;
+import Domain.Input.Input;
 
 public interface InputProcessor {
     void process(Input input);

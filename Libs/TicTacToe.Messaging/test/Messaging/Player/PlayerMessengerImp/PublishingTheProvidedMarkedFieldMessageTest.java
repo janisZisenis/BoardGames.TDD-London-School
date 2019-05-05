@@ -1,6 +1,6 @@
 package Messaging.Player.PlayerMessengerImp;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import Messaging.MessengerMock;
 import org.junit.jupiter.api.Test;
 

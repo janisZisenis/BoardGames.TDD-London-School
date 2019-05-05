@@ -1,7 +1,7 @@
 package GuiGaming.GuiTurn;
 
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 import GuiGaming.ValidatingInputProcessor.GuiTurn;
 
 public class GuiTwoPlayerTurn implements GuiTurn {

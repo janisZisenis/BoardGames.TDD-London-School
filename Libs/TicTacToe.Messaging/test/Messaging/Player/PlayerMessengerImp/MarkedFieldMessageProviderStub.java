@@ -1,6 +1,6 @@
 package Messaging.Player.PlayerMessengerImp;
 
-import Data.Field.Field;
+import Domain.Data.Field.Field;
 
 import java.util.HashMap;
 
