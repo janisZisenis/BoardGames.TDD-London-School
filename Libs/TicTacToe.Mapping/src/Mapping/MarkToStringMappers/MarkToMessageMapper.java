@@ -1,6 +1,6 @@
 package Mapping.MarkToStringMappers;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Mapping.MarkToStringMapper;
 
 public class MarkToMessageMapper implements MarkToStringMapper {

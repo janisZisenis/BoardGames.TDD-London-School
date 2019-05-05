@@ -1,7 +1,7 @@
 package Domain.GameEvaluation.GameEvaluator;
 
 import Domain.Data.Line.Line;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 public interface LineEvaluator {
     boolean isWinningLine(Line line);

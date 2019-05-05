@@ -3,7 +3,7 @@ package App;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Board.ListenableBoard.BoardListener;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.Input.Input;
 import View.FXBoardView;
 

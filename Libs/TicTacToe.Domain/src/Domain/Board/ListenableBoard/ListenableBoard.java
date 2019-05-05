@@ -2,7 +2,7 @@ package Domain.Board.ListenableBoard;
 
 import Domain.Data.Field.Field;
 import Domain.Board.Board;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 public class ListenableBoard implements Board {
 

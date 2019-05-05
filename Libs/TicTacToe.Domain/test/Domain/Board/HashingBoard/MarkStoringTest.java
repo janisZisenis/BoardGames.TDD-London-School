@@ -2,7 +2,7 @@ package Domain.Board.HashingBoard;
 
 import Domain.Data.Field.Field;
 import Domain.Board.Board;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

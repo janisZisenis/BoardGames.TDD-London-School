@@ -2,7 +2,7 @@ package Domain.InputRules.FieldIsEmptyRule;
 
 import Domain.Data.Field.Field;
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Domain.InputValidatorImp.InputRule;
 
 public class FieldIsEmptyRule implements InputRule {
     private final FieldIsEmptyProvider provider;

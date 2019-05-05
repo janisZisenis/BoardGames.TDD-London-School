@@ -2,7 +2,7 @@ package Domain.GameEvaluation.EquallyMarkedLineEvaluator;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

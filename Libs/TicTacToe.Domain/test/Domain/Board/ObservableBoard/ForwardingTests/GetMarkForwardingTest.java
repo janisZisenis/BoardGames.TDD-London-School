@@ -2,7 +2,7 @@ package Domain.Board.ObservableBoard.ForwardingTests;
 
 import Domain.Data.Field.Field;
 import Domain.Board.BoardStub;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.Board.ObservableBoard.ObservableBoard;
 import org.junit.jupiter.api.Test;
 

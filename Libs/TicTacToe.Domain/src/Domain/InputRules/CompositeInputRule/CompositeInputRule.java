@@ -1,7 +1,7 @@
 package Domain.InputRules.CompositeInputRule;
 
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Domain.InputValidatorImp.InputRule;
 
 import java.util.LinkedList;
 

@@ -1,7 +1,7 @@
 package Domain.Players;
 
 import Domain.Data.Field.Field;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

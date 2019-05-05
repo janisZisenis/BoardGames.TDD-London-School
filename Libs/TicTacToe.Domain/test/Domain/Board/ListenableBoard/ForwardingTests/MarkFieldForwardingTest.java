@@ -3,7 +3,7 @@ package Domain.Board.ListenableBoard.ForwardingTests;
 import Domain.Data.Field.Field;
 import Domain.Board.BoardMock;
 import Domain.Board.ListenableBoard.ListenableBoard;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 
 public class MarkFieldForwardingTest {

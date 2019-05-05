@@ -1,8 +1,8 @@
 package Domain.GameEvaluation.GameEvaluator;
 
-import Gaming.WinnerRule.HasWinnerProvider;
+import Gaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import Domain.Data.Line.Line;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 

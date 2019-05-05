@@ -1,6 +1,6 @@
 package Messaging.Game.WinnerMessageProviderImp;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 
 public class WinnerProviderStub implements WinnerProvider {

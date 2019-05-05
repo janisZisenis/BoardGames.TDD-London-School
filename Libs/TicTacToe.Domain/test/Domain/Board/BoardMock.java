@@ -1,6 +1,7 @@
 package Domain.Board;
 
 import Domain.Data.Field.Field;
+import Domain.Data.Mark;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

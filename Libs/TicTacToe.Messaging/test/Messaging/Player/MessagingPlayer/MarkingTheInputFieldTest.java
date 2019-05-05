@@ -2,7 +2,7 @@ package Messaging.Player.MessagingPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Players.MarkFieldServiceMock;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.Input.Input;
 import Domain.Players.CountingGeneratorStub;
 import Domain.Players.PlayerContext;

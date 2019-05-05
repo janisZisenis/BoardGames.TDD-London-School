@@ -1,7 +1,7 @@
 package Domain.InputRules.CompositeInputRule;
 
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.InputRuleStub;
+import Domain.RuleChoosingInputAlerter.InputRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

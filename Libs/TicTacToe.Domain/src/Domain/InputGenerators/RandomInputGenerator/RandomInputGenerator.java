@@ -1,6 +1,6 @@
 package Domain.InputGenerators.RandomInputGenerator;
 
-import Domain.Board.BoardBoundaries;
+import Domain.Data.BoardBoundaries;
 import Domain.Input.Input;
 import Domain.Players.InputGenerator;
 

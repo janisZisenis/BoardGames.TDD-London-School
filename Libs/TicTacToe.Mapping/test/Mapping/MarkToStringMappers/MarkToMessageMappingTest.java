@@ -1,6 +1,6 @@
 package Mapping.MarkToStringMappers;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

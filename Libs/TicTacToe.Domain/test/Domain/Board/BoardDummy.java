@@ -1,6 +1,7 @@
 package Domain.Board;
 
 import Domain.Data.Field.Field;
+import Domain.Data.Mark;
 
 public class BoardDummy implements Board {
 

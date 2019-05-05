@@ -2,7 +2,7 @@ package GuiGaming.GuiPlayerImp;
 
 import Domain.Data.Field.Field;
 import Domain.Players.MarkFieldService;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import GuiGaming.GuiTurn.GuiPlayer;
 
 public class GuiPlayerImp implements GuiPlayer {

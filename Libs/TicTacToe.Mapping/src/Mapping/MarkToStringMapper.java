@@ -1,6 +1,6 @@
 package Mapping;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 public interface MarkToStringMapper {
     String map(Mark m);

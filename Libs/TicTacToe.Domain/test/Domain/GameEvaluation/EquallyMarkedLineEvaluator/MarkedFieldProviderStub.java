@@ -1,7 +1,7 @@
 package Domain.GameEvaluation.EquallyMarkedLineEvaluator;
 
 import Domain.Data.Field.Field;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 import java.util.HashMap;
 

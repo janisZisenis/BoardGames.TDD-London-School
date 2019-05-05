@@ -1,6 +1,6 @@
 package Domain.Players;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 public class PlayerContext {
 

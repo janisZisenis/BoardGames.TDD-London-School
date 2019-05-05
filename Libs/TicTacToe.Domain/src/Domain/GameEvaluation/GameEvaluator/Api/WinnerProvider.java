@@ -1,6 +1,6 @@
 package Domain.GameEvaluation.GameEvaluator.Api;
 
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 
 public interface WinnerProvider {
     Mark getWinner();

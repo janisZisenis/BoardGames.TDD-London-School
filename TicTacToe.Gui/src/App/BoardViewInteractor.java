@@ -3,7 +3,7 @@ package App;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.Input.Input;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;

@@ -1,7 +1,7 @@
 package Domain.InputGenerators.ValidatingInputGenerator;
 
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.RuleChoosingInputAlerter.InputRuleStub;
+import Domain.RuleChoosingInputAlerter.InputRuleStub;
 import Domain.Players.CountingGeneratorStub;
 import org.junit.jupiter.api.Test;
 

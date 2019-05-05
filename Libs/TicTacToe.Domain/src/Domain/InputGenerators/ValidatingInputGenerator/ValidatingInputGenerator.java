@@ -1,7 +1,7 @@
 package Domain.InputGenerators.ValidatingInputGenerator;
 
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Domain.InputValidatorImp.InputRule;
 import Domain.Players.InputGenerator;
 
 public class ValidatingInputGenerator implements InputGenerator {

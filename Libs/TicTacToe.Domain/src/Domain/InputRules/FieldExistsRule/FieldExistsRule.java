@@ -1,8 +1,8 @@
 package Domain.InputRules.FieldExistsRule;
 
-import Domain.Board.BoardBoundaries;
+import Domain.Data.BoardBoundaries;
 import Domain.Input.Input;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidatorImp.InputRule;
+import Domain.InputValidatorImp.InputRule;
 
 public class FieldExistsRule implements InputRule {
 

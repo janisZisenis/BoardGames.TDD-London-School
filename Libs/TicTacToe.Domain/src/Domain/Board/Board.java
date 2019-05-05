@@ -1,6 +1,7 @@
 package Domain.Board;
 
 import Domain.Data.Field.Field;
+import Domain.Data.Mark;
 import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
 import Domain.Players.MarkFieldService;
 import Domain.NumberOfMovesRule.MarkedFieldCountProvider;

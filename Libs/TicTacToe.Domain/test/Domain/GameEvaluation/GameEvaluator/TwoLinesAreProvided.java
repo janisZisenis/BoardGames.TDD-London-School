@@ -2,7 +2,7 @@ package Domain.GameEvaluation.GameEvaluator;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
-import Domain.Board.Mark;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
