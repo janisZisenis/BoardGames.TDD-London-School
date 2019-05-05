@@ -1,7 +1,7 @@
 package Domain.InputFieldGeneratorAdapter;
 
-import Domain.Input.Input;
-import Domain.Players.InputGenerator;
+import InputGeneration.Input.Input;
+import InputGeneration.InputGenerator;
 
 public class InputGeneratorStub implements InputGenerator {
 

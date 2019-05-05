@@ -2,6 +2,7 @@ package Domain.Players;
 
 import Domain.Data.Mark;
 import Domain.Turn.MarkFieldService;
+import InputGeneration.InputGenerator;
 
 public class PlayerContext {
 

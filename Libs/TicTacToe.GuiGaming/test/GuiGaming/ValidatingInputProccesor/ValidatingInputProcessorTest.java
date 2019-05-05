@@ -1,8 +1,8 @@
 package GuiGaming.ValidatingInputProccesor;
 
 import Domain.Data.Field.Field;
-import Domain.Input.Input;
 import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
+import InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
