@@ -7,16 +7,16 @@ public class TicTacToeTurn {
 
     private final Mark mark;
     private final MarkFieldService service;
-    private final InputFieldStrategy strategy;
+    private final FieldGenerator strategy;
 
-    public TicTacToeTurn(Mark mark, MarkFieldService service, InputFieldStrategy strategy) {
+    public TicTacToeTurn(Mark mark, MarkFieldService service, FieldGenerator strategy) {
         this.mark = mark;
         this.service = service;
         this.strategy = strategy;
     }
 
     public void play() {
-        Field f = generateField();
+        Field f = generate();
         mark(f);
     }
 
@@ -24,7 +24,7 @@ public class TicTacToeTurn {
         service.mark(f, mark);
     }
 
-    private Field generateField() {
-        return strategy.generateField();
+    private Field generate() {
+        return strategy.generate();
     }
 }

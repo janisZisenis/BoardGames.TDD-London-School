@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TicTacToeTurnTest {
 
     private MarkFieldServiceSpy service = new MarkFieldServiceSpy();
-    private InputFieldStrategyStub strategy = new InputFieldStrategyStub();
+    private FieldGeneratorStub strategy = new FieldGeneratorStub();
     private TicTacToeTurn sut;
 
     @Test

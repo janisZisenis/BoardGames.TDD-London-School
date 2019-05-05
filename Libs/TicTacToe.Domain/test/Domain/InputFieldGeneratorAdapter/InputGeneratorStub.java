@@ -1,4 +1,4 @@
-package Domain.InputFieldStrategyAdapter;
+package Domain.InputFieldGeneratorAdapter;
 
 import Domain.Input.Input;
 import Domain.Players.InputGenerator;

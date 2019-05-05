@@ -1,19 +1,19 @@
-package Domain.InputFieldStrategyAdapter;
+package Domain.InputFieldGeneratorAdapter;
 
 import Domain.Data.Field.Field;
 import Domain.Input.Input;
 import Domain.Players.InputGenerator;
-import Domain.Turn.InputFieldStrategy;
+import Domain.Turn.FieldGenerator;
 
-public class InputFieldStrategyAdapter implements InputFieldStrategy {
+public class InputFieldGeneratorAdapter implements FieldGenerator {
 
     private final InputGenerator generator;
 
-    public InputFieldStrategyAdapter(InputGenerator generator) {
+    public InputFieldGeneratorAdapter(InputGenerator generator) {
         this.generator = generator;
     }
 
-    public Field generateField() {
+    public Field generate() {
         Input input = generator.generate();
         return makeField(input);
     }

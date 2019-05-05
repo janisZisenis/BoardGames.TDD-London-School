@@ -2,14 +2,14 @@ package Domain.Turn;
 
 import Domain.Data.Field.Field;
 
-public class InputFieldStrategyStub implements InputFieldStrategy {
+public class FieldGeneratorStub implements FieldGenerator {
 
     private Field generatedField;
 
     public void setGeneratedField(Field field) {
         this.generatedField = field;
     }
-    public Field generateField() {
+    public Field generate() {
         return generatedField;
     }
 }
