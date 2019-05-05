@@ -103,7 +103,7 @@ public class TicTacToeFactory {
 
     private GameMessenger makeGameMessenger(Board board) {
         WinnerProvider provider = makeGameEvaluator(board);
-        MarkToStringMapper messageMapper = new MarkToMessageMapper(humanWinMessage, computerWinMessage);
+        MarkToStringMapper messageMapper = new MarkToMessageMapper(computerWinMessage, humanWinMessage);
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(provider, messageMapper);
         GameOverMessageProviderImp goMessageProvider = new GameOverMessageProviderImp(winnerMessageProvider, drawMessage);
         return new GameMessengerImp(messenger, goMessageProvider, salutation);
@@ -172,12 +172,12 @@ public class TicTacToeFactory {
 
 
     private Turn makeTurn(Board board) {
-        Player john = makeHumanPlayer(board, Mark.John);
-        Player haley = makeComputerPlayer(board, Mark.Haley);
+        Player john = makeComputerPlayer(board, Mark.John);
+        Player haley = makeHumanPlayer(board, Mark.Haley);
 
         ObjectToMessageMapper objectMapper = new ObjectToMessageMapper();
-        objectMapper.register(john, humanTurnMessage);
-        objectMapper.register(haley, computerTurnMessage);
+        objectMapper.register(john, computerTurnMessage);
+        objectMapper.register(haley, humanTurnMessage);
         TurnMessenger messenger = makeTurnMessenger(objectMapper);
 
         return new MessagingTwoPlayerTurn(john, haley, messenger);
