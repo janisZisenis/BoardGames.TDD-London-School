@@ -13,6 +13,7 @@ import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
 import Domain.InputGenerators.AlertingInputGenerator.InputValidator;
+import Domain.InputGenerators.MinimaxInputGenerator.MinimaxInputGenerator;
 import Domain.InputGenerators.RandomInputGenerator.RandomInputGenerator;
 import Domain.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import Domain.InputRules.CompositeInputRule.CompositeInputRule;
@@ -187,7 +188,7 @@ public class TicTacToeFactory {
     }
 
     private Player makeComputerPlayer(Board board, Mark m) {
-        InputGenerator computerGenerator = makeComputerInputGenerator(board);
+        InputGenerator computerGenerator = makeComputerInputGenerator(board, m);
         return makePlayer(board, computerGenerator, m);
     }
 
@@ -197,10 +198,14 @@ public class TicTacToeFactory {
         return new MessagingPlayer(context, messenger);
     }
 
-    private InputGenerator makeComputerInputGenerator(Board board) {
+    private InputGenerator makeComputerInputGenerator(Board board, Mark m) {
         InputRule inputRule = makeInputRule(board);
-        InputGenerator randomGenerator = makeRandomInputGenerator();
+        InputGenerator randomGenerator = makeMinimaxInputGenerator(board, m);
         return new ValidatingInputGenerator(randomGenerator, inputRule);
+    }
+
+    private InputGenerator makeMinimaxInputGenerator(Board board, Mark m) {
+        return new MinimaxInputGenerator(board, m);
     }
 
     private RandomInputGenerator makeRandomInputGenerator() {
