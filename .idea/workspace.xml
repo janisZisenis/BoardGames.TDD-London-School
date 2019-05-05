@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/DelegatingGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/GameOverRule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/Renderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/Turn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/DelegatingGameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/GameOverRuleStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/RendererSpy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/src/MultiTurn/MultiTurn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnDummy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/NoAdditionalTurnsAdded.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/OneAdditionalTurnsAdded.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/TwoAdditionalTurnsAdded.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,17 +84,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="3627" />
+          <entry key="dummy" value="3642" />
           <entry key="iml" value="10" />
-          <entry key="java" value="145614" />
+          <entry key="java" value="148649" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="10" />
-          <entry key="JAVA" value="145614" />
-          <entry key="PLAIN_TEXT" value="3628" />
+          <entry key="JAVA" value="148649" />
+          <entry key="PLAIN_TEXT" value="3643" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -104,7 +102,7 @@
           <entry key="class" value="11" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="8" />
-          <entry key="java" value="4032" />
+          <entry key="java" value="4051" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -112,7 +110,7 @@
         <counts>
           <entry key="CLASS" value="11" />
           <entry key="IDEA_MODULE" value="8" />
-          <entry key="JAVA" value="4032" />
+          <entry key="JAVA" value="4051" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -121,20 +119,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/DelegatingGameTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/NoAdditionalTurnsAdded.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
-                <element signature="method#IfGameOverRuleIsOver_ShouldBeOverToo#0;class#DelegatingGameTest#0" />
-                <element signature="method#IfGameOverRuleIsNotOver_ShouldNotBeOverToo#0;class#DelegatingGameTest#0" />
-                <element signature="method#IfGetsPlayed_ShouldHavePlayedTheTurn#0;class#DelegatingGameTest#0" />
-                <element signature="method#IfGetsRendered_ShouldHaveRenderedTheRenderer#0;class#DelegatingGameTest#0" />
-                <element signature="method#assertIsOver#0;class#DelegatingGameTest#0" />
-                <element signature="method#assertIsNotOver#0;class#DelegatingGameTest#0" />
-                <element signature="method#assertHasPlayed#0;class#DelegatingGameTest#0" />
-                <element signature="method#assertHasRendered#0;class#DelegatingGameTest#0" />
+                <element signature="method#IfGetsPlayedOnce_ShouldHavePlayedTheFirstOnce#0;class#NoAdditionalTurnsAdded#0" />
+                <element signature="method#IfGetsPlayedTwice_ShouldHavePlayedTheFirstTwice#0;class#NoAdditionalTurnsAdded#0" />
+                <element signature="method#IfGetsPlayedThreeTimes_ShouldhavePlayedTheFirstThreeTimes#0;class#NoAdditionalTurnsAdded#0" />
+                <element signature="method#assertHasPlayedTimes#0;class#NoAdditionalTurnsAdded#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/src/MultiTurn/MultiTurn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#883#884#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +159,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -203,16 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.Messaging/test/Messaging/Player/MessagingPlayer/PlayerMessagingTest.java" />
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.Messaging/test/Messaging/Game/WinnerMessageProviderImp/ProvidingTheWinnerMessageTest.java" />
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.Messaging/test/Messaging/Game/WinnerMessageProviderImp/WinnerProviderStub.java" />
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.Messaging/test/Messaging/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.SequentialGui/src/View/FXBoardView.java" />
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.GuiGaming/src/GuiGaming/GuiPlayerImp/GuiPlayerImp.java" />
-        <option value="$PROJECT_DIR$/Libs/TicTacToe.GuiGaming/test/GuiGaming/GuiPlayerImp/MarkingTheFieldTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Gui/src/View/FXBoardView.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Gui/src/App/BoardViewInteractor.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Gui/src/App/BoardViewPresenter.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Console/src/View/ConsoleBoardView.java" />
         <option value="$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/GameEvaluation/GameEvaluator/GameEvaluator.java" />
         <option value="$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain/GameEvaluation/GameEvaluator/Api/WinningLineProviderStub.java" />
@@ -247,13 +251,23 @@
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/GameLoop/GameLoopTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/GameLoop/NotOverOnceGameShuntTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/Turn.java" />
-        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/Renderer.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/RendererSpy.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/DelegatingGame.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/GameOverRule.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/GameOverRuleStub.java" />
         <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/DelegatingGameTest.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/TurnDummy.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnDummy.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/CompositeTurnTest.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/NotAdditionalTurnsAdded.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/OneAdditionalTurnsAdded.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/NoAdditionalTurnsAdded.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/test/CompositeTurn/TwoAdditionalTurnsAdded.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/CompositeTurn/CompositeTurn.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/MultiTurn/CompositeTurn.java" />
+        <option value="$PROJECT_DIR$/Libs/Core.NewGaming/src/MultiTurn/MultiTurn.java" />
       </list>
     </option>
   </component>
@@ -456,7 +470,7 @@
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
               <item name="Core.NewGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GameLoop" type="462c0819:PsiDirectoryNode" />
+              <item name="MultiTurn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
@@ -471,7 +485,7 @@
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
               <item name="Core.NewGaming" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="DelegatingGame" type="462c0819:PsiDirectoryNode" />
+              <item name="MultiTurn" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,7 +500,7 @@
     <property name="SearchEverywhereHistoryKey" value="Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557083420483" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557088582390" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -506,11 +520,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="DelegatingGame" />
+      <recent name="" />
       <recent name="GameLoop" />
       <recent name="Messaging.Player.PlayerMessengerImp" />
       <recent name="Gaming.GameOverRules" />
-      <recent name="Domain" />
-      <recent name="Domain.Data" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain/Data" />
@@ -520,18 +534,18 @@
       <recent name="$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="CompositeTurn" />
       <recent name="Domain.NumberOfMovesRule" />
       <recent name="Domain.Input" />
       <recent name="CompositeGameOverRule" />
       <recent name="Gaming.CompositeGameOverRule" />
-      <recent name="Gaming.GameImp" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="CompositeTurn" />
       <recent name="DelegatingGame" />
       <recent name="GameLoop" />
       <recent name="" />
       <recent name="Board.ListenableBoard" />
-      <recent name="GuiGaming.ValidatingInputProccesor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -771,45 +785,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 20h 53m 24s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 06m 34s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 20h 53m 44s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 06m 55s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 20h 58m 59s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 07m 13s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 20h 59m 44s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 14m 18s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 01m 46s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 14m 37s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 03m 08s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 14m 41s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 06m 33s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 14m 51s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 06m 42s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 17m 09s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 07m 17s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 17m 35s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 21h 08m 25s.xml">
+    <history-entry file="TTT_NewGamingTest - 2019.05.05 at 22h 18m 31s.xml">
       <configuration name="TTT.NewGamingTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="386429000" />
+    <option name="totallyTimeSpent" value="391566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27292112" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27292112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -818,7 +832,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40207255" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26839378" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26839378" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44352332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -960,40 +974,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain/Data/Field/DifferentFieldsWithTheSameSumOfRowAndColumn.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain/Data/Field/FieldsWithDifferentRowAndSameColumn.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputValidatorImp/InputRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/Input/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/GameEvaluation/HumbleLineProvider/HumbleLineProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputValidatorImp/InputValidatorImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGenerators/AlertingInputGenerator/AlertingInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1306,17 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/src/DelegatingGame/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1364,6 +1333,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.Gaming/src/Gaming/TwoPlayerTurn/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/DelegatingGameTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1377,6 +1353,74 @@
             <element signature="method#assertIsNotOver#0;class#DelegatingGameTest#0" />
             <element signature="method#assertHasPlayed#0;class#DelegatingGameTest#0" />
             <element signature="method#assertHasRendered#0;class#DelegatingGameTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnDummy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/OneAdditionalTurnsAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="57" lean-forward="true" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="method#IfGetsPlayedTwice_ShouldPlayTheFirstOnce#0;class#OneAdditionalTurnsAdded#0" />
+            <element signature="method#IfGetsPlayedTwice_ShouldPlayTheSecondOnce#0;class#OneAdditionalTurnsAdded#0" />
+            <element signature="method#IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstTwice#0;class#OneAdditionalTurnsAdded#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/DelegatingGame/TurnSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/TwoAdditionalTurnsAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/test/MultiTurn/NoAdditionalTurnsAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="method#IfGetsPlayedOnce_ShouldHavePlayedTheFirstOnce#0;class#NoAdditionalTurnsAdded#0" />
+            <element signature="method#IfGetsPlayedTwice_ShouldHavePlayedTheFirstTwice#0;class#NoAdditionalTurnsAdded#0" />
+            <element signature="method#IfGetsPlayedThreeTimes_ShouldhavePlayedTheFirstThreeTimes#0;class#NoAdditionalTurnsAdded#0" />
+            <element signature="method#assertHasPlayedTimes#0;class#NoAdditionalTurnsAdded#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.NewGaming/src/MultiTurn/MultiTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="true" />
           </folding>
         </state>
       </provider>
