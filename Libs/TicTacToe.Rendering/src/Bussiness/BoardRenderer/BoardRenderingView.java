@@ -2,7 +2,7 @@ package Bussiness.BoardRenderer;
 
 import Domain.Data.Line.Line;
 
-public interface BoardView {
+public interface BoardRenderingView {
     void showBoard();
     void showWinningLine(Line line);
 }

@@ -1,6 +1,6 @@
 package View;
 
-import Bussiness.BoardRenderer.BoardView;
+import Bussiness.BoardRenderer.BoardRenderingView;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
@@ -8,7 +8,7 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Mapping.MarkToStringMapper;
 
-public class ConsoleBoardView implements BoardView {
+public class ConsoleBoardView implements BoardRenderingView {
 
     private final String empty = "\u00B7";
     private final String winningColor = "\u001B[32m";

@@ -2,7 +2,7 @@ package App;
 
 
 import Bussiness.BoardRenderer.BoardRenderer;
-import Bussiness.BoardRenderer.BoardView;
+import Bussiness.BoardRenderer.BoardRenderingView;
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
@@ -74,7 +74,7 @@ public class TicTacToeFactory {
     private final String computerTurnMessage = OnePlayerModeMessages.computerTurnMessage;
 
     private Messenger messenger;
-    private BoardView boardView;
+    private BoardRenderingView boardView;
     private InputGenerator inputView;
 
     public Game makeGame() {

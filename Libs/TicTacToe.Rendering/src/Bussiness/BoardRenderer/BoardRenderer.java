@@ -6,10 +6,10 @@ import Gaming.GameLoopImp.Renderer;
 
 public class BoardRenderer implements Renderer {
 
-    private final BoardView view;
+    private final BoardRenderingView view;
     private final WinningLineProvider provider;
 
-    public BoardRenderer(BoardView view, WinningLineProvider provider) {
+    public BoardRenderer(BoardRenderingView view, WinningLineProvider provider) {
         this.view = view;
         this.provider = provider;
     }
