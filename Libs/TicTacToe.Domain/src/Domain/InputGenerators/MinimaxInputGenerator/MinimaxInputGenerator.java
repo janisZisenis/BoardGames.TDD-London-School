@@ -24,23 +24,27 @@ public class MinimaxInputGenerator implements InputGenerator {
     public Input generate() {
         copyBoard();
 
+        return generateBestInput();
+    }
+
+    private Input generateBestInput() {
         int currentScore = -2;
         int bestScore = -2;
         int bestRow = -1;
         int bestColumn = -1;
 
-        for(int i = 0; i < BoardBoundaries.rowColumnCount; i++) {
-            for(int j = 0; j < BoardBoundaries.rowColumnCount; j++) {
-                if(board[i][j] == null) {
-                    board[i][j] = me;
-                    currentScore = minimaxForO();
+        for(int row = 0; row < BoardBoundaries.rowColumnCount; row++) {
+            for(int col = 0; col < BoardBoundaries.rowColumnCount; col++) {
+                if(board[row][col] == null) {
+                    board[row][col] = me;
+                    currentScore = minimaxForOpponent();
 
                     if(currentScore > bestScore) {
                         bestScore = currentScore;
-                        bestRow = i;
-                        bestColumn = j;
+                        bestRow = row;
+                        bestColumn = col;
                     }
-                    board[i][j] = null;
+                    board[row][col] = null;
                 }
             }
         }
@@ -48,7 +52,7 @@ public class MinimaxInputGenerator implements InputGenerator {
         return new Input(bestRow, bestColumn);
     }
 
-    private int minimaxForO() {
+    private int minimaxForOpponent() {
         if(gameOver()) {
             return score();
         }
@@ -56,16 +60,16 @@ public class MinimaxInputGenerator implements InputGenerator {
         int currentScore = 2;
         int bestScore = 2;
 
-        for(int i = 0; i < 3; i++) {
-            for(int j = 0; j < 3; j++) {
-                if(board[i][j] == null) {
-                    board[i][j] = opponent;
-                    currentScore = minimaxForX();
+        for(int row = 0; row < BoardBoundaries.rowColumnCount; row++) {
+            for(int col = 0; col < BoardBoundaries.rowColumnCount; col++) {
+                if(board[row][col] == null) {
+                    board[row][col] = opponent;
+                    currentScore = minimaxForMe();
 
                     if(currentScore < bestScore) {
                         bestScore = currentScore;
                     }
-                    board[i][j] = null;
+                    board[row][col] = null;
                 }
             }
         }
@@ -73,7 +77,7 @@ public class MinimaxInputGenerator implements InputGenerator {
         return bestScore;
     }
 
-    private int minimaxForX() {
+    private int minimaxForMe() {
         if(gameOver()) {
             return score();
         }
@@ -81,16 +85,16 @@ public class MinimaxInputGenerator implements InputGenerator {
         int currentScore = -2;
         int bestScore = -2;
 
-        for(int i = 0; i < BoardBoundaries.rowColumnCount; i++) {
-            for(int j = 0; j < BoardBoundaries.rowColumnCount; j++) {
-                if(board[i][j] == null) {
-                    board[i][j] = me;
-                    currentScore = minimaxForO();
+        for(int row = 0; row < BoardBoundaries.rowColumnCount; row++) {
+            for(int col = 0; col < BoardBoundaries.rowColumnCount; col++) {
+                if(board[row][col] == null) {
+                    board[row][col] = me;
+                    currentScore = minimaxForOpponent();
 
                     if(currentScore > bestScore) {
                         bestScore = currentScore;
                     }
-                    board[i][j] = null;
+                    board[row][col] = null;
                 }
             }
         }
