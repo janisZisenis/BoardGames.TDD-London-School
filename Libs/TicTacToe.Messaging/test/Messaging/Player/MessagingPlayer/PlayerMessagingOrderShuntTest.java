@@ -1,7 +1,7 @@
 package Messaging.Player.MessagingPlayer;
 
 import Domain.Data.Field.Field;
-import Domain.Players.MarkFieldService;
+import Domain.Turn.MarkFieldService;
 import Domain.Data.Mark;
 import Domain.Input.Input;
 import Domain.Players.InputGenerator;

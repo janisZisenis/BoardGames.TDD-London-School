@@ -1,23 +1,23 @@
-package Domain.Players;
+package Domain.Turn;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 
 public class MarkFieldServiceSpy implements MarkFieldService {
 
-    private Mark mark;
+    private Mark placedMark;
     private Field markedField;
 
     public void mark(Field f, Mark m) {
         this.markedField = f;
-        this.mark = m;
+        this.placedMark = m;
     }
 
     public Field getMarkedField() {
         return markedField;
     }
 
-    public Mark getMark() {
-        return mark;
+    public Mark getPlacedMark() {
+        return placedMark;
     }
 }
