@@ -2,7 +2,6 @@ package GuiGaming.ValidatingInputProcessor;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
 
 public class ValidatingInputProcessor implements InputProcessor {
 

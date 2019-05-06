@@ -32,13 +32,10 @@ import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
-import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import InputGeneration.InputValidatorImp.InputAlerter;
-import InputGeneration.InputValidatorImp.InputValidator;
-import InputGeneration.InputValidatorImp.AlertingInputValidatorImp;
-import InputGeneration.MappingInputAlerter.MappingInputAlerter;
+import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.AlertingInputGenerator;
+import InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.InputAlerter;
+import InputGeneration.ValidatingInputGenerator.InputValidator;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -215,9 +212,13 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        AlertingInputValidator validator = makeAlertingInputValidator(board);
-        InputGenerator consoleGenerator = inputView;
-        return new AlertingInputGenerator(consoleGenerator, validator);
+        InputValidator existsValidator = new FieldExistsValidator();
+        InputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
+        InputGenerator generator = new AlertingInputGenerator(inputView, existsValidator, existsAlerter);
+
+        InputValidator emptyValidator = new FieldIsEmptyValidator(board);
+        InputAlerter emptyAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
+        return new AlertingInputGenerator(generator, emptyValidator, emptyAlerter);
     }
 
     private InputValidator makeInputValidator(Board board) {
@@ -235,31 +236,12 @@ public class TicTacToeFactory {
         return new FieldExistsValidator();
     }
 
-    private InputAlerter makeInputAlerter(Board board) {
-        InputValidator existsValidator = makeFieldExistsValidator();
-        InputValidator isFreeValidator = makeFieldIsEmptyValidator(board);
-        InputAlerter existsAlerter = makeConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputAlerter isFreeAlerter = makeConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
-
-        MappingInputAlerter alerter = new MappingInputAlerter();
-        alerter.register(existsValidator, existsAlerter);
-        alerter.register(isFreeValidator, isFreeAlerter);
-
-        return alerter;
-    }
-
     private ConsoleInputAlerter makeConsoleInputAlerter(String inputDoesNotExist) {
         return new ConsoleInputAlerter(inputDoesNotExist);
     }
 
     private FieldIsEmptyValidator makeFieldIsEmptyValidator(Board board) {
         return new FieldIsEmptyValidator(board);
-    }
-
-    private AlertingInputValidator makeAlertingInputValidator(Board board) {
-        InputValidator validator = makeInputValidator(board);
-        InputAlerter alerter = makeInputAlerter(board);
-        return new AlertingInputValidatorImp(validator, alerter);
     }
 
 }

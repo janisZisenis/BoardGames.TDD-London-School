@@ -19,8 +19,15 @@ public class Input {
     }
 
     public boolean equals(Object o) {
-        Input i = (Input)o;
+        return isAnInput(o) && hasSameRowAndColumn((Input) o);
+    }
+
+    private boolean hasSameRowAndColumn(Input i) {
         return i.row == row && i.column == column;
+    }
+
+    private boolean isAnInput(Object o) {
+        return o instanceof Input;
     }
 
     public int hashCode() {

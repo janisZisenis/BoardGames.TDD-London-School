@@ -1,7 +1,7 @@
 package View;
 
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputAlerter;
+import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.InputAlerter;
 
 public class ConsoleInputAlerter implements InputAlerter {
 

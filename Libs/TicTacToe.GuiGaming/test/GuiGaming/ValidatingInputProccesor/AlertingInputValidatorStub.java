@@ -1,5 +1,6 @@
-package InputGeneration.InputGenerators.AlertingInputGenerator;
+package GuiGaming.ValidatingInputProccesor;
 
+import GuiGaming.ValidatingInputProcessor.AlertingInputValidator;
 import InputGeneration.Input.Input;
 
 import java.util.Arrays;

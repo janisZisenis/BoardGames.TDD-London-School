@@ -1,10 +1,10 @@
-package InputGeneration.InputGenerators.ValidatingInputGenerator;
+package InputGeneration.ValidatingInputGenerator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputValidatorImp.InputValidator;
 
 public class ValidatingInputGenerator implements InputGenerator {
+
     private final InputGenerator generator;
     private final InputValidator validator;
 
@@ -16,17 +16,18 @@ public class ValidatingInputGenerator implements InputGenerator {
     public Input generate() {
         Input in = getInput();
 
-        while(isNotValid(in))
+        while(isInvalid(in))
             in = getInput();
 
         return in;
     }
 
-    private Input getInput() {
+    protected Input getInput() {
         return generator.generate();
     }
 
-    private boolean isNotValid(Input in) {
+    protected boolean isInvalid(Input in) {
         return !validator.isValid(in);
     }
+
 }

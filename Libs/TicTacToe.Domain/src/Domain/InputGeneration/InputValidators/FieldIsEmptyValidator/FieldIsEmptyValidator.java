@@ -2,7 +2,7 @@ package Domain.InputGeneration.InputValidators.FieldIsEmptyValidator;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputValidator;
+import InputGeneration.ValidatingInputGenerator.InputValidator;
 
 public class FieldIsEmptyValidator implements InputValidator {
     private final FieldIsEmptyProvider provider;

@@ -4,13 +4,13 @@ import InputGeneration.Input.Input;
 
 public class CountingGeneratorStub implements InputGenerator {
     private int count = 0;
-    private Input[] userInputs;
+    private Input[] inputs;
 
     public Input generate() {
-        return this.userInputs[count++];
+        return this.inputs[count++];
     }
 
     public void setGeneratedInputs(Input[] inputs) {
-        this.userInputs = inputs;
+        this.inputs = inputs;
     }
 }
