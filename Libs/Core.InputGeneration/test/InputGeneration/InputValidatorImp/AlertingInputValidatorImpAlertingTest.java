@@ -1,16 +1,16 @@
 package InputGeneration.InputValidatorImp;
 
 import InputGeneration.Input.Input;
-import InputGeneration.RuleChoosingInputAlerter.InputRuleDummy;
+import InputGeneration.MappingInputAlerter.InputValidatorDummy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InputValidatorImpAlertingTest {
+public class AlertingInputValidatorImpAlertingTest {
 
-    private InputRuleDummy rule = new InputRuleDummy();
+    private InputValidatorDummy validator = new InputValidatorDummy();
     private InputAlerterSpy alerter = new InputAlerterSpy();
-    private InputValidatorImp sut = new InputValidatorImp(rule, alerter);
+    private AlertingInputValidatorImp sut = new AlertingInputValidatorImp(validator, alerter);
 
     @Test
     void IfInputGetsAlerted_TheInputAlerterShouldAlertTheInput() {

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class ValidatingInputProcessorTest {
 
     private GuiTurnSpy turn = new GuiTurnSpy();
-    private InputValidatorSpy validator = new InputValidatorSpy();
+    private AlertingInputValidatorSpy validator = new AlertingInputValidatorSpy();
     private ValidatingInputProcessor sut = new ValidatingInputProcessor(turn, validator);
 
     @Test

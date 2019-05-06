@@ -2,7 +2,7 @@ package InputGeneration.InputGenerators.ValidatingInputGenerator;
 
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
-import InputGeneration.RuleChoosingInputAlerter.InputRuleStub;
+import InputGeneration.MappingInputAlerter.InputValidatorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ValidatingInputGeneratorTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private InputRuleStub rule = new InputRuleStub();
-    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, rule);
+    private InputValidatorStub validator = new InputValidatorStub();
+    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
     private Input[] generated;
 
@@ -49,7 +49,7 @@ public class ValidatingInputGeneratorTest {
         generated = new Input[] { new Input(0, 1) };
 
         generator.setGeneratedInputs(generated);
-        rule.setValidInputs(generated);
+        validator.setValidInputs(generated);
     }
 
     private void makeFirstInputIsNotValid() {
@@ -59,7 +59,7 @@ public class ValidatingInputGeneratorTest {
         Input[] valid = { new Input(1, 2) };
 
         generator.setGeneratedInputs(generated);
-        rule.setValidInputs(valid);
+        validator.setValidInputs(valid);
     }
 
     private void makeFirstAndSecondInputIsNotValid() {
@@ -70,7 +70,7 @@ public class ValidatingInputGeneratorTest {
         Input[] valid = { new Input(2, 3) };
 
         generator.setGeneratedInputs(generated);
-        rule.setValidInputs(valid);
+        validator.setValidInputs(valid);
     }
 
 

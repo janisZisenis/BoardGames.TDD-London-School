@@ -1,4 +1,4 @@
-package Domain.InputGeneration.InputRules.FieldExistsRule;
+package Domain.InputGeneration.InputValidators.FieldExistsValidator;
 
 import InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FieldExistsRuleTest {
+public class FieldExistsValidatorTest {
 
-    private FieldExistsRule sut = new FieldExistsRule();
+    private FieldExistsValidator sut = new FieldExistsValidator();
     private Input input;
 
     @Test

@@ -1,10 +1,10 @@
-package Domain.InputGeneration.InputRules.FieldExistsRule;
+package Domain.InputGeneration.InputValidators.FieldExistsValidator;
 
 import Domain.Data.BoardBoundaries;
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputRule;
+import InputGeneration.InputValidatorImp.InputValidator;
 
-public class FieldExistsRule implements InputRule {
+public class FieldExistsValidator implements InputValidator {
 
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
 

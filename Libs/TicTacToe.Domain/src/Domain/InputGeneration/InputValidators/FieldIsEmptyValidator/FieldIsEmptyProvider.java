@@ -1,4 +1,4 @@
-package Domain.InputGeneration.InputRules.FieldIsEmptyRule;
+package Domain.InputGeneration.InputValidators.FieldIsEmptyValidator;
 
 import Domain.Data.Field.Field;
 

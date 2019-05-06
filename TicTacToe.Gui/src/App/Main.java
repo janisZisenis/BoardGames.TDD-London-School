@@ -7,8 +7,8 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Domain.InputGeneration.InputRules.FieldExistsRule.FieldExistsRule;
-import Domain.InputGeneration.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
+import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
+import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Gaming.GameOverRules.WinnerRule.WinnerRule;
@@ -17,10 +17,10 @@ import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import GuiGaming.ValidatingInputProcessor.InputProcessor;
 import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
-import InputGeneration.CompositeInputRule.CompositeInputRule;
-import InputGeneration.InputGenerators.AlertingInputGenerator.InputValidator;
-import InputGeneration.InputValidatorImp.InputValidatorImp;
-import InputGeneration.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
+import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
+import InputGeneration.InputValidatorImp.AlertingInputValidatorImp;
+import InputGeneration.MappingInputAlerter.MappingInputAlerter;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
 import View.FXBoardView;
@@ -38,14 +38,14 @@ public class Main extends Application {
         ListenableBoard board = new ListenableBoard(new HashingBoard());
         MarkToXOMapper mapper = new MarkToXOMapper();
 
-        CompositeInputRule inputRule = new CompositeInputRule();
-        inputRule.add(new FieldIsEmptyRule(board));
-        inputRule.add(new FieldExistsRule());
-        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
-        alerter.register(new FieldIsEmptyRule(board), new FXInputAlerter(AlertingMessages.inputAlreadyMarked));
-        alerter.register(new FieldExistsRule(), new FXInputAlerter(AlertingMessages.inputDoesNotExist));
+        CompositeInputValidator inputValidator = new CompositeInputValidator();
+        inputValidator.add(new FieldIsEmptyValidator(board));
+        inputValidator.add(new FieldExistsValidator());
+        MappingInputAlerter alerter = new MappingInputAlerter();
+        alerter.register(new FieldIsEmptyValidator(board), new FXInputAlerter(AlertingMessages.inputAlreadyMarked));
+        alerter.register(new FieldExistsValidator(), new FXInputAlerter(AlertingMessages.inputDoesNotExist));
 
-        InputValidator validator = new InputValidatorImp(inputRule, alerter);
+        AlertingInputValidator validator = new AlertingInputValidatorImp(inputValidator, alerter);
 
         CompositeGameOverRule gameOverRule = new CompositeGameOverRule();
         EquallyMarkedLineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);

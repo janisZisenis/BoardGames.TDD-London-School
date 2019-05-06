@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AlertingOnInvalidInputTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private InputValidatorMock validator = new InputValidatorMock();
+    private AlertingInputValidatorMock validator = new AlertingInputValidatorMock();
     private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator);
 
     private Input[] generated;
@@ -58,7 +58,7 @@ public class AlertingOnInvalidInputTest {
     }
 
 
-    public class InputValidatorMock extends InputValidatorStub {
+    public class AlertingInputValidatorMock extends AlertingInputValidatorStub {
 
         private Input expectedLastAlerted;
         private Input actualLastAlerted;

@@ -1,11 +1,11 @@
-package InputGeneration.RuleChoosingInputAlerter;
+package InputGeneration.MappingInputAlerter;
 
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputRule;
+import InputGeneration.InputValidatorImp.InputValidator;
 
 import java.util.Arrays;
 
-public class InputRuleStub implements InputRule {
+public class InputValidatorStub implements InputValidator {
     private Input[] valid = {};
 
     public boolean isValid(Input input) {

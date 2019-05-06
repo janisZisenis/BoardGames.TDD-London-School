@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidatingGeneratedInputTest {
 
-    private InputValidatorStub validator = new InputValidatorStub();
+    private AlertingInputValidatorStub validator = new AlertingInputValidatorStub();
     private CountingGeneratorStub generator = new CountingGeneratorStub();
     private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator);
 

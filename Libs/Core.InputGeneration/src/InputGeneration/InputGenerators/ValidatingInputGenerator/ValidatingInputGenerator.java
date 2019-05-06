@@ -2,15 +2,15 @@ package InputGeneration.InputGenerators.ValidatingInputGenerator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputValidatorImp.InputRule;
+import InputGeneration.InputValidatorImp.InputValidator;
 
 public class ValidatingInputGenerator implements InputGenerator {
     private final InputGenerator generator;
-    private final InputRule rule;
+    private final InputValidator validator;
 
-    public ValidatingInputGenerator(InputGenerator generator, InputRule rule) {
+    public ValidatingInputGenerator(InputGenerator generator, InputValidator validator) {
         this.generator = generator;
-        this.rule = rule;
+        this.validator = validator;
     }
 
     public Input generate() {
@@ -27,6 +27,6 @@ public class ValidatingInputGenerator implements InputGenerator {
     }
 
     private boolean isNotValid(Input in) {
-        return !rule.isValid(in);
+        return !validator.isValid(in);
     }
 }

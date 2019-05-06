@@ -1,4 +1,4 @@
-package Domain.InputGeneration.InputRules.FieldIsEmptyRule;
+package Domain.InputGeneration.InputValidators.FieldIsEmptyValidator;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FieldIsEmptyRuleTest {
+public class FieldIsEmptyValidatorTest {
 
     private FieldIsEmptyProviderStub provider = new FieldIsEmptyProviderStub();
-    private FieldIsEmptyRule sut = new FieldIsEmptyRule(provider);
+    private FieldIsEmptyValidator sut = new FieldIsEmptyValidator(provider);
     private Input input;
 
     @Test

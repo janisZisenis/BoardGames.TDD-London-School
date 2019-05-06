@@ -2,14 +2,14 @@ package GuiGaming.ValidatingInputProcessor;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
-import InputGeneration.InputGenerators.AlertingInputGenerator.InputValidator;
+import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
 
 public class ValidatingInputProcessor implements InputProcessor {
 
     private final GuiTurn turn;
-    private final InputValidator validator;
+    private final AlertingInputValidator validator;
 
-    public ValidatingInputProcessor(GuiTurn turn, InputValidator validator) {
+    public ValidatingInputProcessor(GuiTurn turn, AlertingInputValidator validator) {
         this.turn = turn;
         this.validator = validator;
     }

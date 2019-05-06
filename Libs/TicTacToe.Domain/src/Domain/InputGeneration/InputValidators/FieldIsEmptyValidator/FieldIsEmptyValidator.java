@@ -1,13 +1,13 @@
-package Domain.InputGeneration.InputRules.FieldIsEmptyRule;
+package Domain.InputGeneration.InputValidators.FieldIsEmptyValidator;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputRule;
+import InputGeneration.InputValidatorImp.InputValidator;
 
-public class FieldIsEmptyRule implements InputRule {
+public class FieldIsEmptyValidator implements InputValidator {
     private final FieldIsEmptyProvider provider;
 
-    public FieldIsEmptyRule(FieldIsEmptyProvider provider) {
+    public FieldIsEmptyValidator(FieldIsEmptyProvider provider) {
         this.provider = provider;
     }
 

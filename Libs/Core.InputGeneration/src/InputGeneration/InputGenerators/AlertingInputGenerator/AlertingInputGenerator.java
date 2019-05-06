@@ -6,9 +6,9 @@ import InputGeneration.InputGenerator;
 public class AlertingInputGenerator implements InputGenerator {
 
     private final InputGenerator generator;
-    private InputValidator validator;
+    private AlertingInputValidator validator;
 
-    public AlertingInputGenerator(InputGenerator generator, InputValidator validator) {
+    public AlertingInputGenerator(InputGenerator generator, AlertingInputValidator validator) {
         this.generator = generator;
         this.validator = validator;
     }
