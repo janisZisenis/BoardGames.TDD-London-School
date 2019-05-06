@@ -5,7 +5,7 @@ import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValid
 
 public class AlertingInputValidatorImp implements AlertingInputValidator {
 
-    private InputValidator validator;
+    private final InputValidator validator;
     private final InputAlerter alerter;
 
     public AlertingInputValidatorImp(InputValidator validator, InputAlerter alerter) {

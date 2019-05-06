@@ -12,13 +12,16 @@ public class MappingInputAlerter implements InputAlerter {
 
     public void alert(Input input) {
         for(InputValidator v : pairs.keySet())
-            if(!v.isValid(input)) {
-                InputAlerter a = pairs.get(v);
-                a.alert(input);
-            }
+            alertIfIsInvalid(input, v);
+    }
+
+    private void alertIfIsInvalid(Input i, InputValidator v) {
+        if(!v.isValid(i))
+            pairs.get(v).alert(i);
     }
 
     public void register(InputValidator validator, InputAlerter alerter) {
         pairs.put(validator, alerter);
     }
+
 }

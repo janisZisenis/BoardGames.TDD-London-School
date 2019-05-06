@@ -16,7 +16,7 @@ public class AlertingInputGenerator implements InputGenerator {
     public Input generate() {
         Input input = getInput();
 
-        while(isNotValid(input)) {
+        while(isInvalid(input)) {
             alertInvalid(input);
             input = getInput();
         }
@@ -32,7 +32,8 @@ public class AlertingInputGenerator implements InputGenerator {
         return generator.generate();
     }
 
-    private boolean isNotValid(Input input) {
+    private boolean isInvalid(Input input) {
         return !validator.isValid(input);
     }
+
 }

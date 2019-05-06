@@ -5,6 +5,7 @@ import InputGeneration.InputGenerator;
 import InputGeneration.InputValidatorImp.InputValidator;
 
 public class ValidatingInputGenerator implements InputGenerator {
+
     private final InputGenerator generator;
     private final InputValidator validator;
 
@@ -16,7 +17,7 @@ public class ValidatingInputGenerator implements InputGenerator {
     public Input generate() {
         Input in = getInput();
 
-        while(isNotValid(in))
+        while(isInvalid(in))
             in = getInput();
 
         return in;
@@ -26,7 +27,8 @@ public class ValidatingInputGenerator implements InputGenerator {
         return generator.generate();
     }
 
-    private boolean isNotValid(Input in) {
+    private boolean isInvalid(Input in) {
         return !validator.isValid(in);
     }
+
 }
