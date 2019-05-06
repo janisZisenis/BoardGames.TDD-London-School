@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class RandomInputGenerator implements InputGenerator {
 
-    int upper = BoardBoundaries.rowColumnCount;
+    private int upper = BoardBoundaries.rowColumnCount;
 
     public Input generate() {
         Random random = new Random();

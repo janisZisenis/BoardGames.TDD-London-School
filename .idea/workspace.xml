@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/RandomInputGenerator/RandomInputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/RandomInputGenerator/RandomInputGenerator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,13 +59,14 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="46" />
+          <entry key="project.closed" value="47" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="10" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.5" value="2" />
@@ -73,21 +74,21 @@
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="8" />
-          <entry key="project.opened" value="52" />
+          <entry key="project.opened" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3737" />
           <entry key="iml" value="10" />
-          <entry key="java" value="151293" />
+          <entry key="java" value="151301" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="10" />
-          <entry key="JAVA" value="151293" />
+          <entry key="JAVA" value="151301" />
           <entry key="PLAIN_TEXT" value="3738" />
         </counts>
       </usages-collector>
@@ -96,7 +97,7 @@
           <entry key="class" value="11" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="9" />
-          <entry key="java" value="4288" />
+          <entry key="java" value="4290" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
@@ -104,7 +105,7 @@
         <counts>
           <entry key="CLASS" value="11" />
           <entry key="IDEA_MODULE" value="9" />
-          <entry key="JAVA" value="4288" />
+          <entry key="JAVA" value="4290" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="8" />
         </counts>
@@ -116,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputValidatorImpAlertingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="285">
               <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -125,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
+            <state relative-caret-position="393">
               <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -145,6 +146,35 @@
                 <element signature="method#makeDummyIsRegisteredWithValidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
                 <element signature="method#makeInvalidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
                 <element signature="method#makeValidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/RandomInputGenerator/RandomInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/MinimaxInputGenerator/MinimaxInputGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="method#MinimaxInputGenerator#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#minimaxForOpponent#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#minimaxForMe#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#score#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#scoreLine#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#hasNoFreeFieldsLeft#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#copyBoard#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#copyRow#0;class#MinimaxInputGenerator#0" />
+                <element signature="method#copyField#0;class#MinimaxInputGenerator#0" />
               </folding>
             </state>
           </provider>
@@ -213,7 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/src/InputGeneration/InputValidatorImp/InputValidatorImp.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/src/InputGeneration/InputGenerators/ValidatingInputGenerator/ValidatingInputGenerator.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/src/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/CompositeInputRule/CompositeInputRuleTest.java" />
@@ -264,6 +293,7 @@
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputValidatorImpAlertingTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterSpy.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerterTest.java" />
+        <option value="$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/RandomInputGenerator/RandomInputGenerator.java" />
       </list>
     </option>
   </component>
@@ -433,7 +463,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -451,51 +480,47 @@
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Libs" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
               <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
               <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicTacToe.Main" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Libs" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="InputValidatorImp" type="462c0819:PsiDirectoryNode" />
+              <item name="MinimaxInputGenerator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,7 +590,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Core.InputGeneration">
+  <component name="RunManager" selected="Application.Main.SequentialGui">
     <configuration name="Main.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="TicTacToe.Console" />
@@ -799,6 +824,7 @@
       <workItem from="1557007943850" duration="9235000" />
       <workItem from="1557073918918" duration="2496000" />
       <workItem from="1557121147835" duration="1354000" />
+      <workItem from="1557151672993" duration="399000" />
     </task>
     <servers />
   </component>
@@ -835,13 +861,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400529000" />
+    <option name="totallyTimeSpent" value="400928000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37249285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3782235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -850,7 +876,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.40127388" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44352332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -994,24 +1020,16 @@
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/MinimaxInputGenerator/MinimaxInputGenerator.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/Players/PlayerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/Players/PlayerImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/test/Domain/Players/MarkingTheInputFieldTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-876">
@@ -1254,13 +1272,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterMock.java" />
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/src/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1324,9 +1336,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputValidatorImpAlertingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="285">
           <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1334,20 +1353,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/RuleChoosingInputAlerter/RuleChoosingInputAlerterTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="393">
           <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1364,6 +1372,31 @@
             <element signature="method#makeDummyIsRegisteredWithValidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
             <element signature="method#makeInvalidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
             <element signature="method#makeValidatingRule#0;class#RuleChoosingInputAlerterTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/RandomInputGenerator/RandomInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Libs/TicTacToe.Domain/src/Domain/InputGeneration/MinimaxInputGenerator/MinimaxInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="method#MinimaxInputGenerator#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#minimaxForOpponent#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#minimaxForMe#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#score#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#scoreLine#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#hasNoFreeFieldsLeft#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#copyBoard#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#copyRow#0;class#MinimaxInputGenerator#0" />
+            <element signature="method#copyField#0;class#MinimaxInputGenerator#0" />
           </folding>
         </state>
       </provider>
