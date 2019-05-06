@@ -91,7 +91,7 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="53" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="12" />
@@ -313,9 +313,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="800" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="336" />
+    <option name="y" value="91" />
     <option name="width" value="1440" />
     <option name="height" value="899" />
   </component>
@@ -554,10 +554,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main.Console">
-    <configuration name="Main.Console" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.App.TicTacToe.Console">
+    <configuration name="App.TicTacToe.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="TicTacToe.Console" />
+      <module name="App.TicTacToe.Console" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="View.Messaging.*" />
@@ -568,9 +568,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.Gui" type="Application" factoryName="Application" temporary="true">
+    <configuration name="App.TicTacToe.Gui" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="TicTacToe.Gui" />
+      <module name="App.TicTacToe.Gui" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="App.*" />
@@ -581,9 +581,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.SequentialGui" type="Application" factoryName="Application">
+    <configuration name="App.TicTacToe.SequentialGui" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="TicTacToe.SequentialGui" />
+      <module name="App.TicTacToe.SequentialGui" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="View.Messaging.*" />
@@ -620,7 +620,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Core.InputGeneration" type="JUnit" factoryName="JUnit">
+    <configuration name="Core.InputGenerationTest" type="JUnit" factoryName="JUnit">
       <module name="Core.InputGeneration" />
       <option name="PACKAGE_NAME" value="InputGeneration" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -631,7 +631,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Core.NewGamingTest" type="JUnit" factoryName="JUnit">
+    <configuration name="Core.SequentialGamingTest" type="JUnit" factoryName="JUnit">
       <module name="Core.SequentialGaming" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -642,7 +642,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TTT.DomainTest" type="JUnit" factoryName="JUnit">
+    <configuration name="TicTacToe.DomainTest" type="JUnit" factoryName="JUnit">
       <module name="TicTacToe.Domain" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -653,7 +653,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TTT.GuiGamingTest" type="JUnit" factoryName="JUnit">
+    <configuration name="TicTacToe.GuiGamingTest" type="JUnit" factoryName="JUnit">
       <module name="TicTacToe.GuiGaming" />
       <option name="PACKAGE_NAME" value="GuiGaming" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -664,7 +664,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TTT.MappingTest" type="JUnit" factoryName="JUnit">
+    <configuration name="TicTacToe.MappingTest" type="JUnit" factoryName="JUnit">
       <module name="TicTacToe.Mapping" />
       <option name="PACKAGE_NAME" value="Mapping" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -678,7 +678,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TTT.MessagingTest" type="JUnit" factoryName="JUnit">
+    <configuration name="TicTacToe.MessagingTest" type="JUnit" factoryName="JUnit">
       <module name="TicTacToe.Messaging" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -689,7 +689,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TTT.RenderingTest" type="JUnit" factoryName="JUnit">
+    <configuration name="TicTacToe.RenderingTest" type="JUnit" factoryName="JUnit">
       <module name="TicTacToe.Rendering" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
@@ -701,25 +701,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main.SequentialGui" />
-      <item itemvalue="JUnit.Core.NewGamingTest" />
+      <item itemvalue="Application.App.TicTacToe.SequentialGui" />
       <item itemvalue="JUnit.AllTest" />
-      <item itemvalue="JUnit.Core.InputGeneration" />
+      <item itemvalue="JUnit.Core.SequentialGamingTest" />
+      <item itemvalue="JUnit.Core.InputGenerationTest" />
       <item itemvalue="JUnit.Core.GamingTest" />
-      <item itemvalue="JUnit.TTT.DomainTest" />
-      <item itemvalue="JUnit.TTT.GuiGamingTest" />
-      <item itemvalue="JUnit.TTT.MappingTest" />
-      <item itemvalue="JUnit.TTT.MessagingTest" />
-      <item itemvalue="JUnit.TTT.RenderingTest" />
-      <item itemvalue="Application.Main.Console" />
-      <item itemvalue="Application.Main.Gui" />
+      <item itemvalue="JUnit.TicTacToe.DomainTest" />
+      <item itemvalue="JUnit.TicTacToe.GuiGamingTest" />
+      <item itemvalue="JUnit.TicTacToe.MappingTest" />
+      <item itemvalue="JUnit.TicTacToe.MessagingTest" />
+      <item itemvalue="JUnit.TicTacToe.RenderingTest" />
+      <item itemvalue="Application.App.TicTacToe.Console" />
+      <item itemvalue="Application.App.TicTacToe.Gui" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main.Console" />
-        <item itemvalue="Application.Main.Gui" />
-        <item itemvalue="JUnit.TTT.MessagingTest" />
-        <item itemvalue="JUnit.TTT.RenderingTest" />
+        <item itemvalue="Application.App.TicTacToe.Console" />
+        <item itemvalue="Application.App.TicTacToe.Gui" />
+        <item itemvalue="JUnit.TicTacToe.MessagingTest" />
+        <item itemvalue="JUnit.TicTacToe.RenderingTest" />
       </list>
     </recent_temporary>
   </component>
@@ -795,7 +795,7 @@
       <workItem from="1557167855935" duration="4205000" />
       <workItem from="1557172908527" duration="3791000" />
       <workItem from="1557177784147" duration="3716000" />
-      <workItem from="1557182000780" duration="579000" />
+      <workItem from="1557182000780" duration="587000" />
     </task>
     <servers />
   </component>
@@ -832,7 +832,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420906000" />
+    <option name="totallyTimeSpent" value="420914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="800" y="23" width="1440" height="899" extended-state="0" />

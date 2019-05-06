@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="App.TicTacToe.Console" />
+        <module name="App.TicTacToe.Gui" />
+        <module name="App.TicTacToe.SequentialGui" />
+        <module name="Core.Gaming" />
+        <module name="Core.InputGeneration" />
+        <module name="Core.SequentialGaming" />
+        <module name="TicTacToe.Domain" />
+        <module name="TicTacToe.GuiGaming" />
+        <module name="TicTacToe.Mapping" />
+        <module name="TicTacToe.Messages" />
+        <module name="TicTacToe.Messaging" />
+        <module name="TicTacToe.Rendering" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="App.TicTacToe.Console" target="8" />
+      <module name="App.TicTacToe.Gui" target="8" />
+      <module name="App.TicTacToe.SequentialGui" target="8" />
+      <module name="Core.Gaming" target="8" />
+      <module name="Core.InputGeneration" target="8" />
+      <module name="Core.SequentialGaming" target="8" />
+      <module name="tictactoe-tdd" target="1.5" />
+      <module name="TicTacToe.Console.Main" target="8" />
+      <module name="TicTacToe.Domain" target="8" />
+      <module name="TicTacToe.GuiGaming" target="8" />
+      <module name="TicTacToe.Mapping" target="8" />
+      <module name="TicTacToe.Messages" target="8" />
+      <module name="TicTacToe.Messaging" target="8" />
+      <module name="TicTacToe.Rendering" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="App.TicTacToe.Gui" options="" />
+      <module name="App.TicTacToe.SequentialGui" options="" />
+    </option>
+  </component>
+</project>
