@@ -13,65 +13,64 @@ public class ValidatingInputGeneratorTest {
     private InputValidatorStub validator = new InputValidatorStub();
     private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
-    private Input[] generated;
+    private Input[] generatedInputs;
 
     @Test
-    void IfFirstUserInputIsValid_ShouldBeTheFirstUserInput() {
-        makeFirstUserInputIsValid();
+    void IfFirstInputIsValid_ShouldBeTheFirstInput() {
+        makeFirstInputIsValid();
 
         Input actual = sut.generate();
 
-        Input expected = generated[0];
+        Input expected = generatedInputs[0];
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfFirstUserInputIsNotValid_ShouldBeTheSecondUserInput() {
-        makeFirstInputIsNotValid();
+    void IfOnlySecondInputIsValid_ShouldBeTheSecondInput() {
+        makeOnlySecondInputIsValid();
 
         Input actual = sut.generate();
 
-        Input expected = generated[1];
+        Input expected = generatedInputs[1];
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfFirstAndSecondUserInputIsNotValid_ShouldBeTheThirdUserInput() {
-        makeFirstAndSecondInputIsNotValid();
+    void IfOnlyThirdInputIsValid_ShouldBeTheThirdInput() {
+        makeOnlyThirdInputIsValid();
 
         Input actual = sut.generate();
 
-        Input expected = generated[2];
+        Input expected = generatedInputs[2];
         assertEquals(expected, actual);
     }
 
-    private void makeFirstUserInputIsValid() {
-        generated = new Input[] { new Input(0, 1) };
+    private void makeFirstInputIsValid() {
+        generatedInputs = new Input[] { new Input(0, 1) };
 
-        generator.setGeneratedInputs(generated);
-        validator.setValidInputs(generated);
+        generator.setGeneratedInputs(generatedInputs);
+        validator.setValidInputs(generatedInputs);
     }
 
-    private void makeFirstInputIsNotValid() {
-        generated = new Input[] { new Input(0, 1),
-                                  new Input(1, 2) };
+    private void makeOnlySecondInputIsValid() {
+        generatedInputs = new Input[] { new Input(0, 1),
+                                        new Input(1, 2) };
 
-        Input[] valid = { new Input(1, 2) };
+        Input[] validInputs = { generatedInputs[1] };
 
-        generator.setGeneratedInputs(generated);
-        validator.setValidInputs(valid);
+        generator.setGeneratedInputs(generatedInputs);
+        validator.setValidInputs(validInputs);
     }
 
-    private void makeFirstAndSecondInputIsNotValid() {
-        generated = new Input[] { new Input(0, 1),
-                                  new Input(1, 2),
-                                  new Input(2, 3) };
+    private void makeOnlyThirdInputIsValid() {
+        generatedInputs = new Input[] { new Input(0, 1),
+                                        new Input(1, 2),
+                                        new Input(2, 3) };
 
-        Input[] valid = { new Input(2, 3) };
+        Input[] validInputs = { generatedInputs[2] };
 
-        generator.setGeneratedInputs(generated);
-        validator.setValidInputs(valid);
+        generator.setGeneratedInputs(generatedInputs);
+        validator.setValidInputs(validInputs);
     }
-
 
 }
