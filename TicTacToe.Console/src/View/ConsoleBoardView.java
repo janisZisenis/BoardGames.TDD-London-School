@@ -1,6 +1,6 @@
 package View;
 
-import Bussiness.BoardRenderer.BoardRenderingView;
+import Rendering.BoardRenderer.BoardRenderingView;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;

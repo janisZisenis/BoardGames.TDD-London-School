@@ -1,6 +1,6 @@
 package App;
 
-import Bussiness.BoardRenderer.BoardRenderer;
+import Rendering.BoardRenderer.BoardRenderer;
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;

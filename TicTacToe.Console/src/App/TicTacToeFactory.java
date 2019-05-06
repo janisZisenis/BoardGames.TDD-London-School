@@ -1,8 +1,8 @@
 package App;
 
 
-import Bussiness.BoardRenderer.BoardRenderer;
-import Bussiness.BoardRenderer.BoardRenderingView;
+import Rendering.BoardRenderer.BoardRenderer;
+import Rendering.BoardRenderer.BoardRenderingView;
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
