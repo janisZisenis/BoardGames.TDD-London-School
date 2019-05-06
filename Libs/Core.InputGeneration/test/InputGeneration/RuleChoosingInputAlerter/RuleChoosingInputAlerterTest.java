@@ -2,78 +2,85 @@ package InputGeneration.RuleChoosingInputAlerter;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputValidatorImp.InputAlerterDummy;
-import InputGeneration.InputValidatorImp.InputAlerterMock;
+import InputGeneration.InputValidatorImp.InputAlerterSpy;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RuleChoosingInputAlerterTest {
 
     private RuleChoosingInputAlerter sut = new RuleChoosingInputAlerter();
-    private InputAlerterMock mock = new InputAlerterMock();
+    private InputAlerterSpy alerter = new InputAlerterSpy();
 
     private Input input = new Input(0, 1);
 
     @Test
     void IfFirstRuleIsInvalidating_TheFirstAlerterShouldAlert() {
-        makeMockIsRegisteredWithInvalidatingRule();
-        mock.expectAlertedInput(input);
+        makeAlerterIsRegisteredWithInvalidatingRule();
 
         sut.alert(input);
 
-        mock.verifyAll();
+        assertAlertedInputEquals(input);
     }
 
     @Test
     void IfFirstRuleIsValidating_TheFirstAlerterShouldNotAlert() {
-        makeMockIsRegisteredWithValidatingRule();
-        mock.expectHasNotAlerted();
+        makeAlerterIsRegisteredWithValidatingRule();
 
         sut.alert(input);
 
-        mock.verifyAll();
+        assertHasAlerted();
     }
 
     @Test
     void IfFirstRuleIsInvalidatingAndSecondIsValidating_TheFirstAlerterShouldAlert() {
-        makeMockIsRegisteredWithInvalidatingRule();
+        makeAlerterIsRegisteredWithInvalidatingRule();
         makeDummyIsRegisteredWithInvalidatingRule();
-        mock.expectAlertedInput(input);
 
         sut.alert(input);
 
-        mock.verifyAll();
+        assertAlertedInputEquals(input);
     }
 
     @Test
     void IfFirstRuleIsValidatingAndSecondIsInvalidating_TheSecondAlerterShouldAlert() {
         makeDummyIsRegisteredWithInvalidatingRule();
-        makeMockIsRegisteredWithInvalidatingRule();
-        mock.expectAlertedInput(input);
+        makeAlerterIsRegisteredWithInvalidatingRule();
 
         sut.alert(input);
 
-        mock.verifyAll();
+        assertAlertedInputEquals(input);
     }
 
     @Test
     void IfThirdAndSecondRulesAreInvalidatingAndFirstIsValidating_TheSecondAlerterShouldAlert() {
         makeDummyIsRegisteredWithValidatingRule();
-        makeMockIsRegisteredWithInvalidatingRule();
+        makeAlerterIsRegisteredWithInvalidatingRule();
         makeDummyIsRegisteredWithInvalidatingRule();
-        mock.expectAlertedInput(input);
 
         sut.alert(input);
 
-        mock.verifyAll();
+        assertAlertedInputEquals(input);
     }
 
-    private void makeMockIsRegisteredWithInvalidatingRule() {
+    private void assertHasAlerted() {
+        boolean actual = alerter.hasAlerted();
+        assertFalse(actual);
+    }
+
+    private void assertAlertedInputEquals(Input expected) {
+        Input actual = alerter.getAlerted();
+        assertEquals(expected, actual);
+    }
+
+    private void makeAlerterIsRegisteredWithInvalidatingRule() {
         InputRuleStub rule = makeInvalidatingRule();
-        sut.register(rule, mock);
+        sut.register(rule, alerter);
     }
 
-    private void makeMockIsRegisteredWithValidatingRule() {
+    private void makeAlerterIsRegisteredWithValidatingRule() {
         InputRuleStub rule = makeValidatingRule();
-        sut.register(rule, mock);
+        sut.register(rule, alerter);
     }
 
     private void makeDummyIsRegisteredWithInvalidatingRule() {

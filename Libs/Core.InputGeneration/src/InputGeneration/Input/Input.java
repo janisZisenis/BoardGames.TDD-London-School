@@ -1,6 +1,7 @@
 package InputGeneration.Input;
 
 public class Input {
+
     private final int row;
     private final int column;
 
@@ -10,11 +11,11 @@ public class Input {
     }
 
     public int getRow() {
-        return row;
+        return this.row;
     }
 
     public int getColumn() {
-        return column;
+        return this.column;
     }
 
     public boolean equals(Object o) {
@@ -25,4 +26,5 @@ public class Input {
     public int hashCode() {
         return ("row: " + row + " column: " + column).hashCode();
     }
+
 }

@@ -4,21 +4,26 @@ import InputGeneration.Input.Input;
 import InputGeneration.RuleChoosingInputAlerter.InputRuleDummy;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class InputValidatorImpAlertingTest {
 
     private InputRuleDummy rule = new InputRuleDummy();
-    private InputAlerterMock alerter = new InputAlerterMock();
+    private InputAlerterSpy alerter = new InputAlerterSpy();
     private InputValidatorImp sut = new InputValidatorImp(rule, alerter);
-
-    private Input input = new Input(0, 1);
 
     @Test
     void IfInputGetsAlerted_TheInputAlerterShouldAlertTheInput() {
-        alerter.expectAlertedInput(input);
+        Input input = new Input(0, 1);
 
         sut.alertIsInvalid(input);
 
-        alerter.verifyAll();
+        assertAlertedInputEquals(new Input(0, 1));
+    }
+
+    private void assertAlertedInputEquals(Input expected) {
+        Input actual = alerter.getAlerted();
+        assertEquals(expected, actual);
     }
 
 }
