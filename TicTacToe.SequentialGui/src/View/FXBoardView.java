@@ -1,6 +1,6 @@
 package View;
 
-import Bussiness.BoardRenderer.BoardView;
+import Bussiness.BoardRenderer.BoardRenderingView;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
@@ -18,7 +18,7 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane implements BoardView {
+public class FXBoardView extends Pane implements BoardRenderingView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
 

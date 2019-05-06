@@ -2,7 +2,8 @@ package Domain.Players;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.Input.Input;
+import InputGeneration.CountingGeneratorStub;
+import InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {

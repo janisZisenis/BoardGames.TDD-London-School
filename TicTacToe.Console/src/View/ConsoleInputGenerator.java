@@ -1,7 +1,7 @@
 package View;
 
-import Domain.Input.Input;
-import Domain.Players.InputGenerator;
+import InputGeneration.Input.Input;
+import InputGeneration.InputGenerator;
 import Messages.GenerationMessages;
 
 import java.util.Scanner;

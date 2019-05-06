@@ -1,10 +1,10 @@
 package App;
 
+import Domain.Board.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
-import Domain.Board.ListenableBoard.BoardListener;
 import Domain.Data.Mark;
-import Domain.Input.Input;
+import InputGeneration.Input.Input;
 import View.FXBoardView;
 
 public class BoardViewPresenter implements BoardViewDelegate, BoardListener {

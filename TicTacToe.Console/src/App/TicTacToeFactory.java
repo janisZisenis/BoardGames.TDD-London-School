@@ -2,7 +2,7 @@ package App;
 
 
 import Bussiness.BoardRenderer.BoardRenderer;
-import Bussiness.BoardRenderer.BoardView;
+import Bussiness.BoardRenderer.BoardRenderingView;
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
@@ -13,21 +13,12 @@ import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Domain.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
-import Domain.InputGenerators.AlertingInputGenerator.InputValidator;
-import Domain.InputGenerators.MinimaxInputGenerator.MinimaxInputGenerator;
-import Domain.InputGenerators.RandomInputGenerator.RandomInputGenerator;
-import Domain.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import Domain.InputRules.CompositeInputRule.CompositeInputRule;
-import Domain.InputRules.FieldExistsRule.FieldExistsRule;
-import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyRule;
-import Domain.InputValidatorImp.InputAlerter;
-import Domain.InputValidatorImp.InputRule;
-import Domain.InputValidatorImp.InputValidatorImp;
+import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
+import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
+import Domain.InputGeneration.RandomInputGenerator.RandomInputGenerator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
-import Domain.Players.InputGenerator;
 import Domain.Players.PlayerContext;
-import Domain.RuleChoosingInputAlerter.RuleChoosingInputAlerter;
 import Gaming.GameImp.Game;
 import Gaming.GameImp.GameImp;
 import Gaming.GameImp.GameLoop;
@@ -39,6 +30,15 @@ import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import Gaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import Gaming.TwoPlayerTurn.Player;
+import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.InputGenerator;
+import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
+import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
+import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.InputValidatorImp.InputAlerter;
+import InputGeneration.InputValidatorImp.InputValidator;
+import InputGeneration.InputValidatorImp.AlertingInputValidatorImp;
+import InputGeneration.MappingInputAlerter.MappingInputAlerter;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -74,7 +74,7 @@ public class TicTacToeFactory {
     private final String computerTurnMessage = OnePlayerModeMessages.computerTurnMessage;
 
     private Messenger messenger;
-    private BoardView boardView;
+    private BoardRenderingView boardView;
     private InputGenerator inputView;
 
     public Game makeGame() {
@@ -201,9 +201,9 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeComputerInputGenerator(Board board, Mark m) {
-        InputRule inputRule = makeInputRule(board);
+        InputValidator inputValidator = makeInputValidator(board);
         InputGenerator randomGenerator = makeMinimaxInputGenerator(board, m);
-        return new ValidatingInputGenerator(randomGenerator, inputRule);
+        return new ValidatingInputGenerator(randomGenerator, inputValidator);
     }
 
     private InputGenerator makeMinimaxInputGenerator(Board board, Mark m) {
@@ -215,35 +215,35 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        InputValidator validator = makeInputValidator(board);
+        AlertingInputValidator validator = makeAlertingInputValidator(board);
         InputGenerator consoleGenerator = inputView;
         return new AlertingInputGenerator(consoleGenerator, validator);
     }
 
-    private InputRule makeInputRule(Board board) {
-        InputRule existsRule = makeFieldExistsRule();
-        InputRule isFreeRule = makeFieldIsEmptyRule(board);
+    private InputValidator makeInputValidator(Board board) {
+        InputValidator existsValidator = makeFieldExistsValidator();
+        InputValidator isFreeValidator = makeFieldIsEmptyValidator(board);
 
-        CompositeInputRule inputRule = new CompositeInputRule();
-        inputRule.add(existsRule);
-        inputRule.add(isFreeRule);
+        CompositeInputValidator inputValidator = new CompositeInputValidator();
+        inputValidator.add(existsValidator);
+        inputValidator.add(isFreeValidator);
 
-        return inputRule;
+        return inputValidator;
     }
 
-    private FieldExistsRule makeFieldExistsRule() {
-        return new FieldExistsRule();
+    private FieldExistsValidator makeFieldExistsValidator() {
+        return new FieldExistsValidator();
     }
 
     private InputAlerter makeInputAlerter(Board board) {
-        InputRule existsRule = makeFieldExistsRule();
-        InputRule isFreeRule = makeFieldIsEmptyRule(board);
+        InputValidator existsValidator = makeFieldExistsValidator();
+        InputValidator isFreeValidator = makeFieldIsEmptyValidator(board);
         InputAlerter existsAlerter = makeConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
         InputAlerter isFreeAlerter = makeConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
 
-        RuleChoosingInputAlerter alerter = new RuleChoosingInputAlerter();
-        alerter.register(existsRule, existsAlerter);
-        alerter.register(isFreeRule, isFreeAlerter);
+        MappingInputAlerter alerter = new MappingInputAlerter();
+        alerter.register(existsValidator, existsAlerter);
+        alerter.register(isFreeValidator, isFreeAlerter);
 
         return alerter;
     }
@@ -252,14 +252,14 @@ public class TicTacToeFactory {
         return new ConsoleInputAlerter(inputDoesNotExist);
     }
 
-    private FieldIsEmptyRule makeFieldIsEmptyRule(Board board) {
-        return new FieldIsEmptyRule(board);
+    private FieldIsEmptyValidator makeFieldIsEmptyValidator(Board board) {
+        return new FieldIsEmptyValidator(board);
     }
 
-    private InputValidator makeInputValidator(Board board) {
-        InputRule rule = makeInputRule(board);
+    private AlertingInputValidator makeAlertingInputValidator(Board board) {
+        InputValidator validator = makeInputValidator(board);
         InputAlerter alerter = makeInputAlerter(board);
-        return new InputValidatorImp(rule, alerter);
+        return new AlertingInputValidatorImp(validator, alerter);
     }
 
 }

@@ -2,8 +2,8 @@ package Domain.Board;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.InputRules.FieldIsEmptyRule.FieldIsEmptyProvider;
-import Domain.Players.MarkFieldService;
+import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
+import Domain.Turn.MarkFieldService;
 import Domain.NumberOfMovesRule.MarkedFieldCountProvider;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 

@@ -2,7 +2,7 @@ package Bussiness.BoardRenderer;
 
 import Domain.Data.Line.Line;
 
-public class BoardViewSpy implements BoardView {
+public class BoardViewSpy implements BoardRenderingView {
 
     private boolean didShowBoard = false;
     private boolean didShowWinningLine = false;

@@ -1,7 +1,7 @@
 package GuiGaming.GuiPlayerImp;
 
 import Domain.Data.Field.Field;
-import Domain.Players.MarkFieldServiceSpy;
+import Domain.Turn.MarkFieldServiceSpy;
 import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 
@@ -53,7 +53,7 @@ public class MarkingTheFieldTest {
     }
 
     private void assertMarkedAs(Mark expected) {
-        Mark actual = service.getMark();
+        Mark actual = service.getPlacedMark();
         assertEquals(expected, actual);
     }
 
