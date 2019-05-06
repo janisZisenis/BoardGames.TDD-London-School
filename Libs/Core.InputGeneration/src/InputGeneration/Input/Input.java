@@ -19,8 +19,15 @@ public class Input {
     }
 
     public boolean equals(Object o) {
+        if(isNotAnInput(o))
+            return false;
+
         Input i = (Input)o;
         return i.row == row && i.column == column;
+    }
+
+    private boolean isNotAnInput(Object o) {
+        return !(o instanceof Input);
     }
 
     public int hashCode() {
