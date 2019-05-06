@@ -15,11 +15,7 @@ import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
-import GuiGaming.ValidatingInputProcessor.InputProcessor;
-import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
-import InputGeneration.InputValidatorImp.AlertingInputValidatorImp;
 import InputGeneration.MappingInputAlerter.MappingInputAlerter;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
@@ -45,7 +41,6 @@ public class Main extends Application {
         alerter.register(new FieldIsEmptyValidator(board), new FXInputAlerter(AlertingMessages.inputAlreadyMarked));
         alerter.register(new FieldExistsValidator(), new FXInputAlerter(AlertingMessages.inputDoesNotExist));
 
-        AlertingInputValidator validator = new AlertingInputValidatorImp(inputValidator, alerter);
 
         CompositeGameOverRule gameOverRule = new CompositeGameOverRule();
         EquallyMarkedLineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
@@ -59,12 +54,12 @@ public class Main extends Application {
         GuiPlayer john = new GuiPlayerImp(Mark.John, board);
         GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
         GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
-        InputProcessor processor = new ValidatingInputProcessor(turn, validator);
         FXBoardView boardView = new FXBoardView(mapper);
-        BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
-        BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
-        boardView.setDelegate(presenter);
-        board.setListener(presenter);
+//        InputProcessor processor = new ValidatingInputProcessor(turn, validator);
+//        BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
+//        BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
+//        boardView.setDelegate(presenter);
+//        board.setListener(presenter);
         ///// new to Gui App /////
 
         primaryStage.setTitle("TicTacToe");

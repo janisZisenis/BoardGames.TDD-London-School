@@ -23,11 +23,11 @@ public class ValidatingInputGenerator implements InputGenerator {
         return in;
     }
 
-    private Input getInput() {
+    protected Input getInput() {
         return generator.generate();
     }
 
-    private boolean isInvalid(Input in) {
+    protected boolean isInvalid(Input in) {
         return !validator.isValid(in);
     }
 

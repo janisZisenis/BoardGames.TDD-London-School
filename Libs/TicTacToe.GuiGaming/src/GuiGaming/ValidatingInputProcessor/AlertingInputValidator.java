@@ -1,4 +1,4 @@
-package InputGeneration.InputGenerators.AlertingInputGenerator;
+package GuiGaming.ValidatingInputProcessor;
 
 import InputGeneration.Input.Input;
 

@@ -33,11 +33,9 @@ import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.InputGenerator;
 import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputValidator;
 import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
 import InputGeneration.InputValidatorImp.InputAlerter;
 import InputGeneration.InputValidatorImp.InputValidator;
-import InputGeneration.InputValidatorImp.AlertingInputValidatorImp;
 import InputGeneration.MappingInputAlerter.MappingInputAlerter;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
@@ -215,9 +213,10 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        AlertingInputValidator validator = makeAlertingInputValidator(board);
+        InputValidator validator = makeInputValidator(board);
+        InputAlerter alerter = makeInputAlerter(board);
         InputGenerator consoleGenerator = inputView;
-        return new AlertingInputGenerator(consoleGenerator, validator);
+        return new AlertingInputGenerator(consoleGenerator, validator, alerter);
     }
 
     private InputValidator makeInputValidator(Board board) {
@@ -254,12 +253,6 @@ public class TicTacToeFactory {
 
     private FieldIsEmptyValidator makeFieldIsEmptyValidator(Board board) {
         return new FieldIsEmptyValidator(board);
-    }
-
-    private AlertingInputValidator makeAlertingInputValidator(Board board) {
-        InputValidator validator = makeInputValidator(board);
-        InputAlerter alerter = makeInputAlerter(board);
-        return new AlertingInputValidatorImp(validator, alerter);
     }
 
 }

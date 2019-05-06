@@ -2,15 +2,17 @@ package InputGeneration.InputGenerators.AlertingInputGenerator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
+import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.InputValidatorImp.InputAlerter;
+import InputGeneration.InputValidatorImp.InputValidator;
 
-public class AlertingInputGenerator implements InputGenerator {
+public class AlertingInputGenerator extends ValidatingInputGenerator {
 
-    private final InputGenerator generator;
-    private AlertingInputValidator validator;
+    private final InputAlerter alerter;
 
-    public AlertingInputGenerator(InputGenerator generator, AlertingInputValidator validator) {
-        this.generator = generator;
-        this.validator = validator;
+    public AlertingInputGenerator(InputGenerator generator, InputValidator validator, InputAlerter alerter) {
+        super(generator, validator);
+        this.alerter = alerter;
     }
 
     public Input generate() {
@@ -25,15 +27,7 @@ public class AlertingInputGenerator implements InputGenerator {
     }
 
     private void alertInvalid(Input input) {
-        validator.alertIsInvalid(input);
-    }
-
-    private Input getInput() {
-        return generator.generate();
-    }
-
-    private boolean isInvalid(Input input) {
-        return !validator.isValid(input);
+        alerter.alert(input);
     }
 
 }
