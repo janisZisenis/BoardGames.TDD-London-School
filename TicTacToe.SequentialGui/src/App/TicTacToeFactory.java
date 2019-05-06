@@ -30,11 +30,10 @@ import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputGenerators.AlertingInputGenerator.AlertingInputGenerator;
-import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import InputGeneration.InputValidatorImp.InputAlerter;
-import InputGeneration.InputValidatorImp.InputValidator;
-import InputGeneration.MappingInputAlerter.MappingInputAlerter;
+import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.AlertingInputGenerator;
+import InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.InputAlerter;
+import InputGeneration.ValidatingInputGenerator.InputValidator;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -211,9 +210,13 @@ public class TicTacToeFactory {
     }
 
     private InputGenerator makeHumanInputGenerator(Board board) {
-        InputValidator validator = makeInputValidator(board);
-        InputAlerter alerter = makeInputAlerter(board);
-        return new AlertingInputGenerator(inputView, validator, alerter);
+        InputValidator existsValidator = makeFieldExistsValidator();
+        InputAlerter existsAlerter = makeFXInputAlerter(AlertingMessages.inputDoesNotExist);
+        InputGenerator generator = new AlertingInputGenerator(inputView, existsValidator, existsAlerter);
+
+        InputValidator emptyValidator = makeFieldIsEmptyValidator(board);
+        InputAlerter emptyAlerter = makeFXInputAlerter(AlertingMessages.inputAlreadyMarked);
+        return new AlertingInputGenerator(generator, emptyValidator, emptyAlerter);
     }
 
     private InputValidator makeInputValidator(Board board) {
@@ -229,19 +232,6 @@ public class TicTacToeFactory {
 
     private FieldExistsValidator makeFieldExistsValidator() {
         return new FieldExistsValidator();
-    }
-
-    private InputAlerter makeInputAlerter(Board board) {
-        InputValidator existsValidator = makeFieldExistsValidator();
-        InputValidator isFreeValidator = makeFieldIsEmptyValidator(board);
-        InputAlerter existsAlerter = makeFXInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputAlerter isFreeAlerter = makeFXInputAlerter(AlertingMessages.inputAlreadyMarked);
-
-        MappingInputAlerter alerter = new MappingInputAlerter();
-        alerter.register(existsValidator, existsAlerter);
-        alerter.register(isFreeValidator, isFreeAlerter);
-
-        return alerter;
     }
 
     private FXInputAlerter makeFXInputAlerter(String inputDoesNotExist) {

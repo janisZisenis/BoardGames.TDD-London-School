@@ -1,7 +1,6 @@
-package InputGeneration.MappingInputAlerter;
+package InputGeneration.ValidatingInputGenerator;
 
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputValidator;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package InputGeneration.InputValidatorImp;
+package InputGeneration.ValidatingInputGenerator;
 
 import InputGeneration.Input.Input;
 

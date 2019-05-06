@@ -1,19 +1,16 @@
-package InputGeneration.InputGenerators.AlertingInputGenerator;
+package InputGeneration.ValidatingInputGenerator;
 
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputAlerterDummy;
-import InputGeneration.MappingInputAlerter.InputValidatorStub;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class ValidatingGeneratedInputTest {
+public class ValidatingInputGeneratorTest {
 
-    private InputValidatorStub validator = new InputValidatorStub();
     private CountingGeneratorStub generator = new CountingGeneratorStub();
-    private InputAlerterDummy alerter = new InputAlerterDummy();
-    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator, alerter);
+    private InputValidatorStub validator = new InputValidatorStub();
+    private ValidatingInputGenerator sut = new ValidatingInputGenerator(generator, validator);
 
     private Input[] generatedInputs;
 
@@ -56,7 +53,7 @@ public class ValidatingGeneratedInputTest {
 
     private void makeOnlySecondInputIsValid() {
         generatedInputs = new Input[] { new Input(0, 1),
-                new Input(1, 2) };
+                                        new Input(1, 2) };
 
         Input[] validInputs = { generatedInputs[1] };
 
@@ -66,8 +63,8 @@ public class ValidatingGeneratedInputTest {
 
     private void makeOnlyThirdInputIsValid() {
         generatedInputs = new Input[] { new Input(0, 1),
-                new Input(1, 2),
-                new Input(2, 3) };
+                                        new Input(1, 2),
+                                        new Input(2, 3) };
 
         Input[] validInputs = { generatedInputs[2] };
 

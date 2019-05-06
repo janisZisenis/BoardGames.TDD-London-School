@@ -1,9 +1,8 @@
-package InputGeneration.InputGenerators.AlertingInputGenerator;
+package InputGeneration.ValidatingInputGenerator.AlertingInputGenerator;
 
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
-import InputGeneration.InputValidatorImp.InputAlerterSpy;
-import InputGeneration.MappingInputAlerter.InputValidatorStub;
+import InputGeneration.ValidatingInputGenerator.InputValidatorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

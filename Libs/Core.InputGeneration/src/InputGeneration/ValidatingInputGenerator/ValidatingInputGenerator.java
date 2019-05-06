@@ -1,8 +1,7 @@
-package InputGeneration.InputGenerators.ValidatingInputGenerator;
+package InputGeneration.ValidatingInputGenerator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputValidatorImp.InputValidator;
 
 public class ValidatingInputGenerator implements InputGenerator {
 

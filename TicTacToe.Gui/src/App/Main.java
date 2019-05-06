@@ -16,7 +16,6 @@ import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
-import InputGeneration.MappingInputAlerter.MappingInputAlerter;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
 import View.FXBoardView;
@@ -37,10 +36,6 @@ public class Main extends Application {
         CompositeInputValidator inputValidator = new CompositeInputValidator();
         inputValidator.add(new FieldIsEmptyValidator(board));
         inputValidator.add(new FieldExistsValidator());
-        MappingInputAlerter alerter = new MappingInputAlerter();
-        alerter.register(new FieldIsEmptyValidator(board), new FXInputAlerter(AlertingMessages.inputAlreadyMarked));
-        alerter.register(new FieldExistsValidator(), new FXInputAlerter(AlertingMessages.inputDoesNotExist));
-
 
         CompositeGameOverRule gameOverRule = new CompositeGameOverRule();
         EquallyMarkedLineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);

@@ -1,10 +1,9 @@
-package InputGeneration.InputGenerators.AlertingInputGenerator;
+package InputGeneration.ValidatingInputGenerator.AlertingInputGenerator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
-import InputGeneration.InputGenerators.ValidatingInputGenerator.ValidatingInputGenerator;
-import InputGeneration.InputValidatorImp.InputAlerter;
-import InputGeneration.InputValidatorImp.InputValidator;
+import InputGeneration.ValidatingInputGenerator.InputValidator;
+import InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
 
 public class AlertingInputGenerator extends ValidatingInputGenerator {
 

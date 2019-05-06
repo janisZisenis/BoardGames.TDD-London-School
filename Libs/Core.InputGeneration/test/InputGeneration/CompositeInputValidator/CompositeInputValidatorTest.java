@@ -1,7 +1,7 @@
 package InputGeneration.CompositeInputValidator;
 
 import InputGeneration.Input.Input;
-import InputGeneration.MappingInputAlerter.InputValidatorStub;
+import InputGeneration.ValidatingInputGenerator.InputValidatorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
