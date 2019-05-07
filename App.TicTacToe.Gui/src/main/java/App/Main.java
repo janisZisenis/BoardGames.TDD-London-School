@@ -17,7 +17,6 @@ import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.Factory;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
 import View.FXBoardView;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -40,7 +39,7 @@ public class Main extends Application {
         EquallyMarkedLineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
         HumbleLineProvider lineProvider = new HumbleLineProvider();
         GameEvaluator evaluator = new GameEvaluator(lineProvider, lineEvaluator);
-        gameOverRule.add(new WinnerRule(evaluator));
+        gameOverRule.add(SequentialGaming.Factory.makeWinnerRule(evaluator));
         gameOverRule.add(new NumberOfMovesRule(board));
 
 

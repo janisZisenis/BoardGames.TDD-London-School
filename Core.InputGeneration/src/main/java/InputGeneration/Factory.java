@@ -18,7 +18,7 @@ public abstract class Factory {
 
     public static InputGenerator makeValidatingInputGenerator(InputGenerator generator, InputValidator validator) {
         InputAlerter alerter = new NullInputAlerter();
-        return new ValidInputGenerator(generator, validator, alerter);
+        return makeAlertingInputGenerator(generator, validator, alerter);
     }
 
 }

@@ -34,6 +34,10 @@ public abstract class Factory {
 
     public static MultiTurn makeMultiTurn(Turn first) {
         MultiTurnMessenger messenger = new NullMultiTurnMessenger();
+        return makeMessagingMultiTurn(first, messenger);
+    }
+
+    public static MultiTurn makeMessagingMultiTurn(Turn first, MultiTurnMessenger messenger) {
         return new MultiTurn(first, messenger);
     }
 

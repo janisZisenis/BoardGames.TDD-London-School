@@ -25,7 +25,6 @@ import SequentialGaming.Factory;
 import SequentialGaming.GameLoop.Game;
 import SequentialGaming.GameLoop.GameLoop;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialRendering.BoardRenderer.BoardRenderer;
 import View.ConsoleBoardView;
@@ -64,7 +63,7 @@ public class Main {
         Renderer renderer = new BoardRenderer(view, gameEvaluator);
 
         CompositeGameOverRule rule = Factory.makeCompositeGameOverRule();
-        rule.add(new WinnerRule(gameEvaluator));
+        rule.add(Factory.makeWinnerRule(gameEvaluator));
         rule.add(new NumberOfMovesRule(board));
         MultiTurn turn = Factory.makeMultiTurn(johns);
         turn.add(haleys);
