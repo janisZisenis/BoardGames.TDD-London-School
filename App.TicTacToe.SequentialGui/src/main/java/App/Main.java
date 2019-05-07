@@ -24,8 +24,8 @@ import Messages.OnePlayerModeMessages;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.Factory;
 import SequentialGaming.GameLoopImp.Game;
-import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
+import SequentialGaming.MessagingGameLoop.GameLoop;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import SequentialRendering.BoardRenderer.BoardRenderer;
@@ -81,7 +81,7 @@ public class Main extends Application {
         MultiTurn turn = Factory.makeMessagingMultiTurn(john, turnMessenger);
         turn.add(haley);
         Game game = Factory.makeGame(rule, turn, renderer);
-        GameLoopImp loop = Factory.makeGameLoop(game);
+        GameLoop loop = Factory.makeGameLoop(game);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(fxShell));

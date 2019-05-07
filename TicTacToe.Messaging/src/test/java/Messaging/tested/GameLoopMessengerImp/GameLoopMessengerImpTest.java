@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GameLoopMessengerImpTest {
 
-    MessengerSpy messenger = new MessengerSpy();
-    MessageProviderStub startProvider = new MessageProviderStub();
-    MessageProviderStub endProvider = new MessageProviderStub();
-    GameLoopMessengerImp sut = new GameLoopMessengerImp(messenger, startProvider, endProvider);
+    private MessengerSpy messenger = new MessengerSpy();
+    private MessageProviderStub startProvider = new MessageProviderStub();
+    private MessageProviderStub endProvider = new MessageProviderStub();
+    private GameLoopMessengerImp sut = new GameLoopMessengerImp(messenger, startProvider, endProvider);
 
     @Test
     void ShouldPublishStartProvidersMessage() {
