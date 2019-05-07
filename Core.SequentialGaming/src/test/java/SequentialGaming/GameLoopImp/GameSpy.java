@@ -1,4 +1,4 @@
-package SequentialGaming.GameLoop;
+package SequentialGaming.GameLoopImp;
 
 public class GameSpy implements Game {
 

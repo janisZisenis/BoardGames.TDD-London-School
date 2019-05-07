@@ -1,13 +1,13 @@
-package SequentialGaming.GameLoop;
+package SequentialGaming.GameLoopImp;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GameLoopTest {
+public class GameLoopImpTest {
 
     private GameSpy game = new GameSpy();
-    private GameLoop sut = new GameLoop(game);
+    private GameLoopImp sut = new GameLoopImp(game);
 
 
     @Test

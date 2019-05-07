@@ -1,6 +1,6 @@
 package Messaging.Game.MessagingGame;
 
-import SequentialGaming.GameLoop.Game;
+import SequentialGaming.GameLoopImp.Game;
 
 public class MessagingGame {
 

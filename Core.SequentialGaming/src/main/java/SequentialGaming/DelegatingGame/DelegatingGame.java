@@ -1,6 +1,6 @@
 package SequentialGaming.DelegatingGame;
 
-import SequentialGaming.GameLoop.Game;
+import SequentialGaming.GameLoopImp.Game;
 
 public class DelegatingGame implements Game {
 

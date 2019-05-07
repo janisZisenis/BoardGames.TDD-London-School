@@ -4,8 +4,8 @@ import SequentialGaming.DelegatingGame.DelegatingGame;
 import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.DelegatingGame.Turn;
-import SequentialGaming.GameLoop.Game;
-import SequentialGaming.GameLoop.GameLoop;
+import SequentialGaming.GameLoopImp.Game;
+import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
@@ -16,8 +16,8 @@ import SequentialGaming.MultiTurn.NullMultiTurnMessenger;
 
 public abstract class Factory {
 
-    public static GameLoop makeGameLoop(Game game) {
-        return new GameLoop(game);
+    public static GameLoopImp makeGameLoop(Game game) {
+        return new GameLoopImp(game);
     }
 
     public static Game makeGame(GameOverRule rule, Turn turn, Renderer renderer) {

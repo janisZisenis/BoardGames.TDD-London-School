@@ -1,4 +1,4 @@
-package SequentialGaming.GameLoop;
+package SequentialGaming.GameLoopImp;
 
 public interface Game {
     boolean isOver();

@@ -1,10 +1,10 @@
-package SequentialGaming.GameLoop;
+package SequentialGaming.GameLoopImp;
 
-public class GameLoop {
+public class GameLoopImp {
 
     private final Game game;
 
-    public GameLoop(Game game) {
+    public GameLoopImp(Game game) {
         this.game = game;
     }
 

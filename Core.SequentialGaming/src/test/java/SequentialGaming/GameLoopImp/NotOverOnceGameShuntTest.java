@@ -1,4 +1,4 @@
-package SequentialGaming.GameLoop;
+package SequentialGaming.GameLoopImp;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ public class NotOverOnceGameShuntTest implements Game {
 
     @Test
     void IfGameIsNotOverOnce_ShouldHavePlayedBeforeRendering() {
-        GameLoop sut = new GameLoop(this);
+        GameLoopImp sut = new GameLoopImp(this);
         this.timesNotOver = 1;
 
         sut.run();

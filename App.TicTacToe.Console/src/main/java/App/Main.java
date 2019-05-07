@@ -24,8 +24,8 @@ import Messages.AlertingMessages;
 import Messages.OnePlayerModeMessages;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.Factory;
-import SequentialGaming.GameLoop.Game;
-import SequentialGaming.GameLoop.GameLoop;
+import SequentialGaming.GameLoopImp.Game;
+import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
@@ -78,7 +78,7 @@ public class Main {
         MultiTurn turn = Factory.makeMessagingMultiTurn(john, turnMessenger);
         turn.add(haley);
         Game game = Factory.makeGame(rule, turn, renderer);
-        GameLoop loop = Factory.makeGameLoop(game);
+        GameLoopImp loop = Factory.makeGameLoop(game);
 
         renderer.render();
         loop.run();
