@@ -2,71 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/TurnCreationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/App/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/View/ConsoleMessenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/View/ConsoleMessenger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/View/FXMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/View/FXMessenger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/GameMessengerImp/GameMessengerImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/GameMessengerImp/GameOverMessageProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/GameOverMessageProviderImp/GameOverMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/MessagingGame/GameMessenger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/MessagingGame/MessagingGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/WinnerMessageProviderImp/WinnerMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/MessagingPlayer/MessagingPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/MessagingPlayer/MessagingPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/MessagingPlayer/PlayerMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/PlayerMessengerImp/MarkedFieldMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/PlayerMessengerImp/PlayerMessengerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/PlayerMessengerImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Players/PlayerContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Players/PlayerContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Players/PlayerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Players/PlayerImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/GameMessengerImp/GameMessengerImpTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/GameMessengerImp/GameOverMessageProviderStub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/GameOverMessageProviderImp/ProvidingTheGameOverMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProviderStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/MessagingGame/MessagingGameTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/WinnerMessageProviderImp/ProvidingTheWinnerMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Game/WinnerMessageProviderImp/WinnerProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/MessagingPlayer/MarkingTheInputFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/MarkingTheInputFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/MessagingPlayer/PlayerMessagingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/MessagingPlayer/PlayerMessengerDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/MessagingPlayer/PlayerMessengerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/View/FXMessenger.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/View/FXMessenger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/MessagingPlayer/MessagingPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/MessagingPlayer/MessagingPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/MessagingPlayer/PlayerMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/PlayerMessengerImp/MarkedFieldMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/PlayerMessengerImp/PlayerMessengerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/PlayerMessengerImp/PlayerMessengerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Players/PlayerContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Players/PlayerContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Players/PlayerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Players/PlayerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/MessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/MessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MappingMultiTurnMessenger/MappingMultiTurnMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MappingMultiTurnMessenger/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MappingMultiTurnMessenger/Messenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MessengerMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MessengerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/MarkingTheInputFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/MessagingPlayer/MarkingTheInputFieldTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/MessagingPlayer/PlayerMessagingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/MessagingPlayer/PlayerMessengerDummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/MessagingPlayer/PlayerMessengerSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/nottested/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/zz_nottested/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/MessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/GameLoopMessengerImp/MessageProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingMultiTurnMessenger/MessengerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingMultiTurnMessenger/MessengerSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MessageProviders/GameOverMessageProvider/WinnerMessageProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerProviderStub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Players/MarkingTheInputFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Players/MarkingTheInputFieldTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/GameMessengerImp/GameMessengerImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/GameMessengerImp/GameOverMessageProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/GameOverMessageProviderImp/GameOverMessageProviderImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProvider$NoWinnerAvailable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/MessagingGame/GameMessenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/MessagingGame/MessagingGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Game/WinnerMessageProviderImp/WinnerMessageProviderImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Player/MessagingPlayer/MessagingPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Player/MessagingPlayer/PlayerMessenger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Player/PlayerMessengerImp/MarkedFieldMessageProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Player/PlayerMessengerImp/PlayerMessengerImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Players/PlayerContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Players/PlayerImp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/GameMessengerImp/GameMessengerImpTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/GameMessengerImp/GameOverMessageProviderStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/GameOverMessageProviderImp/ProvidingTheGameOverMessageTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/GameOverMessageProviderImp/WinnerMessageProviderStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/MessagingGame/MessagingGameTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/WinnerMessageProviderImp/ProvidingTheWinnerMessageTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Game/WinnerMessageProviderImp/WinnerProviderStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/MessagingPlayer/MarkingTheInputFieldTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/MessagingPlayer/PlayerMessagingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/MessagingPlayer/PlayerMessengerDummy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/MessagingPlayer/PlayerMessengerSpy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Player/MessagingPlayer/MessagingPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Player/MessagingPlayer/PlayerMessenger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Player/PlayerMessengerImp/HumbleMarkedFieldMessageProviderImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Player/PlayerMessengerImp/PlayerMessengerImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Players/PlayerContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/nottested/Players/PlayerImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/GameLoopMessengerImp/MessageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessenger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MappingMultiTurnMessenger/Messenger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MessageProviders/FixedMessageProvider/FixedMessageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProvider$NoWinnerAvailable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/MessengerMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/MessengerMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/MessagingPlayer/MarkingTheInputFieldTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingOrderShuntTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/MessagingPlayer/PlayerMessagingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerDummy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/MessagingPlayer/PlayerMessengerSpy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/PlayerMessengerImp/MarkedFieldMessageProviderStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/nottested/Player/PlayerMessengerImp/PublishingTheProvidedMarkedFieldMessageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/GameLoopMessengerImp/MessageProviderStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/MappingMultiTurnMessenger/MessengerSpy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProviderStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Players/MarkingTheInputFieldTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/target/test-classes/Players/MarkingTheInputFieldTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -161,7 +174,7 @@
         <counts>
           <entry key="dummy" value="4082" />
           <entry key="iml" value="58" />
-          <entry key="java" value="164076" />
+          <entry key="java" value="166950" />
           <entry key="txt" value="1" />
           <entry key="xml" value="149" />
         </counts>
@@ -169,7 +182,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="164076" />
+          <entry key="JAVA" value="166950" />
           <entry key="PLAIN_TEXT" value="4083" />
           <entry key="XML" value="149" />
         </counts>
@@ -179,61 +192,59 @@
           <entry key="class" value="12" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="4746" />
-          <entry key="xml" value="39" />
+          <entry key="java" value="4768" />
+          <entry key="xml" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="12" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="4746" />
+          <entry key="JAVA" value="4768" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="39" />
+          <entry key="XML" value="40" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.java">
+        <entry file="file://$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="29" column="25" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="25" />
+            <state relative-caret-position="-146">
+              <caret line="56" column="32" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="56" selection-end-column="32" />
               <folding>
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#5004#5128#0" expanded="true" />
+                <element signature="e#5127#5128#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java">
+        <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="316">
+              <caret line="87" column="75" selection-start-line="87" selection-start-column="75" selection-end-line="87" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/MessageProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -324,11 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/View/FXMessenger.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleMessenger.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingTurnMessenger/ObjectToStringMapperStub.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingTurnMessenger/MessengerSpy.java" />
-        <option value="$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/MultiTurn/MultiTurnMessenger.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MappingTurnMessenger/MappingTurnMessenger.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingTurnMessenger/MappingTurnMessengerTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/ObjectToStringMapperStub.java" />
@@ -344,7 +350,6 @@
         <option value="$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/MarkToStringMappers/MarkToXOMapperTest.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" />
         <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/Main.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessenger.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Player/MessagingPlayer/MessagingPlayer.java" />
@@ -357,7 +362,6 @@
         <option value="$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/GameLoopImp/GameLoopImp.java" />
         <option value="$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/Factory.java" />
         <option value="$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/MessagingGameLoop/MessagingGameLoop.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/StringProviderStub.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/StringProvider.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/StringProviderDummy.java" />
@@ -365,7 +369,6 @@
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/MessageProviderStub.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImp.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Game/GameOverMessageProvider/GameOverMessageProviderImp.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProviderImp.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/FixedMessageProvider.java" />
@@ -375,6 +378,14 @@
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/TurnCreationContext.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" />
+        <option value="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" />
+        <option value="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" />
       </list>
     </option>
   </component>
@@ -587,72 +598,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Messaging" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="tested" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="tested" type="462c0819:PsiDirectoryNode" />
-              <item name="WinnerMessageProviderImp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="tested" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-              <item name="tested" type="462c0819:PsiDirectoryNode" />
-              <item name="WinnerMessageProviderImp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -668,7 +613,7 @@
     <property name="SearchEverywhereHistoryKey" value="Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557265894784" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557271354298" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -689,11 +634,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Messaging" />
       <recent name="Messaging.tested" />
       <recent name="Messaging.nottested" />
       <recent name="Messaging.tested.MessageProviders.GameOverMessageProvider" />
       <recent name="Messaging.MappingTurnMessenger" />
-      <recent name="InputGeneration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java" />
@@ -729,7 +674,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AllTest">
+  <component name="RunManager" selected="Application.App.TicTacToe.SequentialGui">
     <configuration name="App.TicTacToe.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="App.TicTacToe.Console" />
@@ -879,8 +824,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App.TicTacToe.Gui" />
         <item itemvalue="Application.App.TicTacToe.Console" />
+        <item itemvalue="Application.App.TicTacToe.Gui" />
         <item itemvalue="JUnit.TicTacToe.MessagingTest" />
       </list>
     </recent_temporary>
@@ -964,15 +909,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.07 at 23h 47m 23s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.07 at 23h 47m 52s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.07 at 23h 48m 11s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.07 at 23h 48m 23s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -994,15 +930,24 @@
     <history-entry file="AllTest - 2019.05.07 at 23h 50m 26s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.07 at 23h 51m 04s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.07 at 23h 51m 13s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.07 at 23h 51m 23s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441729000" />
+    <option name="totallyTimeSpent" value="447509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32378224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2722063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1011,7 +956,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36433122" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44352332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1031,7 +976,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" weight="0.3295129" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.1282235" />
+      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.06948424" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
@@ -1159,73 +1104,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/MultiTurn/MultiTurnMessenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingTurnMessenger/ObjectToStringMapperStub.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/ObjectToStringMapperStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/src/main/java/Mapping/ObjectToStringMappers/DefaultObjectToStringMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/ObjectToStringMappers/DefaultObjectToStringMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#IfNoObjectsAreRegistered_ShouldMapToTheDefaultMessage#0;class#DefaultObjectToStringMapperTest#0" />
-            <element signature="method#IfOneObjectsIsRegistered_ShouldMapToTheFirstRegisteredMessage#0;class#DefaultObjectToStringMapperTest#0" />
-            <element signature="method#IfOneObjectsIsRegistered_ShouldMapASecondObjectToTheDefaultMessage#0;class#DefaultObjectToStringMapperTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/MarkToStringMappers/MarkToXOMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="method#IfJohnIsGiven_ShouldMapToX#0;class#MarkToXOMapperTest#0" />
-            <element signature="method#IfHaleyIsGiven_ShouldMapToO#0;class#MarkToXOMapperTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Mapping/src/test/java/Mapping/MarkToStringMappers/DefaultMarkToStringMapperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1251,7 +1129,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessenger.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MappingMultiTurnMessenger/MappingMultiTurnMessenger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
@@ -1261,7 +1139,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/nottested/Player/MessagingPlayer/MessagingPlayer.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/zz_nottested/Player/MessagingPlayer/MessagingPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
@@ -1289,16 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1402,13 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1422,14 +1283,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/MessageProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImpTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImpTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
@@ -1439,7 +1293,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/GameLoopMessengerImp/MessageProviderStub.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/GameLoopMessengerImp/MessageProviderStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
@@ -1447,13 +1301,6 @@
             <element signature="e#274#275#0" expanded="true" />
             <element signature="e#301#302#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/GameLoopMessengerImp/GameLoopMessengerImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1474,7 +1321,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
@@ -1488,21 +1335,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingMultiTurnMessenger/MessengerSpy.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingMultiTurnMessenger/MessengerSpy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MappingMultiTurnMessenger/MappingMultiTurnMessengerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
@@ -1526,21 +1366,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/FixedMessageProvider/FixedMessageProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
@@ -1558,7 +1384,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerProviderStub.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerProviderStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
@@ -1576,7 +1402,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
@@ -1586,13 +1412,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/WinnerMessageProviderImp/WinnerMessageProviderImp.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="25" />
+        <state relative-caret-position="427">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.SequentialRendering/src/main/java/SequentialRendering/BoardRenderer/BoardRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/DelegatingGame/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Turn/TicTacToeTurn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/TurnCreationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputGenerator/InputAlerter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/GameEvaluation/GameEvaluator/Api/WinnerProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/FixedMessageProvider/FixedMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/MessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="87" column="75" selection-start-line="87" selection-start-column="75" selection-end-line="87" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="56" column="32" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="e#5004#5128#0" expanded="true" />
+            <element signature="e#5127#5128#0" expanded="true" />
           </folding>
         </state>
       </provider>

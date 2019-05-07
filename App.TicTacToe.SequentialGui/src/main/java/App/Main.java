@@ -1,31 +1,25 @@
 package App;
 
 import Domain.Board.Board;
-import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
-import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineProvider;
-import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Domain.InputFieldGeneratorAdapter.InputFieldGeneratorAdapter;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
-import Domain.NumberOfMovesRule.NumberOfMovesRule;
-import Domain.Turn.FieldGenerator;
-import Domain.Turn.TicTacToeTurn;
-import InputGeneration.InputGenerator;
+import Domain.TurnCreationContext;
+import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.AlertingMessages;
 import Messages.OnePlayerModeMessages;
+import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Renderer;
+import SequentialGaming.DelegatingGame.Turn;
 import SequentialGaming.Factory;
 import SequentialGaming.GameLoopImp.Game;
-import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.MessagingGameLoop.GameLoop;
+import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import SequentialRendering.BoardRenderer.BoardRenderer;
@@ -40,48 +34,57 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        Board board = new HashingBoard();
+        Board board = Domain.Factory.makeBoard();
 
         FXInputView fxGenerator = new FXInputView(200);
-        FXInputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
-        FXInputAlerter fxAlreadyMarkedAlerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
         FXMessenger fxMessenger = new FXMessenger(435);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
 
-        LineProvider lineProvider = new HumbleLineProvider();
-        LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
-        GameEvaluator gameEvaluator = new GameEvaluator(lineProvider, lineEvaluator);
-
         InputValidator existsValidator = new FieldExistsValidator();
+        InputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
         InputValidator isEmptyValidator = new FieldIsEmptyValidator(board);
+        InputAlerter fxAlreadyMarkedAlerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
 
-        InputGenerator humanGenerator = InputGeneration.Factory.makeAlertingInputGenerator(fxGenerator, existsValidator, fxExistsAlerter);
-        humanGenerator = InputGeneration.Factory.makeAlertingInputGenerator(humanGenerator, isEmptyValidator, fxAlreadyMarkedAlerter);
-        FieldGenerator humanGeneratorAdapter = new InputFieldGeneratorAdapter(humanGenerator);
+        Turn john = Domain.Factory.makeTicTacToeTurn(
+            new TurnCreationContext(
+                Mark.John,
+                board,
+                fxGenerator,
+                fxExistsAlerter,
+                existsValidator,
+                fxAlreadyMarkedAlerter,
+                isEmptyValidator
+            )
+        );
 
-        InputGenerator minimaxGenerator = new MinimaxInputGenerator(board, Mark.Haley);
-        InputGenerator computerGenerator = InputGeneration.Factory.makeAlertingInputGenerator(minimaxGenerator, existsValidator, fxExistsAlerter);
-        computerGenerator = InputGeneration.Factory.makeAlertingInputGenerator(computerGenerator, isEmptyValidator, fxAlreadyMarkedAlerter);
-        InputFieldGeneratorAdapter computerGeneratorAdapter = new InputFieldGeneratorAdapter(computerGenerator);
-
-        TicTacToeTurn john = new TicTacToeTurn(Mark.John, board, humanGeneratorAdapter);
-        TicTacToeTurn haley = new TicTacToeTurn(Mark.Haley, board, computerGeneratorAdapter);
-
-        Renderer renderer = new BoardRenderer(fxBoard, gameEvaluator);
+        Turn haley = Domain.Factory.makeTicTacToeTurn(
+            new TurnCreationContext(
+                Mark.Haley,
+                board,
+                new MinimaxInputGenerator(board, Mark.Haley),
+                fxExistsAlerter,
+                existsValidator,
+                fxAlreadyMarkedAlerter,
+                isEmptyValidator
+            )
+        );
 
         DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
         turnMapper.register(haley, OnePlayerModeMessages.computerTurnMessage);
         MultiTurnMessenger turnMessenger = Messaging.Factory.makeMappingMultiTurnMessenger(turnMapper, fxMessenger);
 
-        CompositeGameOverRule rule = Factory.makeCompositeGameOverRule();
-        rule.add(Factory.makeWinnerRule(gameEvaluator));
-        rule.add(new NumberOfMovesRule(board));
         MultiTurn turn = Factory.makeMessagingMultiTurn(john, turnMessenger);
         turn.add(haley);
+
+        GameOverRule rule = Domain.Factory.makeGameOverRule(board);
+        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
+        Renderer renderer = new BoardRenderer(fxBoard, provider);
         Game game = Factory.makeGame(rule, turn, renderer);
-        GameLoop loop = Factory.makeGameLoop(game);
+
+        GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(board, fxMessenger);
+        GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(fxShell));
@@ -90,11 +93,12 @@ public class Main extends Application {
 
         Thread t = new Thread() {
             public void run(){
-            renderer.render();
-            loop.run();
+                renderer.render();
+                loop.run();
             }
         };
         t.start();
 
     }
+
 }

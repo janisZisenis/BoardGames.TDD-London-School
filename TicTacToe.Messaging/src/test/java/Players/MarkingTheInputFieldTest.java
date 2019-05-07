@@ -4,8 +4,8 @@ import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
-import Messaging.nottested.Players.PlayerContext;
-import Messaging.nottested.Players.PlayerImp;
+import Messaging.zz_nottested.Players.PlayerContext;
+import Messaging.zz_nottested.Players.PlayerImp;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {
