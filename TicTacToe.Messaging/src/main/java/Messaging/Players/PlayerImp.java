@@ -1,4 +1,4 @@
-package Domain.Players;
+package Messaging.Players;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;

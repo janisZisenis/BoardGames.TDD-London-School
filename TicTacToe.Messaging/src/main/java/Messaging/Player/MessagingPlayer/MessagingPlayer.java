@@ -1,8 +1,8 @@
 package Messaging.Player.MessagingPlayer;
 
 import Domain.Data.Field.Field;
-import Domain.Players.PlayerContext;
-import Domain.Players.PlayerImp;
+import Messaging.Players.PlayerContext;
+import Messaging.Players.PlayerImp;
 
 public class MessagingPlayer extends PlayerImp {
 

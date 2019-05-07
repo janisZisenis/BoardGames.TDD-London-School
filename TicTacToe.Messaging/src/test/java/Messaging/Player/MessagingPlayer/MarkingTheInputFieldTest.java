@@ -2,10 +2,10 @@ package Messaging.Player.MessagingPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.Players.MarkFieldServiceMock;
-import Domain.Players.PlayerContext;
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
+import Messaging.Players.PlayerContext;
+import Players.MarkFieldServiceMock;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {

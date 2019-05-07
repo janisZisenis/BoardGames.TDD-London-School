@@ -1,9 +1,11 @@
-package Domain.Players;
+package Players;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
+import Messaging.Players.PlayerContext;
+import Messaging.Players.PlayerImp;
 import org.junit.jupiter.api.Test;
 
 public class MarkingTheInputFieldTest {

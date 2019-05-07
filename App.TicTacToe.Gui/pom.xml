@@ -12,18 +12,6 @@
     <artifactId>App.TicTacToe.Gui</artifactId>
     <dependencies>
         <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Messaging</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Rendering</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>13-ea+7</version>

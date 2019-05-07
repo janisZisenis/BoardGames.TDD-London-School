@@ -20,21 +20,18 @@
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Domain</artifactId>
-            <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>Core.SequentialGaming</artifactId>
             <version>1.0</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>TicTacToe.Domain</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
@@ -42,6 +39,14 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Core.SequentialGaming</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
