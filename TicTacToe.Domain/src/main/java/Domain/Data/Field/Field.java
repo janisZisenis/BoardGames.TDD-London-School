@@ -19,8 +19,15 @@ public class Field {
     }
 
     public boolean equals(Object o) {
-        Field f = (Field)o;
+        return isAnInput(o) && hasSameRowAndColumn((Field) o);
+    }
+
+    private boolean hasSameRowAndColumn(Field f) {
         return f.row == row && f.column == column;
+    }
+
+    private boolean isAnInput(Object o) {
+        return o instanceof Field;
     }
 
     public int hashCode() {
