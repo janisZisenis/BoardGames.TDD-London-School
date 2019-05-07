@@ -32,7 +32,6 @@ import InputGeneration.Factory;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
-import InputGeneration.ValidInputGenerator.ValidInputGenerator;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -209,11 +208,11 @@ public class TicTacToeFactory {
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputValidator existsValidator = new FieldExistsValidator();
         InputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputGenerator generator = new ValidInputGenerator(inputView, existsValidator, existsAlerter);
+        InputGenerator generator = Factory.makeAlertingInputGenerator(inputView, existsValidator, existsAlerter);
 
         InputValidator emptyValidator = new FieldIsEmptyValidator(board);
         InputAlerter emptyAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
-        return new ValidInputGenerator(generator, emptyValidator, emptyAlerter);
+        return Factory.makeAlertingInputGenerator(generator, emptyValidator, emptyAlerter);
     }
 
     private InputValidator makeInputValidator(Board board) {
