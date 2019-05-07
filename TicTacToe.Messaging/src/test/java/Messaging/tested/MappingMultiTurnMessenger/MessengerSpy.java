@@ -1,4 +1,4 @@
-package Messaging.tested.MappingTurnMessenger;
+package Messaging.tested.MappingMultiTurnMessenger;
 
 public class MessengerSpy implements Messenger {
 

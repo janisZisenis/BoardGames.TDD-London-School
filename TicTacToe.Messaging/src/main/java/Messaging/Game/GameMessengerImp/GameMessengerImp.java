@@ -1,7 +1,7 @@
 package Messaging.Game.GameMessengerImp;
 
 import Messaging.Game.MessagingGame.GameMessenger;
-import Messaging.tested.MappingTurnMessenger.Messenger;
+import Messaging.tested.MappingMultiTurnMessenger.Messenger;
 
 public class GameMessengerImp implements GameMessenger {
 

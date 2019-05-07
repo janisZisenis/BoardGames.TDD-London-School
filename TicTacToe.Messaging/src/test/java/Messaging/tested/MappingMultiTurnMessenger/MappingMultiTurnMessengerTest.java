@@ -1,15 +1,15 @@
-package Messaging.tested.MappingTurnMessenger;
+package Messaging.tested.MappingMultiTurnMessenger;
 
 import Mapping.ObjectToStringMapperStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MappingTurnMessengerTest {
+public class MappingMultiTurnMessengerTest {
 
-    private MessengerSpy messenger = new MessengerSpy();
     private ObjectToStringMapperStub mapper = new ObjectToStringMapperStub();
-    private MappingTurnMessenger sut = new MappingTurnMessenger(messenger, mapper);
+    private MessengerSpy messenger = new MessengerSpy();
+    private MappingMultiTurnMessenger sut = new MappingMultiTurnMessenger(mapper, messenger);
 
     @Test
     void IfMapperMapsToMessage_ShouldPublishMessage() {

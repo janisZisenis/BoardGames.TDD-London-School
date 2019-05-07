@@ -1,6 +1,6 @@
 package Messaging;
 
-import Messaging.tested.MappingTurnMessenger.Messenger;
+import Messaging.tested.MappingMultiTurnMessenger.Messenger;
 
 import static org.junit.jupiter.api.Assertions.*;
 

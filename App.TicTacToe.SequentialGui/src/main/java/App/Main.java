@@ -18,13 +18,16 @@ import Domain.Turn.TicTacToeTurn;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
+import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.AlertingMessages;
+import Messages.OnePlayerModeMessages;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.Factory;
 import SequentialGaming.GameLoop.Game;
 import SequentialGaming.GameLoop.GameLoop;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.MultiTurn.MultiTurn;
+import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import SequentialRendering.BoardRenderer.BoardRenderer;
 import View.*;
 import javafx.application.Application;
@@ -43,7 +46,8 @@ public class Main extends Application {
         FXInputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
         FXInputAlerter fxAlreadyMarkedAlerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
-        FXShell fxShell = new FXShell(fxBoard, fxGenerator, new FXMessenger(440));
+        FXMessenger fxMessenger = new FXMessenger(435);
+        FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
 
         LineProvider lineProvider = new HumbleLineProvider();
         LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
@@ -61,16 +65,21 @@ public class Main extends Application {
         computerGenerator = InputGeneration.Factory.makeAlertingInputGenerator(computerGenerator, isEmptyValidator, fxAlreadyMarkedAlerter);
         InputFieldGeneratorAdapter computerGeneratorAdapter = new InputFieldGeneratorAdapter(computerGenerator);
 
-        TicTacToeTurn johns = new TicTacToeTurn(Mark.John, board, humanGeneratorAdapter);
-        TicTacToeTurn haleys = new TicTacToeTurn(Mark.Haley, board, computerGeneratorAdapter);
+        TicTacToeTurn john = new TicTacToeTurn(Mark.John, board, humanGeneratorAdapter);
+        TicTacToeTurn haley = new TicTacToeTurn(Mark.Haley, board, computerGeneratorAdapter);
 
         Renderer renderer = new BoardRenderer(fxBoard, gameEvaluator);
+
+        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper("Next turn!");
+        turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
+        turnMapper.register(haley, OnePlayerModeMessages.computerTurnMessage);
+        MultiTurnMessenger turnMessenger = Messaging.Factory.makeMappingMultiTurnMessenger(turnMapper, fxMessenger);
 
         CompositeGameOverRule rule = Factory.makeCompositeGameOverRule();
         rule.add(Factory.makeWinnerRule(gameEvaluator));
         rule.add(new NumberOfMovesRule(board));
-        MultiTurn turn = Factory.makeMultiTurn(johns);
-        turn.add(haleys);
+        MultiTurn turn = Factory.makeMessagingMultiTurn(john, turnMessenger);
+        turn.add(haley);
         Game game = Factory.makeGame(rule, turn, renderer);
         GameLoop loop = Factory.makeGameLoop(game);
 

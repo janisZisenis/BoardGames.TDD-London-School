@@ -1,14 +1,14 @@
-package Messaging.tested.MappingTurnMessenger;
+package Messaging.tested.MappingMultiTurnMessenger;
 
 import Mapping.ObjectToStringMapper;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
 
-public class MappingTurnMessenger implements MultiTurnMessenger {
+public class MappingMultiTurnMessenger implements MultiTurnMessenger {
 
     private final Messenger messenger;
     private final ObjectToStringMapper mapper;
 
-    public MappingTurnMessenger(Messenger messenger, ObjectToStringMapper mapper) {
+    public MappingMultiTurnMessenger(ObjectToStringMapper mapper, Messenger messenger) {
         this.messenger = messenger;
         this.mapper = mapper;
     }

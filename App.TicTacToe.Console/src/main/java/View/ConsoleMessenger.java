@@ -1,6 +1,6 @@
 package View;
 
-import Messaging.tested.MappingTurnMessenger.Messenger;
+import Messaging.tested.MappingMultiTurnMessenger.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 

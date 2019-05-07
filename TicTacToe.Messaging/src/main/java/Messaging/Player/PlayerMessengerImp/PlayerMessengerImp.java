@@ -1,7 +1,7 @@
 package Messaging.Player.PlayerMessengerImp;
 
 import Domain.Data.Field.Field;
-import Messaging.tested.MappingTurnMessenger.Messenger;
+import Messaging.tested.MappingMultiTurnMessenger.Messenger;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
 
 public class PlayerMessengerImp implements PlayerMessenger {

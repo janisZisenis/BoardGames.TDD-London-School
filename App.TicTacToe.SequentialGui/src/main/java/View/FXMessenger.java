@@ -1,6 +1,6 @@
 package View;
 
-import Messaging.tested.MappingTurnMessenger.Messenger;
+import Messaging.tested.MappingMultiTurnMessenger.Messenger;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
