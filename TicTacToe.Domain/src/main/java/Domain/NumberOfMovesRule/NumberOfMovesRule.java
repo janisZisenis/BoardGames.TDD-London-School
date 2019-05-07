@@ -1,9 +1,9 @@
 package Domain.NumberOfMovesRule;
 
 import Domain.Data.BoardBoundaries;
-import Gaming.GameLoopImp.GameOverRule;
+import SequentialGaming.DelegatingGame.GameOverRule;
 
-public class NumberOfMovesRule implements GameOverRule, SequentialGaming.DelegatingGame.GameOverRule {
+public class NumberOfMovesRule implements GameOverRule {
 
     private final int fieldCount = BoardBoundaries.fieldCount;
     private final MarkedFieldCountProvider provider;

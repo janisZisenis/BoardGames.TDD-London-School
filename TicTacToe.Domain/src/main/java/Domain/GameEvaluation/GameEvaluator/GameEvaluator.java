@@ -4,9 +4,9 @@ import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Gaming.GameOverRules.WinnerRule.HasWinnerProvider;
+import SequentialGaming.GameOverRules.WinnerRule.HasWinnerProvider;
 
-public class GameEvaluator implements HasWinnerProvider, SequentialGaming.GameOverRules.WinnerRule.HasWinnerProvider, WinningLineProvider, WinnerProvider {
+public class GameEvaluator implements HasWinnerProvider, WinningLineProvider, WinnerProvider {
 
     private final LineEvaluator evaluator;
     private final LineProvider provider;
