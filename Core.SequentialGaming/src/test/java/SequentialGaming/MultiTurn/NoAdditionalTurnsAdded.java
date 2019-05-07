@@ -26,7 +26,7 @@ public class NoAdditionalTurnsAdded {
     }
 
     @Test
-    void IfGetsPlayedThreeTimes_ShouldhavePlayedTheFirstThreeTimes() {
+    void IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes() {
         sut.play();
         sut.play();
         sut.play();
