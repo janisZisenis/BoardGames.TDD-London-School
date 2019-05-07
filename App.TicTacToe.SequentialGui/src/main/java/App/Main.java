@@ -70,7 +70,7 @@ public class Main extends Application {
 
         Renderer renderer = new BoardRenderer(fxBoard, gameEvaluator);
 
-        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper("Next turn!");
+        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
         turnMapper.register(haley, OnePlayerModeMessages.computerTurnMessage);
         MultiTurnMessenger turnMessenger = Messaging.Factory.makeMappingMultiTurnMessenger(turnMapper, fxMessenger);

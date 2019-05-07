@@ -67,7 +67,7 @@ public class Main {
 
         Renderer renderer = new BoardRenderer(view, gameEvaluator);
 
-        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper("Next turn!");
+        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
         turnMapper.register(haley, OnePlayerModeMessages.computerTurnMessage);
         MultiTurnMessenger turnMessenger = Messaging.Factory.makeMappingMultiTurnMessenger(turnMapper, messenger);
