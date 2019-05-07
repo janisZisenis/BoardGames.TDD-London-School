@@ -10,6 +10,8 @@ import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRul
 import SequentialGaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
 import SequentialGaming.MultiTurn.MultiTurn;
+import SequentialGaming.MultiTurn.MultiTurnMessenger;
+import SequentialGaming.MultiTurn.NullMultiTurnMessenger;
 
 
 public abstract class Factory {
@@ -31,7 +33,8 @@ public abstract class Factory {
     }
 
     public static MultiTurn makeMultiTurn(Turn first) {
-        return new MultiTurn(first);
+        MultiTurnMessenger messenger = new NullMultiTurnMessenger();
+        return new MultiTurn(first, messenger);
     }
 
 }

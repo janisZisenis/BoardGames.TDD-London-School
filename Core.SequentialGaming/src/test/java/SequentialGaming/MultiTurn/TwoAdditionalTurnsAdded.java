@@ -9,9 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TwoAdditionalTurnsAdded {
 
     private TurnSpy first = new TurnSpy();
+    private MultiTurnMessengerSpy messenger = new MultiTurnMessengerSpy();
+    private MultiTurn sut = new MultiTurn(first, messenger);
+
     private TurnSpy second = new TurnSpy();
     private TurnSpy third = new TurnSpy();
-    private MultiTurn sut = new MultiTurn(first);
 
     @BeforeEach
     void Setup() {
@@ -27,6 +29,16 @@ public class TwoAdditionalTurnsAdded {
 
         int actual = third.getPlayedTimes();
         int expected = 1;
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    void IfGetsPlayedOnce_ShouldHavePublishedTheFirst() {
+        sut.play();
+
+        Object actual = messenger.getPublished();
+        Object expected = first;
         assertEquals(expected, actual);
     }
 

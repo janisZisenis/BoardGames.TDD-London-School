@@ -9,13 +9,19 @@ public class MultiTurn implements Turn {
 
     private final LinkedList<Turn> turns = new LinkedList<>();
     private final CyclicTurnIterator it = new CyclicTurnIterator(turns);
+    private final MultiTurnMessenger messenger;
 
-    public MultiTurn(Turn first) {
+    public MultiTurn(Turn first, MultiTurnMessenger messenger) {
         this.turns.add(first);
+        this.messenger = messenger;
     }
 
     public void play() {
-        it.current().play();
+        Turn t = it.current();
+
+        messenger.publishTurn(t);
+        t.play();
+
         it.next();
     }
 
