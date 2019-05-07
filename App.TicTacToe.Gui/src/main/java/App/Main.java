@@ -16,6 +16,7 @@ import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.Factory;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import javafx.application.Application;
@@ -31,7 +32,7 @@ public class Main extends Application {
         ListenableBoard board = new ListenableBoard(new HashingBoard());
         MarkToXOMapper mapper = new MarkToXOMapper();
 
-        CompositeInputValidator inputValidator = new CompositeInputValidator();
+        CompositeInputValidator inputValidator = Factory.makeCompositeInputValidator();
         inputValidator.add(new FieldIsEmptyValidator(board));
         inputValidator.add(new FieldExistsValidator());
 

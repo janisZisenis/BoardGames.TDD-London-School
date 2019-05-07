@@ -1,22 +1,59 @@
-package InputGeneration.ValidatingInputGenerator.AlertingInputGenerator;
+package InputGeneration.ValidInputGenerator;
 
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
-import InputGeneration.ValidatingInputGenerator.InputValidatorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
-public class AlertingInputGeneratorTest {
+public class ValidInputGeneratorTest {
 
     private CountingGeneratorStub generator = new CountingGeneratorStub();
     private InputValidatorStub validator = new InputValidatorStub();
     private InputAlerterSpy alerter = new InputAlerterSpy();
-    private AlertingInputGenerator sut = new AlertingInputGenerator(generator, validator, alerter);
+    private ValidInputGenerator sut = new ValidInputGenerator(generator, validator, alerter);
 
     private Input[] generatedInputs;
+
+    @Test
+    void IfFirstInputIsValid_ShouldBeTheFirstInput() {
+        makeFirstInputIsValid();
+
+        Input actual = sut.generate();
+
+        Input expected = generatedInputs[0];
+        assertEquals(expected, actual);
+
+        generatedInputs = new Input[]{};
+    }
+
+    @Test
+    void IfOnlySecondInputIsValid_ShouldBeTheSecondInput() {
+        makeOnlySecondInputIsValid();
+
+        Input actual = sut.generate();
+
+        Input expected = generatedInputs[1];
+        assertEquals(expected, actual);
+
+        generatedInputs = new Input[]{};
+    }
+
+    @Test
+    void IfOnlyThirdInputIsValid_ShouldBeTheThirdInput() {
+        makeOnlyThirdInputIsValid();
+
+        Input actual = sut.generate();
+
+        Input expected = generatedInputs[2];
+        assertEquals(expected, actual);
+
+        generatedInputs = new Input[]{};
+    }
+
+
 
     @Test
     void IfFirstInputIsValid_ShouldNotAlert() {

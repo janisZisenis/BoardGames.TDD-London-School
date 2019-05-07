@@ -28,11 +28,10 @@ import Gaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.Factory;
 import InputGeneration.InputGenerator;
-import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.AlertingInputGenerator;
-import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.InputAlerter;
-import InputGeneration.ValidatingInputGenerator.InputValidator;
-import InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.ValidInputGenerator.InputAlerter;
+import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -198,7 +197,7 @@ public class TicTacToeFactory {
     private InputGenerator makeComputerInputGenerator(Board board, Mark m) {
         InputValidator inputValidator = makeInputValidator(board);
         InputGenerator randomGenerator = makeMinimaxInputGenerator(board, m);
-        return new ValidatingInputGenerator(randomGenerator, inputValidator);
+        return Factory.makeValidatingInputGenerator(randomGenerator, inputValidator);
     }
 
     private InputGenerator makeMinimaxInputGenerator(Board board, Mark m) {
@@ -212,11 +211,11 @@ public class TicTacToeFactory {
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputValidator existsValidator = makeFieldExistsValidator();
         InputAlerter existsAlerter = makeFXInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputGenerator generator = new AlertingInputGenerator(inputView, existsValidator, existsAlerter);
+        InputGenerator generator = Factory.makeAlertingInputGenerator(inputView, existsValidator, existsAlerter);
 
         InputValidator emptyValidator = makeFieldIsEmptyValidator(board);
         InputAlerter emptyAlerter = makeFXInputAlerter(AlertingMessages.inputAlreadyMarked);
-        return new AlertingInputGenerator(generator, emptyValidator, emptyAlerter);
+        return Factory.makeAlertingInputGenerator(generator, emptyValidator, emptyAlerter);
     }
 
     private InputValidator makeInputValidator(Board board) {

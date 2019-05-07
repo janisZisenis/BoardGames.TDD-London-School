@@ -1,8 +1,8 @@
-package InputGeneration.ValidatingInputGenerator.AlertingInputGenerator;
+package InputGeneration.ValidInputGenerator;
 
 import InputGeneration.Input.Input;
 
-public class InputAlerterSpy extends InputAlerterDummy {
+public class InputAlerterSpy implements InputAlerter {
 
     private Input alerted;
     private boolean didAlert = false;

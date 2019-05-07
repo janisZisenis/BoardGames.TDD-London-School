@@ -2,7 +2,7 @@ package Domain.InputGeneration.InputValidators.FieldExistsValidator;
 
 import Domain.Data.BoardBoundaries;
 import InputGeneration.Input.Input;
-import InputGeneration.ValidatingInputGenerator.InputValidator;
+import InputGeneration.ValidInputGenerator.InputValidator;
 
 public class FieldExistsValidator implements InputValidator {
 
