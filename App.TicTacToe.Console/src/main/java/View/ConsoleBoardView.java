@@ -65,12 +65,13 @@ public class ConsoleBoardView implements BoardRenderingView {
 
     public void showWinningLine(Line line) {
         StringBuilder board = new StringBuilder();
-        board.append("+-----+\n");
+        board.append("  C 012  \n");
+        board.append("R +-----+\n");
 
         for(int i = 0; i < rowColumn; i++)
-            board.append("| " + getRow(i, line) + " |\n");
+            board.append(i + " | ").append(getRow(i, line)).append(" |\n");
 
-        board.append("+-----+");
+        board.append("  +-----+");
 
         System.out.println(board);
     }
