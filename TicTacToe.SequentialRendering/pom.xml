@@ -9,29 +9,36 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>App.TicTacToe.Console</artifactId>
+    <artifactId>TicTacToe.SequentialRendering</artifactId>
     <dependencies>
         <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Core.InputGeneration</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.1</version>
+            <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Messages</artifactId>
+            <artifactId>TicTacToe.Domain</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Messaging</artifactId>
+            <artifactId>Core.SequentialGaming</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
+
+
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.SequentialRendering</artifactId>
+            <artifactId>TicTacToe.Domain</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
@@ -50,6 +57,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

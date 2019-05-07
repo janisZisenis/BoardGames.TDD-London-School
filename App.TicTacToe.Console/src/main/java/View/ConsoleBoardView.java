@@ -6,7 +6,7 @@ import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Mapping.MarkToStringMapper;
-import Rendering.BoardRenderer.BoardRenderingView;
+import SequentialRendering.BoardRenderer.BoardRenderingView;
 
 public class ConsoleBoardView implements BoardRenderingView {
 
