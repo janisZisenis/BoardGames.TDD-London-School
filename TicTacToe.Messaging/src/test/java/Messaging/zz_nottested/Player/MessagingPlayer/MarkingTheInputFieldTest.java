@@ -15,9 +15,9 @@ public class MarkingTheInputFieldTest {
     private MessagingPlayer sut;
 
     @Test
-    void IfInputHasRow1AndColumn2_JohnShouldMarkFieldRow1Column2WithJohn() {
-        makeJohnWillMarkRow1Column1();
-        makeMockExpectsJohnMarksRow1Column1();
+    void IfInputHasR1C2_JohnShouldMarkFieldR1C2WithJohn() {
+        makeJohnWillMarkR1C1();
+        makeMockExpectsJohnMarksR1C1();
 
         sut.playMove();
 
@@ -25,9 +25,9 @@ public class MarkingTheInputFieldTest {
     }
 
     @Test
-    void IfInputHasRow2AndColumn1_JohnShouldMarkFieldRow2Column1WithJohn() {
-        makeJohnWillMarkRow2Column0();
-        makeMockExpectsJohnMarksRow2Column0();
+    void IfInputHasR2C1_JohnShouldMarkFieldR2C1WithJohn() {
+        makeJohnWillMarkR2C0();
+        makeMockExpectsJohnMarksR2C0();
 
         sut.playMove();
 
@@ -35,9 +35,9 @@ public class MarkingTheInputFieldTest {
     }
 
     @Test
-    void IfInputHasRow1AndColumn2_HaleyShouldMarkFieldRow1Column2WithHaley() {
-        makeHaleyWillMarkRow1Column1();
-        makeMockExpectsHaleyMarksRow1Column1();
+    void IfInputHasR1C2_HaleyShouldMarkFieldR1C2WithHaley() {
+        makeHaleyWillMarkR1C1();
+        makeMockExpectsHaleyMarksR1C1();
 
         sut.playMove();
 
@@ -63,46 +63,46 @@ public class MarkingTheInputFieldTest {
     }
 
 
-    private void makeJohnWillMarkRow1Column1() {
+    private void makeJohnWillMarkR1C1() {
         makePlayerIsJohn();
-        makeGeneratorReturnsRow1Column1();
+        makeGeneratorReturnsR1C1();
     }
 
-    private void makeJohnWillMarkRow2Column0() {
+    private void makeJohnWillMarkR2C0() {
         makePlayerIsJohn();
-        makeGeneratorReturnsRow2Column0();
+        makeGeneratorReturnsR2C0();
     }
 
-    private void makeHaleyWillMarkRow1Column1() {
+    private void makeHaleyWillMarkR1C1() {
         makePlayerIsHaley();
-        makeGeneratorReturnsRow1Column1();
+        makeGeneratorReturnsR1C1();
     }
 
 
-    private void makeGeneratorReturnsRow2Column0() {
+    private void makeGeneratorReturnsR2C0() {
         Input in = new Input(2, 0);
         Input[] inputs = { in };
         generator.setGeneratedInputs(inputs);
     }
 
-    private void makeGeneratorReturnsRow1Column1() {
+    private void makeGeneratorReturnsR1C1() {
         Input in = new Input(1, 1);
         Input[] inputs = { in };
         generator.setGeneratedInputs(inputs);
     }
 
 
-    private void makeMockExpectsJohnMarksRow1Column1() {
+    private void makeMockExpectsJohnMarksR1C1() {
         Field f = new Field(1, 1);
         markService.expectFieldWasMarkedWith(Mark.John, f);
     }
 
-    private void makeMockExpectsHaleyMarksRow1Column1() {
+    private void makeMockExpectsHaleyMarksR1C1() {
         Field f = new Field(1, 1);
         markService.expectFieldWasMarkedWith(Mark.Haley, f);
     }
 
-    private void makeMockExpectsJohnMarksRow2Column0() {
+    private void makeMockExpectsJohnMarksR2C0() {
         Field f = new Field(2, 0);
         markService.expectFieldWasMarkedWith(Mark.John, f);
     }

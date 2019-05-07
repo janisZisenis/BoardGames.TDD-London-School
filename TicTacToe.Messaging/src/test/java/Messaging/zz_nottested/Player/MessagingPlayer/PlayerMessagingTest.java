@@ -19,8 +19,8 @@ public class PlayerMessagingTest {
     private MessagingPlayer sut;
 
     @Test
-    void IfRow0Column1GetsMarked_ShouldPublishTheMarkedFieldWithRow0Column1() {
-        makePlayerWillMarkRow0Column1();
+    void IfR0C1GetsMarked_ShouldPublishTheMarkedFieldWithR0C1() {
+        makePlayerWillMarkR0C1();
 
         sut.playMove();
 
@@ -30,8 +30,8 @@ public class PlayerMessagingTest {
     }
 
     @Test
-    void IfRow2Column2GetsMarked_ShouldPublishTheMarkedFieldWithRow2Column2() {
-        makePlayerWillMarkRow2Column2();
+    void IfR2C2GetsMarked_ShouldPublishTheMarkedFieldWithR2C2() {
+        makePlayerWillMarkR2C2();
 
         sut.playMove();
 
@@ -41,14 +41,14 @@ public class PlayerMessagingTest {
     }
 
 
-    private void makePlayerWillMarkRow2Column2() {
+    private void makePlayerWillMarkR2C2() {
         makePlayer();
         Input[] inputs = { new Input(2, 2) };
         generator.setGeneratedInputs(inputs);
     }
 
 
-    private void makePlayerWillMarkRow0Column1() {
+    private void makePlayerWillMarkR0C1() {
         makePlayer();
         Input[] inputs = { new Input(0, 1) };
         generator.setGeneratedInputs(inputs);
