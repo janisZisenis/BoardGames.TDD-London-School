@@ -82,15 +82,15 @@ public class CompositeInputValidatorTest {
 
     private void makeValidatingAdded() {
         InputValidatorStub validator = new InputValidatorStub();
-        Input[] valid = { input };
-        validator.setValidInputs(valid);
+        Input[] validInputs = { input };
+        validator.setValidInputs(validInputs);
         sut.add(validator);
     }
 
     private void makeInvalidatingAdded() {
         InputValidatorStub validator = new InputValidatorStub();
-        Input[] valid = {};
-        validator.setValidInputs(valid);
+        Input[] validInputs = {};
+        validator.setValidInputs(validInputs);
         sut.add(validator);
     }
 

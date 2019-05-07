@@ -45,6 +45,7 @@ public class AlertingInputGeneratorTest {
         assertAlertedInputEquals(generatedInputs[1]);
     }
 
+
     private void assertAlertedInputEquals(Input expected) {
         Input actual = alerter.getAlerted();
         assertEquals(expected, actual);
@@ -55,7 +56,7 @@ public class AlertingInputGeneratorTest {
         assertFalse(actual);
     }
 
-
+    
     private void makeFirstInputIsValid() {
         generatedInputs = new Input[] { new Input(0, 0) };
 
