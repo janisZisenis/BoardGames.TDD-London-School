@@ -9,6 +9,9 @@ import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
+import SequentialGaming.MessagingGameLoop.GameLoop;
+import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
+import SequentialGaming.MessagingGameLoop.MessagingGameLoop;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import SequentialGaming.MultiTurn.NullMultiTurnMessenger;
@@ -16,8 +19,13 @@ import SequentialGaming.MultiTurn.NullMultiTurnMessenger;
 
 public abstract class Factory {
 
-    public static GameLoopImp makeGameLoop(Game game) {
+    public static GameLoop makeGameLoop(Game game) {
         return new GameLoopImp(game);
+    }
+
+    public static GameLoop makeMessagingGameLoop(Game game, GameLoopMessenger messenger) {
+        GameLoop loop = makeGameLoop(game);
+        return new MessagingGameLoop(loop, messenger);
     }
 
     public static Game makeGame(GameOverRule rule, Turn turn, Renderer renderer) {

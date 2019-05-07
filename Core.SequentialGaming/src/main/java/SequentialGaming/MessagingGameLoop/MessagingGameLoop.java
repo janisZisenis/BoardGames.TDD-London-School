@@ -1,6 +1,6 @@
 package SequentialGaming.MessagingGameLoop;
 
-public class MessagingGameLoop {
+public class MessagingGameLoop implements GameLoop {
 
     private final GameLoop loop;
     private final GameLoopMessenger messenger;

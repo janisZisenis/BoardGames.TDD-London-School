@@ -1,6 +1,8 @@
 package SequentialGaming.GameLoopImp;
 
-public class GameLoopImp {
+import SequentialGaming.MessagingGameLoop.GameLoop;
+
+public class GameLoopImp implements GameLoop {
 
     private final Game game;
 
