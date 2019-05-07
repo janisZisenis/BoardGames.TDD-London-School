@@ -1,6 +1,6 @@
 package View;
 
-import Messaging.Messenger;
+import Messaging.tested.MappingTurnMessenger.Messenger;
 import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
@@ -19,7 +19,7 @@ public class FXMessenger extends Pane implements Messenger {
         getChildren().addAll(text);
     }
 
-    public void publish(Object message) {
+    public void publish(String message) {
         Platform.runLater(() -> {
             text.appendText(message + "\n");
         });

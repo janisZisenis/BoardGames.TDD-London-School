@@ -1,5 +1,7 @@
 package Messaging;
 
+import Messaging.tested.MappingTurnMessenger.Messenger;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MessengerMock implements Messenger {
@@ -8,7 +10,7 @@ public class MessengerMock implements Messenger {
     private Object actual = "";
     private String expected = "";
 
-    public void publish(Object message) {
+    public void publish(String message) {
         this.didPublish = true;
         this.actual = message;
     }

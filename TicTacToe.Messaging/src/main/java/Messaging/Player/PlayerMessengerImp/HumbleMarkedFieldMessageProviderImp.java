@@ -5,7 +5,7 @@ import Messages.MarkedFieldMessage;
 
 public class HumbleMarkedFieldMessageProviderImp implements MarkedFieldMessageProvider {
 
-    public Object getMarkedFieldMessage(Field field) {
+    public String getMarkedFieldMessage(Field field) {
         return  MarkedFieldMessage.getMarkedFieldMessage(field);
     }
 

@@ -11,7 +11,7 @@ public class MarkedFieldMessageProviderStub implements MarkedFieldMessageProvide
     public void setMessageForField(String message, Field f) {
         messages.put(f, message);
     }
-    public Object getMarkedFieldMessage(Field field) {
+    public String getMarkedFieldMessage(Field field) {
         return messages.get(field);
     }
 }

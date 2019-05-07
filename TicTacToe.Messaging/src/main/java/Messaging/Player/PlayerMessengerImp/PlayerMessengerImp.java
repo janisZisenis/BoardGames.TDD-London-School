@@ -1,7 +1,7 @@
 package Messaging.Player.PlayerMessengerImp;
 
 import Domain.Data.Field.Field;
-import Messaging.Messenger;
+import Messaging.tested.MappingTurnMessenger.Messenger;
 import Messaging.Player.MessagingPlayer.PlayerMessenger;
 
 public class PlayerMessengerImp implements PlayerMessenger {
@@ -15,7 +15,7 @@ public class PlayerMessengerImp implements PlayerMessenger {
     }
 
     public void publishMarkedField(Field f) {
-        Object message = provider.getMarkedFieldMessage(f);
+        String message = provider.getMarkedFieldMessage(f);
         messenger.publish(message);
     }
 
