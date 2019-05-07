@@ -15,20 +15,19 @@ import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Turn.FieldGenerator;
 import Domain.Turn.TicTacToeTurn;
-import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.InputGenerator;
+import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
+import Messages.AlertingMessages;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.Factory;
+import SequentialGaming.GameLoop.Game;
 import SequentialGaming.GameLoop.GameLoop;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialRendering.BoardRenderer.BoardRenderer;
-import View.FXBoardView;
-import View.FXInputView;
-import View.FXMessenger;
-import View.FXShell;
+import View.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -41,39 +40,43 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Board board = new HashingBoard();
 
+        FXInputView fxGenerator = new FXInputView(200);
+        FXInputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
+        FXInputAlerter fxAlreadyMarkedAlerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
+        FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
+        FXShell fxShell = new FXShell(fxBoard, fxGenerator, new FXMessenger(440));
+
         LineProvider lineProvider = new HumbleLineProvider();
         LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
         GameEvaluator gameEvaluator = new GameEvaluator(lineProvider, lineEvaluator);
 
-        CompositeInputValidator validator = InputGeneration.Factory.makeCompositeInputValidator();
-        validator.add(new FieldIsEmptyValidator(board));
-        validator.add(new FieldExistsValidator());
+        InputValidator existsValidator = new FieldExistsValidator();
+        InputValidator isEmptyValidator = new FieldIsEmptyValidator(board);
 
-        FXInputView fxGenerator = new FXInputView(200);
-        InputGenerator humanGenerator = InputGeneration.Factory.makeValidatingInputGenerator(fxGenerator, validator);
+        InputGenerator humanGenerator = InputGeneration.Factory.makeAlertingInputGenerator(fxGenerator, existsValidator, fxExistsAlerter);
+        humanGenerator = InputGeneration.Factory.makeAlertingInputGenerator(humanGenerator, isEmptyValidator, fxAlreadyMarkedAlerter);
         FieldGenerator humanGeneratorAdapter = new InputFieldGeneratorAdapter(humanGenerator);
 
         InputGenerator minimaxGenerator = new MinimaxInputGenerator(board, Mark.Haley);
-        InputGenerator computerGenerator = InputGeneration.Factory.makeValidatingInputGenerator(minimaxGenerator, validator);
+        InputGenerator computerGenerator = InputGeneration.Factory.makeAlertingInputGenerator(minimaxGenerator, existsValidator, fxExistsAlerter);
+        computerGenerator = InputGeneration.Factory.makeAlertingInputGenerator(computerGenerator, isEmptyValidator, fxAlreadyMarkedAlerter);
         InputFieldGeneratorAdapter computerGeneratorAdapter = new InputFieldGeneratorAdapter(computerGenerator);
 
         TicTacToeTurn johns = new TicTacToeTurn(Mark.John, board, humanGeneratorAdapter);
         TicTacToeTurn haleys = new TicTacToeTurn(Mark.Haley, board, computerGeneratorAdapter);
 
-        FXBoardView view = new FXBoardView(200, board, new MarkToXOMapper());
-        Renderer renderer = new BoardRenderer(view, gameEvaluator);
+        Renderer renderer = new BoardRenderer(fxBoard, gameEvaluator);
 
         CompositeGameOverRule rule = Factory.makeCompositeGameOverRule();
         rule.add(new WinnerRule(gameEvaluator));
         rule.add(new NumberOfMovesRule(board));
         MultiTurn turn = Factory.makeMultiTurn(johns);
         turn.add(haleys);
-        SequentialGaming.GameLoop.Game game = Factory.makeGame(rule, turn, renderer);
+        Game game = Factory.makeGame(rule, turn, renderer);
         GameLoop loop = Factory.makeGameLoop(game);
 
-
         primaryStage.setTitle("TicTacToe");
-        primaryStage.setScene(new Scene(new FXShell(view, fxGenerator, new FXMessenger(440))));
+        primaryStage.setScene(new Scene(fxShell));
         primaryStage.setResizable(false);
         primaryStage.show();
 
