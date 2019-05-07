@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -93,7 +93,7 @@
         <counts>
           <entry key="dummy" value="3861" />
           <entry key="iml" value="58" />
-          <entry key="java" value="155828" />
+          <entry key="java" value="156149" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -101,7 +101,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="155828" />
+          <entry key="JAVA" value="156149" />
           <entry key="PLAIN_TEXT" value="3862" />
           <entry key="XML" value="1" />
         </counts>
@@ -111,7 +111,7 @@
           <entry key="class" value="11" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="4458" />
+          <entry key="java" value="4459" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
@@ -119,7 +119,7 @@
         <counts>
           <entry key="CLASS" value="11" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="4458" />
+          <entry key="JAVA" value="4459" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="9" />
         </counts>
@@ -127,129 +127,35 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/Input/InputsWithSameRowAndDifferentColumn.java">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/Input/InputsWithSameRowAndSameColumn.java">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/InputValidatorStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="37" column="82" selection-start-line="37" selection-start-column="82" selection-end-line="37" selection-end-column="82" />
-              <folding>
-                <element signature="method#makeValidatingContext#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#makeAlertingContext#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#makeTestContexts#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="e#1799#1832#0" />
-                <element signature="method#IfFirstInputIsValid_ShouldBeTheFirstInput#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="e#2196#2229#0" />
-                <element signature="method#IfOnlySecondInputIsValid_ShouldBeTheSecondInput#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="e#2604#2637#0" />
-                <element signature="method#IfOnlyThirdInputIsValid_ShouldBeTheThirdInput#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#initFixture#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#makeFirstInputIsValid#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#makeOnlySecondInputIsValid#0;class#ValidatingInputGeneratorTest#0" />
-                <element signature="method#makeOnlyThirdInputIsValid#0;class#ValidatingInputGeneratorTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/CountingGeneratorStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/InputGeneratorStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTestContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <element signature="method#ValidatingInputGeneratorTestContext#0;class#ValidatingInputGeneratorTestContext#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/Input/InputsWithDifferentRowAndSameColumn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="199">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGeneratorTest.java">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+            <state relative-caret-position="300">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
               <folding>
-                <element signature="method#IfFirstInputIsValid_ShouldNotAlert#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#IfOnlySecondInputIsValid_ShouldAlertTheFirst#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#IfOnlyThirdInputIsValid_ShouldAlertTheSecond#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#assertAlertedInputEquals#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#assertHasNotAlerted#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#makeFirstInputIsValid#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#makeOnlySecondInputIsValid#0;class#AlertingInputGeneratorTest#0" />
-                <element signature="method#makeOnlyThirdInputIsValid#0;class#AlertingInputGeneratorTest#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#117#118#0" expanded="true" />
+                <element signature="e#148#149#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/InputAlerterDummy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -327,6 +233,7 @@
       <dir>$PROJECT_DIR$/TicTacToe.Gui</dir>
       <dir>$PROJECT_DIR$/TicTacToe.SequentialGui</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -335,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/CompositeInputRule/CompositeInputValidatorTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/CompositeInputValidator/CompositeInputValidatorTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/AlertingInputValidatorImpValidatingTest.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/AlertingInputValidatorImpTest.java" />
@@ -380,12 +286,13 @@
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputValidatorImp/InputAlerterSpy.java" />
         <option value="$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/ValidatingInputGenerator/InputAlerterDummy.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/CompositeInputValidator/CompositeInputValidatorTest.java" />
-        <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTestContext.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/pom.xml" />
-        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGenerator.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java" />
-        <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTestContext.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGenerator.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration.java" />
       </list>
     </option>
   </component>
@@ -556,6 +463,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -586,6 +494,23 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -614,23 +539,11 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
               <item name="ValidatingInputGenerator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="ValidatingInputGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="AlertingInputGenerator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -641,7 +554,7 @@
     <property name="SearchEverywhereHistoryKey" value="Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557208768523" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557210710734" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -948,9 +861,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.07 at 07h 49m 33s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.07 at 07h 49m 58s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -978,15 +888,18 @@
     <history-entry file="AllTest - 2019.05.07 at 07h 54m 51s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.07 at 08h 17m 17s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="422719000" />
+    <option name="totallyTimeSpent" value="423015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27363896" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27793697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1015,7 +928,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Burn Down Chart" order="7" side_tool="true" weight="0.3295129" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.15759312" />
+      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.15687679" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
@@ -1143,7 +1056,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/Input/InputsWithDifferentRowAndSameColumn.java" />
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/Input/DifferentInputsWithTheSameSumOfRowAndColumn.java" />
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/Input/ComparativeIsNotAnInput.java" />
     <entry file="file://$PROJECT_DIR$/Libs/Core.InputGeneration/test/InputGeneration/InputGeneratorStub.java" />
@@ -1195,13 +1107,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/ValidatingGeneratedInputTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/ValidatingGeneratedInputTest.java" />
     <entry file="file://$PROJECT_DIR$/Core.InputGeneration/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1211,14 +1117,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/AlertingInputGenerator/AlertingInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="60">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidatingInputGenerator/ValidatingInputGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="199">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
@@ -1227,17 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="method#FreshInstance_InputShouldBeValid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedValidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedValidatingAfterInvalidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingAfterValidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingInBetweenTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingAfterTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#makeValidatingAdded#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#makeInvalidatingAdded#0;class#CompositeInputValidatorTest#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1287,10 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1348,15 +1239,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
-            <element signature="method#IfFirstInputIsValid_ShouldNotAlert#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#IfOnlySecondInputIsValid_ShouldAlertTheFirst#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#IfOnlyThirdInputIsValid_ShouldAlertTheSecond#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#assertAlertedInputEquals#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#assertHasNotAlerted#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#makeFirstInputIsValid#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#makeOnlySecondInputIsValid#0;class#AlertingInputGeneratorTest#0" />
-            <element signature="method#makeOnlyThirdInputIsValid#0;class#AlertingInputGeneratorTest#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#117#118#0" expanded="true" />
+            <element signature="e#148#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
