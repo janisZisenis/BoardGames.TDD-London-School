@@ -14,7 +14,6 @@ import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
-import Domain.InputGeneration.RandomInputGenerator.RandomInputGenerator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Players.PlayerContext;
 import Gaming.GameImp.Game;
@@ -29,11 +28,11 @@ import Gaming.GameOverRules.WinnerRule.HasWinnerProvider;
 import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.Factory;
 import InputGeneration.InputGenerator;
-import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.AlertingInputGenerator;
-import InputGeneration.ValidatingInputGenerator.AlertingInputGenerator.InputAlerter;
-import InputGeneration.ValidatingInputGenerator.InputValidator;
-import InputGeneration.ValidatingInputGenerator.ValidatingInputGenerator;
+import InputGeneration.ValidInputGenerator.InputAlerter;
+import InputGeneration.ValidInputGenerator.InputValidator;
+import InputGeneration.ValidInputGenerator.ValidInputGenerator;
 import Mapping.MarkToStringMapper;
 import Mapping.MarkToStringMappers.MarkToMessageMapper;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -200,25 +199,21 @@ public class TicTacToeFactory {
     private InputGenerator makeComputerInputGenerator(Board board, Mark m) {
         InputValidator inputValidator = makeInputValidator(board);
         InputGenerator randomGenerator = makeMinimaxInputGenerator(board, m);
-        return new ValidatingInputGenerator(randomGenerator, inputValidator);
+        return Factory.makeValidatingInputGenerator(randomGenerator, inputValidator);
     }
 
     private InputGenerator makeMinimaxInputGenerator(Board board, Mark m) {
         return new MinimaxInputGenerator(board, m);
     }
 
-    private RandomInputGenerator makeRandomInputGenerator() {
-        return new RandomInputGenerator();
-    }
-
     private InputGenerator makeHumanInputGenerator(Board board) {
         InputValidator existsValidator = new FieldExistsValidator();
         InputAlerter existsAlerter = new ConsoleInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputGenerator generator = new AlertingInputGenerator(inputView, existsValidator, existsAlerter);
+        InputGenerator generator = new ValidInputGenerator(inputView, existsValidator, existsAlerter);
 
         InputValidator emptyValidator = new FieldIsEmptyValidator(board);
         InputAlerter emptyAlerter = new ConsoleInputAlerter(AlertingMessages.inputAlreadyMarked);
-        return new AlertingInputGenerator(generator, emptyValidator, emptyAlerter);
+        return new ValidInputGenerator(generator, emptyValidator, emptyAlerter);
     }
 
     private InputValidator makeInputValidator(Board board) {
@@ -234,10 +229,6 @@ public class TicTacToeFactory {
 
     private FieldExistsValidator makeFieldExistsValidator() {
         return new FieldExistsValidator();
-    }
-
-    private ConsoleInputAlerter makeConsoleInputAlerter(String inputDoesNotExist) {
-        return new ConsoleInputAlerter(inputDoesNotExist);
     }
 
     private FieldIsEmptyValidator makeFieldIsEmptyValidator(Board board) {

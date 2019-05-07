@@ -1,7 +1,7 @@
 package InputGeneration.CompositeInputValidator;
 
 import InputGeneration.Input.Input;
-import InputGeneration.ValidatingInputGenerator.InputValidator;
+import InputGeneration.ValidInputGenerator.InputValidator;
 
 import java.util.LinkedList;
 
