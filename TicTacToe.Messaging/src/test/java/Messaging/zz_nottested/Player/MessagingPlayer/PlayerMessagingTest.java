@@ -5,7 +5,7 @@ import Domain.Data.Mark;
 import InputGeneration.CountingGeneratorStub;
 import InputGeneration.Input.Input;
 import Messaging.zz_nottested.Players.PlayerContext;
-import Players.MarkFieldServiceDummy;
+import Messaging.zz_nottested.Player.Players.MarkFieldServiceDummy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
