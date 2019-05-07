@@ -3,11 +3,11 @@ package Mapping.MarkToStringMappers;
 import Domain.Data.Mark;
 import Mapping.MarkToStringMapper;
 
-public class MarkToMessageMapper implements MarkToStringMapper {
+public class DefaultMarkToStringMapper implements MarkToStringMapper {
     private String johnMessage;
     private String haleyMessage;
 
-    public MarkToMessageMapper(String johnMessage, String haleyMessage) {
+    public DefaultMarkToStringMapper(String johnMessage, String haleyMessage) {
         this.johnMessage = johnMessage;
         this.haleyMessage = haleyMessage;
     }

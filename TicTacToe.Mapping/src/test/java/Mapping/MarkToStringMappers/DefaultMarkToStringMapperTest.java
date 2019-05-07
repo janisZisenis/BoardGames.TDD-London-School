@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MarkToStringMappingTest {
+public class DefaultMarkToStringMapperTest {
 
-    private String johnMessage = "John";
-    private String haleyMessage = "Haley";
-    private MarkToMessageMapper sut = new MarkToMessageMapper(johnMessage, haleyMessage);
+    private String johnsMessage = "John";
+    private String haleysMessage = "Haley";
+    private DefaultMarkToStringMapper sut = new DefaultMarkToStringMapper(johnsMessage, haleysMessage);
 
     @Test
     void IfJohnIsGiven_ShouldMapToJohnsMessage() {
@@ -17,17 +17,17 @@ public class MarkToStringMappingTest {
 
         String actual = sut.map(m);
 
-        String expected = johnMessage;
+        String expected = johnsMessage;
         assertEquals(expected, actual);
     }
 
     @Test
-    void IfHaleyIsGiven_ShouldMapToTheHaleysMessage() {
+    void IfHaleyIsGiven_ShouldMapToHaleysMessage() {
         Mark m = Mark.Haley;
 
         String actual = sut.map(m);
 
-        String expected = haleyMessage;
+        String expected = haleysMessage;
         assertEquals(expected, actual);
     }
 
