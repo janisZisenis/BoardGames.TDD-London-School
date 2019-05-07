@@ -3,11 +3,10 @@ package Messaging.Players;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.Turn.MarkFieldService;
-import Gaming.TwoPlayerTurn.Player;
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
 
-public class PlayerImp implements Player {
+public class PlayerImp {
 
     private final MarkFieldService markService;
     private final InputGenerator generator;

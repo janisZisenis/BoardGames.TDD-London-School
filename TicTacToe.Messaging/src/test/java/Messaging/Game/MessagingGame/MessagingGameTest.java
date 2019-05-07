@@ -1,6 +1,6 @@
 package Messaging.Game.MessagingGame;
 
-import Gaming.GameImp.Game;
+import SequentialGaming.GameLoop.Game;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,8 +23,16 @@ public class MessagingGameTest implements Game, GameMessenger {
         assertEquals(expected, actual);
     }
 
+    public boolean isOver() {
+        return false;
+    }
+
     public void play() {
         logString += "play ";
+    }
+
+    public void render() {
+
     }
 
     public void publishBeginningMessage() {

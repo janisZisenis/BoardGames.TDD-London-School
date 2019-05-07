@@ -1,9 +1,8 @@
 package Messaging.Game.MessagingGame;
 
+import SequentialGaming.GameLoop.Game;
 
-import Gaming.GameImp.Game;
-
-public class MessagingGame implements Game {
+public class MessagingGame {
 
     private final Game game;
     private final GameMessenger messenger;

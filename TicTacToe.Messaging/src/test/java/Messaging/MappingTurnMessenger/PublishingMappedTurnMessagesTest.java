@@ -1,8 +1,8 @@
-package Messaging.Turn.MappingTurnMessenger;
+package Messaging.MappingTurnMessenger;
 
 import Mapping.ObjectToStringMapperFake;
 import Messaging.MessengerMock;
-import Messaging.Turn.MessagingTurn.TurnMessenger;
+import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -18,9 +18,9 @@ public class PublishingMappedTurnMessagesTest {
     void IfNoMappableObjectsAreAvailable_ShouldThrow() {
         Object o = new Object();
 
-        Executable act = () -> { sut.publishTurnMessageFor(o); };
+        Executable act = () -> { sut.publishTurn(o); };
 
-        assertThrows(TurnMessenger.NoTurnMessageForObjectAvailable.class, act);
+        assertThrows(MultiTurnMessenger.NoTurnMessageForObjectAvailable.class, act);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class PublishingMappedTurnMessagesTest {
         mapper.register(o, "Object");
         messenger.expectPublishMessage("Object");
 
-        sut.publishTurnMessageFor(o);
+        sut.publishTurn(o);
 
         messenger.verifyAll();
     }

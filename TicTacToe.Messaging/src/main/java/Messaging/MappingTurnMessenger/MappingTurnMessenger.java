@@ -1,10 +1,10 @@
-package Messaging.Turn.MappingTurnMessenger;
+package Messaging.MappingTurnMessenger;
 
 import Mapping.ObjectToStringMapper;
 import Messaging.Messenger;
-import Messaging.Turn.MessagingTurn.TurnMessenger;
+import SequentialGaming.MultiTurn.MultiTurnMessenger;
 
-public class MappingTurnMessenger implements TurnMessenger {
+public class MappingTurnMessenger implements MultiTurnMessenger {
 
     private final Messenger messenger;
     private final ObjectToStringMapper mapper;
@@ -14,7 +14,7 @@ public class MappingTurnMessenger implements TurnMessenger {
         this.mapper = mapper;
     }
 
-    public void publishTurnMessageFor(Object player) {
+    public void publishTurn(Object player) {
         throwIfIsNotMappable(player);
 
         String message = mapper.map(player);
@@ -23,7 +23,7 @@ public class MappingTurnMessenger implements TurnMessenger {
 
     private void throwIfIsNotMappable(Object player) {
         if(!mapper.isMappable(player))
-            throw new NoTurnMessageForObjectAvailable();
+            throw new MultiTurnMessenger.NoTurnMessageForObjectAvailable();
     }
 
 }
