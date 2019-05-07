@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class CompositeInputValidator implements InputValidator {
 
-    private final LinkedList<InputValidator> validators = new LinkedList<InputValidator>();
+    private final LinkedList<InputValidator> validators = new LinkedList<>();
 
     public boolean isValid(Input input) {
         for (InputValidator v : validators)
