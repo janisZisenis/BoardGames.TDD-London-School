@@ -41,7 +41,7 @@ public class Main extends Application {
 
         FXInputView fxGenerator = new FXInputView(200);
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
-        FXMessenger fxMessenger = new FXMessenger(435);
+        FXMessenger fxMessenger = new FXMessenger(445);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
