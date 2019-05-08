@@ -3,6 +3,7 @@ package Domain;
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
@@ -11,6 +12,8 @@ import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputFieldGeneratorAdapter.InputFieldGeneratorAdapter;
+import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
+import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Turn.TicTacToeTurn;
 import InputGeneration.InputGenerator;
@@ -57,17 +60,31 @@ public abstract class Factory {
         return new GameEvaluator(lineProvider, lineEvaluator);
     }
 
-    public static Turn makeTicTacToeTurn(TurnCreationContext cxt) {
-        InputGenerator generator = cxt.getInputGenerator();
-        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
-                                                                       cxt.getDoesNotExistValidator(),
-                                                                       cxt.getDoesNotExistAlerter());
-        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
-                                                                       cxt.getAlreadyMarkedValidator(),
-                                                                       cxt.getAlreadyMarkedAlerter());
-        InputFieldGeneratorAdapter generatorAdapter = new InputFieldGeneratorAdapter(generator);
+    public static Turn makeHumanTurn(Mark m, Board board, IODeviceFactory factory) {
+        InputGenerator generator = factory.makeHumanInputGenerator();
+        return makeTicTacToeTurn(m, board, generator, factory);
+    }
 
-        return new TicTacToeTurn(cxt.getMark(), cxt.getBoard(), generatorAdapter);
+    public static Turn makeInvincableComputerTurn(Mark m, Board board, IODeviceFactory factory) {
+        InputGenerator generator = factory.makeInvincibleInputGenerator(board, m);
+        return makeTicTacToeTurn(m, board, generator, factory);
+    }
+
+    public static Turn makeHumbeComputerTurn(Mark m, Board board, IODeviceFactory factory) {
+        InputGenerator generator = factory.makeHumbleInputGenerator();
+        return makeTicTacToeTurn(m, board, generator, factory);
+    }
+
+    private static Turn makeTicTacToeTurn(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
+        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
+                new FieldExistsValidator(),
+                factory.makeFieldExistsAlerter());
+        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
+                new FieldIsEmptyValidator(board),
+                factory.makeFieldIsEmptyAlerter());
+
+        InputFieldGeneratorAdapter generatorAdapter = new InputFieldGeneratorAdapter(generator);
+        return new TicTacToeTurn(m, board, generatorAdapter);
     }
 
 }

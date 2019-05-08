@@ -3,15 +3,8 @@ package App;
 import Domain.Board.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
-import Domain.TurnCreationContext;
-import InputGeneration.ValidInputGenerator.InputAlerter;
-import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
-import Messages.AlertingMessages;
 import Messages.OnePlayerModeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
@@ -26,7 +19,10 @@ import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
 import SequentialGaming.MultiTurn.MultiTurn;
 import SequentialGaming.MultiTurn.MultiTurnMessenger;
 import SequentialRendering.BoardRenderer.BoardRenderer;
-import View.*;
+import View.FXBoardView;
+import View.FXInputView;
+import View.FXMessenger;
+import View.FXShell;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -39,7 +35,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         ListenableBoard board = Domain.Factory.makeListenableBoard();
 
-        FXInputView fxGenerator = new FXInputView(200);
+        FXIODeviceFactory factory = new FXIODeviceFactory();
+        FXInputView fxGenerator = (FXInputView) factory.makeHumanInputGenerator();
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
         FXMessenger fxMessenger = new FXMessenger(445);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
@@ -48,34 +45,8 @@ public class Main extends Application {
         MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
         board.setListener(listener);
 
-        InputValidator existsValidator = new FieldExistsValidator();
-        InputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
-        InputValidator isEmptyValidator = new FieldIsEmptyValidator(board);
-        InputAlerter fxAlreadyMarkedAlerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
-
-        Turn john = Domain.Factory.makeTicTacToeTurn(
-            new TurnCreationContext(
-                Mark.John,
-                board,
-                fxGenerator,
-                fxExistsAlerter,
-                existsValidator,
-                fxAlreadyMarkedAlerter,
-                isEmptyValidator
-            )
-        );
-
-        Turn haley = Domain.Factory.makeTicTacToeTurn(
-            new TurnCreationContext(
-                Mark.Haley,
-                board,
-                new MinimaxInputGenerator(board, Mark.Haley),
-                fxExistsAlerter,
-                existsValidator,
-                fxAlreadyMarkedAlerter,
-                isEmptyValidator
-            )
-        );
+        Turn john = Domain.Factory.makeHumanTurn(Mark.John, board, factory);
+        Turn haley = Domain.Factory.makeInvincableComputerTurn(Mark.Haley, board, factory);
 
         DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
