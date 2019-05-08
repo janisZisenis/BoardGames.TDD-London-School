@@ -46,7 +46,7 @@ public class Main extends Application {
         board.setListener(listener);
 
         Turn john = Domain.Factory.makeHumanTurn(Mark.John, board, factory);
-        Turn haley = Domain.Factory.makeInvincableComputerTurn(Mark.Haley, board, factory);
+        Turn haley = Domain.Factory.makeHumbleComputerTurn(Mark.Haley, board, factory);
 
         DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);

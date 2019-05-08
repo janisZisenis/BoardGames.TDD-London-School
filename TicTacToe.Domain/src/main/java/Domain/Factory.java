@@ -70,7 +70,7 @@ public abstract class Factory {
         return makeTicTacToeTurn(m, board, generator, factory);
     }
 
-    public static Turn makeHumbeComputerTurn(Mark m, Board board, IODeviceFactory factory) {
+    public static Turn makeHumbleComputerTurn(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumbleInputGenerator();
         return makeTicTacToeTurn(m, board, generator, factory);
     }
