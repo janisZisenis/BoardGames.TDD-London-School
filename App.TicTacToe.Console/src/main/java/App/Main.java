@@ -30,12 +30,12 @@ public class Main {
 
         ConsoleBoardView view = new ConsoleBoardView(board, new MarkToXOMapper());
         ConsoleMessenger messenger = new ConsoleMessenger();
-        ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
         MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider);
         board.setListener(listener);
 
+        ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();
         Turn john = Domain.Factory.makeHumanTurn(Mark.John, board, factory);
         Turn haley = Domain.Factory.makeInvincableComputerTurn(Mark.Haley, board, factory);
 

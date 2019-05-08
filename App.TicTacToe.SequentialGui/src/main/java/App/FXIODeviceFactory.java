@@ -13,12 +13,12 @@ import View.FXInputView;
 
 public class FXIODeviceFactory implements IODeviceFactory {
 
-    private static FXInputView view;
+    private static FXInputView humanGenerator;
 
     public InputGenerator makeHumanInputGenerator() {
-        if(view == null)
-            view = new FXInputView(200);
-        return view;
+        if(humanGenerator == null)
+            humanGenerator = new FXInputView(200);
+        return humanGenerator;
     }
 
     public InputGenerator makeInvincibleInputGenerator(Board board, Mark m) {
@@ -39,5 +39,9 @@ public class FXIODeviceFactory implements IODeviceFactory {
 
     private InputAlerter makeInputAlerter(String inputAlreadyMarked) {
         return new FXInputAlerter(inputAlreadyMarked);
+    }
+
+    public static void setHumanInputGenerator(FXInputView humanGenerator) {
+        FXIODeviceFactory.humanGenerator = humanGenerator;
     }
 }

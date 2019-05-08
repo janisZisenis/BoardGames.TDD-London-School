@@ -35,8 +35,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         ListenableBoard board = Domain.Factory.makeListenableBoard();
 
-        FXIODeviceFactory factory = new FXIODeviceFactory();
-        FXInputView fxGenerator = (FXInputView) factory.makeHumanInputGenerator();
+        FXInputView fxGenerator = new FXInputView(200);
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
         FXMessenger fxMessenger = new FXMessenger(445);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
@@ -45,8 +44,10 @@ public class Main extends Application {
         MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
         board.setListener(listener);
 
+        FXIODeviceFactory factory = new FXIODeviceFactory();
+        FXIODeviceFactory.setHumanInputGenerator(fxGenerator);
         Turn john = Domain.Factory.makeHumanTurn(Mark.John, board, factory);
-        Turn haley = Domain.Factory.makeHumbleComputerTurn(Mark.Haley, board, factory);
+        Turn haley = Domain.Factory.makeInvincableComputerTurn(Mark.Haley, board, factory);
 
         DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
         turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
@@ -75,6 +76,7 @@ public class Main extends Application {
                 loop.run();
             }
         };
+
         t.start();
 
     }
