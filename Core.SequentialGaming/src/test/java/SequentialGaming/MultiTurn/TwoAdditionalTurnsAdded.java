@@ -9,9 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TwoAdditionalTurnsAdded {
 
     private TurnSpy first = new TurnSpy();
+    private MultiTurnMessengerDummy messenger = new MultiTurnMessengerDummy();
+    private MultiTurn sut = new MultiTurn(first, messenger);
+
     private TurnSpy second = new TurnSpy();
     private TurnSpy third = new TurnSpy();
-    private MultiTurn sut = new MultiTurn(first);
 
     @BeforeEach
     void Setup() {

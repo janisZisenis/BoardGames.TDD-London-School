@@ -1,10 +1,10 @@
 package View;
 
-import Messaging.Messenger;
+import Messaging.MappingMultiTurnMessenger.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 
-    public void publish(Object message) {
+    public void publish(String message) {
         System.out.println(message);
     }
 

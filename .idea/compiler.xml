@@ -9,7 +9,6 @@
         <module name="App.TicTacToe.Console" />
         <module name="App.TicTacToe.Gui" />
         <module name="App.TicTacToe.SequentialGui" />
-        <module name="Core.Gaming" />
         <module name="Core.InputGeneration" />
         <module name="Core.SequentialGaming" />
         <module name="TicTacToe.Domain" />
@@ -17,7 +16,7 @@
         <module name="TicTacToe.Mapping" />
         <module name="TicTacToe.Messages" />
         <module name="TicTacToe.Messaging" />
-        <module name="TicTacToe.Rendering" />
+        <module name="TicTacToe.SequentialRendering" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,6 +34,7 @@
       <module name="TicTacToe.Messages" target="8" />
       <module name="TicTacToe.Messaging" target="8" />
       <module name="TicTacToe.Rendering" target="8" />
+      <module name="TicTacToe.SequentialRendering" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

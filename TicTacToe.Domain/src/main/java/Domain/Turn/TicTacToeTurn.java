@@ -2,8 +2,9 @@ package Domain.Turn;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import SequentialGaming.DelegatingGame.Turn;
 
-public class TicTacToeTurn {
+public class TicTacToeTurn implements Turn {
 
     private final Mark mark;
     private final MarkFieldService service;

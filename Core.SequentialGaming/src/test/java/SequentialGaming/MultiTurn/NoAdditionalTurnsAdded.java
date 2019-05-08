@@ -7,8 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NoAdditionalTurnsAdded {
 
-    private TurnSpy first = new TurnSpy();
-    private MultiTurn sut = new MultiTurn(first);
+    private TurnSpy turn = new TurnSpy();
+    private MultiTurnMessengerDummy messenger = new MultiTurnMessengerDummy();
+    private MultiTurn sut = new MultiTurn(turn, messenger);
 
     @Test
     void IfGetsPlayedOnce_ShouldHavePlayedTheFirstOnce() {
@@ -26,7 +27,7 @@ public class NoAdditionalTurnsAdded {
     }
 
     @Test
-    void IfGetsPlayedThreeTimes_ShouldhavePlayedTheFirstThreeTimes() {
+    void IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes() {
         sut.play();
         sut.play();
         sut.play();
@@ -45,7 +46,7 @@ public class NoAdditionalTurnsAdded {
     }
 
     private void assertHasPlayedTimes(int expected) {
-        int actual = first.getPlayedTimes();
+        int actual = turn.getPlayedTimes();
         assertEquals(expected, actual);
     }
 

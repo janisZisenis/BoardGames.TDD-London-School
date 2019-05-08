@@ -6,7 +6,7 @@ import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Mapping.MarkToStringMapper;
-import Rendering.BoardRenderer.BoardRenderingView;
+import SequentialRendering.BoardRenderer.BoardRenderingView;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

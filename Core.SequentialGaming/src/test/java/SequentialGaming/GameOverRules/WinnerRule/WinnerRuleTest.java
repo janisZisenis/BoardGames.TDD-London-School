@@ -7,10 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class WinnerRuleTest {
 
+    private HasWinnerProviderStub provider = new HasWinnerProviderStub();
+    private WinnerRule sut = new WinnerRule(provider);
+
     @Test
     void IfHasWinner_GameShouldBeOver(){
-        HasWinnerProviderStub provider = new HasWinnerProviderStub();
-        WinnerRule sut = new WinnerRule(provider);
         provider.setHasWinner(true);
 
         boolean actual = sut.isGameOver();
@@ -20,8 +21,6 @@ public class WinnerRuleTest {
 
     @Test
     void IfHasNoWinner_GameShouldBeOver(){
-        HasWinnerProviderStub provider = new HasWinnerProviderStub();
-        WinnerRule sut = new WinnerRule(provider);
         provider.setHasWinner(false);
 
         boolean actual = sut.isGameOver();

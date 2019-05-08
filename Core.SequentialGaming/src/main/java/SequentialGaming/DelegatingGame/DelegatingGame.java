@@ -1,6 +1,8 @@
 package SequentialGaming.DelegatingGame;
 
-public class DelegatingGame {
+import SequentialGaming.GameLoopImp.Game;
+
+public class DelegatingGame implements Game {
 
     private final GameOverRule rule;
     private final Turn turn;

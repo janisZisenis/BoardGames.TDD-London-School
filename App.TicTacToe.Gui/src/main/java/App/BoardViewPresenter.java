@@ -22,7 +22,7 @@ public class BoardViewPresenter implements BoardViewDelegate, BoardListener {
         interactor.process(input);
     }
 
-    public void updateField(Field field) {
+    public void onFieldUpdated(Field field) {
         udpateField(field);
 
         if(interactor.hasWinningLine()) {

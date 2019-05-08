@@ -10,14 +10,13 @@ import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
-import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import Gaming.GameOverRules.WinnerRule.WinnerRule;
 import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
 import InputGeneration.Factory;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
+import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 import View.FXBoardView;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -40,7 +39,7 @@ public class Main extends Application {
         EquallyMarkedLineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
         HumbleLineProvider lineProvider = new HumbleLineProvider();
         GameEvaluator evaluator = new GameEvaluator(lineProvider, lineEvaluator);
-        gameOverRule.add(new WinnerRule(evaluator));
+        gameOverRule.add(SequentialGaming.Factory.makeWinnerRule(evaluator));
         gameOverRule.add(new NumberOfMovesRule(board));
 
 

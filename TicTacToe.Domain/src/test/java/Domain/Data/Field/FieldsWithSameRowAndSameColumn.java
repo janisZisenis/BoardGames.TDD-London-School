@@ -8,20 +8,20 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class FieldsWithSameRowAndSameColumn {
 
     private Field sut = new Field(-1, 1);
-    private Field field = new Field(-1, 1);
+    private Field comparative = new Field(-1, 1);
 
     @Test
-    void TheFieldsShouldNotEqualEachOther() {
-        boolean actual = sut.equals(field);
+    void ShouldEqualEachOther() {
+        boolean actual = sut.equals(comparative);
 
         assertTrue(actual);
     }
 
     @Test
-    void IfTwoFieldsHaveSameRowAndSameColumn_TheyShouldHaveTheSameHashCode() {
+    void ShouldHaveTheSameHashCode() {
         int actual = sut.hashCode();
 
-        int expected = field.hashCode();
+        int expected = comparative.hashCode();
         assertEquals(expected, actual);
     }
 }

@@ -36,7 +36,7 @@ public class ListenableBoard implements Board {
 
     private void notify(Field f) {
         if(listener != null)
-            listener.updateField(f);
+            listener.onFieldUpdated(f);
     }
 
     public void setListener(BoardListener listener) {
