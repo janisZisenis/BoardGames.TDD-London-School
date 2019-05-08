@@ -2,15 +2,19 @@ package GuiGaming.ValidatingInputProcessor;
 
 import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
+import InputGeneration.ValidInputGenerator.InputAlerter;
+import InputGeneration.ValidInputGenerator.InputValidator;
 
 public class ValidatingInputProcessor implements InputProcessor {
 
     private final GuiTurn turn;
-    private final AlertingInputValidator validator;
+    private final InputValidator validator;
+    private final InputAlerter alerter;
 
-    public ValidatingInputProcessor(GuiTurn turn, AlertingInputValidator validator) {
+    public ValidatingInputProcessor(GuiTurn turn, InputValidator validator, InputAlerter alerter) {
         this.turn = turn;
         this.validator = validator;
+        this.alerter = alerter;
     }
 
     public void process(Input input) {
@@ -18,7 +22,7 @@ public class ValidatingInputProcessor implements InputProcessor {
             Field f = makeField(input);
             turn.play(f);
         } else {
-            validator.alertIsInvalid(input);
+            alerter.alert(input);
         }
     }
 
