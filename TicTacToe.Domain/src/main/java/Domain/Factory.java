@@ -2,6 +2,7 @@ package Domain;
 
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
+import Domain.Board.ListenableBoard.ListenableBoard;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
@@ -21,6 +22,11 @@ public abstract class Factory {
 
     public static Board makeBoard() {
         return new HashingBoard();
+    }
+
+    public static ListenableBoard makeListenableBoard() {
+        Board board = makeBoard();
+        return new ListenableBoard(board);
     }
 
     public static GameOverRule makeGameOverRule(Board board) {

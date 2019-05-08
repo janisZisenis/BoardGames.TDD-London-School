@@ -1,6 +1,6 @@
 package App;
 
-import Domain.Board.Board;
+import Domain.Board.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
@@ -13,6 +13,9 @@ import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.AlertingMessages;
 import Messages.OnePlayerModeMessages;
+import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
+import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
+import Messaging.MessagingBoardListener.MessagingBoardListener;
 import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Renderer;
 import SequentialGaming.DelegatingGame.Turn;
@@ -34,12 +37,16 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        Board board = Domain.Factory.makeBoard();
+        ListenableBoard board = Domain.Factory.makeListenableBoard();
 
         FXInputView fxGenerator = new FXInputView(200);
         FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
         FXMessenger fxMessenger = new FXMessenger(435);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
+
+        MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
+        MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
+        board.setListener(listener);
 
         InputValidator existsValidator = new FieldExistsValidator();
         InputAlerter fxExistsAlerter = new FXInputAlerter(AlertingMessages.inputDoesNotExist);
