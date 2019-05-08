@@ -21,7 +21,7 @@ public class GuiTwoPlayerTurn implements GuiTurn {
     }
 
     private void mark(Field field) {
-        current.mark(field);
+        current.play(field);
     }
 
     private void togglePlayer() {

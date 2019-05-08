@@ -4,19 +4,19 @@ import Domain.Data.Field.Field;
 
 public class GuiPlayerSpy implements GuiPlayer {
 
-    private int count = 0;
-    private Field markedField;
+    private int timesPlayed = 0;
+    private Field playedField;
 
-    public int getMarkedCount() {
-        return count;
+    public int getPlayedTimes() {
+        return timesPlayed;
     }
 
-    public void mark(Field field) {
-        markedField = field;
-        count++;
+    public void play(Field field) {
+        playedField = field;
+        timesPlayed++;
     }
 
-    public Field getMarkedField() {
-        return markedField;
+    public Field getPlayedField() {
+        return playedField;
     }
 }

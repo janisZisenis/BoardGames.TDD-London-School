@@ -15,7 +15,7 @@ public class GuiPlayerImp implements GuiPlayer {
         this.service = service;
     }
 
-    public void mark(Field f) {
+    public void play(Field f) {
         service.mark(f, mark);
     }
 }
