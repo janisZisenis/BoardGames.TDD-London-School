@@ -1,10 +1,11 @@
 package InputGeneration.ValidInputProcessor;
 
 import InputGeneration.Input.Input;
+import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 
-public class ValidInputProcessor {
+public class ValidInputProcessor implements InputProcessor {
 
     private final InputProcessor processor;
     private final InputValidator validator;

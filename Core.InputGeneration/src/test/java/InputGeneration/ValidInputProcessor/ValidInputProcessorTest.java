@@ -1,6 +1,7 @@
 package InputGeneration.ValidInputProcessor;
 
 import InputGeneration.Input.Input;
+import InputGeneration.InputProcessorSpy;
 import InputGeneration.ValidInputGenerator.InputAlerterSpy;
 import InputGeneration.ValidInputGenerator.InputValidatorStub;
 import org.junit.jupiter.api.Test;

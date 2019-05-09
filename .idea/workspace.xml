@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/InputProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcessorSpy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/BoardViewPresenter/BoardViewPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/BoardViewPresenter/BoardInteractorStub.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/BoardViewPresenter/BoardViewPresenterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/target/classes/GuiGaming/BoardViewPresenter/BoardViewPresenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/target/test-classes/GuiGaming/BoardViewPresenter/BoardInteractorStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/target/test-classes/GuiGaming/BoardViewPresenter/BoardViewPresenterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/InputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/InputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcessorSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/InputProcessorSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -109,7 +103,7 @@
         <counts>
           <entry key="dummy" value="4137" />
           <entry key="iml" value="58" />
-          <entry key="java" value="171128" />
+          <entry key="java" value="171393" />
           <entry key="txt" value="1" />
           <entry key="xml" value="149" />
         </counts>
@@ -117,7 +111,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="171128" />
+          <entry key="JAVA" value="171393" />
           <entry key="PLAIN_TEXT" value="4138" />
           <entry key="XML" value="149" />
         </counts>
@@ -127,7 +121,7 @@
           <entry key="class" value="12" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="4853" />
+          <entry key="java" value="4856" />
           <entry key="xml" value="40" />
         </counts>
       </usages-collector>
@@ -135,7 +129,7 @@
         <counts>
           <entry key="CLASS" value="12" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="4853" />
+          <entry key="JAVA" value="4856" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="40" />
         </counts>
@@ -145,10 +139,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcessorSpy.java">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/InputProcessorSpy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="e#353#354#0" expanded="true" />
                 <element signature="e#381#382#0" expanded="true" />
@@ -157,32 +151,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="138">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/InputProcessor.java">
+        <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/InputProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
@@ -273,7 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProviderImp.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/GameOverMessageProvider/FixedMessageProvider.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/tested/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/tested/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java" />
@@ -322,8 +314,9 @@
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcesserSpy.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/InputProcessor.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcessorSpy.java" />
-        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java" />
+        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" />
       </list>
     </option>
   </component>
@@ -551,25 +544,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Core.InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InputGeneration" type="462c0819:PsiDirectoryNode" />
-              <item name="ValidInputProcessor" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -584,7 +558,7 @@
     <property name="SearchEverywhereHistoryKey" value="Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557381256513" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557381614896" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -605,11 +579,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="InputGeneration" />
       <recent name="GuiGaming.BoardViewPresenter" />
       <recent name="Messaging.MessagingBoardListener" />
       <recent name="Messaging.zz_nottested.Player" />
       <recent name="Messaging" />
-      <recent name="Messaging.tested" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TicTacToe.Messaging/src/test/java" />
@@ -878,26 +852,11 @@
       <workItem from="1557240361000" duration="5881000" />
       <workItem from="1557300871792" duration="2371000" />
       <workItem from="1557346254888" duration="1477000" />
-      <workItem from="1557380109428" duration="993000" />
+      <workItem from="1557380109428" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.09 at 07h 45m 30s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.09 at 07h 47m 21s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.09 at 07h 47m 53s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.09 at 07h 48m 10s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.09 at 07h 48m 35s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.09 at 07h 48m 41s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -913,15 +872,30 @@
     <history-entry file="AllTest - 2019.05.09 at 07h 52m 01s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.09 at 07h 52m 28s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.09 at 07h 52m 51s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.09 at 07h 53m 15s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.09 at 07h 53m 28s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.09 at 07h 54m 22s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455537000" />
+    <option name="totallyTimeSpent" value="455833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34885386" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34885386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -930,8 +904,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44352332" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4433121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1090,13 +1064,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Input/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1230,13 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1405,17 +1365,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/InputProcessor.java">
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/InputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/InputProcessorSpy.java">
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/InputProcessorSpy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
             <element signature="e#353#354#0" expanded="true" />
             <element signature="e#381#382#0" expanded="true" />
@@ -1423,23 +1383,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java">
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputGenerator/InputAlerterSpy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="270">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/ValidInputProcessor/ValidInputProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="138">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
         </state>
       </provider>
     </entry>

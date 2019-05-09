@@ -5,6 +5,7 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
+import InputGeneration.InputProcessor;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;

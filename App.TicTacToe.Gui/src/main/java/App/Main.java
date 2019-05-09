@@ -12,8 +12,6 @@ import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import GuiGaming.GuiPlayerImp.GuiPlayerImp;
 import GuiGaming.GuiTurn.GuiPlayer;
 import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
-import GuiGaming.ValidatingInputProcessor.InputProcessor;
-import GuiGaming.ValidatingInputProcessor.ValidatingInputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -48,11 +46,11 @@ public class Main extends Application {
         GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
         GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
         FXBoardView boardView = new FXBoardView(mapper);
-        InputProcessor processor = new ValidatingInputProcessor(turn, alreadyMarkedValidator, alreadyMarkedAlerter);
-        BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
-        BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
-        boardView.setDelegate(presenter);
-        board.setListener(presenter);
+        //InputProcessor processor = new ValidatingInputProcessor(turn, alreadyMarkedValidator, alreadyMarkedAlerter);
+        //BoardViewInteractor interactor = new BoardViewInteractor(board, evaluator, processor);
+        //BoardViewPresenter presenter = new BoardViewPresenter(boardView, interactor);
+        //boardView.setDelegate(presenter);
+        //board.setListener(presenter);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(boardView));

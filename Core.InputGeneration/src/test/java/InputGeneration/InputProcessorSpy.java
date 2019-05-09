@@ -1,6 +1,7 @@
-package InputGeneration.ValidInputProcessor;
+package InputGeneration;
 
 import InputGeneration.Input.Input;
+import InputGeneration.InputProcessor;
 
 public class InputProcessorSpy implements InputProcessor {
 
