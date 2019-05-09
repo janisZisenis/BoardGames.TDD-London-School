@@ -3,7 +3,7 @@ package SequentialGaming;
 import SequentialGaming.DelegatingGame.DelegatingGame;
 import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Renderer;
-import SequentialGaming.DelegatingGame.Turn;
+import SequentialGaming.DelegatingGame.Player;
 import SequentialGaming.GameLoopImp.Game;
 import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
@@ -12,9 +12,9 @@ import SequentialGaming.GameOverRules.WinnerRule.WinnerRule;
 import SequentialGaming.MessagingGameLoop.GameLoop;
 import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
 import SequentialGaming.MessagingGameLoop.MessagingGameLoop;
-import SequentialGaming.MultiTurn.MultiTurn;
-import SequentialGaming.MultiTurn.MultiTurnMessenger;
-import SequentialGaming.MultiTurn.NullMultiTurnMessenger;
+import SequentialGaming.MultiPlayer.MultiPlayer;
+import SequentialGaming.MultiPlayer.MultiPlayerMessenger;
+import SequentialGaming.MultiPlayer.NullMultiPlayerMessenger;
 
 
 public abstract class Factory {
@@ -28,8 +28,8 @@ public abstract class Factory {
         return new MessagingGameLoop(loop, messenger);
     }
 
-    public static Game makeGame(GameOverRule rule, Turn turn, Renderer renderer) {
-        return new DelegatingGame(rule, renderer, turn);
+    public static Game makeGame(GameOverRule rule, Player player, Renderer renderer) {
+        return new DelegatingGame(rule, renderer, player);
     }
 
     public static CompositeGameOverRule makeCompositeGameOverRule() {
@@ -40,13 +40,13 @@ public abstract class Factory {
         return new WinnerRule(provider);
     }
 
-    public static MultiTurn makeMultiTurn(Turn first) {
-        MultiTurnMessenger messenger = new NullMultiTurnMessenger();
-        return makeMessagingMultiTurn(first, messenger);
+    public static MultiPlayer makeMultiPlayer(Player first) {
+        MultiPlayerMessenger messenger = new NullMultiPlayerMessenger();
+        return makeMessagingMultiPlayer(first, messenger);
     }
 
-    public static MultiTurn makeMessagingMultiTurn(Turn first, MultiTurnMessenger messenger) {
-        return new MultiTurn(first, messenger);
+    public static MultiPlayer makeMessagingMultiPlayer(Player first, MultiPlayerMessenger messenger) {
+        return new MultiPlayer(first, messenger);
     }
 
 }

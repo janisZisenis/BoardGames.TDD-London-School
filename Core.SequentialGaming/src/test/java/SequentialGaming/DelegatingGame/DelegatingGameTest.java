@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DelegatingGameTest {
 
-    private TurnSpy turn = new TurnSpy();
+    private PlayerSpy player = new PlayerSpy();
     private RendererSpy renderer = new RendererSpy();
     private GameOverRuleStub rule = new GameOverRuleStub();
-    private DelegatingGame sut = new DelegatingGame(rule, renderer, turn);
+    private DelegatingGame sut = new DelegatingGame(rule, renderer, player);
 
     @Test
     void IfGameOverRuleIsOver_ShouldBeOverToo() {
@@ -27,7 +27,7 @@ public class DelegatingGameTest {
     }
 
     @Test
-    void IfGetsPlayed_ShouldHavePlayedTheTurn() {
+    void IfGetsPlayed_ShouldHavePlayedTheVerbosePlayer() {
         sut.play();
 
         assertHasPlayed();
@@ -52,7 +52,7 @@ public class DelegatingGameTest {
     }
 
     private void assertHasPlayed() {
-        boolean actual = turn.hasPlayed();
+        boolean actual = player.hasPlayed();
         assertTrue(actual);
     }
 

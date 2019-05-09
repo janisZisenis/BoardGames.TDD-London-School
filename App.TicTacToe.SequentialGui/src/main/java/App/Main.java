@@ -11,13 +11,13 @@ import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
 import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Renderer;
-import SequentialGaming.DelegatingGame.Turn;
+import SequentialGaming.DelegatingGame.Player;
 import SequentialGaming.Factory;
 import SequentialGaming.GameLoopImp.Game;
 import SequentialGaming.MessagingGameLoop.GameLoop;
 import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
-import SequentialGaming.MultiTurn.MultiTurn;
-import SequentialGaming.MultiTurn.MultiTurnMessenger;
+import SequentialGaming.MultiPlayer.MultiPlayer;
+import SequentialGaming.MultiPlayer.MultiPlayerMessenger;
 import SequentialRendering.BoardRenderer.BoardRenderer;
 import View.FXBoardView;
 import View.FXInputView;
@@ -46,15 +46,15 @@ public class Main extends Application {
 
         FXIODeviceFactory factory = new FXIODeviceFactory();
         FXIODeviceFactory.setHumanInputGenerator(fxGenerator);
-        Turn john = Domain.Factory.makeHumanTurn(Mark.John, board, factory);
-        Turn haley = Domain.Factory.makeInvincableComputerTurn(Mark.Haley, board, factory);
+        Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
+        Player haley = Domain.Factory.makeInvincableComputerPlayer(Mark.Haley, board, factory);
 
-        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultTurnMessage);
-        turnMapper.register(john, OnePlayerModeMessages.humanTurnMessage);
-        turnMapper.register(haley, OnePlayerModeMessages.computerTurnMessage);
-        MultiTurnMessenger turnMessenger = Messaging.Factory.makeMappingMultiTurnMessenger(turnMapper, fxMessenger);
+        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
+        turnMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);
+        turnMapper.register(haley, OnePlayerModeMessages.computerPlayerMessage);
+        MultiPlayerMessenger turnMessenger = Messaging.Factory.makeMappingMultiPlayerMessenger(turnMapper, fxMessenger);
 
-        MultiTurn turn = Factory.makeMessagingMultiTurn(john, turnMessenger);
+        MultiPlayer turn = Factory.makeMessagingMultiPlayer(john, turnMessenger);
         turn.add(haley);
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);

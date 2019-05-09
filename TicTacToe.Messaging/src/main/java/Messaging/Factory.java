@@ -6,18 +6,18 @@ import Mapping.MarkToStringMappers.DefaultMarkToStringMapper;
 import Mapping.ObjectToStringMapper;
 import Messages.OnePlayerModeMessages;
 import Messaging.GameLoopMessengerImp.GameLoopMessengerImp;
-import Messaging.MappingMultiTurnMessenger.MappingMultiTurnMessenger;
+import Messaging.MappingMultiTurnMessenger.MappingMultiPlayerMessenger;
 import Messaging.MappingMultiTurnMessenger.Messenger;
 import Messaging.MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import Messaging.MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
-import SequentialGaming.MultiTurn.MultiTurnMessenger;
+import SequentialGaming.MultiPlayer.MultiPlayerMessenger;
 
 public abstract class Factory {
 
-    public static MultiTurnMessenger makeMappingMultiTurnMessenger(ObjectToStringMapper mapper, Messenger messenger) {
-        return new MappingMultiTurnMessenger(mapper, messenger);
+    public static MultiPlayerMessenger makeMappingMultiPlayerMessenger(ObjectToStringMapper mapper, Messenger messenger) {
+        return new MappingMultiPlayerMessenger(mapper, messenger);
     }
 
     public static GameLoopMessenger makeTicTacToeGameLoopMessenger(Board board, Messenger messenger) {
