@@ -2,9 +2,8 @@ package GuiGaming.GuiTurn;
 
 
 import Domain.Data.Field.Field;
-import GuiGaming.ValidatingInputProcessor.GuiTurn;
 
-public class GuiTwoPlayerTurn implements GuiTurn {
+public class GuiTwoPlayerTurn {
 
     private final GuiPlayer first;
     private final GuiPlayer second;
@@ -21,7 +20,7 @@ public class GuiTwoPlayerTurn implements GuiTurn {
     }
 
     private void mark(Field field) {
-        current.mark(field);
+        current.play(field);
     }
 
     private void togglePlayer() {

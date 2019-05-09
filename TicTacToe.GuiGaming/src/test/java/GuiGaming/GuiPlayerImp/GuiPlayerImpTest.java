@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MarkingTheFieldTest {
+public class GuiPlayerImpTest {
 
     private MarkFieldServiceSpy service = new MarkFieldServiceSpy();
     private GuiPlayerImp sut;
@@ -17,7 +17,7 @@ public class MarkingTheFieldTest {
         makeGuiPlayerIsJohn();
         Field field = new Field(0, 0);
 
-        sut.mark(field);
+        sut.play(field);
 
         assertMarkedAs(Mark.John);
     }
@@ -27,7 +27,7 @@ public class MarkingTheFieldTest {
         makeGuiPlayerIsHaley();
         Field field = new Field(0, 0);
 
-        sut.mark(field);
+        sut.play(field);
 
         assertMarkedAs(Mark.Haley);
     }
@@ -37,7 +37,7 @@ public class MarkingTheFieldTest {
         makeGuiPlayerIsJohn();
         Field field = new Field(0, 0);
 
-        sut.mark(field);
+        sut.play(field);
 
         assertMarkedFieldEquals(field);
     }
@@ -47,10 +47,11 @@ public class MarkingTheFieldTest {
         makeGuiPlayerIsJohn();
         Field field = new Field(2, 1);
 
-        sut.mark(field);
+        sut.play(field);
 
         assertMarkedFieldEquals(field);
     }
+
 
     private void assertMarkedAs(Mark expected) {
         Mark actual = service.getPlacedMark();
