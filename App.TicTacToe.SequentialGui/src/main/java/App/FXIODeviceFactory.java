@@ -1,10 +1,10 @@
 package App;
 
 import Domain.Board.Board;
+import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
-import Domain.InputGeneration.RandomInputGenerator.RandomInputGenerator;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
@@ -26,7 +26,8 @@ public class FXIODeviceFactory implements IODeviceFactory {
     }
 
     public InputGenerator makeHumbleInputGenerator() {
-        return new RandomInputGenerator();
+        int rowColumnCount = BoardBoundaries.rowColumnCount;
+        return InputGeneration.Factory.makeRandomInputGenerator(rowColumnCount, rowColumnCount);
     }
 
     public InputAlerter makeFieldExistsAlerter() {

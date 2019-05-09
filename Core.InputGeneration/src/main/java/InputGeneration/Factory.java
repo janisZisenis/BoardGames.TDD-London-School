@@ -1,6 +1,7 @@
 package InputGeneration;
 
 import InputGeneration.CompositeInputValidator.CompositeInputValidator;
+import InputGeneration.RandomInputGenerator.RandomInputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import InputGeneration.ValidInputGenerator.NullInputAlerter;
@@ -29,6 +30,10 @@ public abstract class Factory {
     public static InputProcessor makeValidatingInputGenerator(InputProcessor processor, InputValidator validator) {
         InputAlerter alerter = new NullInputAlerter();
         return makeAlertingInputProcessor(processor, validator, alerter);
+    }
+
+    public static InputGenerator makeRandomInputGenerator(int maxRow, int maxColumn) {
+        return new RandomInputGenerator(maxRow, maxColumn);
     }
 
 
