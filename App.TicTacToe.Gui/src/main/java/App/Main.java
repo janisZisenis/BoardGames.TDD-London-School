@@ -9,9 +9,9 @@ import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
-import GuiGaming.GuiPlayerImp.GuiPlayerImp;
-import GuiGaming.GuiTurn.GuiPlayer;
-import GuiGaming.GuiTurn.GuiTwoPlayerTurn;
+import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
+import GuiGaming.GuiMultiPlayer.GuiPlayer;
+import GuiGaming.GuiMultiPlayer.GuiTwoPlayerTurn;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -42,8 +42,8 @@ public class Main extends Application {
         gameOverRule.add(SequentialGaming.Factory.makeWinnerRule(evaluator));
         gameOverRule.add(new NumberOfMovesRule(board));
 
-        GuiPlayer john = new GuiPlayerImp(Mark.John, board);
-        GuiPlayer haley = new GuiPlayerImp(Mark.Haley, board);
+        GuiPlayer john = new GuiTicTacToePlayer(Mark.John, board);
+        GuiPlayer haley = new GuiTicTacToePlayer(Mark.Haley, board);
         GuiTwoPlayerTurn turn = new GuiTwoPlayerTurn(john, haley);
         FXBoardView boardView = new FXBoardView(mapper);
         //InputProcessor processor = new ValidatingInputProcessor(turn, alreadyMarkedValidator, alreadyMarkedAlerter);

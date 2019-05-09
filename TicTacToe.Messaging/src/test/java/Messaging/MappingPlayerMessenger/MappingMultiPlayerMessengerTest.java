@@ -1,4 +1,4 @@
-package Messaging.MappingMultiTurnMessenger;
+package Messaging.MappingPlayerMessenger;
 
 import Mapping.ObjectToStringMapperStub;
 import org.junit.jupiter.api.Test;

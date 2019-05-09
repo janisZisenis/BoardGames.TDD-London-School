@@ -1,4 +1,4 @@
-package Messaging.MappingMultiTurnMessenger;
+package Messaging.MappingPlayerMessenger;
 
 public class MessengerSpy implements Messenger {
 

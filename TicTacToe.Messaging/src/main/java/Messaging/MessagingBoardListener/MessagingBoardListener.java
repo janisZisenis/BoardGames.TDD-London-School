@@ -2,7 +2,7 @@ package Messaging.MessagingBoardListener;
 
 import Domain.Board.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
-import Messaging.MappingMultiTurnMessenger.Messenger;
+import Messaging.MappingPlayerMessenger.Messenger;
 
 public class MessagingBoardListener implements BoardListener {
 

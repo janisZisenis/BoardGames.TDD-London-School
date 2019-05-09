@@ -15,7 +15,7 @@ import Domain.InputFieldGeneratorAdapter.InputFieldGeneratorAdapter;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
-import Domain.Turn.TicTacToePlayer;
+import Domain.TicTacToePlayer.TicTacToePlayer;
 import InputGeneration.InputGenerator;
 import SequentialGaming.DelegatingGame.GameOverRule;
 import SequentialGaming.DelegatingGame.Player;
@@ -62,20 +62,20 @@ public abstract class Factory {
 
     public static Player makeHumanPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumanInputGenerator();
-        return makeTicTacToeTurn(m, board, generator, factory);
+        return makeTicTacToePlayer(m, board, generator, factory);
     }
 
     public static Player makeInvincableComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeInvincibleInputGenerator(board, m);
-        return makeTicTacToeTurn(m, board, generator, factory);
+        return makeTicTacToePlayer(m, board, generator, factory);
     }
 
-    public static Player makeHumbleComputerTurn(Mark m, Board board, IODeviceFactory factory) {
+    public static Player makeHumbleComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumbleInputGenerator();
-        return makeTicTacToeTurn(m, board, generator, factory);
+        return makeTicTacToePlayer(m, board, generator, factory);
     }
 
-    private static Player makeTicTacToeTurn(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
+    private static Player makeTicTacToePlayer(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
         generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
                 new FieldExistsValidator(),
                 factory.makeFieldExistsAlerter());

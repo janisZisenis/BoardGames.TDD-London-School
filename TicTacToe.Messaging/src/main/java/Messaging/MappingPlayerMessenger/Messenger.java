@@ -1,4 +1,4 @@
-package Messaging.MappingMultiTurnMessenger;
+package Messaging.MappingPlayerMessenger;
 
 public interface Messenger {
     void publish(String message);

@@ -1,4 +1,4 @@
-package Domain.Turn;
+package Domain.TicTacToePlayer;
 
 import Domain.Data.Field.Field;
 

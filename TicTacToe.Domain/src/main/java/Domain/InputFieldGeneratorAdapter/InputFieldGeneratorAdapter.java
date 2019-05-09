@@ -1,7 +1,7 @@
 package Domain.InputFieldGeneratorAdapter;
 
 import Domain.Data.Field.Field;
-import Domain.Turn.FieldGenerator;
+import Domain.TicTacToePlayer.FieldGenerator;
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
 

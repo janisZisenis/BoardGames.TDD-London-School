@@ -1,6 +1,6 @@
 package Messaging.GameLoopMessengerImp;
 
-import Messaging.MappingMultiTurnMessenger.MessengerSpy;
+import Messaging.MappingPlayerMessenger.MessengerSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

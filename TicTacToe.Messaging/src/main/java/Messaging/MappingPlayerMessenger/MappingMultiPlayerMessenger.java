@@ -1,4 +1,4 @@
-package Messaging.MappingMultiTurnMessenger;
+package Messaging.MappingPlayerMessenger;
 
 import Mapping.ObjectToStringMapper;
 import SequentialGaming.MultiPlayer.MultiPlayerMessenger;

@@ -5,7 +5,7 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import Domain.NumberOfMovesRule.MarkedFieldCountProvider;
-import Domain.Turn.MarkFieldService;
+import Domain.TicTacToePlayer.MarkFieldService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 

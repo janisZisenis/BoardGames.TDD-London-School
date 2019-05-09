@@ -49,18 +49,18 @@ public class Main extends Application {
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
         Player haley = Domain.Factory.makeInvincableComputerPlayer(Mark.Haley, board, factory);
 
-        DefaultObjectToStringMapper turnMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
-        turnMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);
-        turnMapper.register(haley, OnePlayerModeMessages.computerPlayerMessage);
-        MultiPlayerMessenger turnMessenger = Messaging.Factory.makeMappingMultiPlayerMessenger(turnMapper, fxMessenger);
+        DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
+        playerMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);
+        playerMapper.register(haley, OnePlayerModeMessages.computerPlayerMessage);
+        MultiPlayerMessenger multiPlayerMessenger = Messaging.Factory.makeMappingMultiPlayerMessenger(playerMapper, fxMessenger);
 
-        MultiPlayer turn = Factory.makeMessagingMultiPlayer(john, turnMessenger);
-        turn.add(haley);
+        MultiPlayer player = Factory.makeMessagingMultiPlayer(john, multiPlayerMessenger);
+        player.add(haley);
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
         Renderer renderer = new BoardRenderer(fxBoard, provider);
-        Game game = Factory.makeGame(rule, turn, renderer);
+        Game game = Factory.makeGame(rule, player, renderer);
 
         GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(board, fxMessenger);
         GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);

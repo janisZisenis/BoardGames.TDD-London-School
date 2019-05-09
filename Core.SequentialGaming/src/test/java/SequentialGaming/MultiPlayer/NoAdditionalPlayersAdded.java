@@ -35,15 +35,6 @@ public class NoAdditionalPlayersAdded {
         assertHasPlayedTimes(3);
     }
 
-    @Test
-    void IfGetsPlayedFourTimes_ShouldhavePlayedTheFirstFourTimes() {
-        sut.play();
-        sut.play();
-        sut.play();
-        sut.play();
-
-        assertHasPlayedTimes(4);
-    }
 
     private void assertHasPlayedTimes(int expected) {
         int actual = player.getPlayedTimes();
