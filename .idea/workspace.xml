@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/TicTacToe.Domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/TicTacToe.Domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsMarkedForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/GetMarkForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkFieldForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardMock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -108,7 +101,7 @@
         <counts>
           <entry key="dummy" value="4276" />
           <entry key="iml" value="58" />
-          <entry key="java" value="186207" />
+          <entry key="java" value="186245" />
           <entry key="txt" value="1" />
           <entry key="xml" value="171" />
         </counts>
@@ -116,7 +109,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="186207" />
+          <entry key="JAVA" value="186245" />
           <entry key="PLAIN_TEXT" value="4277" />
           <entry key="XML" value="171" />
         </counts>
@@ -126,7 +119,7 @@
           <entry key="class" value="13" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="5037" />
+          <entry key="java" value="5040" />
           <entry key="xml" value="44" />
         </counts>
       </usages-collector>
@@ -134,7 +127,7 @@
         <counts>
           <entry key="CLASS" value="13" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="5037" />
+          <entry key="JAVA" value="5040" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="44" />
         </counts>
@@ -152,11 +145,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -262,9 +282,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/MultiGuiPlayer/GuiPlayerSpy.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/HybridPlayer.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/PlayingInputProcessor.java" />
         <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/View/FXInputAlerter.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessorTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessor.java" />
@@ -306,13 +323,16 @@
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Data/Field/Field.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/GetMarkForwardingTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/BoardSpy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" />
       </list>
     </option>
   </component>
@@ -539,6 +559,17 @@
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+              <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -588,8 +619,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Domain" type="462c0819:PsiDirectoryNode" />
               <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
-              <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
+              <item name="HashingBoard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -606,7 +636,7 @@
     <property name="SearchEverywhereHistoryKey" value="markedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;MarkedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;markedFieldPro&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/MarkedFieldCountProviderStub.java&#10;Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557502077398" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557502208260" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -627,11 +657,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Domain.Board" />
       <recent name="Domain.Board.BoardDecorators" />
       <recent name="GuiGaming.TicTacToePresenter" />
       <recent name="GuiGaming" />
       <recent name="Domain.GameEvaluation.GameEvaluator.Api" />
-      <recent name="InputGeneration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming" />
@@ -641,11 +671,11 @@
       <recent name="$PROJECT_DIR$/TicTacToe.SequentialRendering/src/test/java/SequentialRendering" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Domain.Board.HashingBoard" />
       <recent name="GuiGaming.TicTacToeFacade" />
       <recent name="App" />
       <recent name="GuiGaming.HybridMultiPlayer" />
       <recent name="InputGeneration.RandomInputGenerator" />
-      <recent name="Domain.Data.Field" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Domain.Board.BoardDecorators" />
@@ -958,20 +988,11 @@
       <workItem from="1557422264213" duration="2928000" />
       <workItem from="1557464644977" duration="6303000" />
       <workItem from="1557472557385" duration="9427000" />
-      <workItem from="1557491896730" duration="4532000" />
+      <workItem from="1557491896730" duration="4644000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.10 at 17h 09m 23s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 10m 36s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 10m 45s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.10 at 17h 11m 05s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -993,12 +1014,22 @@
     <history-entry file="AllTest - 2019.05.10 at 17h 26m 59s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.10 at 17h 27m 28s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.10 at 17h 27m 55s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.10 at 17h 28m 02s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="480828000" />
+    <option name="totallyTimeSpent" value="480940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37679082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1199,20 +1230,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/InputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1589,21 +1606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding>
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1649,6 +1651,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
         </state>
       </provider>
     </entry>

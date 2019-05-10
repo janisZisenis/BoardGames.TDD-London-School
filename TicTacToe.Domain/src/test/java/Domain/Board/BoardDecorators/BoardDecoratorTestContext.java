@@ -1,14 +1,14 @@
 package Domain.Board.BoardDecorators;
 
 import Domain.Board.Board;
-import Domain.Board.BoardStub;
+import Domain.Board.BoardSpy;
 
-public class BoardDecoratorContext {
+public class BoardDecoratorTestContext {
 
-    private final BoardStub decoree;
+    private final BoardSpy decoree;
     private final Board sut;
 
-    public BoardDecoratorContext(Board sut, BoardStub decoree) {
+    public BoardDecoratorTestContext(Board sut, BoardSpy decoree) {
         this.sut = sut;
         this.decoree = decoree;
     }
@@ -17,7 +17,7 @@ public class BoardDecoratorContext {
         return sut;
     }
 
-    public BoardStub getDecoree() {
+    public BoardSpy getDecoree() {
         return decoree;
     }
 

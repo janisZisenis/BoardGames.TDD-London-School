@@ -3,7 +3,7 @@ package Domain.Board.BoardDecorators;
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
-import Domain.Board.BoardStub;
+import Domain.Board.BoardSpy;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,30 +15,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class BoardDecoratorTest {
 
-    private BoardStub decoree;
+    private BoardSpy decoree;
     private Board sut;
 
 
-    public static Stream<BoardDecoratorContext> makeBoards() {
+    public static Stream<BoardDecoratorTestContext> makeBoardDecoratorTestContexts() {
         return Stream.of(
                 makeListenableBoardContext(),
                 makeObservableBoardContext()
         );
     }
 
-    private static BoardDecoratorContext makeListenableBoardContext() {
-        BoardStub decoree = new BoardStub();
+    private static BoardDecoratorTestContext makeListenableBoardContext() {
+        BoardSpy decoree = new BoardSpy();
         ListenableBoard sut = new ListenableBoard(decoree);
-        return new BoardDecoratorContext(sut, decoree);
+        return new BoardDecoratorTestContext(sut, decoree);
     }
 
-    private static BoardDecoratorContext makeObservableBoardContext() {
-        BoardStub decoree = new BoardStub();
+    private static BoardDecoratorTestContext makeObservableBoardContext() {
+        BoardSpy decoree = new BoardSpy();
         ObservableBoard sut = new ObservableBoard(decoree);
-        return new BoardDecoratorContext(sut, decoree);
+        return new BoardDecoratorTestContext(sut, decoree);
     }
 
-    private void arrange(BoardDecoratorContext cxt) {
+    private void arrange(BoardDecoratorTestContext cxt) {
         this.decoree = cxt.getDecoree();
         this.sut = cxt.getSut();
     }
@@ -49,8 +49,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR0C0IsEmptyOnTheBoard_R0C0ShouldBeEmptyEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR0C0IsEmptyOnTheBoard_R0C0ShouldBeEmptyEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         makeFieldIsEmpty(new Field(0, 0));
 
@@ -60,8 +60,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR1C2IsEmptyOnTheBoard_R1C2ShouldBeEmptyEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR1C2IsEmptyOnTheBoard_R1C2ShouldBeEmptyEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         makeFieldIsEmpty(new Field(1, 2));
 
@@ -71,8 +71,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR0C0IsNotEmptyOnTheBoard_R0C0ShouldBeNotEmptyEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR0C0IsNotEmptyOnTheBoard_R0C0ShouldBeNotEmptyEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
 
         assertIsNotEmpty(new Field(0, 0));
@@ -97,8 +97,8 @@ public class BoardDecoratorTest {
 
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR0C0IsMarkedOnTheBoard_R0C0ShouldBeMarkedEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR0C0IsMarkedOnTheBoard_R0C0ShouldBeMarkedEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         makeFieldIsMarked(new Field(0, 0));
 
@@ -108,8 +108,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR1C2IsMarkedOnTheBoard_R1C2ShouldBeMarkedEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR1C2IsMarkedOnTheBoard_R1C2ShouldBeMarkedEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         makeFieldIsMarked(new Field(1, 2));
 
@@ -119,8 +119,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfFieldIsNotMarkedOnTheBoard_ItShouldBeNotMarkedEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfFieldIsNotMarkedOnTheBoard_ItShouldBeNotMarkedEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
 
         assertIsNotMarked(new Field(0, 0));
@@ -145,8 +145,8 @@ public class BoardDecoratorTest {
 
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfBoardHasHaleyOnR0C0_ItShouldHaveHaleyOnR0C0Either(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfBoardHasHaleyOnR0C0_ItShouldHaveHaleyOnR0C0Either(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         decoree.setMarkOnField(Mark.Haley, new Field(0, 0));
 
@@ -156,8 +156,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfBoardHasJohnOnR0C0_ItHaveJohnOnR0C0Either(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfBoardHasJohnOnR0C0_ItHaveJohnOnR0C0Either(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         decoree.setMarkOnField(Mark.John, new Field(0, 0));
 
@@ -167,8 +167,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfBoardHasJohnOnR1C2_ItHaveJohnOnR1C2Either(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfBoardHasJohnOnR1C2_ItHaveJohnOnR1C2Either(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         decoree.setMarkOnField(Mark.John, new Field(1, 2));
 
@@ -191,8 +191,8 @@ public class BoardDecoratorTest {
 
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfBoardHasNoMarkedFields_ItShouldHaveNoMarkedFieldsEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfBoardHasNoMarkedFields_ItShouldHaveNoMarkedFieldsEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         decoree.setMarkedFieldCount(0);
 
@@ -202,8 +202,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfBoardHasOneMarkedFields_ItShouldHaveOneMarkedFieldsEither(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfBoardHasOneMarkedFields_ItShouldHaveOneMarkedFieldsEither(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         decoree.setMarkedFieldCount(1);
 
@@ -219,8 +219,8 @@ public class BoardDecoratorTest {
 
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR0C0GetsMarked_ItShouldMarkR0C0OnTheBoard(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR0C0GetsMarked_ItShouldMarkR0C0OnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         sut.mark(new Field(0, 0), Mark.John);
 
@@ -228,8 +228,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfR1C2GetsMarked_ItShouldMarkR1C2OnTheBoard(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfR1C2GetsMarked_ItShouldMarkR1C2OnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         sut.mark(new Field(1, 2), Mark.John);
 
@@ -237,8 +237,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfJohnGetsMarked_ItShouldMarkJohnOnTheBoard(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfJohnGetsMarked_ItShouldMarkJohnOnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         sut.mark(new Field(0, 0), Mark.John);
 
@@ -246,8 +246,8 @@ public class BoardDecoratorTest {
     }
 
     @ParameterizedTest
-    @MethodSource("makeBoards")
-    void IfHaleyGetsMarked_ItShouldMarkHaleyOnTheBoard(BoardDecoratorContext cxt) {
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfHaleyGetsMarked_ItShouldMarkHaleyOnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
         sut.mark(new Field(0, 0), Mark.Haley);
 
