@@ -2,7 +2,7 @@ package Domain.GameEvaluation.GameEvaluator.Api;
 
 import Domain.Data.Line.Line;
 
-public class WinningLineProviderStub implements WinningLineProvider {
+public class WinningLineProviderStub extends WinningLineProviderDummy {
     private Line winning = null;
 
     public void setWinningLine(Line winning) {

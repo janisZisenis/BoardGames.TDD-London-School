@@ -5,7 +5,7 @@ import Domain.Data.Mark;
 
 import java.util.HashMap;
 
-public class MarkedFieldProviderStub implements MarkedFieldProvider {
+public class MarkedFieldProviderStub extends MarkedFieldProviderDummy {
 
     private HashMap<Field, Mark> marks = new HashMap<>();
 
@@ -14,10 +14,7 @@ public class MarkedFieldProviderStub implements MarkedFieldProvider {
     }
 
     public Mark getMarkAt(Field f) {
-        if(isMarked(f))
-            return marks.get(f);
-
-        throw new FieldIsNotMarked();
+        return marks.get(f);
     }
 
     public boolean isMarked(Field f) {

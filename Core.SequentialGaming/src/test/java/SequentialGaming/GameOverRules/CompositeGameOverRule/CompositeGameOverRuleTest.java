@@ -78,14 +78,14 @@ public class CompositeGameOverRuleTest {
     }
 
     private void makeTerminatingRuleIsAdded() {
-        GameOverRuleStub first = new GameOverRuleStub();
-        first.setIsGameOver(true);
-        sut.add(first);
+        GameOverRuleStub rule = new GameOverRuleStub();
+        rule.setIsGameOver(true);
+        sut.add(rule);
     }
 
     private void makeNotTerminatingRuleIsAdded() {
-        GameOverRuleStub first = new GameOverRuleStub();
-        first.setIsGameOver(false);
-        sut.add(first);
+        GameOverRuleStub rule = new GameOverRuleStub();
+        rule.setIsGameOver(false);
+        sut.add(rule);
     }
 }
