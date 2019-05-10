@@ -1,14 +1,14 @@
-package SequentialGaming.DelegatingGame;
+package SequentialGaming.GameFacade;
 
 import SequentialGaming.GameLoopImp.Game;
 
-public class DelegatingGame implements Game {
+public class GameFacade implements Game {
 
     private final GameOverRule rule;
     private final Player player;
     private final Renderer renderer;
 
-    public DelegatingGame(GameOverRule rule, Renderer renderer, Player player) {
+    public GameFacade(GameOverRule rule, Renderer renderer, Player player) {
         this.player = player;
         this.renderer = renderer;
         this.rule = rule;

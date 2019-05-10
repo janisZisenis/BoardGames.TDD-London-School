@@ -1,6 +1,6 @@
 package SequentialGaming.GameOverRules.CompositeGameOverRule;
 
-import SequentialGaming.DelegatingGame.GameOverRuleStub;
+import SequentialGaming.GameFacade.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

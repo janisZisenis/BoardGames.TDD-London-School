@@ -25,7 +25,7 @@ import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
-import SequentialGaming.DelegatingGame.GameOverRule;
+import SequentialGaming.GameFacade.GameOverRule;
 import View.FXBoardView;
 import View.FXInputAlerter;
 import javafx.application.Application;

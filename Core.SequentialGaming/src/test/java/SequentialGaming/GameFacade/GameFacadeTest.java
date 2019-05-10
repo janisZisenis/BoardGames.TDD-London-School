@@ -1,16 +1,16 @@
-package SequentialGaming.DelegatingGame;
+package SequentialGaming.GameFacade;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DelegatingGameTest {
+public class GameFacadeTest {
 
     private PlayerSpy player = new PlayerSpy();
     private RendererSpy renderer = new RendererSpy();
     private GameOverRuleStub rule = new GameOverRuleStub();
-    private DelegatingGame sut = new DelegatingGame(rule, renderer, player);
+    private GameFacade sut = new GameFacade(rule, renderer, player);
 
     @Test
     void IfGameOverRuleIsOver_ShouldBeOverToo() {

@@ -1,7 +1,7 @@
 package Domain.InputGeneration.InputValidators.GameOverValidator;
 
 import InputGeneration.Input.Input;
-import SequentialGaming.DelegatingGame.GameOverRuleStub;
+import SequentialGaming.GameFacade.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

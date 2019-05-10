@@ -1,4 +1,4 @@
-package SequentialGaming.DelegatingGame;
+package SequentialGaming.GameFacade;
 
 public class GameOverRuleStub implements GameOverRule {
 

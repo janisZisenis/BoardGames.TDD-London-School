@@ -1,6 +1,6 @@
 package SequentialGaming.MultiPlayer;
 
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.Player;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,6 +1,6 @@
 package SequentialGaming.MultiPlayer;
 
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.Player;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package SequentialGaming.MultiPlayer;
 
-import SequentialGaming.DelegatingGame.PlayerSpy;
+import SequentialGaming.GameFacade.PlayerSpy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

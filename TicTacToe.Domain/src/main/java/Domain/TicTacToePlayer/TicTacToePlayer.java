@@ -2,7 +2,7 @@ package Domain.TicTacToePlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.Player;
 
 public class TicTacToePlayer implements Player {
 

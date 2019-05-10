@@ -17,8 +17,8 @@ import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmpty
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.TicTacToePlayer.TicTacToePlayer;
 import InputGeneration.InputGenerator;
-import SequentialGaming.DelegatingGame.GameOverRule;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.GameOverRule;
+import SequentialGaming.GameFacade.Player;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 
 public abstract class Factory {

@@ -1,6 +1,6 @@
 package SequentialGaming.GameOverRules.CompositeGameOverRule;
 
-import SequentialGaming.DelegatingGame.GameOverRule;
+import SequentialGaming.GameFacade.GameOverRule;
 
 import java.util.LinkedList;
 
