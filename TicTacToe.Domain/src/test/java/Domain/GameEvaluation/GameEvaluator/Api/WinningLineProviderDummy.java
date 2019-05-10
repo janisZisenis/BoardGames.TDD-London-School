@@ -1,7 +1,6 @@
-package GuiGaming.TicTacToeFacade;
+package Domain.GameEvaluation.GameEvaluator.Api;
 
 import Domain.Data.Line.Line;
-import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 
 public class WinningLineProviderDummy implements WinningLineProvider {
 

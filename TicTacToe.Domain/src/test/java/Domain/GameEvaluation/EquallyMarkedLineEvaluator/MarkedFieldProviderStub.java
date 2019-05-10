@@ -5,7 +5,7 @@ import Domain.Data.Mark;
 
 import java.util.HashMap;
 
-public class MarkedFieldProviderStub implements MarkedFieldProvider {
+public class MarkedFieldProviderStub extends MarkedFieldProviderDummy {
 
     private HashMap<Field, Mark> marks = new HashMap<>();
 

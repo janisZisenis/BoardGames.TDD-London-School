@@ -1,9 +1,8 @@
 package InputGeneration;
 
 import InputGeneration.Input.Input;
-import InputGeneration.InputProcessor;
 
-public class InputProcessorSpy implements InputProcessor {
+public class InputProcessorSpy extends InputProcessorDummy {
 
     private Input processed = null;
     private boolean didProcess = false;

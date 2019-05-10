@@ -1,5 +1,7 @@
 package GuiGaming.TicTacToeFacade;
 
+import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProviderDummy;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProviderDummy;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessorSpy;
 import org.junit.jupiter.api.Test;

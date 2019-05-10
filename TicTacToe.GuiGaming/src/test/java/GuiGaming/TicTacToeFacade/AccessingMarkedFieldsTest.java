@@ -3,6 +3,7 @@ package GuiGaming.TicTacToeFacade;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProviderStub;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProviderDummy;
 import InputGeneration.InputProcessorSpy;
 import org.junit.jupiter.api.Test;
 
