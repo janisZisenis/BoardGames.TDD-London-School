@@ -1,11 +1,11 @@
 package View;
 
-import App.BoardViewDelegate;
+import GuiGaming.TicTacToePresenter.Api.BoardViewDelegate;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import InputGeneration.InputProcessor;
+import GuiGaming.TicTacToePresenter.BoardView;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -17,7 +17,7 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane {
+public class FXBoardView extends Pane implements BoardView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
     private final HashMap<FXTile, Field> fields = new HashMap<>();
@@ -78,38 +78,45 @@ public class FXBoardView extends Pane {
         int row = f.getRow();
         int col = f.getColumn();
 
-        delegate.onTileClicked(row, col);
+        delegate.onBoardClicked(row, col);
     }
 
 
-    public void setFieldMark(Field f, Mark m) {
-        FXTile tile = tiles.get(f);
-        String text = mapper.map(m);
+
+    public void setField(Field field, Mark mark) {
+        String text = mapper.map(mark);
+        setFieldText(field, text);
+    }
+
+    public void clear(Field field) {
+        setFieldText(field, "");
+    }
+
+    private void setFieldText(Field field, String text) {
+        FXTile tile = tiles.get(field);
         tile.setText(text);
     }
 
-    public void showWinningLine(Line line) {
-        highlight(line);
+    public void highLight(Line line) {
+        highlightLine(line);
         lowlightOtherFields(line);
     }
 
-    private void highlight(Line line) {
-        highlightTile(line.getFirst());
-        highlightTile(line.getSecond());
-        highlightTile(line.getThird());
+    private void highlightLine(Line line) {
+        highlightField(line.getFirst());
+        highlightField(line.getSecond());
+        highlightField(line.getThird());
     }
 
-    private void highlightTile(Field f) {
+    private void highlightField(Field f) {
         FXTile tile = tiles.get(f);
         tile.highlight();
     }
 
     private void lowlightOtherFields(Line line) {
-        for(Field f : tiles.keySet()) {
-            if(!lineContains(line, f)) {
+        for(Field f : tiles.keySet())
+            if(!lineContains(line, f))
                 lowlightField(f);
-            }
-        }
     }
 
     private boolean lineContains(Line line, Field f) {

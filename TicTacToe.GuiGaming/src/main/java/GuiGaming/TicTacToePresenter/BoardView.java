@@ -5,7 +5,7 @@ import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 
 public interface BoardView {
-    void setField(Field field, Mark john);
+    void setField(Field field, Mark mark);
     void clear(Field field);
-    void highlightLine(Line line);
+    void highLight(Line line);
 }

@@ -1,11 +1,13 @@
 package GuiGaming.TicTacToePresenter;
 
+import Domain.Board.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
+import GuiGaming.TicTacToePresenter.Api.BoardViewDelegate;
 import InputGeneration.Input.Input;
 
-public class TicTacToePresenter {
+public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
 
     private final TicTacToe tictactoe;
     private final BoardView view;
@@ -29,7 +31,7 @@ public class TicTacToePresenter {
     private void showWinningLineIfProvided() {
         if(tictactoe.hasWinner()) {
             Line line = tictactoe.getWinningLine();
-            view.highlightLine(line);
+            view.highLight(line);
         }
     }
 
@@ -52,4 +54,5 @@ public class TicTacToePresenter {
     private void clear(Field field) {
         view.clear(field);
     }
+
 }

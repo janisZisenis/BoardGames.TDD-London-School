@@ -17,8 +17,9 @@ import GuiGaming.GuiPlayer;
 import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
 import GuiGaming.MultiGuiPlayer.MultiGuiPlayer;
 import GuiGaming.PlayingInputProcessor.PlayingInputProcessor;
-import GuiGaming.TicTacToePresenter.TicTacToe;
 import GuiGaming.TicTacToeFacade.TicTacToeFacade;
+import GuiGaming.TicTacToePresenter.TicTacToe;
+import GuiGaming.TicTacToePresenter.TicTacToePresenter;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
@@ -72,9 +73,8 @@ public class Main extends Application {
 
         MarkToXOMapper mapper = new MarkToXOMapper();
         FXBoardView view = new FXBoardView(mapper);
-        TicTacToePresenter presenter = new TicTacToePresenter(view, ticTacToe);
+        TicTacToePresenter presenter = new TicTacToePresenter(ticTacToe, view);
         view.setDelegate(presenter);
-
         board.setListener(presenter);
 
         primaryStage.setTitle("TicTacToe");

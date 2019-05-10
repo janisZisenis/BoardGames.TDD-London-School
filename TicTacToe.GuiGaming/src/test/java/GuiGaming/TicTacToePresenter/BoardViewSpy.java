@@ -44,7 +44,7 @@ public class BoardViewSpy implements BoardView {
     public Line getHighlighted() {
         return highlighted;
     }
-    public void highlightLine(Line line) {
+    public void highLight(Line line) {
         didHighlight = true;
         highlighted = line;
     }
