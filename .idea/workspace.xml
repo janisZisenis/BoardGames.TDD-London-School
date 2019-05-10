@@ -860,16 +860,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NoAdditionalPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TicTacToe.GuiGaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GuiGaming.HybridMultiPlayer.*" />
+          <option name="PATTERN" value="GuiGaming.MultiGuiPlayer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="GuiGaming.HybridMultiPlayer" />
-      <option name="MAIN_CLASS_NAME" value="GuiGaming.HybridMultiPlayer.NoAdditionalPlayersAdded" />
+      <option name="PACKAGE_NAME" value="GuiGaming.MultiGuiPlayer" />
+      <option name="MAIN_CLASS_NAME" value="GuiGaming.MultiGuiPlayer.NoAdditionalGuiPlayersAdded" />
       <option name="METHOD_NAME" value="IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -938,12 +938,12 @@
       <module name="TicTacToe.GuiGaming" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GuiGaming.HybridMultiPlayer.*" />
+          <option name="PATTERN" value="GuiGaming.MultiGuiPlayer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="GuiGaming.HybridMultiPlayer" />
-      <option name="MAIN_CLASS_NAME" value="GuiGaming.HybridMultiPlayer.TwoAdditionalGuiPlayersAdded" />
+      <option name="PACKAGE_NAME" value="GuiGaming.MultiGuiPlayer" />
+      <option name="MAIN_CLASS_NAME" value="GuiGaming.MultiGuiPlayer.TwoAdditionalGuiPlayersAdded" />
       <option name="METHOD_NAME" value="IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -962,13 +962,13 @@
       <item itemvalue="JUnit.TicTacToe.MessagingTest" />
       <item itemvalue="Application.App.TicTacToe.Console" />
       <item itemvalue="Application.App.TicTacToe.Gui" />
-      <item itemvalue="JUnit.NoAdditionalPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" />
+      <item itemvalue="JUnit.NoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" />
       <item itemvalue="JUnit.TwoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TwoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
-        <item itemvalue="JUnit.NoAdditionalPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" />
+        <item itemvalue="JUnit.NoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstThreeTimes" />
         <item itemvalue="Application.App.TicTacToe.Console" />
         <item itemvalue="Application.App.TicTacToe.Gui" />
         <item itemvalue="JUnit.TicTacToe.MessagingTest" />

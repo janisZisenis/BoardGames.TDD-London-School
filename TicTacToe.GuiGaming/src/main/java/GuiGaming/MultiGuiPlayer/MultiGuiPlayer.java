@@ -1,4 +1,4 @@
-package GuiGaming.HybridMultiPlayer;
+package GuiGaming.MultiGuiPlayer;
 
 import Domain.Data.Field.Field;
 import GuiGaming.GuiMultiPlayer.GuiPlayer;
@@ -6,13 +6,13 @@ import GuiGaming.GuiMultiPlayer.GuiPlayer;
 import java.util.LinkedList;
 import java.util.List;
 
-public class HybridMultiPlayer {
+public class MultiGuiPlayer implements GuiPlayer {
 
     private final LinkedList<GuiPlayer> players = new LinkedList<>();
     private final CyclicGuiPlayerIterator it = new CyclicGuiPlayerIterator(players);
 
 
-    public HybridMultiPlayer(GuiPlayer first) {
+    public MultiGuiPlayer(GuiPlayer first) {
         players.add(first);
     }
 
