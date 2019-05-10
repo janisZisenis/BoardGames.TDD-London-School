@@ -4,17 +4,17 @@ import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProviderStub;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProviderDummy;
-import InputGeneration.InputProcessorSpy;
+import InputGeneration.InputProcessorDummy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AccessingMarkedFieldsTest {
 
-    private WinningLineProviderDummy winningLineProvider = new WinningLineProviderDummy();
     private MarkedFieldProviderStub markedFieldProvider = new MarkedFieldProviderStub();
-    private InputProcessorSpy processor = new InputProcessorSpy();
-    private TicTacToeFacade sut = new TicTacToeFacade(winningLineProvider, processor, markedFieldProvider);
+    private WinningLineProviderDummy winningLineProvider = new WinningLineProviderDummy();
+    private InputProcessorDummy processor = new InputProcessorDummy();
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, winningLineProvider, processor);
 
     @Test
     void IfFieldR0C0IsMarked_FieldR0C0ShouldBeMarkedEither() {

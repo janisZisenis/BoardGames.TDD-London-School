@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProcessingTheInputTest {
 
+    private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
     private WinningLineProviderDummy provider = new WinningLineProviderDummy();
     private InputProcessorSpy processor = new InputProcessorSpy();
-    private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
-    private TicTacToeFacade sut = new TicTacToeFacade(provider, processor, markedFieldProvider);
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, provider, processor);
 
     @Test
     void IfInputR0C0IsProcessed_ShouldProcessInputR0C0Either() {

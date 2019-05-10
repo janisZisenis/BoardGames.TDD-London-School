@@ -11,14 +11,13 @@ import InputGeneration.InputProcessor;
 public class TicTacToeFacade {
 
     private final WinningLineProvider winningLineProvider;
-    private final InputProcessor processor;
     private final MarkedFieldProvider markedFieldProvider;
+    private final InputProcessor processor;
 
-    public TicTacToeFacade(WinningLineProvider winningLineProvider,
-                           InputProcessor processor,
-                           MarkedFieldProvider markedFieldProvider) {
-        this.winningLineProvider = winningLineProvider;
+    public TicTacToeFacade(MarkedFieldProvider markedFieldProvider, WinningLineProvider winningLineProvider,
+                           InputProcessor processor) {
         this.markedFieldProvider = markedFieldProvider;
+        this.winningLineProvider = winningLineProvider;
         this.processor = processor;
     }
 

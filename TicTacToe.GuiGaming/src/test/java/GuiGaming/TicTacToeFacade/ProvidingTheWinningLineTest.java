@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ProvidingTheWinningLineTest {
 
+    private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
     private WinningLineProviderStub provider = new WinningLineProviderStub();
     private InputProcessorDummy processor = new InputProcessorDummy();
-    private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
-    private TicTacToeFacade sut = new TicTacToeFacade(provider, processor, markedFieldProvider);
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, provider, processor);
 
     @Test
     void IfWinningLineIsProvided_ShouldHaveAWinner() {

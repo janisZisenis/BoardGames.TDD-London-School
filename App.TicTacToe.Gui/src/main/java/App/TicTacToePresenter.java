@@ -17,6 +17,7 @@ import GuiGaming.GuiPlayer;
 import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
 import GuiGaming.MultiGuiPlayer.MultiGuiPlayer;
 import GuiGaming.PlayingInputProcessor.PlayingInputProcessor;
+import GuiGaming.TicTacToeFacade.TicTacToeFacade;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -29,15 +30,13 @@ import View.FXInputAlerter;
 public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
 
     private final FXBoardView view;
-    private final Board board;
-    private final InputProcessor processor;
-    private final WinningLineProvider provider;
+    private final TicTacToeFacade tictactoe;
 
     public void onFieldUpdated(Field field) {
         updateField(field);
 
-        if(provider.hasWinningLine()) {
-            Line line = provider.getWinningLine();
+        if(tictactoe.hasWinner()) {
+            Line line = tictactoe.getWinningLine();
             showWinningLine(line);
         }
 
@@ -48,25 +47,29 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
     }
 
     private void updateField(Field field) {
-        if(board.isMarked(field)) {
-            Mark m = board.getMarkAt(field);
+        if(tictactoe.isMarked(field)) {
+            Mark m = tictactoe.getMarkAt(field);
             view.setFieldMark(field, m);
         }
     }
 
     public TicTacToePresenter(FXBoardView view, Board board) {
-        this.board = board;
         this.view = view;
-        this.processor = makeProcessor();
-        this.provider = makeEvaluator();
+        this.tictactoe = makeTicTacToe(board);
     }
 
     public void onTileClicked(int row, int column) {
         Input input = new Input(row, column);
-        processor.process(input);
+        tictactoe.process(input);
     }
 
-    private InputProcessor makeProcessor() {
+    private TicTacToeFacade makeTicTacToe(Board board) {
+        InputProcessor processor = makeProcessor(board);
+        WinningLineProvider provider = makeEvaluator(board);
+        return new TicTacToeFacade(board, provider, processor);
+    }
+
+    private InputProcessor makeProcessor(Board board) {
         GuiPlayer first = new GuiTicTacToePlayer(Mark.John, board);
         GuiPlayer  second = new GuiTicTacToePlayer(Mark.Haley, board);
 
@@ -85,7 +88,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
         return processor;
     }
 
-    private WinningLineProvider makeEvaluator() {
+    private WinningLineProvider makeEvaluator(Board board) {
         LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
         LineProvider lineProvider = new HumbleLineProvider();
         return new GameEvaluator(lineProvider, lineEvaluator);
