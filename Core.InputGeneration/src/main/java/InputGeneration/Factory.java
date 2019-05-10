@@ -27,7 +27,7 @@ public abstract class Factory {
         return new ValidInputProcessor(processor, validator, alerter);
     }
 
-    public static InputProcessor makeValidatingInputGenerator(InputProcessor processor, InputValidator validator) {
+    public static InputProcessor makeValidatingInputProcessor(InputProcessor processor, InputValidator validator) {
         InputAlerter alerter = new NullInputAlerter();
         return makeAlertingInputProcessor(processor, validator, alerter);
     }

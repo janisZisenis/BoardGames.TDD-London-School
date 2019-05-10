@@ -3,7 +3,7 @@ package GuiGaming.GuiTicTacToePlayer;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.TicTacToePlayer.MarkFieldService;
-import GuiGaming.GuiMultiPlayer.GuiPlayer;
+import GuiGaming.GuiPlayer;
 
 public class GuiTicTacToePlayer implements GuiPlayer {
 

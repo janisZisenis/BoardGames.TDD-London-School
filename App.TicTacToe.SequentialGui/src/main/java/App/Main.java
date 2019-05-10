@@ -47,7 +47,7 @@ public class Main extends Application {
         FXIODeviceFactory factory = new FXIODeviceFactory();
         FXIODeviceFactory.setHumanInputGenerator(fxGenerator);
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
-        Player haley = Domain.Factory.makeInvincableComputerPlayer(Mark.Haley, board, factory);
+        Player haley = Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory);
 
         DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
         playerMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);

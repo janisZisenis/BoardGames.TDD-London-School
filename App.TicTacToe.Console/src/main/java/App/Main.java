@@ -37,7 +37,7 @@ public class Main {
 
         ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
-        Player haley = Domain.Factory.makeInvincableComputerPlayer(Mark.Haley, board, factory);
+        Player haley = Domain.Factory.makeHumbleComputerPlayer(Mark.Haley, board, factory);
 
         DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
         playerMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);

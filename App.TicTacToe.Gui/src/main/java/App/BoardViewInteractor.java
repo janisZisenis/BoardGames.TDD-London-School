@@ -6,19 +6,22 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import InputGeneration.Input.Input;
+import InputGeneration.InputProcessor;
 
 public class BoardViewInteractor {
 
     private final MarkedFieldProvider fieldProvider;
     private final WinningLineProvider lineProvider;
+    private final InputProcessor processor;
 
-    public BoardViewInteractor(MarkedFieldProvider fieldProvider, WinningLineProvider lineProvider) {
+    public BoardViewInteractor(InputProcessor processor, MarkedFieldProvider fieldProvider, WinningLineProvider lineProvider) {
         this.fieldProvider = fieldProvider;
         this.lineProvider = lineProvider;
+        this.processor = processor;
     }
 
     public void process(Input input) {
-
+        processor.process(input);
     }
 
     public boolean hasWinningLine() {

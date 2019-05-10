@@ -62,27 +62,43 @@ public abstract class Factory {
 
     public static Player makeHumanPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumanInputGenerator();
+        generator = makeAlertingInputGenerator(generator, board, factory);
         return makeTicTacToePlayer(m, board, generator, factory);
     }
 
-    public static Player makeInvincableComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
+    public static InputGenerator makeAlertingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
+        InputGenerator alerting = InputGeneration.Factory.makeAlertingInputGenerator(generator,
+                new FieldExistsValidator(),
+                factory.makeFieldExistsAlerter());
+        alerting = InputGeneration.Factory.makeAlertingInputGenerator(alerting,
+                new FieldIsEmptyValidator(board),
+                factory.makeFieldIsEmptyAlerter());
+        return alerting;
+    }
+
+    public static Player makeInvincibleComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeInvincibleInputGenerator(board, m);
+        generator = makeValidatingInputGenerator(generator, board, factory);
+
         return makeTicTacToePlayer(m, board, generator, factory);
     }
 
     public static Player makeHumbleComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumbleInputGenerator();
+        generator = makeValidatingInputGenerator(generator, board, factory);
+
         return makeTicTacToePlayer(m, board, generator, factory);
     }
 
-    private static Player makeTicTacToePlayer(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
-        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
-                new FieldExistsValidator(),
-                factory.makeFieldExistsAlerter());
-        generator = InputGeneration.Factory.makeAlertingInputGenerator(generator,
-                new FieldIsEmptyValidator(board),
-                factory.makeFieldIsEmptyAlerter());
+    private static InputGenerator makeValidatingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
+        InputGenerator validating = InputGeneration.Factory.makeValidatingInputGenerator(generator,
+                new FieldExistsValidator());
+        validating = InputGeneration.Factory.makeValidatingInputGenerator(validating,
+                new FieldIsEmptyValidator(board));
+        return validating;
+    }
 
+    private static Player makeTicTacToePlayer(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
         InputFieldGeneratorAdapter generatorAdapter = new InputFieldGeneratorAdapter(generator);
         return new TicTacToePlayer(m, board, generatorAdapter);
     }

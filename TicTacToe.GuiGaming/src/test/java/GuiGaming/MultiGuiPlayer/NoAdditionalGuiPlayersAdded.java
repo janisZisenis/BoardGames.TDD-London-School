@@ -1,7 +1,6 @@
 package GuiGaming.MultiGuiPlayer;
 
 import Domain.Data.Field.Field;
-import GuiGaming.GuiMultiPlayer.GuiPlayerSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
