@@ -5,10 +5,11 @@ import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import GuiGaming.TicTacToePresenter.TicTacToe;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
 
-public class TicTacToeFacade {
+public class TicTacToeFacade implements TicTacToe {
 
     private final WinningLineProvider winningLineProvider;
     private final MarkedFieldProvider markedFieldProvider;

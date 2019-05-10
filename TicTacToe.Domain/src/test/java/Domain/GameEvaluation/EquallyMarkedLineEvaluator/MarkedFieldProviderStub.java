@@ -14,10 +14,7 @@ public class MarkedFieldProviderStub extends MarkedFieldProviderDummy {
     }
 
     public Mark getMarkAt(Field f) {
-        if(isMarked(f))
-            return marks.get(f);
-
-        throw new FieldIsNotMarked();
+        return marks.get(f);
     }
 
     public boolean isMarked(Field f) {
