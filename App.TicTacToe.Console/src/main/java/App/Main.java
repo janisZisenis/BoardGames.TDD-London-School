@@ -1,7 +1,7 @@
 package App;
 
 
-import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Mapping.MarkToStringMappers.MarkToXOMapper;

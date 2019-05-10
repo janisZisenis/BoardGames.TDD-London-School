@@ -2,7 +2,7 @@ package Domain;
 
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
-import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;

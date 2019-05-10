@@ -19,6 +19,7 @@ public class Field {
     }
 
     public boolean equals(Object o) {
+
         return isAnInput(o) && hasSameRowAndColumn((Field) o);
     }
 

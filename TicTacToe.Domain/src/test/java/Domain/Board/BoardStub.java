@@ -13,6 +13,9 @@ public class BoardStub extends BoardDummy {
     private int count;
     private HashMap<Field, Mark> marks = new HashMap<>();
 
+    private Field markedField;
+    private Mark mark;
+
     public void setEmptyFields(Field[] empty) {
         this.empty = empty;
     }
@@ -44,4 +47,17 @@ public class BoardStub extends BoardDummy {
     public Mark getMarkAt(Field f) {
         return marks.get(f);
     }
+
+
+    public Field getMarkedField() {
+        return markedField;
+    }
+    public Mark getMark() {
+        return mark;
+    }
+    public void mark(Field f, Mark m) {
+        markedField = f;
+        mark = m;
+    }
+
 }
