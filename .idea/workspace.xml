@@ -2,88 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
+      <change afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/App/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Gui/target/classes/App/HybridPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Gui/target/classes/App/HybridPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Gui/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Gui/target/classes/App/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/src/main/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.SequentialGui/target/classes/App/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/DelegatingGame/DelegatingGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/DelegatingGame/GameOverRule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/DelegatingGame/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/DelegatingGame/Renderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/GameOverRules/WinnerRule/WinnerRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/GameOverRules/WinnerRule/WinnerRule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/MultiPlayer/MultiPlayer$CyclicPlayerIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/MultiPlayer/MultiPlayer$CyclicPlayerIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/MultiPlayer/MultiPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/classes/SequentialGaming/MultiPlayer/MultiPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/DelegatingGame/DelegatingGameTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/DelegatingGame/GameOverRuleStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/DelegatingGame/PlayerDummy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/DelegatingGame/PlayerSpy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/DelegatingGame/RendererSpy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/MultiPlayerMessagingShunt.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/MultiPlayerMessagingShunt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/NoAdditionalPlayersAdded.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/NoAdditionalPlayersAdded.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/OneAdditionalPlayersAdded.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/OneAdditionalPlayersAdded.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/TwoAdditionalPlayersAdded.class" beforeDir="false" afterPath="$PROJECT_DIR$/Core.SequentialGaming/target/test-classes/SequentialGaming/MultiPlayer/TwoAdditionalPlayersAdded.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/ListenableBoard/BoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/ListenableBoard/ListenableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/ObservableBoard/ObservableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/ObservableBoard/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Data/Field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Data/Field/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/BoardListenerIsSetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListenerIsSetTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/BoardListenerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListenerSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/ForwardingTests/FieldIsMarkedForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/ForwardingTests/GetMarkForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ListenableBoard/NotifyingListenerOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/NotifyingListenerOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ForwardingTests/FieldIsMarkedForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsMarkedForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ForwardingTests/GetMarkForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/GetMarkForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ForwardingTests/MarkFieldForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkFieldForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/NotifyBoardObserverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ObserverSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObserverSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/ObservableBoard/ObservingOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Board/ListenableBoard/BoardListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Board/ListenableBoard/ListenableBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Board/ObservableBoard/ObservableBoard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Board/ObservableBoard/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Data/Field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Data/Field/Field.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/NumberOfMovesRule/NumberOfMovesRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/NumberOfMovesRule/NumberOfMovesRule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/TicTacToePlayer/TicTacToePlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/classes/Domain/TicTacToePlayer/TicTacToePlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/BoardListenerIsSetTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/BoardListenerSpy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/ForwardingTests/FieldIsMarkedForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/ForwardingTests/GetMarkForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/ForwardingTests/MarkedFieldCountForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ListenableBoard/NotifyingListenerOrderShuntTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ForwardingTests/FieldIsMarkedForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ForwardingTests/GetMarkForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ForwardingTests/MarkFieldForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ForwardingTests/MarkedFieldCountForwardingTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/NotifyBoardObserverTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ObserverSpy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/ObservableBoard/ObservingOrderShuntTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/TicTacToePresenter/TicTacToePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/TicTacToePresenter/TicTacToePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/target/classes/GuiGaming/TicTacToePresenter/TicTacToePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.GuiGaming/target/classes/GuiGaming/TicTacToePresenter/TicTacToePresenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/MessagingBoardListener/MessagingBoardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Messaging/target/classes/Messaging/MessagingBoardListener/MessagingBoardListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.SequentialRendering/target/classes/SequentialRendering/BoardRenderer/BoardRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.SequentialRendering/target/classes/SequentialRendering/BoardRenderer/BoardRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/TicTacToe.Domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/TicTacToe.Domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/FieldIsMarkedForwardingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/GetMarkForwardingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkFieldForwardingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -178,19 +106,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="4258" />
+          <entry key="dummy" value="4276" />
           <entry key="iml" value="58" />
-          <entry key="java" value="185326" />
+          <entry key="java" value="186207" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="164" />
+          <entry key="xml" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="185326" />
-          <entry key="PLAIN_TEXT" value="4259" />
-          <entry key="XML" value="164" />
+          <entry key="JAVA" value="186207" />
+          <entry key="PLAIN_TEXT" value="4277" />
+          <entry key="XML" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -198,17 +126,17 @@
           <entry key="class" value="13" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="5034" />
-          <entry key="xml" value="43" />
+          <entry key="java" value="5037" />
+          <entry key="xml" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="13" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="5034" />
+          <entry key="JAVA" value="5037" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="43" />
+          <entry key="XML" value="44" />
         </counts>
       </usages-collector>
     </session>
@@ -216,69 +144,35 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="141" selection-start-line="141" selection-end-line="146" selection-end-column="5" />
-              <folding>
-                <element signature="method#IfR1C2IsEmptyOnTheBoard_R1C2ShouldBeEmptyEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertIsEmpty#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertIsNotEmpty#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfR0C0IsMarkedOnTheBoard_R0C0ShouldBeMarkedEither#1;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertIsMarked#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertIsNotMarked#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#makeFieldIsMarked#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfBoardHasHaleyOnField_ItShouldHaveHaleyOnFieldEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfBoardHasJohnOnField_ItHaveJohnOnFieldEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfBoardHasJohnOnR0C0_ItHaveJohnOnR0C0Either#1;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertHasHaleyOn#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertHasJohnOn#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfBoardHas0MarkedFields_ItShouldHave0MarkedFieldsEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#IfBoardHas1MarkedFields_ItShouldHave1MarkedFieldsEither#0;class#FieldIsEmptyForwardingTest#0" />
-                <element signature="method#assertMarkedFieldCountIs#0;class#FieldIsEmptyForwardingTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-              <folding>
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1058#1059#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-              <folding>
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="171">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -368,8 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/GuiTicTacToePlayer/GuiTicTacToePlayer.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/GuiPlayer.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/MultiGuiPlayer/GuiPlayerSpy.java" />
         <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/HybridPlayer.java" />
         <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/PlayingInputProcessor.java" />
@@ -381,7 +273,6 @@
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/GameOverValidator/GameOverValidator.java" />
         <option value="$PROJECT_DIR$/Core.SequentialGaming/src/test/java/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidatorTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.java" />
         <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" />
@@ -419,6 +310,9 @@
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" />
       </list>
     </option>
   </component>
@@ -695,31 +589,6 @@
               <item name="Domain" type="462c0819:PsiDirectoryNode" />
               <item name="Board" type="462c0819:PsiDirectoryNode" />
               <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
-              <item name="ListenableBoard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
-              <item name="ListenableBoard" type="462c0819:PsiDirectoryNode" />
-              <item name="ForwardingTests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="Board" type="462c0819:PsiDirectoryNode" />
-              <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
               <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -737,7 +606,7 @@
     <property name="SearchEverywhereHistoryKey" value="markedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;MarkedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;markedFieldPro&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/MarkedFieldCountProviderStub.java&#10;Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557501076745" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557502077398" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -758,11 +627,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Domain.Board.BoardDecorators" />
       <recent name="GuiGaming.TicTacToePresenter" />
       <recent name="GuiGaming" />
       <recent name="Domain.GameEvaluation.GameEvaluator.Api" />
       <recent name="InputGeneration" />
-      <recent name="Domain.GameEvaluation.EquallyMarkedLineEvaluator" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming" />
@@ -779,11 +648,11 @@
       <recent name="Domain.Data.Field" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="Domain.Board.BoardDecorators" />
       <recent name="GuiGaming.TicTacToePresenter" />
       <recent name="GuiGaming.TicTacToeFacade" />
       <recent name="Domain.InputGeneration.InputValidators.GameOverValidator" />
       <recent name="GuiGaming.PlayingInputProcessor" />
-      <recent name="GuiGaming.HybridMultiPlayer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1089,50 +958,49 @@
       <workItem from="1557422264213" duration="2928000" />
       <workItem from="1557464644977" duration="6303000" />
       <workItem from="1557472557385" duration="9427000" />
-      <workItem from="1557491896730" duration="3409000" />
+      <workItem from="1557491896730" duration="4532000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.10 at 16h 58m 11s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 09m 23s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 16h 58m 34s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 10m 36s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 16h 58m 47s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 10m 45s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 16h 59m 06s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 11m 05s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 16h 59m 40s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 11m 11s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 16h 59m 46s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 11m 23s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 08m 06s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 23m 42s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 08m 16s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 25m 49s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 08m 22s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 26m 01s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 08m 29s.xml">
+    <history-entry file="AllTest - 2019.05.10 at 17h 26m 59s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479705000" />
+    <option name="totallyTimeSpent" value="480828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37679082" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37679082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1141,7 +1009,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4433121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1331,7 +1199,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/PlayingInputProcessor.java" />
     <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/InputProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1383,13 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -1731,24 +1591,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="51" column="32" lean-forward="true" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        <state relative-caret-position="418">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding>
             <element signature="e#626#627#0" expanded="true" />
             <element signature="e#682#683#0" expanded="true" />
             <element signature="e#1031#1032#0" expanded="true" />
             <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="135">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding>
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
             <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
             <element signature="e#449#450#0" expanded="true" />
             <element signature="e#489#490#0" expanded="true" />
             <element signature="e#527#528#0" expanded="true" />
@@ -1757,35 +1631,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="141" selection-start-line="141" selection-end-line="146" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="method#IfR1C2IsEmptyOnTheBoard_R1C2ShouldBeEmptyEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertIsEmpty#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertIsNotEmpty#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfR0C0IsMarkedOnTheBoard_R0C0ShouldBeMarkedEither#1;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertIsMarked#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertIsNotMarked#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#makeFieldIsMarked#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfBoardHasHaleyOnField_ItShouldHaveHaleyOnFieldEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfBoardHasJohnOnField_ItHaveJohnOnFieldEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfBoardHasJohnOnR0C0_ItHaveJohnOnR0C0Either#1;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertHasHaleyOn#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertHasJohnOn#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfBoardHas0MarkedFields_ItShouldHave0MarkedFieldsEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#IfBoardHas1MarkedFields_ItShouldHave1MarkedFieldsEither#0;class#FieldIsEmptyForwardingTest#0" />
-            <element signature="method#assertMarkedFieldCountIs#0;class#FieldIsEmptyForwardingTest#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="171">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>
