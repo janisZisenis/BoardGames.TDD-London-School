@@ -7,11 +7,19 @@ import Messages.GenerationMessages;
 import java.util.Scanner;
 
 public class ConsoleInputGenerator implements InputGenerator {
-    private final Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner;
 
     private final String rowMessage = GenerationMessages.rowMessage;
     private final String columnMessage = GenerationMessages.columnMessage;
     private final String notAnIntMessage = GenerationMessages.notAnIntMessage;
+
+    public ConsoleInputGenerator() {
+        resetScanner();
+    }
+
+    private static void resetScanner() {
+        scanner = new Scanner(System.in);
+    }
 
     public Input generate() {
         int row = promptInt(rowMessage);
@@ -20,15 +28,25 @@ public class ConsoleInputGenerator implements InputGenerator {
         return new Input(row, column);
     }
 
-    public int promptInt(String promptMessage) {
+    private int promptInt(String promptMessage) {
+        int scanned = scanInt(promptMessage);
+        resetScanner();
+        return scanned;
+    }
+
+    private int scanInt(String promptMessage) {
         printWithEndingSpace(promptMessage);
 
         while(noIntScanned()) {
             printWithLineBreak(notAnIntMessage);
             printWithEndingSpace(promptMessage);
-            skipLastScanned();
+            resetScanner();
         }
 
+        return getScannedInt();
+    }
+
+    private int getScannedInt() {
         return scanner.nextInt();
     }
 
@@ -42,10 +60,6 @@ public class ConsoleInputGenerator implements InputGenerator {
 
     private void printWithLineBreak(String message) {
         System.out.println(message);
-    }
-
-    private void skipLastScanned() {
-        scanner.next();
     }
 
 }
