@@ -1,23 +1,24 @@
 package SequentialGaming.MultiPlayer;
 
 import SequentialGaming.GameFacade.Player;
+import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class MultiPlayer implements Player {
 
     private final LinkedList<Player> players = new LinkedList<>();
-    private final CyclicPlayerIterator it = new CyclicPlayerIterator(players);
+    private final CyclicListIterator<Player> it;
     private final MultiPlayerMessenger messenger;
 
     public MultiPlayer(Player first, MultiPlayerMessenger messenger) {
         this.players.add(first);
+        this.it = new CyclicListIterator<>(players);
         this.messenger = messenger;
     }
 
     public void play() {
-        Player t = it.current();
+        Player t = it.getCurrent();
 
         messenger.publishPlayer(t);
         t.play();
@@ -27,28 +28,6 @@ public class MultiPlayer implements Player {
 
     public void add(Player t) {
         players.add(t);
-    }
-
-    private class CyclicPlayerIterator {
-
-        private List<Player> players;
-        private int currentIndex = 0;
-
-        public CyclicPlayerIterator(List<Player> players) {
-            this.players = players;
-        }
-
-        public Player current() {
-            return players.get(currentIndex);
-        }
-
-        public void next() {
-            currentIndex++;
-
-            if(currentIndex >= players.size())
-                currentIndex = 0;
-        }
-
     }
 
 }

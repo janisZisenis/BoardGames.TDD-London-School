@@ -14,7 +14,7 @@ public class ListIsEmpty {
 
     @Test
     void ShouldThrowExceptionOnConstruction() {
-        Executable act = () -> new CyclicIterator<Object>(list);
+        Executable act = () -> new CyclicListIterator<Object>(list);
 
         assertThrows(ListNeedsToHaveAtLeastOneObject.class, act);
     }

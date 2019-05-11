@@ -11,7 +11,7 @@ public class ListHasTwoElements {
     private Object first = new Object();
     private Object second = new Object();
     private List<Object> list = List.of(first, second);
-    private CyclicIterator<Object> sut = new CyclicIterator<>(list);
+    private CyclicListIterator<Object> sut = new CyclicListIterator<>(list);
 
     @Test
     void MovedToNextOnce_ShouldReturnSecondElementAsCurrent() {

@@ -2,12 +2,12 @@ package Utilities.CyclicListIterator;
 
 import java.util.List;
 
-public class CyclicIterator <T> {
+public class CyclicListIterator<T> {
 
     private final List<T> list;
     private int currentIndex = 0;
 
-    public CyclicIterator(List<T> list) {
+    public CyclicListIterator(List<T> list) {
         if(list.isEmpty())
             throw new ListNeedsToHaveAtLeastOneObject();
 

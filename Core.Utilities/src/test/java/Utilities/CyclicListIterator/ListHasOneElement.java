@@ -10,7 +10,7 @@ public class ListHasOneElement {
 
     private Object object = new Object();
     private List<Object> list = List.of(object);
-    private CyclicIterator<Object> sut = new CyclicIterator<>(list);
+    private CyclicListIterator<Object> sut = new CyclicListIterator<>(list);
 
     @Test
     void AfterCreation_ShouldReturnFirstElementAsCurrent() {
