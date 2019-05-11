@@ -4,10 +4,11 @@ import SequentialGaming.GameFacade.Player;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class MultiPlayer implements Player {
 
-    private final LinkedList<Player> players = new LinkedList<>();
+    private final List<Player> players = new LinkedList<>();
     private final CyclicListIterator<Player> it;
     private final MultiPlayerMessenger messenger;
 
