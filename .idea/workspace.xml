@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/View/ConsoleInputGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/App.TicTacToe.Console/target/classes/View/ConsoleInputGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/BoardDecorators/BoardDecoratorContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/BoardDecorators/BoardDecoratorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.Domain/target/test-classes/Domain/Board/BoardDecorators/BoardDecoratorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/MultiGuiPlayer/MultiGuiPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/MultiGuiPlayer/MultiGuiPlayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -23,6 +19,7 @@
     <ignored path="$PROJECT_DIR$/Core.Gaming/target/" />
     <ignored path="$PROJECT_DIR$/Core.SequentialGaming/target/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.SequentialRendering/target/" />
+    <ignored path="$PROJECT_DIR$/Core.Utilities/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +77,7 @@
     <session id="-1905770996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
+          <entry key="project.closed" value="63" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="13" />
@@ -91,29 +88,30 @@
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="5" />
           <entry key="project.open.time.8" value="9" />
           <entry key="project.open.time.9" value="9" />
-          <entry key="project.opened" value="70" />
+          <entry key="project.opened" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="4289" />
+          <entry key="dummy" value="4300" />
           <entry key="iml" value="58" />
-          <entry key="java" value="186473" />
+          <entry key="java" value="188006" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="171" />
+          <entry key="xml" value="178" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="186473" />
-          <entry key="PLAIN_TEXT" value="4290" />
-          <entry key="XML" value="171" />
+          <entry key="JAVA" value="188006" />
+          <entry key="PLAIN_TEXT" value="4301" />
+          <entry key="XML" value="178" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -121,45 +119,28 @@
           <entry key="class" value="13" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="11" />
-          <entry key="java" value="5043" />
-          <entry key="xml" value="44" />
+          <entry key="java" value="5059" />
+          <entry key="xml" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="13" />
           <entry key="IDEA_MODULE" value="11" />
-          <entry key="JAVA" value="5043" />
+          <entry key="JAVA" value="5059" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="44" />
+          <entry key="XML" value="47" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/App/ConsoleIODeviceFactory.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/MultiGuiPlayer/MultiGuiPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-              <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-              <folding>
-                <element signature="e#1292#1293#0" expanded="true" />
-                <element signature="e#1332#1333#0" expanded="true" />
-              </folding>
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -249,19 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessorTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/PlayingInputProcessor/PlayingInputProcessor.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/GameOverInputProcessor/GameOverInputProcessor.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/GameOverInputProcessor/GameOverInputProcessorTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/GameOverValidator/GameOverValidator.java" />
-        <option value="$PROJECT_DIR$/Core.SequentialGaming/src/test/java/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidatorTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.java" />
-        <option value="$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java" />
-        <option value="$PROJECT_DIR$/App.TicTacToe.Gui/src/main/java/App/BoardViewPresenter.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/TicTacToeFacade.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/TicTacToe.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/TicTacToeFacade/TicTacToe.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/TicTacToeFacade/WinningLineProviderDummy.java" />
         <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/pom.xml" />
@@ -292,7 +260,6 @@
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/FieldIsEmptyForwardingTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorContext.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" />
@@ -300,6 +267,20 @@
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" />
         <option value="$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardStub.java" />
         <option value="$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/CyclicIteratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/CyclicListIteratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/Utilitites/CyclicListIterator/CyclicListIteratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/main/java/Utilities/CyclicListIterator/ListNeedsToHaveAtLeastOneObject.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/pom.xml" />
+        <option value="$PROJECT_DIR$/TicTacToe.Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/CyclicListIteratorTest.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListIsEmpty.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListHasOneElement.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListHasTwoElements.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/main/java/Utilities/CyclicListIterator/CyclicIterator.java" />
+        <option value="$PROJECT_DIR$/Core.Utilities/src/main/java/Utilities/CyclicListIterator/CyclicListIterator.java" />
+        <option value="$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/MultiPlayer/MultiPlayer.java" />
+        <option value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/MultiGuiPlayer/MultiGuiPlayer.java" />
       </list>
     </option>
   </component>
@@ -479,44 +460,54 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="App.TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="App.TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="App.TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="App.TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="App.TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GuiGaming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.GuiGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="GuiGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="MultiGuiPlayer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -526,7 +517,7 @@
     <property name="SearchEverywhereHistoryKey" value="markedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;MarkedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;markedFieldPro&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/MarkedFieldCountProviderStub.java&#10;Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557562868765" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557579367415" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -561,18 +552,18 @@
       <recent name="$PROJECT_DIR$/TicTacToe.SequentialRendering/src/test/java/SequentialRendering" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Utilities.CyclicListIterator" />
       <recent name="Domain.Board.HashingBoard" />
       <recent name="GuiGaming.TicTacToeFacade" />
       <recent name="App" />
       <recent name="GuiGaming.HybridMultiPlayer" />
-      <recent name="InputGeneration.RandomInputGenerator" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="Utilities.CyclicListIterator" />
       <recent name="Domain.Board.BoardDecorators" />
       <recent name="GuiGaming.TicTacToePresenter" />
       <recent name="GuiGaming.TicTacToeFacade" />
       <recent name="Domain.InputGeneration.InputValidators.GameOverValidator" />
-      <recent name="GuiGaming.PlayingInputProcessor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -587,7 +578,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App.TicTacToe.Console">
+  <component name="RunManager" selected="JUnit.AllTest">
     <configuration name="App.TicTacToe.Console" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="App.TicTacToe.Console" />
@@ -642,22 +633,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardDecoratorTest.IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicTacToe.Domain" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Domain.Board.BoardDecorators.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Domain.Board.BoardDecorators" />
-      <option name="MAIN_CLASS_NAME" value="Domain.Board.BoardDecorators.BoardDecoratorTest" />
-      <option name="METHOD_NAME" value="IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Core.InputGenerationTest" type="JUnit" factoryName="JUnit">
       <module name="Core.InputGeneration" />
       <option name="PACKAGE_NAME" value="InputGeneration" />
@@ -676,22 +651,6 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TicTacToePresenterTest.IfFieldR0C0GetsUnmarked_ShouldNotSetAField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicTacToe.GuiGaming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GuiGaming.TicTacToePresenter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GuiGaming.TicTacToePresenter" />
-      <option name="MAIN_CLASS_NAME" value="GuiGaming.TicTacToePresenter.TicTacToePresenterTest" />
-      <option name="METHOD_NAME" value="IfFieldR0C0GetsUnmarked_ShouldNotSetAField" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -754,22 +713,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TicTacToe.GuiGaming" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GuiGaming.MultiGuiPlayer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GuiGaming.MultiGuiPlayer" />
-      <option name="MAIN_CLASS_NAME" value="GuiGaming.MultiGuiPlayer.TwoAdditionalGuiPlayersAdded" />
-      <option name="METHOD_NAME" value="IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.App.TicTacToe.SequentialGui" />
       <item itemvalue="JUnit.AllTest" />
@@ -782,17 +725,11 @@
       <item itemvalue="JUnit.TicTacToe.MessagingTest" />
       <item itemvalue="Application.App.TicTacToe.Console" />
       <item itemvalue="Application.App.TicTacToe.Gui" />
-      <item itemvalue="JUnit.TwoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
-      <item itemvalue="JUnit.TicTacToePresenterTest.IfFieldR0C0GetsUnmarked_ShouldNotSetAField" />
-      <item itemvalue="JUnit.BoardDecoratorTest.IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App.TicTacToe.Console" />
-        <item itemvalue="JUnit.BoardDecoratorTest.IfFieldIsMarkedOnTheBoard_ItShouldBeMarkedEither" />
         <item itemvalue="Application.App.TicTacToe.Gui" />
-        <item itemvalue="JUnit.TicTacToePresenterTest.IfFieldR0C0GetsUnmarked_ShouldNotSetAField" />
-        <item itemvalue="JUnit.TwoAdditionalGuiPlayersAdded.IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce" />
       </list>
     </recent_temporary>
   </component>
@@ -879,49 +816,50 @@
       <workItem from="1557464644977" duration="6303000" />
       <workItem from="1557472557385" duration="9427000" />
       <workItem from="1557491896730" duration="4644000" />
+      <workItem from="1557577016310" duration="2284000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.10 at 17h 11m 05s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 48m 06s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 11m 11s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 48m 23s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 11m 23s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 48m 35s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 23m 42s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 48m 51s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 25m 49s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 49m 15s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 26m 01s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 52m 09s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 26m 59s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 52m 52s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 27m 28s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 54m 50s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 27m 55s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 54m 57s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllTest - 2019.05.10 at 17h 28m 02s.xml">
+    <history-entry file="AllTest - 2019.05.11 at 14h 55m 08s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="481533000" />
+    <option name="totallyTimeSpent" value="484766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37679082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38252148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -930,7 +868,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2878981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4433121" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1120,87 +1058,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java/GuiGaming/GameOverInputProcessor/GameOverInputProcessorTest.java" />
-    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/test/java/SequentialGaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/test/java/SequentialGaming/GameFacade/GameOverRuleStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/InputGeneration/InputValidators/GameOverValidator/GameOverValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="41" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="41" />
-          <folding>
-            <element signature="method#makeValidatingInputGenerator#0;class#Factory#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/main/java/InputGeneration/ValidInputProcessor/ValidInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/InputGeneration/InputValidators/FieldIsEmptyValidator/FieldIsEmptyValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core.InputGeneration/src/test/java/InputGeneration/InputProcessorDummy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/GameEvaluator/Api/WinningLineProviderStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1373,9 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#1431#1432#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1391,41 +1245,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#488#489#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/GetMarkForwardingTest.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkedFieldCountForwardingTest.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/ForwardingTests/MarkFieldForwardingTest.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding>
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1462,10 +1291,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="1488" column="16" selection-start-line="1488" selection-start-column="16" selection-end-line="1488" selection-end-column="16" />
-          <folding>
-            <element signature="e#55416#55417#0" expanded="true" />
-            <element signature="e#55473#55474#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1473,21 +1305,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="137" column="37" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="33" column="18" selection-start-line="23" selection-start-column="8" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.Domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="219" column="44" selection-start-line="219" selection-start-column="44" selection-end-line="219" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="47" column="12" selection-start-line="22" selection-start-column="4" selection-end-line="47" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListIsEmpty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App.TicTacToe.Console/src/main/java/View/ConsoleInputGenerator.java">
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListHasOneElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding>
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/src/main/java/Utilities/CyclicListIterator/ListNeedsToHaveAtLeastOneObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/src/test/java/Utilities/CyclicListIterator/ListHasTwoElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.SequentialGaming/src/main/java/SequentialGaming/MultiPlayer/MultiPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core.Utilities/src/main/java/Utilities/CyclicListIterator/CyclicListIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe.GuiGaming/src/main/java/GuiGaming/MultiGuiPlayer/MultiGuiPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>

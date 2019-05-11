@@ -2,21 +2,23 @@ package GuiGaming.MultiGuiPlayer;
 
 import Domain.Data.Field.Field;
 import GuiGaming.GuiPlayer;
+import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class MultiGuiPlayer implements GuiPlayer {
 
-    private final LinkedList<GuiPlayer> players = new LinkedList<>();
-    private final CyclicGuiPlayerIterator it = new CyclicGuiPlayerIterator(players);
+    private final List<GuiPlayer> players = new LinkedList<>();
+    private final CyclicListIterator<GuiPlayer> it;
 
     public MultiGuiPlayer(GuiPlayer first) {
         players.add(first);
+        this.it = new CyclicListIterator<>(players);
     }
 
     public void play(Field field) {
-        GuiPlayer current = it.current();
+        GuiPlayer current = it.getCurrent();
         current.play(field);
         it.next();
     }
@@ -25,25 +27,4 @@ public class MultiGuiPlayer implements GuiPlayer {
         players.add(player);
     }
 
-    private class CyclicGuiPlayerIterator {
-
-        private List<GuiPlayer> players;
-        private int currentIndex = 0;
-
-        public CyclicGuiPlayerIterator(List<GuiPlayer> players) {
-            this.players = players;
-        }
-
-        public GuiPlayer current() {
-            return players.get(currentIndex);
-        }
-
-        public void next() {
-            currentIndex++;
-
-            if(currentIndex >= players.size())
-                currentIndex = 0;
-        }
-
-    }
 }
