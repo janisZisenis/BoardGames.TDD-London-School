@@ -44,4 +44,5 @@ public class BoardStub extends BoardDummy {
     public Mark getMarkAt(Field f) {
         return marks.get(f);
     }
+
 }

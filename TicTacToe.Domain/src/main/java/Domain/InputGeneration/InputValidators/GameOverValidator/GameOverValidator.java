@@ -2,7 +2,7 @@ package Domain.InputGeneration.InputValidators.GameOverValidator;
 
 import InputGeneration.Input.Input;
 import InputGeneration.ValidInputGenerator.InputValidator;
-import SequentialGaming.DelegatingGame.GameOverRule;
+import SequentialGaming.GameFacade.GameOverRule;
 
 public class GameOverValidator implements InputValidator {
 

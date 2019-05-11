@@ -1,9 +1,9 @@
 package SequentialGaming;
 
-import SequentialGaming.DelegatingGame.DelegatingGame;
-import SequentialGaming.DelegatingGame.GameOverRule;
-import SequentialGaming.DelegatingGame.Renderer;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.GameFacade;
+import SequentialGaming.GameFacade.GameOverRule;
+import SequentialGaming.GameFacade.Renderer;
+import SequentialGaming.GameFacade.Player;
 import SequentialGaming.GameLoopImp.Game;
 import SequentialGaming.GameLoopImp.GameLoopImp;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
@@ -29,7 +29,7 @@ public abstract class Factory {
     }
 
     public static Game makeGame(GameOverRule rule, Player player, Renderer renderer) {
-        return new DelegatingGame(rule, renderer, player);
+        return new GameFacade(rule, renderer, player);
     }
 
     public static CompositeGameOverRule makeCompositeGameOverRule() {

@@ -2,8 +2,8 @@ package App;
 
 import Domain.Data.Field.Field;
 import GuiGaming.GuiPlayer;
-import SequentialGaming.DelegatingGame.GameOverRule;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.GameOverRule;
+import SequentialGaming.GameFacade.Player;
 
 import java.util.LinkedList;
 import java.util.List;

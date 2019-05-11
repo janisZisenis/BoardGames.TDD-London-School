@@ -1,6 +1,6 @@
 package Messaging.MessagingBoardListener;
 
-import Domain.Board.ListenableBoard.BoardListener;
+import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Messaging.MappingPlayerMessenger.Messenger;
 

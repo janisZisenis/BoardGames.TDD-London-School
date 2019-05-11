@@ -1,6 +1,6 @@
 package GuiGaming.TicTacToePresenter;
 
-import Domain.Board.ListenableBoard.BoardListener;
+import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;

@@ -1,6 +1,6 @@
 package SequentialGaming.GameOverRules.WinnerRule;
 
-import SequentialGaming.DelegatingGame.GameOverRule;
+import SequentialGaming.GameFacade.GameOverRule;
 
 public class WinnerRule implements GameOverRule {
 

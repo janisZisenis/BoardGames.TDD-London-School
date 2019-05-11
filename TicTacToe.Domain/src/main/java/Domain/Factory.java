@@ -2,7 +2,7 @@ package Domain;
 
 import Domain.Board.Board;
 import Domain.Board.HashingBoard.HashingBoard;
-import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
@@ -17,8 +17,8 @@ import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmpty
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.TicTacToePlayer.TicTacToePlayer;
 import InputGeneration.InputGenerator;
-import SequentialGaming.DelegatingGame.GameOverRule;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.GameOverRule;
+import SequentialGaming.GameFacade.Player;
 import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 
 public abstract class Factory {

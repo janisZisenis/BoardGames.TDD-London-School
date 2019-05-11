@@ -2,7 +2,7 @@ package SequentialRendering.BoardRenderer;
 
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import SequentialGaming.DelegatingGame.Renderer;
+import SequentialGaming.GameFacade.Renderer;
 
 public class BoardRenderer implements Renderer {
 

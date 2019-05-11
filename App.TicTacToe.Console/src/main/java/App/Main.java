@@ -1,7 +1,7 @@
 package App;
 
 
-import Domain.Board.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -10,9 +10,9 @@ import Messages.OnePlayerModeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
-import SequentialGaming.DelegatingGame.GameOverRule;
-import SequentialGaming.DelegatingGame.Renderer;
-import SequentialGaming.DelegatingGame.Player;
+import SequentialGaming.GameFacade.GameOverRule;
+import SequentialGaming.GameFacade.Renderer;
+import SequentialGaming.GameFacade.Player;
 import SequentialGaming.Factory;
 import SequentialGaming.GameLoopImp.Game;
 import SequentialGaming.MessagingGameLoop.GameLoop;
