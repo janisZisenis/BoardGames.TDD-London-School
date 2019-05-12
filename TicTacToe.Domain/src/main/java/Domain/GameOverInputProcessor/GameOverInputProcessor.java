@@ -4,7 +4,7 @@ import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
 import SequentialGaming.GameFacade.GameOverRule;
 
-public class GameOverInputProcessor {
+public class GameOverInputProcessor implements InputProcessor {
 
     private final InputProcessor processor;
     private final GameOverRule rule;

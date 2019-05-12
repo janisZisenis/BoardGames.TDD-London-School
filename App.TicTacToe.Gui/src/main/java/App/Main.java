@@ -4,9 +4,11 @@ package App;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import GuiGaming.Presentation.BoardPresenter.BoardViewPresenter;
 import GuiGaming.Presentation.InputViewPresenter.InputViewPresenter;
 import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
+import InputGeneration.InputProcessor;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import javafx.application.Application;
@@ -27,7 +29,9 @@ public class Main extends Application {
         FXBoardView view = new FXBoardView(mapper);
 
         TicTacToeInputProcessor processor = new TicTacToeInputProcessor(board);
-        InputViewPresenter inputPresenter = new InputViewPresenter(processor);
+        InputProcessor gameOver = new GameOverInputProcessor(processor, Domain.Factory.makeGameOverRule(board));
+
+        InputViewPresenter inputPresenter = new InputViewPresenter(gameOver);
         view.setDelegate(inputPresenter);
 
         WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
