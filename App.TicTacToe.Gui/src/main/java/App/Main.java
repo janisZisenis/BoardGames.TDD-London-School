@@ -6,7 +6,6 @@ import Domain.Board.HashingBoard.HashingBoard;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import GuiGaming.Presentation.BoardPresenter.BoardViewPresenter;
-import GuiGaming.Presentation.InputViewPresenter.InputViewPresenter;
 import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
 import InputGeneration.InputProcessor;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -31,12 +30,9 @@ public class Main extends Application {
         TicTacToeInputProcessor processor = new TicTacToeInputProcessor(board);
         InputProcessor gameOver = new GameOverInputProcessor(processor, Domain.Factory.makeGameOverRule(board));
 
-        InputViewPresenter inputPresenter = new InputViewPresenter(gameOver);
-        view.setDelegate(inputPresenter);
-
         WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(view, provider);
-        BoardViewPresenter boardViewPresenter = new BoardViewPresenter(board, view);
+        BoardViewPresenter boardViewPresenter = new BoardViewPresenter(board, view, gameOver);
 
         board.addListener(boardViewPresenter);
         board.addListener(winningLinePresenter);

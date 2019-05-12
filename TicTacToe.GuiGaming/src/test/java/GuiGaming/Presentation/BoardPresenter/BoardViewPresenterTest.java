@@ -3,6 +3,8 @@ package GuiGaming.Presentation.BoardPresenter;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProviderStub;
+import InputGeneration.Input.Input;
+import InputGeneration.InputProcessorSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +14,8 @@ public class BoardViewPresenterTest {
 
     private BoardViewSpy view = new BoardViewSpy();
     private MarkedFieldProviderStub provider = new MarkedFieldProviderStub();
-    private BoardViewPresenter sut = new BoardViewPresenter(provider, view);
+    private InputProcessorSpy processor = new InputProcessorSpy();
+    private BoardViewPresenter sut = new BoardViewPresenter(provider, view, processor);
 
     @Test
     void IfFieldR0C0IsMarked_ShouldSetR0C0() {
@@ -108,5 +111,32 @@ public class BoardViewPresenterTest {
         boolean actual = view.hasCleared();
         assertFalse(actual);
     }
+
+
+    @Test
+    void IfR0C0IsGenerated_ShouldProcessInputWithR0C0() {
+        int row = 0;
+        int col = 0;
+
+        sut.onBoardClicked(row, col);
+
+        assertProcessedInputEquals(new Input(0, 0));
+    }
+
+    @Test
+    void IfR1C2IsGenerated_ShouldProcessInputWithR1C2() {
+        int row = 1;
+        int col = 2;
+
+        sut.onBoardClicked(row, col);
+
+        assertProcessedInputEquals(new Input(1, 2));
+    }
+
+    private void assertProcessedInputEquals(Input expected) {
+        Input actual = processor.getProcessed();
+        assertEquals(expected, actual);
+    }
+
 
 }
