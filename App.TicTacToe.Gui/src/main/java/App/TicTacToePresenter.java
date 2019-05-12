@@ -124,7 +124,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
     private void highlightWinningLIneIfIsProvided() {
         if(provider.hasWinningLine()) {
             Line line = provider.getWinningLine();
-//            view.highlight(line);
+//            view.magnify(line);
         }
     }
 

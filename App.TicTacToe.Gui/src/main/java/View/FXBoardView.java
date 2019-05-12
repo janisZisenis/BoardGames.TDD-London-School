@@ -103,20 +103,20 @@ public class FXBoardView extends Pane implements BoardView {
     }
 
     private void highlightLine(Line line) {
-        highlightField(line.getFirst());
-        highlightField(line.getSecond());
-        highlightField(line.getThird());
+        magnifyField(line.getFirst());
+        magnifyField(line.getSecond());
+        magnifyField(line.getThird());
     }
 
-    private void highlightField(Field f) {
+    private void magnifyField(Field f) {
         FXTile tile = tiles.get(f);
-        tile.highlight();
+        tile.magnify();
     }
 
     private void lowlightOtherFields(Line line) {
         for(Field f : tiles.keySet())
             if(!lineContains(line, f))
-                lowlightField(f);
+                minimizeField(f);
     }
 
     private boolean lineContains(Line line, Field f) {
@@ -127,9 +127,9 @@ public class FXBoardView extends Pane implements BoardView {
         return first.equals(f) || second.equals(f) || third.equals(f);
     }
 
-    private void lowlightField(Field f) {
+    private void minimizeField(Field f) {
         FXTile tile = tiles.get(f);
-        tile.lowlight();
+        tile.minimize();
     }
 
     private class FXTile extends StackPane {
@@ -197,11 +197,11 @@ public class FXBoardView extends Pane implements BoardView {
             label.setText(s);
         }
 
-        public void highlight() {
+        public void magnify() {
             growing.play();
         }
 
-        public void lowlight() {
+        public void minimize() {
             shrinking.play();
         }
 
