@@ -5,7 +5,7 @@ import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
-import GuiGaming.Presentation.BoardPresenter.BoardViewPresenter;
+import GuiGaming.Presentation.BoardViewPresenter.BoardViewPresenter;
 import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
 import InputGeneration.InputProcessor;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
@@ -34,8 +34,7 @@ public class Main extends Application {
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(view, provider);
         BoardViewPresenter boardViewPresenter = new BoardViewPresenter(board, view, gameOver);
 
-        board.addListener(boardViewPresenter);
-        board.addListener(winningLinePresenter);
+
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(view));

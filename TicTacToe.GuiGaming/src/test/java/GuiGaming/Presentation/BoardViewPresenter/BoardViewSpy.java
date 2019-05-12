@@ -1,4 +1,4 @@
-package GuiGaming.Presentation.BoardPresenter;
+package GuiGaming.Presentation.BoardViewPresenter;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;

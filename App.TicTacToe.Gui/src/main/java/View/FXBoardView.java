@@ -4,8 +4,8 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import GuiGaming.Presentation.BoardPresenter.BoardView;
-import GuiGaming.Presentation.InputViewPresenter.Api.InputViewDelegate;
+import GuiGaming.Presentation.BoardViewPresenter.Api.BoardViewDelegate;
+import GuiGaming.Presentation.BoardViewPresenter.BoardView;
 import GuiGaming.Presentation.WinningLinePresenter.WinningLineView;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
@@ -27,7 +27,7 @@ public class FXBoardView extends Pane implements BoardView, WinningLineView {
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
     private final MarkToStringMapper mapper;
 
-    private InputViewDelegate delegate;
+    private BoardViewDelegate delegate;
 
     public FXBoardView(MarkToStringMapper mapper) {
         this.sideLength = getRoundedSideLength(400);
@@ -66,7 +66,7 @@ public class FXBoardView extends Pane implements BoardView, WinningLineView {
         getChildren().add(t);
     }
 
-    public void setDelegate(InputViewDelegate delegate) {
+    public void setDelegate(BoardViewDelegate delegate) {
         this.delegate = delegate;
     }
 
@@ -78,7 +78,7 @@ public class FXBoardView extends Pane implements BoardView, WinningLineView {
         int row = f.getRow();
         int col = f.getColumn();
 
-        delegate.onInputGenerated(row, col);
+        delegate.onBoardClicked(row, col);
     }
 
 

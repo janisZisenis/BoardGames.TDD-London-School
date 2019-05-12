@@ -10,8 +10,7 @@ import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
 import GuiGaming.MultiGuiPlayer.GuiPlayer;
-import GuiGaming.Presentation.BoardPresenter.BoardView;
-import GuiGaming.Presentation.InputViewPresenter.Api.InputViewDelegate;
+import GuiGaming.Presentation.BoardViewPresenter.BoardView;
 import InputGeneration.Input.Input;
 import Messages.AlertingMessages;
 import SequentialGaming.GameFacade.GameOverRule;
@@ -22,7 +21,7 @@ import View.FXInputAlerter;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TicTacToePresenter implements InputViewDelegate, BoardListener {
+public class TicTacToePresenter implements BoardListener {
 
     private final BoardView view;
     private final Board board;
