@@ -33,8 +33,6 @@ public class HashingBoard implements Board {
     }
 
     public boolean isMarked(Field f) {
-        if(fields.containsKey(f))
-            return true;
-        return false;
+        return fields.containsKey(f);
     }
 }
