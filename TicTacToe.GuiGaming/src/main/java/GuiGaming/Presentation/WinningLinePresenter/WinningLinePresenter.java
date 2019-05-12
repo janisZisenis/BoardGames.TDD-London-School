@@ -1,10 +1,11 @@
 package GuiGaming.Presentation.WinningLinePresenter;
 
+import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 
-public class WinningLinePresenter {
+public class WinningLinePresenter implements BoardListener {
 
     private final WinningLineProvider provider;
     private final WinningLineView view;

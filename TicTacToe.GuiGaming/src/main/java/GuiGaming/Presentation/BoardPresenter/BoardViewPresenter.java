@@ -1,15 +1,16 @@
 package GuiGaming.Presentation.BoardPresenter;
 
+import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 
-public class BoardPresenter {
+public class BoardViewPresenter implements BoardListener {
 
     private final BoardView view;
     private final MarkedFieldProvider provider;
 
-    public BoardPresenter(MarkedFieldProvider provider, BoardView view) {
+    public BoardViewPresenter(MarkedFieldProvider provider, BoardView view) {
         this.provider = provider;
         this.view = view;
     }

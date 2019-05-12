@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class BoardPresenterTest {
+public class BoardViewPresenterTest {
 
     private BoardViewSpy view = new BoardViewSpy();
     private MarkedFieldProviderStub provider = new MarkedFieldProviderStub();
-    private BoardPresenter sut = new BoardPresenter(provider, view);
+    private BoardViewPresenter sut = new BoardViewPresenter(provider, view);
 
     @Test
     void IfFieldR0C0IsMarked_ShouldSetR0C0() {

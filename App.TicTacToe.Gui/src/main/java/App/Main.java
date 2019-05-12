@@ -3,6 +3,10 @@ package App;
 
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import GuiGaming.Presentation.BoardPresenter.BoardViewPresenter;
+import GuiGaming.Presentation.InputViewPresenter.InputViewPresenter;
+import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import javafx.application.Application;
@@ -21,15 +25,23 @@ public class Main extends Application {
 
         MarkToXOMapper mapper = new MarkToXOMapper();
         FXBoardView view = new FXBoardView(mapper);
-        TicTacToePresenter presenter = new TicTacToePresenter(board, view);
-        view.setDelegate(presenter);
-        board.addListener(presenter);
 
-        presenter.onStarted();
+        TicTacToeInputProcessor processor = new TicTacToeInputProcessor(board);
+        InputViewPresenter inputPresenter = new InputViewPresenter(processor);
+        view.setDelegate(inputPresenter);
+
+        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
+        WinningLinePresenter winningLinePresenter = new WinningLinePresenter(view, provider);
+        BoardViewPresenter boardViewPresenter = new BoardViewPresenter(board, view);
+
+        board.addListener(boardViewPresenter);
+        board.addListener(winningLinePresenter);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(view));
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        processor.onStarted();
     }
 }
