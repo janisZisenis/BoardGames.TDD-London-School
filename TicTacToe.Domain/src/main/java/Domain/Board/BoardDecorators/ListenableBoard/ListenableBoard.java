@@ -4,10 +4,13 @@ import Domain.Board.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class ListenableBoard implements Board {
 
     private final Board board;
-    private BoardListener listener;
+    private final List<BoardListener> listeners = new LinkedList<>();
 
     public ListenableBoard(Board board) {
         this.board = board;
@@ -35,11 +38,11 @@ public class ListenableBoard implements Board {
     }
 
     private void notify(Field f) {
-        if(listener != null)
+        for(BoardListener listener : listeners)
             listener.onFieldUpdated(f);
     }
 
-    public void setListener(BoardListener listener) {
-        this.listener = listener;
+    public void addListener(BoardListener listener) {
+        listeners.add(listener);
     }
 }

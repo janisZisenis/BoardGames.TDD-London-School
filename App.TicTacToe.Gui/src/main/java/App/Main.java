@@ -36,7 +36,7 @@ public class Main extends Application {
         FXBoardView view = new FXBoardView(mapper);
         TicTacToePresenter presenter = new TicTacToePresenter(board, view);
         view.setDelegate(presenter);
-        board.setListener(presenter);
+        board.addListener(presenter);
 
         presenter.onStarted();
 

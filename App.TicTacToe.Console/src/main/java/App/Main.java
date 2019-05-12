@@ -33,7 +33,7 @@ public class Main {
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
         MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider);
-        board.setListener(listener);
+        board.addListener(listener);
 
         ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);

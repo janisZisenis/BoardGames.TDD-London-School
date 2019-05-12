@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BoardListenerIsSetTest {
+public class OneBoardListenerIsAddedTest {
 
     private BoardDummy board = new BoardDummy();
     private BoardListenerSpy listener = new BoardListenerSpy();
@@ -18,7 +18,7 @@ public class BoardListenerIsSetTest {
 
     @BeforeEach
     void Setup() {
-        sut.setListener(listener);
+        sut.addListener(listener);
     }
 
     @Test
