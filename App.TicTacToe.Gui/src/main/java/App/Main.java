@@ -1,15 +1,8 @@
 package App;
 
 
-import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
-import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
-import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineProvider;
-import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import View.FXBoardView;
 import javafx.application.Application;
@@ -17,12 +10,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
-    private static WinningLineProvider makeWinningLineProvider(Board board) {
-        LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
-        LineProvider lineProvider = new HumbleLineProvider();
-        return new GameEvaluator(lineProvider, lineEvaluator);
-    }
 
 
     public static void main(String[] args) {

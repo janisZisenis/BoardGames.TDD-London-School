@@ -4,8 +4,9 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import GuiGaming.Presentation.BoardPresenter.Api.BoardViewDelegate;
 import GuiGaming.Presentation.BoardPresenter.BoardView;
+import GuiGaming.Presentation.InputViewPresenter.Api.InputViewDelegate;
+import GuiGaming.Presentation.WinningLinePresenter.WinningLineView;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -17,7 +18,7 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane implements BoardView {
+public class FXBoardView extends Pane implements BoardView, WinningLineView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
     private final HashMap<FXTile, Field> fields = new HashMap<>();
@@ -26,7 +27,7 @@ public class FXBoardView extends Pane implements BoardView {
     private final int rowColumnCount = BoardBoundaries.rowColumnCount;
     private final MarkToStringMapper mapper;
 
-    private BoardViewDelegate delegate;
+    private InputViewDelegate delegate;
 
     public FXBoardView(MarkToStringMapper mapper) {
         this.sideLength = getRoundedSideLength(400);
@@ -65,8 +66,7 @@ public class FXBoardView extends Pane implements BoardView {
         getChildren().add(t);
     }
 
-
-    public void setDelegate(BoardViewDelegate delegate) {
+    public void setDelegate(InputViewDelegate delegate) {
         this.delegate = delegate;
     }
 
@@ -78,7 +78,7 @@ public class FXBoardView extends Pane implements BoardView {
         int row = f.getRow();
         int col = f.getColumn();
 
-        delegate.onBoardClicked(row, col);
+        delegate.onInputGenerated(row, col);
     }
 
 
@@ -97,12 +97,12 @@ public class FXBoardView extends Pane implements BoardView {
         tile.setText(text);
     }
 
-    public void highLight(Line line) {
-        highlightLine(line);
+    public void highlightLine(Line line) {
+        highlight(line);
         lowlightOtherFields(line);
     }
 
-    private void highlightLine(Line line) {
+    private void highlight(Line line) {
         magnifyField(line.getFirst());
         magnifyField(line.getSecond());
         magnifyField(line.getThird());

@@ -10,8 +10,8 @@ import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
 import GuiGaming.MultiGuiPlayer.GuiPlayer;
-import GuiGaming.Presentation.BoardPresenter.Api.BoardViewDelegate;
 import GuiGaming.Presentation.BoardPresenter.BoardView;
+import GuiGaming.Presentation.InputViewPresenter.Api.InputViewDelegate;
 import InputGeneration.Input.Input;
 import Messages.AlertingMessages;
 import SequentialGaming.GameFacade.GameOverRule;
@@ -22,7 +22,7 @@ import View.FXInputAlerter;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
+public class TicTacToePresenter implements InputViewDelegate, BoardListener {
 
     private final BoardView view;
     private final Board board;
@@ -66,7 +66,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
         this.provider = Domain.Factory.makeWinningLineProvider(board);
     }
 
-    public void onBoardClicked(int row, int col) {
+    public void onInputGenerated(int row, int col) {
         if(!isOver()) {
             Input input = new Input(row, col);
             process(input);
