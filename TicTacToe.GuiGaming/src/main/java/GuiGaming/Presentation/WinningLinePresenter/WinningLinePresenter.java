@@ -17,7 +17,7 @@ public class WinningLinePresenter {
     public void onFieldUpdated(Field f) {
         if(provider.hasWinningLine()) {
             Line line = provider.getWinningLine();
-            view.highlightWinningLine(line);
+            view.highlightLine(line);
         }
     }
 }

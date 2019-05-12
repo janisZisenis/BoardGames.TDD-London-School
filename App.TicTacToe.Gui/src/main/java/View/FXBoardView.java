@@ -1,11 +1,11 @@
 package View;
 
-import GuiGaming.TicTacToePresenter.Api.BoardViewDelegate;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import GuiGaming.TicTacToePresenter.BoardView;
+import GuiGaming.Presentation.BoardPresenter.Api.BoardViewDelegate;
+import GuiGaming.Presentation.BoardPresenter.BoardView;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -88,7 +88,7 @@ public class FXBoardView extends Pane implements BoardView {
         setFieldText(field, text);
     }
 
-    public void clear(Field field) {
+    public void clearField(Field field) {
         setFieldText(field, "");
     }
 

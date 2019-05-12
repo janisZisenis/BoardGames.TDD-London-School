@@ -1,7 +1,6 @@
 package GuiGaming.MultiGuiPlayer;
 
 import Domain.Data.Field.Field;
-import GuiGaming.GuiPlayer;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;

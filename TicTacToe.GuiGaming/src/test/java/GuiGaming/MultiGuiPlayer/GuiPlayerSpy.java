@@ -1,7 +1,6 @@
 package GuiGaming.MultiGuiPlayer;
 
 import Domain.Data.Field.Field;
-import GuiGaming.GuiPlayer;
 
 public class GuiPlayerSpy implements GuiPlayer {
 

@@ -8,10 +8,10 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import GuiGaming.GuiPlayer;
 import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
-import GuiGaming.TicTacToePresenter.Api.BoardViewDelegate;
-import GuiGaming.TicTacToePresenter.BoardView;
+import GuiGaming.MultiGuiPlayer.GuiPlayer;
+import GuiGaming.Presentation.BoardPresenter.Api.BoardViewDelegate;
+import GuiGaming.Presentation.BoardPresenter.BoardView;
 import InputGeneration.Input.Input;
 import Messages.AlertingMessages;
 import SequentialGaming.GameFacade.GameOverRule;
@@ -124,7 +124,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
     private void highlightWinningLIneIfIsProvided() {
         if(provider.hasWinningLine()) {
             Line line = provider.getWinningLine();
-            view.highLight(line);
+//            view.highlight(line);
         }
     }
 
@@ -133,7 +133,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
             Mark m = board.getMarkAt(field);
             view.setField(field, m);
         } else
-            view.clear(field);
+            view.clearField(field);
     }
 
 }

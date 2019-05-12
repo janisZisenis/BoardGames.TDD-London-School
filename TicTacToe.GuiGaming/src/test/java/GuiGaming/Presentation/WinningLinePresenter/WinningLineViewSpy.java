@@ -13,7 +13,7 @@ public class WinningLineViewSpy implements WinningLineView {
     public Line getHighlighted() {
         return highlighted;
     }
-    public void highlightWinningLine(Line line) {
+    public void highlightLine(Line line) {
         didHighlight = true;
         highlighted = line;
     }
