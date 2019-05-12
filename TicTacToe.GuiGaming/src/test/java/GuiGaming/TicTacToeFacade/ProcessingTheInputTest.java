@@ -11,9 +11,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ProcessingTheInputTest {
 
     private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
-    private WinningLineProviderDummy provider = new WinningLineProviderDummy();
+    private WinningLineProviderDummy winningLineProvider = new WinningLineProviderDummy();
     private InputProcessorSpy processor = new InputProcessorSpy();
-    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, provider, processor);
+    private GameMasterDummy gameMaster = new GameMasterDummy();
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, winningLineProvider, processor, gameMaster);
 
     @Test
     void IfInputR0C0IsProcessed_ShouldProcessInputR0C0Either() {

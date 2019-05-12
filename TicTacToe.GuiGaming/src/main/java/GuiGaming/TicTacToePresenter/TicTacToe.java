@@ -11,4 +11,5 @@ public interface TicTacToe {
     void process(Input input);
     boolean isMarked(Field f);
     Mark getMarkAt(Field field);
+    void simulateComputerTurns();
 }

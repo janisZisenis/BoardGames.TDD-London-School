@@ -9,11 +9,16 @@ import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
 import View.FXInputAlerter;
+import View.FXInputView;
 
 public class FXIODeviceFactory implements IODeviceFactory {
 
+    private static FXInputView humanGenerator;
+
     public InputGenerator makeHumanInputGenerator() {
-        return null;
+        if(humanGenerator == null)
+            humanGenerator = new FXInputView(200);
+        return humanGenerator;
     }
 
     public InputGenerator makeInvincibleInputGenerator(Board board, Mark m) {
@@ -37,4 +42,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
         return new FXInputAlerter(inputAlreadyMarked);
     }
 
+    public static void setHumanInputGenerator(FXInputView humanGenerator) {
+        FXIODeviceFactory.humanGenerator = humanGenerator;
+    }
 }

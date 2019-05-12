@@ -14,7 +14,8 @@ public class AccessingMarkedFieldsTest {
     private MarkedFieldProviderStub markedFieldProvider = new MarkedFieldProviderStub();
     private WinningLineProviderDummy winningLineProvider = new WinningLineProviderDummy();
     private InputProcessorDummy processor = new InputProcessorDummy();
-    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, winningLineProvider, processor);
+    private GameMasterDummy gameMaster = new GameMasterDummy();
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, winningLineProvider, processor, gameMaster);
 
     @Test
     void IfFieldR0C0IsMarked_FieldR0C0ShouldBeMarkedEither() {

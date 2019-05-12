@@ -12,21 +12,22 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ProvidingTheWinningLineTest {
 
     private MarkedFieldProviderDummy markedFieldProvider = new MarkedFieldProviderDummy();
-    private WinningLineProviderStub provider = new WinningLineProviderStub();
+    private WinningLineProviderStub winningLineProvider = new WinningLineProviderStub();
     private InputProcessorDummy processor = new InputProcessorDummy();
-    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, provider, processor);
+    private GameMasterDummy gameMaster = new GameMasterDummy();
+    private TicTacToeFacade sut = new TicTacToeFacade(markedFieldProvider, winningLineProvider, processor, gameMaster);
 
     @Test
     void IfWinningLineIsProvided_ShouldHaveAWinner() {
         Line line = makeLine();
-        provider.setWinningLine(line);
+        winningLineProvider.setWinningLine(line);
 
         assertHasWinner();
     }
 
     @Test
     void IfNoWinningLineIsProvided_ShouldNotHaveAWinner() {
-        provider.setWinningLine(null);
+        winningLineProvider.setWinningLine(null);
 
         assertHasNoWinner();
     }
@@ -34,7 +35,7 @@ public class ProvidingTheWinningLineTest {
     @Test
     void IfWinningLineIsProvided_ShouldProvideTheSameWinningLine() {
         Line line = makeLine();
-        provider.setWinningLine(line);
+        winningLineProvider.setWinningLine(line);
 
         assertWinningLineEquals(line);
     }

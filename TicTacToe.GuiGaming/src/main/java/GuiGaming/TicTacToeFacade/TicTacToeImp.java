@@ -9,15 +9,15 @@ import GuiGaming.TicTacToePresenter.TicTacToe;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
 
-public class TicTacToeFacade implements TicTacToe {
+public class TicTacToeImp implements TicTacToe {
 
     private final WinningLineProvider winningLineProvider;
     private final MarkedFieldProvider markedFieldProvider;
     private final InputProcessor processor;
     private final GameMaster gameMaster;
 
-    public TicTacToeFacade(MarkedFieldProvider markedFieldProvider, WinningLineProvider winningLineProvider,
-                           InputProcessor processor, GameMaster gameMaster) {
+    public TicTacToeImp(MarkedFieldProvider markedFieldProvider, WinningLineProvider winningLineProvider,
+                        InputProcessor processor, GameMaster gameMaster) {
         this.markedFieldProvider = markedFieldProvider;
         this.winningLineProvider = winningLineProvider;
         this.processor = processor;

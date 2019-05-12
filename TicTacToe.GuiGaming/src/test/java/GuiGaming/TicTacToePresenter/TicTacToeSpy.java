@@ -11,6 +11,7 @@ public class TicTacToeSpy implements TicTacToe {
     private Input processed;
     private HashMap<Field, Mark> marks = new HashMap<>();
     private Line winningLine = null;
+    private boolean didSimulateComputerTurns = false;
 
     public void setWinningLine(Line line) {
         winningLine = line;
@@ -39,4 +40,12 @@ public class TicTacToeSpy implements TicTacToe {
     public Mark getMarkAt(Field field) {
         return marks.get(field);
     }
+
+    public boolean hasSimulatedComputerTurns() {
+        return didSimulateComputerTurns;
+    }
+    public void simulateComputerTurns() {
+        didSimulateComputerTurns = true;
+    }
+
 }

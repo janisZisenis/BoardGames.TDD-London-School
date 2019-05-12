@@ -20,6 +20,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
     public void onBoardClicked(int row, int col) {
         Input i = new Input(row, col);
         tictactoe.process(i);
+        tictactoe.simulateComputerTurns();
     }
 
     public void onFieldUpdated(Field field) {
@@ -55,4 +56,7 @@ public class TicTacToePresenter implements BoardViewDelegate, BoardListener {
         view.clear(field);
     }
 
+    public void onStartClicked() {
+        tictactoe.simulateComputerTurns();
+    }
 }
