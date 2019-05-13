@@ -3,37 +3,39 @@ package App;
 import Domain.Board.Board;
 import Domain.Data.Mark;
 import Domain.IODeviceFactory;
-import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
-import GuiGaming.MultiGuiPlayer.GuiPlayer;
+import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
+import GuiGaming.HybridPlayerAdapter.HybridPlayerAdapter;
+import GuiGaming.MultiHybridPlayer.HybridPlayer;
+import GuiGaming.MultiHybridPlayer.MultiHybridPlayer;
+import GuiGaming.TicTacToeGuiPlayer.TicTacToeGuiPlayer;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
 import SequentialGaming.GameFacade.GameOverRule;
-import SequentialGaming.GameFacade.Player;
 
 public class TicTacToe implements InputProcessor {
 
-    private final HybridPlayer player;
+    private final MultiHybridPlayer player;
     private final GameOverRule rule;
 
-    private GuiPlayer johnHuman;
-    private GuiPlayer haleyHuman;
-    private Player johnCPU;
-    private Player haleyCPU;
+    private HybridPlayer johnHuman;
+    private HybridPlayer haleyHuman;
+    private HybridPlayer johnCPU;
+    private HybridPlayer haleyCPU;
 
     private void initPlayers(Board board) {
-        johnHuman = new GuiTicTacToePlayer(Mark.John, board);
-        haleyHuman = new GuiTicTacToePlayer(Mark.Haley, board);
-        int i = 0;
+        johnHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.John, board));
+        haleyHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.Haley, board));
+
         IODeviceFactory factory = new FXIODeviceFactory();
-        johnCPU = Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory);
-        haleyCPU = Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory);
+        johnCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory));
+        haleyCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory));
     }
 
     public TicTacToe(Board board) {
         initPlayers(board);
 
         this.rule = Domain.Factory.makeGameOverRule(board);
-        this.player = new HybridPlayer(johnCPU);
+        this.player = new MultiHybridPlayer(johnCPU);
         player.add(haleyHuman);
     }
 
@@ -45,17 +47,21 @@ public class TicTacToe implements InputProcessor {
         run();
     }
 
+
+
     //HybridLoopImp
     private void run(Input input) {
-        run();
-        play(input);
-        run();
+        if(needsInput()) {
+            play(input);
+            run();
+        }
     }
 
     private void run() {
         while (!isOver() && !needsInput())
             play();
     }
+
 
 
     //HybridGameFacade

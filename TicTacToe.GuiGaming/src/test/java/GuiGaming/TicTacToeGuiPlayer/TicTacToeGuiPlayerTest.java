@@ -1,4 +1,4 @@
-package GuiGaming.GuiTicTacToePlayer;
+package GuiGaming.TicTacToeGuiPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GuiTicTacToeFacadeTestPlayerTest {
+public class TicTacToeGuiPlayerTest {
 
     private MarkFieldServiceSpy service = new MarkFieldServiceSpy();
-    private GuiTicTacToePlayer sut;
+    private TicTacToeGuiPlayer sut;
 
     @Test
     void IfPlayerIsJohn_ShouldMarkAsJohn() {
@@ -64,11 +64,11 @@ public class GuiTicTacToeFacadeTestPlayerTest {
     }
 
     private void makeGuiPlayerIsJohn() {
-        sut = new GuiTicTacToePlayer(Mark.John, service);
+        sut = new TicTacToeGuiPlayer(Mark.John, service);
     }
 
     private void makeGuiPlayerIsHaley() {
-        sut = new GuiTicTacToePlayer(Mark.Haley, service);
+        sut = new TicTacToeGuiPlayer(Mark.Haley, service);
     }
 
 }

@@ -1,6 +1,6 @@
 package GuiGaming.MultiGuiPlayer;
 
-import Domain.Data.Field.Field;
+import InputGeneration.Input.Input;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ public class OneAdditionalGuiPlayerAdded {
     private MultiGuiPlayer sut = new MultiGuiPlayer(first);
 
     private GuiPlayerSpy second = new GuiPlayerSpy();
-    private Field field = new Field(0, 0);
+    private Input input = new Input(0, 0);
 
     @BeforeEach
     void SetUp() {
@@ -22,8 +22,8 @@ public class OneAdditionalGuiPlayerAdded {
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheFirstOnce() {
-        sut.play(field);
-        sut.play(field);
+        sut.play(input);
+        sut.play(input);
 
         int actual = first.getPlayedTimes();
         int expected = 1;
@@ -32,8 +32,8 @@ public class OneAdditionalGuiPlayerAdded {
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheSecondOnce() {
-        sut.play(field);
-        sut.play(field);
+        sut.play(input);
+        sut.play(input);
 
         int actual = second.getPlayedTimes();
         int expected = 1;
@@ -42,10 +42,10 @@ public class OneAdditionalGuiPlayerAdded {
 
     @Test
     void IfGetsPlayedFourTimes_ShouldHavePlayedTheSecondTwice() {
-        sut.play(field);
-        sut.play(field);
-        sut.play(field);
-        sut.play(field);
+        sut.play(input);
+        sut.play(input);
+        sut.play(input);
+        sut.play(input);
 
         int actual = second.getPlayedTimes();
         int expected = 2;

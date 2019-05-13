@@ -8,7 +8,7 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
+import GuiGaming.TicTacToeGuiPlayer.TicTacToeGuiPlayer;
 import GuiGaming.MultiGuiPlayer.GuiPlayer;
 import GuiGaming.Presentation.BoardViewPresenter.BoardView;
 import InputGeneration.Input.Input;
@@ -40,8 +40,8 @@ public class TicTacToePresenter implements BoardListener {
     private final CyclicListIterator<Object> it;
 
     private void initPlayers(Board board) {
-        johnHuman = new GuiTicTacToePlayer(Mark.John, board);
-        haleyHuman = new GuiTicTacToePlayer(Mark.Haley, board);
+        johnHuman = new TicTacToeGuiPlayer(Mark.John, board);
+        haleyHuman = new TicTacToeGuiPlayer(Mark.Haley, board);
 
         IODeviceFactory factory = new FXIODeviceFactory();
         johnCPU = Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory);
@@ -97,7 +97,7 @@ public class TicTacToePresenter implements BoardListener {
             throw new RuntimeException("Is not human");
         }
 
-        ((GuiPlayer) it.getCurrent()).play(field);
+//        ((GuiPlayer) it.getCurrent()).play(field);
         it.next();
     }
 

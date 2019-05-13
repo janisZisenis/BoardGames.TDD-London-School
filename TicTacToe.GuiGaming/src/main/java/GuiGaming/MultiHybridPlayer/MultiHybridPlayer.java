@@ -16,11 +16,6 @@ public class MultiHybridPlayer implements HybridPlayer {
         it = new CyclicListIterator<>(players);
     }
 
-//    public boolean needsInput() {
-//        HybridPlayer p = it.getCurrent();
-//        return p.needsInput();
-//    }
-
     public void play() {
         HybridPlayer p = it.getCurrent();
         p.play();

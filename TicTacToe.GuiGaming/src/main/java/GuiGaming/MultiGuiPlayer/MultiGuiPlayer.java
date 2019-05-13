@@ -1,6 +1,5 @@
 package GuiGaming.MultiGuiPlayer;
 
-import Domain.Data.Field.Field;
 import InputGeneration.Input.Input;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
@@ -17,14 +16,10 @@ public class MultiGuiPlayer implements GuiPlayer {
         this.it = new CyclicListIterator<>(players);
     }
 
-    public void play(Field field) {
-        GuiPlayer current = it.getCurrent();
-        current.play(field);
-        it.next();
-    }
-
     public void play(Input input) {
-
+        GuiPlayer current = it.getCurrent();
+        current.play(input);
+        it.next();
     }
 
     public void add(GuiPlayer player) {
