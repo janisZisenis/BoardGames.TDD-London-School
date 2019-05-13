@@ -3,6 +3,7 @@ package GuiGaming.TicTacToeGuiPlayer;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.TicTacToePlayer.MarkFieldServiceSpy;
+import InputGeneration.Input.Input;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,9 +16,9 @@ public class TicTacToeGuiPlayerTest {
     @Test
     void IfPlayerIsJohn_ShouldMarkAsJohn() {
         makeGuiPlayerIsJohn();
-        Field field = new Field(0, 0);
+        Input input = new Input(0, 0);
 
-        sut.play(field);
+        sut.play(input);
 
         assertMarkedAs(Mark.John);
     }
@@ -25,9 +26,9 @@ public class TicTacToeGuiPlayerTest {
     @Test
     void IfPlayerIsHaley_ShouldMarkAsHaley() {
         makeGuiPlayerIsHaley();
-        Field field = new Field(0, 0);
+        Input input = new Input(0, 0);
 
-        sut.play(field);
+        sut.play(input);
 
         assertMarkedAs(Mark.Haley);
     }
@@ -35,21 +36,21 @@ public class TicTacToeGuiPlayerTest {
     @Test
     void IfTheFieldIsR0C0_ShouldMarkR0C0() {
         makeGuiPlayerIsJohn();
-        Field field = new Field(0, 0);
+        Input input = new Input(0, 0);
 
-        sut.play(field);
+        sut.play(input);
 
-        assertMarkedFieldEquals(field);
+        assertMarkedFieldEquals(new Field(0, 0));
     }
 
     @Test
     void IfTheFieldIsR2C1_ShouldMarkR2C1() {
         makeGuiPlayerIsJohn();
-        Field field = new Field(2, 1);
+        Input input = new Input(2, 1);
 
-        sut.play(field);
+        sut.play(input);
 
-        assertMarkedFieldEquals(field);
+        assertMarkedFieldEquals(new Field(2, 1));
     }
 
 

@@ -43,7 +43,7 @@ public class Main extends Application {
 
         IODeviceFactory factory = new FXIODeviceFactory();
         johnCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory));
-        haleyCPU = new HybridPlayerAdapter(Domain.Factory.makeHumbleComputerPlayer(Mark.Haley, board, factory));
+        haleyCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory));
     }
 
 
@@ -61,7 +61,7 @@ public class Main extends Application {
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
 
         MultiHybridPlayer player = new MultiHybridPlayer(johnHuman);
-        player.add(haleyCPU);
+        player.add(haleyHuman);
         HybridGame game = new HybridGameFacade(rule, player);
         TicTacToe tictactoe = new TicTacToe(game);
 

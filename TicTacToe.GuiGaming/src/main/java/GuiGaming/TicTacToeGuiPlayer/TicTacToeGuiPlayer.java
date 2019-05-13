@@ -16,10 +16,6 @@ public class TicTacToeGuiPlayer implements GuiPlayer {
         this.service = service;
     }
 
-    public void play(Field f) {
-        service.mark(f, mark);
-    }
-
     public void play(Input input) {
         Field f = makeField(input);
         service.mark(f, mark);
