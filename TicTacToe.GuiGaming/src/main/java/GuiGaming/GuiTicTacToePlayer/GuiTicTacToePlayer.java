@@ -4,6 +4,7 @@ import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.TicTacToePlayer.MarkFieldService;
 import GuiGaming.MultiGuiPlayer.GuiPlayer;
+import InputGeneration.Input.Input;
 
 public class GuiTicTacToePlayer implements GuiPlayer {
 
@@ -17,5 +18,9 @@ public class GuiTicTacToePlayer implements GuiPlayer {
 
     public void play(Field f) {
         service.mark(f, mark);
+    }
+
+    public void play(Input input) {
+
     }
 }
