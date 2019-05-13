@@ -82,7 +82,6 @@ public class FXBoardView extends Pane implements BoardView, WinningLineView {
     }
 
 
-
     public void setField(Field field, Mark mark) {
         String text = mapper.map(mark);
         setFieldText(field, text);
