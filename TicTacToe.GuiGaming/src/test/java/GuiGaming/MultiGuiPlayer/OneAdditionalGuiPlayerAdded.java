@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class OneAdditionalGuiPlayersAdded {
+public class OneAdditionalGuiPlayerAdded {
 
     private GuiPlayerSpy first = new GuiPlayerSpy();
     private MultiGuiPlayer sut = new MultiGuiPlayer(first);
