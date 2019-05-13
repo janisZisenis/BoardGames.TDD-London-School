@@ -1,12 +1,11 @@
-package GuiGaming.MultiHybridPlayer;
+package GuiGaming.HybridGameFacade;
 
 import InputGeneration.Input.Input;
 
-public class HybridPlayerSpy implements HybridPlayer {
+public class HybridPlayerSpy extends HybridPlayerStub {
 
     private int timesPlayed = 0;
     private Input playedInput;
-    private boolean needsInput = false;
 
     public int getPlayedTimes() {
         return timesPlayed;
@@ -20,13 +19,6 @@ public class HybridPlayerSpy implements HybridPlayer {
     }
     public void play(Input input) {
         playedInput = input;
-    }
-
-    public void setNeedsInput(boolean needsInput) {
-        this.needsInput = needsInput;
-    }
-    public boolean needsInput() {
-        return needsInput;
     }
 
 }

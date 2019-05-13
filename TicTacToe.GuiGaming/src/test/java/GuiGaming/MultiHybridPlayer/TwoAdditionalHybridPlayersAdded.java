@@ -1,5 +1,6 @@
 package GuiGaming.MultiHybridPlayer;
 
+import GuiGaming.HybridGameFacade.HybridPlayerSpy;
 import InputGeneration.Input.Input;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
