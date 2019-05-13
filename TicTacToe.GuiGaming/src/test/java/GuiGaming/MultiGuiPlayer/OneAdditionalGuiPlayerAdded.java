@@ -25,9 +25,7 @@ public class OneAdditionalGuiPlayerAdded {
         sut.play(input);
         sut.play(input);
 
-        int actual = first.getPlayedTimes();
-        int expected = 1;
-        assertEquals(expected, actual);
+        assertHasPlayedTimes(first, 1);
     }
 
     @Test
@@ -35,9 +33,7 @@ public class OneAdditionalGuiPlayerAdded {
         sut.play(input);
         sut.play(input);
 
-        int actual = second.getPlayedTimes();
-        int expected = 1;
-        assertEquals(expected, actual);
+        assertHasPlayedTimes(second, 1);
     }
 
     @Test
@@ -47,8 +43,11 @@ public class OneAdditionalGuiPlayerAdded {
         sut.play(input);
         sut.play(input);
 
-        int actual = second.getPlayedTimes();
-        int expected = 2;
+        assertHasPlayedTimes(second, 2);
+    }
+
+    private void assertHasPlayedTimes(GuiPlayerSpy p, int expected) {
+        int actual = p.getPlayedTimes();
         assertEquals(expected, actual);
     }
 

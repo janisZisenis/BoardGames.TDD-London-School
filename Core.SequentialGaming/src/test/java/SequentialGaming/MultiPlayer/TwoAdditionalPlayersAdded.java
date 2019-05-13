@@ -27,8 +27,11 @@ public class TwoAdditionalPlayersAdded {
         sut.play();
         sut.play();
 
-        int actual = third.getPlayedTimes();
-        int expected = 1;
+        assertHasPlayedTimes(third, 1);
+    }
+
+    private void assertHasPlayedTimes(PlayerSpy p, int expected) {
+        int actual = p.getPlayedTimes();
         assertEquals(expected, actual);
     }
 
