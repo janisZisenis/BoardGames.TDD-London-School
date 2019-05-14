@@ -5,20 +5,20 @@ import InputGeneration.InputProcessor;
 
 public class HybridGameRunner implements InputProcessor {
 
-    private final HybridGame loop;
+    private final HybridGame game;
 
-    public HybridGameRunner(HybridGame loop) {
-        this.loop = loop;
+    public HybridGameRunner(HybridGame game) {
+        this.game = game;
     }
 
     public void run() {
-        loop.playComputerTurns();
+        game.playComputerTurns();
     }
 
     public void process(Input input) {
-        if(loop.nextIsHuman()) {
-            loop.playHuman(input);
-            loop.playComputerTurns();
+        if(game.nextIsHuman()) {
+            game.playHuman(input);
+            game.playComputerTurns();
         }
     }
 }

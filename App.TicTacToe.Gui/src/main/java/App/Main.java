@@ -9,6 +9,7 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import GuiGaming.HybridGameImp.HybridGameImp;
 import GuiGaming.HybridGameImp.HybridPlayer;
 import GuiGaming.HybridGameRunner.HybridGameRunner;
 import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
@@ -61,8 +62,8 @@ public class Main extends Application {
 
         MultiHybridPlayer player = new MultiHybridPlayer(johnCPU);
         player.add(haleyHuman);
-        HybridGameLoopImp tictactoe = new HybridGameLoopImp(rule, player);
-        HybridGameRunner runner = new HybridGameRunner(tictactoe);
+        HybridGameImp game = new HybridGameImp(rule, player);
+        HybridGameRunner runner = new HybridGameRunner(game);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
