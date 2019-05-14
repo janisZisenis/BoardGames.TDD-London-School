@@ -1,8 +1,9 @@
 package GuiGaming.HybridGameLoopImp;
 
+import GuiGaming.HybridGameRunner.HybridGameLoop;
 import InputGeneration.Input.Input;
 
-public class HybridGameLoopImp {
+public class HybridGameLoopImp implements HybridGameLoop {
 
     private final HybridGame game;
 
@@ -10,19 +11,17 @@ public class HybridGameLoopImp {
         this.game = game;
     }
 
-    public boolean isPlayable() {
-        return !game.isOver() && game.needsInput();
+    public boolean needsInput() {
+        return game.needsInput();
     }
 
-    public boolean isRunnable() {
-        return !game.isOver() && !game.needsInput();
-    }
-
-    public void play(Input input) {
+    public void run(Input input) {
         game.play(input);
     }
 
     public void run() {
-
+        while(game.isPlayable())
+            game.play();
     }
+
 }

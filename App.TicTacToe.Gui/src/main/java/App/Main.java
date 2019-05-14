@@ -9,8 +9,7 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import GuiGaming.HybridGameLoopImp.HybridGame;
-import GuiGaming.HybridGameFacade.HybridGameFacade;
+import GuiGaming.HybridGameRunner.HybridGameRunner;
 import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
 import GuiGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import GuiGaming.MultiHybridPlayer.HybridPlayer;
@@ -62,12 +61,12 @@ public class Main extends Application {
 
         MultiHybridPlayer player = new MultiHybridPlayer(johnCPU);
         player.add(haleyHuman);
-        HybridGame game = new HybridGameFacade(rule, player);
-        HybridGameRunner tictactoe = new HybridGameRunner(game);
+        HybridGameLoopImp tictactoe = new HybridGameLoopImp(rule, player);
+        HybridGameRunner runner = new HybridGameRunner(tictactoe);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
-        InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(tictactoe, validator, alerter);
+        InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(runner, validator, alerter);
         processor = new GameOverInputProcessor(processor, rule);
 
         BoardViewPresenter boardPresenter = new BoardViewPresenter(board, view, processor);
@@ -78,11 +77,11 @@ public class Main extends Application {
         board.addListener(boardPresenter);
         board.addListener(winningLinePresenter);
 
-        primaryStage.setTitle("HybridGameRunner");
+        primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(view));
         primaryStage.setResizable(false);
         primaryStage.show();
 
-        tictactoe.run();
+        runner.run();
     }
 }

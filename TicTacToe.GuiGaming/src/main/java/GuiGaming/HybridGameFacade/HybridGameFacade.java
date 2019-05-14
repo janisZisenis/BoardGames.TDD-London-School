@@ -1,11 +1,10 @@
 package GuiGaming.HybridGameFacade;
 
-import GuiGaming.HybridGameLoopImp.HybridGame;
 import GuiGaming.MultiHybridPlayer.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.GameOverRule;
 
-public class HybridGameFacade implements HybridGame {
+public class HybridGameFacade {
 
     private final HybridPlayer player;
     private final GameOverRule rule;
