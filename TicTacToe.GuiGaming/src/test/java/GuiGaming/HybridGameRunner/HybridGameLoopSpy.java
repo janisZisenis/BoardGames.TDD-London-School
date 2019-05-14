@@ -3,7 +3,7 @@ package GuiGaming.HybridGameRunner;
 
 import InputGeneration.Input.Input;
 
-public class HybridGameLoopSpy implements HybridGameLoop {
+public class HybridGameLoopSpy implements HybridGame {
 
     private boolean needsInput = false;
 

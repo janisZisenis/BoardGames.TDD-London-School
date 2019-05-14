@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HybridGameLoopShunt implements HybridGameLoop {
+public class HybridGameLoopShunt implements HybridGame {
 
     private String logString = "";
     private boolean nextIsHuman = false;

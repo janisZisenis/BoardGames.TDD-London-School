@@ -5,9 +5,9 @@ import InputGeneration.InputProcessor;
 
 public class HybridGameRunner implements InputProcessor {
 
-    private final HybridGameLoop loop;
+    private final HybridGame loop;
 
-    public HybridGameRunner(HybridGameLoop loop) {
+    public HybridGameRunner(HybridGame loop) {
         this.loop = loop;
     }
 
