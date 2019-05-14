@@ -15,16 +15,16 @@ public class HybridGameLoopImp implements HybridGameLoop {
         this.rule = rule;
     }
 
-    public boolean needsInput() {
+    public boolean nextIsHuman() {
         return gameNeedsInput();
     }
 
-    public void run(Input input) {
-        play(input);
-        run();
+    public void playHuman(Input input) {
+        gamePlay(input);
+        playComputerTurns();
     }
 
-    public void run() {
+    public void playComputerTurns() {
         while(isPlayable())
             play();
     }
@@ -42,7 +42,7 @@ public class HybridGameLoopImp implements HybridGameLoop {
         return player.needsInput() && !rule.isGameOver();
     }
 
-    private void play(Input input) {
+    private void gamePlay(Input input) {
         player.play(input);
     }
 }

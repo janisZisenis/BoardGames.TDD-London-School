@@ -11,15 +11,15 @@ public class HybridGameLoopImp implements HybridGameLoop {
         this.game = game;
     }
 
-    public boolean needsInput() {
+    public boolean nextIsHuman() {
         return game.needsInput();
     }
 
-    public void run(Input input) {
+    public void playHuman(Input input) {
         game.play(input);
     }
 
-    public void run() {
+    public void playComputerTurns() {
         while(game.isPlayable())
             game.play();
     }

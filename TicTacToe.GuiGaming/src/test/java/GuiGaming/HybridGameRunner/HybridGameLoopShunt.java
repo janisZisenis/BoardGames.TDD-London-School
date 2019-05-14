@@ -8,18 +8,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class HybridGameLoopShunt implements HybridGameLoop {
 
     private String logString = "";
-    private boolean needsInput = false;
+    private boolean nextIsHuman = false;
 
     private HybridGameRunner sut = new HybridGameRunner(this);
 
     @Test
-    void IfNeedsInput_ShouldRunInputBeforeRun() {
-        this.needsInput = true;
+    void IfInputGetsProcessed_ShouldPlayInputBeforeComputerTurns() {
+        this.nextIsHuman = true;
         Input input = new Input(0, 0);
 
         sut.process(input);
 
-        assertLogStringEquals("runInput run ");
+        assertLogStringEquals("playInput playComputerTurns ");
+    }
+
+    @Test
+    void IfGetsRun_ShouldPlayComputerTurns() {
+        sut.run();
+
+        assertLogStringEquals("playComputerTurns ");
     }
 
     private void assertLogStringEquals(String expected) {
@@ -27,15 +34,15 @@ public class HybridGameLoopShunt implements HybridGameLoop {
         assertEquals(expected, actual);
     }
 
-    public boolean needsInput() {
-        return needsInput;
+    public boolean nextIsHuman() {
+        return nextIsHuman;
     }
 
-    public void run(Input input) {
-        logString += "runInput ";
+    public void playHuman(Input input) {
+        logString += "playInput ";
     }
 
-    public void run() {
-        logString += "run ";
+    public void playComputerTurns() {
+        logString += "playComputerTurns ";
     }
 }

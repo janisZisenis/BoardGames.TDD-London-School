@@ -14,7 +14,7 @@ public class HybridGameLoopImpTest {
     void IfGameIsPlayableOnce_ShouldPlayOnce() {
         game.setTimesPlayable(1);
 
-        sut.run();
+        sut.playComputerTurns();
 
         assertHasPlayedTimes(1);
     }
@@ -23,7 +23,7 @@ public class HybridGameLoopImpTest {
     void IfGameIsPlayableTwice_ShouldPlayTwice() {
         game.setTimesPlayable(2);
 
-        sut.run();
+        sut.playComputerTurns();
 
         assertHasPlayedTimes(2);
     }
@@ -49,12 +49,12 @@ public class HybridGameLoopImpTest {
     }
 
     private void assertDoesNotNeedInput() {
-        boolean actual = sut.needsInput();
+        boolean actual = sut.nextIsHuman();
         assertFalse(actual);
     }
 
     private void assertNeedsInput() {
-        boolean actual = sut.needsInput();
+        boolean actual = sut.nextIsHuman();
         assertTrue(actual);
     }
 
@@ -64,7 +64,7 @@ public class HybridGameLoopImpTest {
         game.setTimesNeedsInput(1);
         Input input = new Input(0, 0);
 
-        sut.run(input);
+        sut.playHuman(input);
 
         assertRunInputEquals(new Input(0, 0));
     }
@@ -74,7 +74,7 @@ public class HybridGameLoopImpTest {
         game.setTimesNeedsInput(1);
         Input input = new Input(1, 2);
 
-        sut.run(input);
+        sut.playHuman(input);
 
         assertRunInputEquals(new Input(1, 2));
     }

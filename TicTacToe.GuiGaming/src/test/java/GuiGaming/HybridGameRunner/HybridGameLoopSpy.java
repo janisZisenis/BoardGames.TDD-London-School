@@ -7,33 +7,33 @@ public class HybridGameLoopSpy implements HybridGameLoop {
 
     private boolean needsInput = false;
 
-    private Input runInput;
-    private boolean didRunInput = false;
-    private boolean didRun = false;
+    private Input playedInput;
+    private boolean didPlayInput = false;
+    private boolean didPlayComputerTurns = false;
 
 
-    public void setNeedsInput(boolean b) {
+    public void nextIsHuman(boolean b) {
         this.needsInput = b;
     }
-    public boolean needsInput() {
+    public boolean nextIsHuman() {
         return needsInput;
     }
 
-    public boolean hasRun() {
-        return didRun;
+    public boolean hasPlayedComputerTurns() {
+        return didPlayComputerTurns;
     }
-    public void run() {
-        didRun = true;
+    public void playComputerTurns() {
+        didPlayComputerTurns = true;
     }
 
-    public boolean hasRunInput() {
-        return didRunInput;
+    public boolean hasPlayedInput() {
+        return didPlayInput;
     }
-    public Input getRunInput() {
-        return runInput;
+    public Input getPlayedInput() {
+        return playedInput;
     }
-    public void run(Input input) {
-        didRunInput = true;
-        runInput = input;
+    public void playHuman(Input input) {
+        didPlayInput = true;
+        playedInput = input;
     }
 }
