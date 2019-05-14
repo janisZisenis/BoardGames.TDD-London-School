@@ -5,7 +5,7 @@ import InputGeneration.Input.Input;
 
 public class HybridGameLoopSpy implements HybridGame {
 
-    private boolean needsInput = false;
+    private boolean nextIsHuman = false;
 
     private Input playedInput;
     private boolean didPlayInput = false;
@@ -13,10 +13,10 @@ public class HybridGameLoopSpy implements HybridGame {
 
 
     public void nextIsHuman(boolean b) {
-        this.needsInput = b;
+        this.nextIsHuman = b;
     }
     public boolean nextIsHuman() {
-        return needsInput;
+        return nextIsHuman;
     }
 
     public boolean hasPlayedComputerTurns() {

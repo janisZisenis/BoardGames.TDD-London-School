@@ -14,27 +14,27 @@ public class HybridGameImpTest {
     private HybridGameImp sut = new HybridGameImp(rule, player);
 
     @Test
-    void IfPlayerIsComputer_NextShouldBeComputer() {
+    void IfPlayerIsComputer_NextShouldNotBeHuman() {
         player.setTimesIsComputer(1);
 
-        assertNextIsComputer();
+        assertNextIsNotHuman();
     }
 
-    private void assertNextIsComputer() {
-        boolean actual = sut.nextIsComputer();
-        assertTrue(actual);
+    private void assertNextIsNotHuman() {
+        boolean actual = sut.nextIsHuman();
+        assertFalse(actual);
     }
 
     @Test
-    void IfPlayerIsNotHuman_NextShouldNotBeComputer() {
+    void IfPlayerIsNotComputer_NextShouldBeHuman() {
         player.setTimesIsComputer(0);
 
-        assertNextIsNotComputer();
+        assertNextIsHuman();
     }
 
-    private void assertNextIsNotComputer() {
-        boolean actual = sut.nextIsComputer();
-        assertFalse(actual);
+    private void assertNextIsHuman() {
+        boolean actual = sut.nextIsHuman();
+        assertTrue(actual);
     }
 
     @Test

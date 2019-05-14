@@ -4,7 +4,7 @@ import GuiGaming.HybridGameRunner.HybridGame;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.GameOverRule;
 
-public class HybridGameImp {
+public class HybridGameImp implements HybridGame {
 
     private final HybridPlayer player;
     private final GameOverRule rule;
@@ -24,8 +24,8 @@ public class HybridGameImp {
             throw new HybridGame.CannotPlayHumanOnComputersTurn();
     }
 
-    public boolean nextIsComputer() {
-        return player.isComputer();
+    public boolean nextIsHuman() {
+        return !player.isComputer();
     }
 
     public void playComputerTurns() {
