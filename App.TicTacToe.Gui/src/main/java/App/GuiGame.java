@@ -1,6 +1,6 @@
 package App;
 
-import GuiGaming.MultiHybridPlayer.HybridPlayer;
+import GuiGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.GameOverRule;
 
@@ -15,11 +15,11 @@ public class GuiGame {
     }
 
     public boolean needsInput() {
-        return player.needsInput() && !isOver();
+        return player.isComputer() && !isOver();
     }
 
     public void play(Input input) {
-        player.play(input);
+        player.playHuman(input);
     }
 
     public boolean isPlayable() {
@@ -27,7 +27,7 @@ public class GuiGame {
     }
 
     public void play() {
-        player.play();
+        player.playComputer();
     }
 
     private boolean isOver() {

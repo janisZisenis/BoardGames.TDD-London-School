@@ -1,7 +1,7 @@
 package GuiGaming.HybridGuiPlayerAdapter;
 
+import GuiGaming.HybridGameImp.HybridPlayer;
 import GuiGaming.MultiGuiPlayer.GuiPlayer;
-import GuiGaming.MultiHybridPlayer.HybridPlayer;
 import InputGeneration.Input.Input;
 
 public class HybridGuiPlayerAdapter implements HybridPlayer {
@@ -12,15 +12,15 @@ public class HybridGuiPlayerAdapter implements HybridPlayer {
         this.player = player;
     }
 
-    public boolean needsInput() {
-        return true;
+    public boolean isComputer() {
+        return false;
     }
 
-    public void play() {
-        throw new NeedsInputButWasPlayedWithout();
+    public void playComputer() {
+        throw new CannotPlayComputerOnHumansTurn();
     }
 
-    public void play(Input input) {
+    public void playHuman(Input input) {
         player.play(input);
     }
 }

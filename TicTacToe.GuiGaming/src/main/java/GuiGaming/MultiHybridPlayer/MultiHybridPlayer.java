@@ -1,5 +1,6 @@
 package GuiGaming.MultiHybridPlayer;
 
+import GuiGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
@@ -16,9 +17,9 @@ public class MultiHybridPlayer implements HybridPlayer {
         it = new CyclicListIterator<>(players);
     }
 
-    public void play() {
+    public void playComputer() {
         HybridPlayer p = it.getCurrent();
-        p.play();
+        p.playComputer();
         it.next();
     }
 
@@ -26,14 +27,14 @@ public class MultiHybridPlayer implements HybridPlayer {
         players.add(player);
     }
 
-    public void play(Input input) {
+    public void playHuman(Input input) {
         HybridPlayer p = it.getCurrent();
-        p.play(input);
+        p.playHuman(input);
         it.next();
     }
 
-    public boolean needsInput() {
+    public boolean isComputer() {
         HybridPlayer p = it.getCurrent();
-        return p.needsInput();
+        return p.isComputer();
     }
 }

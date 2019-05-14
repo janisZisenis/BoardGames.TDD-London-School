@@ -1,6 +1,6 @@
 package GuiGaming.HybridPlayerAdapter;
 
-import GuiGaming.MultiHybridPlayer.HybridPlayer;
+import GuiGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.PlayerSpy;
 import org.junit.jupiter.api.Test;
@@ -14,27 +14,27 @@ public class HybridPlayerAdapterTest {
     private HybridPlayerAdapter sut = new HybridPlayerAdapter(player);
 
     @Test
-    void FreshInstance_ShouldNotNeedInput() {
-        assertDoesNotNeedInput();
+    void FreshInstance_ShouldBeComputer() {
+        assertIsComputer();
     }
 
-    private void assertDoesNotNeedInput() {
-        boolean actual = sut.needsInput();
-        assertFalse(actual);
+    private void assertIsComputer() {
+        boolean actual = sut.isComputer();
+        assertTrue(actual);
     }
 
     @Test
-    void IfGetsPlayedWithInput_ShouldThrow() {
+    void IfGetsPlayedHuman_ShouldThrow() {
         Input input = new Input(0, 0);
 
-        Executable act = () -> sut.play(input);
+        Executable act = () -> sut.playHuman(input);
 
-        assertThrows(HybridPlayer.DoesNotNeedInputButWasPlayedWith.class, act);
+        assertThrows(HybridPlayer.CannotPlayComputerOnHumansTurn.class, act);
     }
 
     @Test
-    void IfGetsPlayedWithoutInput_ShouldPlay() {
-        sut.play();
+    void IfGetsPlayedComputer_ShouldPlayComputer() {
+        sut.playComputer();
 
         assertHasPlayedTimes(1);
     }

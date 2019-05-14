@@ -1,6 +1,6 @@
 package GuiGaming.HybridPlayerAdapter;
 
-import GuiGaming.MultiHybridPlayer.HybridPlayer;
+import GuiGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.Player;
 
@@ -12,15 +12,15 @@ public class HybridPlayerAdapter implements HybridPlayer {
         this.player = player;
     }
 
-    public boolean needsInput() {
-        return false;
+    public boolean isComputer() {
+        return true;
     }
 
-    public void play(Input input) {
-        throw new DoesNotNeedInputButWasPlayedWith();
+    public void playHuman(Input input) {
+        throw new CannotPlayComputerOnHumansTurn();
     }
 
-    public void play() {
+    public void playComputer() {
         player.play();
     }
 }

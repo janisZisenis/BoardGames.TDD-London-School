@@ -1,7 +1,7 @@
 package App;
 
+import GuiGaming.HybridGameImp.HybridPlayer;
 import GuiGaming.HybridGameRunner.HybridGame;
-import GuiGaming.MultiHybridPlayer.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.GameOverRule;
 
@@ -31,18 +31,18 @@ public class HybridGameLoopImp implements HybridGame {
 
     //HybridGame
     private boolean isPlayable() {
-        return !rule.isGameOver() && !player.needsInput();
+        return !rule.isGameOver() && !player.isComputer();
     }
 
     private void play() {
-        player.play();
+        player.playComputer();
     }
 
     private boolean gameNeedsInput() {
-        return player.needsInput() && !rule.isGameOver();
+        return player.isComputer() && !rule.isGameOver();
     }
 
     private void gamePlay(Input input) {
-        player.play(input);
+        player.playHuman(input);
     }
 }
