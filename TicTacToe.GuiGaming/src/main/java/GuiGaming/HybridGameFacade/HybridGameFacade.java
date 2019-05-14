@@ -1,6 +1,6 @@
 package GuiGaming.HybridGameFacade;
 
-import GuiGaming.HybridGameFacade.Api.HybridGame;
+import GuiGaming.HybridGameLoopImp.HybridGame;
 import GuiGaming.MultiHybridPlayer.HybridPlayer;
 import InputGeneration.Input.Input;
 import SequentialGaming.GameFacade.GameOverRule;

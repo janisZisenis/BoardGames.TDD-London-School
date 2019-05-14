@@ -9,7 +9,7 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import GuiGaming.HybridGameFacade.Api.HybridGame;
+import GuiGaming.HybridGameLoopImp.HybridGame;
 import GuiGaming.HybridGameFacade.HybridGameFacade;
 import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
 import GuiGaming.HybridPlayerAdapter.HybridPlayerAdapter;
@@ -60,10 +60,10 @@ public class Main extends Application {
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
 
-        MultiHybridPlayer player = new MultiHybridPlayer(johnHuman);
+        MultiHybridPlayer player = new MultiHybridPlayer(johnCPU);
         player.add(haleyHuman);
         HybridGame game = new HybridGameFacade(rule, player);
-        TicTacToe tictactoe = new TicTacToe(game);
+        HybridGameRunner tictactoe = new HybridGameRunner(game);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
@@ -78,11 +78,11 @@ public class Main extends Application {
         board.addListener(boardPresenter);
         board.addListener(winningLinePresenter);
 
-        primaryStage.setTitle("TicTacToe");
+        primaryStage.setTitle("HybridGameRunner");
         primaryStage.setScene(new Scene(view));
         primaryStage.setResizable(false);
         primaryStage.show();
 
-        tictactoe.start();
+        tictactoe.run();
     }
 }

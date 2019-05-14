@@ -1,4 +1,4 @@
-package GuiGaming.HybridGameFacade.Api;
+package GuiGaming.HybridGameLoopImp;
 
 import InputGeneration.Input.Input;
 
