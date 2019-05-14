@@ -16,7 +16,7 @@ public class NotifyingListenerOrderShuntTest implements BoardListener, Board {
 
     @Test
     void IfListenerIsSet_ItShouldBeUpdatedWhenAfterMarkingTheField() {
-        sut.setListener(this);
+        sut.addListener(this);
 
         sut.mark(new Field(0, 0), Mark.John);
 

@@ -42,7 +42,7 @@ public class Main extends Application {
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
         MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
-        board.setListener(listener);
+        board.addListener(listener);
 
         FXIODeviceFactory factory = new FXIODeviceFactory();
         FXIODeviceFactory.setHumanInputGenerator(fxGenerator);

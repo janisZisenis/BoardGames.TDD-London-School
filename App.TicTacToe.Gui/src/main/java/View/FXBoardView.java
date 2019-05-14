@@ -1,11 +1,12 @@
 package View;
 
-import GuiGaming.TicTacToePresenter.Api.BoardViewDelegate;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import GuiGaming.TicTacToePresenter.BoardView;
+import GuiGaming.Presentation.BoardViewPresenter.Api.BoardViewDelegate;
+import GuiGaming.Presentation.BoardViewPresenter.BoardView;
+import GuiGaming.Presentation.WinningLinePresenter.WinningLineView;
 import Mapping.MarkToStringMapper;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -17,7 +18,7 @@ import javafx.scene.text.Font;
 
 import java.util.HashMap;
 
-public class FXBoardView extends Pane implements BoardView {
+public class FXBoardView extends Pane implements BoardView, WinningLineView {
 
     private final HashMap<Field, FXTile> tiles = new HashMap<>();
     private final HashMap<FXTile, Field> fields = new HashMap<>();
@@ -29,7 +30,7 @@ public class FXBoardView extends Pane implements BoardView {
     private BoardViewDelegate delegate;
 
     public FXBoardView(MarkToStringMapper mapper) {
-        this.sideLength = getRoundedSideLength(250);
+        this.sideLength = getRoundedSideLength(400);
         this.mapper = mapper;
 
         initTiles();
@@ -65,7 +66,6 @@ public class FXBoardView extends Pane implements BoardView {
         getChildren().add(t);
     }
 
-
     public void setDelegate(BoardViewDelegate delegate) {
         this.delegate = delegate;
     }
@@ -82,13 +82,12 @@ public class FXBoardView extends Pane implements BoardView {
     }
 
 
-
     public void setField(Field field, Mark mark) {
         String text = mapper.map(mark);
         setFieldText(field, text);
     }
 
-    public void clear(Field field) {
+    public void clearField(Field field) {
         setFieldText(field, "");
     }
 
@@ -97,26 +96,26 @@ public class FXBoardView extends Pane implements BoardView {
         tile.setText(text);
     }
 
-    public void highLight(Line line) {
-        highlightLine(line);
+    public void highlightLine(Line line) {
+        highlight(line);
         lowlightOtherFields(line);
     }
 
-    private void highlightLine(Line line) {
-        highlightField(line.getFirst());
-        highlightField(line.getSecond());
-        highlightField(line.getThird());
+    private void highlight(Line line) {
+        magnifyField(line.getFirst());
+        magnifyField(line.getSecond());
+        magnifyField(line.getThird());
     }
 
-    private void highlightField(Field f) {
+    private void magnifyField(Field f) {
         FXTile tile = tiles.get(f);
-        tile.highlight();
+        tile.magnify();
     }
 
     private void lowlightOtherFields(Line line) {
         for(Field f : tiles.keySet())
             if(!lineContains(line, f))
-                lowlightField(f);
+                minimizeField(f);
     }
 
     private boolean lineContains(Line line, Field f) {
@@ -127,9 +126,9 @@ public class FXBoardView extends Pane implements BoardView {
         return first.equals(f) || second.equals(f) || third.equals(f);
     }
 
-    private void lowlightField(Field f) {
+    private void minimizeField(Field f) {
         FXTile tile = tiles.get(f);
-        tile.lowlight();
+        tile.minimize();
     }
 
     private class FXTile extends StackPane {
@@ -197,11 +196,11 @@ public class FXBoardView extends Pane implements BoardView {
             label.setText(s);
         }
 
-        public void highlight() {
+        public void magnify() {
             growing.play();
         }
 
-        public void lowlight() {
+        public void minimize() {
             shrinking.play();
         }
 

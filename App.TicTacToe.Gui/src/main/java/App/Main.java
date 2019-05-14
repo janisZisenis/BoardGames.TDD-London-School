@@ -2,24 +2,22 @@ package App;
 
 
 import Domain.Board.Board;
-import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
-import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
-import Domain.GameEvaluation.GameEvaluator.LineProvider;
-import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
+import Domain.GameOverInputProcessor.GameOverInputProcessor;
+import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import Domain.InputGeneration.InputValidators.GameOverValidator.GameOverValidator;
-import GuiGaming.GuiPlayer;
-import GuiGaming.GuiTicTacToePlayer.GuiTicTacToePlayer;
-import GuiGaming.MultiGuiPlayer.MultiGuiPlayer;
-import GuiGaming.PlayingInputProcessor.PlayingInputProcessor;
-import GuiGaming.TicTacToeFacade.TicTacToeFacade;
-import GuiGaming.TicTacToePresenter.TicTacToe;
-import GuiGaming.TicTacToePresenter.TicTacToePresenter;
+import GuiGaming.HybridGameImp.HybridGameImp;
+import GuiGaming.HybridGameImp.HybridPlayer;
+import GuiGaming.HybridGameRunner.HybridGameRunner;
+import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
+import GuiGaming.HybridPlayerAdapter.HybridPlayerAdapter;
+import GuiGaming.MultiHybridPlayer.MultiHybridPlayer;
+import GuiGaming.Presentation.BoardViewPresenter.BoardViewPresenter;
+import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
+import GuiGaming.TicTacToeGuiPlayer.TicTacToeGuiPlayer;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
@@ -34,29 +32,18 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private static InputProcessor makeProcessor(Board board) {
-        GuiPlayer first = new GuiTicTacToePlayer(Mark.John, board);
-        GuiPlayer  second = new GuiTicTacToePlayer(Mark.Haley, board);
+    private static HybridPlayer johnHuman;
+    private static HybridPlayer haleyHuman;
+    private static HybridPlayer johnCPU;
+    private static HybridPlayer haleyCPU;
 
-        MultiGuiPlayer player = new MultiGuiPlayer(first);
-        player.add(second);
+    private static void initPlayers(Board board) {
+        johnHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.John, board));
+        haleyHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.Haley, board));
 
-        GameOverRule rule = Domain.Factory.makeGameOverRule(board);
-        InputValidator emptyValidator = new FieldIsEmptyValidator(board);
-        InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
-        InputValidator gameOverValidator = new GameOverValidator(rule);
-
-        InputProcessor processor = new PlayingInputProcessor(player);
-        processor = InputGeneration.Factory.makeAlertingInputProcessor(processor, emptyValidator, alerter);
-        processor = InputGeneration.Factory.makeValidatingInputProcessor(processor, gameOverValidator);
-
-        return processor;
-    }
-
-    private static WinningLineProvider makeWinningLineProvider(Board board) {
-        LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
-        LineProvider lineProvider = new HumbleLineProvider();
-        return new GameEvaluator(lineProvider, lineEvaluator);
+        IODeviceFactory factory = new FXIODeviceFactory();
+        johnCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory));
+        haleyCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory));
     }
 
 
@@ -66,20 +53,36 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         ListenableBoard board = new ListenableBoard(new HashingBoard());
-
-        InputProcessor processor = makeProcessor(board);
-        WinningLineProvider provider = makeWinningLineProvider(board);
-        TicTacToe ticTacToe = new TicTacToeFacade(board, provider, processor);
+        initPlayers(board);
 
         MarkToXOMapper mapper = new MarkToXOMapper();
         FXBoardView view = new FXBoardView(mapper);
-        TicTacToePresenter presenter = new TicTacToePresenter(ticTacToe, view);
-        view.setDelegate(presenter);
-        board.setListener(presenter);
+
+        GameOverRule rule = Domain.Factory.makeGameOverRule(board);
+
+        MultiHybridPlayer player = new MultiHybridPlayer(johnCPU);
+        player.add(haleyHuman);
+        HybridGameImp game = new HybridGameImp(rule, player);
+        HybridGameRunner runner = new HybridGameRunner(game);
+
+        InputValidator validator = new FieldIsEmptyValidator(board);
+        InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
+        InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(runner, validator, alerter);
+        processor = new GameOverInputProcessor(processor, rule);
+
+        BoardViewPresenter boardPresenter = new BoardViewPresenter(board, view, processor);
+        view.setDelegate(boardPresenter);
+
+        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
+        WinningLinePresenter winningLinePresenter = new WinningLinePresenter(view, provider);
+        board.addListener(boardPresenter);
+        board.addListener(winningLinePresenter);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(view));
         primaryStage.setResizable(false);
         primaryStage.show();
+
+        runner.run();
     }
 }

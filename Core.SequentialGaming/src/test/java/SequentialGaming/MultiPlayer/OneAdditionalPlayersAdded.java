@@ -24,9 +24,7 @@ public class OneAdditionalPlayersAdded {
         sut.play();
         sut.play();
 
-        int actual = first.getPlayedTimes();
-        int expected = 1;
-        assertEquals(expected, actual);
+        assertHasPlayedTimes(first, 1);
     }
 
     @Test
@@ -34,9 +32,7 @@ public class OneAdditionalPlayersAdded {
         sut.play();
         sut.play();
 
-        int actual = second.getPlayedTimes();
-        int expected = 1;
-        assertEquals(expected, actual);
+        assertHasPlayedTimes(second, 1);
     }
 
     @Test
@@ -46,8 +42,11 @@ public class OneAdditionalPlayersAdded {
         sut.play();
         sut.play();
 
-        int actual = second.getPlayedTimes();
-        int expected = 2;
+        assertHasPlayedTimes(second, 2);
+    }
+
+    private void assertHasPlayedTimes(PlayerSpy p, int expected) {
+        int actual = p.getPlayedTimes();
         assertEquals(expected, actual);
     }
 

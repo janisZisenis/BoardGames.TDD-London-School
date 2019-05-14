@@ -11,7 +11,7 @@ public class GameLoopImp implements GameLoop {
     }
 
     public void run() {
-        while(isRunnung())
+        while(isPlayable())
             runNextIteration();
     }
 
@@ -20,7 +20,7 @@ public class GameLoopImp implements GameLoop {
         game.render();
     }
 
-    private boolean isRunnung() {
+    private boolean isPlayable() {
         return !game.isOver();
     }
 }

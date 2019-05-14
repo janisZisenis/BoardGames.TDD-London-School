@@ -1,23 +1,22 @@
 package GuiGaming.MultiGuiPlayer;
 
-import Domain.Data.Field.Field;
-import GuiGaming.GuiPlayer;
+import InputGeneration.Input.Input;
 
 public class GuiPlayerSpy implements GuiPlayer {
 
     private int timesPlayed = 0;
-    private Field playedField;
+    private Input playedInput;
 
     public int getPlayedTimes() {
         return timesPlayed;
     }
 
-    public void play(Field field) {
-        playedField = field;
+    public Input getPlayedInput() {
+        return playedInput;
+    }
+    public void play(Input input) {
         timesPlayed++;
+        playedInput = input;
     }
 
-    public Field getPlayedField() {
-        return playedField;
-    }
 }

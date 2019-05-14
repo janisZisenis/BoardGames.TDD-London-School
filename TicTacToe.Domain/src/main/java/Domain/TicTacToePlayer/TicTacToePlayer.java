@@ -10,10 +10,10 @@ public class TicTacToePlayer implements Player {
     private final MarkFieldService service;
     private final FieldGenerator strategy;
 
-    public TicTacToePlayer(Mark mark, MarkFieldService service, FieldGenerator strategy) {
+    public TicTacToePlayer(Mark mark, MarkFieldService service, FieldGenerator generator) {
         this.mark = mark;
         this.service = service;
-        this.strategy = strategy;
+        this.strategy = generator;
     }
 
     public void play() {
