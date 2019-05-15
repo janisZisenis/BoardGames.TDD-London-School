@@ -1,8 +1,8 @@
 package Domain.GameOverInputProcessor;
 
+import Gaming.GameFacade.GameOverRule;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
-import Gaming.GameFacade.GameOverRule;
 
 public class GameOverInputProcessor implements InputProcessor {
 
