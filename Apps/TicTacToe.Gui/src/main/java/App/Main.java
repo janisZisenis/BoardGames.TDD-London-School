@@ -1,6 +1,5 @@
 package App;
 
-
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
@@ -9,21 +8,21 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import Domain.Presentation.BoardViewPresenter.BoardViewPresenter;
+import Domain.Presentation.WinningLinePresenter.WinningLinePresenter;
+import Domain.TicTacToeInputPlayer.TicTacToeInputPlayer;
+import Gaming.GameFacade.GameOverRule;
+import InputGeneration.InputProcessor;
+import InputGeneration.ValidInputGenerator.InputAlerter;
+import InputGeneration.ValidInputGenerator.InputValidator;
 import InteractiveGaming.HybridGameImp.HybridGameImp;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
 import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
-import InteractiveGaming.Presentation.BoardViewPresenter.BoardViewPresenter;
-import InteractiveGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
-import InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
-import InputGeneration.InputProcessor;
-import InputGeneration.ValidInputGenerator.InputAlerter;
-import InputGeneration.ValidInputGenerator.InputValidator;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
-import Gaming.GameFacade.GameOverRule;
 import View.FXBoardView;
 import View.FXInputAlerter;
 import javafx.application.Application;

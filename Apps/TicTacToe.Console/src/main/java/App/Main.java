@@ -1,24 +1,23 @@
 package App;
 
-
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import Gaming.Factory;
+import Gaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.Player;
+import Gaming.GameFacade.Renderer;
+import Gaming.GameLoopImp.Game;
+import Gaming.MessagingGameLoop.GameLoop;
+import Gaming.MessagingGameLoop.GameLoopMessenger;
+import Gaming.MultiPlayer.MultiPlayer;
+import Gaming.MultiPlayer.MultiPlayerMessenger;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.OnePlayerModeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
-import Gaming.GameFacade.GameOverRule;
-import Gaming.GameFacade.Renderer;
-import Gaming.GameFacade.Player;
-import Gaming.Factory;
-import Gaming.GameLoopImp.Game;
-import Gaming.MessagingGameLoop.GameLoop;
-import Gaming.MessagingGameLoop.GameLoopMessenger;
-import Gaming.MultiPlayer.MultiPlayer;
-import Gaming.MultiPlayer.MultiPlayerMessenger;
 import Rendering.BoardRenderer.BoardRenderer;
 import View.ConsoleBoardView;
 import View.ConsoleMessenger;

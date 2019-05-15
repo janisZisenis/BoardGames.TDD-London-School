@@ -10,40 +10,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>TicTacToe.Gui</artifactId>
+    <artifactId>TicTacToe.Messages</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>13-ea+7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>13-ea+6</version>
-        </dependency>
-
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InteractiveGaming</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Domain</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Mapping</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
@@ -62,5 +33,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

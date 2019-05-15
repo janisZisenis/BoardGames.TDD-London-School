@@ -10,34 +10,49 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>TicTacToe.Gui</artifactId>
+    <artifactId>TicTacToe.Messaging</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>13-ea+7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>13-ea+6</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.1</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InteractiveGaming</artifactId>
+            <artifactId>TicTacToe.Mapping</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>TicTacToe.Domain</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>InputGeneration</artifactId>
             <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>TicTacToe.Domain</artifactId>
+            <version>1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Domain</artifactId>
+            <artifactId>Gaming</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>

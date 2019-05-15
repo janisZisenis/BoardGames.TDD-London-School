@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.SequentialRendering</artifactId>
+            <artifactId>TicTacToe.Rendering</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
@@ -39,17 +39,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.2.0</version>
-                <configuration>
-                    <jfxMainAppJarName>MyAwesomeFile-${version}.jar</jfxMainAppJarName>
-                    <mainClass>App.Main</mainClass>
-                    <verbose>true</verbose>
-                    <allPermissions>true</allPermissions>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

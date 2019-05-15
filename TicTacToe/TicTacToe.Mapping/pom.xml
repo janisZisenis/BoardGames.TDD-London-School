@@ -10,31 +10,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>TicTacToe.Gui</artifactId>
+    <artifactId>TicTacToe.Mapping</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>13-ea+7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>13-ea+6</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.3.1</version>
+            <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InteractiveGaming</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Domain</artifactId>
@@ -43,7 +28,7 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Mapping</artifactId>
+            <artifactId>TicTacToe.Messages</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
@@ -51,6 +36,19 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
