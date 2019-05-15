@@ -12,17 +12,16 @@
     <modules>
         <module>App.TicTacToe.SequentialGui</module>
         <module>App.TicTacToe.Console</module>
-        <module>Core.InputGeneration</module>
+        <module>App.TicTacToe.Gui</module>
+        <module>Core.Utilities</module>
         <module>Core.SequentialGaming</module>
+        <module>Core.InputGeneration</module>
         <module>TicTacToe.Domain</module>
         <module>TicTacToe.SequentialRendering</module>
         <module>TicTacToe.Mapping</module>
         <module>TicTacToe.Messages</module>
         <module>TicTacToe.Messaging</module>
         <module>TicTacToe.HybridGaming</module>
-        <module>App.TicTacToe.Gui</module>
-        <module>TicTacToe.SequentialRendering</module>
-        <module>Core.Utilities</module>
     </modules>
 
 </project>

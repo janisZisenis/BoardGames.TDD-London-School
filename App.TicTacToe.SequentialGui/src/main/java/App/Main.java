@@ -18,7 +18,7 @@ import SequentialGaming.MessagingGameLoop.GameLoop;
 import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
 import SequentialGaming.MultiPlayer.MultiPlayer;
 import SequentialGaming.MultiPlayer.MultiPlayerMessenger;
-import SequentialRendering.BoardRenderer.BoardRenderer;
+import Rendering.BoardRenderer.BoardRenderer;
 import View.FXBoardView;
 import View.FXInputView;
 import View.FXMessenger;
