@@ -2,6 +2,8 @@ package Domain.Gaming.TicTacToePlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import InputGeneration.Input.Input;
+import InputGeneration.InputGeneratorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,30 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TicTacToePlayerTest {
 
     private MarkFieldServiceSpy service = new MarkFieldServiceSpy();
-    private FieldGeneratorStub strategy = new FieldGeneratorStub();
+    private InputGeneratorStub generator = new InputGeneratorStub();
     private TicTacToePlayer sut;
 
     @Test
-    void IfMarkIsJohn_ShouldMarkAsJohn() {
-        makeMarkIs(Mark.John);
-
-        sut.play();
-
-        assertPlacedMarkIs(Mark.John);
-    }
-
-    @Test
-    void IfMarkIsHaley_ShouldMarkAsHaley() {
-        makeMarkIs(Mark.Haley);
-
-        sut.play();
-
-        assertPlacedMarkIs(Mark.Haley);
-    }
-
-    @Test
     void IfR0C0IsGenerated_ShouldMarkR0C0() {
-        makeFieldIsGenerated(new Field(0, 0));
+        makeInputIsGenerated(new Input(0, 0));
 
         sut.play();
 
@@ -41,21 +25,42 @@ public class TicTacToePlayerTest {
 
     @Test
     void IfR2C1IsGenerated_ShouldMarkR2C1() {
-        makeFieldIsGenerated(new Field(2, 1));
+        makeInputIsGenerated(new Input(2, 1));
 
         sut.play();
 
         assertMarkedFieldEquals(new Field(2, 1));
     }
 
-    private void makeMarkIs(Mark m) {
-        sut = new TicTacToePlayer(m, service, strategy);
+    @Test
+    void IfPlayerIsJohn_ShouldMarkAsJohn() {
+        generator.setGeneratedInput(new Input(0, 0));
+        makePlayerIs(Mark.John);
+
+        sut.play();
+
+        assertPlacedMarkIs(Mark.John);
     }
 
-    private void makeFieldIsGenerated(Field field) {
-        makeMarkIs(Mark.Haley);
-        strategy.setGeneratedField(field);
+    @Test
+    void IfPlayerIsHaley_ShouldMarkAsHaley() {
+        generator.setGeneratedInput(new Input(0, 0));
+        makePlayerIs(Mark.Haley);
+
+        sut.play();
+
+        assertPlacedMarkIs(Mark.Haley);
     }
+
+    private void makeInputIsGenerated(Input input) {
+        makePlayerIs(Mark.Haley);
+        generator.setGeneratedInput(input);
+    }
+
+    private void makePlayerIs(Mark m) {
+        sut = new TicTacToePlayer(m, service, generator);
+    }
+
 
     private void assertPlacedMarkIs(Mark expected) {
         Mark actual = service.getPlacedMark();

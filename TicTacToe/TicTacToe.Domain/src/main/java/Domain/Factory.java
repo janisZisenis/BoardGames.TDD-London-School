@@ -1,8 +1,8 @@
 package Domain;
 
 import Domain.Board.Board;
-import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.EquallyMarkedLineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
@@ -11,15 +11,14 @@ import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Domain.InputFieldGeneratorAdapter.InputFieldGeneratorAdapter;
-import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.Gaming.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Gaming.TicTacToePlayer.TicTacToePlayer;
-import InputGeneration.InputGenerator;
+import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
+import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
+import InputGeneration.InputGenerator;
 
 public abstract class Factory {
 
@@ -99,8 +98,7 @@ public abstract class Factory {
     }
 
     private static Player makeTicTacToePlayer(Mark m, Board board, InputGenerator generator, IODeviceFactory factory) {
-        InputFieldGeneratorAdapter generatorAdapter = new InputFieldGeneratorAdapter(generator);
-        return new TicTacToePlayer(m, board, generatorAdapter);
+        return new TicTacToePlayer(m, board, generator);
     }
 
 }
