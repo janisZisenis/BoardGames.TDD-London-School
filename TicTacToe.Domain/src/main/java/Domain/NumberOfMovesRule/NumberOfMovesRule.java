@@ -1,7 +1,7 @@
 package Domain.NumberOfMovesRule;
 
 import Domain.Data.BoardBoundaries;
-import SequentialGaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.GameOverRule;
 
 public class NumberOfMovesRule implements GameOverRule {
 

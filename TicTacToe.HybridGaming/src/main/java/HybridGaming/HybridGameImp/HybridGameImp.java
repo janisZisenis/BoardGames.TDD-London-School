@@ -2,7 +2,7 @@ package HybridGaming.HybridGameImp;
 
 import HybridGaming.HybridGameRunner.HybridGame;
 import InputGeneration.Input.Input;
-import SequentialGaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.GameOverRule;
 
 public class HybridGameImp implements HybridGame {
 

@@ -2,7 +2,7 @@ package HybridGaming.HybridPlayerAdapter;
 
 import HybridGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
-import SequentialGaming.GameFacade.Player;
+import Gaming.GameFacade.Player;
 
 public class HybridPlayerAdapter implements HybridPlayer {
 

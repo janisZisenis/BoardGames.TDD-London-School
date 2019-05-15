@@ -2,7 +2,7 @@ package Domain.GameOverInputProcessor;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
-import SequentialGaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.GameOverRule;
 
 public class GameOverInputProcessor implements InputProcessor {
 

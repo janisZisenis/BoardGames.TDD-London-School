@@ -2,7 +2,7 @@ package HybridGaming.HybridPlayerAdapter;
 
 import HybridGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
-import SequentialGaming.GameFacade.PlayerSpy;
+import Gaming.GameFacade.PlayerSpy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

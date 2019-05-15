@@ -17,9 +17,9 @@ import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmpty
 import Domain.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.TicTacToePlayer.TicTacToePlayer;
 import InputGeneration.InputGenerator;
-import SequentialGaming.GameFacade.GameOverRule;
-import SequentialGaming.GameFacade.Player;
-import SequentialGaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
+import Gaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.Player;
+import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
 
 public abstract class Factory {
 
@@ -37,10 +37,10 @@ public abstract class Factory {
         LineEvaluator lineEvaluator = new EquallyMarkedLineEvaluator(board);
         GameEvaluator gameEvaluator = new GameEvaluator(lineProvider, lineEvaluator);
 
-        GameOverRule winnerRule = SequentialGaming.Factory.makeWinnerRule(gameEvaluator);
+        GameOverRule winnerRule = Gaming.Factory.makeWinnerRule(gameEvaluator);
         GameOverRule movesRule = new NumberOfMovesRule(board);
 
-        CompositeGameOverRule composite = SequentialGaming.Factory.makeCompositeGameOverRule();
+        CompositeGameOverRule composite = Gaming.Factory.makeCompositeGameOverRule();
         composite.add(winnerRule);
         composite.add(movesRule);
         return composite;

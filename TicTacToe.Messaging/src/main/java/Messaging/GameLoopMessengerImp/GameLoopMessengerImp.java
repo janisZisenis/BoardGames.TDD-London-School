@@ -1,7 +1,7 @@
 package Messaging.GameLoopMessengerImp;
 
 import Messaging.MappingPlayerMessenger.Messenger;
-import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
+import Gaming.MessagingGameLoop.GameLoopMessenger;
 
 public class GameLoopMessengerImp implements GameLoopMessenger {
 

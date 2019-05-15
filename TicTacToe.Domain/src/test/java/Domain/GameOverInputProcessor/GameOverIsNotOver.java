@@ -2,7 +2,7 @@ package Domain.GameOverInputProcessor;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessorSpy;
-import SequentialGaming.GameFacade.GameOverRuleStub;
+import Gaming.GameFacade.GameOverRuleStub;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

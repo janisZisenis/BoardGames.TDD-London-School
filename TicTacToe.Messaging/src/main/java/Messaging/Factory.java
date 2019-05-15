@@ -11,8 +11,8 @@ import Messaging.MappingPlayerMessenger.Messenger;
 import Messaging.MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import Messaging.MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
-import SequentialGaming.MessagingGameLoop.GameLoopMessenger;
-import SequentialGaming.MultiPlayer.MultiPlayerMessenger;
+import Gaming.MessagingGameLoop.GameLoopMessenger;
+import Gaming.MultiPlayer.MultiPlayerMessenger;
 
 public abstract class Factory {
 
