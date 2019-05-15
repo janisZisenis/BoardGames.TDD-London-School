@@ -6,26 +6,26 @@ public class HybridPlayerSpy implements HybridPlayer {
 
     private Input playedInput;
     private int timesComputer = 0;
-    private int timesComputerPlayed = 0;
+    private int timesPlayedWithoutInput = 0;
 
     public void setTimesIsComputer(int times) {
         timesComputer = times;
     }
     public boolean isComputer() {
-        return timesComputer > timesComputerPlayed;
+        return timesComputer > timesPlayedWithoutInput;
     }
 
     public Input getPlayedInput() {
         return playedInput;
     }
-    public void playHuman(Input input) {
+    public void playInput(Input input) {
         playedInput = input;
     }
 
-    public int getTimesPlayedComputer() {
-        return timesComputerPlayed;
+    public int getTimesPlayedWithoutInput() {
+        return timesPlayedWithoutInput;
     }
-    public void playComputer() {
-        timesComputerPlayed++;
+    public void play() {
+        timesPlayedWithoutInput++;
     }
 }

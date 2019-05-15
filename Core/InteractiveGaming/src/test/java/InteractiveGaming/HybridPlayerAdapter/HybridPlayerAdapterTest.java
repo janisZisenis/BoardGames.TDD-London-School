@@ -27,14 +27,14 @@ public class HybridPlayerAdapterTest {
     void IfGetsPlayedHuman_ShouldThrow() {
         Input input = new Input(0, 0);
 
-        Executable act = () -> sut.playHuman(input);
+        Executable act = () -> sut.playInput(input);
 
         assertThrows(HybridPlayer.CannotPlayComputerOnHumansTurn.class, act);
     }
 
     @Test
     void IfGetsPlayedComputer_ShouldPlayComputer() {
-        sut.playComputer();
+        sut.play();
 
         assertHasPlayedTimes(1);
     }

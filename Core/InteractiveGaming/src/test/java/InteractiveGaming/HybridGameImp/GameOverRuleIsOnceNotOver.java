@@ -37,7 +37,7 @@ public class GameOverRuleIsOnceNotOver {
     }
 
     private void assertHasPlayedTimes(int expected) {
-        int actual = player.getTimesPlayedComputer();
+        int actual = player.getTimesPlayedWithoutInput();
         assertEquals(expected, actual);
     }
 

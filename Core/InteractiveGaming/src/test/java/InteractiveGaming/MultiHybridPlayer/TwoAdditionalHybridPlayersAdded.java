@@ -24,8 +24,8 @@ public class TwoAdditionalHybridPlayersAdded {
 
     @Test
     void IfGetsPlayedThreeTimes_ShouldHavePlayedTheSecondOnce() {
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
 
 
         assertPlayedTimes(second, 1);
@@ -33,15 +33,15 @@ public class TwoAdditionalHybridPlayersAdded {
 
     @Test
     void IfGetsPlayedThreeTimes_ShouldHavePlayedTheThirdOnce() {
-        sut.playComputer();
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
+        sut.play();
 
         assertPlayedTimes(third, 1);
     }
 
     private void assertPlayedTimes(HybridPlayerSpy p, int expected) {
-        int actual = p.getTimesPlayedComputer();
+        int actual = p.getTimesPlayedWithoutInput();
         assertEquals(expected, actual);
     }
 
@@ -50,8 +50,8 @@ public class TwoAdditionalHybridPlayersAdded {
     void IfGetsPlayedWithInputR0C0Twice_ShouldPlayInputR0C0OnSecond() {
         Input input = new Input(0, 0);
 
-        sut.playHuman(input);
-        sut.playHuman(input);
+        sut.playInput(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(second, new Input(0, 0));
     }

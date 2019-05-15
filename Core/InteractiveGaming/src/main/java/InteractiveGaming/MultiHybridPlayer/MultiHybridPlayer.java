@@ -17,9 +17,9 @@ public class MultiHybridPlayer implements HybridPlayer {
         it = new CyclicListIterator<>(players);
     }
 
-    public void playComputer() {
+    public void play() {
         HybridPlayer p = it.getCurrent();
-        p.playComputer();
+        p.play();
         it.next();
     }
 
@@ -27,9 +27,9 @@ public class MultiHybridPlayer implements HybridPlayer {
         players.add(player);
     }
 
-    public void playHuman(Input input) {
+    public void playInput(Input input) {
         HybridPlayer p = it.getCurrent();
-        p.playHuman(input);
+        p.playInput(input);
         it.next();
     }
 

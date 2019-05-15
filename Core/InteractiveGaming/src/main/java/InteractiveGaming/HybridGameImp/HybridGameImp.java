@@ -16,7 +16,7 @@ public class HybridGameImp implements HybridGame {
 
     public void playInput(Input input) {
         throwIfIsComputer();
-        player.playHuman(input);
+        player.playInput(input);
     }
 
     private void throwIfIsComputer() {
@@ -30,7 +30,7 @@ public class HybridGameImp implements HybridGame {
 
     public void runToNextInputTurn() {
         while(player.isComputer() && !rule.isGameOver())
-            player.playComputer();
+            player.play();
     }
 
 }

@@ -16,11 +16,11 @@ public class HybridPlayerAdapter implements HybridPlayer {
         return true;
     }
 
-    public void playHuman(Input input) {
+    public void playInput(Input input) {
         throw new CannotPlayComputerOnHumansTurn();
     }
 
-    public void playComputer() {
+    public void play() {
         player.play();
     }
 }

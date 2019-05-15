@@ -4,8 +4,8 @@ import InputGeneration.Input.Input;
 
 public interface HybridPlayer {
     boolean isComputer();
-    void playHuman(Input input);
-    void playComputer();
+    void playInput(Input input);
+    void play();
 
     class CannotPlayHumanOnComputersTurn extends RuntimeException {}
     class CannotPlayComputerOnHumansTurn extends RuntimeException {}

@@ -13,31 +13,31 @@ public class NoAdditionalHybridPlayersAdded {
 
     @Test
     void IfGetsPlayedOnce_ShouldHavePlayedTheFirstOnce() {
-        sut.playComputer();
+        sut.play();
 
         assertTimesPlayed(1);
     }
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheFirstTwice() {
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
 
         assertTimesPlayed(2);
     }
 
     @Test
     void IfGetsPlayedFourTimes_ShouldHavePlayedTheFirstFourTimes() {
-        sut.playComputer();
-        sut.playComputer();
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
+        sut.play();
+        sut.play();
 
         assertTimesPlayed(4);
     }
 
     private void assertTimesPlayed(int expected) {
-        int actual = first.getTimesPlayedComputer();
+        int actual = first.getTimesPlayedWithoutInput();
         assertEquals(expected, actual);
     }
 
@@ -46,7 +46,7 @@ public class NoAdditionalHybridPlayersAdded {
     void IfInputR0C0GetsPlayed_ShouldPlayInputR0C0Either() {
         Input input = new Input(0, 0);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(0, 0));
     }
@@ -55,7 +55,7 @@ public class NoAdditionalHybridPlayersAdded {
     void IfInputR1C2GetsPlayed_ShouldPlayInputR1C2Either() {
         Input input = new Input(1, 2);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(1, 2));
     }

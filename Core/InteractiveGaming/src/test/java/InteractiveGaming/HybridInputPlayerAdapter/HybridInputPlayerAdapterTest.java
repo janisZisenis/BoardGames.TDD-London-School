@@ -25,7 +25,7 @@ public class HybridInputPlayerAdapterTest {
 
     @Test
     void IfGetsPlayedWithoutInputShouldThrow() {
-        Executable act = () -> sut.playComputer();
+        Executable act = () -> sut.play();
 
         assertThrows(HybridPlayer.CannotPlayComputerOnHumansTurn.class, act);
     }
@@ -35,7 +35,7 @@ public class HybridInputPlayerAdapterTest {
     void IfInputIsR0C0_ShouldPlayInputWithR0C0() {
         Input input = new Input(0, 0);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(0, 0));
     }
@@ -44,7 +44,7 @@ public class HybridInputPlayerAdapterTest {
     void IfInputIsR1C2_ShouldPlayInputWithR1C2() {
         Input input = new Input(1, 2);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(1, 2));
     }

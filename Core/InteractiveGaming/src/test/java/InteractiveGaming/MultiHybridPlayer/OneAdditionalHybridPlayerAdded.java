@@ -21,31 +21,31 @@ public class OneAdditionalHybridPlayerAdded {
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheFirstOnce() {
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
 
         assertPlayedTimes(first, 1);
     }
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheSecondOnce() {
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
 
         assertPlayedTimes(second, 1);
     }
 
     @Test
     void IfGetsPlayedThreeTimes_ShouldHavePlayedTheFirstTwice() {
-        sut.playComputer();
-        sut.playComputer();
-        sut.playComputer();
+        sut.play();
+        sut.play();
+        sut.play();
 
         assertPlayedTimes(first, 2);
     }
 
     private void assertPlayedTimes(HybridPlayerSpy p, int expected) {
-        int actual = p.getTimesPlayedComputer();
+        int actual = p.getTimesPlayedWithoutInput();
         assertEquals(expected, actual);
     }
 
