@@ -1,4 +1,4 @@
-package GuiGaming.HybridGameImp;
+package SequentialGaming.GameFacade;
 
 import SequentialGaming.GameFacade.GameOverRule;
 

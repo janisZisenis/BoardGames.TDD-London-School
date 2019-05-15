@@ -2,6 +2,7 @@ package GuiGaming.HybridGameImp;
 
 import GuiGaming.HybridGameRunner.HybridGame;
 import InputGeneration.Input.Input;
+import SequentialGaming.GameFacade.GameOverRuleDummy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

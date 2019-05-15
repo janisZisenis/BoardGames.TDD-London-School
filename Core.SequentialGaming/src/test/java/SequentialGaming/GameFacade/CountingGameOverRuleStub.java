@@ -1,8 +1,6 @@
-package GuiGaming.HybridGameImp;
+package SequentialGaming.GameFacade;
 
-import SequentialGaming.GameFacade.GameOverRule;
-
-public class CountingGameOverRuleStub implements GameOverRule {
+public class CountingGameOverRuleStub extends GameOverRuleDummy {
 
     private int timesNotOver = 0;
 

@@ -1,6 +1,6 @@
 package SequentialGaming.GameFacade;
 
-public class GameOverRuleStub implements GameOverRule {
+public class GameOverRuleStub extends GameOverRuleDummy {
 
     private boolean isGameOver = false;
 
