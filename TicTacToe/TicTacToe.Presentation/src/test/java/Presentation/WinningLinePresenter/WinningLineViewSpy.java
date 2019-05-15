@@ -1,4 +1,4 @@
-package Domain.Presentation.WinningLinePresenter;
+package Presentation.WinningLinePresenter;
 
 import Domain.Data.Line.Line;
 

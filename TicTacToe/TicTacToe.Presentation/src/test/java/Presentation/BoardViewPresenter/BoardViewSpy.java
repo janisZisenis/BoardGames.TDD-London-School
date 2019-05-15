@@ -1,4 +1,4 @@
-package Domain.Presentation.BoardViewPresenter;
+package Presentation.BoardViewPresenter;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;

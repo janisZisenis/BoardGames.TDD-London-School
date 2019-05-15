@@ -1,12 +1,12 @@
-package Domain.Presentation.BoardViewPresenter;
+package Presentation.BoardViewPresenter;
 
 import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import Domain.Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessor;
+import Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 
 public class BoardViewPresenter implements BoardListener, BoardViewDelegate {
 

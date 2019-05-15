@@ -1,4 +1,4 @@
-package Domain.Presentation.WinningLinePresenter;
+package Presentation.WinningLinePresenter;
 
 import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
