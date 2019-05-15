@@ -1,4 +1,4 @@
-package Domain.GameOverInputProcessor;
+package Domain.InputGeneration.GameOverInputProcessor;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputProcessorSpy;

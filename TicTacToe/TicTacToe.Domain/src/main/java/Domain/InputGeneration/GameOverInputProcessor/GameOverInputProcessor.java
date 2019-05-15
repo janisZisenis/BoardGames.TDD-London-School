@@ -1,4 +1,4 @@
-package Domain.GameOverInputProcessor;
+package Domain.InputGeneration.GameOverInputProcessor;
 
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.Input.Input;

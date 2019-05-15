@@ -1,4 +1,4 @@
-package Domain.NumberOfMovesRule;
+package Domain.Gaming.NumberOfMovesRule;
 
 import Domain.Data.BoardBoundaries;
 import Gaming.GameFacade.GameOverRule;

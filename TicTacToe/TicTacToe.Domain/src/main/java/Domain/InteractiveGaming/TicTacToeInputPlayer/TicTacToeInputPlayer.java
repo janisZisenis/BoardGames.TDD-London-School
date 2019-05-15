@@ -1,8 +1,8 @@
-package Domain.TicTacToeInputPlayer;
+package Domain.InteractiveGaming.TicTacToeInputPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.TicTacToePlayer.MarkFieldService;
+import Domain.Gaming.TicTacToePlayer.MarkFieldService;
 import InputGeneration.Input.Input;
 import InteractiveGaming.HybridInputPlayerAdapter.InputPlayer;
 

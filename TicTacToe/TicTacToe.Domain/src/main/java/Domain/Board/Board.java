@@ -4,8 +4,8 @@ import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
-import Domain.NumberOfMovesRule.MarkedFieldCountProvider;
-import Domain.TicTacToePlayer.MarkFieldService;
+import Domain.Gaming.NumberOfMovesRule.MarkedFieldCountProvider;
+import Domain.Gaming.TicTacToePlayer.MarkFieldService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider {
 
