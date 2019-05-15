@@ -3,9 +3,9 @@ package InteractiveGaming.HybridGameRunner;
 import InputGeneration.Input.Input;
 
 public interface HybridGame {
-    boolean nextIsHuman();
-    void playHuman(Input input);
-    void playComputerTurns();
+    boolean nextIsInputTurn();
+    void playInput(Input input);
+    void runToNextInputTurn();
 
     class CannotPlayHumanOnComputersTurn extends RuntimeException {}
 }

@@ -22,7 +22,7 @@ public class HybridGameImpTest {
     }
 
     private void assertNextIsNotHuman() {
-        boolean actual = sut.nextIsHuman();
+        boolean actual = sut.nextIsInputTurn();
         assertFalse(actual);
     }
 
@@ -34,7 +34,7 @@ public class HybridGameImpTest {
     }
 
     private void assertNextIsHuman() {
-        boolean actual = sut.nextIsHuman();
+        boolean actual = sut.nextIsInputTurn();
         assertTrue(actual);
     }
 
@@ -43,7 +43,7 @@ public class HybridGameImpTest {
         player.setTimesIsComputer(1);
         Input input = new Input(0, 0);
 
-        Executable act = () -> sut.playHuman(input);
+        Executable act = () -> sut.playInput(input);
 
         assertThrows(HybridGame.CannotPlayHumanOnComputersTurn.class, act);
     }
@@ -53,7 +53,7 @@ public class HybridGameImpTest {
         player.setTimesIsComputer(0);
         Input input = new Input(0, 0);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(0, 0));
     }
@@ -64,7 +64,7 @@ public class HybridGameImpTest {
         player.setTimesIsComputer(0);
         Input input = new Input(1, 2);
 
-        sut.playHuman(input);
+        sut.playInput(input);
 
         assertPlayedInputEquals(new Input(1, 2));
     }

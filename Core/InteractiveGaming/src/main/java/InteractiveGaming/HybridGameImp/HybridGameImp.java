@@ -14,7 +14,7 @@ public class HybridGameImp implements HybridGame {
         this.player = player;
     }
 
-    public void playHuman(Input input) {
+    public void playInput(Input input) {
         throwIfIsComputer();
         player.playHuman(input);
     }
@@ -24,11 +24,11 @@ public class HybridGameImp implements HybridGame {
             throw new HybridGame.CannotPlayHumanOnComputersTurn();
     }
 
-    public boolean nextIsHuman() {
+    public boolean nextIsInputTurn() {
         return !player.isComputer();
     }
 
-    public void playComputerTurns() {
+    public void runToNextInputTurn() {
         while(player.isComputer() && !rule.isGameOver())
             player.playComputer();
     }

@@ -6,14 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class NextIsNotHuman {
+public class NextIsNotInputTurn {
 
-    private HybridGameLoopSpy loop = new HybridGameLoopSpy();
+    private HybridGameSpy loop = new HybridGameSpy();
     private HybridGameRunner sut = new HybridGameRunner(loop);
 
     @BeforeEach
     void setUp() {
-        loop.nextIsHuman(false);
+        loop.SetNextIsInputTurn(false);
     }
 
     @Test
@@ -30,6 +30,20 @@ public class NextIsNotHuman {
         assertFalse(actual);
     }
 
+
+    @Test
+    void IfInputGetsProcessed_ShouldNotRunToNextInputTurn() {
+        Input input = new Input(0, 0);
+
+        sut.process(input);
+
+        assertHasNotRunToNextInputTurn();
+    }
+
+    private void assertHasNotRunToNextInputTurn() {
+        boolean actual = loop.hasRunToNextInputTurn();
+        assertFalse(actual);
+    }
 
 
 }

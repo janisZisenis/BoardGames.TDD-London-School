@@ -12,14 +12,21 @@ public class HybridGameRunner implements InputProcessor {
     }
 
     public void run() {
-        game.playComputerTurns();
+        game.runToNextInputTurn();
     }
 
     public void process(Input input) {
-        if(game.nextIsHuman()) {
-            game.playHuman(input);
-            game.playComputerTurns();
-        }
+        if(nextIsInputTurn())
+            runInput(input);
+    }
+
+    private void runInput(Input input) {
+        game.playInput(input);
+        run();
+    }
+
+    private boolean nextIsInputTurn() {
+        return game.nextIsInputTurn();
     }
 }
 

@@ -22,7 +22,7 @@ public class GameOverRuleIsOnceNotOver {
     void IfPlayerIsComputerOnce_ShouldPlayComputerOnce() {
         player.setTimesIsComputer(1);
 
-        sut.playComputerTurns();
+        sut.runToNextInputTurn();
 
         assertHasPlayedTimes(1);
     }
@@ -31,7 +31,7 @@ public class GameOverRuleIsOnceNotOver {
     void IfPlayerIsComputerTwice_ShouldPlayComputerOnce() {
         player.setTimesIsComputer(2);
 
-        sut.playComputerTurns();
+        sut.runToNextInputTurn();
 
         assertHasPlayedTimes(1);
     }
