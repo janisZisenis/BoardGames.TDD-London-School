@@ -9,15 +9,15 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import GuiGaming.HybridGameImp.HybridGameImp;
-import GuiGaming.HybridGameImp.HybridPlayer;
-import GuiGaming.HybridGameRunner.HybridGameRunner;
-import GuiGaming.HybridGuiPlayerAdapter.HybridGuiPlayerAdapter;
-import GuiGaming.HybridPlayerAdapter.HybridPlayerAdapter;
-import GuiGaming.MultiHybridPlayer.MultiHybridPlayer;
-import GuiGaming.Presentation.BoardViewPresenter.BoardViewPresenter;
-import GuiGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
-import GuiGaming.TicTacToeGuiPlayer.TicTacToeGuiPlayer;
+import HybridGaming.HybridGameImp.HybridGameImp;
+import HybridGaming.HybridGameImp.HybridPlayer;
+import HybridGaming.HybridGameRunner.HybridGameRunner;
+import HybridGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
+import HybridGaming.HybridPlayerAdapter.HybridPlayerAdapter;
+import HybridGaming.MultiHybridPlayer.MultiHybridPlayer;
+import HybridGaming.Presentation.BoardViewPresenter.BoardViewPresenter;
+import HybridGaming.Presentation.WinningLinePresenter.WinningLinePresenter;
+import HybridGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
@@ -38,8 +38,8 @@ public class Main extends Application {
     private static HybridPlayer haleyCPU;
 
     private static void initPlayers(Board board) {
-        johnHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.John, board));
-        haleyHuman = new HybridGuiPlayerAdapter(new TicTacToeGuiPlayer(Mark.Haley, board));
+        johnHuman = new HybridInputPlayerAdapter(new TicTacToeInputPlayer(Mark.John, board));
+        haleyHuman = new HybridInputPlayerAdapter(new TicTacToeInputPlayer(Mark.Haley, board));
 
         IODeviceFactory factory = new FXIODeviceFactory();
         johnCPU = new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(Mark.John, board, factory));
