@@ -3,52 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>tictactoe-tdd</artifactId>
+        <artifactId>Apps</artifactId>
         <groupId>janis.zisenis.tictactoe.tdd</groupId>
         <version>1.0</version>
-        <relativePath>../../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>TicTacToe.Rendering</artifactId>
+    <artifactId>BoardGames</artifactId>
+
     <dependencies>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.3.1</version>
-            <scope>test</scope>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>13-ea+7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>13-ea+6</version>
         </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Gaming</artifactId>
-            <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Domain</artifactId>
-            <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Domain</artifactId>
+            <artifactId>BoardGames.Presentation</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
-
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Gaming</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-
     </dependencies>
+
 
     <build>
         <plugins>
