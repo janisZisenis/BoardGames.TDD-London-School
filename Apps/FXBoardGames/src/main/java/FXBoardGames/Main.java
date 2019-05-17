@@ -9,12 +9,14 @@ import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.App.TicTacToeAction;
 import FXBoardGames.View.FXTicTacToeView;
 import FXView.FXBoardView;
+import FXView.FXShell;
 import FXView.FXTicTacToeChoosePlayerView;
 import FXView.FXTicTacToeConfigureView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
+import Presentation.MainMenuTransaction.MainMenuTransaction;
+import Presentation.ShellPresenter.ShellPresenter;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
-import Utilities.Transaction.NullTransaction;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -26,6 +28,10 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
+        FXShell shell = new FXShell();
+        ShellPresenter shellPresenter = new ShellPresenter(shell);
+        shell.setDelegate(shellPresenter);
+
         ListenableBoard board = new ListenableBoard(new HashingBoard());
         FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
@@ -47,15 +53,20 @@ public class Main extends Application {
         PlayerTypeProvider playerTypeProvider = new PlayerTypeProvider(firstPresenter, secondPresenter);
         TicTacToeAction tictactoeAction = new TicTacToeAction(tictactoe, board, boardView, playerTypeProvider);
 
+        MainMenuTransaction menuAction = new MainMenuTransaction(shellPresenter);
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, new NullTransaction(), tictactoeAction);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, menuAction, tictactoeAction);
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 
-
+        shellPresenter.addGame(tictactoe, "TicTacToe");
+        shellPresenter.addComingSoon("Conway's Game of Life");
+        shellPresenter.addComingSoon("Four in a Row");
+        shellPresenter.addComingSoon("Draughts");
+        shellPresenter.addComingSoon("Chess");
 
         primaryStage.setTitle("Board Games");
-        Scene scene = new Scene(tictactoe);
+        Scene scene = new Scene(shell);
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();
