@@ -1,6 +1,6 @@
 package Presentation.ConfigureViewPresenter;
 
-public class NullPlayerTypesProvider implements IsStartableProvider {
+public class IsNotStartableProvider implements IsStartableProvider {
 
     public boolean isStartable() {
         return false;

@@ -6,9 +6,10 @@ import FXView.FXTicTacToeChoosePlayerView;
 import FXView.FXTicTacToeConfigureView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
-import Presentation.ConfigureViewPresenter.NullPlayerTypesProvider;
+import Presentation.ConfigureViewPresenter.IsNotStartableProvider;
 import Presentation.ShellPresenter.ShellPresenter;
 import FXView.FXShell;
+import Utilities.Transaction.NullTransaction;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -35,7 +36,7 @@ public class Main extends Application {
         second.setDelegate(secondPresenter);
 
         FXTicTacToeConfigureView config = new FXTicTacToeConfigureView(first, second);
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, new NullPlayerTypesProvider(), shellPresenter);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, new IsNotStartableProvider(), new NullTransaction(), new NullTransaction());
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 

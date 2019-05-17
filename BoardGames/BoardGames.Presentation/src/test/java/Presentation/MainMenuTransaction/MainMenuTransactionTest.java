@@ -20,5 +20,5 @@ public class MainMenuTransactionTest {
         boolean actual = presenter.hasShownMainMenu();
         assertTrue(actual);
     }
-    
+
 }

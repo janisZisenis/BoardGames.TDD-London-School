@@ -1,19 +1,23 @@
 package Presentation.ConfigureViewPresenter;
 
-import Utilities.Observer.Observer;
 import Presentation.ConfigureViewPresenter.Api.ConfigureViewDelegate;
-import Presentation.ShellPresenter.Api.MainMenuPresenter;
+import Utilities.Observer.Observer;
+import Utilities.Transaction.Transaction;
 
 public class ConfigureViewPresenter implements ConfigureViewDelegate, Observer {
 
     private final ConfigureView view;
     private final IsStartableProvider provider;
-    private final MainMenuPresenter presenter;
+    private final Transaction cancelAction;
+    private final Transaction startAction;
 
-    public ConfigureViewPresenter(ConfigureView view, IsStartableProvider provider, MainMenuPresenter presenter) {
+    public ConfigureViewPresenter(ConfigureView view, IsStartableProvider provider,
+                                  Transaction cancelAction,
+                                  Transaction startAction) {
         this.view = view;
         this.provider = provider;
-        this.presenter = presenter;
+        this.cancelAction = cancelAction;
+        this.startAction = startAction;
     }
 
     public void update() {
@@ -24,11 +28,11 @@ public class ConfigureViewPresenter implements ConfigureViewDelegate, Observer {
     }
 
     public void onCancelClicked() {
-        presenter.showMainMenu();
+        cancelAction.execute();
     }
 
     public void onStartClicked() {
-        int i = 0;
+        startAction.execute();
     }
 
 }
