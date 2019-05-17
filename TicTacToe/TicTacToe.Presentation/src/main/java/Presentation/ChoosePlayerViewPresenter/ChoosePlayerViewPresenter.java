@@ -1,6 +1,8 @@
 package Presentation.ChoosePlayerViewPresenter;
 
-public class ChoosePlayerViewPresenter {
+import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
+
+public class ChoosePlayerViewPresenter implements ChoosePlayerViewDelegate {
 
     private ChoosePlayerView view;
 
@@ -15,6 +17,12 @@ public class ChoosePlayerViewPresenter {
 
     public void onHumbleClicked() {
         selectOnlyHumble();
+    }
+
+    public void onInvincibleClicked() {
+        view.selectInvincible();
+        view.deselectHuman();
+        view.deselectHumble();
     }
 
     private void selectOnlyHumble() {
@@ -33,9 +41,4 @@ public class ChoosePlayerViewPresenter {
         view.deselectInvincible();
     }
 
-    public void onInvincibleClicked() {
-        view.selectInvincible();
-        view.deselectHuman();
-        view.deselectHumble();
-    }
 }

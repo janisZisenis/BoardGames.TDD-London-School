@@ -1,5 +1,6 @@
 package FXView;
 
+import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerView;
 import View.ComingSoonConstants;
 import javafx.scene.control.RadioButton;
@@ -17,11 +18,11 @@ public class FXTicTacToeChoosePlayerView extends Pane implements ChoosePlayerVie
     private static final String invincibleCPU = "CPU - Invincible";
     private static final String aiCPU = "CPU - AI";
 
-
     private static final String comingSoon = ComingSoonConstants.text;
     private static final Color comingSoonColor = ComingSoonConstants.color;
     private static final Font comingSoonFont = ComingSoonConstants.font;
     private final Text comingSoonText = new Text(comingSoon);
+
 
     private final StackPane stack = new StackPane();
     private final GridPane grid = new GridPane();
@@ -35,13 +36,39 @@ public class FXTicTacToeChoosePlayerView extends Pane implements ChoosePlayerVie
     private final int height = 110;
     private final int width = 170;
 
+    private ChoosePlayerViewDelegate delegate;
+
+    public void setDelegate(ChoosePlayerViewDelegate delegate) {
+        this.delegate = delegate;
+    }
+
     public FXTicTacToeChoosePlayerView() {
         init();
         fillGrid();
 
         stack.getChildren().add(grid);
         getChildren().add(stack);
+
+        humanRadio.setOnAction(e -> onHumanClicked());
+        humbleRadio.setOnAction(e -> onHumbleClicked());
+        invincibleRadio.setOnAction(e -> onInvincibleClicked());
     }
+
+    private void onHumanClicked() {
+        if(delegate != null)
+            delegate.onHumanClicked();
+    }
+
+    private void onHumbleClicked() {
+        if(delegate != null)
+            delegate.onHumbleClicked();
+    }
+
+    private void onInvincibleClicked() {
+        if(delegate != null)
+            delegate.onInvincibleClicked();
+    }
+
 
     private void fillGrid() {
         grid.add(humanRadio, 0, 0);

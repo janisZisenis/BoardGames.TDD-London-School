@@ -1,16 +1,15 @@
 package FXBoardGames.View;
 
-import FXView.FXTicTacToeChoosePlayerView;
-import View.FXGameView;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 
-public class FXTicTacToeConfigView extends FXGameView {
+public class FXTicTacToeConfigView extends Pane {
 
     private static final String configureFirst = "Configure first Player: X";
     private static final String configureSecond = "Configure second Player: O";
@@ -25,16 +24,13 @@ public class FXTicTacToeConfigView extends FXGameView {
     private final Text firstConfig = new Text(configureFirst);
     private final Text secondConfig = new Text(configureSecond);
 
-    private final FXTicTacToeChoosePlayerView first = new FXTicTacToeChoosePlayerView();
-    private final FXTicTacToeChoosePlayerView second = new FXTicTacToeChoosePlayerView();
-
     private final StackPane stack = new StackPane();
     private final GridPane grid = new GridPane();
 
     private final Button start = new Button(startText);
     private final Button cancel = new Button(cancelText);
 
-    public FXTicTacToeConfigView() {
+    public FXTicTacToeConfigView(Pane firstPlayer, Pane secondPlayer) {
         setStyle("-fx-background-color: " + background + " ;" +
                 "-fx-background-radius: 18;"
         );
@@ -54,8 +50,8 @@ public class FXTicTacToeConfigView extends FXGameView {
         grid.add(secondConfig, 2, 0);
         grid.add(new Text(), 0, 1, 3, 1);
 
-        grid.add(first, 0, 2);
-        grid.add(second, 2, 2);
+        grid.add(firstPlayer, 0, 2);
+        grid.add(secondPlayer, 2, 2);
 
         grid.add(new Text(), 0, 3, 3, 1);
         grid.add(start, 2, 4);
@@ -67,10 +63,6 @@ public class FXTicTacToeConfigView extends FXGameView {
 
         stack.getChildren().add(grid);
         getChildren().add(stack);
-    }
-
-    public void setSideLength(double sideLength) {
-
     }
 
 }

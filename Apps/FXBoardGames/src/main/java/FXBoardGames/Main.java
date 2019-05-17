@@ -1,6 +1,10 @@
 package FXBoardGames;
 
+import FXBoardGames.View.FXBoardView;
+import FXBoardGames.View.FXTicTacToeConfigView;
 import FXBoardGames.View.FXTicTacToeView;
+import FXView.FXTicTacToeChoosePlayerView;
+import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ShellPresenter.ShellPresenter;
 import View.FXShell;
 import javafx.application.Application;
@@ -15,7 +19,19 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         FXShell shell = new FXShell();
-        FXTicTacToeView tictactoe = new FXTicTacToeView();
+
+        FXBoardView boardView = new FXBoardView(3);
+
+        FXTicTacToeChoosePlayerView first = new FXTicTacToeChoosePlayerView();
+        ChoosePlayerViewPresenter firstPresenter = new ChoosePlayerViewPresenter(first);
+        first.setDelegate(firstPresenter);
+
+        FXTicTacToeChoosePlayerView second = new FXTicTacToeChoosePlayerView();
+        ChoosePlayerViewPresenter secondPresenter = new ChoosePlayerViewPresenter(second);
+        second.setDelegate(secondPresenter);
+
+        FXTicTacToeConfigView config = new FXTicTacToeConfigView(first, second);
+        FXTicTacToeView tictactoe = new FXTicTacToeView(config, boardView);
 
         ShellPresenter presenter = new ShellPresenter(shell);
         shell.setDelegate(presenter);
@@ -32,4 +48,5 @@ public class Main extends Application {
         primaryStage.setResizable(true);
         primaryStage.show();
     }
+
 }
