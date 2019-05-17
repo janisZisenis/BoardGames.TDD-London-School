@@ -20,6 +20,11 @@ public class FXTicTacToeView extends FXGameView {
         getChildren().add(stack);
     }
 
+    public void showBoard() {
+        stack.getChildren().clear();
+        stack.getChildren().add(boardView);
+    }
+
     public void setSideLength(double sideLength) {
         super.setSideLength(sideLength);
         boardView.setSideLength(sideLength);
