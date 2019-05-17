@@ -74,6 +74,14 @@ public class FXTicTacToeConfigureView extends Pane implements ConfigureView {
         setMaxSize(width, height);
         setPrefSize(width, height);
         stack.setPadding(new Insets(10, 10, 10, 10));
+        registerShowListener();
+    }
+
+    private void registerShowListener() {
+        sceneProperty().addListener((obs, oldScene, newScene) -> {
+            if(newScene != null)
+                onViewDidShow();
+        });
     }
 
     private void initButtons() {
@@ -93,6 +101,11 @@ public class FXTicTacToeConfigureView extends Pane implements ConfigureView {
     private void onCancelClicked() {
         if(delegate != null)
             delegate.onCancelClicked();
+    }
+
+    private void onViewDidShow() {
+        if (delegate != null)
+            delegate.onViewDidShow();
     }
 
     public void enableStartButton() {
