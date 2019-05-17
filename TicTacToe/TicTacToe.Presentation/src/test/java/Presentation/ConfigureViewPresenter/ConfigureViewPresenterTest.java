@@ -15,7 +15,7 @@ public class ConfigureViewPresenterTest {
     private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, provider, cancelAction, startAction);
 
     @Test
-    void IfNoDistinctPlayerTypeIsProvided_ShouldDisableStartButton() {
+    void IfIsNotStartableOnUpdate_ShouldDisableStartButton() {
         provider.setIsStartable(false);
 
         sut.update();
@@ -24,7 +24,7 @@ public class ConfigureViewPresenterTest {
     }
 
     @Test
-    void IfDistinctPlayerTypeIsProvided_ShouldEnableStartButton() {
+    void IfIsStartableOnUpdate_ShouldEnableStartButton() {
         provider.setIsStartable(true);
 
         sut.update();
@@ -33,7 +33,7 @@ public class ConfigureViewPresenterTest {
     }
 
     @Test
-    void IfNoDistinctPlayerTypeIsProvided_ShouldNotEnableStartButton() {
+    void IfIsNotStartableOnUpdate_ShouldNotEnableStartButton() {
         provider.setIsStartable(false);
 
         sut.update();
@@ -42,10 +42,47 @@ public class ConfigureViewPresenterTest {
     }
 
     @Test
-    void IfDistinctPlayerTypeIsProvided_ShouldNotDisableStartButton() {
+    void IfIsStartableOnUpdate_ShouldNotDisableStartButton() {
         provider.setIsStartable(true);
 
         sut.update();
+
+        assertHasNotDisabledStartButton();
+    }
+
+
+    @Test
+    void IfIsNotStartableOnViewDidShow_ShouldDisableStartButton() {
+        provider.setIsStartable(false);
+
+        sut.onViewDidShow();
+
+        assertHasDisabledStartButton();
+    }
+
+    @Test
+    void IfIsStartableOnViewDidShow_ShouldEnableStartButton() {
+        provider.setIsStartable(true);
+
+        sut.onViewDidShow();
+
+        assertHasEnabledStartButton();
+    }
+
+    @Test
+    void IfIsNotStartableOnViewDidShow_ShouldNotEnableStartButton() {
+        provider.setIsStartable(false);
+
+        sut.onViewDidShow();
+
+        assertHasNotEnabledStartButton();
+    }
+
+    @Test
+    void IfIsStartableOnViewDidShow_ShouldNotDisableStartButton() {
+        provider.setIsStartable(true);
+
+        sut.onViewDidShow();
 
         assertHasNotDisabledStartButton();
     }

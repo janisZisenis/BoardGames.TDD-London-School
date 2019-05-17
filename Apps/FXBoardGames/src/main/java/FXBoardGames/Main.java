@@ -1,15 +1,18 @@
 package FXBoardGames;
 
+import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.View.FXBoardView;
 import FXBoardGames.View.FXTicTacToeView;
+import FXView.FXShell;
 import FXView.FXTicTacToeChoosePlayerView;
 import FXView.FXTicTacToeConfigureView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.ConfigureViewPresenter.IsNotStartableProvider;
+import Presentation.MainMenuTransaction.MainMenuTransaction;
 import Presentation.ShellPresenter.ShellPresenter;
-import FXView.FXShell;
 import Utilities.Transaction.NullTransaction;
+import Utilities.Transaction.Transaction;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -36,7 +39,9 @@ public class Main extends Application {
         second.setDelegate(secondPresenter);
 
         FXTicTacToeConfigureView config = new FXTicTacToeConfigureView(first, second);
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, new IsNotStartableProvider(), new NullTransaction(), new NullTransaction());
+        Transaction mainMenuAction = new MainMenuTransaction(shellPresenter);
+        PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, new IsNotStartableProvider(), mainMenuAction, new NullTransaction());
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 

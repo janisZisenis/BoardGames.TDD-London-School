@@ -27,6 +27,10 @@ public class ConfigureViewPresenter implements ConfigureViewDelegate, Observer {
             view.disableStartButton();
     }
 
+    public void onViewDidShow() {
+        update();
+    }
+
     public void onCancelClicked() {
         cancelAction.execute();
     }
