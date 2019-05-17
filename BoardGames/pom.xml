@@ -6,22 +6,15 @@
         <artifactId>tictactoe-tdd</artifactId>
         <groupId>janis.zisenis.tictactoe.tdd</groupId>
         <version>1.0</version>
-        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>TicTacToe</artifactId>
-
+    <artifactId>BoardGames</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>TicTacToe.Domain</module>
-        <module>TicTacToe.Mapping</module>
-        <module>TicTacToe.Messages</module>
-        <module>TicTacToe.Messaging</module>
-        <module>TicTacToe.Rendering</module>
-        <module>TicTacToe.Presentation</module>
-        <module>TicTacToe.FXView</module>
+        <module>BoardGames.Presentation</module>
+        <module>BoardGames.FXView</module>
     </modules>
+
 
 </project>
