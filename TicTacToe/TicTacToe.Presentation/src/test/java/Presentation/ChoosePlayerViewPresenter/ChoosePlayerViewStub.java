@@ -1,6 +1,6 @@
 package Presentation.ChoosePlayerViewPresenter;
 
-public class ChoosePlayerViewSpy extends ChoosePlayerViewStub {
+public class ChoosePlayerViewStub implements ChoosePlayerView {
 
     private boolean didSelectHuman = false;
     private boolean didSelectHumble = false;
@@ -9,6 +9,10 @@ public class ChoosePlayerViewSpy extends ChoosePlayerViewStub {
     private boolean didDeselectHumble = false;
     private boolean didDeselectInvincible = false;
     private boolean didDeselectHuman = false;
+
+    private boolean humanIsSelected = false;
+    private boolean humbleIsSelected = false;
+    private boolean invincibleIsSelected = false;
 
     public boolean hasSelectedHuman() {
         return didSelectHuman;
@@ -51,6 +55,27 @@ public class ChoosePlayerViewSpy extends ChoosePlayerViewStub {
     }
     public void deselectHuman() {
         didDeselectHuman = true;
+    }
+
+    public void setHumanIsSelected(boolean b) {
+        this.humanIsSelected = b;
+    }
+    public boolean isHumanSelected() {
+        return humanIsSelected;
+    }
+
+    public void setHumbleIsSelected(boolean b) {
+        this.humbleIsSelected = b;
+    }
+    public boolean isHumbleSelected() {
+        return humbleIsSelected;
+    }
+
+    public void setInvincibleIsSelected(boolean b) {
+        this.invincibleIsSelected = b;
+    }
+    public boolean isInvincibleSelected() {
+        return this.invincibleIsSelected;
     }
 
 }

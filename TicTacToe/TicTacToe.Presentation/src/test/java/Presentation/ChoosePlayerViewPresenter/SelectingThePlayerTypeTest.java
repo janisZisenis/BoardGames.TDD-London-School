@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ChoosePlayerViewPresenterTest {
+public class SelectingThePlayerTypeTest {
 
     private ChoosePlayerViewSpy view = new ChoosePlayerViewSpy();
     private ChoosePlayerViewPresenter sut = new ChoosePlayerViewPresenter(view);

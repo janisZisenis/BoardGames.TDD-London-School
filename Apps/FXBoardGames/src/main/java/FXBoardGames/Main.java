@@ -33,6 +33,7 @@ public class Main extends Application {
         FXTicTacToeConfigView config = new FXTicTacToeConfigView(first, second);
         FXTicTacToeView tictactoe = new FXTicTacToeView(config, boardView);
 
+
         ShellPresenter presenter = new ShellPresenter(shell);
         shell.setDelegate(presenter);
 

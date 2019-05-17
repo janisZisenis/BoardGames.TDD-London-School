@@ -118,4 +118,17 @@ public class FXTicTacToeChoosePlayerView extends Pane implements ChoosePlayerVie
         invincibleRadio.setSelected(false);
     }
 
+    public boolean isHumanSelected() {
+        return humanRadio.isSelected();
+    }
+
+    public boolean isHumbleSelected() {
+        return humbleRadio.isSelected();
+    }
+
+    public boolean isInvincibleSelected() {
+        return invincibleRadio.isSelected();
+    }
+
+
 }

@@ -8,4 +8,8 @@ public interface ChoosePlayerView {
     void deselectHumble();
     void deselectInvincible();
     void deselectHuman();
+
+    boolean isHumanSelected();
+    boolean isHumbleSelected();
+    boolean isInvincibleSelected();
 }
