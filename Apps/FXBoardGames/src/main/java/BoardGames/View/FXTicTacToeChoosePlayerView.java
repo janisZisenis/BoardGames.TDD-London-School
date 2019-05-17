@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FXPlayerConfigView extends Pane {
+public class FXTicTacToeChoosePlayerView extends Pane {
 
     private static final String human = "Human";
     private static final String humbleCPU = "CPU - Humble";
@@ -39,7 +39,7 @@ public class FXPlayerConfigView extends Pane {
     private final int height = 110;
     private final int width = 170;
 
-    public FXPlayerConfigView(String initialPlayerName) {
+    public FXTicTacToeChoosePlayerView(String initialPlayerName) {
         init(initialPlayerName);
         fillGrid();
 

@@ -26,8 +26,8 @@ public class FXTicTacToeConfigView extends FXGameView {
     private final Text firstConfig = new Text(configureFirst);
     private final Text secondConfig = new Text(configureSecond);
 
-    private final FXPlayerConfigView first = new FXPlayerConfigView(firstPlayer);
-    private final FXPlayerConfigView second = new FXPlayerConfigView(secondPlayer);
+    private final FXTicTacToeChoosePlayerView first = new FXTicTacToeChoosePlayerView(firstPlayer);
+    private final FXTicTacToeChoosePlayerView second = new FXTicTacToeChoosePlayerView(secondPlayer);
 
     private final StackPane stack = new StackPane();
     private final GridPane grid = new GridPane();

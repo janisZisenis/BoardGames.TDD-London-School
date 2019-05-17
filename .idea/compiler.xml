@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="BoardGames" />
         <module name="BoardGames.Presentation" />
+        <module name="FXBoardGames" />
         <module name="Gaming" />
         <module name="InputGeneration" />
         <module name="InteractiveGaming" />
@@ -24,12 +24,12 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Apps" target="1.5" />
-      <module name="BoardGames" target="1.8" />
       <module name="BoardGames.Presentation" target="1.8" />
       <module name="Core" target="1.5" />
       <module name="Core.Gaming" target="8" />
       <module name="Core.InputGeneration" target="8" />
       <module name="Core.Utilities" target="9" />
+      <module name="FXBoardGames" target="1.8" />
       <module name="Gaming" target="1.8" />
       <module name="InputGeneration" target="1.8" />
       <module name="InteractiveGaming" target="1.8" />
