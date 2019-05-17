@@ -1,5 +1,6 @@
 package Presentation.ConfigureViewPresenter;
 
+import Presentation.ShellPresenter.Api.MainMenuPresenterSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -8,13 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ConfigureViewPresenterTest {
 
     private ConfigureViewSpy view = new ConfigureViewSpy();
-    private PlayerTypeProviderStub provider = new PlayerTypeProviderStub();
+    private IsStartableProviderStub provider = new IsStartableProviderStub();
     private MainMenuPresenterSpy presenter = new MainMenuPresenterSpy();
     private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, provider, presenter);
 
     @Test
     void IfNoDistinctPlayerTypeIsProvided_ShouldDisableStartButton() {
-        provider.setHasPlayerTypes(false);
+        provider.setIsStartable(false);
 
         sut.update();
 
@@ -23,7 +24,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfDistinctPlayerTypeIsProvided_ShouldEnableStartButton() {
-        provider.setHasPlayerTypes(true);
+        provider.setIsStartable(true);
 
         sut.update();
 
@@ -32,7 +33,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfNoDistinctPlayerTypeIsProvided_ShouldNotEnableStartButton() {
-        provider.setHasPlayerTypes(false);
+        provider.setIsStartable(false);
 
         sut.update();
 
@@ -41,7 +42,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfDistinctPlayerTypeIsProvided_ShouldNotDisableStartButton() {
-        provider.setHasPlayerTypes(true);
+        provider.setIsStartable(true);
 
         sut.update();
 

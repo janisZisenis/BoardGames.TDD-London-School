@@ -1,5 +1,5 @@
 package Presentation.ConfigureViewPresenter;
 
-public interface PlayerTypeProvider {
-    boolean hasPlayerTypes();
+public interface IsStartableProvider {
+    boolean isStartable();
 }

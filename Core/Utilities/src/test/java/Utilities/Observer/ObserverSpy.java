@@ -1,4 +1,6 @@
-package Domain.Board.BoardDecorators.ObservableBoard;
+package Utilities.Observer;
+
+import Utilities.Observer.Observer;
 
 public class ObserverSpy implements Observer {
 

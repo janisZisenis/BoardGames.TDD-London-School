@@ -1,8 +1,8 @@
 package Presentation.ConfigureViewPresenter;
 
-public class NullPlayerTypesProvider implements PlayerTypeProvider {
+public class NullPlayerTypesProvider implements IsStartableProvider {
 
-    public boolean hasPlayerTypes() {
+    public boolean isStartable() {
         return false;
     }
 

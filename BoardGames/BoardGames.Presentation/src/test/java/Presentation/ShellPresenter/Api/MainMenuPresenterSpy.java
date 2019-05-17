@@ -1,4 +1,4 @@
-package Presentation.ConfigureViewPresenter;
+package Presentation.ShellPresenter.Api;
 
 import Presentation.ShellPresenter.Api.MainMenuPresenter;
 

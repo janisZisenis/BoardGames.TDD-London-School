@@ -1,6 +1,6 @@
 package Presentation.ChoosePlayerViewPresenter;
 
-import Domain.Board.BoardDecorators.ObservableBoard.Observer;
+import Utilities.Observer.Observer;
 import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 
 import java.util.LinkedList;

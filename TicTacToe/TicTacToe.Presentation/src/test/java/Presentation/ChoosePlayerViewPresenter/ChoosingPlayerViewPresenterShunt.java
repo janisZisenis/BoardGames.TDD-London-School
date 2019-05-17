@@ -1,6 +1,6 @@
 package Presentation.ChoosePlayerViewPresenter;
 
-import Domain.Board.BoardDecorators.ObservableBoard.Observer;
+import Utilities.Observer.Observer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

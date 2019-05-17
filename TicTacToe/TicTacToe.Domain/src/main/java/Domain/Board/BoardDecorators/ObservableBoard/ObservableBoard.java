@@ -3,6 +3,7 @@ package Domain.Board.BoardDecorators.ObservableBoard;
 import Domain.Board.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import Utilities.Observer.Observer;
 
 import java.util.LinkedList;
 

@@ -3,6 +3,7 @@ package Domain.Board.BoardDecorators.ObservableBoard;
 import Domain.Board.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import Utilities.Observer.Observer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

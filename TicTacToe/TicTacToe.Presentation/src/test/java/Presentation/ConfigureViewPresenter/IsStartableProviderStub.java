@@ -1,14 +1,14 @@
 package Presentation.ConfigureViewPresenter;
 
-public class PlayerTypeProviderStub implements PlayerTypeProvider {
+public class IsStartableProviderStub implements IsStartableProvider {
 
-    private boolean hasPlayerTypes = false;
+    private boolean isStartable = false;
 
-    public void setHasPlayerTypes(boolean b) {
-        hasPlayerTypes = b;
+    public void setIsStartable(boolean b) {
+        isStartable = b;
     }
-    public boolean hasPlayerTypes() {
-        return hasPlayerTypes;
+    public boolean isStartable() {
+        return isStartable;
     }
 
 }

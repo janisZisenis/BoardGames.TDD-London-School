@@ -1,10 +1,10 @@
 package Presentation.ChoosePlayerViewPresenter;
 
-import Domain.Board.BoardDecorators.ObservableBoard.ObserverSpy;
+import Utilities.Observer.ObserverSpy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class OneObserverAttached {
 
