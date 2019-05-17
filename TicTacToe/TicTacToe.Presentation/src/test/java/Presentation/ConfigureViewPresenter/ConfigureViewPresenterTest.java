@@ -1,6 +1,6 @@
 package Presentation.ConfigureViewPresenter;
 
-import Presentation.ShellPresenter.Api.MainMenuPresenterSpy;
+import Presentation.MainMenuTransaction.MainMenuPresenterSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
