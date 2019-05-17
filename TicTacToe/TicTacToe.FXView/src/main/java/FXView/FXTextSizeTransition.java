@@ -1,4 +1,4 @@
-package FXBoardGames.View;
+package FXView;
 
 import javafx.animation.Interpolator;
 import javafx.animation.Transition;

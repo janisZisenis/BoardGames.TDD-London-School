@@ -1,13 +1,13 @@
-package FXBoardGames.View;
+package FXView;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
-import FXView.FXGameView;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 import Presentation.BoardViewPresenter.BoardView;
 import Presentation.WinningLinePresenter.WinningLineView;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -94,8 +94,10 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
     }
 
     public void setField(Field field, Mark m) {
-        String text = mapper.map(m);
-        setFieldText(field, text);
+        Platform.runLater(() -> {
+            String text = mapper.map(m);
+            setFieldText(field, text);
+        });
     }
 
     public void clearField(Field field) {

@@ -3,12 +3,16 @@ package App;
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
+import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.IODeviceFactory;
+import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
+import FXView.FXBoardView;
+import FXView.FXIODeviceFactory;
+import FXView.FXInputAlerter;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -19,12 +23,9 @@ import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
-import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Messages.AlertingMessages;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
-import FXView.FXBoardView;
-import FXView.FXInputAlerter;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -54,8 +55,8 @@ public class Main extends Application {
         ListenableBoard board = new ListenableBoard(new HashingBoard());
         initPlayers(board);
 
-        MarkToXOMapper mapper = new MarkToXOMapper();
-        FXBoardView view = new FXBoardView(mapper);
+        FXBoardView view = new FXBoardView(BoardBoundaries.rowColumnCount);
+        view.setSideLength(300);
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
 

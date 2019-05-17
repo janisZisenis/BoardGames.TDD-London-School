@@ -7,7 +7,7 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import FXBoardGames.App.PlayerTypeProvider;
 import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.App.TicTacToeAction;
-import FXBoardGames.View.FXBoardView;
+import FXView.FXBoardView;
 import FXBoardGames.View.FXTicTacToeView;
 import FXView.FXTicTacToeChoosePlayerView;
 import FXView.FXTicTacToeConfigureView;

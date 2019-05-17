@@ -1,4 +1,4 @@
-package FXBoardGames.App;
+package FXView;
 
 import Domain.Board.Board;
 import Domain.Data.BoardBoundaries;
@@ -33,7 +33,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
     }
 
     private InputAlerter makeInputAlerter(String inputAlreadyMarked) {
-        return null;
+        return new FXInputAlerter(inputAlreadyMarked);
     }
 
 }
