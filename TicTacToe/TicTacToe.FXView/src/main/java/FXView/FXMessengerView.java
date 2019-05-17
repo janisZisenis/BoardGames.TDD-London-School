@@ -1,27 +1,26 @@
 package FXView;
 
 import Messaging.MappingPlayerMessenger.Messenger;
-import javafx.application.Platform;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
-public class FXMessenger extends Pane implements Messenger {
+public class FXMessengerView extends Pane implements Messenger {
 
     private final TextArea text = new TextArea();
 
-    public FXMessenger(int width) {
-        setPrefWidth(width);
-
+    public FXMessengerView() {
         text.setEditable(false);
         text.setFocusTraversable(false);
 
-        text.setPrefWidth(width);
         getChildren().addAll(text);
     }
 
+    public void setFixedWidth(int width) {
+        text.setMinWidth(width);
+        text.setMaxWidth(width);
+    }
+
     public void publish(String message) {
-        Platform.runLater(() -> {
-            text.appendText(message + "\n");
-        });
+        text.appendText(message + "\n");
     }
 }

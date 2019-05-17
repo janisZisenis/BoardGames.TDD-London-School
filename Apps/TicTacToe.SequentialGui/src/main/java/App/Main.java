@@ -36,8 +36,8 @@ public class Main extends Application {
 
         FXInputView fxGenerator = new FXInputView(200);
         FXSynchronizingBoardView fxBoard = new FXSynchronizingBoardView(BoardBoundaries.rowColumnCount, 200);
-        FXMessenger fxMessenger = new FXMessenger(445);
-        FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
+        FXSynchronizingMessengerView fxMessenger = new FXSynchronizingMessengerView(445);
+        FXSequentialShell fxShell = new FXSequentialShell(fxBoard, fxGenerator, fxMessenger);
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
         MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);

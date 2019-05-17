@@ -4,9 +4,9 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
-public class FXShell extends Pane {
+public class FXSequentialShell extends Pane {
 
-    public FXShell(FXSynchronizingBoardView board, FXInputView input, FXMessenger messenger) {
+    public FXSequentialShell(Pane board, Pane input, Pane messenger) {
         GridPane grid = makeGrid();
 
         GridPane.setConstraints(board, 0, 0);
