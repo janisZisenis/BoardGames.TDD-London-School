@@ -8,7 +8,7 @@ import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
-import FXView.FXInputAlerter;
+import FXView.FXSynchronizingInputAlerter;
 import FXView.FXInputView;
 
 public class FXIODeviceFactory implements IODeviceFactory {
@@ -39,7 +39,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
     }
 
     private InputAlerter makeInputAlerter(String inputAlreadyMarked) {
-        return new FXInputAlerter(inputAlreadyMarked);
+        return new FXSynchronizingInputAlerter(inputAlreadyMarked);
     }
 
     public static void setHumanInputGenerator(FXInputView humanGenerator) {

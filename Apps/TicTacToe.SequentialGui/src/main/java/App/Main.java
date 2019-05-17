@@ -1,28 +1,27 @@
 package App;
 
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import FXView.*;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.NullRenderer;
 import Gaming.GameFacade.Player;
-import Gaming.GameFacade.Renderer;
 import Gaming.GameLoopImp.Game;
 import Gaming.MessagingGameLoop.GameLoop;
 import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
-import Mapping.MarkToStringMappers.MarkToXOMapper;
+import InputGeneration.NullInputProcessor;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.OnePlayerModeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
-import Rendering.BoardRenderer.BoardRenderer;
-import FXView.FXBoardView;
-import FXView.FXInputView;
-import FXView.FXMessenger;
-import FXView.FXShell;
+import Presentation.BoardViewPresenter.BoardViewPresenter;
+import Presentation.WinningLinePresenter.WinningLinePresenter;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -36,7 +35,7 @@ public class Main extends Application {
         ListenableBoard board = Domain.Factory.makeListenableBoard();
 
         FXInputView fxGenerator = new FXInputView(200);
-        FXBoardView fxBoard = new FXBoardView(200, board, new MarkToXOMapper());
+        FXSynchronizingBoardView fxBoard = new FXSynchronizingBoardView(BoardBoundaries.rowColumnCount, 200);
         FXMessenger fxMessenger = new FXMessenger(445);
         FXShell fxShell = new FXShell(fxBoard, fxGenerator, fxMessenger);
 
@@ -59,8 +58,13 @@ public class Main extends Application {
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
-        Renderer renderer = new BoardRenderer(fxBoard, provider);
-        Game game = Factory.makeGame(rule, player, renderer);
+        Game game = Factory.makeGame(rule, player, new NullRenderer());
+
+        WinningLinePresenter winningLinePresenter = new WinningLinePresenter(fxBoard, provider);
+        board.addListener(winningLinePresenter);
+
+        BoardViewPresenter boardPresenter = new BoardViewPresenter(board, fxBoard, new NullInputProcessor());
+        board.addListener(boardPresenter);
 
         GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(board, fxMessenger);
         GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);
@@ -72,7 +76,6 @@ public class Main extends Application {
 
         Thread t = new Thread() {
             public void run(){
-                renderer.render();
                 loop.run();
             }
         };

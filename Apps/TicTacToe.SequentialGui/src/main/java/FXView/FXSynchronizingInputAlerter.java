@@ -3,23 +3,20 @@ package FXView;
 import InputGeneration.Input.Input;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import javafx.application.Platform;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 
-public class FXInputAlerter implements InputAlerter {
+public class FXSynchronizingInputAlerter implements InputAlerter {
 
-    private final String message;
+    private final FXInputAlerter alerter;
 
-    public FXInputAlerter(String message) {
-        this.message = message;
+    public FXSynchronizingInputAlerter(String message) {
+        alerter = new FXInputAlerter(message);
     }
 
     public void alert(Input input) {
         sleep(50);
 
         Platform.runLater(() -> {
-            Alert a = new Alert(Alert.AlertType.ERROR, message, ButtonType.CLOSE);
-            a.showAndWait();
+            alerter.alert(input);
         });
     }
 
