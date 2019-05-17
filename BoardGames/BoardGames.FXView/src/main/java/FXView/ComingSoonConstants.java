@@ -1,4 +1,4 @@
-package View;
+package FXView;
 
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;

@@ -1,6 +1,6 @@
 package FXBoardGames.View;
 
-import View.FXGameView;
+import FXView.FXGameView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 

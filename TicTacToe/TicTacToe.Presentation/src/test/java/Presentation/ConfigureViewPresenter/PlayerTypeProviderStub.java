@@ -2,13 +2,13 @@ package Presentation.ConfigureViewPresenter;
 
 public class PlayerTypeProviderStub implements PlayerTypeProvider {
 
-    private boolean hasDistinctPlayerType = false;
+    private boolean hasPlayerTypes = false;
 
-    public void setHasDistinctPlayerType(boolean b) {
-        hasDistinctPlayerType = b;
+    public void setHasPlayerTypes(boolean b) {
+        hasPlayerTypes = b;
     }
-    public boolean hasDistinctPlayerType() {
-        return hasDistinctPlayerType;
+    public boolean hasPlayerTypes() {
+        return hasPlayerTypes;
     }
 
 }

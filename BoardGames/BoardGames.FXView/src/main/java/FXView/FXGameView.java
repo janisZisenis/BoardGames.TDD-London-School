@@ -1,4 +1,4 @@
-package View;
+package FXView;
 
 import Presentation.ShellPresenter.GameView;
 import javafx.scene.layout.Pane;

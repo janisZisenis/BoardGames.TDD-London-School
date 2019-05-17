@@ -1,6 +1,6 @@
 package FXBoardGames.View;
 
-import View.FXGameView;
+import FXView.FXGameView;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;

@@ -2,7 +2,6 @@ package FXView;
 
 import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerView;
-import View.ComingSoonConstants;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;

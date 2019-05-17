@@ -1,4 +1,4 @@
-package View;
+package FXView;
 
 import Presentation.ShellPresenter.Api.ShellDelegate;
 import Presentation.ShellPresenter.GameView;

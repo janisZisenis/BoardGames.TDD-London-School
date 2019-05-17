@@ -9,11 +9,12 @@ public class ConfigureViewPresenterTest {
 
     private ConfigureViewSpy view = new ConfigureViewSpy();
     private PlayerTypeProviderStub provider = new PlayerTypeProviderStub();
-    private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, provider);
+    private MainMenuPresenterSpy presenter = new MainMenuPresenterSpy();
+    private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, provider, presenter);
 
     @Test
     void IfNoDistinctPlayerTypeIsProvided_ShouldDisableStartButton() {
-        provider.setHasDistinctPlayerType(false);
+        provider.setHasPlayerTypes(false);
 
         sut.update();
 
@@ -22,7 +23,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfDistinctPlayerTypeIsProvided_ShouldEnableStartButton() {
-        provider.setHasDistinctPlayerType(true);
+        provider.setHasPlayerTypes(true);
 
         sut.update();
 
@@ -31,7 +32,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfNoDistinctPlayerTypeIsProvided_ShouldNotEnableStartButton() {
-        provider.setHasDistinctPlayerType(false);
+        provider.setHasPlayerTypes(false);
 
         sut.update();
 
@@ -40,7 +41,7 @@ public class ConfigureViewPresenterTest {
 
     @Test
     void IfDistinctPlayerTypeIsProvided_ShouldNotDisableStartButton() {
-        provider.setHasDistinctPlayerType(true);
+        provider.setHasPlayerTypes(true);
 
         sut.update();
 
@@ -64,6 +65,19 @@ public class ConfigureViewPresenterTest {
 
     private void assertHasDisabledStartButton() {
         boolean actual = view.hasDisabledStartButton();
+        assertTrue(actual);
+    }
+
+
+    @Test
+    void IfCancelButtonGetsClicked_ShouldShowTheMainMenu() {
+        sut.onCancelClicked();
+
+        assertHasShownMainMenu();
+    }
+
+    private void assertHasShownMainMenu() {
+        boolean actual = presenter.hasShownMainMenu();
         assertTrue(actual);
     }
 

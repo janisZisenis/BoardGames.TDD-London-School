@@ -8,8 +8,8 @@ import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
-import View.ConsoleInputAlerter;
-import View.ConsoleInputGenerator;
+import FXView.ConsoleInputAlerter;
+import FXView.ConsoleInputGenerator;
 
 public class ConsoleIODeviceFactory implements IODeviceFactory {
 

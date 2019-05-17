@@ -8,8 +8,8 @@ import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
-import View.FXInputAlerter;
-import View.FXInputView;
+import FXView.FXInputAlerter;
+import FXView.FXInputView;
 
 public class FXIODeviceFactory implements IODeviceFactory {
 

@@ -19,8 +19,8 @@ import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
 import Rendering.BoardRenderer.BoardRenderer;
-import View.ConsoleBoardView;
-import View.ConsoleMessenger;
+import FXView.ConsoleBoardView;
+import FXView.ConsoleMessenger;
 
 public class Main {
 

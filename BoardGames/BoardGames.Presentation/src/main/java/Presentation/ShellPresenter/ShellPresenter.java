@@ -1,11 +1,12 @@
 package Presentation.ShellPresenter;
 
+import Presentation.ShellPresenter.Api.MainMenuPresenter;
 import Presentation.ShellPresenter.Api.ShellDelegate;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class ShellPresenter implements ShellDelegate {
+public class ShellPresenter implements ShellDelegate, MainMenuPresenter {
 
     private final Shell shell;
     private final List<GameView> games = new LinkedList<>();
