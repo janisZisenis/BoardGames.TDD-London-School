@@ -5,10 +5,10 @@ import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import Mapping.MarkToStringMapper;
-import Rendering.BoardRenderer.BoardRenderingView;
+import Messaging.WinnerMessageProviderImp.MarkToStringMapper;
+import Rendering.BoardRenderer.RenderingBoardView;
 
-public class ConsoleBoardView implements BoardRenderingView {
+public class ConsoleBoardView implements RenderingBoardView {
 
     private final String empty = "\u00B7";
     private final String winningColor = "\u001B[32m";

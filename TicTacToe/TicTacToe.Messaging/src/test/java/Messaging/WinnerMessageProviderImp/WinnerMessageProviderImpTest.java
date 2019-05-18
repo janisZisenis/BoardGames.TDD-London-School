@@ -2,7 +2,6 @@ package Messaging.WinnerMessageProviderImp;
 
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProviderStub;
-import Mapping.MarkToStringMapperStub;
 import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

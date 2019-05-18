@@ -22,14 +22,6 @@
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Mapping</artifactId>
-            <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Domain</artifactId>
             <version>1.0</version>
             <type>test-jar</type>
@@ -66,13 +58,13 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>TicTacToe.Mapping</artifactId>
+            <artifactId>Messaging</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Messaging</artifactId>
+            <artifactId>TicTacToe.Messages</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>

@@ -4,7 +4,7 @@ import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
 import FXView.FXGameView;
-import Mapping.MarkToStringMappers.MarkToXOMapper;
+import Messaging.MarkToStringMappers.MarkToXOMapper;
 import Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 import Presentation.BoardViewPresenter.BoardView;
 import Presentation.WinningLinePresenter.WinningLineView;
