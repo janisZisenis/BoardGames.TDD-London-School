@@ -1,7 +1,5 @@
 package FXView;
 
-import Presentation.GameOverView.GameOverViewController.Api.GameOverViewDelegate;
-import Presentation.GameOverView.GameOverViewController.GameOverView;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -11,7 +9,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FXTicTacToeGameOverView extends StackPane implements GameOverView {
+public class FXTicTacToeGameOverView extends StackPane {
 
     private final static int winnerFontSize = 16;
     private final static Font winnerFont = new Font(winnerFontSize);
@@ -31,11 +29,11 @@ public class FXTicTacToeGameOverView extends StackPane implements GameOverView {
     private final int width = 155;
     private final int height = 157;
 
-    private GameOverViewDelegate delegate;
+//    private GameOverViewDelegate delegate;
 
-    public void setDelegate(GameOverViewDelegate delegate) {
-        this.delegate = delegate;
-    }
+//    public void setDelegate(GameOverViewDelegate delegate) {
+//        this.delegate = delegate;
+//    }
 
     public FXTicTacToeGameOverView() {
         initStack();
@@ -89,18 +87,18 @@ public class FXTicTacToeGameOverView extends StackPane implements GameOverView {
 
 
     private void onCancelClicked() {
-        if(delegate != null)
-            delegate.onCancelClicked();
+//        if(delegate != null)
+//            delegate.onCancelClicked();
     }
 
     private void onReconfigureClicked() {
-        if(delegate != null)
-            delegate.onReconfigureClicked();
+//        if(delegate != null)
+//            delegate.onReconfigureClicked();
     }
 
     private void onRestartClicked() {
-        if(delegate != null)
-            delegate.onRestartClicked();
+//        if(delegate != null)
+//            delegate.onRestartClicked();
     }
 
 }

@@ -66,7 +66,7 @@ public class TicTacToeAction implements Transaction {
         boardView.setDelegate(boardPresenter);
 
 //        FXTicTacToeGameOverView gameOverView = new FXTicTacToeGameOverView();
-//        GameOverViewController gameOverViewPresenter = new GameOverViewController();
+//        GameOverInteractorFacade gameOverViewPresenter = new GameOverInteractorFacade();
 //        gameOverView.setDelegate(gameOverViewPresenter);
 
         runner.run();
