@@ -12,7 +12,6 @@ import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import FXView.FXBoardView;
 import FXView.FXIODeviceFactory;
 import FXView.FXInputAlerter;
-import FXView.FXTicTacToeGameOverView;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -27,7 +26,6 @@ import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
 import Messages.AlertingMessages;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.ChoosePlayerViewPresenter.PlayerType;
-import Presentation.GameOverPresenterView.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
@@ -67,9 +65,9 @@ public class TicTacToeAction implements Transaction {
         board.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
 
-        FXTicTacToeGameOverView gameOverView = new FXTicTacToeGameOverView();
-        GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter();
-        gameOverView.setDelegate(gameOverViewPresenter);
+//        FXTicTacToeGameOverView gameOverView = new FXTicTacToeGameOverView();
+//        GameOverViewController gameOverViewPresenter = new GameOverViewController();
+//        gameOverView.setDelegate(gameOverViewPresenter);
 
         runner.run();
     }

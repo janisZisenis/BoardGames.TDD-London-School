@@ -1,7 +1,7 @@
 package FXView;
 
-import Presentation.GameOverPresenterView.Api.GameOverViewDelegate;
-import Presentation.GameOverPresenterView.GameOverView;
+import Presentation.GameOverView.GameOverViewController.Api.GameOverViewDelegate;
+import Presentation.GameOverView.GameOverViewController.GameOverView;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;

@@ -1,4 +1,4 @@
-package Presentation.GameOverPresenterView.Api;
+package Presentation.GameOverView.GameOverViewController.Api;
 
 public interface GameOverViewDelegate {
     void onCancelClicked();
