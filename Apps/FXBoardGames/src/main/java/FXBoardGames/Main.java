@@ -2,11 +2,8 @@ package FXBoardGames;
 
 import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.App.TicTacToeAction;
+import FXView.*;
 import FXView.FXQuitTransaction.FXQuitTransaction;
-import FXView.FXShell;
-import FXView.FXTicTacToeChoosePlayerView;
-import FXView.FXTicTacToeConfigureView;
-import FXView.FXWelcomeView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
@@ -37,15 +34,15 @@ public class Main extends Application {
         ChoosePlayerViewPresenter secondPresenter = new ChoosePlayerViewPresenter(second);
         second.setDelegate(secondPresenter);
 
-        Transaction menuAction = new LoadGameViewTransaction(welcomeView ,shell);
-        Transaction runAction = new TicTacToeAction(null, shell);
         FXTicTacToeConfigureView config = new FXTicTacToeConfigureView(first, second);
+        Transaction loadAction = new LoadGameViewTransaction(config, shell);
+        Transaction menuAction = new LoadGameViewTransaction(welcomeView ,shell);
+        Transaction runAction = new TicTacToeAction(shell);
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
         ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, menuAction, runAction);
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 
-        Transaction loadAction = new LoadGameViewTransaction(config, shell);
         presenter.addAction(loadAction, "TicTacToe");
         presenter.addComingSoonAction("Conway's Game of Life");
         presenter.addComingSoonAction("Four in a Row");
@@ -58,6 +55,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();
+
+        loadAction.execute();
     }
 
 }

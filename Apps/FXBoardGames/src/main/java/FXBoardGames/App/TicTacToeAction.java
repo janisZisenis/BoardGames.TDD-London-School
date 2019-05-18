@@ -5,12 +5,14 @@ import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
+import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import FXView.FXBoardView;
 import FXView.FXIODeviceFactory;
 import FXView.FXInputAlerter;
+import FXView.FXTicTacToeGameOverView;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -25,17 +27,17 @@ import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
 import Messages.AlertingMessages;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.ChoosePlayerViewPresenter.PlayerType;
+import Presentation.GameOverPresenterView.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
+import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
 
 public class TicTacToeAction implements Transaction {
 
-    private final PlayerTypeProvider provider;
     private final GameViewLoader loader;
 
-    public TicTacToeAction(PlayerTypeProvider provider, GameViewLoader loader) {
+    public TicTacToeAction(GameViewLoader loader) {
         this.loader = loader;
-        this.provider = provider;
     }
 
     public void execute() {
@@ -44,14 +46,18 @@ public class TicTacToeAction implements Transaction {
 
         ListenableBoard board = new ListenableBoard(new HashingBoard());
 
-        HybridPlayer john = makePlayer(null, Mark.John, board);
-        HybridPlayer haley = makePlayer(null, Mark.Haley, board);
+        HybridPlayer john = makePlayer(PlayerType.Human, Mark.John, board);
+        HybridPlayer haley = makePlayer(PlayerType.Humble, Mark.Haley, board);
         MultiHybridPlayer multiPlayer = new MultiHybridPlayer(john);
         multiPlayer.add(haley);
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         HybridGame game = new HybridGameImp(rule, multiPlayer);
         HybridGameRunner runner = new HybridGameRunner(game);
+
+        WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
+        WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);
+        board.addListener(winningLinePresenter);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
@@ -60,6 +66,10 @@ public class TicTacToeAction implements Transaction {
         BoardViewPresenter boardPresenter = new BoardViewPresenter(board, boardView, processor);
         board.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
+
+        FXTicTacToeGameOverView gameOverView = new FXTicTacToeGameOverView();
+        GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter();
+        gameOverView.setDelegate(gameOverViewPresenter);
 
         runner.run();
     }

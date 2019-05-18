@@ -28,6 +28,7 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     private static final Font welcomeFont = new Font(welcomeFontSize);
 
     private static final String background = "#c6ccd2";
+    private static final int radius = 18;
     private static final int headerFontSize = 14;
     private static final Font headerFont = new Font(headerFontSize);
 
@@ -59,12 +60,7 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
         initStack();
         initButtons();
 
-        Pane welcomeSection = makeWelcomeSection();
-        Pane boardSection = makeBoardSection();
-        Pane playersSection = makePlayersSection(firstPlayer, secondPlayer);
-        Pane buttonSection = makeButtonSection();
-
-        GridPane grid = makeGrid(welcomeSection, boardSection, playersSection, buttonSection);
+        GridPane grid = makeGrid(firstPlayer, secondPlayer);
 
         stack.getChildren().add(grid);
         getChildren().add(stack);
@@ -78,13 +74,13 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     }
 
 
-    private GridPane makeGrid(Pane welcomeSection, Pane boardSection, Pane playersSection, Pane buttonSection) {
+    private GridPane makeGrid(Pane firstPlayer, Pane secondPlayer) {
         GridPane grid = new GridPane();
         grid.setVgap(5);
-        grid.add(welcomeSection, 0, 0);
-        grid.add(boardSection, 0, 1);
-        grid.add(playersSection, 0, 2);
-        grid.add(buttonSection, 0, 3);
+        grid.add(makeWelcomeSection(), 0, 0);
+        grid.add(makeBoardSection(), 0, 1);
+        grid.add(makePlayersSection(firstPlayer, secondPlayer), 0, 2);
+        grid.add(makeButtonSection(), 0, 3);
         return grid;
     }
 
@@ -193,7 +189,7 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     private GridPane makeSectionGrid() {
         GridPane grid = new GridPane();
         grid.setStyle("-fx-background-color: " + background + " ;" +
-                "-fx-background-radius: 18;"
+                "-fx-background-radius: " + String.valueOf(radius) + ";"
         );
         grid.setHgap(5);
         int lrP = 8;
