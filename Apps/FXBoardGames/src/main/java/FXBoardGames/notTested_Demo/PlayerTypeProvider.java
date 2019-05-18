@@ -1,4 +1,4 @@
-package FXBoardGames.App;
+package FXBoardGames.notTested_Demo;
 
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ChoosePlayerViewPresenter.PlayerType;

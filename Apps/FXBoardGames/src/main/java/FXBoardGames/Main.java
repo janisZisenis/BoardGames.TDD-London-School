@@ -1,7 +1,7 @@
 package FXBoardGames;
 
-import FXBoardGames.App.PlayersChosenStartableProvider;
-import FXBoardGames.App.TicTacToeAction;
+import FXBoardGames.notTested_Demo.PlayersChosenStartableProvider;
+import FXBoardGames.notTested_Demo.TicTacToeAction;
 import FXView.*;
 import FXView.FXQuitTransaction.FXQuitTransaction;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
