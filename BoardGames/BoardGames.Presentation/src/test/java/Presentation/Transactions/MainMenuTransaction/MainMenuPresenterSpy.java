@@ -1,4 +1,4 @@
-package Presentation.MainMenuTransaction;
+package Presentation.Transactions.MainMenuTransaction;
 
 public class MainMenuPresenterSpy implements MainMenuPresenter {
 

@@ -1,4 +1,4 @@
-package Presentation.MainMenuTransaction;
+package Presentation.Transactions.MainMenuTransaction;
 
 import org.junit.jupiter.api.Test;
 
