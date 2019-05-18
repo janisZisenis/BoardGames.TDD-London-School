@@ -26,14 +26,14 @@ public class OneObserverAttached {
 
     @Test
     void IfHumbleGetsClicked_ShouldUpdateObserver() {
-        sut.onHumbleClicked();
+        sut.onHumbleCPUClicked();
 
         assertWasUpdated();
     }
 
     @Test
     void IfInvincibleGetsClicked_ShouldUpdateObserver() {
-        sut.onInvincibleClicked();
+        sut.onInvincibleCPUClicked();
 
         assertWasUpdated();
     }

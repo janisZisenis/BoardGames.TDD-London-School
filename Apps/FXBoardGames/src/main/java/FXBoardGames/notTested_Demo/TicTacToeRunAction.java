@@ -62,7 +62,7 @@ public class TicTacToeRunAction implements Transaction {
         ListenableBoard board = new ListenableBoard(observableBoard);
 
         HybridPlayer john = makePlayer(PlayerType.Human, Mark.John, board);
-        HybridPlayer haley = makePlayer(PlayerType.Humble, Mark.Haley, board);
+        HybridPlayer haley = makePlayer(PlayerType.HumbleCPU, Mark.Haley, board);
         MultiHybridPlayer multiPlayer = new MultiHybridPlayer(john);
         multiPlayer.add(haley);
 
@@ -105,9 +105,9 @@ public class TicTacToeRunAction implements Transaction {
     }
 
     private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
-        if(type == PlayerType.Invincible)
+        if(type == PlayerType.InvincibleCPU)
             return new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory()));
-        if(type == PlayerType.Humble)
+        if(type == PlayerType.HumbleCPU)
             return new HybridPlayerAdapter(Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory()));
 
         return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));

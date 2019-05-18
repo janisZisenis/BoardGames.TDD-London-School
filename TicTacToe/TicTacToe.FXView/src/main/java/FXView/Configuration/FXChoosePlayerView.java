@@ -3,6 +3,7 @@ package FXView.Configuration;
 import FXView.ComingSoonConstants;
 import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerView;
+import Presentation.ChoosePlayerViewPresenter.PlayerType;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -11,11 +12,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import static Presentation.ChoosePlayerViewPresenter.PlayerType.*;
+
 public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
 
     private static final String human = "Human";
-    private static final String humbleCPU = "CPU - Humble";
-    private static final String invincibleCPU = "CPU - Invincible";
+    private static final String humbleCPU = "CPU - HumbleCPU";
+    private static final String invincibleCPU = "CPU - InvincibleCPU";
     private static final String aiCPU = "CPU - AI";
 
     private static final String comingSoon = ComingSoonConstants.text;
@@ -36,6 +42,8 @@ public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
     private final int height = 110;
     private final int width = 170;
 
+    private HashMap<PlayerType, RadioButton> buttons = new HashMap<>();
+
     private ChoosePlayerViewDelegate delegate;
 
     public void setDelegate(ChoosePlayerViewDelegate delegate) {
@@ -44,6 +52,7 @@ public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
 
     public FXChoosePlayerView() {
         init();
+        initButtonMap();
         fillGrid();
 
         stack.getChildren().add(grid);
@@ -52,23 +61,26 @@ public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
         humanRadio.setOnAction(e -> onHumanClicked());
         humbleRadio.setOnAction(e -> onHumbleClicked());
         invincibleRadio.setOnAction(e -> onInvincibleClicked());
+        aiRadio.setDisable(true);
     }
 
-    private void onHumanClicked() {
-        if(delegate != null)
-            delegate.onHumanClicked();
+    private void init() {
+        setMaxSize(width, height);
+        setMinSize(width, height);
+        setPrefSize(width, height);
+
+        grid.setHgap(5);
+        grid.setVgap(10);
+
+        comingSoonText.setFill(comingSoonColor);
+        comingSoonText.setFont(comingSoonFont);
     }
 
-    private void onHumbleClicked() {
-        if(delegate != null)
-            delegate.onHumbleClicked();
+    private void initButtonMap() {
+        buttons.put(Human, humanRadio);
+        buttons.put(HumbleCPU, humbleRadio);
+        buttons.put(InvincibleCPU, invincibleRadio);
     }
-
-    private void onInvincibleClicked() {
-        if(delegate != null)
-            delegate.onInvincibleClicked();
-    }
-
 
     private void fillGrid() {
         grid.add(humanRadio, 0, 0);
@@ -81,53 +93,33 @@ public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
         grid.add(aiGrid, 0, 3);
     }
 
-    private void init() {
-        setMaxSize(width, height);
-        setMinSize(width, height);
-        setPrefSize(width, height);
 
-        grid.setHgap(5);
-        grid.setVgap(10);
-
-        aiRadio.setDisable(true);
-        comingSoonText.setFill(comingSoonColor);
-        comingSoonText.setFont(comingSoonFont);
+    private void onHumanClicked() {
+        if(delegate != null)
+            delegate.onHumanClicked();
     }
 
-    public void selectHuman() {
-        humanRadio.setSelected(true);
+    private void onHumbleClicked() {
+        if(delegate != null)
+            delegate.onHumbleCPUClicked();
     }
 
-    public void selectHumble() {
-        humbleRadio.setSelected(true);
+    private void onInvincibleClicked() {
+        if(delegate != null)
+            delegate.onInvincibleCPUClicked();
     }
 
-    public void selectInvincible() {
-        invincibleRadio.setSelected(true);
+
+    public void setSelectedPlayerType(PlayerType type) {
+        deselectAllRadioButtons();
+        buttons.get(type).setSelected(true);
     }
 
-    public void deselectHuman() {
-        humanRadio.setSelected(false);
-    }
-
-    public void deselectHumble() {
-        humbleRadio.setSelected(false);
-    }
-
-    public void deselectInvincible() {
-        invincibleRadio.setSelected(false);
-    }
-
-    public boolean isHumanSelected() {
-        return humanRadio.isSelected();
-    }
-
-    public boolean isHumbleSelected() {
-        return humbleRadio.isSelected();
-    }
-
-    public boolean isInvincibleSelected() {
-        return invincibleRadio.isSelected();
+    private void deselectAllRadioButtons() {
+        for (Map.Entry<PlayerType, RadioButton> me : buttons.entrySet()) {
+            RadioButton b = me.getValue();
+            b.setSelected(false);
+        }
     }
 
 

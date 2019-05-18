@@ -5,41 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ChoosingPlayerViewPresenterShunt implements ChoosePlayerView, Observer {
+public class ChoosingPlayerViewPresenterShunt extends ChoosePlayerViewDummy implements Observer {
 
     private String logString = "";
 
+    private ChoosePlayerViewPresenter sut = new ChoosePlayerViewPresenter(this);
+
     @Test
     void IfHumanGetsClicked_ShouldFirstSelectHumanBeforeUpdating() {
-        ChoosePlayerViewPresenter sut = new ChoosePlayerViewPresenter(this);
         sut.attach(this);
         logString = "";
 
         sut.onHumanClicked();
 
-        assertLogStringEquals("selectHuman update ");
-    }
-
-    @Test
-    void IfHumbleGetsClicked_ShouldFirstSelectHumbleBeforeUpdating() {
-        ChoosePlayerViewPresenter sut = new ChoosePlayerViewPresenter(this);
-        sut.attach(this);
-        logString = "";
-
-        sut.onHumbleClicked();
-
-        assertLogStringEquals("selectHumble update ");
-    }
-
-    @Test
-    void IfInvincibleGetsClicked_ShouldFirstSelectInvincibleBeforeUpdating() {
-        ChoosePlayerViewPresenter sut = new ChoosePlayerViewPresenter(this);
-        sut.attach(this);
-        logString = "";
-
-        sut.onInvincibleClicked();
-
-        assertLogStringEquals("selectInvincible update ");
+        assertLogStringEquals("setSelectedPlayerType update ");
     }
 
     private void assertLogStringEquals(String expected) {
@@ -51,33 +30,8 @@ public class ChoosingPlayerViewPresenterShunt implements ChoosePlayerView, Obser
         logString += "update ";
     }
 
-    public void selectHuman() {
-        logString += "selectHuman ";
-    }
-    public void selectHumble() {
-        logString += "selectHumble ";
-    }
-    public void selectInvincible() {
-        logString += "selectInvincible ";
+    public void setSelectedPlayerType(PlayerType type) {
+        logString += "setSelectedPlayerType ";
     }
 
-    public void deselectHumble() {
-
-    }
-    public void deselectInvincible() {
-
-    }
-    public void deselectHuman() {
-
-    }
-
-    public boolean isHumanSelected() {
-        return false;
-    }
-    public boolean isHumbleSelected() {
-        return false;
-    }
-    public boolean isInvincibleSelected() {
-        return false;
-    }
 }

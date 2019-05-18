@@ -6,6 +6,10 @@ import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 import java.util.LinkedList;
 import java.util.List;
 
+import static Presentation.ChoosePlayerViewPresenter.PlayerType.Human;
+import static Presentation.ChoosePlayerViewPresenter.PlayerType.HumbleCPU;
+import static Presentation.ChoosePlayerViewPresenter.PlayerType.InvincibleCPU;
+
 public class ChoosePlayerViewPresenter implements ChoosePlayerViewDelegate {
 
     private final ChoosePlayerView view;
@@ -13,76 +17,22 @@ public class ChoosePlayerViewPresenter implements ChoosePlayerViewDelegate {
 
     public ChoosePlayerViewPresenter(ChoosePlayerView view) {
         this.view = view;
-        selectOnlyHuman();
+        view.setSelectedPlayerType(Human);
     }
 
     public void onHumanClicked() {
-        selectOnlyHuman();
+        view.setSelectedPlayerType(Human);
         notifyObservers();
     }
 
-    public void onHumbleClicked() {
-        selectOnlyHumble();
+    public void onHumbleCPUClicked() {
+        view.setSelectedPlayerType(HumbleCPU);
         notifyObservers();
     }
 
-    public void onInvincibleClicked() {
-        selectOnlyInvincible();
+    public void onInvincibleCPUClicked() {
+        view.setSelectedPlayerType(InvincibleCPU);
         notifyObservers();
-    }
-
-    private void selectOnlyHuman() {
-        view.selectHuman();
-        view.deselectHumble();
-        view.deselectInvincible();
-    }
-
-    private void selectOnlyHumble() {
-        view.deselectHuman();
-        view.selectHumble();
-        view.deselectInvincible();
-    }
-
-    private void selectOnlyInvincible() {
-        view.deselectHuman();
-        view.deselectHumble();
-        view.selectInvincible();
-    }
-
-    public boolean hasDistinctPlayerType() {
-        return onlyHumanIsSelected() || onlyHumbleIsSelected() || onlyInvincibleIsSelected();
-    }
-
-    private boolean onlyHumanIsSelected() {
-        return view.isHumanSelected() && !(view.isHumbleSelected() || view.isInvincibleSelected());
-    }
-
-    private boolean onlyHumbleIsSelected() {
-        return view.isHumbleSelected() && !(view.isInvincibleSelected() || view.isHumanSelected());
-    }
-
-    private boolean onlyInvincibleIsSelected() {
-        return view.isInvincibleSelected() && !(view.isHumanSelected() || view.isHumbleSelected());
-    }
-
-    public PlayerType getDistinctPlayerType() {
-        throwIfNoDistinctPlayerTypeAvailable();
-
-        return getPlayerType();
-    }
-
-    private PlayerType getPlayerType() {
-        if(view.isInvincibleSelected())
-            return PlayerType.Invincible;
-        if(view.isHumbleSelected())
-            return PlayerType.Humble;
-
-        return PlayerType.Human;
-    }
-
-    private void throwIfNoDistinctPlayerTypeAvailable() {
-        if(!hasDistinctPlayerType())
-            throw new NoDistinctPlayerType();
     }
 
     public void attach(Observer o) {
@@ -94,5 +44,4 @@ public class ChoosePlayerViewPresenter implements ChoosePlayerViewDelegate {
             o.update();
     }
 
-    public class NoDistinctPlayerType extends RuntimeException {}
 }

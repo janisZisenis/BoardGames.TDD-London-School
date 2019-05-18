@@ -35,14 +35,14 @@ public class TwoObserversAttached {
 
     @Test
     void IfHumbleGetsClicked_ShouldUpdateSecond() {
-        sut.onHumbleClicked();
+        sut.onHumbleCPUClicked();
 
         assertWasUpdated(second);
     }
 
     @Test
     void IfInvincibleGetsClicked_ShouldUpdateSecond() {
-        sut.onInvincibleClicked();
+        sut.onInvincibleCPUClicked();
 
         assertWasUpdated(second);
     }
