@@ -1,6 +1,9 @@
 package FXBoardGames.App;
 
+import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.HashingBoard.HashingBoard;
+import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
@@ -8,7 +11,6 @@ import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import FXView.FXBoardView;
 import FXView.FXIODeviceFactory;
 import FXView.FXInputAlerter;
-import FXBoardGames.View.FXTicTacToeView;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -23,27 +25,27 @@ import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
 import Messages.AlertingMessages;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.ChoosePlayerViewPresenter.PlayerType;
+import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Utilities.Transaction.Transaction;
 
 public class TicTacToeAction implements Transaction {
 
-    private final FXTicTacToeView tictactoe;
-    private final ListenableBoard board;
-    private final FXBoardView boardView;
     private final PlayerTypeProvider provider;
+    private final GameViewLoader loader;
 
-    public TicTacToeAction(FXTicTacToeView tictactoe, ListenableBoard board, FXBoardView boardView, PlayerTypeProvider provider) {
-        this.tictactoe = tictactoe;
-        this.board = board;
-        this.boardView = boardView;
+    public TicTacToeAction(PlayerTypeProvider provider, GameViewLoader loader) {
+        this.loader = loader;
         this.provider = provider;
     }
 
     public void execute() {
-        tictactoe.showBoard();
+        FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
+        loader.load(boardView);
 
-        HybridPlayer john = makePlayer(provider.getFirst(), Mark.John);
-        HybridPlayer haley = makePlayer(provider.getSecond(), Mark.Haley);
+        ListenableBoard board = new ListenableBoard(new HashingBoard());
+
+        HybridPlayer john = makePlayer(null, Mark.John, board);
+        HybridPlayer haley = makePlayer(null, Mark.Haley, board);
         MultiHybridPlayer multiPlayer = new MultiHybridPlayer(john);
         multiPlayer.add(haley);
 
@@ -62,13 +64,13 @@ public class TicTacToeAction implements Transaction {
         runner.run();
     }
 
-    private HybridPlayer makePlayer(PlayerType type, Mark m) {
-        if(type == PlayerType.Human)
-            return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
+    private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
+        if(type == PlayerType.Invincible)
+            return new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory()));
         if(type == PlayerType.Humble)
             return new HybridPlayerAdapter(Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory()));
 
-        return new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory()));
+        return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
     };
 
 }

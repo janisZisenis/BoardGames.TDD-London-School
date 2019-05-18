@@ -1,20 +1,16 @@
 package FXBoardGames;
 
-import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
-import Domain.Board.HashingBoard.HashingBoard;
-import Domain.Data.BoardBoundaries;
-import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import FXBoardGames.App.PlayerTypeProvider;
 import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.App.TicTacToeAction;
-import FXBoardGames.View.FXTicTacToeView;
-import FXView.*;
 import FXView.FXQuitTransaction.FXQuitTransaction;
+import FXView.FXShell;
+import FXView.FXTicTacToeChoosePlayerView;
+import FXView.FXTicTacToeConfigureView;
+import FXView.FXWelcomeView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
 import Presentation.WelcomeViewPresenter.WelcomeViewPresenter;
-import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -33,13 +29,6 @@ public class Main extends Application {
         welcomeView.setDelegate(presenter);
         shell.load(welcomeView);
 
-        ListenableBoard board = new ListenableBoard(new HashingBoard());
-        WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
-
-        FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
-        WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);
-        board.addListener(winningLinePresenter);
-
         FXTicTacToeChoosePlayerView first = new FXTicTacToeChoosePlayerView();
         ChoosePlayerViewPresenter firstPresenter = new ChoosePlayerViewPresenter(first);
         first.setDelegate(firstPresenter);
@@ -48,16 +37,11 @@ public class Main extends Application {
         ChoosePlayerViewPresenter secondPresenter = new ChoosePlayerViewPresenter(second);
         second.setDelegate(secondPresenter);
 
-        FXTicTacToeConfigureView config = new FXTicTacToeConfigureView(first, second);
-        FXTicTacToeView tictactoe = new FXTicTacToeView(config, boardView);
-        tictactoe.setSideLength(400);
-
-        PlayerTypeProvider playerTypeProvider = new PlayerTypeProvider(firstPresenter, secondPresenter);
-        TicTacToeAction tictactoeAction = new TicTacToeAction(tictactoe, board, boardView, playerTypeProvider);
-
         Transaction menuAction = new LoadGameViewTransaction(welcomeView ,shell);
+        Transaction runAction = new TicTacToeAction(null, shell);
+        FXTicTacToeConfigureView config = new FXTicTacToeConfigureView(first, second);
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, menuAction, tictactoeAction);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, menuAction, runAction);
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 
