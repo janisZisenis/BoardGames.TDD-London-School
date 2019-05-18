@@ -3,6 +3,7 @@ package FXView;
 import Domain.Data.BoardBoundaries;
 import Presentation.ConfigureViewPresenter.Api.ConfigureViewDelegate;
 import Presentation.ConfigureViewPresenter.ConfigureView;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
@@ -23,10 +24,14 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     private static final Color comingSoonColor = ComingSoonConstants.color;
     private static final Font comingSoonFont = ComingSoonConstants.font;
 
+    private static final int welcomeFontSize = 16;
+    private static final Font welcomeFont = new Font(welcomeFontSize);
+
     private static final String background = "#c6ccd2";
     private static final int headerFontSize = 14;
     private static final Font headerFont = new Font(headerFontSize);
 
+    private static final String welcomeText = "Welcome to TicTacToe!";
     private static final String configureBoardText = "Configure Your Board!";
     private static final String sideLengthText = "Board Side Length:";
     private static final String lineLengthText = "Winning Line Length:";
@@ -39,6 +44,8 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     private final int width = 380;
     private final int height = 205;
 
+    private final StackPane stack = new StackPane();
+
     private final Button cancel = new Button(cancelText);
     private final Button start = new Button(startText);
 
@@ -49,34 +56,49 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
     }
 
     public FXTicTacToeConfigureView(Pane firstPlayer, Pane secondPlayer) {
-        init();
+        initStack();
         initButtons();
 
+        Pane welcomeSection = makeWelcomeSection();
         Pane boardSection = makeBoardSection();
         Pane playersSection = makePlayersSection(firstPlayer, secondPlayer);
         Pane buttonSection = makeButtonSection();
 
-        GridPane grid = makeGrid(boardSection, playersSection, buttonSection);
-        grid.setStyle("-fx-background-color: black ;");
+        GridPane grid = makeGrid(welcomeSection, boardSection, playersSection, buttonSection);
 
-        grid.setMinSize(width, height);
-        grid.setMaxSize(width, height);
-        grid.setPrefSize(width, height);
-
-        getChildren().add(grid);
+        stack.getChildren().add(grid);
+        getChildren().add(stack);
     }
 
-    private void init() {
+    private void initStack() {
+        stack.setMinSize(width, height);
+        stack.setMaxSize(width, height);
+        stack.setPrefSize(width, height);
         registerShowListener();
     }
 
-    private GridPane makeGrid(Pane boardSection, Pane playersSection, Pane buttonSection) {
+
+    private GridPane makeGrid(Pane welcomeSection, Pane boardSection, Pane playersSection, Pane buttonSection) {
         GridPane grid = new GridPane();
-        grid.add(boardSection, 0, 0);
-        grid.add(new Text(), 0, 1);
+        grid.setVgap(5);
+        grid.add(welcomeSection, 0, 0);
+        grid.add(boardSection, 0, 1);
         grid.add(playersSection, 0, 2);
-        grid.add(new Text(), 0, 3);
-        grid.add(buttonSection, 0, 4);
+        grid.add(buttonSection, 0, 3);
+        return grid;
+    }
+
+    private Pane makeWelcomeSection() {
+        GridPane grid = makeSectionGrid();
+
+        Text text = new Text(welcomeText);
+        text.setFont(welcomeFont);
+
+        grid.add(text, 0, 0);
+
+        ColumnConstraints col = new ColumnConstraints();
+        col.setHalignment(HPos.CENTER);
+
         return grid;
     }
 
@@ -174,12 +196,14 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
                 "-fx-background-radius: 18;"
         );
         grid.setHgap(5);
-        grid.setPadding(new Insets(10, 10, 10, 10));
+        int lrP = 8;
+        int tbP = 10;
+        grid.setPadding(new Insets(lrP, tbP, lrP ,tbP));
         return grid;
     }
 
     private void registerShowListener() {
-        sceneProperty().addListener((obs, oldScene, newScene) -> {
+        stack.sceneProperty().addListener((obs, oldScene, newScene) -> {
             if(newScene != null)
                 onViewDidShow();
         });

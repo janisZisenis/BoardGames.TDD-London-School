@@ -15,7 +15,6 @@ import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
 import Presentation.WelcomeViewPresenter.WelcomeViewPresenter;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
-import Utilities.Transaction.NullTransaction;
 import Utilities.Transaction.Transaction;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -28,6 +27,12 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
+        FXShell shell = new FXShell();
+        FXWelcomeView welcomeView = new FXWelcomeView();
+        WelcomeViewPresenter presenter = new WelcomeViewPresenter(welcomeView);
+        welcomeView.setDelegate(presenter);
+        shell.load(welcomeView);
+
         ListenableBoard board = new ListenableBoard(new HashingBoard());
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
 
@@ -50,18 +55,11 @@ public class Main extends Application {
         PlayerTypeProvider playerTypeProvider = new PlayerTypeProvider(firstPresenter, secondPresenter);
         TicTacToeAction tictactoeAction = new TicTacToeAction(tictactoe, board, boardView, playerTypeProvider);
 
-        Transaction menuAction = new NullTransaction();
+        Transaction menuAction = new LoadGameViewTransaction(welcomeView ,shell);
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
         ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, menuAction, tictactoeAction);
         config.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
-
-        FXWelcomeView view = new FXWelcomeView();
-        WelcomeViewPresenter presenter = new WelcomeViewPresenter(view);
-        view.setDelegate(presenter);
-
-        FXShell shell = new FXShell();
-        shell.load(view);
 
         Transaction loadAction = new LoadGameViewTransaction(config, shell);
         presenter.addAction(loadAction, "TicTacToe");
@@ -76,8 +74,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setResizable(true);
         primaryStage.show();
-
-        loadAction.execute();
     }
 
 }
