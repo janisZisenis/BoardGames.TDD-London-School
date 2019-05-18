@@ -30,7 +30,7 @@ public class TicTacToeMain implements Transaction {
         FXConfigureView configView = new FXConfigureView(first, second);
 
         Transaction loadAction = new LoadGameViewTransaction(configView, viewLoader);
-        Transaction runAction = new TicTacToeAction(viewLoader, cancelAction, loadAction);
+        Transaction runAction = new TicTacToeRunAction(viewLoader, cancelAction, loadAction);
 
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
         ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(configView, startableProvider, cancelAction, runAction);

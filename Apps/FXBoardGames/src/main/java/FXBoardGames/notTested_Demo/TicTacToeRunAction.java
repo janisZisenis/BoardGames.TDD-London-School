@@ -41,13 +41,13 @@ import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
 
-public class TicTacToeAction implements Transaction {
+public class TicTacToeRunAction implements Transaction {
 
     private final GameViewLoader loader;
     private final Transaction menuAction;
     private final Transaction configureAction;
 
-    public TicTacToeAction(GameViewLoader loader, Transaction menuAction, Transaction configureAction) {
+    public TicTacToeRunAction(GameViewLoader loader, Transaction menuAction, Transaction configureAction) {
         this.loader = loader;
         this.menuAction = menuAction;
         this.configureAction = configureAction;
