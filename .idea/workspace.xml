@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/App/PlayerTypeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/PlayerTypeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/App/PlayersChosenStartableProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/PlayersChosenStartableProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/App/TicTacToeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTextSizeTransition.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -144,7 +142,7 @@
         <counts>
           <entry key="dummy" value="4803" />
           <entry key="iml" value="58" />
-          <entry key="java" value="255702" />
+          <entry key="java" value="255719" />
           <entry key="txt" value="11" />
           <entry key="xml" value="1255" />
         </counts>
@@ -153,7 +151,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="255701" />
+          <entry key="JAVA" value="255718" />
           <entry key="PLAIN_TEXT" value="4814" />
           <entry key="XML" value="1255" />
         </counts>
@@ -164,7 +162,7 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="22" />
-          <entry key="java" value="6324" />
+          <entry key="java" value="6353" />
           <entry key="pom" value="1" />
           <entry key="xml" value="297" />
           <entry key="xsd" value="1" />
@@ -175,7 +173,7 @@
           <entry key="CLASS" value="16" />
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="22" />
-          <entry key="JAVA" value="6324" />
+          <entry key="JAVA" value="6353" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="299" />
         </counts>
@@ -183,7 +181,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenterView/GameOverViewPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,7 +205,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>BoardGames</find>
       <find>BoardGa</find>
       <find>didSelectHuman</find>
       <find>onMouse</find>
@@ -227,6 +234,7 @@
       <find>Insets</find>
       <find>onView</find>
       <find>registerSho</find>
+      <find>play</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -270,7 +278,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXMessengerView.java" />
         <option value="$PROJECT_DIR$/Apps/TicTacToe.SequentialGui/src/main/java/FXView/FXSynchronizingMessengerView.java" />
         <option value="$PROJECT_DIR$/Apps/TicTacToe.SequentialGui/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/View/FXTicTacToeView.java" />
@@ -307,7 +314,6 @@
         <option value="$PROJECT_DIR$/BoardGames/BoardGames.FXView/src/main/java/FXView/FXWelcomeView.java" />
         <option value="$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/DelayingPlayer/DelayingPlayer.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Data/BoardBoundaries.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/Api/GameOverViewDelegate.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenter/GameOverViewPresenter.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenter/Api/GameOverViewDelegate.java" />
@@ -321,6 +327,8 @@
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeConfigureView.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/App/TicTacToeAction.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/Main.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTextSizeTransition.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java" />
       </list>
     </option>
   </component>
@@ -339,26 +347,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="BoardGames.Presentation" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="BoardGames.Presentation" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="tictactoe-tdd" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="tictactoe-tdd" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -516,17 +505,6 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Apps" type="462c0819:PsiDirectoryNode" />
-              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -994,7 +972,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="652777000" />
+    <option name="totallyTimeSpent" value="653870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
@@ -1017,7 +995,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299363" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143474" side_tool="true" weight="0.3971903" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4985653" weight="0.34300518" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4985653" visible="true" weight="0.34300518" />
       <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3299363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.16045845" />
@@ -1204,201 +1182,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/main/java/Presentation/Transactions/LoadGameViewTransaction/GameView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/Transactions/LoadGameViewTransaction/GameViewDummy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/main/java/Presentation/Transactions/LoadGameViewTransaction/GameViewLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/Transactions/LoadGameViewTransaction/GameViewLoaderSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/Transactions/LoadGameViewTransaction/LoadGameViewTransactionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ChoosePlayerViewPresenter/ChoosePlayerViewPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ConfigureViewPresenter/IsStartableProviderStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ConfigureViewPresenter/ConfigureViewPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/main/java/Presentation/WelcomeViewPresenter/WelcomeViewPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/main/java/Presentation/Transactions/LoadGameViewTransaction/LoadGameViewTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/View/FXTicTacToeView.java" />
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeChoosePlayerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/DelayingPlayer/DelayingPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridPlayerAdapter/HybridPlayerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/MultiHybridPlayer/MultiHybridPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Gaming/TicTacToePlayer/TicTacToePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/main/java/Utilities/CyclicListIterator/CyclicListIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.FXView/src/main/java/FXView/FXWelcomeView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="53" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="53" />
-          <folding>
-            <element signature="method#FXWelcomeView#0;class#FXWelcomeView#0" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-            <element signature="method#initWelcome#0;class#FXWelcomeView#0" />
-            <element signature="method#initGrid#0;class#FXWelcomeView#0" />
-            <element signature="method#fillGrid#0;class#FXWelcomeView#0" />
-            <element signature="method#addActionName#0;class#FXWelcomeView#0" />
-            <element signature="method#addComingSoonActionName#0;class#FXWelcomeView#0" />
-            <element signature="method#makeComingSoonText#0;class#FXWelcomeView#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/BoardViewPresenter/Api/BoardViewDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/BoardViewPresenter/BoardViewPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Data/BoardBoundaries.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/javafx.base/javafx/beans/property/ReadOnlyObjectPropertyBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/javafx.base/javafx/collections/ObservableListBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/scene/Parent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1428,34 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="155" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
-          <folding>
-            <element signature="method#FXBoardView#0;class#FXBoardView#0" />
-            <element signature="method#applyBoardStyle#0;class#FXBoardView#0" />
-            <element signature="method#registerShowListener#0;class#FXBoardView#0" />
-            <element signature="method#initTiles#0;class#FXBoardView#0" />
-            <element signature="method#makeTile#0;class#FXBoardView#0" />
-            <element signature="method#setField#0;class#FXBoardView#0" />
-            <element signature="method#setFieldText#0;class#FXBoardView#0" />
-            <element signature="method#onTileClicked#0;class#FXBoardView#0" />
-            <element signature="method#highlightLine#0;class#FXBoardView#0" />
-            <element signature="method#highlight#0;class#FXBoardView#0" />
-            <element signature="method#magnifyField#0;class#FXBoardView#0" />
-            <element signature="method#lowlightOtherFields#0;class#FXBoardView#0" />
-            <element signature="method#lineContains#0;class#FXBoardView#0" />
-            <element signature="method#minimizeField#0;class#FXBoardView#0" />
-            <element signature="e#4317#4318#0" expanded="true" />
-            <element signature="class#FXTile#0;class#FXBoardView#0" />
-            <element signature="method#FXTile#0;class#FXTile#0;class#FXBoardView#0" />
-            <element signature="method#init#0;class#FXTile#0;class#FXBoardView#0" />
-            <element signature="method#initLabel#0;class#FXTile#0;class#FXBoardView#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1596,39 +1351,252 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenterView/Api/GameOverViewDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messages/src/main/java/Messages/AlertingMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messages/src/main/java/Messages/GenerationMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messages/src/main/java/Messages/MarkedFieldMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messages/src/main/java/Messages/OnePlayerModeMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messages/src/main/java/Messages/PlayerSymbols.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MappingPlayerMessenger/MappingMultiPlayerMessenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/HumbleMarkedFieldMessageProviderImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MarkedFieldMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTextSizeTransition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/lib/src.zip!/javafx.graphics/javafx/animation/Transition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="73" column="17" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="226" column="50" selection-start-line="226" selection-start-column="50" selection-end-line="226" selection-end-column="50" />
+          <folding>
+            <element signature="method#FXBoardView#0;class#FXBoardView#0" />
+            <element signature="method#init#0;class#FXBoardView#0" />
+            <element signature="method#applyBoardStyle#0;class#FXBoardView#0" />
+            <element signature="method#registerShowListener#0;class#FXBoardView#0" />
+            <element signature="e#1722#1828#0" />
+            <element signature="method#initTiles#0;class#FXBoardView#0" />
+            <element signature="method#makeTile#0;class#FXBoardView#0" />
+            <element signature="method#setField#0;class#FXBoardView#0" />
+            <element signature="e#2729#2826#0" />
+            <element signature="method#setFieldText#0;class#FXBoardView#0" />
+            <element signature="method#onTileClicked#0;class#FXBoardView#0" />
+            <element signature="method#highlightLine#0;class#FXBoardView#0" />
+            <element signature="method#highlight#0;class#FXBoardView#0" />
+            <element signature="method#magnifyField#0;class#FXBoardView#0" />
+            <element signature="method#lowlightOtherFields#0;class#FXBoardView#0" />
+            <element signature="method#lineContains#0;class#FXBoardView#0" />
+            <element signature="method#minimizeField#0;class#FXBoardView#0" />
+            <element signature="method#FXTile#0;class#FXTile#0;class#FXBoardView#0" />
+            <element signature="method#init#0;class#FXTile#0;class#FXBoardView#0" />
+            <element signature="method#initLabel#0;class#FXTile#0;class#FXBoardView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/InteractiveGaming/TicTacToeInputPlayer/TicTacToeInputPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessageProviders/FixedMessageProvider/FixedMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXInputAlerter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXIODeviceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXMessengerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeChoosePlayerView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeConfigureView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+        <state relative-caret-position="60">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ConfigureViewPresenter/Api/ConfigureViewDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ChoosePlayerViewPresenter/ChoosePlayerViewPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding>
-            <element signature="e#3508#3822#0" />
-            <element signature="e#3828#4340#0" />
-            <element signature="e#4346#5097#0" />
-            <element signature="e#5103#5285#0" />
-            <element signature="e#5291#5961#0" />
-            <element signature="e#5967#6378#0" />
-            <element signature="e#6384#6765#0" />
-            <element signature="e#6771#6965#0" />
-            <element signature="e#6851#6957#0" />
-            <element signature="e#6971#7075#0" />
-            <element signature="e#7081#7487#0" />
-            <element signature="e#7493#7598#0" />
-            <element signature="e#7604#7711#0" />
+            <element signature="method#ChoosePlayerViewPresenter#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onHumanClicked#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onHumbleClicked#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onInvincibleClicked#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#selectOnlyHuman#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#selectOnlyHumble#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#selectOnlyInvincible#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#hasDistinctPlayerType#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onlyHumanIsSelected#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onlyHumbleIsSelected#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#onlyInvincibleIsSelected#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#getDistinctPlayerType#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#getPlayerType#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#throwIfNoDistinctPlayerTypeAvailable#0;class#ChoosePlayerViewPresenter#0" />
+            <element signature="method#notifyObservers#0;class#ChoosePlayerViewPresenter#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/BoardViewPresenter/BoardViewPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Rendering/src/test/java/Rendering/BoardRenderer/RenderingTheBoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Rendering/src/test/java/Rendering/BoardRenderer/BoardViewSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Rendering/src/main/java/Rendering/BoardRenderer/BoardRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenterView/GameOverViewPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverPresenterView/Api/GameOverViewDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>

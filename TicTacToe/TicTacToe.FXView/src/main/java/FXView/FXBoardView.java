@@ -7,12 +7,16 @@ import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 import Presentation.BoardViewPresenter.BoardView;
 import Presentation.WinningLinePresenter.WinningLineView;
+import javafx.animation.Interpolator;
+import javafx.animation.Transition;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.control.Labeled;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
+import javafx.util.Duration;
 
 import java.util.HashMap;
 
@@ -218,7 +222,26 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
             return (int)(sideLength * fontLowlightRatio);
         }
 
-
     }
+
+    private class FXTextSizeTransition extends Transition {
+
+        private Labeled label;
+        private double start, end;
+
+        public FXTextSizeTransition(Labeled label, double start, double end, int duration) {
+            this.label = label;
+            this.start = start;
+            this.end = end - start;
+            setCycleDuration(Duration.millis(duration));
+            setInterpolator(Interpolator.LINEAR);
+        }
+
+        protected void interpolate(double frac) {
+            int size = (int) (((end - start) * frac) + start);
+            label.setFont(Font.font(size));
+        }
+    }
+
 
 }
