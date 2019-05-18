@@ -1,6 +1,6 @@
 package Utilities.Transaction;
 
-public class TransactionSpy implements Transaction {
+public class TransactionSpy extends TransactionDummy {
 
     private boolean didExecute = false;
 

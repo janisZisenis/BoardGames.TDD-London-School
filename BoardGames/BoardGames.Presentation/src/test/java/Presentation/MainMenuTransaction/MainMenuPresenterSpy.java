@@ -1,7 +1,5 @@
 package Presentation.MainMenuTransaction;
 
-import Presentation.ShellPresenter.Api.MainMenuPresenter;
-
 public class MainMenuPresenterSpy implements MainMenuPresenter {
 
     private boolean didShowMainMenu = false;

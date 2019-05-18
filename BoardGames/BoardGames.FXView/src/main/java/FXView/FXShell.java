@@ -1,6 +1,6 @@
 package FXView;
 
-import Presentation.ShellPresenter.GameView;
+import Presentation.WelcomeViewPresenter.GameView;
 import javafx.scene.layout.StackPane;
 
 public class FXShell extends StackPane {

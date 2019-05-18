@@ -1,6 +1,5 @@
 package Presentation.MainMenuTransaction;
 
-import Presentation.ShellPresenter.Api.MainMenuPresenter;
 import Utilities.Transaction.Transaction;
 
 public class MainMenuTransaction implements Transaction {
