@@ -1,5 +1,7 @@
 package FXView;
 
+import FXView.Gaming.FXGameOverView;
+
 public class FXTicTacToeView extends FXGameView {
 
     private FXGameView boardView;

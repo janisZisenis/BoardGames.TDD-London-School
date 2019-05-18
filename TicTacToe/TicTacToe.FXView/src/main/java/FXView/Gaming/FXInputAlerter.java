@@ -1,4 +1,4 @@
-package FXView;
+package FXView.Gaming;
 
 import InputGeneration.Input.Input;
 import InputGeneration.ValidInputGenerator.InputAlerter;

@@ -1,8 +1,9 @@
-package FXView;
+package FXView.Gaming;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
+import FXView.FXGameView;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
 import Presentation.BoardViewPresenter.Api.BoardViewDelegate;
 import Presentation.BoardViewPresenter.BoardView;

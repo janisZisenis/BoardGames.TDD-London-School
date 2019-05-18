@@ -1,5 +1,6 @@
 package FXView;
 
+import FXView.Gaming.FXInputAlerter;
 import InputGeneration.Input.Input;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import javafx.application.Platform;

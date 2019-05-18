@@ -1,5 +1,6 @@
-package FXView;
+package FXView.Configuration;
 
+import FXView.ComingSoonConstants;
 import Presentation.ChoosePlayerViewPresenter.Api.ChoosePlayerViewDelegate;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerView;
 import javafx.scene.control.RadioButton;

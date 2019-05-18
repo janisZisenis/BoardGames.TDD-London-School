@@ -1,4 +1,4 @@
-package FXView;
+package FXView.Gaming;
 
 import Messaging.MappingPlayerMessenger.Messenger;
 import javafx.scene.control.TextArea;

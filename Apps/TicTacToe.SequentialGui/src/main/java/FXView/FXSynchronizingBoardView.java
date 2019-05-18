@@ -3,6 +3,7 @@ package FXView;
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.Data.Mark;
+import FXView.Gaming.FXBoardView;
 import Presentation.BoardViewPresenter.BoardView;
 import Presentation.WinningLinePresenter.WinningLineView;
 import javafx.application.Platform;

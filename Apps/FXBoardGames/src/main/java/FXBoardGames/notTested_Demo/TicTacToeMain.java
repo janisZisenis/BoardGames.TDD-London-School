@@ -1,7 +1,7 @@
 package FXBoardGames.notTested_Demo;
 
-import FXView.FXChoosePlayerView;
-import FXView.FXConfigureView;
+import FXView.Configuration.FXChoosePlayerView;
+import FXView.Configuration.FXConfigureView;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;

@@ -1,6 +1,8 @@
-package FXView;
+package FXView.Configuration;
 
 import Domain.Data.BoardBoundaries;
+import FXView.ComingSoonConstants;
+import FXView.FXGameView;
 import Presentation.ConfigureViewPresenter.Api.ConfigureViewDelegate;
 import Presentation.ConfigureViewPresenter.ConfigureView;
 import javafx.geometry.HPos;
