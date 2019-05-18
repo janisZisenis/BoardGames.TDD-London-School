@@ -27,21 +27,17 @@ public class TicTacToeMain implements Transaction {
         ChoosePlayerViewPresenter secondPresenter = new ChoosePlayerViewPresenter(second);
         second.setDelegate(secondPresenter);
 
-        FXConfigureView config = new FXConfigureView(first, second);
-        Transaction loadAction = new LoadGameViewTransaction(config, viewLoader);
+        FXConfigureView configView = new FXConfigureView(first, second);
+
+        Transaction loadAction = new LoadGameViewTransaction(configView, viewLoader);
         Transaction runAction = new TicTacToeAction(viewLoader, cancelAction, loadAction);
 
-        TicTacToeRunArgs args = new TicTacToeRunArgs();
-        args.setViewLoader(viewLoader);
-        args.setCancelAction(cancelAction);
-        args.setConfigureAction(cancelAction);
-
         PlayersChosenStartableProvider startableProvider = new PlayersChosenStartableProvider(firstPresenter, secondPresenter);
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(config, startableProvider, cancelAction, runAction);
-        config.setDelegate(configPresenter);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(configView, startableProvider, cancelAction, runAction);
+        configView.setDelegate(configPresenter);
         firstPresenter.attach(configPresenter);
 
-        viewLoader.load(config);
+        viewLoader.load(configView);
     }
 
 }
