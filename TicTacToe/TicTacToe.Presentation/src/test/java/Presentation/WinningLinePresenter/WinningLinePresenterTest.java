@@ -14,14 +14,12 @@ public class WinningLinePresenterTest {
     private WinningLineViewSpy view = new WinningLineViewSpy();
     private WinningLinePresenter sut = new WinningLinePresenter(view, provider);
 
-    private Field field = new Field(0, 0);
-
     @Test
-    void IfWinningLineIsProvided_ShouldHighlightLine() {
+    void IfWinningLineIsProvidedOnUpdate_ShouldHighlightLine() {
         Line line = makeLine();
         provider.setWinningLine(line);
 
-        sut.onFieldUpdated(field);
+        sut.update();
 
         assertHighlightedLineEquals(line);
     }
@@ -41,8 +39,8 @@ public class WinningLinePresenterTest {
 
 
     @Test
-    void IfNoWinningLineIsProvided_ShouldNotHighlightLine() {
-        sut.onFieldUpdated(field);
+    void IfNoWinningLineIsProvidedOnUpdate_ShouldNotHighlightLine() {
+        sut.update();
 
         assertHasNotHighlightedLine();
     }

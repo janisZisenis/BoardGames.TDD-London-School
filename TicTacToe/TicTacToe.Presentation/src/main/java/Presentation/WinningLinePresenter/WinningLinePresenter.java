@@ -1,11 +1,10 @@
 package Presentation.WinningLinePresenter;
 
-import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
-import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import Utilities.Observer.Observer;
 
-public class WinningLinePresenter implements BoardListener {
+public class WinningLinePresenter implements Observer {
 
     private final WinningLineProvider provider;
     private final WinningLineView view;
@@ -15,7 +14,7 @@ public class WinningLinePresenter implements BoardListener {
         this.provider = provider;
     }
 
-    public void onFieldUpdated(Field f) {
+    public void update() {
         if(provider.hasWinningLine()) {
             Line line = provider.getWinningLine();
             view.highlightLine(line);

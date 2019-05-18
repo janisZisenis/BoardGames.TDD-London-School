@@ -1,6 +1,7 @@
 package App;
 
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
@@ -32,7 +33,8 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        ListenableBoard board = Domain.Factory.makeListenableBoard();
+        ListenableBoard listenableBoard = Domain.Factory.makeListenableBoard();
+        ObservableBoard observableBoard = new ObservableBoard(listenableBoard);
 
         FXInputView fxGenerator = new FXInputView(200);
         FXSynchronizingBoardView fxBoard = new FXSynchronizingBoardView(BoardBoundaries.rowColumnCount, 200);
@@ -41,12 +43,12 @@ public class Main extends Application {
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
         MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
-        board.addListener(listener);
+        listenableBoard.addListener(listener);
 
         FXIODeviceFactory factory = new FXIODeviceFactory();
         FXIODeviceFactory.setHumanInputGenerator(fxGenerator);
-        Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
-        Player haley = Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory);
+        Player john = Domain.Factory.makeHumanPlayer(Mark.John, observableBoard, factory);
+        Player haley = Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, observableBoard, factory);
 
         DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(TicTacToeMessages.defaultPlayerMessage);
         playerMapper.register(john, TicTacToeMessages.humanPlayerMessage);
@@ -56,17 +58,17 @@ public class Main extends Application {
         MultiPlayer player = Factory.makeMessagingMultiPlayer(john, multiPlayerMessenger);
         player.add(haley);
 
-        GameOverRule rule = Domain.Factory.makeGameOverRule(board);
-        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
+        GameOverRule rule = Domain.Factory.makeGameOverRule(observableBoard);
+        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(observableBoard);
         Game game = Factory.makeGame(rule, player, new NullRenderer());
 
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(fxBoard, provider);
-        board.addListener(winningLinePresenter);
+        observableBoard.attach(winningLinePresenter);
 
-        BoardViewPresenter boardPresenter = new BoardViewPresenter(board, fxBoard, new NullInputProcessor());
-        board.addListener(boardPresenter);
+        BoardViewPresenter boardPresenter = new BoardViewPresenter(observableBoard, fxBoard, new NullInputProcessor());
+        listenableBoard.addListener(boardPresenter);
 
-        GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(board, fxMessenger);
+        GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(observableBoard, fxMessenger);
         GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);
 
         primaryStage.setTitle("TicTacToe");

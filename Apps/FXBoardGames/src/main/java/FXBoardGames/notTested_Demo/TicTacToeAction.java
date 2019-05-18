@@ -71,7 +71,7 @@ public class TicTacToeAction implements Transaction {
 
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);
-        board.addListener(winningLinePresenter);
+        observableBoard.attach(winningLinePresenter);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);

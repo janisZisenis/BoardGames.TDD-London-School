@@ -2,6 +2,7 @@ package App;
 
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
@@ -10,8 +11,8 @@ import Domain.IODeviceFactory;
 import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
-import FXView.Gaming.FXBoardView;
 import FXView.FXIODeviceFactory;
+import FXView.Gaming.FXBoardView;
 import FXView.Gaming.FXInputAlerter;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
@@ -52,31 +53,32 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        ListenableBoard board = new ListenableBoard(new HashingBoard());
-        initPlayers(board);
+        ListenableBoard listenableBoard = new ListenableBoard(new HashingBoard());
+        ObservableBoard observableBoard = new ObservableBoard(listenableBoard);
+        initPlayers(observableBoard);
 
         FXBoardView view = new FXBoardView(BoardBoundaries.rowColumnCount);
         view.setSideLength(300);
 
-        GameOverRule rule = Domain.Factory.makeGameOverRule(board);
+        GameOverRule rule = Domain.Factory.makeGameOverRule(observableBoard);
 
         MultiHybridPlayer player = new MultiHybridPlayer(johnCPU);
         player.add(haleyHuman);
         HybridGameImp game = new HybridGameImp(rule, player);
         HybridGameRunner runner = new HybridGameRunner(game);
 
-        InputValidator validator = new FieldIsEmptyValidator(board);
+        InputValidator validator = new FieldIsEmptyValidator(observableBoard);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
         InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(runner, validator, alerter);
         processor = new GameOverInputProcessor(processor, rule);
 
-        BoardViewPresenter boardPresenter = new BoardViewPresenter(board, view, processor);
+        BoardViewPresenter boardPresenter = new BoardViewPresenter(observableBoard, view, processor);
         view.setDelegate(boardPresenter);
 
-        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(board);
+        WinningLineProvider provider = Domain.Factory.makeWinningLineProvider(observableBoard);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(view, provider);
-        board.addListener(boardPresenter);
-        board.addListener(winningLinePresenter);
+        listenableBoard.addListener(boardPresenter);
+        observableBoard.attach(winningLinePresenter);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(view));
