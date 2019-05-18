@@ -24,7 +24,7 @@ public class FXWelcomeView extends FXGameView implements WelcomeView {
     private static final Color comingSoonColor = ComingSoonConstants.color;
     private static final Font comingSoonFont = ComingSoonConstants.font;
 
-    private final int width = 284;
+    private final int width = 252;
     private final int height = 252;
 
     private int firstButtonIndex = 3;
@@ -102,7 +102,7 @@ public class FXWelcomeView extends FXGameView implements WelcomeView {
     private Button makeButton(String name) {
         Button btn = new Button(name);
         btn.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
-        btn.setMinSize(190, btn.getPrefHeight());
+        btn.setMinSize(160, btn.getPrefHeight());
         btn.setOnAction(this::onButtonClicked);
         return btn;
     }
