@@ -1,6 +1,6 @@
 package FXView.Gaming;
 
-import Messaging.MappingPlayerMessenger.Messenger;
+import MappingPlayerMessenger.Messenger;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 

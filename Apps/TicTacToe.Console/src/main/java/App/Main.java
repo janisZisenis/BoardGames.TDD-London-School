@@ -3,6 +3,8 @@ package App;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import FXView.ConsoleBoardView;
+import FXView.ConsoleMessenger;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
@@ -13,14 +15,12 @@ import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
 import Mapping.MarkToStringMappers.MarkToXOMapper;
-import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
 import Messages.TicTacToeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
 import Rendering.BoardRenderer.BoardRenderer;
-import FXView.ConsoleBoardView;
-import FXView.ConsoleMessenger;
+import Utilities.ObjectToStringMapper.DefaultObjectToStringMapper;
 
 public class Main {
 

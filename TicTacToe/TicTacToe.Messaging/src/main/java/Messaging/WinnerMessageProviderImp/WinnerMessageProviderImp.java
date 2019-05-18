@@ -3,7 +3,7 @@ package Messaging.WinnerMessageProviderImp;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Mapping.MarkToStringMapper;
-import Messaging.MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
+import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
 
 public class WinnerMessageProviderImp implements WinnerMessageProvider {
 
@@ -28,6 +28,6 @@ public class WinnerMessageProviderImp implements WinnerMessageProvider {
 
     private void throwIfHasNoWinner() {
         if(!hasWinner())
-            throw new NoWinnerAvailable();
+            throw new WinnerMessageProvider.NoWinnerAvailable();
     }
 }

@@ -1,14 +1,12 @@
 package Presentation.GameOverView.GameOverViewInteractorFacade;
 
+import GameLoopMessengerImp.MessageProviderStub;
 import Gaming.GameFacade.GameOverRuleStub;
-import Messaging.GameLoopMessengerImp.MessageProviderStub;
 import Presentation.GameOverView.GameOverViewPresenter.GameOverViewResponse;
 import Utilities.Transaction.TransactionSpy;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GameOverInteractorFacadeTest {
 

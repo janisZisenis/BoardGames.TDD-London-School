@@ -1,7 +1,7 @@
 package Presentation.GameOverView.GameOverViewInteractorFacade;
 
+import GameLoopMessengerImp.MessageProvider;
 import Gaming.GameFacade.GameOverRule;
-import Messaging.GameLoopMessengerImp.MessageProvider;
 import Presentation.GameOverView.GameOverViewPresenter.GameOverInteractor;
 import Presentation.GameOverView.GameOverViewPresenter.GameOverViewResponse;
 import Utilities.Transaction.Transaction;

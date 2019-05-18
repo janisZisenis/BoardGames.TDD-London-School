@@ -2,17 +2,17 @@ package Messaging;
 
 import Domain.Board.Board;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
-import Mapping.MarkToStringMappers.DefaultMarkToStringMapper;
-import Mapping.ObjectToStringMapper;
-import Messages.TicTacToeMessages;
-import Messaging.GameLoopMessengerImp.GameLoopMessengerImp;
-import Messaging.MappingPlayerMessenger.MappingMultiPlayerMessenger;
-import Messaging.MappingPlayerMessenger.Messenger;
-import Messaging.MessageProviders.FixedMessageProvider.FixedMessageProvider;
-import Messaging.MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
-import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
+import Mapping.MarkToStringMappers.DefaultMarkToStringMapper;
+import MappingPlayerMessenger.MappingMultiPlayerMessenger;
+import MappingPlayerMessenger.Messenger;
+import MessageProviders.FixedMessageProvider.FixedMessageProvider;
+import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
+import Messages.TicTacToeMessages;
+import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
+import Utilities.ObjectToStringMapper.Api.ObjectToStringMapper;
+import GameLoopMessengerImp.GameLoopMessengerImp;
 
 public abstract class Factory {
 

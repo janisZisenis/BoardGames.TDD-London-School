@@ -1,6 +1,6 @@
 package FXView;
 
-import Messaging.MappingPlayerMessenger.Messenger;
+import MappingPlayerMessenger.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 
