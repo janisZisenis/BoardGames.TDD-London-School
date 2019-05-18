@@ -1,5 +1,8 @@
 package FXView;
 
+import Presentation.GameOverView.GameOverViewPresenter.GameOverView;
+import Presentation.GameOverView.GameOverViewPresenter.GameOverViewDelegate;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -9,7 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FXTicTacToeGameOverView extends StackPane {
+public class FXGameOverView extends StackPane implements GameOverView {
 
     private final static int winnerFontSize = 16;
     private final static Font winnerFont = new Font(winnerFontSize);
@@ -25,17 +28,19 @@ public class FXTicTacToeGameOverView extends StackPane {
     private final Button cancel = new Button(cancelText);
     private final Button reconfigure = new Button(reconfigureText);
     private final Button restart = new Button(restartText);
+    private final Label winnerLabel = new Label();
 
     private final int width = 155;
     private final int height = 157;
 
-//    private GameOverViewDelegate delegate;
+    private GameOverViewDelegate delegate;
 
-//    public void setDelegate(GameOverViewDelegate delegate) {
-//        this.delegate = delegate;
-//    }
+    public void setDelegate(GameOverViewDelegate delegate) {
+        this.delegate = delegate;
+    }
 
-    public FXTicTacToeGameOverView() {
+    public FXGameOverView() {
+        setVisible(false);
         initStack();
         initButtons();
         GridPane grid = fillGrid();
@@ -69,15 +74,14 @@ public class FXTicTacToeGameOverView extends StackPane {
     }
 
     private GridPane fillGrid() {
-        Label winner = new Label("Draw!");
-        winner.setMaxWidth(Double.MAX_VALUE);
+        winnerLabel.setMaxWidth(Double.MAX_VALUE);
 
-        winner.setFont(winnerFont);
-        winner.setAlignment(Pos.BASELINE_CENTER);
+        winnerLabel.setFont(winnerFont);
+        winnerLabel.setAlignment(Pos.BASELINE_CENTER);
 
         GridPane grid = new GridPane();
         grid.setVgap(5);
-        grid.add(winner, 0, 0);
+        grid.add(winnerLabel, 0, 0);
         grid.add(new Text(), 0, 1);
         grid.add(cancel, 0, 2);
         grid.add(reconfigure, 0, 3);
@@ -87,18 +91,27 @@ public class FXTicTacToeGameOverView extends StackPane {
 
 
     private void onCancelClicked() {
-//        if(delegate != null)
-//            delegate.onCancelClicked();
+        if(delegate != null)
+            delegate.onCancelClicked();
     }
 
     private void onReconfigureClicked() {
-//        if(delegate != null)
-//            delegate.onReconfigureClicked();
+        if(delegate != null)
+            delegate.onReconfigureClicked();
     }
 
     private void onRestartClicked() {
-//        if(delegate != null)
-//            delegate.onRestartClicked();
+        if(delegate != null)
+            delegate.onRestartClicked();
     }
 
+    public void showGameOverMessage(String message) {
+        winnerLabel.setText(message);
+        setVisible(true);
+    }
+
+    public void hide() {
+        setVisible(false);
+        winnerLabel.setText("");
+    }
 }

@@ -16,7 +16,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FXTicTacToeConfigureView extends FXGameView implements ConfigureView {
+public class FXConfigureView extends FXGameView implements ConfigureView {
 
     private static final int boardSideLength = BoardBoundaries.rowColumnCount;
     private static final int lineLength = BoardBoundaries.winningLineLength;
@@ -56,7 +56,7 @@ public class FXTicTacToeConfigureView extends FXGameView implements ConfigureVie
         this.delegate = delegate;
     }
 
-    public FXTicTacToeConfigureView(Pane firstPlayer, Pane secondPlayer) {
+    public FXConfigureView(Pane firstPlayer, Pane secondPlayer) {
         initStack();
         initButtons();
 

@@ -1,6 +1,8 @@
 package Presentation.GameOverView.GameOverViewPresenter;
 
-public class GameOverViewPresenter {
+import Utilities.Observer.Observer;
+
+public class GameOverViewPresenter implements GameOverViewDelegate, Observer {
 
     private final GameOverInteractor interactor;
     private final GameOverView view;

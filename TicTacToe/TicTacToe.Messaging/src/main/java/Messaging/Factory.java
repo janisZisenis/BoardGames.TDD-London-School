@@ -4,7 +4,7 @@ import Domain.Board.Board;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Mapping.MarkToStringMappers.DefaultMarkToStringMapper;
 import Mapping.ObjectToStringMapper;
-import Messages.OnePlayerModeMessages;
+import Messages.TicTacToeMessages;
 import Messaging.GameLoopMessengerImp.GameLoopMessengerImp;
 import Messaging.MappingPlayerMessenger.MappingMultiPlayerMessenger;
 import Messaging.MappingPlayerMessenger.Messenger;
@@ -21,12 +21,12 @@ public abstract class Factory {
     }
 
     public static GameLoopMessenger makeTicTacToeGameLoopMessenger(Board board, Messenger messenger) {
-        FixedMessageProvider startProvider = new FixedMessageProvider(OnePlayerModeMessages.salutation);
+        FixedMessageProvider startProvider = new FixedMessageProvider(TicTacToeMessages.salutation);
 
         WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
-        DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(OnePlayerModeMessages.humanWinMessage, OnePlayerModeMessages.computerWinMessage);
+        DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.humanWinMessage, TicTacToeMessages.computerWinMessage);
         WinnerMessageProviderImp winnerMessageProvider = new WinnerMessageProviderImp(winnerProvider, mapper);
-        FixedMessageProvider drawMessageProvider = new FixedMessageProvider(OnePlayerModeMessages.drawMessage);
+        FixedMessageProvider drawMessageProvider = new FixedMessageProvider(TicTacToeMessages.drawMessage);
         GameOverMessageProvider endProvider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
 
         return new GameLoopMessengerImp(messenger, startProvider, endProvider);

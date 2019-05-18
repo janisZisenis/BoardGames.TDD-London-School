@@ -2,16 +2,16 @@ package FXBoardGames.notTested_Demo;
 
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
+import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
+import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
-import FXView.FXBoardView;
-import FXView.FXIODeviceFactory;
-import FXView.FXInputAlerter;
+import FXView.*;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
@@ -23,9 +23,17 @@ import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
+import Mapping.MarkToStringMappers.DefaultMarkToStringMapper;
 import Messages.AlertingMessages;
+import Messages.TicTacToeMessages;
+import Messaging.MessageProviders.FixedMessageProvider.FixedMessageProvider;
+import Messaging.MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
+import Messaging.MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
+import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.ChoosePlayerViewPresenter.PlayerType;
+import Presentation.GameOverView.GameOverViewInteractorFacade.GameOverInteractorFacade;
+import Presentation.GameOverView.GameOverViewPresenter.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
@@ -33,16 +41,21 @@ import Utilities.Transaction.Transaction;
 public class TicTacToeAction implements Transaction {
 
     private final GameViewLoader loader;
+    private final Transaction menuAction;
+    private final Transaction configureAction;
 
-    public TicTacToeAction(GameViewLoader loader) {
+    public TicTacToeAction(GameViewLoader loader, Transaction menuAction, Transaction configureAction) {
         this.loader = loader;
+        this.menuAction = menuAction;
+        this.configureAction = configureAction;
     }
 
     public void execute() {
         FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
-        loader.load(boardView);
 
-        ListenableBoard board = new ListenableBoard(new HashingBoard());
+        Board hashing = new HashingBoard();
+        ObservableBoard observableBoard = new ObservableBoard(hashing);
+        ListenableBoard board = new ListenableBoard(observableBoard);
 
         HybridPlayer john = makePlayer(PlayerType.Human, Mark.John, board);
         HybridPlayer haley = makePlayer(PlayerType.Humble, Mark.Haley, board);
@@ -65,9 +78,24 @@ public class TicTacToeAction implements Transaction {
         board.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
 
-//        FXTicTacToeGameOverView gameOverView = new FXTicTacToeGameOverView();
-//        GameOverInteractorFacade gameOverViewPresenter = new GameOverInteractorFacade();
-//        gameOverView.setDelegate(gameOverViewPresenter);
+        Transaction cancelAction = menuAction;
+        Transaction reconfigureAction = configureAction;
+        Transaction restartAction = this;
+
+        WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
+        DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.xWinsMessage, TicTacToeMessages.oWinsMessage);
+        WinnerMessageProvider winnerMessageProvider = new WinnerMessageProviderImp(winnerProvider, mapper);
+        FixedMessageProvider drawMessageProvider = new FixedMessageProvider(TicTacToeMessages.drawMessage);
+        GameOverMessageProvider provider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
+        GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, restartAction);
+
+        FXGameOverView gameOverView = new FXGameOverView();
+        GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter(gameOverView, gameOverViewInteractor);
+        gameOverView.setDelegate(gameOverViewPresenter);
+        observableBoard.attach(gameOverViewPresenter);
+
+        FXTicTacToeView view = new FXTicTacToeView(boardView, gameOverView);
+        loader.load(view);
 
         runner.run();
     }

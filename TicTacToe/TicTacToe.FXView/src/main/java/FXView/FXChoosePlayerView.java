@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class FXTicTacToeChoosePlayerView extends Pane implements ChoosePlayerView {
+public class FXChoosePlayerView extends Pane implements ChoosePlayerView {
 
     private static final String human = "Human";
     private static final String humbleCPU = "CPU - Humble";
@@ -41,7 +41,7 @@ public class FXTicTacToeChoosePlayerView extends Pane implements ChoosePlayerVie
         this.delegate = delegate;
     }
 
-    public FXTicTacToeChoosePlayerView() {
+    public FXChoosePlayerView() {
         init();
         fillGrid();
 

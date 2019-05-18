@@ -16,7 +16,7 @@ import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
 import InputGeneration.NullInputProcessor;
 import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
-import Messages.OnePlayerModeMessages;
+import Messages.TicTacToeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
@@ -48,9 +48,9 @@ public class Main extends Application {
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
         Player haley = Domain.Factory.makeInvincibleComputerPlayer(Mark.Haley, board, factory);
 
-        DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
-        playerMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);
-        playerMapper.register(haley, OnePlayerModeMessages.computerPlayerMessage);
+        DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(TicTacToeMessages.defaultPlayerMessage);
+        playerMapper.register(john, TicTacToeMessages.humanPlayerMessage);
+        playerMapper.register(haley, TicTacToeMessages.computerPlayerMessage);
         MultiPlayerMessenger multiPlayerMessenger = Messaging.Factory.makeMappingMultiPlayerMessenger(playerMapper, fxMessenger);
 
         MultiPlayer player = Factory.makeMessagingMultiPlayer(john, multiPlayerMessenger);

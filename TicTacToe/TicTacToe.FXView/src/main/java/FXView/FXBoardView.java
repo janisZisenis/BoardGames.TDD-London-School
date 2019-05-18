@@ -34,12 +34,19 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
 
     private final MarkToXOMapper mapper = new MarkToXOMapper();
     private BoardViewDelegate delegate;
+    private double sideLength = 0;
 
 
     public void setDelegate(BoardViewDelegate delegate) {
         this.delegate = delegate;
     }
 
+    public void setSideLength(double sideLength) {
+        this.sideLength = sideLength;
+        this.setMinSize(sideLength, sideLength);
+        this.setMaxSize(sideLength, sideLength);
+        this.setPrefSize(sideLength, sideLength);
+    }
 
     public FXBoardView(int rowColumnCount) {
         this.rowColumnCount = rowColumnCount;
@@ -74,7 +81,7 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
 
 
     private void initTiles() {
-        double tileLength = (super.sideLength - 2 * padding) / rowColumnCount;
+        double tileLength = (sideLength - 2 * padding) / rowColumnCount;
         for(int row = 0; row < rowColumnCount; row++) {
             for(int col = 0; col < rowColumnCount; col++ ) {
                 Field f = new Field(row, col);
