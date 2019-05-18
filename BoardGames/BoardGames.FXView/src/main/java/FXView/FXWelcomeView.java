@@ -1,5 +1,8 @@
 package FXView;
 
+import Presentation.WelcomeViewPresenter.Api.WelcomeViewDelegate;
+import Presentation.WelcomeViewPresenter.WelcomeView;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -11,7 +14,7 @@ import javafx.scene.text.Text;
 import java.util.LinkedList;
 import java.util.List;
 
-public class FXWelcomeView extends FXGameView {
+public class FXWelcomeView extends FXGameView implements WelcomeView {
 
     private static final Text welcome = new Text("Welcome to Board Games!");
     private static final Text question = new Text("Which game do You want to play?");
@@ -30,6 +33,12 @@ public class FXWelcomeView extends FXGameView {
 
     private final GridPane welcomePane = new GridPane();
     private final Text spacer = new Text();
+
+    private WelcomeViewDelegate delegate;
+
+    public void setDelegate(WelcomeViewDelegate delegate) {
+        this.delegate = delegate;
+    }
 
     public FXWelcomeView() {
         init();
@@ -71,16 +80,16 @@ public class FXWelcomeView extends FXGameView {
     }
 
 
-    public void addGame(String gameName) {
-        Button btn = makeButton(gameName);
+    public void addActionName(String name) {
+        Button btn = makeButton(name);
 
         welcomePane.add(btn, 0, firstButtonIndex);
         buttons.add(btn);
         firstButtonIndex++;
     }
 
-    public void addComingSoon(String gameName) {
-        Button btn = makeButton(gameName);
+    public void addComingSoonActionName(String name) {
+        Button btn = makeButton(name);
         Text txt = makeComingSoonText();
 
         btn.setDisable(true);
@@ -90,11 +99,19 @@ public class FXWelcomeView extends FXGameView {
     }
 
 
-    private Button makeButton(String gameName) {
-        Button btn = new Button(gameName);
+    private Button makeButton(String name) {
+        Button btn = new Button(name);
         btn.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         btn.setMinSize(190, btn.getPrefHeight());
+        btn.setOnAction(this::onButtonClicked);
         return btn;
+    }
+
+    private void onButtonClicked(ActionEvent e) {
+        if(delegate != null) {
+            int index = buttons.indexOf(e.getSource());
+            delegate.onActionClicked(index);
+        }
     }
 
     private Text makeComingSoonText() {

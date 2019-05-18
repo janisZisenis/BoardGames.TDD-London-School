@@ -9,8 +9,10 @@ import FXBoardGames.App.PlayersChosenStartableProvider;
 import FXBoardGames.App.TicTacToeAction;
 import FXBoardGames.View.FXTicTacToeView;
 import FXView.*;
+import FXView.FXQuitTransaction.FXQuitTransaction;
 import Presentation.ChoosePlayerViewPresenter.ChoosePlayerViewPresenter;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
+import Presentation.WelcomeViewPresenter.WelcomeViewPresenter;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.NullTransaction;
 import Utilities.Transaction.Transaction;
@@ -55,12 +57,16 @@ public class Main extends Application {
         firstPresenter.attach(configPresenter);
 
         FXWelcomeView view = new FXWelcomeView();
-        view.addGame("TicTacToe");
-        view.addComingSoon("Monster TicTacToe [N x N]");
-        view.addComingSoon("Conway's Game of Life");
-        view.addComingSoon("Four in a Row");
-        view.addComingSoon("Draughts");
-        view.addComingSoon("Chess");
+        WelcomeViewPresenter presenter = new WelcomeViewPresenter(view);
+        view.setDelegate(presenter);
+
+        presenter.addAction(new NullTransaction(), "TicTacToe");
+        presenter.addComingSoonAction("Monster TicTacToe [N x N]");
+        presenter.addComingSoonAction("Conway's Game of Life");
+        presenter.addComingSoonAction("Four in a Row");
+        presenter.addComingSoonAction("Draughts");
+        presenter.addComingSoonAction("Chess");
+        presenter.addAction(new FXQuitTransaction(), "Quit Board Games!");
 
         shell.loadGameView(view);
 
