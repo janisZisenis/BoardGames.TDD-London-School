@@ -20,7 +20,6 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
 
     private final int rowColumnCount;
 
-    private final StackPane stack = new StackPane();
     private final GridPane board = new GridPane();
     private final int padding = 5;
     private final String borderColor = "#4a4549";
@@ -47,8 +46,7 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
 
     private void init() {
         applyBoardStyle();
-        stack.getChildren().add(board);
-        getChildren().add(stack);
+        getChildren().add(board);
     }
 
     private void applyBoardStyle() {
