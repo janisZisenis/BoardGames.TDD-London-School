@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BoardGames.FXView" />
+        <module name="BoardGames.Presentation" />
+        <module name="FXBoardGames" />
+        <module name="Gaming" />
+        <module name="Input2D" />
+        <module name="InteractiveGaming" />
+        <module name="Messaging" />
+        <module name="TicTacToe.Console" />
+        <module name="TicTacToe.ConsoleView" />
+        <module name="TicTacToe.Domain" />
+        <module name="TicTacToe.FXView" />
+        <module name="TicTacToe.Messages" />
+        <module name="TicTacToe.Messaging" />
+        <module name="TicTacToe.Presentation" />
+        <module name="TicTacToe.Rendering" />
+        <module name="TicTacToe.SequentialGui" />
+        <module name="Utilities" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Apps" target="1.8" />
+      <module name="B1oardGames.Presentation" target="1.8" />
+      <module name="BoardGames" target="1.8" />
+      <module name="BoardGames.FXView" target="1.8" />
+      <module name="BoardGames.Presentation" target="1.8" />
+      <module name="Core" target="1.8" />
+      <module name="Core.Gaming" target="8" />
+      <module name="Core.InputGeneration" target="8" />
+      <module name="Core.Utilities" target="9" />
+      <module name="FXBoardGames" target="1.8" />
+      <module name="Gaming" target="1.8" />
+      <module name="Input2D" target="1.8" />
+      <module name="InteractiveGaming" target="1.8" />
+      <module name="Messaging" target="1.8" />
+      <module name="TicTacToe" target="1.8" />
+      <module name="tictactoe-tdd" target="1.8" />
+      <module name="TicTacToe.Console" target="1.8" />
+      <module name="TicTacToe.Console.Main" target="8" />
+      <module name="TicTacToe.ConsoleView" target="1.8" />
+      <module name="TicTacToe.Domain" target="1.8" />
+      <module name="TicTacToe.FXView" target="1.8" />
+      <module name="TicTacToe.Gui" target="1.8" />
+      <module name="TicTacToe.Mapping" target="1.8" />
+      <module name="TicTacToe.Messages" target="1.8" />
+      <module name="TicTacToe.Messaging" target="1.8" />
+      <module name="TicTacToe.Presentation" target="1.8" />
+      <module name="TicTacToe.Rendering" target="1.8" />
+      <module name="TicTacToe.SequentialGui" target="1.8" />
+      <module name="Utilities" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="TicTacToe.Gui" options="" />
+      <module name="TicTacToe.SequentialGui" options="" />
+    </option>
+  </component>
+</project>
