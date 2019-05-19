@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/ClearingFieldsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/ResetTransaction/ClearBoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/ResetTransaction/ClearGameStateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/ResetTransaction/ResetTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/ResetTransaction/ResetTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/ResetTransaction/ResetTransactionShunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/ResetTransaction/ResetTransactionShunt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListenerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListenerSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/NotifyingListenerOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/NotifyingListenerOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/OneBoardListenerIsAddedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/OneBoardListenerIsAddedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/TwoBoardListenersAreAddedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/TwoBoardListenersAreAddedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDummy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/BoardViewPresenter/BoardViewPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/BoardViewPresenter/BoardViewPresenter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -161,7 +145,7 @@
         <counts>
           <entry key="dummy" value="4975" />
           <entry key="iml" value="58" />
-          <entry key="java" value="268378" />
+          <entry key="java" value="268558" />
           <entry key="txt" value="11" />
           <entry key="xml" value="1344" />
         </counts>
@@ -170,7 +154,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="268377" />
+          <entry key="JAVA" value="268557" />
           <entry key="PLAIN_TEXT" value="4986" />
           <entry key="XML" value="1344" />
         </counts>
@@ -181,7 +165,7 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="23" />
-          <entry key="java" value="6738" />
+          <entry key="java" value="6741" />
           <entry key="pom" value="1" />
           <entry key="xml" value="319" />
           <entry key="xsd" value="1" />
@@ -192,7 +176,7 @@
           <entry key="CLASS" value="16" />
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="23" />
-          <entry key="JAVA" value="6738" />
+          <entry key="JAVA" value="6741" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="321" />
         </counts>
@@ -202,47 +186,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/NotifyingListenerOrderShuntTest.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-              <folding>
-                <element signature="e#1231#1232#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#1308#1309#0" expanded="true" />
-                <element signature="e#1335#1336#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/OneBoardListenerIsAddedTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/TwoBoardListenersAreAddedTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+            <state relative-caret-position="334">
+              <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="409">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1117#1118#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -335,7 +304,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Apps/TicTacToe.Console/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ChoosePlayerViewPresenter/ChoosePlayerViewPresentertest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ChoosePlayerViewPresenter/ChoosingPlayerViewPresenterShunt.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ChoosePlayerViewPresenter/ChoosePlayerViewDummy.java" />
@@ -374,10 +342,8 @@
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/Board.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDummy.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardSpy.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/BoardDecoratorTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListener.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/BoardListenerSpy.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" />
@@ -386,6 +352,9 @@
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/TwoBoardListenersAreAddedTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/NotifyingListenerOrderShuntTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java" />
       </list>
     </option>
   </component>
@@ -756,6 +725,19 @@
               <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
               <item name="ListenableBoard" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+              <item name="BoardDecorators" type="462c0819:PsiDirectoryNode" />
+              <item name="ObservableBoard" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -771,7 +753,7 @@
     <property name="SearchEverywhereHistoryKey" value="Null&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ConfigureViewPresenter/NullRunInteractor.java&#10;Main&#9;PSI&#9;JAVA://FXBoardGames.Main&#10;FxC&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXConfigureView.java&#10;FX&#9;PSI&#9;JAVA://FXView.Configuration.FXConfigureView&#10;FXCho&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXChoosePlayerView.java&#10;WinningLin&#9;PSI&#9;JAVA://Presentation.WinningLinePresenter.WinningLinePresenter&#10;FXGa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXGameOverView.java&#10;TicTa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeAction.java&#10;FXTicTacToeCon&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeConfigureView.java&#10;FXTic&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;FXTicTa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;GameOver&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;BoardViewPre&#9;PSI&#9;JAVA://Presentation.BoardViewPresenter.BoardViewPresenter&#10;BoardBo&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Data/BoardBoundaries.java&#10;BoardView&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java&#10;Start&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/TicTacToe.Gui/src/main/java/View/FXStartView.java&#10;HybridGa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.GuiGaming/src/test/java/GuiGaming/HybridGameLoopImp/HybridGameLoopImp.java&#10;GameLoop&#9;PSI&#9;JAVA://SequentialGaming.MessagingGameLoop.GameLoop&#10;FXBoard&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/App.TicTacToe.Gui/src/main/java/View/FXBoardView.java&#10;FXShell&#9;PSI&#9;JAVA://View.FXShell&#10;HashingBoard&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java&#10;markedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;MarkedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;markedFieldPro&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/MarkedFieldCountProviderStub.java&#10;Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558231865872" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558232192672" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/TicTacToe.GuiGaming/src/test/java" />
@@ -1163,18 +1145,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.19 at 04h 07m 32s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.19 at 04h 08m 06s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.19 at 04h 09m 09s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.19 at 04h 09m 47s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.19 at 04h 09m 54s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -1193,15 +1163,27 @@
     <history-entry file="AllTest - 2019.05.19 at 04h 11m 02s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.19 at 04h 13m 26s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.19 at 04h 13m 40s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.19 at 04h 13m 57s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.19 at 04h 14m 12s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="680492000" />
+    <option name="totallyTimeSpent" value="680780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2707889" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2707889" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.2563966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1210,7 +1192,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37202072" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37202072" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44248706" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1430,7 +1412,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ChoosePlayerViewPresenter/ChoosePlayerViewPresenter.java" />
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ConfigureViewPresenter/Api/ConfigureViewDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1739,13 +1720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDummy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1876,20 +1850,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="50" column="3" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+        <state relative-caret-position="180">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="method#clear#0;class#ListenableBoard#0" />
+            <element signature="method#mark#0;class#ListenableBoard#0" />
+            <element signature="method#notify#0;class#ListenableBoard#0" />
+            <element signature="method#notifyCleared#0;class#ListenableBoard#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/OneBoardListenerIsAddedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1897,6 +1867,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ListenableBoard/OneBoardListenerIsAddedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1913,13 +1890,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ListenableBoard/ListenableBoard.java">
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/BoardDecorators/ObservableBoard/ObservableBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="424">
+          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/NotifyBoardObserverTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="68" column="4" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/BoardDecorators/ObservableBoard/ObservingOrderShuntTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
           <folding>
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -48,6 +48,7 @@ public class ObservableBoard implements Board {
 
     public void clear() {
         board.clear();
+        notifyObservers();
     }
 
     public boolean isMarked(Field f) {

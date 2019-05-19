@@ -58,6 +58,18 @@ public class NotifyBoardObserverTest {
         assertFalse(actual);
     }
 
+
+    @Test
+    void IfOneObserverIsAttached_ItShouldBeUpdatedWhenClearing() {
+        makeOneObserverAttached();
+
+        sut.clear();
+
+        boolean actual = observers[0].wasUpdated();
+        assertTrue(actual);
+    }
+
+
     private void makeSecondObserverIsDetachedAfterBeingAttached() {
         makeTwoObserversAttached();
         sut.detach(observers[1]);
