@@ -1,6 +1,6 @@
 package FXView;
 
-import Presentation.Transactions.LoadGameViewTransaction.GameView;
+import Presentation.LoadGameViewTransaction.GameView;
 import javafx.scene.layout.StackPane;
 
 public abstract class FXGameView extends StackPane implements GameView {

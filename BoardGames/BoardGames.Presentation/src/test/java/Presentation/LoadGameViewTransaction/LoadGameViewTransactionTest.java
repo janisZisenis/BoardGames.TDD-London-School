@@ -1,4 +1,4 @@
-package Presentation.Transactions.LoadGameViewTransaction;
+package Presentation.LoadGameViewTransaction;
 
 import org.junit.jupiter.api.Test;
 

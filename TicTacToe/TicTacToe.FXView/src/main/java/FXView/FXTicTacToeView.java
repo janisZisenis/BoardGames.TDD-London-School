@@ -1,12 +1,12 @@
 package FXView;
 
-import FXView.Gaming.FXGameOverView;
+import javafx.scene.layout.Pane;
 
 public class FXTicTacToeView extends FXGameView {
 
     private FXGameView boardView;
 
-    public FXTicTacToeView(FXGameView boardView, FXGameOverView gameOverView) {
+    public FXTicTacToeView(FXGameView boardView, Pane gameOverView) {
         this.boardView = boardView;
 
         getChildren().addAll(boardView, gameOverView);

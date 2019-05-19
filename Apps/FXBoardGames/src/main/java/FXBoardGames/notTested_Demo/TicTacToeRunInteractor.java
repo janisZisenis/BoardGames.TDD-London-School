@@ -11,19 +11,19 @@ import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
+import FXSynchronizingView.FXSynchronizingGameOverView;
 import FXView.FXIODeviceFactory;
 import FXView.FXTicTacToeView;
 import FXView.Gaming.FXBoardView;
-import FXView.Gaming.FXGameOverView;
 import FXView.Gaming.FXInputAlerter;
 import Gaming.GameFacade.GameOverRule;
 import InputGeneration.InputProcessor;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import InputGeneration.ValidInputGenerator.InputValidator;
+import InteractiveGaming.AsyncProcessingGameRunner.AsyncProcessingGameRunner;
 import InteractiveGaming.HybridGameImp.HybridGameImp;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
 import InteractiveGaming.HybridGameRunner.HybridGame;
-import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
@@ -41,7 +41,8 @@ import Presentation.ConfigureViewPresenter.RunInteractor;
 import Presentation.ConfigureViewPresenter.RunRequest;
 import Presentation.GameOverViewPresenter.GameOverInteractorFacade;
 import Presentation.GameOverViewPresenter.GameOverViewPresenter;
-import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
+import Presentation.LoadGameViewTransaction.GameView;
+import Presentation.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
 import Utilities.Transaction.Transaction;
 
@@ -61,8 +62,8 @@ public class TicTacToeRunInteractor implements RunInteractor {
         FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
 
         Board hashing = new HashingBoard();
-        ObservableBoard observableBoard = new ObservableBoard(hashing);
-        ListenableBoard board = new ListenableBoard(observableBoard);
+        ListenableBoard listenableBoard = new ListenableBoard(hashing);
+        ObservableBoard board = new ObservableBoard(listenableBoard);
 
         HybridPlayer john = makePlayer(request.getFirstPlayerType(), Mark.John, board);
         HybridPlayer haley = makePlayer(request.getSecondPlayerType(), Mark.Haley, board);
@@ -71,18 +72,18 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         HybridGame game = new HybridGameImp(rule, multiPlayer);
-        HybridGameRunner runner = new HybridGameRunner(game);
+        AsyncProcessingGameRunner runner = new AsyncProcessingGameRunner(game);
 
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);
-        observableBoard.attach(winningLinePresenter);
+        board.attach(winningLinePresenter);
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
         InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(runner, validator, alerter);
         processor = new GameOverInputProcessor(processor, rule);
         BoardViewPresenter boardPresenter = new BoardViewPresenter(board, boardView, processor);
-        board.addListener(boardPresenter);
+        listenableBoard.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
 
         Transaction cancelAction = this.cancelAction;
@@ -96,15 +97,20 @@ public class TicTacToeRunInteractor implements RunInteractor {
         GameOverMessageProvider provider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
         GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, restartAction);
 
-        FXGameOverView gameOverView = new FXGameOverView();
+        FXSynchronizingGameOverView gameOverView = new FXSynchronizingGameOverView();
         GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter(gameOverView, gameOverViewInteractor);
         gameOverView.setDelegate(gameOverViewPresenter);
-        observableBoard.attach(gameOverViewPresenter);
+        board.attach(gameOverViewPresenter);
 
-        FXTicTacToeView view = new FXTicTacToeView(boardView, gameOverView);
+        GameView view = new FXTicTacToeView(boardView, gameOverView);
         loader.load(view);
 
-        runner.run();
+        Thread worker = new Thread() {
+            public void run() {
+                runner.run();
+            }
+        };
+        worker.start();
     }
 
     private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {

@@ -113,4 +113,5 @@ public class FXGameOverView extends StackPane implements GameOverView {
         setVisible(false);
         winnerLabel.setText("");
     }
+
 }

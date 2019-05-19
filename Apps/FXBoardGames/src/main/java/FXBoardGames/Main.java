@@ -4,7 +4,7 @@ import FXBoardGames.notTested_Demo.TicTacToeMain;
 import FXView.FXQuitTransaction.FXQuitTransaction;
 import FXView.FXShell;
 import FXView.FXWelcomeView;
-import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
+import Presentation.LoadGameViewTransaction.LoadGameViewTransaction;
 import Presentation.WelcomeViewPresenter.WelcomeViewPresenter;
 import Utilities.Transaction.Transaction;
 import javafx.application.Application;

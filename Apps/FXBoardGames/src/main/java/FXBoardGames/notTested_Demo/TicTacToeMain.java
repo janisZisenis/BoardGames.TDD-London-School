@@ -3,8 +3,8 @@ package FXBoardGames.notTested_Demo;
 import FXView.Configuration.FXConfigureView;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
 import Presentation.ConfigureViewPresenter.RunInteractor;
-import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
-import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
+import Presentation.LoadGameViewTransaction.GameViewLoader;
+import Presentation.LoadGameViewTransaction.LoadGameViewTransaction;
 import Utilities.Transaction.Transaction;
 
 public class TicTacToeMain implements Transaction {

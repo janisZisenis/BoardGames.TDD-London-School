@@ -1,4 +1,4 @@
-package Presentation.Transactions.LoadGameViewTransaction;
+package Presentation.LoadGameViewTransaction;
 
 public class GameViewDummy implements GameView {
 }

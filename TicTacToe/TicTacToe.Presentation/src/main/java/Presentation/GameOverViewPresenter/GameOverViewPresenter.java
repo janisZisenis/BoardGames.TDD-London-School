@@ -23,17 +23,17 @@ public class GameOverViewPresenter implements GameOverViewDelegate, Observer {
     }
 
     public void onCancelClicked() {
-        interactor.sendCancel();
         view.hide();
+        interactor.sendCancel();
     }
 
     public void onReconfigureClicked() {
-        interactor.sendReconfigure();
         view.hide();
+        interactor.sendReconfigure();
     }
 
     public void onRestartClicked() {
-        interactor.sendRestart();
         view.hide();
+        interactor.sendRestart();
     }
 }
