@@ -7,12 +7,12 @@ public class ConfigureViewPresenter implements ConfigureViewDelegate {
 
     private final ConfigureView view;
     private final Transaction cancelAction;
-    private final Transaction startAction;
+    private final RunInteractor interactor;
 
-    public ConfigureViewPresenter(ConfigureView view, Transaction cancelAction, Transaction startAction) {
+    public ConfigureViewPresenter(ConfigureView view, Transaction cancelAction, RunInteractor interactor) {
         this.view = view;
         this.cancelAction = cancelAction;
-        this.startAction = startAction;
+        this.interactor = interactor;
     }
 
     public void onCancelClicked() {
@@ -20,7 +20,11 @@ public class ConfigureViewPresenter implements ConfigureViewDelegate {
     }
 
     public void onStartClicked() {
-        startAction.execute();
+        PlayerType first = view.getFirstPlayerType();
+        PlayerType second = view.getSecondPlayerType();
+
+        RunRequest request = new RunRequest(first, second);
+        interactor.sendRun(request);
     }
 
 }

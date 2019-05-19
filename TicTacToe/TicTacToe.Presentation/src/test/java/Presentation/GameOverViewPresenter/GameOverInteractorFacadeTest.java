@@ -2,8 +2,6 @@ package Presentation.GameOverViewPresenter;
 
 import GameLoopMessengerImp.MessageProviderStub;
 import Gaming.GameFacade.GameOverRuleStub;
-import Presentation.GameOverViewPresenter.GameOverInteractorFacade;
-import Presentation.GameOverViewPresenter.GameOverViewResponse;
 import Utilities.Transaction.TransactionSpy;
 import org.junit.jupiter.api.Test;
 
@@ -49,12 +47,12 @@ public class GameOverInteractorFacadeTest {
     void IfRuleIsGameOver_TheResponseShouldBeOverEither() {
         rule.setIsGameOver(true);
 
-        GameOverViewResponse response = sut.receive();
+        GameOverMessageResponse response = sut.receive();
 
         assertIsGameOver(response);
     }
 
-    private void assertIsGameOver(GameOverViewResponse response) {
+    private void assertIsGameOver(GameOverMessageResponse response) {
         boolean actual = response.isGameOver();
         assertTrue(actual);
     }
@@ -63,12 +61,12 @@ public class GameOverInteractorFacadeTest {
     void IfRuleIsNotGameOver_TheResponseShouldNotBeOverEither() {
         rule.setIsGameOver(false);
 
-        GameOverViewResponse response = sut.receive();
+        GameOverMessageResponse response = sut.receive();
 
         assertIsNotGameOver(response);
     }
 
-    private void assertIsNotGameOver(GameOverViewResponse response) {
+    private void assertIsNotGameOver(GameOverMessageResponse response) {
         boolean actual = response.isGameOver();
         assertFalse(actual);
     }
@@ -78,12 +76,12 @@ public class GameOverInteractorFacadeTest {
     void IfMessageIsProvided_TheResponseShouldHaveTheMessageEither() {
         provider.setMessage("Message");
 
-        GameOverViewResponse response = sut.receive();
+        GameOverMessageResponse response = sut.receive();
 
         assertHasMessage("Message", response);
     }
 
-    private void assertHasMessage(String expected, GameOverViewResponse response) {
+    private void assertHasMessage(String expected, GameOverMessageResponse response) {
         String actual = response.getMessage();
         assertEquals(expected, actual);
     }

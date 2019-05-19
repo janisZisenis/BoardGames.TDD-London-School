@@ -12,7 +12,7 @@ public class GameOverViewPresenterTest {
 
     @Test
     void IfGameIsOverOnUpdate_ShouldShowTheResponseMessage() {
-        GameOverViewResponse response = makeGameIsOverResponseWith("Message");
+        GameOverMessageResponse response = makeGameIsOverResponseWith("Message");
         interactor.setResponse(response);
 
         sut.update();
@@ -20,9 +20,9 @@ public class GameOverViewPresenterTest {
         assertMessageWasShown("Message");
     }
 
-    private GameOverViewResponse makeGameIsOverResponseWith(String message) {
+    private GameOverMessageResponse makeGameIsOverResponseWith(String message) {
         boolean isGameOver = true;
-        return new GameOverViewResponse(isGameOver, message);
+        return new GameOverMessageResponse(isGameOver, message);
     }
 
     private void assertMessageWasShown(String expected) {
@@ -33,7 +33,7 @@ public class GameOverViewPresenterTest {
 
     @Test
     void IfGameIsNotOverOnUpdate_ShouldNotShowTheMessage() {
-        GameOverViewResponse response = makeGameIsNotOverResponse();
+        GameOverMessageResponse response = makeGameIsNotOverResponse();
         interactor.setResponse(response);
 
         sut.update();
@@ -41,10 +41,10 @@ public class GameOverViewPresenterTest {
         assertHasNotShownMessage();
     }
 
-    private GameOverViewResponse makeGameIsNotOverResponse() {
+    private GameOverMessageResponse makeGameIsNotOverResponse() {
         boolean isGameOver = false;
         String message = "Message";
-        return new GameOverViewResponse(isGameOver, message);
+        return new GameOverMessageResponse(isGameOver, message);
     }
 
     private void assertHasNotShownMessage() {

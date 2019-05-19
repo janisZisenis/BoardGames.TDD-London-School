@@ -1,11 +1,11 @@
 package Presentation.GameOverViewPresenter;
 
-public class GameOverViewResponse {
+public class GameOverMessageResponse {
 
     private final boolean isGameOver;
     private final String message;
 
-    public GameOverViewResponse(boolean isGameOver, String message) {
+    public GameOverMessageResponse(boolean isGameOver, String message) {
         this.isGameOver = isGameOver;
         this.message = message;
     }

@@ -2,8 +2,6 @@ package Presentation.GameOverViewPresenter;
 
 import GameLoopMessengerImp.MessageProvider;
 import Gaming.GameFacade.GameOverRule;
-import Presentation.GameOverViewPresenter.GameOverInteractor;
-import Presentation.GameOverViewPresenter.GameOverViewResponse;
 import Utilities.Transaction.Transaction;
 
 public class GameOverInteractorFacade implements GameOverInteractor {
@@ -39,10 +37,10 @@ public class GameOverInteractorFacade implements GameOverInteractor {
         restartAction.execute();
     }
 
-    public GameOverViewResponse receive() {
+    public GameOverMessageResponse receive() {
         boolean isGameOver = rule.isGameOver();
         String message = provider.getMessage();
-        return new GameOverViewResponse(isGameOver, message);
+        return new GameOverMessageResponse(isGameOver, message);
     }
 
 }

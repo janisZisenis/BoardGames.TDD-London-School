@@ -1,16 +1,13 @@
 package Presentation.GameOverViewPresenter;
 
-import Presentation.GameOverViewPresenter.GameOverInteractor;
-import Presentation.GameOverViewPresenter.GameOverViewResponse;
-
 public class GameOverInteractorStub implements GameOverInteractor {
 
-    private GameOverViewResponse response;
+    private GameOverMessageResponse response;
 
-    public void setResponse(GameOverViewResponse response) {
+    public void setResponse(GameOverMessageResponse response) {
         this.response = response;
     }
-    public GameOverViewResponse receive() {
+    public GameOverMessageResponse receive() {
         return response;
     }
 

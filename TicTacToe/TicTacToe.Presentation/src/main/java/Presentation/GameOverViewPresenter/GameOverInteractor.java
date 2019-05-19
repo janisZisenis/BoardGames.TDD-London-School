@@ -2,7 +2,7 @@ package Presentation.GameOverViewPresenter;
 
 public interface GameOverInteractor {
 
-    GameOverViewResponse receive();
+    GameOverMessageResponse receive();
     void sendCancel();
     void sendReconfigure();
     void sendRestart();

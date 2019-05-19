@@ -41,10 +41,11 @@ public class FXChoosePlayerView extends Pane {
     private final int width = 170;
 
     private HashMap<PlayerType, RadioButton> buttons = new HashMap<>();
+    private HashMap<RadioButton, PlayerType> types = new HashMap<>();
 
     public FXChoosePlayerView() {
         init();
-        initButtonMap();
+        initMaps();
         fillGrid();
 
         registerActionListener();
@@ -68,10 +69,14 @@ public class FXChoosePlayerView extends Pane {
         comingSoonText.setFont(comingSoonFont);
     }
 
-    private void initButtonMap() {
+    private void initMaps() {
         buttons.put(Human, humanRadio);
         buttons.put(HumbleCPU, humbleRadio);
         buttons.put(InvincibleCPU, invincibleRadio);
+
+        types.put(humanRadio, Human);
+        types.put(humbleRadio, HumbleCPU);
+        types.put(invincibleRadio, InvincibleCPU);
     }
 
     private void fillGrid() {
@@ -117,4 +122,13 @@ public class FXChoosePlayerView extends Pane {
     }
 
 
+    public PlayerType getSelectedPlayerType() {
+        for (Map.Entry<PlayerType, RadioButton> me : buttons.entrySet()) {
+            RadioButton b = me.getValue();
+            if(b.isSelected())
+                return types.get(b);
+        }
+
+        return Human;
+    }
 }

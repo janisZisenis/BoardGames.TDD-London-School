@@ -3,14 +3,16 @@ package Presentation.ConfigureViewPresenter;
 import Utilities.Transaction.TransactionSpy;
 import org.junit.jupiter.api.Test;
 
+import static Presentation.ConfigureViewPresenter.PlayerType.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ConfigureViewPresenterTest {
 
-    private ConfigureViewSpy view = new ConfigureViewSpy();
+    private ConfigureViewStub view = new ConfigureViewStub();
     private TransactionSpy cancelAction = new TransactionSpy();
-    private TransactionSpy startAction = new TransactionSpy();
-    private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, cancelAction, startAction);
+    private RunInteractorSpy interactor = new RunInteractorSpy();
+    private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, cancelAction, interactor);
 
     @Test
     void IfCancelButtonGetsClicked_ShouldExecuteCancelAction() {
@@ -24,16 +26,57 @@ public class ConfigureViewPresenterTest {
         assertTrue(actual);
     }
 
-//    @Test
-//    void IfStartButtonGetsClicked_ShouldExecuteStartAction() {
-//        sut.onStartClicked();
-//
-//        assertHasExecutedStartAction();
-//    }
-//
-//    private void assertHasExecutedStartAction() {
-//        boolean actual = startAction.hasExecuted();
-//        assertTrue(actual);
-//    }
+    @Test
+    void IfFirstPlayerTypeIsHumanOnStartClicked_RequestShouldHaveHumanAsFirstPlayerTypeToo() {
+        view.setFirstPlayerType(Human);
+
+        sut.onStartClicked();
+
+        RunRequest request = interactor.getSentRequest();
+        assertFirstPlayerTypeEquals(Human, request);
+    }
+
+    @Test
+    void IfFirstPlayerTypeIsInvincibleCPUOnStartClicked_RequestShouldHaveInvincibleCPUAsFirstPlayerTypeToo() {
+        view.setFirstPlayerType(InvincibleCPU);
+
+        sut.onStartClicked();
+
+        RunRequest request = interactor.getSentRequest();
+        assertFirstPlayerTypeEquals(InvincibleCPU, request);
+    }
+
+    private void assertFirstPlayerTypeEquals(PlayerType expected, RunRequest request) {
+        PlayerType actual = request.getFirstPlayerType();
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    void IfSecondPlayerTypeIsHumanOnStartClicked_RequestShouldHaveHumanAsSecondPlayerTypeToo() {
+        view.setSecondPlayerType(Human);
+
+        sut.onStartClicked();
+
+        RunRequest request = interactor.getSentRequest();
+        assertSecondPlayerTypeEquals(Human, request);
+    }
+
+    @Test
+    void IfSecondPlayerTypeIsInvincibleCPUOnStartClicked_RequestShouldHaveInvincibleCPUAsSecondPlayerTypeToo() {
+        view.setSecondPlayerType(InvincibleCPU);
+
+        sut.onStartClicked();
+
+        RunRequest request = interactor.getSentRequest();
+        assertSecondPlayerTypeEquals(InvincibleCPU, request);
+    }
+
+
+    private void assertSecondPlayerTypeEquals(PlayerType expected, RunRequest request) {
+        PlayerType actual = request.getSecondPlayerType();
+        assertEquals(expected, actual);
+    }
+
 
 }

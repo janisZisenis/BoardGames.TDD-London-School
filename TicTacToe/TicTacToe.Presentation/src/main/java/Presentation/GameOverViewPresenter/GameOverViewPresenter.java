@@ -14,7 +14,7 @@ public class GameOverViewPresenter implements GameOverViewDelegate, Observer {
     }
 
     public void update() {
-        GameOverViewResponse response = interactor.receive();
+        GameOverMessageResponse response = interactor.receive();
 
         if(response.isGameOver()) {
             String message = response.getMessage();

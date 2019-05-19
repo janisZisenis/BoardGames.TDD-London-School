@@ -36,33 +36,36 @@ import Messaging.MarkToStringMappers.DefaultMarkToStringMapper;
 import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
 import Presentation.ConfigureViewPresenter.PlayerType;
+import Presentation.ConfigureViewPresenter.RunInteractor;
+import Presentation.ConfigureViewPresenter.RunRequest;
 import Presentation.GameOverViewPresenter.GameOverInteractorFacade;
 import Presentation.GameOverViewPresenter.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
+import Utilities.Transaction.NullTransaction;
 import Utilities.Transaction.Transaction;
 
-public class TicTacToeRunAction implements Transaction {
+public class TicTacToeRunInteractor implements RunInteractor {
 
     private final GameViewLoader loader;
-    private final Transaction menuAction;
+    private final Transaction cancelAction;
     private final Transaction configureAction;
 
-    public TicTacToeRunAction(GameViewLoader loader, Transaction menuAction, Transaction configureAction) {
+    public TicTacToeRunInteractor(GameViewLoader loader, Transaction cancelAction, Transaction configureAction) {
         this.loader = loader;
-        this.menuAction = menuAction;
+        this.cancelAction = cancelAction;
         this.configureAction = configureAction;
     }
 
-    public void execute() {
+    public void sendRun(RunRequest request) {
         FXBoardView boardView = new FXBoardView(BoardBoundaries.rowColumnCount);
 
         Board hashing = new HashingBoard();
         ObservableBoard observableBoard = new ObservableBoard(hashing);
         ListenableBoard board = new ListenableBoard(observableBoard);
 
-        HybridPlayer john = makePlayer(PlayerType.Human, Mark.John, board);
-        HybridPlayer haley = makePlayer(PlayerType.HumbleCPU, Mark.Haley, board);
+        HybridPlayer john = makePlayer(request.getFirstPlayerType(), Mark.John, board);
+        HybridPlayer haley = makePlayer(request.getSecondPlayerType(), Mark.Haley, board);
         MultiHybridPlayer multiPlayer = new MultiHybridPlayer(john);
         multiPlayer.add(haley);
 
@@ -82,16 +85,15 @@ public class TicTacToeRunAction implements Transaction {
         board.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
 
-        Transaction cancelAction = menuAction;
+        Transaction cancelAction = this.cancelAction;
         Transaction reconfigureAction = configureAction;
-        Transaction restartAction = this;
 
         WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
         DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.xWinsMessage, TicTacToeMessages.oWinsMessage);
         WinnerMessageProvider winnerMessageProvider = new WinnerMessageProviderImp(winnerProvider, mapper);
         FixedMessageProvider drawMessageProvider = new FixedMessageProvider(TicTacToeMessages.drawMessage);
         GameOverMessageProvider provider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
-        GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, restartAction);
+        GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, new NullTransaction());
 
         FXGameOverView gameOverView = new FXGameOverView();
         GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter(gameOverView, gameOverViewInteractor);

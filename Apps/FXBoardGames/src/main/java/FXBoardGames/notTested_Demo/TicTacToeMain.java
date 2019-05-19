@@ -2,6 +2,7 @@ package FXBoardGames.notTested_Demo;
 
 import FXView.Configuration.FXConfigureView;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;
+import Presentation.ConfigureViewPresenter.RunInteractor;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.Transactions.LoadGameViewTransaction.LoadGameViewTransaction;
 import Utilities.Transaction.Transaction;
@@ -19,10 +20,10 @@ public class TicTacToeMain implements Transaction {
     public void execute() {
         FXConfigureView configView = new FXConfigureView();
 
-        Transaction loadAction = new LoadGameViewTransaction(configView, viewLoader);
-        Transaction runAction = new TicTacToeRunAction(viewLoader, cancelAction, loadAction);
+        Transaction configureAction = new LoadGameViewTransaction(configView, viewLoader);
+        RunInteractor interactor = new TicTacToeRunInteractor(viewLoader, cancelAction, configureAction);
 
-        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(configView, cancelAction, runAction);
+        ConfigureViewPresenter configPresenter = new ConfigureViewPresenter(configView, cancelAction, interactor);
         configView.setDelegate(configPresenter);
 
         viewLoader.load(configView);

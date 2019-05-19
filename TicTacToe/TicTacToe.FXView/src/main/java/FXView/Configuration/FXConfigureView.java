@@ -5,6 +5,7 @@ import FXView.ComingSoonConstants;
 import FXView.FXGameView;
 import Presentation.ConfigureViewPresenter.Api.ConfigureViewDelegate;
 import Presentation.ConfigureViewPresenter.ConfigureView;
+import Presentation.ConfigureViewPresenter.PlayerType;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
@@ -223,4 +224,11 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
             delegate.onCancelClicked();
     }
 
+    public PlayerType getFirstPlayerType() {
+        return first.getSelectedPlayerType();
+    }
+
+    public PlayerType getSecondPlayerType() {
+        return second.getSelectedPlayerType();
+    }
 }
