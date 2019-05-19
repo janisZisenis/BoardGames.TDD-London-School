@@ -1,6 +1,8 @@
 package InteractiveGaming.ResetTransaction;
 
-public class ResetTransaction {
+import Utilities.Transaction.Transaction;
+
+public class ResetTransaction implements Transaction {
 
     private final ClearGameStateService clearBoardService;
     private final ResetPlayerService resetPlayerService;

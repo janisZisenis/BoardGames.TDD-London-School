@@ -35,7 +35,6 @@
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>Messaging</artifactId>
@@ -44,6 +43,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Messaging</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Domain</artifactId>
@@ -58,16 +63,11 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Messaging</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Messages</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
     <build>

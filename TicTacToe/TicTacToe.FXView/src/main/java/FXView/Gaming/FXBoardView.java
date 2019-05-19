@@ -115,7 +115,7 @@ public class FXBoardView extends FXGameView implements BoardView, WinningLineVie
     }
 
     public void clearAll() {
-
+        initTiles();
     }
 
     private void setFieldText(Field field, String text) {

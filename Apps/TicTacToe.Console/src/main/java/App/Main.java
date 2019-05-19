@@ -5,6 +5,7 @@ import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import FXView.ConsoleBoardView;
 import FXView.ConsoleMessenger;
+import GameLoopMessengerImp.MessageProvider;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
@@ -14,6 +15,7 @@ import Gaming.MessagingGameLoop.GameLoop;
 import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
+import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import Messages.TicTacToeMessages;
 import Messaging.MarkToStringMappers.MarkToXOMapper;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
@@ -30,8 +32,9 @@ public class Main {
         ConsoleBoardView view = new ConsoleBoardView(board, new MarkToXOMapper());
         ConsoleMessenger messenger = new ConsoleMessenger();
 
+        MessageProvider clearMessageProvider = new FixedMessageProvider(TicTacToeMessages.boardClearedMessage);
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
-        MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider);
+        MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider, clearMessageProvider);
         board.addListener(listener);
 
         ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();

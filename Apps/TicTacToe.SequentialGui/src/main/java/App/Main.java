@@ -9,6 +9,7 @@ import FXView.FXInputView;
 import FXView.FXSequentialShell;
 import FXView.FXSynchronizingBoardView;
 import FXView.FXSynchronizingMessengerView;
+import GameLoopMessengerImp.MessageProvider;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.NullRenderer;
@@ -19,6 +20,7 @@ import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
 import InputGeneration.NullInputProcessor;
+import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import Messages.TicTacToeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
@@ -45,7 +47,8 @@ public class Main extends Application {
         FXSequentialShell fxShell = new FXSequentialShell(fxBoard, fxGenerator, fxMessenger);
 
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
-        MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider);
+        MessageProvider clearMessageProvider = new FixedMessageProvider(TicTacToeMessages.boardClearedMessage);
+        MessagingBoardListener listener = new MessagingBoardListener(fxMessenger, markedFieldMessageProvider, clearMessageProvider);
         listenableBoard.addListener(listener);
 
         FXIODeviceFactory factory = new FXIODeviceFactory();

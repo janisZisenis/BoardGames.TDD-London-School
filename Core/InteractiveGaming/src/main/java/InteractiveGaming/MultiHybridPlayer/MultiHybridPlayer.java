@@ -2,12 +2,13 @@ package InteractiveGaming.MultiHybridPlayer;
 
 import InteractiveGaming.HybridGameImp.HybridPlayer;
 import InputGeneration.Input.Input;
+import InteractiveGaming.ResetTransaction.ResetPlayerService;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class MultiHybridPlayer implements HybridPlayer {
+public class MultiHybridPlayer implements HybridPlayer, ResetPlayerService {
 
     private final List<HybridPlayer> players = new LinkedList<>();
     private CyclicListIterator<HybridPlayer> it;

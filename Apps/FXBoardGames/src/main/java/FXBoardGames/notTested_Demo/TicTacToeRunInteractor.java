@@ -27,6 +27,7 @@ import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
+import InteractiveGaming.ResetTransaction.ResetTransaction;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
@@ -42,7 +43,6 @@ import Presentation.GameOverViewPresenter.GameOverInteractorFacade;
 import Presentation.GameOverViewPresenter.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
 import Presentation.WinningLinePresenter.WinningLinePresenter;
-import Utilities.Transaction.NullTransaction;
 import Utilities.Transaction.Transaction;
 
 public class TicTacToeRunInteractor implements RunInteractor {
@@ -87,13 +87,14 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         Transaction cancelAction = this.cancelAction;
         Transaction reconfigureAction = configureAction;
+        Transaction restartAction = new ResetTransaction(board, multiPlayer, runner);
 
         WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
         DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.xWinsMessage, TicTacToeMessages.oWinsMessage);
         WinnerMessageProvider winnerMessageProvider = new WinnerMessageProviderImp(winnerProvider, mapper);
         FixedMessageProvider drawMessageProvider = new FixedMessageProvider(TicTacToeMessages.drawMessage);
         GameOverMessageProvider provider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
-        GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, new NullTransaction());
+        GameOverInteractorFacade gameOverViewInteractor = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, restartAction);
 
         FXGameOverView gameOverView = new FXGameOverView();
         GameOverViewPresenter gameOverViewPresenter = new GameOverViewPresenter(gameOverView, gameOverViewInteractor);

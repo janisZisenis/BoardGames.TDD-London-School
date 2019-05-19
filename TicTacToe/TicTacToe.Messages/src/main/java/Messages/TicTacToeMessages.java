@@ -16,4 +16,5 @@ public abstract class TicTacToeMessages {
 
     public static final String drawMessage = "Draw!";
 
+    public static String boardClearedMessage = "The Board was Cleared!";
 }
