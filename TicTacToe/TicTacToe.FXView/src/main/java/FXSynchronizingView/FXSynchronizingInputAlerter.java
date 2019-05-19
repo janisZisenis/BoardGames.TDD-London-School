@@ -1,4 +1,4 @@
-package FXView;
+package FXSynchronizingView;
 
 import FXView.Gaming.FXInputAlerter;
 import InputGeneration.Input.Input;

@@ -8,16 +8,16 @@ import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
 import InputGeneration.InputGenerator;
 import InputGeneration.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
-import FXView.FXSynchronizingInputAlerter;
-import FXView.FXInputView;
+import FXSynchronizingView.FXSynchronizingInputAlerter;
+import FXSynchronizingView.FXSynchronizingInputView;
 
 public class FXIODeviceFactory implements IODeviceFactory {
 
-    private static FXInputView humanGenerator;
+    private static FXSynchronizingInputView humanGenerator;
 
     public InputGenerator makeHumanInputGenerator() {
         if(humanGenerator == null)
-            humanGenerator = new FXInputView(200);
+            humanGenerator = new FXSynchronizingInputView(200);
         return humanGenerator;
     }
 
@@ -42,7 +42,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
         return new FXSynchronizingInputAlerter(inputAlreadyMarked);
     }
 
-    public static void setHumanInputGenerator(FXInputView humanGenerator) {
+    public static void setHumanInputGenerator(FXSynchronizingInputView humanGenerator) {
         FXIODeviceFactory.humanGenerator = humanGenerator;
     }
 }

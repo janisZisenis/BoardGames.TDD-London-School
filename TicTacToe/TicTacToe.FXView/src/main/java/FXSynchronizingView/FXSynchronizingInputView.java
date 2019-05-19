@@ -1,4 +1,4 @@
-package FXView;
+package FXSynchronizingView;
 
 import InputGeneration.Input.Input;
 import InputGeneration.InputGenerator;
@@ -17,7 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 
 
-public class FXInputView extends Pane implements InputGenerator {
+public class FXSynchronizingInputView extends Pane implements InputGenerator {
 
     private final String rowTitle = "Row:";
     private final String colTitle = "Column:";
@@ -31,7 +31,7 @@ public class FXInputView extends Pane implements InputGenerator {
 
     private boolean submitted = false;
 
-    public FXInputView(int width) {
+    public FXSynchronizingInputView(int width) {
         setPrefHeight(width);
 
         initRowField();

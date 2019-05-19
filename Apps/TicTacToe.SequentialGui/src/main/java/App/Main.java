@@ -5,10 +5,10 @@ import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import FXView.FXInputView;
+import FXSynchronizingView.FXSynchronizingInputView;
 import FXView.FXSequentialShell;
-import FXView.FXSynchronizingBoardView;
-import FXView.FXSynchronizingMessengerView;
+import FXSynchronizingView.FXSynchronizingBoardView;
+import FXSynchronizingView.FXSynchronizingMessengerView;
 import GameLoopMessengerImp.MessageProvider;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
@@ -41,7 +41,7 @@ public class Main extends Application {
         ListenableBoard listenableBoard = Domain.Factory.makeListenableBoard();
         ObservableBoard observableBoard = new ObservableBoard(listenableBoard);
 
-        FXInputView fxGenerator = new FXInputView(200);
+        FXSynchronizingInputView fxGenerator = new FXSynchronizingInputView(200);
         FXSynchronizingBoardView fxBoard = new FXSynchronizingBoardView(BoardBoundaries.rowColumnCount, 200);
         FXSynchronizingMessengerView fxMessenger = new FXSynchronizingMessengerView(445);
         FXSequentialShell fxShell = new FXSequentialShell(fxBoard, fxGenerator, fxMessenger);

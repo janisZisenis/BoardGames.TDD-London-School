@@ -1,4 +1,4 @@
-package FXView;
+package FXSynchronizingView;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Line.Line;
