@@ -24,7 +24,7 @@ For those who are new to TDD, those are the rules and aspects I strictly obeyed:
 
 Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.
 
-If your feel excited about TDD and the questions I try to answer myself, free to enter my code and take your own conclusions. In here I don't describe the evolution of the project, this is rather a "look-what-happens-to-the-outcome-if-your-TDDing".
+If you're interested in TDD and the questions I try to answer myself, feel free to enter my code and take your own conclusions. In here I don't describe the evolution of the project, this is rather a "look-what-happens-to-the-outcome-if-your-TDDing".
 
 ## The Exercise - BoardGames App
 
@@ -32,7 +32,7 @@ As exercise I decided to implement a system containing the most known board game
 
 The intended board games are (linked games are in progress):
 
-* TicTacToe :white_check_mark:
+* [TicTacToe](https://github.com/janisZisenis/BoardGames.TDDKata/blob/readme/documentation/TicTacToe.md)
 * Conway's Game of Life (*coming soon*)
 * Four in a Row (*coming soon*)
 * BattleShip (*coming soon*)
