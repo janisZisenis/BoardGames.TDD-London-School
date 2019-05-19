@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ResetTransactionShunt implements ClearBoardService, GameRunner, ResetPlayerService {
+public class ResetTransactionShunt implements ClearGameStateService, GameRunner, ResetPlayerService {
 
     private String logString = "";
 

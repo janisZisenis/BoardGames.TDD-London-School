@@ -1,5 +1,5 @@
 package InteractiveGaming.ResetTransaction;
 
-public interface ClearBoardService {
+public interface ClearGameStateService {
     void clear();
 }

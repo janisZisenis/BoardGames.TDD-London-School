@@ -54,4 +54,8 @@ public class ObservingOrderShuntTest implements Observer, Board {
         return 0;
     }
 
+    public void clear() {
+
+    }
+
 }

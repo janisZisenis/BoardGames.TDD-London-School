@@ -7,7 +7,7 @@ import Domain.Data.Mark;
 import java.util.HashMap;
 
 public class HashingBoard implements Board {
-    private final HashMap<Field, Mark> fields = new HashMap<>();
+    private HashMap<Field, Mark> fields = new HashMap<>();
 
     public boolean isEmpty(Field f) {
         return !fields.containsKey(f);
@@ -35,4 +35,9 @@ public class HashingBoard implements Board {
     public boolean isMarked(Field f) {
         return fields.containsKey(f);
     }
+
+    public void clear() {
+        fields = new HashMap<>();
+    }
+
 }

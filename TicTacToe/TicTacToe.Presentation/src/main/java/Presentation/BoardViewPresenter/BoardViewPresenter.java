@@ -27,6 +27,10 @@ public class BoardViewPresenter implements BoardListener, BoardViewDelegate {
             clearField(field);
     }
 
+    public void onCleared() {
+
+    }
+
     private void clearField(Field field) {
         view.clearField(field);
     }

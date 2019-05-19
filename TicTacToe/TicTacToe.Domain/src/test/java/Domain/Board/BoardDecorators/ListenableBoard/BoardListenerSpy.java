@@ -5,6 +5,7 @@ import Domain.Data.Field.Field;
 public class BoardListenerSpy implements BoardListener {
 
     private boolean didUpdateField = false;
+    private boolean didClear = false;
     private Field updatedField;
 
     public boolean wasUpdated() {
@@ -16,6 +17,13 @@ public class BoardListenerSpy implements BoardListener {
     public void onFieldUpdated(Field f) {
         didUpdateField = true;
         updatedField = f;
+    }
+
+    public void onCleared() {
+        didClear = true;
+    }
+    public boolean wasCleared() {
+        return didClear;
     }
 
 }

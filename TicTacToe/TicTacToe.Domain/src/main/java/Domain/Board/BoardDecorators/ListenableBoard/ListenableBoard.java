@@ -32,6 +32,11 @@ public class ListenableBoard implements Board {
         return board.getMarkedFieldCount();
     }
 
+    public void clear() {
+        board.clear();
+        notifyCleared();
+    }
+
     public void mark(Field f, Mark m) {
         board.mark(f, m);
         notify(f);
@@ -40,6 +45,11 @@ public class ListenableBoard implements Board {
     private void notify(Field f) {
         for(BoardListener listener : listeners)
             listener.onFieldUpdated(f);
+    }
+
+    private void notifyCleared() {
+        for(BoardListener listener : listeners)
+            listener.onCleared();
     }
 
     public void addListener(BoardListener listener) {

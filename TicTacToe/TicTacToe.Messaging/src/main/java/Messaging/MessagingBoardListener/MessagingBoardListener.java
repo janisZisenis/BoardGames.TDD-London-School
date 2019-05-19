@@ -19,4 +19,8 @@ public class MessagingBoardListener implements BoardListener {
         messenger.publish(message);
     }
 
+    public void onCleared() {
+
+    }
+
 }

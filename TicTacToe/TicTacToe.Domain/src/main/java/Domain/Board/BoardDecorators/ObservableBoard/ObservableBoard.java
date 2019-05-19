@@ -46,6 +46,10 @@ public class ObservableBoard implements Board {
         return board.getMarkedFieldCount();
     }
 
+    public void clear() {
+        board.clear();
+    }
+
     public boolean isMarked(Field f) {
         return board.isMarked(f);
     }

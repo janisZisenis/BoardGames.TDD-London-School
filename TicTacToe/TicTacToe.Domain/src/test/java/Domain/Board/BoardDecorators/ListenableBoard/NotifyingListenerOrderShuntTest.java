@@ -1,13 +1,14 @@
 package Domain.Board.BoardDecorators.ListenableBoard;
 
 import Domain.Board.Board;
+import Domain.Board.BoardDummy;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NotifyingListenerOrderShuntTest implements BoardListener, Board {
+public class NotifyingListenerOrderShuntTest extends BoardDummy implements BoardListener {
 
     private Board board = this;
     private ListenableBoard sut = new ListenableBoard(board);
@@ -20,33 +21,38 @@ public class NotifyingListenerOrderShuntTest implements BoardListener, Board {
 
         sut.mark(new Field(0, 0), Mark.John);
 
+        assertLogStringEquals("mark onFieldUpdated ");
+    }
+
+    @Test
+    void IfListenerIsSet_ItShouldBeUpdatedWhenAfterClearing() {
+        sut.addListener(this);
+
+        sut.clear();
+
+        assertLogStringEquals("clear onCleared ");
+    }
+
+    private void assertLogStringEquals(String expected) {
         String actual = logString;
-        String expected = "marked updatedField ";
         assertEquals(expected, actual);
     }
 
     public void onFieldUpdated(Field f) {
-        logString += "updatedField ";
+        logString += "onFieldUpdated ";
     }
 
     public void mark(Field f, Mark m) {
-        logString += "marked ";
+        logString += "mark ";
     }
 
-    public boolean isEmpty(Field f) {
-        return false;
+    public void onCleared() {
+        logString += "onCleared ";
     }
 
-    public boolean isMarked(Field f) {
-        return false;
+    public void clear() {
+        logString += "clear ";
     }
 
-    public Mark getMarkAt(Field f) {
-        return null;
-    }
-
-    public int getMarkedFieldCount() {
-        return 0;
-    }
 
 }

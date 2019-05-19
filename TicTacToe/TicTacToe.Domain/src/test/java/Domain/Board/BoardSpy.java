@@ -7,6 +7,7 @@ public class BoardSpy extends BoardStub {
 
     private Field markedField;
     private Mark mark;
+    private boolean didClear = false;
 
     public Field getMarkedField() {
         return markedField;
@@ -19,4 +20,10 @@ public class BoardSpy extends BoardStub {
         mark = m;
     }
 
+    public boolean hasCleared() {
+        return didClear;
+    }
+    public void clear() {
+        didClear = true;
+    }
 }

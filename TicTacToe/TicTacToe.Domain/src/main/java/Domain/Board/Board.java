@@ -16,6 +16,8 @@ public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFie
     Mark getMarkAt(Field f);
     int getMarkedFieldCount();
 
+    void clear();
+
     class FieldIsNotMarked extends RuntimeException {}
 
 }
