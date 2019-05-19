@@ -32,7 +32,7 @@ As exercise I decided to implement a system containing the most known board game
 
 The intended board games are (linked games are in progress):
 
-* [TicTacToe]()
+* [TicTacToe](TicTacToe.md)
 * Conway's Game of Life (*coming soon*)
 * Four in a Row (*coming soon*)
 * BattleShip (*coming soon*)
