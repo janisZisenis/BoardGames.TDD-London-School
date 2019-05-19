@@ -27,7 +27,7 @@ import InteractiveGaming.HybridGameRunner.HybridGame;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
-import InteractiveGaming.ResetTransaction.ResetTransaction;
+import InteractiveGaming.RestartTransaction.RestartTransaction;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
@@ -88,7 +88,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         Transaction cancelAction = this.cancelAction;
         Transaction reconfigureAction = configureAction;
-        Transaction restartAction = new ResetTransaction(board, multiPlayer, runner);
+        Transaction restartAction = new RestartTransaction(board, multiPlayer, runner);
 
         WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
         DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.xWinsMessage, TicTacToeMessages.oWinsMessage);

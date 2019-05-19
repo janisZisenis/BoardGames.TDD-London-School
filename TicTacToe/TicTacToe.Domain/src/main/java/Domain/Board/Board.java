@@ -6,9 +6,9 @@ import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
 import Domain.Input2D.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import Domain.Gaming.NumberOfMovesRule.MarkedFieldCountProvider;
 import Domain.Gaming.TicTacToePlayer.MarkFieldService;
-import InteractiveGaming.ResetTransaction.ClearGameStateService;
+import InteractiveGaming.RestartTransaction.ResetGameStateService;
 
-public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider, ClearGameStateService {
+public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider, ResetGameStateService {
 
     boolean isEmpty(Field f);
     boolean isMarked(Field f);

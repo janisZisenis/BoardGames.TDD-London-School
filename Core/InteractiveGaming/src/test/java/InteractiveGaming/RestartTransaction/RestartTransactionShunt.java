@@ -1,16 +1,16 @@
-package InteractiveGaming.ResetTransaction;
+package InteractiveGaming.RestartTransaction;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ResetTransactionShunt implements ClearGameStateService, GameRunner, ResetPlayerService {
+public class RestartTransactionShunt implements ResetGameStateService, GameRunner, ResetPlayerService {
 
     private String logString = "";
 
     @Test
     void IfGetsRun_ShouldFirstClearBoardThenResetPlayersAndThenRun() {
-        ResetTransaction sut = new ResetTransaction(this, this, this);
+        RestartTransaction sut = new RestartTransaction(this, this, this);
 
         sut.execute();
 

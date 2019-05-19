@@ -2,7 +2,7 @@ package InteractiveGaming.HybridGameRunner;
 
 import Input2D.Input.Input;
 import Input2D.InputProcessor;
-import InteractiveGaming.ResetTransaction.GameRunner;
+import InteractiveGaming.RestartTransaction.GameRunner;
 
 public class HybridGameRunner implements InputProcessor, GameRunner {
 
