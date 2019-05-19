@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BoardViewPresenterTest {
 
@@ -92,7 +93,7 @@ public class BoardViewPresenterTest {
     }
 
     private void assertClearedFieldEquals(Field expected) {
-        Field actual = view.getCleared();
+        Field actual = view.getClearedField();
         assertEquals(expected, actual);
     }
 
@@ -108,8 +109,21 @@ public class BoardViewPresenterTest {
     }
 
     private void assertHasNotCleared() {
-        boolean actual = view.hasCleared();
+        boolean actual = view.hasClearedField();
         assertFalse(actual);
+    }
+
+
+    @Test
+    void IfGetsCleared_ShouldClearAllField() {
+        sut.onCleared();
+
+        assertHasClearedView();
+    }
+
+    private void assertHasClearedView() {
+        boolean actual = view.hasClearedAll();
+        assertTrue(actual);
     }
 
 

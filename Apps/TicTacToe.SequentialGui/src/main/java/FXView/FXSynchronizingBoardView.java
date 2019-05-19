@@ -31,7 +31,12 @@ public class FXSynchronizingBoardView extends Pane implements BoardView, Winning
         });
     }
 
-    @Override
+    public void clearAll() {
+        Platform.runLater(() -> {
+            view.clearAll();
+        });
+    }
+
     public void highlightLine(Line line) {
         Platform.runLater(() -> {
             view.highlightLine(line);
