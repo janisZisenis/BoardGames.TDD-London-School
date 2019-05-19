@@ -15,6 +15,7 @@ import Domain.Gaming.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Gaming.TicTacToePlayer.TicTacToePlayer;
 import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
 import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import Gaming.DelayingPlayer.DelayingPlayer;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
@@ -79,14 +80,18 @@ public abstract class Factory {
         InputGenerator generator = factory.makeInvincibleInputGenerator(board, m);
         generator = makeValidatingInputGenerator(generator, board, factory);
 
-        return makeTicTacToePlayer(m, board, generator, factory);
+        return makeDelayingPlayer(makeTicTacToePlayer(m, board, generator, factory));
     }
 
     public static Player makeHumbleComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumbleInputGenerator();
         generator = makeValidatingInputGenerator(generator, board, factory);
 
-        return makeTicTacToePlayer(m, board, generator, factory);
+        return makeDelayingPlayer(makeTicTacToePlayer(m, board, generator, factory));
+    }
+
+    public static Player makeDelayingPlayer(Player p) {
+        return new DelayingPlayer(p, 500);
     }
 
     private static InputGenerator makeValidatingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {

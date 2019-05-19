@@ -9,10 +9,15 @@
     <packaging>pom</packaging>
     <version>1.0</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
         <module>Apps</module>
         <module>Core</module>
         <module>TicTacToe</module>
+        <module>BoardGames</module>
     </modules>
 
 </project>

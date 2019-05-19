@@ -3,6 +3,7 @@ package Domain.Board.BoardDecorators.ObservableBoard;
 import Domain.Board.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import Utilities.Observer.Observer;
 
 import java.util.LinkedList;
 
@@ -43,6 +44,11 @@ public class ObservableBoard implements Board {
 
     public int getMarkedFieldCount() {
         return board.getMarkedFieldCount();
+    }
+
+    public void clear() {
+        board.clear();
+        notifyObservers();
     }
 
     public boolean isMarked(Field f) {

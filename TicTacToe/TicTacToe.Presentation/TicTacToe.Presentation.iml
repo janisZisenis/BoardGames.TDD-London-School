@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -18,10 +18,19 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.3.1" level="project" />
     <orderEntry type="module" module-name="InputGeneration" scope="TEST" production-on-test="" />
-    <orderEntry type="module" module-name="TicTacToe.Domain" scope="TEST" production-on-test="" />
+    <orderEntry type="module" module-name="Messaging" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="Gaming" />
+    <orderEntry type="module" module-name="TicTacToe.Messaging" scope="TEST" production-on-test="" />
+    <orderEntry type="module" module-name="Messaging" />
+    <orderEntry type="module" module-name="TicTacToe.Messages" />
+    <orderEntry type="module" module-name="Gaming" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="Utilities" />
+    <orderEntry type="module" module-name="TicTacToe.Domain" scope="TEST" production-on-test="" />
     <orderEntry type="module" module-name="InteractiveGaming" />
+    <orderEntry type="module" module-name="Utilities" scope="TEST" production-on-test="" />
+    <orderEntry type="module" module-name="BoardGames.Presentation" scope="TEST" production-on-test="" />
+    <orderEntry type="module" module-name="BoardGames.Presentation" />
+    <orderEntry type="module" module-name="TicTacToe.Messaging" />
     <orderEntry type="module" module-name="InputGeneration" />
     <orderEntry type="module" module-name="TicTacToe.Domain" />
   </component>

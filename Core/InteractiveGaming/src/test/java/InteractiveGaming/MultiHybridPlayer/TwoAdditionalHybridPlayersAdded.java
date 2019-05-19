@@ -56,6 +56,18 @@ public class TwoAdditionalHybridPlayersAdded {
         assertPlayedInputEquals(second, new Input(0, 0));
     }
 
+
+    @Test
+    void IfGetsPlayedOnceThenResetThenPlayedOnce_FirstShouldHavePlayedTwice() {
+        sut.play();
+        sut.reset();
+
+        sut.play();
+
+        assertPlayedTimes(first, 2);
+    }
+
+
     private void assertPlayedInputEquals(HybridPlayerSpy p, Input expected) {
         Input actual = p.getPlayedInput();
         assertEquals(expected, actual);

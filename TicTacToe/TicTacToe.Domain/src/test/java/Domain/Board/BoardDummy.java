@@ -25,4 +25,8 @@ public class BoardDummy implements Board {
         return 0;
     }
 
+    public void clear() {
+
+    }
+
 }

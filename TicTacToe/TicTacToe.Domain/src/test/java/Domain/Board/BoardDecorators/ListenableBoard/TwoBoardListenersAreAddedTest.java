@@ -43,6 +43,18 @@ public class TwoBoardListenersAreAddedTest {
         assertWasUpdated(second);
     }
 
+    @Test
+    void IfGetsCleared_ItShouldClearSecond() {
+        sut.clear();
+
+        assertWasCleared(second);
+    }
+
+    private void assertWasCleared(BoardListenerSpy listener) {
+        boolean actual = listener.wasCleared();
+        assertTrue(actual);
+    }
+
     private void assertWasUpdated(BoardListenerSpy listener) {
         boolean actual = listener.wasUpdated();
         assertTrue(actual);

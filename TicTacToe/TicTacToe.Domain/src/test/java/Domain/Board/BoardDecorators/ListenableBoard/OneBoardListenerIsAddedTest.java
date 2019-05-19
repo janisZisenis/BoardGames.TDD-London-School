@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class OneBoardListenerIsAddedTest {
 
@@ -39,9 +40,22 @@ public class OneBoardListenerIsAddedTest {
         assertUpdatedFieldEquals(field);
     }
 
+    @Test
+    void IfGetsCleared_ItShouldClearListener() {
+        sut.clear();
+
+        assertWasCleared();
+    }
+
+
     private void assertUpdatedFieldEquals(Field expected) {
         Field actual = listener.getUpdatedField();
         assertEquals(expected, actual);
+    }
+
+    private void assertWasCleared() {
+        boolean actual = listener.wasCleared();
+        assertTrue(actual);
     }
 
 }

@@ -3,6 +3,7 @@ package Domain.Board.BoardDecorators.ObservableBoard;
 import Domain.Board.BoardDummy;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import Utilities.Observer.ObserverSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -56,6 +57,18 @@ public class NotifyBoardObserverTest {
         boolean actual = observers[1].wasUpdated();
         assertFalse(actual);
     }
+
+
+    @Test
+    void IfOneObserverIsAttached_ItShouldBeUpdatedWhenClearing() {
+        makeOneObserverAttached();
+
+        sut.clear();
+
+        boolean actual = observers[0].wasUpdated();
+        assertTrue(actual);
+    }
+
 
     private void makeSecondObserverIsDetachedAfterBeingAttached() {
         makeTwoObserversAttached();

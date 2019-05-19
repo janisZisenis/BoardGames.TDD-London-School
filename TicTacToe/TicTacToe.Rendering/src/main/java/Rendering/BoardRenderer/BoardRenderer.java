@@ -6,10 +6,10 @@ import Gaming.GameFacade.Renderer;
 
 public class BoardRenderer implements Renderer {
 
-    private final BoardRenderingView view;
+    private final RenderingBoardView view;
     private final WinningLineProvider provider;
 
-    public BoardRenderer(BoardRenderingView view, WinningLineProvider provider) {
+    public BoardRenderer(RenderingBoardView view, WinningLineProvider provider) {
         this.view = view;
         this.provider = provider;
     }

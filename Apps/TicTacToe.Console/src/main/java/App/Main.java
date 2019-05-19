@@ -3,6 +3,9 @@ package App;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
+import FXView.ConsoleBoardView;
+import FXView.ConsoleMessenger;
+import GameLoopMessengerImp.MessageProvider;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
@@ -12,15 +15,14 @@ import Gaming.MessagingGameLoop.GameLoop;
 import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
-import Mapping.MarkToStringMappers.MarkToXOMapper;
-import Mapping.ObjectToStringMappers.DefaultObjectToStringMapper;
-import Messages.OnePlayerModeMessages;
+import MessageProviders.FixedMessageProvider.FixedMessageProvider;
+import Messages.TicTacToeMessages;
+import Messaging.MarkToStringMappers.MarkToXOMapper;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
 import Rendering.BoardRenderer.BoardRenderer;
-import View.ConsoleBoardView;
-import View.ConsoleMessenger;
+import Utilities.ObjectToStringMapper.DefaultObjectToStringMapper;
 
 public class Main {
 
@@ -30,17 +32,18 @@ public class Main {
         ConsoleBoardView view = new ConsoleBoardView(board, new MarkToXOMapper());
         ConsoleMessenger messenger = new ConsoleMessenger();
 
+        MessageProvider clearMessageProvider = new FixedMessageProvider(TicTacToeMessages.boardClearedMessage);
         MarkedFieldMessageProvider markedFieldMessageProvider = new HumbleMarkedFieldMessageProviderImp();
-        MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider);
+        MessagingBoardListener listener = new MessagingBoardListener(messenger, markedFieldMessageProvider, clearMessageProvider);
         board.addListener(listener);
 
         ConsoleIODeviceFactory factory = new ConsoleIODeviceFactory();
         Player john = Domain.Factory.makeHumanPlayer(Mark.John, board, factory);
         Player haley = Domain.Factory.makeHumbleComputerPlayer(Mark.Haley, board, factory);
 
-        DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(OnePlayerModeMessages.defaultPlayerMessage);
-        playerMapper.register(john, OnePlayerModeMessages.humanPlayerMessage);
-        playerMapper.register(haley, OnePlayerModeMessages.computerPlayerMessage);
+        DefaultObjectToStringMapper playerMapper = new DefaultObjectToStringMapper(TicTacToeMessages.defaultPlayerMessage);
+        playerMapper.register(john, TicTacToeMessages.humanPlayerMessage);
+        playerMapper.register(haley, TicTacToeMessages.computerPlayerMessage);
         MultiPlayerMessenger multiPlayerMessenger = Messaging.Factory.makeMappingMultiPlayerMessenger(playerMapper, messenger);
 
         MultiPlayer player = Factory.makeMessagingMultiPlayer(john, multiPlayerMessenger);

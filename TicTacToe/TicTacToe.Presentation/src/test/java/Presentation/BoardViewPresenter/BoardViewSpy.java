@@ -9,8 +9,10 @@ public class BoardViewSpy implements BoardView {
     private Mark setMark;
     private boolean didSetField = false;
 
-    private Field cleared;
-    private boolean didClear = false;
+    private Field clearedField;
+    private boolean didClearField = false;
+
+    private boolean didClearAll = false;
 
     public boolean hasSetField() {
         return didSetField;
@@ -27,15 +29,21 @@ public class BoardViewSpy implements BoardView {
         setMark = mark;
     }
 
-    public boolean hasCleared() {
-        return didClear;
+    public boolean hasClearedField() {
+        return didClearField;
     }
-    public Field getCleared() {
-        return cleared;
+    public Field getClearedField() {
+        return clearedField;
     }
     public void clearField(Field field) {
-        didClear = true;
-        cleared = field;
+        didClearField = true;
+        clearedField = field;
     }
 
+    public boolean hasClearedAll() {
+        return didClearAll;
+    }
+    public void clearAll() {
+        didClearAll = true;
+    }
 }

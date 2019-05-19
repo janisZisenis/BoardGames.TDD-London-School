@@ -1,13 +1,15 @@
 package Domain.Board.BoardDecorators.ObservableBoard;
 
 import Domain.Board.Board;
+import Domain.Board.BoardDummy;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
+import Utilities.Observer.Observer;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ObservingOrderShuntTest implements Observer, Board {
+public class ObservingOrderShuntTest extends BoardDummy implements Observer {
 
     private Board board = this;
     private ObservableBoard sut = new ObservableBoard(board);
@@ -15,13 +17,25 @@ public class ObservingOrderShuntTest implements Observer, Board {
     private String logString = "";
 
     @Test
-    void IfOneObserverIsAttached_ItShouldBeUpdatedWhenMarkingAField() {
+    void IfOneObserverIsAttached_ItShouldBeUpdatedAfterMarkingAField() {
         makeShuntIsAttachedAsObserver();
 
         sut.mark(new Field(0, 0), Mark.John);
 
+        assertLogStringEquals("mark update ");
+    }
+
+    @Test
+    void IfOneObserverIsAttached_ItShouldBeUpdatedAfterClearing() {
+        makeShuntIsAttachedAsObserver();
+
+        sut.clear();
+
+        assertLogStringEquals("clear update ");
+    }
+
+    private void assertLogStringEquals(String expected) {
         String actual = logString;
-        String expected = "MarkedUpdated";
         assertEquals(expected, actual);
     }
 
@@ -30,27 +44,15 @@ public class ObservingOrderShuntTest implements Observer, Board {
     }
 
     public void update() {
-        logString += "Updated";
+        logString += "update ";
     }
 
     public void mark(Field f, Mark m) {
-        logString += "Marked";
+        logString += "mark ";
     }
 
-    public boolean isEmpty(Field f) {
-        return false;
-    }
-
-    public boolean isMarked(Field f) {
-        return false;
-    }
-
-    public Mark getMarkAt(Field f) {
-        return null;
-    }
-
-    public int getMarkedFieldCount() {
-        return 0;
+    public void clear() {
+        logString += "clear ";
     }
 
 }

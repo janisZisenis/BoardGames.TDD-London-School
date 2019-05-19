@@ -222,6 +222,7 @@ public class BoardDecoratorTest {
     @MethodSource("makeBoardDecoratorTestContexts")
     void IfR0C0GetsMarked_ItShouldMarkR0C0OnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
+
         sut.mark(new Field(0, 0), Mark.John);
 
         assertMarkedFieldEquals(new Field(0, 0));
@@ -231,6 +232,7 @@ public class BoardDecoratorTest {
     @MethodSource("makeBoardDecoratorTestContexts")
     void IfR1C2GetsMarked_ItShouldMarkR1C2OnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
+
         sut.mark(new Field(1, 2), Mark.John);
 
         assertMarkedFieldEquals(new Field(1, 2));
@@ -240,6 +242,7 @@ public class BoardDecoratorTest {
     @MethodSource("makeBoardDecoratorTestContexts")
     void IfJohnGetsMarked_ItShouldMarkJohnOnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
+
         sut.mark(new Field(0, 0), Mark.John);
 
         assertHasMarked(Mark.John);
@@ -249,9 +252,21 @@ public class BoardDecoratorTest {
     @MethodSource("makeBoardDecoratorTestContexts")
     void IfHaleyGetsMarked_ItShouldMarkHaleyOnTheBoard(BoardDecoratorTestContext cxt) {
         arrange(cxt);
+
         sut.mark(new Field(0, 0), Mark.Haley);
 
         assertHasMarked(Mark.Haley);
+    }
+
+
+    @ParameterizedTest
+    @MethodSource("makeBoardDecoratorTestContexts")
+    void IfGetsCleared_ItShouldClearTheBoard(BoardDecoratorTestContext cxt) {
+        arrange(cxt);
+
+        sut.clear();
+
+        assertHasCleared();
     }
 
     private void assertHasMarked(Mark expected) {
@@ -264,5 +279,9 @@ public class BoardDecoratorTest {
         assertEquals(expected, actual);
     }
 
+    private void assertHasCleared() {
+        boolean actual = decoree.hasCleared();
+        assertTrue(actual);
+    }
 
 }
