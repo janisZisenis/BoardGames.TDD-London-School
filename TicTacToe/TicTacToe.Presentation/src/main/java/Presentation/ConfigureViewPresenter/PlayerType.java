@@ -1,4 +1,4 @@
-package Presentation.ChoosePlayerViewPresenter;
+package Presentation.ConfigureViewPresenter;
 
 public enum PlayerType {
     Human,

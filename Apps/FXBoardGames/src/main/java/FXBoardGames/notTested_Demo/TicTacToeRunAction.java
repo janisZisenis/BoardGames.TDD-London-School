@@ -35,7 +35,7 @@ import Messages.TicTacToeMessages;
 import Messaging.MarkToStringMappers.DefaultMarkToStringMapper;
 import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
 import Presentation.BoardViewPresenter.BoardViewPresenter;
-import Presentation.ChoosePlayerViewPresenter.PlayerType;
+import Presentation.ConfigureViewPresenter.PlayerType;
 import Presentation.GameOverViewPresenter.GameOverInteractorFacade;
 import Presentation.GameOverViewPresenter.GameOverViewPresenter;
 import Presentation.Transactions.LoadGameViewTransaction.GameViewLoader;
