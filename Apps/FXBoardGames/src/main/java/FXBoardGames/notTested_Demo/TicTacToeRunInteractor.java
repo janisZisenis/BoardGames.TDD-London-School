@@ -20,7 +20,6 @@ import Gaming.GameFacade.Player;
 import Input2D.InputProcessor;
 import Input2D.ValidInputGenerator.InputAlerter;
 import Input2D.ValidInputGenerator.InputValidator;
-import InteractiveGaming.AsyncProcessingGameRunner.AsyncProcessingGameRunner;
 import InteractiveGaming.GameOverInputProcessor.GameOverInputProcessor;
 import InteractiveGaming.HybridGameImp.HybridGameImp;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
@@ -73,7 +72,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         HybridGame game = new HybridGameImp(rule, multiPlayer);
-        AsyncProcessingGameRunner runner = new AsyncProcessingGameRunner(game);
+        AsyncHybridGameRunner runner = new AsyncHybridGameRunner(game);
 
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);

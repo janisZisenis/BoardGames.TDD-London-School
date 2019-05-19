@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/DelayingPlayer/DelayingPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/DelayingPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/omnigraffle/Modules/Modules.graffle" beforeDir="false" afterPath="$PROJECT_DIR$/omnigraffle/Modules/Modules.graffle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/AsyncProcessingGameRunner/AsyncProcessingGameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/AsyncHybridGameRunner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -147,9 +143,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="4988" />
+          <entry key="dummy" value="4994" />
           <entry key="iml" value="58" />
-          <entry key="java" value="270694" />
+          <entry key="java" value="270700" />
           <entry key="txt" value="11" />
           <entry key="xml" value="2064" />
         </counts>
@@ -158,8 +154,8 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="58" />
-          <entry key="JAVA" value="270693" />
-          <entry key="PLAIN_TEXT" value="4999" />
+          <entry key="JAVA" value="270699" />
+          <entry key="PLAIN_TEXT" value="5005" />
           <entry key="XML" value="2064" />
         </counts>
       </usages-collector>
@@ -169,7 +165,7 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="3" />
           <entry key="iml" value="31" />
-          <entry key="java" value="6879" />
+          <entry key="java" value="6880" />
           <entry key="pom" value="1" />
           <entry key="xml" value="552" />
           <entry key="xsd" value="1" />
@@ -180,7 +176,7 @@
           <entry key="CLASS" value="16" />
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="31" />
-          <entry key="JAVA" value="6879" />
+          <entry key="JAVA" value="6880" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="XML" value="554" />
         </counts>
@@ -227,13 +223,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="192">
+              <caret line="139" column="49" lean-forward="true" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6985#6986#0" expanded="true" />
                 <element signature="e#7027#7028#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/AsyncHybridGameRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -247,11 +251,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="24" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            <state relative-caret-position="209">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -397,8 +401,8 @@
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" />
         <option value="$PROJECT_DIR$/Apps/TicTacToe.SequentialGui/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Factory.java" />
-        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeMain.java" />
+        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java" />
       </list>
     </option>
   </component>
@@ -642,32 +646,26 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Apps" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -675,7 +673,7 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -684,17 +682,11 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicTacToe.Main" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -709,7 +701,7 @@
     <property name="SearchEverywhereHistoryKey" value="Runi&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java&#10;Dela&#9;PSI&#9;JAVA://Gaming.DelayingPlayer.DelayingPlayer&#10;Run&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java&#10;FXBoard&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Gaming/FXBoardView.java&#10;GameOverViewP&#9;PSI&#9;JAVA://Presentation.GameOverViewPresenter.GameOverViewPresenter&#10;Fa&#9;PSI&#9;JAVA://Domain.Factory&#10;MessagingBoard&#9;PSI&#9;JAVA://Messaging.MessagingBoardListener.MessagingBoardListenerTest&#10;BoardViewPr&#9;PSI&#9;JAVA://Presentation.BoardViewPresenter.BoardViewPresenterTest&#10;Null&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/ConfigureViewPresenter/NullRunInteractor.java&#10;Main&#9;PSI&#9;JAVA://FXBoardGames.Main&#10;FxC&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXConfigureView.java&#10;FX&#9;PSI&#9;JAVA://FXView.Configuration.FXConfigureView&#10;FXCho&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXChoosePlayerView.java&#10;WinningLin&#9;PSI&#9;JAVA://Presentation.WinningLinePresenter.WinningLinePresenter&#10;FXGa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXGameOverView.java&#10;TicTa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeAction.java&#10;FXTicTacToeCon&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeConfigureView.java&#10;FXTic&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;FXTicTa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;GameOver&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXTicTacToeGameOverView.java&#10;BoardViewPre&#9;PSI&#9;JAVA://Presentation.BoardViewPresenter.BoardViewPresenter&#10;BoardBo&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Data/BoardBoundaries.java&#10;BoardView&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe/TicTacToe.FXView/src/main/java/FXView/FXBoardView.java&#10;Start&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/Apps/TicTacToe.Gui/src/main/java/View/FXStartView.java&#10;HybridGa&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.GuiGaming/src/test/java/GuiGaming/HybridGameLoopImp/HybridGameLoopImp.java&#10;GameLoop&#9;PSI&#9;JAVA://SequentialGaming.MessagingGameLoop.GameLoop&#10;FXShell&#9;PSI&#9;JAVA://View.FXShell&#10;HashingBoard&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java&#10;markedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;MarkedFieldP&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/GameEvaluation/EquallyMarkedLineEvaluator/MarkedFieldProviderStub.java&#10;markedFieldPro&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/MarkedFieldCountProviderStub.java&#10;Mark.java&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Bussiness/src/Boards/Mark.java&#10;MarkedFieldCountPro&#9;PSI&#9;JAVA://Api.MarkedFieldCountProviderStub&#10;FieldSy&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/TicTacToe.Messaging/src/Messaging/Mapping/MarkToStringMappers/FieldSymbols.java&#10;WinnerProvider&#9;PSI&#9;JAVA://Lib.GameEvaluation.WinnerProvider&#10;Mapper&#9;PSI&#9;JAVA://Lib.Presentation.MarkToStringMapper.MarkToStringMapper&#10;referee&#9;PSI&#9;JAVA://Lib.Model.InputGenerators.AlertingInputGenerator.AlertingOnInvalidInputTest#referee&#10;Counting&#9;PSI&#9;JAVA://Lib.Model.GameLoop.CountingGameOverRuleStub&#10;InputPresenter&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/CLI/View/InputGenerators/ConsoleInputPresenter.java&#10;COMPOS&#9;PSI&#9;JAVA://com.company.Core.InputGeneration.InputRule.CompositeInputRule.CompositeInputRule&#10;CompositeInput&#9;FILE&#9;file:///Users/Janis/Development/TicTacToe.Main/src/com/company/Core/InputGeneration/InputRule/CompositeInputRule/CompositeInputRule.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558280365192" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558280568576" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA IU-181.4203.550" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/main/java/Presentation" />
@@ -1104,7 +1096,7 @@
       <workItem from="1558266235573" duration="2198000" />
       <workItem from="1558268469916" duration="1408000" />
       <workItem from="1558275614096" duration="2373000" />
-      <workItem from="1558278206907" duration="1986000" />
+      <workItem from="1558278206907" duration="2281000" />
     </task>
     <servers />
   </component>
@@ -1141,7 +1133,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="699087000" />
+    <option name="totallyTimeSpent" value="699382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1440" y="203" width="1440" height="877" extended-state="6" />
@@ -1156,8 +1148,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.45732483" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4420382" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45732483" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4420382" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1346,7 +1338,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java</url>
-          <line>64</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="137" />
         </line-breakpoint>
@@ -1358,13 +1350,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Apps/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGames/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1694,18 +1679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6985#6986#0" expanded="true" />
-            <element signature="e#7027#7028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1715,11 +1688,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="24" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        <state relative-caret-position="209">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/TicTacToeRunInteractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="139" column="49" lean-forward="true" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7027#7028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/FXBoardGames/notTested_Demo/AsyncHybridGameRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
         </state>
       </provider>
     </entry>

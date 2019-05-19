@@ -1,4 +1,4 @@
-package InteractiveGaming.AsyncProcessingGameRunner;
+package FXBoardGames.notTested_Demo;
 
 import Input2D.Input.Input;
 import Input2D.InputProcessor;
@@ -6,12 +6,12 @@ import InteractiveGaming.HybridGameRunner.HybridGame;
 import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.ResetTransaction.GameRunner;
 
-public class AsyncProcessingGameRunner implements GameRunner, InputProcessor {
+public class AsyncHybridGameRunner implements GameRunner, InputProcessor {
 
     private HybridGameRunner runner;
     private Thread worker;
 
-    public AsyncProcessingGameRunner(HybridGame game) {
+    public AsyncHybridGameRunner(HybridGame game) {
         this.runner = new HybridGameRunner(game);
     }
 
