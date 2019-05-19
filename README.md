@@ -40,6 +40,6 @@ The intended board games are (linked games are in progress):
 * Chess (*coming soon*)
 
 ## *NOTE:*
-You might judge the documented systems and the code as overdesigned in comparison to the domain logic (for example TicTacToe), but especially in Katas which are explicitly meant to train your design skills, not a too high extent of design should considered to be bad. It's rather the lack of design which should be considered as a lack of discipline.
+You might judge the documented systems and the code as overdesigned in comparison to the domain logic (for example TicTacToe), but especially in Katas which are explicitly meant to train your design skills, **not a too high extent of design should considered to be bad**. It's rather **the lack of design which should be considered as a lack of discipline**.
 
 Have fun exploring my work, enjoy!
