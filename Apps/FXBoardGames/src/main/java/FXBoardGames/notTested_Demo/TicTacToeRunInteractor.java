@@ -16,6 +16,7 @@ import FXView.FXTicTacToeView;
 import FXView.Gaming.FXBoardView;
 import FXView.Gaming.FXInputAlerter;
 import Gaming.GameFacade.GameOverRule;
+import Gaming.GameFacade.Player;
 import Input2D.InputProcessor;
 import Input2D.ValidInputGenerator.InputAlerter;
 import Input2D.ValidInputGenerator.InputValidator;
@@ -115,11 +116,32 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
     private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
         if(type == PlayerType.InvincibleCPU)
-            return new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory()));
+            return makeInvinciblePlayer(m, board);
         if(type == PlayerType.HumbleCPU)
-            return new HybridPlayerAdapter(Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory()));
+            return makeHumblePlayer(m, board);
 
+        return makeHumanPlayer(m, board);
+    }
+
+    private HybridPlayer makeHumanPlayer(Mark m, Board board) {
         return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
-    };
+    }
+
+    private HybridPlayer makeHumblePlayer(Mark m, Board board) {
+        Player p = Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory());
+        p = makeDelayingPlayer(p);
+        return new HybridPlayerAdapter(p);
+    }
+    private HybridPlayer makeInvinciblePlayer(Mark m, Board board) {
+        Player p = Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory());
+        p = makeDelayingPlayer(p);
+        return new HybridPlayerAdapter(p);
+    }
+
+    private Player makeDelayingPlayer(Player p) {
+        return new DelayingPlayer(p, 500);
+    }
+
+
 
 }
