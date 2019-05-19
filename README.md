@@ -42,6 +42,6 @@ The intended board games are (linked games are in progress):
 ## *NOTE:*
 You might judge the documented systems and the code as overdesigned in comparison to the domain logic (for example TicTacToe), but especially in Katas which are explicitly meant to train your design skills, **not a too high extent of design should considered to be bad**. It's rather **the lack of design which should be considered as a lack of discipline**.
 
-I'm sorry about not updating the documentation after every single step or state change of the system. As you know the state of software is (or should be) flexible, so changes to the system are likely going to happen. That's why a too precise documentation is not maintainable and not a good idea. But in this Kata the resulting state of the system is exactly what matters, so I try to keep it up to date as hard as I can. If the documentation does not match the code, please refer to the status date of the documentation.
+I'm sorry about not updating the documentation after every single step or state change of the system. As you know the state of software is (or should be) flexible, therefore changes to the system are likely going to happen. That's why a too precise documentation is not maintainable and not a good idea. But in this Kata the resulting state of the system is exactly what matters, so I try to keep it up to date as hard as I can. If the documentation does not match the code, please refer to the status date of the documentation.
 
 Have fun exploring my work, enjoy!
