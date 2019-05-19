@@ -1,7 +1,7 @@
 package InteractiveGaming.HybridInputPlayerAdapter;
 
 import InteractiveGaming.HybridGameImp.HybridPlayer;
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 

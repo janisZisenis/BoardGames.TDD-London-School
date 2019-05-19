@@ -14,7 +14,13 @@
     <dependencies>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
+            <artifactId>Input2D</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Messaging</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
@@ -33,6 +39,12 @@
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>TicTacToe.Rendering</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>TicTacToe.ConsoleView</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>

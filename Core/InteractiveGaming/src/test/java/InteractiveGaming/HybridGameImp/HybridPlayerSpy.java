@@ -1,6 +1,6 @@
 package InteractiveGaming.HybridGameImp;
 
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 
 public class HybridPlayerSpy implements HybridPlayer {
 

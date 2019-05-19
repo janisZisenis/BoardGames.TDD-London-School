@@ -3,7 +3,8 @@ package Messaging;
 import Domain.Board.Board;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import GameLoopMessengerImp.GameLoopMessengerImp;
-import Gaming.MessagingGameLoop.GameLoopMessenger;
+import Gaming.GameLoopImp.Api.GameLoop;
+import Gaming.GameLoopImp.Game;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
 import MappingPlayerMessenger.MappingMultiPlayerMessenger;
 import MappingPlayerMessenger.Messenger;
@@ -12,7 +13,9 @@ import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import Messages.TicTacToeMessages;
 import Messaging.MarkToStringMappers.DefaultMarkToStringMapper;
 import Messaging.WinnerMessageProviderImp.WinnerMessageProviderImp;
+import MessagingGameLoop.GameLoopMessenger;
 import Utilities.ObjectToStringMapper.Api.ObjectToStringMapper;
+import MessagingGameLoop.MessagingGameLoop;
 
 public abstract class Factory {
 
@@ -30,5 +33,10 @@ public abstract class Factory {
         GameOverMessageProvider endProvider = new GameOverMessageProvider(winnerMessageProvider, drawMessageProvider);
 
         return new GameLoopMessengerImp(messenger, startProvider, endProvider);
+    }
+
+    public static GameLoop makeMessagingGameLoop(Game game, GameLoopMessenger messenger) {
+        GameLoop loop = Gaming.Factory.makeGameLoop(game);
+        return new MessagingGameLoop(loop, messenger);
     }
 }

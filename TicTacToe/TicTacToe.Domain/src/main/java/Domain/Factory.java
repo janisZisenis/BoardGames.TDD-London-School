@@ -13,13 +13,13 @@ import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
 import Domain.Gaming.NumberOfMovesRule.NumberOfMovesRule;
 import Domain.Gaming.TicTacToePlayer.TicTacToePlayer;
-import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import Domain.Input2D.InputValidators.FieldExistsValidator.FieldExistsValidator;
+import Domain.Input2D.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Gaming.DelayingPlayer.DelayingPlayer;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import InputGeneration.InputGenerator;
+import Input2D.InputGenerator;
 
 public abstract class Factory {
 
@@ -67,10 +67,10 @@ public abstract class Factory {
     }
 
     public static InputGenerator makeAlertingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
-        InputGenerator alerting = InputGeneration.Factory.makeAlertingInputGenerator(generator,
+        InputGenerator alerting = Input2D.Factory.makeAlertingInputGenerator(generator,
                 new FieldExistsValidator(),
                 factory.makeFieldExistsAlerter());
-        alerting = InputGeneration.Factory.makeAlertingInputGenerator(alerting,
+        alerting = Input2D.Factory.makeAlertingInputGenerator(alerting,
                 new FieldIsEmptyValidator(board),
                 factory.makeFieldIsEmptyAlerter());
         return alerting;
@@ -95,9 +95,9 @@ public abstract class Factory {
     }
 
     private static InputGenerator makeValidatingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
-        InputGenerator validating = InputGeneration.Factory.makeValidatingInputGenerator(generator,
+        InputGenerator validating = Input2D.Factory.makeValidatingInputGenerator(generator,
                 new FieldExistsValidator());
-        validating = InputGeneration.Factory.makeValidatingInputGenerator(validating,
+        validating = Input2D.Factory.makeValidatingInputGenerator(validating,
                 new FieldIsEmptyValidator(board));
         return validating;
     }

@@ -1,7 +1,7 @@
 package FXSynchronizingView;
 
-import InputGeneration.Input.Input;
-import InputGeneration.InputGenerator;
+import Input2D.Input.Input;
+import Input2D.InputGenerator;
 import Messages.GenerationMessages;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.Pane;

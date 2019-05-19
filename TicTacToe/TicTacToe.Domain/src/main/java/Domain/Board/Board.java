@@ -3,7 +3,7 @@ package Domain.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
+import Domain.Input2D.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
 import Domain.Gaming.NumberOfMovesRule.MarkedFieldCountProvider;
 import Domain.Gaming.TicTacToePlayer.MarkFieldService;
 import InteractiveGaming.ResetTransaction.ClearGameStateService;

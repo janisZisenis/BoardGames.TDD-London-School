@@ -1,7 +1,7 @@
 package InteractiveGaming.AsyncProcessingGameRunner;
 
-import InputGeneration.Input.Input;
-import InputGeneration.InputProcessor;
+import Input2D.Input.Input;
+import Input2D.InputProcessor;
 import InteractiveGaming.HybridGameRunner.HybridGame;
 import InteractiveGaming.HybridGameRunner.HybridGameRunner;
 import InteractiveGaming.ResetTransaction.GameRunner;

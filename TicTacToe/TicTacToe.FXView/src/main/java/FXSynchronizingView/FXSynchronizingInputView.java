@@ -1,7 +1,7 @@
 package FXSynchronizingView;
 
-import InputGeneration.Input.Input;
-import InputGeneration.InputGenerator;
+import Input2D.Input.Input;
+import Input2D.InputGenerator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

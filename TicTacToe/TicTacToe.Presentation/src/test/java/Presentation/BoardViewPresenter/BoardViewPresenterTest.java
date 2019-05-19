@@ -3,8 +3,8 @@ package Presentation.BoardViewPresenter;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProviderStub;
-import InputGeneration.Input.Input;
-import InputGeneration.InputProcessorSpy;
+import Input2D.Input.Input;
+import Input2D.InputProcessorSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

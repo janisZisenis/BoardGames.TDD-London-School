@@ -3,8 +3,8 @@ package Domain.Gaming.TicTacToePlayer;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Gaming.GameFacade.Player;
-import InputGeneration.Input.Input;
-import InputGeneration.InputGenerator;
+import Input2D.Input.Input;
+import Input2D.InputGenerator;
 
 public class TicTacToePlayer implements Player {
 

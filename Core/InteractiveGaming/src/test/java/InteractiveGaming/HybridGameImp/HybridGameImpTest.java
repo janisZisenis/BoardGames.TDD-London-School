@@ -1,7 +1,7 @@
 package InteractiveGaming.HybridGameImp;
 
 import InteractiveGaming.HybridGameRunner.HybridGame;
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 import Gaming.GameFacade.GameOverRuleDummy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

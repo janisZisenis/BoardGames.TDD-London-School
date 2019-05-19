@@ -6,7 +6,6 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
 import FXSynchronizingView.FXSynchronizingInputView;
-import FXView.FXSequentialShell;
 import FXSynchronizingView.FXSynchronizingBoardView;
 import FXSynchronizingView.FXSynchronizingMessengerView;
 import GameLoopMessengerImp.MessageProvider;
@@ -15,11 +14,11 @@ import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.NullRenderer;
 import Gaming.GameFacade.Player;
 import Gaming.GameLoopImp.Game;
-import Gaming.MessagingGameLoop.GameLoop;
-import Gaming.MessagingGameLoop.GameLoopMessenger;
+import Gaming.GameLoopImp.Api.GameLoop;
+import MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
-import InputGeneration.NullInputProcessor;
+import Input2D.NullInputProcessor;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import Messages.TicTacToeMessages;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
@@ -75,7 +74,7 @@ public class Main extends Application {
         listenableBoard.addListener(boardPresenter);
 
         GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(observableBoard, fxMessenger);
-        GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);
+        GameLoop loop = Messaging.Factory.makeMessagingGameLoop(game, loopMessenger);
 
         primaryStage.setTitle("TicTacToe");
         primaryStage.setScene(new Scene(fxShell));

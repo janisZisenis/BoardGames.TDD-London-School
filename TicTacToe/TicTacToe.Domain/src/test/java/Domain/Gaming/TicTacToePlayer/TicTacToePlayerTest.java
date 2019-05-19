@@ -2,8 +2,8 @@ package Domain.Gaming.TicTacToePlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import InputGeneration.Input.Input;
-import InputGeneration.InputGeneratorStub;
+import Input2D.Input.Input;
+import Input2D.InputGeneratorStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
