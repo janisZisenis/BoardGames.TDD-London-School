@@ -9,16 +9,23 @@
         <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>InteractiveGaming</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.3.1</version>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>InputGeneration</artifactId>
@@ -28,40 +35,24 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Gaming</artifactId>
+            <artifactId>InputGeneration</artifactId>
             <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>Gaming</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
+            <artifactId>Gaming</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

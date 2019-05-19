@@ -8,26 +8,26 @@ import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.InputGeneration.GameOverInputProcessor.GameOverInputProcessor;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import Domain.InteractiveGaming.TicTacToeInputPlayer.TicTacToeInputPlayer;
+import Domain.FieldIsEmptyValidator.FieldIsEmptyValidator;
+import Domain.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import FXSynchronizingView.FXSynchronizingGameOverView;
 import FXView.FXIODeviceFactory;
 import FXView.FXTicTacToeView;
 import FXView.Gaming.FXBoardView;
 import FXView.Gaming.FXInputAlerter;
 import Gaming.GameFacade.GameOverRule;
-import InputGeneration.InputProcessor;
-import InputGeneration.ValidInputGenerator.InputAlerter;
-import InputGeneration.ValidInputGenerator.InputValidator;
-import InteractiveGaming.AsyncProcessingGameRunner.AsyncProcessingGameRunner;
+import Gaming.GameFacade.Player;
+import Gaming.RestartTransaction.RestartTransaction;
+import Input2D.InputProcessor;
+import Input2D.ValidInputGenerator.InputAlerter;
+import Input2D.ValidInputGenerator.InputValidator;
+import InteractiveGaming.GameOverInputProcessor.GameOverInputProcessor;
 import InteractiveGaming.HybridGameImp.HybridGameImp;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
 import InteractiveGaming.HybridGameRunner.HybridGame;
 import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
 import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
 import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
-import InteractiveGaming.ResetTransaction.ResetTransaction;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
@@ -72,7 +72,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
         HybridGame game = new HybridGameImp(rule, multiPlayer);
-        AsyncProcessingGameRunner runner = new AsyncProcessingGameRunner(game);
+        AsyncHybridGameRunner runner = new AsyncHybridGameRunner(game);
 
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
         WinningLinePresenter winningLinePresenter = new WinningLinePresenter(boardView, lineProvider);
@@ -80,7 +80,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
-        InputProcessor processor = InputGeneration.Factory.makeAlertingInputProcessor(runner, validator, alerter);
+        InputProcessor processor = Input2D.Factory.makeAlertingInputProcessor(runner, validator, alerter);
         processor = new GameOverInputProcessor(processor, rule);
         BoardViewPresenter boardPresenter = new BoardViewPresenter(board, boardView, processor);
         listenableBoard.addListener(boardPresenter);
@@ -88,7 +88,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         Transaction cancelAction = this.cancelAction;
         Transaction reconfigureAction = configureAction;
-        Transaction restartAction = new ResetTransaction(board, multiPlayer, runner);
+        Transaction restartAction = new RestartTransaction(board, multiPlayer, runner);
 
         WinnerProvider winnerProvider = Domain.Factory.makeWinnerProvider(board);
         DefaultMarkToStringMapper mapper = new DefaultMarkToStringMapper(TicTacToeMessages.xWinsMessage, TicTacToeMessages.oWinsMessage);
@@ -115,11 +115,32 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
     private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
         if(type == PlayerType.InvincibleCPU)
-            return new HybridPlayerAdapter(Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory()));
+            return makeInvinciblePlayer(m, board);
         if(type == PlayerType.HumbleCPU)
-            return new HybridPlayerAdapter(Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory()));
+            return makeHumblePlayer(m, board);
 
+        return makeHumanPlayer(m, board);
+    }
+
+    private HybridPlayer makeHumanPlayer(Mark m, Board board) {
         return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
-    };
+    }
+
+    private HybridPlayer makeHumblePlayer(Mark m, Board board) {
+        Player p = Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory());
+        p = makeDelayingPlayer(p);
+        return new HybridPlayerAdapter(p);
+    }
+    private HybridPlayer makeInvinciblePlayer(Mark m, Board board) {
+        Player p = Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory());
+        p = makeDelayingPlayer(p);
+        return new HybridPlayerAdapter(p);
+    }
+
+    private Player makeDelayingPlayer(Player p) {
+        return new DelayingPlayer(p, 500);
+    }
+
+
 
 }

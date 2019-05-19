@@ -4,10 +4,10 @@ import Domain.Board.Board;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.IODeviceFactory;
-import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
+import Domain.MinimaxInputGenerator.MinimaxInputGenerator;
 import FXView.Gaming.FXInputAlerter;
-import InputGeneration.InputGenerator;
-import InputGeneration.ValidInputGenerator.InputAlerter;
+import Input2D.InputGenerator;
+import Input2D.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
 
 public class FXIODeviceFactory implements IODeviceFactory {
@@ -22,7 +22,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
 
     public InputGenerator makeHumbleInputGenerator() {
         int rowColumnCount = BoardBoundaries.rowColumnCount;
-        return InputGeneration.Factory.makeRandomInputGenerator(rowColumnCount, rowColumnCount);
+        return Input2D.Factory.makeRandomInputGenerator(rowColumnCount, rowColumnCount);
     }
 
     public InputAlerter makeFieldExistsAlerter() {

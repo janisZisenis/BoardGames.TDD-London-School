@@ -2,8 +2,8 @@ package Domain;
 
 import Domain.Board.Board;
 import Domain.Data.Mark;
-import InputGeneration.InputGenerator;
-import InputGeneration.ValidInputGenerator.InputAlerter;
+import Input2D.InputGenerator;
+import Input2D.ValidInputGenerator.InputAlerter;
 
 public interface IODeviceFactory {
     InputGenerator makeHumanInputGenerator();

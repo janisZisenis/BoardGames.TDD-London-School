@@ -1,6 +1,6 @@
 package Gaming.GameLoopImp;
 
-import Gaming.MessagingGameLoop.GameLoop;
+import Gaming.GameLoopImp.Api.GameLoop;
 
 public class GameLoopImp implements GameLoop {
 

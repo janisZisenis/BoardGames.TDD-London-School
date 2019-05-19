@@ -1,6 +1,6 @@
 package InteractiveGaming.HybridGameRunner;
 
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

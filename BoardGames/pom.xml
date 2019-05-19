@@ -6,23 +6,15 @@
         <artifactId>tictactoe-tdd</artifactId>
         <groupId>janis.zisenis.tictactoe.tdd</groupId>
         <version>1.0</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>BoardGames</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>BoardGames.Presentation</module>
         <module>BoardGames.FXView</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Utilities</artifactId>
-            <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>

@@ -1,8 +1,8 @@
 package FXSynchronizingView;
 
 import FXView.Gaming.FXInputAlerter;
-import InputGeneration.Input.Input;
-import InputGeneration.ValidInputGenerator.InputAlerter;
+import Input2D.Input.Input;
+import Input2D.ValidInputGenerator.InputAlerter;
 import javafx.application.Platform;
 
 public class FXSynchronizingInputAlerter implements InputAlerter {

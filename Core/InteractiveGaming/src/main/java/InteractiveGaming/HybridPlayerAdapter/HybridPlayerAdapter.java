@@ -1,7 +1,7 @@
 package InteractiveGaming.HybridPlayerAdapter;
 
 import InteractiveGaming.HybridGameImp.HybridPlayer;
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 import Gaming.GameFacade.Player;
 
 public class HybridPlayerAdapter implements HybridPlayer {

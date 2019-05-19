@@ -1,8 +1,8 @@
 package InteractiveGaming.MultiHybridPlayer;
 
+import Gaming.RestartTransaction.ResetPlayerService;
+import Input2D.Input.Input;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
-import InputGeneration.Input.Input;
-import InteractiveGaming.ResetTransaction.ResetPlayerService;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;

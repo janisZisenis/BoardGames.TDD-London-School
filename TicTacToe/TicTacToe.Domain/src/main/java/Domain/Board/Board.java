@@ -3,10 +3,10 @@ package Domain.Board;
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.EquallyMarkedLineEvaluator.MarkedFieldProvider;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyProvider;
-import Domain.Gaming.NumberOfMovesRule.MarkedFieldCountProvider;
-import Domain.Gaming.TicTacToePlayer.MarkFieldService;
-import InteractiveGaming.ResetTransaction.ClearGameStateService;
+import Domain.NumberOfMovesRule.MarkedFieldCountProvider;
+import Domain.TicTacToePlayer.MarkFieldService;
+import Domain.FieldIsEmptyValidator.FieldIsEmptyProvider;
+import Gaming.RestartTransaction.ClearGameStateService;
 
 public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFieldCountProvider, MarkedFieldProvider, ClearGameStateService {
 
@@ -18,7 +18,5 @@ public interface Board extends MarkFieldService, FieldIsEmptyProvider, MarkedFie
     int getMarkedFieldCount();
 
     void clear();
-
-    class FieldIsNotMarked extends RuntimeException {}
 
 }

@@ -1,10 +1,10 @@
 package InteractiveGaming.HybridGameRunner;
 
-import InputGeneration.Input.Input;
-import InputGeneration.InputProcessor;
-import InteractiveGaming.ResetTransaction.GameRunner;
+import Gaming.GameLoopImp.Api.GameLoop;
+import Input2D.Input.Input;
+import Input2D.InputProcessor;
 
-public class HybridGameRunner implements InputProcessor, GameRunner {
+public class HybridGameRunner implements InputProcessor, GameLoop {
 
     private final HybridGame game;
 

@@ -4,9 +4,9 @@ import Domain.Board.Board;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.IODeviceFactory;
-import Domain.InputGeneration.MinimaxInputGenerator.MinimaxInputGenerator;
-import InputGeneration.InputGenerator;
-import InputGeneration.ValidInputGenerator.InputAlerter;
+import Domain.MinimaxInputGenerator.MinimaxInputGenerator;
+import Input2D.InputGenerator;
+import Input2D.ValidInputGenerator.InputAlerter;
 import Messages.AlertingMessages;
 import FXSynchronizingView.FXSynchronizingInputAlerter;
 import FXSynchronizingView.FXSynchronizingInputView;
@@ -27,7 +27,7 @@ public class FXIODeviceFactory implements IODeviceFactory {
 
     public InputGenerator makeHumbleInputGenerator() {
         int rowColumnCount = BoardBoundaries.rowColumnCount;
-        return InputGeneration.Factory.makeRandomInputGenerator(rowColumnCount, rowColumnCount);
+        return Input2D.Factory.makeRandomInputGenerator(rowColumnCount, rowColumnCount);
     }
 
     public InputAlerter makeFieldExistsAlerter() {

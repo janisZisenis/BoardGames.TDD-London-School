@@ -1,18 +1,18 @@
 package App;
 
+import ConsoleView.ConsoleBoardView;
+import ConsoleView.ConsoleIODeviceFactory;
+import ConsoleView.ConsoleMessenger;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import FXView.ConsoleBoardView;
-import FXView.ConsoleMessenger;
 import GameLoopMessengerImp.MessageProvider;
 import Gaming.Factory;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
 import Gaming.GameFacade.Renderer;
+import Gaming.GameLoopImp.Api.GameLoop;
 import Gaming.GameLoopImp.Game;
-import Gaming.MessagingGameLoop.GameLoop;
-import Gaming.MessagingGameLoop.GameLoopMessenger;
 import Gaming.MultiPlayer.MultiPlayer;
 import Gaming.MultiPlayer.MultiPlayerMessenger;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
@@ -21,6 +21,7 @@ import Messaging.MarkToStringMappers.MarkToXOMapper;
 import Messaging.MessagingBoardListener.HumbleMarkedFieldMessageProviderImp;
 import Messaging.MessagingBoardListener.MarkedFieldMessageProvider;
 import Messaging.MessagingBoardListener.MessagingBoardListener;
+import MessagingGameLoop.GameLoopMessenger;
 import Rendering.BoardRenderer.BoardRenderer;
 import Utilities.ObjectToStringMapper.DefaultObjectToStringMapper;
 
@@ -55,7 +56,7 @@ public class Main {
         Game game = Factory.makeGame(rule, player, renderer);
 
         GameLoopMessenger loopMessenger = Messaging.Factory.makeTicTacToeGameLoopMessenger(board, messenger);
-        GameLoop loop = Factory.makeMessagingGameLoop(game, loopMessenger);
+        GameLoop loop = Messaging.Factory.makeMessagingGameLoop(game, loopMessenger);
 
         renderer.render();
         loop.run();

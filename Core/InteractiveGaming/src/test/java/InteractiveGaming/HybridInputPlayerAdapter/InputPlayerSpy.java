@@ -1,6 +1,6 @@
 package InteractiveGaming.HybridInputPlayerAdapter;
 
-import InputGeneration.Input.Input;
+import Input2D.Input.Input;
 
 public class InputPlayerSpy implements InputPlayer {
 

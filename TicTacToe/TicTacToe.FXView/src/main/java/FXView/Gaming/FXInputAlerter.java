@@ -1,7 +1,7 @@
 package FXView.Gaming;
 
-import InputGeneration.Input.Input;
-import InputGeneration.ValidInputGenerator.InputAlerter;
+import Input2D.Input.Input;
+import Input2D.ValidInputGenerator.InputAlerter;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;

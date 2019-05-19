@@ -11,15 +11,14 @@ import Domain.GameEvaluation.GameEvaluator.GameEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineEvaluator;
 import Domain.GameEvaluation.GameEvaluator.LineProvider;
 import Domain.GameEvaluation.HumbleLineProvider.HumbleLineProvider;
-import Domain.Gaming.NumberOfMovesRule.NumberOfMovesRule;
-import Domain.Gaming.TicTacToePlayer.TicTacToePlayer;
-import Domain.InputGeneration.InputValidators.FieldExistsValidator.FieldExistsValidator;
-import Domain.InputGeneration.InputValidators.FieldIsEmptyValidator.FieldIsEmptyValidator;
-import Gaming.DelayingPlayer.DelayingPlayer;
+import Domain.NumberOfMovesRule.NumberOfMovesRule;
+import Domain.TicTacToePlayer.TicTacToePlayer;
+import Domain.FieldExistsValidator.FieldExistsValidator;
+import Domain.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Gaming.GameFacade.GameOverRule;
 import Gaming.GameFacade.Player;
 import Gaming.GameOverRules.CompositeGameOverRule.CompositeGameOverRule;
-import InputGeneration.InputGenerator;
+import Input2D.InputGenerator;
 
 public abstract class Factory {
 
@@ -67,10 +66,10 @@ public abstract class Factory {
     }
 
     public static InputGenerator makeAlertingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
-        InputGenerator alerting = InputGeneration.Factory.makeAlertingInputGenerator(generator,
+        InputGenerator alerting = Input2D.Factory.makeAlertingInputGenerator(generator,
                 new FieldExistsValidator(),
                 factory.makeFieldExistsAlerter());
-        alerting = InputGeneration.Factory.makeAlertingInputGenerator(alerting,
+        alerting = Input2D.Factory.makeAlertingInputGenerator(alerting,
                 new FieldIsEmptyValidator(board),
                 factory.makeFieldIsEmptyAlerter());
         return alerting;
@@ -80,24 +79,20 @@ public abstract class Factory {
         InputGenerator generator = factory.makeInvincibleInputGenerator(board, m);
         generator = makeValidatingInputGenerator(generator, board, factory);
 
-        return makeDelayingPlayer(makeTicTacToePlayer(m, board, generator, factory));
+        return makeTicTacToePlayer(m, board, generator, factory);
     }
 
     public static Player makeHumbleComputerPlayer(Mark m, Board board, IODeviceFactory factory) {
         InputGenerator generator = factory.makeHumbleInputGenerator();
         generator = makeValidatingInputGenerator(generator, board, factory);
 
-        return makeDelayingPlayer(makeTicTacToePlayer(m, board, generator, factory));
-    }
-
-    public static Player makeDelayingPlayer(Player p) {
-        return new DelayingPlayer(p, 500);
+        return makeTicTacToePlayer(m, board, generator, factory);
     }
 
     private static InputGenerator makeValidatingInputGenerator(InputGenerator generator, Board board, IODeviceFactory factory) {
-        InputGenerator validating = InputGeneration.Factory.makeValidatingInputGenerator(generator,
+        InputGenerator validating = Input2D.Factory.makeValidatingInputGenerator(generator,
                 new FieldExistsValidator());
-        validating = InputGeneration.Factory.makeValidatingInputGenerator(validating,
+        validating = Input2D.Factory.makeValidatingInputGenerator(validating,
                 new FieldIsEmptyValidator(board));
         return validating;
     }
