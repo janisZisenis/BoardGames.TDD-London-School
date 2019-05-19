@@ -20,7 +20,7 @@ For those who are new to TDD, these are the rules and aspects I strictly obeyed:
    * Readability
    * Maintainability
 
-... nevertheless I won't omit the general tool set of the software craftmanship, the design principles! Especially in the phase Red, SOLID (etc.) support the programmer to discover different ways a specific task/behaviour can be represented in software. (I recognized that the most readable, maintainable and trustworthy tests conform to the design principles.)
+... nevertheless I won't omit the general tool set of the software craftmanship, the design principles! Especially in the phase Red, SOLID (etc.) support the programmer to discover different ways a specific task/behaviour can be represented in software. (In general the most readable, maintainable and trustworthy tests conform to the design principles.)
 
 Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.
 
