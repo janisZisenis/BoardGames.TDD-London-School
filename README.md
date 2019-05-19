@@ -13,10 +13,10 @@ For those who are new to TDD, those are the rules and aspects I strictly obeyed:
  * Rules/Phases of the TDD cycle:
    * Red - Write a failing unit test!
    * Green - Make the test pass in the simplest manner you can think of!
-   * Refactoring - Clean up (and generify the production code if possible)
+   * Refactoring - Clean up (and generify the production code if possible)!
    * Repeat!
 * Aspects of high quality unit tests:
-   * Trustworthyness (through consistency and isolation)
+   * Trustworthiness (through consistency and isolation)
    * Readability
    * Maintainability
 
