@@ -1,4 +1,4 @@
-package Domain.Input2D.InputValidators.FieldIsEmptyValidator;
+package Domain.FieldIsEmptyValidator;
 
 import Domain.Data.Field.Field;
 import Input2D.Input.Input;

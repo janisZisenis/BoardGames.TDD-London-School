@@ -1,12 +1,12 @@
 package FXBoardGames.notTested_Demo;
 
+import Gaming.GameLoopImp.Api.GameLoop;
 import Input2D.Input.Input;
 import Input2D.InputProcessor;
 import InteractiveGaming.HybridGameRunner.HybridGame;
 import InteractiveGaming.HybridGameRunner.HybridGameRunner;
-import InteractiveGaming.RestartTransaction.GameRunner;
 
-public class AsyncHybridGameRunner implements GameRunner, InputProcessor {
+public class AsyncHybridGameRunner implements GameLoop, InputProcessor {
 
     private HybridGameRunner runner;
     private Thread worker;

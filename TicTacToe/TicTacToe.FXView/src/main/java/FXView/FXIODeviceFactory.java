@@ -4,7 +4,7 @@ import Domain.Board.Board;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
 import Domain.IODeviceFactory;
-import Domain.Input2D.MinimaxInputGenerator.MinimaxInputGenerator;
+import Domain.MinimaxInputGenerator.MinimaxInputGenerator;
 import FXView.Gaming.FXInputAlerter;
 import Input2D.InputGenerator;
 import Input2D.ValidInputGenerator.InputAlerter;

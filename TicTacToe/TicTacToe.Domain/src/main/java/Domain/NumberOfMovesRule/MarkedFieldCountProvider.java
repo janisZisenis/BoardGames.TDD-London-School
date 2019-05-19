@@ -1,4 +1,4 @@
-package Domain.Gaming.NumberOfMovesRule;
+package Domain.NumberOfMovesRule;
 
 public interface MarkedFieldCountProvider {
     int getMarkedFieldCount();

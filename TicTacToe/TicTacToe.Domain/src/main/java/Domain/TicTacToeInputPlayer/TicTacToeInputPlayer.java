@@ -2,7 +2,7 @@ package Domain.TicTacToeInputPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.Gaming.TicTacToePlayer.MarkFieldService;
+import Domain.TicTacToePlayer.MarkFieldService;
 import Input2D.Input.Input;
 import InteractiveGaming.HybridInputPlayerAdapter.InputPlayer;
 

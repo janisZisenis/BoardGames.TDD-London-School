@@ -1,4 +1,4 @@
-package Domain.Input2D.InputValidators.FieldExistsValidator;
+package Domain.FieldExistsValidator;
 
 import Domain.Data.BoardBoundaries;
 import Input2D.Input.Input;

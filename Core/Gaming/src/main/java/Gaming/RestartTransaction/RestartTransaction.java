@@ -1,21 +1,22 @@
 package Gaming.RestartTransaction;
 
+import Gaming.GameLoopImp.Api.GameLoop;
 import Utilities.Transaction.Transaction;
 
 public class RestartTransaction implements Transaction {
 
-    private final ResetGameStateService clearBoardService;
+    private final ClearGameStateService ClearGameStateService;
     private final ResetPlayerService resetPlayerService;
-    private final GameRunner runner;
+    private final GameLoop runner;
 
-    public RestartTransaction(ResetGameStateService clearBoardService, ResetPlayerService resetPlayerService, GameRunner runner) {
-        this.clearBoardService = clearBoardService;
+    public RestartTransaction(ClearGameStateService ClearGameStateService, ResetPlayerService resetPlayerService, GameLoop runner) {
+        this.ClearGameStateService = ClearGameStateService;
         this.resetPlayerService = resetPlayerService;
         this.runner = runner;
     }
 
     public void execute() {
-        clearBoardService.clear();
+        ClearGameStateService.clear();
         resetPlayerService.reset();
         runner.run();
     }

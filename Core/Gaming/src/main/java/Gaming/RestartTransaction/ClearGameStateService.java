@@ -1,5 +1,5 @@
 package Gaming.RestartTransaction;
 
-public interface ResetGameStateService {
+public interface ClearGameStateService {
     void clear();
 }

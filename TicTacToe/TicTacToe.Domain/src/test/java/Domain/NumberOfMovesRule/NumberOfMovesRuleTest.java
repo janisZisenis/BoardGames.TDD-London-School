@@ -1,4 +1,4 @@
-package Domain.Gaming.NumberOfMovesRule;
+package Domain.NumberOfMovesRule;
 
 import org.junit.jupiter.api.Test;
 

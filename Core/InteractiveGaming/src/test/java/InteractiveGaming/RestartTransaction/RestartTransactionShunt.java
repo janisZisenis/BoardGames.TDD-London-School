@@ -1,10 +1,14 @@
 package InteractiveGaming.RestartTransaction;
 
+import Gaming.GameLoopImp.Api.GameLoop;
+import Gaming.RestartTransaction.ClearGameStateService;
+import Gaming.RestartTransaction.ResetPlayerService;
+import Gaming.RestartTransaction.RestartTransaction;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RestartTransactionShunt implements ResetGameStateService, GameRunner, ResetPlayerService {
+public class RestartTransactionShunt implements ClearGameStateService, GameLoop, ResetPlayerService {
 
     private String logString = "";
 

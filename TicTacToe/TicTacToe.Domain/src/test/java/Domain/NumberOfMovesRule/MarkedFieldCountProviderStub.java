@@ -1,4 +1,4 @@
-package Domain.Gaming.NumberOfMovesRule;
+package Domain.NumberOfMovesRule;
 
 public class MarkedFieldCountProviderStub implements MarkedFieldCountProvider {
     private int count = 0;

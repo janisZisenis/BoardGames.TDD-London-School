@@ -2,7 +2,7 @@ package Domain.TicTacToeInputPlayer;
 
 import Domain.Data.Field.Field;
 import Domain.Data.Mark;
-import Domain.Gaming.TicTacToePlayer.MarkFieldServiceSpy;
+import Domain.TicTacToePlayer.MarkFieldServiceSpy;
 import Input2D.Input.Input;
 import org.junit.jupiter.api.Test;
 

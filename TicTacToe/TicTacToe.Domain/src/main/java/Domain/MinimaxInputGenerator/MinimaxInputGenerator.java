@@ -1,4 +1,4 @@
-package Domain.Input2D.MinimaxInputGenerator;
+package Domain.MinimaxInputGenerator;
 
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Field.Field;

@@ -1,4 +1,4 @@
-package Domain.Input2D.InputValidators.FieldExistsValidator;
+package Domain.FieldExistsValidator;
 
 import Input2D.Input.Input;
 import org.junit.jupiter.api.Test;
