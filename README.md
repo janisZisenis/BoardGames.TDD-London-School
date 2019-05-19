@@ -24,7 +24,7 @@ For those who are new to TDD, these are the rules and aspects I strictly obeyed:
 
 Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.
 
-If you're interested in TDD and the questions I try to answer myself, feel free to enter my code and take your own conclusions. In here I don't describe the evolution of the project, this is rather a "look-what-happens-to-the-outcome-if-your-TDDing".
+If you're interested in TDD, feel free to enter my code and make your own conclusion. In here I don't describe the evolution of the project, this is rather a "look-what-happens-to-the-outcome-if-your-TDDing".
 
 ## The Exercise - BoardGames App
 
