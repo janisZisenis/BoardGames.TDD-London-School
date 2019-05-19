@@ -19,6 +19,21 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>InputGeneration</artifactId>
@@ -28,30 +43,40 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Gaming</artifactId>
+            <artifactId>InputGeneration</artifactId>
             <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>Gaming</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
+            <artifactId>Gaming</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
 
-
-
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

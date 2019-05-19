@@ -35,7 +35,14 @@
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>Gaming</artifactId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>InputGeneration</artifactId>
             <version>1.0</version>
             <type>test-jar</type>
             <scope>test</scope>
@@ -44,21 +51,29 @@
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>InputGeneration</artifactId>
             <version>1.0</version>
-            <type>test-jar</type>
-            <scope>test</scope>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>Gaming</artifactId>
             <version>1.0</version>
-            <scope>compile</scope>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
-            <artifactId>InputGeneration</artifactId>
+            <artifactId>Gaming</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>InteractiveGaming</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
@@ -66,6 +81,7 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
 

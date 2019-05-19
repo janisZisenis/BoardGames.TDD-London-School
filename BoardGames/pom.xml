@@ -6,6 +6,7 @@
         <artifactId>tictactoe-tdd</artifactId>
         <groupId>janis.zisenis.tictactoe.tdd</groupId>
         <version>1.0</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,4 +26,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 </project>

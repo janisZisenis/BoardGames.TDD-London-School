@@ -6,6 +6,7 @@
         <artifactId>BoardGames</artifactId>
         <groupId>janis.zisenis.tictactoe.tdd</groupId>
         <version>1.0</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -25,10 +26,32 @@
 
         <dependency>
             <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>Utilities</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
+            <artifactId>BoardGames.Presentation</artifactId>
+            <version>1.0</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>janis.zisenis.tictactoe.tdd</groupId>
             <artifactId>BoardGames.Presentation</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
     <build>
