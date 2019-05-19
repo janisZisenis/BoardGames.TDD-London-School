@@ -52,17 +52,20 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
     private final Button cancel = new Button(cancelText);
     private final Button start = new Button(startText);
 
+    private final FXChoosePlayerView first = new FXChoosePlayerView();
+    private final FXChoosePlayerView second = new FXChoosePlayerView();
+
     private ConfigureViewDelegate delegate;
 
     public void setDelegate(ConfigureViewDelegate delegate) {
         this.delegate = delegate;
     }
 
-    public FXConfigureView(Pane firstPlayer, Pane secondPlayer) {
+    public FXConfigureView() {
         initStack();
         initButtons();
 
-        GridPane grid = makeGrid(firstPlayer, secondPlayer);
+        GridPane grid = makeGrid();
 
         stack.getChildren().add(grid);
         getChildren().add(stack);
@@ -72,16 +75,15 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
         stack.setMinSize(width, height);
         stack.setMaxSize(width, height);
         stack.setPrefSize(width, height);
-        registerShowListener();
     }
 
 
-    private GridPane makeGrid(Pane firstPlayer, Pane secondPlayer) {
+    private GridPane makeGrid() {
         GridPane grid = new GridPane();
         grid.setVgap(5);
         grid.add(makeWelcomeSection(), 0, 0);
         grid.add(makeBoardSection(), 0, 1);
-        grid.add(makePlayersSection(firstPlayer, secondPlayer), 0, 2);
+        grid.add(makePlayersSection(first, second), 0, 2);
         grid.add(makeButtonSection(), 0, 3);
         return grid;
     }
@@ -200,18 +202,6 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
         return grid;
     }
 
-    private void registerShowListener() {
-        stack.sceneProperty().addListener((obs, oldScene, newScene) -> {
-            if(newScene != null)
-                onViewDidShow();
-        });
-    }
-
-    private void onViewDidShow() {
-        if (delegate != null)
-            delegate.onViewDidShow();
-    }
-
     private void initButtons() {
         cancel.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         start.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
@@ -221,9 +211,6 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
 
         cancel.setOnAction(e -> onCancelClicked());
         start.setOnAction(e -> onStartClicked());
-
-        start.setDisable(true);
-        cancel.setDisable(false);
     }
 
     private void onStartClicked() {
@@ -236,12 +223,4 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
             delegate.onCancelClicked();
     }
 
-
-    public void enableStartButton() {
-        start.setDisable(false);
-    }
-
-    public void disableStartButton() {
-        start.setDisable(true);
-    }
 }
