@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HybridGameLoopShunt implements HybridGame {
+public class HybridGameRunnerShunt implements HybridGame {
 
     private String logString = "";
     private boolean nextIsInputTurn = false;
@@ -13,7 +13,7 @@ public class HybridGameLoopShunt implements HybridGame {
     private HybridGameRunner sut = new HybridGameRunner(this);
 
     @Test
-    void IfNextIsInputTurnAndGetsProcessed_ShouldPlayInputBeforeRun() {
+    void IfNextIsInputTurnOnProcessing_ShouldPlayInputBeforeRun() {
         this.nextIsInputTurn = true;
         Input input = new Input(0, 0);
 

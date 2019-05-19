@@ -10,11 +10,11 @@ import java.util.List;
 public class MultiHybridPlayer implements HybridPlayer {
 
     private final List<HybridPlayer> players = new LinkedList<>();
-    private final CyclicListIterator<HybridPlayer> it;
+    private CyclicListIterator<HybridPlayer> it;
 
     public MultiHybridPlayer(HybridPlayer first) {
         players.add(first);
-        it = new CyclicListIterator<>(players);
+        initIterator();
     }
 
     public void play() {
@@ -36,5 +36,13 @@ public class MultiHybridPlayer implements HybridPlayer {
     public boolean isComputer() {
         HybridPlayer p = it.getCurrent();
         return p.isComputer();
+    }
+
+    public void reset() {
+        initIterator();
+    }
+
+    private void initIterator() {
+        it = new CyclicListIterator<>(players);
     }
 }
