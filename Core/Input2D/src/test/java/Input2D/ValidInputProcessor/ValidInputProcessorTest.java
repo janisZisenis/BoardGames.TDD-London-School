@@ -27,6 +27,12 @@ public class ValidInputProcessorTest {
         assertProcessedInputEquals(input);
     }
 
+    private void assertHasNotProcessed() {
+        boolean actual = processor.hasProcessed();
+        assertFalse(actual);
+    }
+
+    
     @Test
     void IfInputIsInvalid_ShouldNotProcessTheInput() {
         sut.process(input);
@@ -34,12 +40,24 @@ public class ValidInputProcessorTest {
         assertHasNotProcessed();
     }
 
+    private void assertProcessedInputEquals(Input expected) {
+        Input actual = processor.getProcessed();
+        assertEquals(expected, actual);
+    }
+
+
     @Test
     void IfInputIsInvalid_ShouldAlert() {
         sut.process(input);
 
         assertAlertedInputEquals(input);
     }
+
+    private void assertAlertedInputEquals(Input expected) {
+        Input actual = alerter.getAlerted();
+        assertEquals(expected, actual);
+    }
+
 
     @Test
     void IfInputIsValid_ShouldNotAlert() {
@@ -50,28 +68,15 @@ public class ValidInputProcessorTest {
         assertHasNotAlerted();
     }
 
-    private void makeInputIsValid(Input input) {
-        validator.setValidInputs(new Input[]{input});
-    }
-
-    private void assertProcessedInputEquals(Input expected) {
-        Input actual = processor.getProcessed();
-        assertEquals(expected, actual);
-    }
-
-    private void assertHasNotProcessed() {
-        boolean actual = processor.hasProcessed();
-        assertFalse(actual);
-    }
-
-    private void assertAlertedInputEquals(Input expected) {
-        Input actual = alerter.getAlerted();
-        assertEquals(expected, actual);
-    }
-
     private void assertHasNotAlerted() {
         boolean actual = alerter.hasAlerted();
         assertFalse(actual);
+    }
+
+
+
+    private void makeInputIsValid(Input input) {
+        validator.setValidInputs(new Input[]{input});
     }
 
 }

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/GameOverRuleAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameLoopImp/GameLoopImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameLoopImp/GameLoopImpTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/CompositeGameOverRule/CompositeGameOverRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/GameOverRuleAssertions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/Assertions/GameOverRuleAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/WinnerRule/WinnerRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/WinnerRule/WinnerRuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputProcessor/ValidInputProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputProcessor/ValidInputProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -109,16 +111,41 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java">
+        <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputProcessor/ValidInputProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="164">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
               <folding>
-                <element signature="method#If0FieldsAreMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
-                <element signature="method#If9FieldsAreMarked_ShouldBeGameOver#0;class#NumberOfMovesRuleTest#0" />
-                <element signature="method#If1FieldIsMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
-                <element signature="method#If2FieldAreMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
-                <element signature="method#If8FieldAreMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
+                <element signature="method#IfInputIsValid_ShouldProcessTheInput#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#assertHasNotProcessed#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#IfInputIsInvalid_ShouldNotProcessTheInput#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#assertProcessedInputEquals#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#IfInputIsInvalid_ShouldAlert#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#assertAlertedInputEquals#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#IfInputIsValid_ShouldNotAlert#0;class#ValidInputProcessorTest#0" />
+                <element signature="method#assertHasNotAlerted#0;class#ValidInputProcessorTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+              <folding>
+                <element signature="method#IfFirstInputIsValid_ShouldBeTheFirstInput#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#IfOnlySecondInputIsValid_ShouldBeTheSecondInput#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#IfOnlyThirdInputIsValid_ShouldBeTheThirdInput#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#IfFirstInputIsValid_ShouldNotAlert#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#assertHasNotAlerted#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#IfOnlySecondInputIsValid_ShouldAlertTheFirst#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#IfOnlyThirdInputIsValid_ShouldAlertTheSecond#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#assertAlertedInputEquals#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#makeFirstInputIsValid#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#makeOnlySecondInputIsValid#0;class#ValidInputGeneratorTest#0" />
+                <element signature="method#makeOnlyThirdInputIsValid#0;class#ValidInputGeneratorTest#0" />
               </folding>
             </state>
           </provider>
@@ -140,8 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Mappin</find>
-      <find>Mapping</find>
       <find>onv</find>
       <find>first</find>
       <find>Interactor</find>
@@ -166,10 +191,12 @@
       <find>Field</find>
       <find>InputGe</find>
       <find>PlayerSpy</find>
-      <find>PlayerSpy</find>
       <find>GameSpy</find>
       <find />
       <find>NumberOfMove</find>
+      <find>InputProcessorSpy</find>
+      <find>boolean actual = sut.isValid(input);</find>
+      <find>InputAlerterSpy</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -213,11 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.ConsoleView/pom.xml" />
-        <option value="$PROJECT_DIR$/Apps/TicTacToe.Console/src/main/java/App/ConsoleIODeviceFactory.java" />
-        <option value="$PROJECT_DIR$/Core/InputGeneration/src/main/java/Input2D/RandomInputGenerator/RandomInputGenerator.java" />
-        <option value="$PROJECT_DIR$/Core/pom.xml" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Input2D/MinimaxInputGenerator/MinimaxInputGenerator.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/InteractiveGaming/GameOverInputProcessor/GameOverInputProcessor.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Input2D/GameOverInputProcessor/GameOverInputProcessor.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/GameOverInputProcessor/GameOverInputProcessor.java" />
@@ -264,6 +286,11 @@
         <option value="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/GameOverRuleAssertions.java" />
         <option value="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/WinnerRule/WinnerRuleTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java" />
+        <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java" />
+        <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/ComparativeIsNotAnInput.java" />
+        <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/InputsWithDifferentRowAndSameColumn.java" />
+        <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java" />
+        <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputProcessor/ValidInputProcessorTest.java" />
       </list>
     </option>
   </component>
@@ -451,14 +478,20 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -466,7 +499,7 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -475,67 +508,22 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Gaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Domain" type="462c0819:PsiDirectoryNode" />
-              <item name="NumberOfMovesRule" type="462c0819:PsiDirectoryNode" />
+              <item name="Input2D" type="462c0819:PsiDirectoryNode" />
+              <item name="ValidInputProcessor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -877,9 +865,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.20 at 19h 53m 20s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.20 at 19h 53m 40s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -907,14 +892,18 @@
     <history-entry file="AllTest - 2019.05.20 at 20h 14m 28s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.20 at 20h 39m 25s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="708426000" />
+    <option name="totallyTimeSpent" value="709711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.25885227" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.2563966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -924,7 +913,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4420382" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1124,101 +1113,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/MultiHybridPlayer/MultiHybridPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/RestartTransaction/ResetPlayerService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/RestartTransaction/ClearGameStateService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/RestartTransaction/RestartTransactionShunt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/RestartTransaction/RestartTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/AsyncHybridGameRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#758#858#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="92" column="54" lean-forward="true" selection-start-line="92" selection-start-column="54" selection-end-line="92" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6948#6949#0" expanded="true" />
-            <element signature="e#6997#6998#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/MappingPlayerMessenger/MappingMultiPlayerMessenger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/GameOverInputProcessor/GameOverInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/TicTacToePlayer/TicTacToePlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/TicTacToeInputPlayer/TicTacToeInputPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/GameOverRules/WinnerRule/HasWinnerProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/GameEvaluation/GameEvaluator/GameEvaluator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1407,13 +1301,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/MultiPlayerMessengerSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/MultiPlayerMessengerSpy.java" />
     <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/MultiPlayerMessengerDummy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1428,13 +1316,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameFacade/PlayerSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameFacade/PlayerSpy.java" />
     <entry file="file://$PROJECT_DIR$/Core/Gaming/src/main/java/Gaming/GameFacade/GameFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1475,22 +1357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/TwoAdditionalPlayersAdded.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/OneAdditionalPlayersAdded.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/NoAdditionalPlayersAdded.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state relative-caret-position="300">
+          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -1607,16 +1475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/GameOverRuleAssertions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -1634,6 +1492,171 @@
             <element signature="method#If1FieldIsMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
             <element signature="method#If2FieldAreMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
             <element signature="method#If8FieldAreMarked_ShouldNotBeGameOver#0;class#NumberOfMovesRuleTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/OneAdditionalPlayersAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/MultiPlayer/NoAdditionalPlayersAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/main/java/Input2D/NullInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/GameOverInputProcessor/GameOverIsNotOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/GameOverInputProcessor/GameOverIsOver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/BoardViewPresenter/BoardViewPresenterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="149" selection-start-line="149" selection-end-line="152" selection-end-column="5" />
+          <folding>
+            <element signature="method#IfFieldR0C0IsMarked_ShouldSetR0C0#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldR1C2IsMarked_ShouldSetR0C0#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldIsMarkedWithJohn_ShouldSetJohn#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldIsMarkedWithHaley_ShouldSetHaley#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertSetFieldEquals#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertSetMarkEquals#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldIsUnmarked_ShouldNotSetField#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertHasNotSetField#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldIsUnmarked_ShouldClearTheField#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertClearedFieldEquals#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfFieldIsMarked_ShouldNotClearTheField#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertHasNotCleared#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#IfGetsCleared_ShouldClearAllField#0;class#BoardViewPresenterTest#0" />
+            <element signature="method#assertHasClearedView#0;class#BoardViewPresenterTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/InputProcessorSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/Assertions/GameOverRuleAssertions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/InputsWithSameRowAndSameColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/InputsWithSameRowAndDifferentColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/InputsWithDifferentRowAndSameColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/DifferentInputsWithTheSameSumOfRowAndColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/ComparativeIsNotAnInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+          <folding>
+            <element signature="method#FreshInstance_InputShouldBeValid#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedInvalidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedValidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedValidatingAfterInvalidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedInvalidatingAfterValidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedInvalidatingInBetweenTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#AddedInvalidatingAfterTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#makeValidatingAdded#0;class#CompositeInputValidatorTest#0" />
+            <element signature="method#makeInvalidatingAdded#0;class#CompositeInputValidatorTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <folding>
+            <element signature="method#IfFirstInputIsValid_ShouldBeTheFirstInput#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#IfOnlySecondInputIsValid_ShouldBeTheSecondInput#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#IfOnlyThirdInputIsValid_ShouldBeTheThirdInput#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#IfFirstInputIsValid_ShouldNotAlert#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#assertHasNotAlerted#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#IfOnlySecondInputIsValid_ShouldAlertTheFirst#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#IfOnlyThirdInputIsValid_ShouldAlertTheSecond#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#assertAlertedInputEquals#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#makeFirstInputIsValid#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#makeOnlySecondInputIsValid#0;class#ValidInputGeneratorTest#0" />
+            <element signature="method#makeOnlyThirdInputIsValid#0;class#ValidInputGeneratorTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputProcessor/ValidInputProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding>
+            <element signature="method#IfInputIsValid_ShouldProcessTheInput#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#assertHasNotProcessed#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#IfInputIsInvalid_ShouldNotProcessTheInput#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#assertProcessedInputEquals#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#IfInputIsInvalid_ShouldAlert#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#assertAlertedInputEquals#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#IfInputIsValid_ShouldNotAlert#0;class#ValidInputProcessorTest#0" />
+            <element signature="method#assertHasNotAlerted#0;class#ValidInputProcessorTest#0" />
           </folding>
         </state>
       </provider>

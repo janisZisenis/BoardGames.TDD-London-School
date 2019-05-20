@@ -15,7 +15,6 @@ public class CompositeInputValidatorTest {
     @Test
     void FreshInstance_InputShouldBeValid() {
         boolean actual = sut.isValid(input);
-
         assertTrue(actual);
     }
 
@@ -24,7 +23,6 @@ public class CompositeInputValidatorTest {
         makeInvalidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertFalse(actual);
     }
 
@@ -33,7 +31,6 @@ public class CompositeInputValidatorTest {
         makeValidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertTrue(actual);
     }
 
@@ -43,7 +40,6 @@ public class CompositeInputValidatorTest {
         makeValidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertFalse(actual);
     }
 
@@ -53,7 +49,6 @@ public class CompositeInputValidatorTest {
         makeInvalidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertFalse(actual);
     }
 
@@ -64,7 +59,6 @@ public class CompositeInputValidatorTest {
         makeValidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertFalse(actual);
     }
 
@@ -75,7 +69,6 @@ public class CompositeInputValidatorTest {
         makeInvalidatingAdded();
 
         boolean actual = sut.isValid(input);
-
         assertFalse(actual);
     }
 
@@ -89,8 +82,6 @@ public class CompositeInputValidatorTest {
 
     private void makeInvalidatingAdded() {
         InputValidatorStub validator = new InputValidatorStub();
-        Input[] validInputs = {};
-        validator.setValidInputs(validInputs);
         sut.add(validator);
     }
 

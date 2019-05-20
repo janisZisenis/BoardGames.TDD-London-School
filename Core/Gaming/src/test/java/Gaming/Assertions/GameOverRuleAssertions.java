@@ -1,4 +1,4 @@
-package Gaming.GameOverRules;
+package Gaming.Assertions;
 
 import Gaming.GameFacade.GameOverRule;
 

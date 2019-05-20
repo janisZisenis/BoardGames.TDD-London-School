@@ -3,8 +3,8 @@ package Gaming.GameOverRules.CompositeGameOverRule;
 import Gaming.GameFacade.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
-import static Gaming.GameOverRules.GameOverRuleAssertions.assertIsGameOver;
-import static Gaming.GameOverRules.GameOverRuleAssertions.assertIsNotGameOver;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsGameOver;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsNotGameOver;
 
 public class CompositeGameOverRuleTest {
 
