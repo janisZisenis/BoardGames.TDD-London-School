@@ -1,4 +1,4 @@
-package FXBoardGames.notTested_Demo;
+package App.notTested_Demo;
 
 import FXView.Configuration.FXConfigureView;
 import Presentation.ConfigureViewPresenter.ConfigureViewPresenter;

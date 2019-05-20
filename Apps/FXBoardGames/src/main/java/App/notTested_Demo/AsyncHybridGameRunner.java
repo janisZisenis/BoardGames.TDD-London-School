@@ -1,4 +1,4 @@
-package FXBoardGames.notTested_Demo;
+package App.notTested_Demo;
 
 import Gaming.GameLoopImp.Api.GameLoop;
 import Input2D.Input.Input;
