@@ -83,9 +83,9 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
         GridPane grid = new GridPane();
         grid.setVgap(5);
         grid.add(makeWelcomeSection(), 0, 0);
-        grid.add(makeBoardSection(), 0, 1);
-        grid.add(makePlayersSection(first, second), 0, 2);
-        grid.add(makeButtonSection(), 0, 3);
+        //grid.add(makeBoardSection(), 0, 1);
+        grid.add(makePlayersSection(first, second), 0, 1);
+        grid.add(makeButtonSection(), 0, 2);
         return grid;
     }
 
@@ -170,7 +170,7 @@ public class FXConfigureView extends FXGameView implements ConfigureView {
 
         Separator line = new Separator();
         line.setOrientation(Orientation.VERTICAL);
-        grid.add(line, 1, 2, 1, 4);
+        grid.add(line, 1, 2, 1, 3);
 
         return grid;
     }

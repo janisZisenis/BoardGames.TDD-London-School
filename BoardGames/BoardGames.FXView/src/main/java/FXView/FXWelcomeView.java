@@ -24,8 +24,8 @@ public class FXWelcomeView extends FXGameView implements WelcomeView {
     private static final Color comingSoonColor = ComingSoonConstants.color;
     private static final Font comingSoonFont = ComingSoonConstants.font;
 
-    private final int width = 252;
-    private final int height = 252;
+    private final int width = 223;
+    private final int height = 130;
 
     private int firstButtonIndex = 3;
 

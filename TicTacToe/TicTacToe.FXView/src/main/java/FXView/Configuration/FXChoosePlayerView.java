@@ -84,10 +84,10 @@ public class FXChoosePlayerView extends Pane {
         grid.add(humbleRadio, 0, 1);
         grid.add(invincibleRadio, 0, 2);
 
-        aiGrid.setHgap(10);
-        aiGrid.add(aiRadio, 0, 0);
-        aiGrid.add(comingSoonText, 1, 0);
-        grid.add(aiGrid, 0, 3);
+        //aiGrid.setHgap(10);
+        //aiGrid.add(aiRadio, 0, 0);
+        //aiGrid.add(comingSoonText, 1, 0);
+        //grid.add(aiGrid, 0, 3);
     }
 
     private void registerActionListener() {

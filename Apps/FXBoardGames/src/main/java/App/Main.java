@@ -28,17 +28,12 @@ public class Main extends Application {
         welcomeView.setDelegate(presenter);
 
         presenter.addAction(new TicTacToeMain(shell, cancelAction), "TicTacToe");
-        presenter.addComingSoonAction("Conway's Game of Life");
-        presenter.addComingSoonAction("Four in a Row");
-        presenter.addComingSoonAction("Draughts");
-        presenter.addComingSoonAction("Chess");
         presenter.addAction(new FXQuitTransaction(), "Quit Board Games!");
-
 
         primaryStage.setTitle("Board Games");
         Scene scene = new Scene(shell);
         primaryStage.setScene(scene);
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
