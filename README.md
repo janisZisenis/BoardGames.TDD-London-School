@@ -1,8 +1,8 @@
-# BoardGames.TDD Kata
+# BoardGames.TDD
 
 ## Introduction
 
-This project is meant to be a Kata to train my personal skills in **designing high quality software** using the **test-driven development** (TDD) initially described by Kent Beck (TDD - By Example, 2002). In addition to that I forced to apply (or at least tried to apply in every single test) Osherove's aspects of **high quality unit tests** (The Art of Unit Testing, 2014). Most of the patterns (e.g. logstring), principles (e.g. Direct/Indirect Input/Output), prefixes/suffixes (e.g. for Test Doubles) and so on are to be found in the following books:
+This project is meant to be a Kata to train my skills in **designing high quality software** using the **test-driven development** (TDD) initially described by Kent Beck (TDD - By Example, 2002). In addition to that I forced to apply (or at least tried to apply in every single test) Osherove's aspects of **high quality unit tests** (The Art of Unit Testing, 2014). Most of the patterns (e.g. logstring), principles (e.g. Direct/Indirect Input/Output), prefixes/suffixes (e.g. for Test Doubles) and so on are to be found in the following books:
 
 * [Test Driven Development. By Example; Kent Beck](https://www.amazon.de/Test-Driven-Development-Example-Signature/dp/0321146530/ref=sr_1_1?hvadid=174418276756&hvdev=c&hvlocphy=9043313&hvnetw=g&hvpos=1t1&hvqmt=e&hvrand=17704527276239390355&hvtargid=kwd-11367315361&keywords=tdd+by+example&qid=1558295104&s=gateway&sr=8-1)
 * [The Art of Unit Testing; Roy Osherove](https://www.amazon.de/Art-Unit-Testing-Roy-Osherove/dp/1617290890/ref=sr_1_1?hvadid=174672266071&hvdev=c&hvlocphy=9043313&hvnetw=g&hvpos=1t1&hvqmt=e&hvrand=2716020097760218298&hvtargid=kwd-10979390115&keywords=the+art+of+unit+testing&qid=1558288735&s=gateway&sr=8-1)
