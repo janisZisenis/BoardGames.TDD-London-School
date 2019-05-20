@@ -1,4 +1,4 @@
-package FXBoardGames.notTested_Demo;
+package App.notTested_Demo;
 
 import Domain.Board.Board;
 import Domain.Board.BoardDecorators.ListenableBoard.ListenableBoard;

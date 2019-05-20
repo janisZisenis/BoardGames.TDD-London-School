@@ -1,6 +1,6 @@
-package FXBoardGames;
+package App;
 
-import FXBoardGames.notTested_Demo.TicTacToeMain;
+import App.notTested_Demo.TicTacToeMain;
 import FXView.FXQuitTransaction.FXQuitTransaction;
 import FXView.FXShell;
 import FXView.FXWelcomeView;
