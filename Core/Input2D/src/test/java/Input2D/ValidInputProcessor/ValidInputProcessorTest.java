@@ -32,7 +32,7 @@ public class ValidInputProcessorTest {
         assertFalse(actual);
     }
 
-    
+
     @Test
     void IfInputIsInvalid_ShouldNotProcessTheInput() {
         sut.process(input);

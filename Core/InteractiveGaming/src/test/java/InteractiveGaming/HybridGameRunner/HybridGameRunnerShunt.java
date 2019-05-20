@@ -13,8 +13,18 @@ public class HybridGameRunnerShunt implements HybridGame {
     private HybridGameRunner sut = new HybridGameRunner(this);
 
     @Test
+    void IfNextIsNotInputTurnOnProcessing_ShouldDoNothing() {
+        nextIsInputTurn = false;
+        Input input = new Input(0, 0);
+
+        sut.process(input);
+
+        assertLogStringEquals("");
+    }
+
+    @Test
     void IfNextIsInputTurnOnProcessing_ShouldPlayInputBeforeRun() {
-        this.nextIsInputTurn = true;
+        nextIsInputTurn = true;
         Input input = new Input(0, 0);
 
         sut.process(input);

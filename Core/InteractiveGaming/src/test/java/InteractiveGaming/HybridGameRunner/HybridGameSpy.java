@@ -11,7 +11,7 @@ public class HybridGameSpy implements HybridGame {
     private boolean didPlayInput = false;
     private boolean didRunToNextInputTurn = false;
 
-    public void SetNextIsInputTurn(boolean b) {
+    public void setNextIsInputTurn(boolean b) {
         this.nextIsInputTurn = b;
     }
     public boolean nextIsInputTurn() {

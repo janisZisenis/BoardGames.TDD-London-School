@@ -12,18 +12,18 @@ public class HybridGameRunner implements InputProcessor, GameLoop {
         this.game = game;
     }
 
-    public void run() {
-        game.runToNextInputTurn();
-    }
-
     public void process(Input input) {
-        if(nextIsInputTurn())
+       if(nextIsInputTurn())
             runInput(input);
     }
 
     private void runInput(Input input) {
         game.playInput(input);
         run();
+    }
+
+    public void run() {
+        game.runToNextInputTurn();
     }
 
     private boolean nextIsInputTurn() {
