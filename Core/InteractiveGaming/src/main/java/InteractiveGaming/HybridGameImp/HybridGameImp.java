@@ -20,16 +20,16 @@ public class HybridGameImp implements HybridGame {
     }
 
     private void throwIfIsComputer() {
-        if(player.isComputer())
+        if(player.isNotInputTurn())
             throw new HybridGame.CannotPlayHumanOnComputersTurn();
     }
 
     public boolean nextIsInputTurn() {
-        return !player.isComputer();
+        return !player.isNotInputTurn();
     }
 
     public void runToNextInputTurn() {
-        while(player.isComputer() && !rule.isGameOver())
+        while(player.isNotInputTurn() && !rule.isGameOver())
             player.play();
     }
 

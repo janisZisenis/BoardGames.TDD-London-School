@@ -33,6 +33,20 @@ public class TicTacToeInputPlayerTest {
         assertMarkedAs(Mark.Haley);
     }
 
+    private void assertMarkedAs(Mark expected) {
+        Mark actual = service.getPlacedMark();
+        assertEquals(expected, actual);
+    }
+
+    private void makePlayerIsJohn() {
+        sut = new TicTacToeInputPlayer(Mark.John, service);
+    }
+
+    private void makePlayerIsHaley() {
+        sut = new TicTacToeInputPlayer(Mark.Haley, service);
+    }
+
+
     @Test
     void IfTheFieldIsR0C0_ShouldMarkR0C0() {
         makePlayerIsJohn();
@@ -53,23 +67,9 @@ public class TicTacToeInputPlayerTest {
         assertMarkedFieldEquals(new Field(2, 1));
     }
 
-
-    private void assertMarkedAs(Mark expected) {
-        Mark actual = service.getPlacedMark();
-        assertEquals(expected, actual);
-    }
-
     private void assertMarkedFieldEquals(Field expected) {
         Field actual = service.getMarkedField();
         assertEquals(expected, actual);
-    }
-
-    private void makePlayerIsJohn() {
-        sut = new TicTacToeInputPlayer(Mark.John, service);
-    }
-
-    private void makePlayerIsHaley() {
-        sut = new TicTacToeInputPlayer(Mark.Haley, service);
     }
 
 }

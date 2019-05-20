@@ -34,9 +34,9 @@ public class MultiHybridPlayer implements HybridPlayer, ResetPlayerService {
         it.next();
     }
 
-    public boolean isComputer() {
+    public boolean isNotInputTurn() {
         HybridPlayer p = it.getCurrent();
-        return p.isComputer();
+        return p.isNotInputTurn();
     }
 
     public void reset() {

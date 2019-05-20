@@ -19,8 +19,8 @@ public class GameOverRuleIsTwiceNotOver {
 
 
     @Test
-    void IfPlayerIsComputerTwice_ShouldPlayComputerTwice() {
-        player.setTimesIsComputer(2);
+    void IfIsPlayableWithoutInputTwice_ShouldPlayTwice() {
+        player.setTimesPlayableWithoutInput(2);
 
         sut.runToNextInputTurn();
 

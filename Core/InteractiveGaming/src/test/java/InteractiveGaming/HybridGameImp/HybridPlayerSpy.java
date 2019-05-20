@@ -5,14 +5,14 @@ import Input2D.Input.Input;
 public class HybridPlayerSpy implements HybridPlayer {
 
     private Input playedInput;
-    private int timesComputer = 0;
+    private int timesPlayableWithoutInput = 0;
     private int timesPlayedWithoutInput = 0;
 
-    public void setTimesIsComputer(int times) {
-        timesComputer = times;
+    public void setTimesPlayableWithoutInput(int times) {
+        timesPlayableWithoutInput = times;
     }
-    public boolean isComputer() {
-        return timesComputer > timesPlayedWithoutInput;
+    public boolean isNotInputTurn() {
+        return timesPlayableWithoutInput > timesPlayedWithoutInput;
     }
 
     public Input getPlayedInput() {
@@ -27,5 +27,13 @@ public class HybridPlayerSpy implements HybridPlayer {
     }
     public void play() {
         timesPlayedWithoutInput++;
+    }
+
+    public void setNextIsInputTurn() {
+        setTimesPlayableWithoutInput(0);
+    }
+
+    public void setNextIsNotInputTurn() {
+        setTimesPlayableWithoutInput(1);
     }
 }

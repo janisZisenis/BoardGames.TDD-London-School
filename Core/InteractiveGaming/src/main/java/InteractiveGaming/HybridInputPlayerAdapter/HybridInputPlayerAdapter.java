@@ -11,7 +11,7 @@ public class HybridInputPlayerAdapter implements HybridPlayer {
         this.player = player;
     }
 
-    public boolean isComputer() {
+    public boolean isNotInputTurn() {
         return false;
     }
 
