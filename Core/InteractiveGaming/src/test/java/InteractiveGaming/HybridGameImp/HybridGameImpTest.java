@@ -15,32 +15,33 @@ public class HybridGameImpTest {
     private HybridGameImp sut = new HybridGameImp(rule, player);
 
     @Test
-    void IfPlayerIsComputer_NextShouldNotBeHuman() {
-        player.setTimesIsComputer(1);
+    void IfNextIsNotInputTurn_NextShouldNotBeInputTurnEither() {
+        player.setNextIsNotInputTurn();
 
-        assertNextIsNotHuman();
+        assertNextIsNotInputTurn();
     }
 
-    private void assertNextIsNotHuman() {
+    private void assertNextIsNotInputTurn() {
         boolean actual = sut.nextIsInputTurn();
         assertFalse(actual);
     }
 
-    @Test
-    void IfPlayerIsNotComputer_NextShouldBeHuman() {
-        player.setTimesIsComputer(0);
 
-        assertNextIsHuman();
+    @Test
+    void IfNextIsInputTurn_NextShouldBeInputTurnEither() {
+        player.setNextIsInputTurn();
+
+        assertNextIsInputTurn();
     }
 
-    private void assertNextIsHuman() {
+    private void assertNextIsInputTurn() {
         boolean actual = sut.nextIsInputTurn();
         assertTrue(actual);
     }
 
     @Test
-    void IfPlayerIsComputer_PlayHumanShouldThrow() {
-        player.setTimesIsComputer(1);
+    void IfNextIsNotInputTurn_PlayInputShouldThrow() {
+        player.setNextIsNotInputTurn();
         Input input = new Input(0, 0);
 
         Executable act = () -> sut.playInput(input);
@@ -48,25 +49,15 @@ public class HybridGameImpTest {
         assertThrows(HybridGame.CannotPlayHumanOnComputersTurn.class, act);
     }
 
+
     @Test
-    void IfPlayerIsNotComputerAndInputIsR0C0_ShouldPlayInputR0C0() {
-        player.setTimesIsComputer(0);
+    void IfNextIsInputTurn_ShouldPlayInput() {
+        player.setNextIsInputTurn();
         Input input = new Input(0, 0);
 
         sut.playInput(input);
 
-        assertPlayedInputEquals(new Input(0, 0));
-    }
-
-
-    @Test
-    void IfPlayerIsNotComputerAndInputIsR1C2_ShouldPlayInputR1C2() {
-        player.setTimesIsComputer(0);
-        Input input = new Input(1, 2);
-
-        sut.playInput(input);
-
-        assertPlayedInputEquals(new Input(1, 2));
+        assertPlayedInputEquals(input);
     }
 
     private void assertPlayedInputEquals(Input expected) {

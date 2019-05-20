@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GameFacadeTest {
 
-    private PlayerSpy player = new PlayerSpy();
+    private PlayerMock player = new PlayerMock();
     private RendererSpy renderer = new RendererSpy();
     private GameOverRuleStub rule = new GameOverRuleStub();
     private GameFacade sut = new GameFacade(rule, renderer, player);
@@ -28,9 +28,11 @@ public class GameFacadeTest {
 
     @Test
     void IfGetsPlayed_ShouldHavePlayedTheVerbosePlayer() {
+        player.expectGetsPlayedTimes(1);
+
         sut.play();
 
-        assertHasPlayed();
+        player.verifyAll();
     }
 
     @Test
@@ -49,11 +51,6 @@ public class GameFacadeTest {
     private void assertIsNotOver() {
         boolean actual = sut.isOver();
         assertFalse(actual);
-    }
-
-    private void assertHasPlayed() {
-        boolean actual = player.hasPlayed();
-        assertTrue(actual);
     }
 
     private void assertHasRendered() {

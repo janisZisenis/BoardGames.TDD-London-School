@@ -2,8 +2,8 @@ package Gaming.GameOverRules.WinnerRule;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsGameOver;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsNotGameOver;
 
 public class WinnerRuleTest {
 
@@ -14,18 +14,14 @@ public class WinnerRuleTest {
     void IfHasWinner_GameShouldBeOver(){
         provider.setHasWinner(true);
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
     void IfHasNoWinner_GameShouldBeOver(){
         provider.setHasWinner(false);
 
-        boolean actual = sut.isGameOver();
-
-        assertFalse(actual);
+        assertIsNotGameOver(sut);
     }
 
 

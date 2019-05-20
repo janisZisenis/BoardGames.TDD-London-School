@@ -1,18 +1,16 @@
 package Gaming.MultiPlayer;
 
-import Gaming.GameFacade.PlayerSpy;
+import Gaming.GameFacade.PlayerMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class OneAdditionalPlayersAdded {
 
-    private PlayerSpy first = new PlayerSpy();
+    private PlayerMock first = new PlayerMock();
     private MultiPlayerMessengerDummy messenger = new MultiPlayerMessengerDummy();
     private MultiPlayer sut = new MultiPlayer(first, messenger);
 
-    private PlayerSpy second = new PlayerSpy();
+    private PlayerMock second = new PlayerMock();
     
     @BeforeEach
     void Setup() {
@@ -21,33 +19,34 @@ public class OneAdditionalPlayersAdded {
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheFirstOnce() {
+        first.expectGetsPlayedTimes(1);
+
         sut.play();
         sut.play();
 
-        assertHasPlayedTimes(first, 1);
+        first.verifyAll();
     }
 
     @Test
     void IfGetsPlayedTwice_ShouldHavePlayedTheSecondOnce() {
+        second.expectGetsPlayedTimes(1);
+
         sut.play();
         sut.play();
 
-        assertHasPlayedTimes(second, 1);
+        second.verifyAll();
     }
 
     @Test
     void IfGetsPlayedFourTimes_ShouldHavePlayedTheSecondTwice() {
+        second.expectGetsPlayedTimes(2);
+
         sut.play();
         sut.play();
         sut.play();
         sut.play();
 
-        assertHasPlayedTimes(second, 2);
-    }
-
-    private void assertHasPlayedTimes(PlayerSpy p, int expected) {
-        int actual = p.getPlayedTimes();
-        assertEquals(expected, actual);
+        second.verifyAll();
     }
 
 }

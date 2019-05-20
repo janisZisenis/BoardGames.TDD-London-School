@@ -3,8 +3,8 @@ package Gaming.GameOverRules.CompositeGameOverRule;
 import Gaming.GameFacade.GameOverRuleStub;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsGameOver;
+import static Gaming.Assertions.GameOverRuleAssertions.assertIsNotGameOver;
 
 public class CompositeGameOverRuleTest {
 
@@ -12,27 +12,21 @@ public class CompositeGameOverRuleTest {
 
     @Test
     void FreshInstance_GameShouldBeOver() {
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
     void AddedNotTerminatingRule_GameShouldNotBeOver() {
         makeNotTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertFalse(actual);
+        assertIsNotGameOver(sut);
     }
 
     @Test
     void AddedTerminatingRule_GameShouldBeOver() {
         makeTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
@@ -40,9 +34,7 @@ public class CompositeGameOverRuleTest {
         makeTerminatingRuleIsAdded();
         makeNotTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
@@ -50,9 +42,7 @@ public class CompositeGameOverRuleTest {
         makeNotTerminatingRuleIsAdded();
         makeTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
@@ -61,9 +51,7 @@ public class CompositeGameOverRuleTest {
         makeTerminatingRuleIsAdded();
         makeNotTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
 
     @Test
@@ -72,10 +60,9 @@ public class CompositeGameOverRuleTest {
         makeNotTerminatingRuleIsAdded();
         makeTerminatingRuleIsAdded();
 
-        boolean actual = sut.isGameOver();
-
-        assertTrue(actual);
+        assertIsGameOver(sut);
     }
+
 
     private void makeTerminatingRuleIsAdded() {
         GameOverRuleStub rule = new GameOverRuleStub();

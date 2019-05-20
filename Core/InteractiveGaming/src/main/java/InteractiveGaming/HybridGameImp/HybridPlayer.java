@@ -3,7 +3,7 @@ package InteractiveGaming.HybridGameImp;
 import Input2D.Input.Input;
 
 public interface HybridPlayer {
-    boolean isComputer();
+    boolean isNotInputTurn();
     void playInput(Input input);
     void play();
 

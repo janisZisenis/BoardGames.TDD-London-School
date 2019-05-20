@@ -1,8 +1,8 @@
 package InteractiveGaming.HybridPlayerAdapter;
 
-import InteractiveGaming.HybridGameImp.HybridPlayer;
+import Gaming.GameFacade.PlayerMock;
 import Input2D.Input.Input;
-import Gaming.GameFacade.PlayerSpy;
+import InteractiveGaming.HybridGameImp.HybridPlayer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class HybridPlayerAdapterTest {
 
-    private PlayerSpy player = new PlayerSpy();
+    private PlayerMock player = new PlayerMock();
     private HybridPlayerAdapter sut = new HybridPlayerAdapter(player);
 
     @Test
@@ -19,7 +19,7 @@ public class HybridPlayerAdapterTest {
     }
 
     private void assertIsComputer() {
-        boolean actual = sut.isComputer();
+        boolean actual = sut.isNotInputTurn();
         assertTrue(actual);
     }
 
@@ -34,14 +34,11 @@ public class HybridPlayerAdapterTest {
 
     @Test
     void IfGetsPlayedComputer_ShouldPlayComputer() {
+        player.expectGetsPlayedTimes(1);
+
         sut.play();
 
-        assertHasPlayedTimes(1);
-    }
-
-    private void assertHasPlayedTimes(int expected) {
-        int actual = player.getPlayedTimes();
-        assertEquals(expected, actual);
+        player.verifyAll();
     }
 
 }

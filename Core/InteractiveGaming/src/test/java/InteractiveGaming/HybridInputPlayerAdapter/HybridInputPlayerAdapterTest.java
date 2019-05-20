@@ -18,7 +18,7 @@ public class HybridInputPlayerAdapterTest {
     }
 
     private void assertIsNotComputer() {
-        boolean actual = sut.isComputer();
+        boolean actual = sut.isNotInputTurn();
         assertFalse(actual);
     }
 

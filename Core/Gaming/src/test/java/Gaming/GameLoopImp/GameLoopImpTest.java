@@ -65,6 +65,7 @@ public class GameLoopImpTest {
         assertTimesRendered(2);
     }
 
+
     private void assertTimesPlayed(int expected) {
         int actual = game.getTimesPlayed();
         assertEquals(expected, actual);

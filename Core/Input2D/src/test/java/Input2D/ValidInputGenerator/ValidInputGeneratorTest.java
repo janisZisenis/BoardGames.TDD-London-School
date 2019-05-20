@@ -25,8 +25,6 @@ public class ValidInputGeneratorTest {
 
         Input expected = generatedInputs[0];
         assertEquals(expected, actual);
-
-        generatedInputs = new Input[]{};
     }
 
     @Test
@@ -37,8 +35,6 @@ public class ValidInputGeneratorTest {
 
         Input expected = generatedInputs[1];
         assertEquals(expected, actual);
-
-        generatedInputs = new Input[]{};
     }
 
     @Test
@@ -49,10 +45,7 @@ public class ValidInputGeneratorTest {
 
         Input expected = generatedInputs[2];
         assertEquals(expected, actual);
-
-        generatedInputs = new Input[]{};
     }
-
 
 
     @Test
@@ -63,6 +56,12 @@ public class ValidInputGeneratorTest {
 
         assertHasNotAlerted();
     }
+
+    private void assertHasNotAlerted() {
+        boolean actual = alerter.hasAlerted();
+        assertFalse(actual);
+    }
+
 
     @Test
     void IfOnlySecondInputIsValid_ShouldAlertTheFirst() {
@@ -88,10 +87,6 @@ public class ValidInputGeneratorTest {
         assertEquals(expected, actual);
     }
 
-    private void assertHasNotAlerted() {
-        boolean actual = alerter.hasAlerted();
-        assertFalse(actual);
-    }
 
     
     private void makeFirstInputIsValid() {

@@ -68,26 +68,26 @@ public class NoAdditionalHybridPlayersAdded {
 
     @Test
     void IfFirstIsNotComputer_ShouldBeNotComputerEither() {
-        first.setTimesIsComputer(0);
+        first.setTimesPlayableWithoutInput(0);
 
         assertIsNotComputer();
     }
 
     private void assertIsNotComputer() {
-        boolean actual = sut.isComputer();
+        boolean actual = sut.isNotInputTurn();
         assertFalse(actual);
     }
 
 
     @Test
     void IfFirstIsComputer_ShouldBeComputerEither() {
-        first.setTimesIsComputer(1);
+        first.setTimesPlayableWithoutInput(1);
 
         assertIsComputer();
     }
 
     private void assertIsComputer() {
-        boolean actual = sut.isComputer();
+        boolean actual = sut.isNotInputTurn();
         assertTrue(actual);
     }
 
