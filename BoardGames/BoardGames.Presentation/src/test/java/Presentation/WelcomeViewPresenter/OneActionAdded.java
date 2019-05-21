@@ -1,6 +1,6 @@
 package Presentation.WelcomeViewPresenter;
 
-import Utilities.Transaction.TransactionSpy;
+import Utilities.Transaction.TransactionMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
@@ -12,7 +12,7 @@ public class OneActionAdded {
 
     private WelcomeViewSpy view = new WelcomeViewSpy();
     private WelcomeViewPresenter sut = new WelcomeViewPresenter(view);
-    private TransactionSpy action = new TransactionSpy();
+    private TransactionMock action = new TransactionMock();
 
     @BeforeEach
     void setUp() {
@@ -21,9 +21,11 @@ public class OneActionAdded {
 
     @Test
     void IfOneActionIsAddedAndClickedIndexIs0_ShouldExecuteAction() {
+        action.expectGetsExecuted();
+
         sut.onActionClicked(0);
 
-        assertHasExecuted(action);
+        action.verifyAll();
     }
 
     @Test
@@ -31,11 +33,6 @@ public class OneActionAdded {
         Executable act = () -> sut.onActionClicked(1);
 
         assertThrows(WelcomeViewPresenter.ActionIndexNotAvailable.class, act);
-    }
-
-    private void assertHasExecuted(TransactionSpy action) {
-        boolean actual = action.hasExecuted();
-        assertTrue(actual);
     }
 
 }

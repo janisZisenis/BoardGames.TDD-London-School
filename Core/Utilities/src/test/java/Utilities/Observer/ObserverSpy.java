@@ -1,7 +1,5 @@
 package Utilities.Observer;
 
-import Utilities.Observer.Observer;
-
 public class ObserverSpy implements Observer {
 
     private boolean updated = false;

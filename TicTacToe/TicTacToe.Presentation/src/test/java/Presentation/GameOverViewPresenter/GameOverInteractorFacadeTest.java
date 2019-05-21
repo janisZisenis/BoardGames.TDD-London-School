@@ -2,44 +2,45 @@ package Presentation.GameOverViewPresenter;
 
 import GameLoopMessengerImp.MessageProviderStub;
 import Gaming.GameFacade.GameOverRuleStub;
-import Utilities.Transaction.TransactionSpy;
+import Utilities.Transaction.TransactionMock;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GameOverInteractorFacadeTest {
 
-    private TransactionSpy cancelAction = new TransactionSpy();
-    private TransactionSpy reconfigureAction = new TransactionSpy();
-    private TransactionSpy restartAction = new TransactionSpy();
+    private TransactionMock cancelAction = new TransactionMock();
+    private TransactionMock reconfigureAction = new TransactionMock();
+    private TransactionMock restartAction = new TransactionMock();
     private GameOverRuleStub rule = new GameOverRuleStub();
     private MessageProviderStub provider = new MessageProviderStub();
     private GameOverInteractorFacade sut = new GameOverInteractorFacade(rule, provider, cancelAction, reconfigureAction, restartAction);
 
     @Test
     void IfCancelGetsClicked_ShouldExecuteCancelAction() {
+        cancelAction.expectGetsExecuted();
+
         sut.sendCancel();
 
-        assertHasExecuted(cancelAction);
+        cancelAction.verifyAll();
     }
 
     @Test
     void IfReconfigureGetsClicked_ShouldExecuteReconfigureAction() {
+        reconfigureAction.expectGetsExecuted();
+
         sut.sendReconfigure();
 
-        assertHasExecuted(reconfigureAction);
+        reconfigureAction.verifyAll();
     }
 
     @Test
     void IfRestartGetsClicked_ShouldExecuteRestartAction() {
+        restartAction.expectGetsExecuted();
+
         sut.sendRestart();
 
-        assertHasExecuted(restartAction);
-    }
-
-    private void assertHasExecuted(TransactionSpy action) {
-        boolean actual = action.hasExecuted();
-        assertTrue(actual);
+        restartAction.verifyAll();
     }
 
 

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverViewPresenterShunt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -105,33 +103,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverViewPresenterShunt.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/OneActionAdded.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-              <folding>
-                <element signature="method#showGameOverMessage#0;class#GameOverViewPresenterShunt#0" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="435">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java">
+        <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="283">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -152,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>extends BoardStub</find>
       <find>HashingBo</find>
       <find>hide</find>
       <find>interface GameView</find>
@@ -182,6 +175,7 @@
       <find>HybridPlayerSpy</find>
       <find>line</find>
       <find>proc</find>
+      <find>new TransactionSpy</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -225,13 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameImp/GameOverRuleIsOverAfterOnce.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameImp/GameOverRuleIsOnceNotOver.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameImp/GameOverRuleIsTwiceNotOver.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/TicTacToeInputPlayer/TicTacToeInputPlayerTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/BoardViewPresenter/BoardViewPresenterTest.java" />
-        <option value="$PROJECT_DIR$/BoardGames/BoardGames.FXView/src/main/java/FXView/FXWelcomeView.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXChoosePlayerView.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXConfigureView.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/Main.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayer/XHybridPlayerTest.java" />
@@ -274,8 +261,15 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridPlayerAdapter/HybridPlayerAdapterTest.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameImp/HybridGameImpTest.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridInputPlayerAdapter/HybridInputPlayerAdapterTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverViewPresenterShunt.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java" />
+        <option value="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Observer/ObserverSpy.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverInteractorFacadeTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverInteractorFacade.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ConfigureViewPresenter/ConfigureViewPresenterTest.java" />
+        <option value="$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/OneActionAdded.java" />
+        <option value="$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java" />
+        <option value="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" />
       </list>
     </option>
   </component>
@@ -452,72 +446,83 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
-              <item name="GameOverViewPresenter" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Observer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Transaction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -525,23 +530,23 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
-              <item name="TicTacToe.Presentation" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Presentation" type="462c0819:PsiDirectoryNode" />
-              <item name="GameOverViewPresenter" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Transaction" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -593,11 +598,11 @@
       <recent name="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Utilities.Transaction" />
       <recent name="Presentation.GameOverViewPresenter" />
       <recent name="InteractiveGaming.XHybridGameImp" />
       <recent name="InteractiveGaming.XHybridInputPlayerAdapter" />
       <recent name="InteractiveGaming.XHybridPlayerAdapter" />
-      <recent name="InteractiveGaming.XMultiHybridPlayer" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="InteractiveGaming.InputTurnProcessor" />
@@ -884,45 +889,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.21 at 15h 47m 26s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 15h 48m 26s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 15h 50m 15s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 15h 55m 05s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 33m 34s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 43m 16s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 43m 30s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 43m 39s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 44m 13s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.21 at 20h 44m 19s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 44m 57s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 45m 02s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 45m 07s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 51m 40s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 51m 50s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 51m 56s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 52m 44s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 54m 09s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 20h 55m 14s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="722865000" />
+    <option name="totallyTimeSpent" value="723511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2741148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2741148" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.2563966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -932,7 +937,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.44171122" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1150,27 +1155,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/GameOverInputProcessor/GameOverIsOver.java" />
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputProcessors/GameOverInputProcessor/GameOverProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="method#IfInputIsR0C0_ShouldProcessInputWithR0C0#0;class#GameOverIsNotOver#0" />
-            <element signature="method#assertProcessedInputEquals#0;class#GameOverIsNotOver#0" />
-            <element signature="method#ShouldNotProcessTheInput#0;class#GameOverIsNotOver#0" />
-            <element signature="method#assertHasNotProcessedInput#0;class#GameOverIsNotOver#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputProcessors/GameOverInputProcessor/GameOverInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/NextIsInputTurn.java" />
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/HybridGameSpy.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1529,24 +1513,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverInteractorFacadeTest.java">
+    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/main/java/Utilities/Transaction/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Observer/ObserverSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverViewPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="452">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverViewPresenterShunt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+        <state relative-caret-position="265">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="method#showGameOverMessage#0;class#GameOverViewPresenterShunt#0" />
             <element signature="e#358#359#0" expanded="true" />
@@ -1560,6 +1551,62 @@
             <element signature="e#568#569#0" expanded="true" />
             <element signature="e#604#605#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverInteractorFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverInteractorFacadeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="method#IfReconfigureGetsClicked_ShouldExecuteReconfigureAction#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#IfRestartGetsClicked_ShouldExecuteRestartAction#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#IfRuleIsGameOver_TheResponseShouldBeOverEither#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#assertIsGameOver#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#IfRuleIsNotGameOver_TheResponseShouldNotBeOverEither#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#assertIsNotGameOver#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#IfMessageIsProvided_TheResponseShouldHaveTheMessageEither#0;class#GameOverInteractorFacadeTest#0" />
+            <element signature="method#assertHasMessage#0;class#GameOverInteractorFacadeTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/ConfigureViewPresenter/ConfigureViewPresenterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/OneActionAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>

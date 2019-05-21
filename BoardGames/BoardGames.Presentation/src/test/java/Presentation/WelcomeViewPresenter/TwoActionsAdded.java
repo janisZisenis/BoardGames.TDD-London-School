@@ -1,19 +1,18 @@
 package Presentation.WelcomeViewPresenter;
 
-import Utilities.Transaction.TransactionSpy;
+import Utilities.Transaction.TransactionMock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TwoActionsAdded {
 
     private WelcomeViewSpy view = new WelcomeViewSpy();
     private WelcomeViewPresenter sut = new WelcomeViewPresenter(view);
-    private TransactionSpy first = new TransactionSpy();
-    private TransactionSpy second = new TransactionSpy();
+    private TransactionMock first = new TransactionMock();
+    private TransactionMock second = new TransactionMock();
 
     @BeforeEach
     void setUp() {
@@ -23,16 +22,20 @@ public class TwoActionsAdded {
 
     @Test
     void IfTwoActionsAreAddedAndClickedIndexIs0_ShouldExecuteFirstFirst() {
+        first.expectGetsExecuted();
+
         sut.onActionClicked(0);
 
-        assertHasExecuted(first);
+        first.verifyAll();
     }
 
     @Test
     void IfTwoActionsAreAddedAndClickedIndexIs1_ShouldExecuteSecondAction() {
+        second.expectGetsExecuted();
+
         sut.onActionClicked(1);
 
-        assertHasExecuted(second);
+        second.verifyAll();
     }
 
     @Test
@@ -40,11 +43,6 @@ public class TwoActionsAdded {
         Executable act = () -> sut.onActionClicked(3);
 
         assertThrows(WelcomeViewPresenter.ActionIndexNotAvailable.class, act);
-    }
-
-    private void assertHasExecuted(TransactionSpy action) {
-        boolean actual = action.hasExecuted();
-        assertTrue(actual);
     }
 
 }

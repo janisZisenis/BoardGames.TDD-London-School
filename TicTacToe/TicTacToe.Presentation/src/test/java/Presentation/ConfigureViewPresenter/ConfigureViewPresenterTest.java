@@ -1,30 +1,28 @@
 package Presentation.ConfigureViewPresenter;
 
-import Utilities.Transaction.TransactionSpy;
+import Utilities.Transaction.TransactionMock;
 import org.junit.jupiter.api.Test;
 
-import static Presentation.ConfigureViewPresenter.PlayerType.*;
+import static Presentation.ConfigureViewPresenter.PlayerType.Human;
+import static Presentation.ConfigureViewPresenter.PlayerType.InvincibleCPU;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ConfigureViewPresenterTest {
 
     private ConfigureViewStub view = new ConfigureViewStub();
-    private TransactionSpy cancelAction = new TransactionSpy();
+    private TransactionMock cancelAction = new TransactionMock();
     private RunInteractorSpy interactor = new RunInteractorSpy();
     private ConfigureViewPresenter sut = new ConfigureViewPresenter(view, cancelAction, interactor);
 
     @Test
     void IfCancelButtonGetsClicked_ShouldExecuteCancelAction() {
+        cancelAction.expectGetsExecuted();
+
         sut.onCancelClicked();
 
-        assertHasExecutedCancelAction();
+        cancelAction.verifyAll();
     }
 
-    private void assertHasExecutedCancelAction() {
-        boolean actual = cancelAction.hasExecuted();
-        assertTrue(actual);
-    }
 
     @Test
     void IfFirstPlayerTypeIsHumanOnStartClicked_RequestShouldHaveHumanAsFirstPlayerTypeToo() {
