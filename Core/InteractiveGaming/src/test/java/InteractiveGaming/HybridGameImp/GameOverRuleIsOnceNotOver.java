@@ -1,4 +1,4 @@
-package InteractiveGaming.XHybridGameImp;
+package InteractiveGaming.HybridGameImp;
 
 import Gaming.GameFacade.CountingGameOverRuleStub;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class XGameOverRuleIsOnceNotOver {
+public class GameOverRuleIsOnceNotOver {
     
-    private XHybridPlayerCountingSpy player = new XHybridPlayerCountingSpy();
+    private CountingHybridPlayerSpy player = new CountingHybridPlayerSpy();
     private CountingGameOverRuleStub rule = new CountingGameOverRuleStub();
-    private XHybridGameImp sut = new XHybridGameImp(rule, player);
+    private HybridGameImp sut = new HybridGameImp(rule, player);
 
     @BeforeEach
     void setUp() {

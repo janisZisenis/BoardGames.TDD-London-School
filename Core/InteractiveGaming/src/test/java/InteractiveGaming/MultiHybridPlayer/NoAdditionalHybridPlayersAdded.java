@@ -1,14 +1,15 @@
-package InteractiveGaming.XMultiHybridPlayer;
+package InteractiveGaming.MultiHybridPlayer;
 
 import Input2D.Input.Input;
+import InteractiveGaming.HybridGameImp.HybridPlayerSpy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class XNoAdditionalHybridPlayersAdded {
+public class NoAdditionalHybridPlayersAdded {
 
-    private XHybridPlayerSpy first = new XHybridPlayerSpy();
-    private XMultiHybridPlayer sut = new XMultiHybridPlayer(first);
+    private HybridPlayerSpy first = new HybridPlayerSpy();
+    private MultiHybridPlayer sut = new MultiHybridPlayer(first);
 
     @Test
     void IfGetsPlayedOnce_ShouldHavePlayedTheFirstOnce() {

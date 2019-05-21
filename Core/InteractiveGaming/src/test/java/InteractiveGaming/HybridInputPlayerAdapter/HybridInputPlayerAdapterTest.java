@@ -1,16 +1,16 @@
-package InteractiveGaming.XHybridInputPlayerAdapter;
+package InteractiveGaming.HybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
+import InteractiveGaming.HybridGameImp.HybridPlayer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class XHybridInputPlayerAdapterTest {
+public class HybridInputPlayerAdapterTest {
 
     private InputPlayerSpy player = new InputPlayerSpy();
-    private XHybridInputPlayerAdapter sut  = new XHybridInputPlayerAdapter(player);
+    private HybridInputPlayerAdapter sut  = new HybridInputPlayerAdapter(player);
 
     @Test
     void FreshInstance_ShouldNeedInput() {
@@ -26,7 +26,7 @@ public class XHybridInputPlayerAdapterTest {
     void IfGetsPlayedWithoutInputShouldThrow() {
         Executable act = () -> sut.play();
 
-        assertThrows(XHybridPlayer.CannotPlayWithoutInput.class, act);
+        assertThrows(HybridPlayer.CannotPlayWithoutInput.class, act);
     }
 
 

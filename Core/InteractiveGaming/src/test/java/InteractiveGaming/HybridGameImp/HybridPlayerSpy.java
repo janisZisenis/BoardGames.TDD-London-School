@@ -1,8 +1,8 @@
-package InteractiveGaming.XMultiHybridPlayer;
+package InteractiveGaming.HybridGameImp;
 
 import Input2D.Input.Input;
 
-public class XHybridPlayerSpy implements XHybridPlayer {
+public class HybridPlayerSpy implements HybridPlayer {
 
     private Input playedInput;
     private int timesPlayedWithoutInput = 0;

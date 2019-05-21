@@ -1,18 +1,18 @@
-package InteractiveGaming.XHybridPlayerAdapter;
+package InteractiveGaming.HybridPlayerAdapter;
 
 import Gaming.GameFacade.PlayerMock;
 import Input2D.Input.Input;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
+import InteractiveGaming.HybridGameImp.HybridPlayer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class XHybridPlayerAdapterTest {
+public class HybridPlayerAdapterTest {
 
     private PlayerMock player = new PlayerMock();
-    private XHybridPlayerAdapter sut = new XHybridPlayerAdapter(player);
+    private HybridPlayerAdapter sut = new HybridPlayerAdapter(player);
 
     @Test
     void FreshInstance_ShouldBeComputer() {
@@ -30,7 +30,7 @@ public class XHybridPlayerAdapterTest {
 
         Executable act = () -> sut.playInput(input);
 
-        assertThrows(XHybridPlayer.CannotPlayWithInput.class, act);
+        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
     }
 
     @Test

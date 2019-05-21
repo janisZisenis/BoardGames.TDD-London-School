@@ -1,19 +1,17 @@
-package InteractiveGaming.XHybridGameImp;
+package InteractiveGaming.HybridGameImp;
 
 import Gaming.GameFacade.GameOverRuleDummy;
 import Input2D.Input.Input;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayerSpy;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class XHybridGameImpTest {
+public class HybridGameImpTest {
 
     private GameOverRuleDummy rule = new GameOverRuleDummy();
-    private XHybridPlayerSpy player = new XHybridPlayerSpy();
-    private XHybridGameImp sut = new XHybridGameImp(rule, player);
+    private HybridPlayerSpy player = new HybridPlayerSpy();
+    private HybridGameImp sut = new HybridGameImp(rule, player);
 
     @Test
     void IfNextIsNotInputTurn_NextShouldNotBeInputTurnEither() {
@@ -47,7 +45,7 @@ public class XHybridGameImpTest {
 
         Executable act = () -> sut.playInput(input);
 
-        assertThrows(XHybridPlayer.CannotPlayWithInput.class, act);
+        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
     }
 
 

@@ -1,13 +1,13 @@
-package InteractiveGaming.XHybridInputPlayerAdapter;
+package InteractiveGaming.HybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
+import InteractiveGaming.HybridGameImp.HybridPlayer;
 
-public class XHybridInputPlayerAdapter implements XHybridPlayer {
+public class HybridInputPlayerAdapter implements HybridPlayer {
 
     private final InputPlayer player;
 
-    public XHybridInputPlayerAdapter(InputPlayer player) {
+    public HybridInputPlayerAdapter(InputPlayer player) {
         this.player = player;
     }
 

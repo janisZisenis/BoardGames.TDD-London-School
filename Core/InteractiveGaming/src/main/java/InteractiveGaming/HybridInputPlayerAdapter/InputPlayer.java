@@ -1,4 +1,4 @@
-package InteractiveGaming.XHybridInputPlayerAdapter;
+package InteractiveGaming.HybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
 

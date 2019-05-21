@@ -1,9 +1,8 @@
-package InteractiveGaming.XHybridGameImp;
+package InteractiveGaming.HybridGameImp;
 
 import Input2D.Input.Input;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
 
-public class XHybridPlayerCountingSpy implements XHybridPlayer {
+public class CountingHybridPlayerSpy implements HybridPlayer {
 
     private int timesIsNotInputTurn = 0;
     private int timesPlayedWithoutInput = 0;

@@ -1,16 +1,15 @@
-package InteractiveGaming.XHybridGameImp;
+package InteractiveGaming.HybridGameImp;
 
 import Gaming.GameFacade.GameOverRule;
 import Input2D.Input.Input;
 import InteractiveGaming.HybridGameRunner.HybridGame;
-import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
 
-public class XHybridGameImp implements HybridGame {
+public class HybridGameImp implements HybridGame {
 
-    private final XHybridPlayer player;
+    private final HybridPlayer player;
     private final GameOverRule rule;
 
-    public XHybridGameImp(GameOverRule rule, XHybridPlayer player) {
+    public HybridGameImp(GameOverRule rule, HybridPlayer player) {
         this.player = player;
         this.rule = rule;
     }
@@ -27,7 +26,7 @@ public class XHybridGameImp implements HybridGame {
 
     private void throwIfNextIsNotInputTurn() {
         if(!player.isInputTurn())
-            throw new XHybridPlayer.CannotPlayWithInput();
+            throw new HybridPlayer.CannotPlayWithInput();
     }
 
     public void runToNextInputTurn() {

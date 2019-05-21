@@ -4,7 +4,7 @@ import Domain.Data.Field.Field;
 import Domain.Data.Mark;
 import Domain.TicTacToePlayer.MarkFieldService;
 import Input2D.Input.Input;
-import InteractiveGaming.XHybridInputPlayerAdapter.InputPlayer;
+import InteractiveGaming.HybridInputPlayerAdapter.InputPlayer;
 
 public class TicTacToeInputPlayer implements InputPlayer {
 

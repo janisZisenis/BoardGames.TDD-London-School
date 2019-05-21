@@ -1,18 +1,19 @@
-package InteractiveGaming.XMultiHybridPlayer;
+package InteractiveGaming.MultiHybridPlayer;
 
 import Input2D.Input.Input;
+import InteractiveGaming.HybridGameImp.HybridPlayerSpy;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class XTwoAdditionalHybridPlayersAdded {
+public class TwoAdditionalHybridPlayersAdded {
 
-    private XHybridPlayerSpy first = new XHybridPlayerSpy();
-    private XMultiHybridPlayer sut = new XMultiHybridPlayer(first);
+    private HybridPlayerSpy first = new HybridPlayerSpy();
+    private MultiHybridPlayer sut = new MultiHybridPlayer(first);
 
-    private XHybridPlayerSpy second = new XHybridPlayerSpy();
-    private XHybridPlayerSpy third = new XHybridPlayerSpy();
+    private HybridPlayerSpy second = new HybridPlayerSpy();
+    private HybridPlayerSpy third = new HybridPlayerSpy();
 
     @BeforeEach
     void SetUp() {
@@ -39,7 +40,7 @@ public class XTwoAdditionalHybridPlayersAdded {
         assertPlayedTimes(third, 1);
     }
 
-    private void assertPlayedTimes(XHybridPlayerSpy p, int expected) {
+    private void assertPlayedTimes(HybridPlayerSpy p, int expected) {
         int actual = p.getTimesPlayedWithoutInput();
         assertEquals(expected, actual);
     }
@@ -67,7 +68,7 @@ public class XTwoAdditionalHybridPlayersAdded {
     }
 
 
-    private void assertPlayedInputEquals(XHybridPlayerSpy p, Input expected) {
+    private void assertPlayedInputEquals(HybridPlayerSpy p, Input expected) {
         Input actual = p.getPlayedInput();
         assertEquals(expected, actual);
     }

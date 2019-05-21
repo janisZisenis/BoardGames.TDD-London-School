@@ -1,9 +1,9 @@
-package InteractiveGaming.XMultiHybridPlayer;
+package InteractiveGaming.HybridGameImp;
 
 import Input2D.Input.Input;
 import InteractiveGaming.InputTurnProcessor.IsInputTurnProvider;
 
-public interface XHybridPlayer extends IsInputTurnProvider {
+public interface HybridPlayer extends IsInputTurnProvider {
     void play();
     void playInput(Input input);
     boolean isInputTurn();
