@@ -3,7 +3,7 @@ package InteractiveGaming.InputTurnProcessor;
 import Input2D.Input.Input;
 import Input2D.InputProcessor;
 
-public class InputTurnProcessor {
+public class InputTurnProcessor implements InputProcessor {
 
     private final InputProcessor processor;
     private final IsInputTurnProvider provider;

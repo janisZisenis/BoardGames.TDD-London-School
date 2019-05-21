@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/IsInputTurnProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/IsInputTurnProviderStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -108,38 +106,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/MarkStoringTest.java">
+        <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-              <folding>
-                <element signature="method#IfJohnMarksSecondAfterHaleyMarkedFirst_FirstFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
-                <element signature="method#IfHaleyMarksSecondAfterJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
-                <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
-                <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_ThirdFieldShouldBeJohns#0;class#MarkStoringTest#0" />
-                <element signature="method#IfHaleyMarksThirdAfterJohnMarkedSecondAndHaleyMarkedFirst_ThirdFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
-                <element signature="method#makeJohnMarkedFirstAndHaleyMarkedSecond#0;class#MarkStoringTest#0" />
-                <element signature="method#makeHaleyMarkedFirstAndJohnMarkedSecond#0;class#MarkStoringTest#0" />
-                <element signature="method#assertFieldHasMark#0;class#MarkStoringTest#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/Input2D/src/main/java/Input2D/InputProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="31" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="31" />
+            <state relative-caret-position="358">
+              <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -154,10 +124,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java">
+        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="37" />
+            <state relative-caret-position="135">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,10 +136,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#IfTurnIsInputTurn_ShouldProcessInput#0;class#InputTurnProcessorTest#0" />
+                <element signature="method#assertProcessedInputEquals#0;class#InputTurnProcessorTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="75">
+              <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,7 +204,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/IsInputTurnProviderStub.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -230,7 +235,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>null</find>
       <find>extends BoardStub</find>
       <find>HashingBo</find>
       <find>hide</find>
@@ -260,6 +264,7 @@
       <find>HybridGameSpy</find>
       <find>HybridPlayerSpy</find>
       <find>line</find>
+      <find>proc</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -337,7 +342,6 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XNoAdditionalHybridPlayersAdded.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayerAdapter/XHybridPlayerAdapterTest.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridInputPlayerAdapter/HybridInputPlayerAdapterTest.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridPlayerAdapter/XHybridPlayerAdapter.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridInputPlayerAdapter/XHybridInputPlayerAdapter.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridInputPlayerAdapter/XHybridInputPlayerAdapterTest.java" />
@@ -346,14 +350,15 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsOnceNotOver.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java" />
-        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/MarkStoringTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/IsInputTurnProvider.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/IsInputTurnProviderStub.java" />
+        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java" />
+        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" />
+        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" />
+        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java" />
       </list>
     </option>
   </component>
@@ -530,96 +535,58 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="InputTurnProcessor" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Apps" type="462c0819:PsiDirectoryNode" />
+              <item name="FXBoardGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="InputTurnProcessor" type="462c0819:PsiDirectoryNode" />
+              <item name="App" type="462c0819:PsiDirectoryNode" />
+              <item name="notTested_Demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -697,7 +664,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AllTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="FXBoardGames" />
@@ -957,14 +924,11 @@
       <workItem from="1558278206907" duration="7988000" />
       <workItem from="1558356085987" duration="258000" />
       <workItem from="1558423494078" duration="1463000" />
-      <workItem from="1558445506223" duration="1389000" />
+      <workItem from="1558445506223" duration="1662000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.21 at 15h 18m 33s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.21 at 15h 18m 52s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -992,9 +956,12 @@
     <history-entry file="AllTest - 2019.05.21 at 15h 50m 15s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 15h 55m 05s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="721081000" />
+    <option name="totallyTimeSpent" value="721354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -1198,7 +1165,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java</url>
-          <line>63</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="137" />
         </line-breakpoint>
@@ -1228,26 +1195,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/ValidInputGenerator/ValidInputGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-          <folding>
-            <element signature="method#IfFirstInputIsValid_ShouldBeTheFirstInput#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#IfOnlySecondInputIsValid_ShouldBeTheSecondInput#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#IfOnlyThirdInputIsValid_ShouldBeTheThirdInput#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#IfFirstInputIsValid_ShouldNotAlert#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#assertHasNotAlerted#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#IfOnlySecondInputIsValid_ShouldAlertTheFirst#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#IfOnlyThirdInputIsValid_ShouldAlertTheSecond#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#assertAlertedInputEquals#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#makeFirstInputIsValid#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#makeOnlySecondInputIsValid#0;class#ValidInputGeneratorTest#0" />
-            <element signature="method#makeOnlyThirdInputIsValid#0;class#ValidInputGeneratorTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/GameOverInputProcessor/GameOverIsOver.java" />
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/GameOverInputProcessor/GameOverProcessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1578,20 +1525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1620,16 +1553,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#477#478#0" expanded="true" />
             <element signature="e#547#548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1665,13 +1588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/main/java/Input2D/ValidInputProcessor/ValidInputProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/InputProcessorSpy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1679,26 +1595,6 @@
           <folding>
             <element signature="e#386#387#0" expanded="true" />
             <element signature="e#419#420#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1719,6 +1615,69 @@
             <element signature="e#164#165#0" expanded="true" />
             <element signature="e#280#281#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#IfTurnIsInputTurn_ShouldProcessInput#0;class#InputTurnProcessorTest#0" />
+            <element signature="method#assertProcessedInputEquals#0;class#InputTurnProcessorTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/main/java/Input2D/ValidInputProcessor/ValidInputProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="86" column="29" lean-forward="true" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/InputTurnProcessor/InputTurnProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

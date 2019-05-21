@@ -23,6 +23,7 @@ import Input2D.ValidInputGenerator.InputAlerter;
 import Input2D.ValidInputGenerator.InputValidator;
 import InteractiveGaming.GameOverInputProcessor.GameOverInputProcessor;
 import InteractiveGaming.HybridGameRunner.HybridGame;
+import InteractiveGaming.InputTurnProcessor.InputTurnProcessor;
 import InteractiveGaming.XHybridGameImp.XHybridGameImp;
 import InteractiveGaming.XHybridInputPlayerAdapter.XHybridInputPlayerAdapter;
 import InteractiveGaming.XHybridPlayerAdapter.XHybridPlayerAdapter;
@@ -80,8 +81,10 @@ public class TicTacToeRunInteractor implements RunInteractor {
 
         InputValidator validator = new FieldIsEmptyValidator(board);
         InputAlerter alerter = new FXInputAlerter(AlertingMessages.inputAlreadyMarked);
+
         InputProcessor processor = Input2D.Factory.makeAlertingInputProcessor(runner, validator, alerter);
         processor = new GameOverInputProcessor(processor, rule);
+        processor = new InputTurnProcessor(processor, multiPlayer);
         BoardViewPresenter boardPresenter = new BoardViewPresenter(board, boardView, processor);
         listenableBoard.addListener(boardPresenter);
         boardView.setDelegate(boardPresenter);
