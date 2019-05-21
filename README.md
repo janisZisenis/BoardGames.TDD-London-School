@@ -76,13 +76,13 @@ foo@bar:~$ java -jar TicTacToe.Console-1.0-jar-with-dependencies.jar
 
 I developed the project using IntelliJ IDEA, so everything should work fine. But sometimes, however, IntelliJ has some problems finding or downloading the dependecies. In that case you could try..
 
-1. ... to toggle the maven offline mode.
+1. ... to toggle the maven **offline mode**.
 
-2. ... to use IntelliJ's build in maven (maven explorer at the right) to clean and package the project under **tictactoe-tdd (root)/Lifecycle**.
+2. ... to use IntelliJ's build in maven (maven explorer at the right) to **clean and package** the project under **tictactoe-tdd (root)/Lifecycle**.
 
-3. ... clear the .idea folder (losing all the Run/Debug Configurations I already generated) and reopen the !!pom.xml!! (not the containing folder).
+3. ... **clear the .idea folder** (losing all the Run/Debug Configurations I already generated) and reopen the !!pom.xml!! (not the containing folder).
 
-4. ... Invalidate Cache and Restart.
+4. ... **Invalidate Cache and Restart**.
 
 ## *NOTE:*
 I'm sorry about not updating the documentation after every single step or state change of the system. As you know the state of software is (or should be) flexible, therefore changes to the system are likely going to happen. That's why a too precise documentation is not maintainable and not a good idea. But in this Kata the resulting state of the system is exactly what matters, so I will really try to keep it up to date. If the documentation does not match the code, please refer to the unit tests as they can't lie about what the system really does.
