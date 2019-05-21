@@ -8,5 +8,6 @@ public interface XHybridPlayer {
     boolean isInputTurn();
 
     class CannotPlayWithInput extends RuntimeException {}
+    class CannotPlayWithoutInput extends RuntimeException {}
 
 }
