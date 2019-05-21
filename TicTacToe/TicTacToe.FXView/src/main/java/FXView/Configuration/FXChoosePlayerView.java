@@ -30,14 +30,14 @@ public class FXChoosePlayerView extends Pane {
 
     private final StackPane stack = new StackPane();
     private final GridPane grid = new GridPane();
-    private final GridPane aiGrid = new GridPane();
+//    private final GridPane aiGrid = new GridPane();
 
     private final RadioButton humanRadio = new RadioButton(human);
     private final RadioButton humbleRadio = new RadioButton(humbleCPU);
     private final RadioButton invincibleRadio = new RadioButton(invincibleCPU);
     private final RadioButton aiRadio = new RadioButton(aiCPU);
 
-    private final int height = 110;
+    private final int height = 75;
     private final int width = 170;
 
     private HashMap<PlayerType, RadioButton> buttons = new HashMap<>();
