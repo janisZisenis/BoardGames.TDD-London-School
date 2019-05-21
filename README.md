@@ -39,7 +39,7 @@ The intended board games are:
 * Draughts
 * Chess
 
-## Executing the code
+## Executing the Code
 
 **Maven**
 
