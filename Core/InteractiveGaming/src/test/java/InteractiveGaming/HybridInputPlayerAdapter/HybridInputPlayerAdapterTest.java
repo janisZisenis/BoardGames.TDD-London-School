@@ -27,7 +27,7 @@ public class HybridInputPlayerAdapterTest {
     void IfGetsPlayedWithoutInputShouldThrow() {
         Executable act = () -> sut.play();
 
-        assertThrows(HybridPlayer.CannotPlayComputerOnHumansTurn.class, act);
+        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
     }
 
 

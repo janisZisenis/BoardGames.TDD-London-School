@@ -8,5 +8,5 @@ public interface HybridPlayer {
     void play();
 
     class CannotPlayHumanOnComputersTurn extends RuntimeException {}
-    class CannotPlayComputerOnHumansTurn extends RuntimeException {}
+    class CannotPlayWithInput extends RuntimeException {}
 }

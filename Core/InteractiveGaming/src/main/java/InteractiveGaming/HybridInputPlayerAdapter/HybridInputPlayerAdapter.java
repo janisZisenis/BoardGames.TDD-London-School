@@ -16,7 +16,7 @@ public class HybridInputPlayerAdapter implements HybridPlayer {
     }
 
     public void play() {
-        throw new CannotPlayComputerOnHumansTurn();
+        throw new CannotPlayWithInput();
     }
 
     public void playInput(Input input) {

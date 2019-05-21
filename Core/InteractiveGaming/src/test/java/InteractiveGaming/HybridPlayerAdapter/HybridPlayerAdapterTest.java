@@ -29,7 +29,7 @@ public class HybridPlayerAdapterTest {
 
         Executable act = () -> sut.playInput(input);
 
-        assertThrows(HybridPlayer.CannotPlayComputerOnHumansTurn.class, act);
+        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
     }
 
     @Test

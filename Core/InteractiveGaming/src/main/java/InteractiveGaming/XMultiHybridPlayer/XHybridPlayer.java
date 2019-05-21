@@ -6,4 +6,7 @@ public interface XHybridPlayer {
     void play();
     void playInput(Input input);
     boolean isInputTurn();
+
+    class CannotPlayWithInput extends RuntimeException {}
+
 }
