@@ -20,29 +20,72 @@ For those who are new to TDD, these are the rules and aspects I strictly obeyed:
    * Readability
    * Maintainability
 
-... nevertheless I won't omit the general tool set of the software craftmanship, the design principles! Especially in the phase Red, SOLID (etc.) support the programmer to discover different ways a specific task/behaviour can be represented in software. (In general the most readable, maintainable and trustworthy tests conform to the design principles.)
+... nevertheless I won't omit the general tool set of the software craftmanship, the design principles! Especially in the phase Red, the principles (SOLID, etc.) support the programmer to discover different ways a specific task/behaviour can be represented in software. (In general the most readable, maintainable and trustworthy tests conform to the design principles.)
 
-Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.
+Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. (To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.)
 
-If you're interested in TDD, feel free to enter my code and make your own conclusion. In here I don't describe the evolution of the project, this is rather a "look-what-happens-to-the-outcome-if-your-TDDing".
+If you're interested in TDD, feel free to enter my code and make your own conclusion. The unit tests should explain the system and serve as documentation of the system. In addition to that I attached some UML-like diagrams to visualise the most interesting/important parts/modules of the system.
 
 ## The Exercise - BoardGames App
 
 As exercise I decided to implement a system containing the most known board games in java, which are to be executed as gui application (using JavaFX) as well as console application.
 
-The intended board games are (linked games are in progress):
+The intended board games are:
 
-* [TicTacToe](https://github.com/janisZisenis/BoardGames.TDDKata/blob/readme/documentation/TicTacToe.md)
-* Conway's Game of Life (*coming soon*)
-* Four in a Row (*coming soon*)
-* BattleShip (*coming soon*)
-* Draughts (*coming soon*)
-* Chess (*coming soon*)
+* TicTacToe :white_check_mark:
+* Conway's Game of Life
+* Four in a Row
+* BattleShip
+* Draughts
+* Chess
+
+## Execute the code
+
+**Maven**
+
+BoardGames.TDD is a maven project. To build it just download it and run the desired maven command in the terminal.
+
+Assuming the path to the project's folder (where the root pom.xml is placed) is <path/to/project> you should execute the following commands to build the executable jar files:
+
+```console
+foo@bar:~$ cd <path/to/project>
+foo@bar:~$ mvn package
+```
+
+To execute the different applications afterwards navigate in the app's target folders and execute the jars with dependencies.
+
+FXBoardGames.Main:
+```console
+foo@bar:~$ cd <path/to/project>/Apps/FXBoardGames/target
+foo@bar:~$ java -jar FXBoardGames-1.0-jar-with-dependencies.jar
+```
+
+TicTacToe.SequentialGui.Main:
+```console
+foo@bar:~$ cd <path/to/project>/Apps/TicTacToe.SequentialGui/target/
+foo@bar:~$ java -jar TicTacToe.SequentialGui-1.0-jar-with-dependencies.jar
+```
+
+TicTacToe.Console.Main:
+```console
+foo@bar:~$ cd <path/to/project>/Apps/TicTacToe.Console/target/
+foo@bar:~$ java -jar TicTacToe.Console-1.0-jar-with-dependencies.jar
+```
+
+**IntelliJ IDEA**
+
+I developed the project using IntelliJ IDEA, so everything should work fine. But sometimes, however, IntelliJ has some problems finding or downloading the dependecies. In that case you could try..
+
+1. ... to toggle the maven offline mode.
+
+2. ... to use IntelliJ's build in maven (maven explorer at the right) to clean and package the project under **tictactoe-tdd (root)/Lifecycle**.
+
+3. ... clear the .idea folder (losing all the Run/Debug Configurations I already generated) and reopen the !!pom.xml!! (not the containing folder).
+
+4. ... Invalidate Cache and Restart.
 
 ## *NOTE:*
-You might judge the documented systems and the code as overdesigned in comparison to the domain logic (for example TicTacToe), but especially in Katas which are explicitly meant to train your design skills, **not a too high extent of design should considered to be bad**. It's rather **the lack of design which should be considered as a lack of discipline**.
-
-I'm sorry about not updating the documentation after every single step or state change of the system. As you know the state of software is (or should be) flexible, therefore changes to the system are likely going to happen. That's why a too precise documentation is not maintainable and not a good idea. But in this Kata the resulting state of the system is exactly what matters, so I will really try to keep it up to date. If the documentation does not match the code, please refer to the status date of the documentation.
+I'm sorry about not updating the documentation after every single step or state change of the system. As you know the state of software is (or should be) flexible, therefore changes to the system are likely going to happen. That's why a too precise documentation is not maintainable and not a good idea. But in this Kata the resulting state of the system is exactly what matters, so I will really try to keep it up to date. If the documentation does not match the code, please refer to the unit tests as they can't lie about what the system really does.
 
 Have fun exploring my work, thanks for reading and enjoy!
 
