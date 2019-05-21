@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsOnceNotOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsOnceNotOver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsTwiceNotOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsTwiceNotOver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -129,7 +127,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -139,6 +137,31 @@
                 <element signature="method#playInput#0;class#XHybridGameImp#0" />
                 <element signature="method#throwIfNextIsNotInputTurn#0;class#XHybridGameImp#0" />
                 <element signature="method#runToNextInputTurn#0;class#XHybridGameImp#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#1012#1013#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/GameOverRuleAssertions.java" />
         <option value="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/WinnerRule/WinnerRuleTest.java" />
         <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java" />
         <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java" />
@@ -272,7 +294,6 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XTwoAdditionalHybridPlayersAdded.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayerSpy.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XNoAdditionalHybridPlayersAdded.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayerAdapter/XHybridPlayerAdapterTest.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridInputPlayerAdapter/HybridInputPlayerAdapterTest.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" />
@@ -284,6 +305,8 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XGameOverRuleIsOnceNotOver.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java" />
+        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" />
+        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" />
       </list>
     </option>
   </component>
@@ -521,7 +544,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="XHybridGameImp" type="462c0819:PsiDirectoryNode" />
+              <item name="XHybridPlayerAdapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
+              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="XMultiHybridPlayer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
@@ -649,7 +683,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AllTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="FXBoardGames" />
@@ -945,7 +979,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719498000" />
+    <option name="totallyTimeSpent" value="719692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -1179,13 +1213,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/DifferentInputsWithTheSameSumOfRowAndColumn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/ComparativeIsNotAnInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1495,20 +1522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/MultiHybridPlayer/MultiHybridPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1629,18 +1642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1658,6 +1659,39 @@
             <element signature="method#throwIfNextIsNotInputTurn#0;class#XHybridGameImp#0" />
             <element signature="method#runToNextInputTurn#0;class#XHybridGameImp#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
         </state>
       </provider>
     </entry>

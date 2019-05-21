@@ -1,12 +1,13 @@
 package InteractiveGaming.XMultiHybridPlayer;
 
+import Gaming.RestartTransaction.ResetPlayerService;
 import Input2D.Input.Input;
 import Utilities.CyclicListIterator.CyclicListIterator;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class XMultiHybridPlayer {
+public class XMultiHybridPlayer implements XHybridPlayer, ResetPlayerService {
 
     private final List<XHybridPlayer> players = new LinkedList<>();
     private CyclicListIterator<XHybridPlayer> it;

@@ -6,9 +6,9 @@ import Domain.Board.BoardDecorators.ObservableBoard.ObservableBoard;
 import Domain.Board.HashingBoard.HashingBoard;
 import Domain.Data.BoardBoundaries;
 import Domain.Data.Mark;
+import Domain.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
 import Domain.GameEvaluation.GameEvaluator.Api.WinningLineProvider;
-import Domain.FieldIsEmptyValidator.FieldIsEmptyValidator;
 import Domain.TicTacToeInputPlayer.TicTacToeInputPlayer;
 import FXSynchronizingView.FXSynchronizingGameOverView;
 import FXView.FXIODeviceFactory;
@@ -22,12 +22,12 @@ import Input2D.InputProcessor;
 import Input2D.ValidInputGenerator.InputAlerter;
 import Input2D.ValidInputGenerator.InputValidator;
 import InteractiveGaming.GameOverInputProcessor.GameOverInputProcessor;
-import InteractiveGaming.HybridGameImp.HybridGameImp;
-import InteractiveGaming.HybridGameImp.HybridPlayer;
 import InteractiveGaming.HybridGameRunner.HybridGame;
-import InteractiveGaming.HybridInputPlayerAdapter.HybridInputPlayerAdapter;
-import InteractiveGaming.HybridPlayerAdapter.HybridPlayerAdapter;
-import InteractiveGaming.MultiHybridPlayer.MultiHybridPlayer;
+import InteractiveGaming.XHybridGameImp.XHybridGameImp;
+import InteractiveGaming.XHybridInputPlayerAdapter.XHybridInputPlayerAdapter;
+import InteractiveGaming.XHybridPlayerAdapter.XHybridPlayerAdapter;
+import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
+import InteractiveGaming.XMultiHybridPlayer.XMultiHybridPlayer;
 import MessageProviders.FixedMessageProvider.FixedMessageProvider;
 import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
 import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
@@ -65,13 +65,13 @@ public class TicTacToeRunInteractor implements RunInteractor {
         ListenableBoard listenableBoard = new ListenableBoard(hashing);
         ObservableBoard board = new ObservableBoard(listenableBoard);
 
-        HybridPlayer john = makePlayer(request.getFirstPlayerType(), Mark.John, board);
-        HybridPlayer haley = makePlayer(request.getSecondPlayerType(), Mark.Haley, board);
-        MultiHybridPlayer multiPlayer = new MultiHybridPlayer(john);
+        XHybridPlayer john = makePlayer(request.getFirstPlayerType(), Mark.John, board);
+        XHybridPlayer haley = makePlayer(request.getSecondPlayerType(), Mark.Haley, board);
+        XMultiHybridPlayer multiPlayer = new XMultiHybridPlayer(john);
         multiPlayer.add(haley);
 
         GameOverRule rule = Domain.Factory.makeGameOverRule(board);
-        HybridGame game = new HybridGameImp(rule, multiPlayer);
+        HybridGame game = new XHybridGameImp(rule, multiPlayer);
         AsyncHybridGameRunner runner = new AsyncHybridGameRunner(game);
 
         WinningLineProvider lineProvider = Domain.Factory.makeWinningLineProvider(board);
@@ -113,7 +113,7 @@ public class TicTacToeRunInteractor implements RunInteractor {
         worker.start();
     }
 
-    private HybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
+    private XHybridPlayer makePlayer(PlayerType type, Mark m, Board board) {
         if(type == PlayerType.InvincibleCPU)
             return makeInvinciblePlayer(m, board);
         if(type == PlayerType.HumbleCPU)
@@ -122,19 +122,19 @@ public class TicTacToeRunInteractor implements RunInteractor {
         return makeHumanPlayer(m, board);
     }
 
-    private HybridPlayer makeHumanPlayer(Mark m, Board board) {
-        return new HybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
+    private XHybridPlayer makeHumanPlayer(Mark m, Board board) {
+        return new XHybridInputPlayerAdapter(new TicTacToeInputPlayer(m, board));
     }
 
-    private HybridPlayer makeHumblePlayer(Mark m, Board board) {
+    private XHybridPlayer makeHumblePlayer(Mark m, Board board) {
         Player p = Domain.Factory.makeHumbleComputerPlayer(m, board, new FXIODeviceFactory());
         p = makeDelayingPlayer(p);
-        return new HybridPlayerAdapter(p);
+        return new XHybridPlayerAdapter(p);
     }
-    private HybridPlayer makeInvinciblePlayer(Mark m, Board board) {
+    private XHybridPlayer makeInvinciblePlayer(Mark m, Board board) {
         Player p = Domain.Factory.makeInvincibleComputerPlayer(m, board, new FXIODeviceFactory());
         p = makeDelayingPlayer(p);
-        return new HybridPlayerAdapter(p);
+        return new XHybridPlayerAdapter(p);
     }
 
     private Player makeDelayingPlayer(Player p) {
