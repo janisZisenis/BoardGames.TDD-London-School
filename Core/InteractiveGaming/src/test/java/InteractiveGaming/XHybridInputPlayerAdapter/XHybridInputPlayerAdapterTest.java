@@ -1,7 +1,6 @@
 package InteractiveGaming.XHybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
-import InteractiveGaming.HybridInputPlayerAdapter.InputPlayerSpy;
 import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;

@@ -1,7 +1,6 @@
 package InteractiveGaming.XHybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
-import InteractiveGaming.HybridInputPlayerAdapter.InputPlayer;
 import InteractiveGaming.XMultiHybridPlayer.XHybridPlayer;
 
 public class XHybridInputPlayerAdapter implements XHybridPlayer {
