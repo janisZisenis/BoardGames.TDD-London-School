@@ -24,7 +24,7 @@ For those who are new to TDD, these are the rules and aspects I strictly obeyed:
 
 Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. (To evaluate the quality of the system I use the well-known metrics like cohesion and coupling and McCall's internal quality factors.)
 
-If you're interested in TDD, feel free to enter my code and make your own conclusion. The unit tests should explain the system and serve as documentation of the system. In addition to that I attached some UML-like diagrams to visualise the most interesting/important parts/modules of the system.
+If you're interested in TDD, feel free to enter my code and make your own conclusion. The unit tests should explain the system and serve as documentation of the system. In addition to that I attached some UML-like diagrams (documentation folder) to visualise the most interesting/important parts/modules of the system.
 
 ## The Exercise - BoardGames App
 
