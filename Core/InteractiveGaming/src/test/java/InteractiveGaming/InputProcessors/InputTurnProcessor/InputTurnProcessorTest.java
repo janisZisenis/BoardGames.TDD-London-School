@@ -1,4 +1,4 @@
-package InteractiveGaming.InputTurnProcessor;
+package InteractiveGaming.InputProcessors.InputTurnProcessor;
 
 import Input2D.Input.Input;
 import Input2D.InputProcessorSpy;

@@ -2,6 +2,7 @@ package InteractiveGaming.HybridPlayerAdapter;
 
 import Gaming.GameFacade.Player;
 import Input2D.Input.Input;
+import InteractiveGaming.HybridExceptions.CanNotPlayWithInput;
 import InteractiveGaming.HybridGameImp.HybridPlayer;
 
 public class HybridPlayerAdapter implements HybridPlayer {
@@ -17,7 +18,7 @@ public class HybridPlayerAdapter implements HybridPlayer {
     }
 
     public void playInput(Input input) {
-        throw new CannotPlayWithInput();
+        throw new CanNotPlayWithInput();
     }
 
     public void play() {

@@ -2,7 +2,7 @@ package InteractiveGaming.HybridPlayerAdapter;
 
 import Gaming.GameFacade.PlayerMock;
 import Input2D.Input.Input;
-import InteractiveGaming.HybridGameImp.HybridPlayer;
+import InteractiveGaming.HybridExceptions.CanNotPlayWithInput;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -30,7 +30,7 @@ public class HybridPlayerAdapterTest {
 
         Executable act = () -> sut.playInput(input);
 
-        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
+        assertThrows(CanNotPlayWithInput.class, act);
     }
 
     @Test

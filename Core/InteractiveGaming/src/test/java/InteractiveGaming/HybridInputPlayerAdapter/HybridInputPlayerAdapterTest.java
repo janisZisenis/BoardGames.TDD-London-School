@@ -1,7 +1,7 @@
 package InteractiveGaming.HybridInputPlayerAdapter;
 
 import Input2D.Input.Input;
-import InteractiveGaming.HybridGameImp.HybridPlayer;
+import InteractiveGaming.HybridExceptions.CanNotPlayWithoutInput;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -26,7 +26,7 @@ public class HybridInputPlayerAdapterTest {
     void IfGetsPlayedWithoutInputShouldThrow() {
         Executable act = () -> sut.play();
 
-        assertThrows(HybridPlayer.CannotPlayWithoutInput.class, act);
+        assertThrows(CanNotPlayWithoutInput.class, act);
     }
 
 

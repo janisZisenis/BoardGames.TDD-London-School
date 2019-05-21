@@ -2,6 +2,7 @@ package InteractiveGaming.HybridGameImp;
 
 import Gaming.GameFacade.GameOverRule;
 import Input2D.Input.Input;
+import InteractiveGaming.HybridExceptions.CanNotPlayWithInput;
 import InteractiveGaming.HybridGameRunner.HybridGame;
 
 public class HybridGameImp implements HybridGame {
@@ -26,7 +27,7 @@ public class HybridGameImp implements HybridGame {
 
     private void throwIfNextIsNotInputTurn() {
         if(!player.isInputTurn())
-            throw new HybridPlayer.CannotPlayWithInput();
+            throw new CanNotPlayWithInput();
     }
 
     public void runToNextInputTurn() {

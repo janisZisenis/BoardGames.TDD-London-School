@@ -1,4 +1,4 @@
-package InteractiveGaming.InputTurnProcessor;
+package InteractiveGaming.InputProcessors.InputTurnProcessor;
 
 public class IsInputTurnProviderStub implements IsInputTurnProvider {
 

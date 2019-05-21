@@ -1,4 +1,4 @@
-package InteractiveGaming.GameOverInputProcessor;
+package InteractiveGaming.InputProcessors.GameOverInputProcessor;
 
 import Gaming.GameFacade.GameOverRule;
 import Input2D.Input.Input;

@@ -2,6 +2,7 @@ package InteractiveGaming.HybridGameImp;
 
 import Gaming.GameFacade.GameOverRuleDummy;
 import Input2D.Input.Input;
+import InteractiveGaming.HybridExceptions.CanNotPlayWithInput;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -45,7 +46,7 @@ public class HybridGameImpTest {
 
         Executable act = () -> sut.playInput(input);
 
-        assertThrows(HybridPlayer.CannotPlayWithInput.class, act);
+        assertThrows(CanNotPlayWithInput.class, act);
     }
 
 
