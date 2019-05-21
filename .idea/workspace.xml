@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -105,64 +104,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridGameImp/XHybridPlayerCountingSpy.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/MarkStoringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="163">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-              <folding>
-                <element signature="method#XHybridGameImp#0;class#XHybridGameImp#0" />
-                <element signature="method#playInput#0;class#XHybridGameImp#0" />
-                <element signature="method#throwIfNextIsNotInputTurn#0;class#XHybridGameImp#0" />
-                <element signature="method#runToNextInputTurn#0;class#XHybridGameImp#0" />
+                <element signature="method#IfJohnMarksSecondAfterHaleyMarkedFirst_FirstFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+                <element signature="method#IfHaleyMarksSecondAfterJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+                <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+                <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_ThirdFieldShouldBeJohns#0;class#MarkStoringTest#0" />
+                <element signature="method#IfHaleyMarksThirdAfterJohnMarkedSecondAndHaleyMarkedFirst_ThirdFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+                <element signature="method#makeJohnMarkedFirstAndHaleyMarkedSecond#0;class#MarkStoringTest#0" />
+                <element signature="method#makeHaleyMarkedFirstAndJohnMarkedSecond#0;class#MarkStoringTest#0" />
+                <element signature="method#assertFieldHasMark#0;class#MarkStoringTest#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#924#925#0" expanded="true" />
-                <element signature="e#960#961#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -256,8 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Core/Gaming/src/test/java/Gaming/GameOverRules/WinnerRule/WinnerRuleTest.java" />
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/NumberOfMovesRule/NumberOfMovesRuleTest.java" />
         <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java" />
         <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/ComparativeIsNotAnInput.java" />
         <option value="$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/InputsWithDifferentRowAndSameColumn.java" />
@@ -307,6 +269,8 @@
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridGameImp/XHybridGameImp.java" />
         <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/MarkStoringTest.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java" />
       </list>
     </option>
   </component>
@@ -471,6 +435,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -482,94 +447,84 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="HybridGameImp" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="XHybridPlayerAdapter" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="XMultiHybridPlayer" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+              <item name="HashingBoard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -577,40 +532,40 @@
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="HybridGameImp" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe" type="462c0819:PsiDirectoryNode" />
+              <item name="TicTacToe.Domain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="InteractiveGaming" type="462c0819:PsiDirectoryNode" />
-              <item name="XHybridGameImp" type="462c0819:PsiDirectoryNode" />
+              <item name="Domain" type="462c0819:PsiDirectoryNode" />
+              <item name="Board" type="462c0819:PsiDirectoryNode" />
+              <item name="HashingBoard" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -683,7 +638,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.AllTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.Main" />
       <module name="FXBoardGames" />
@@ -943,16 +898,11 @@
       <workItem from="1558278206907" duration="7988000" />
       <workItem from="1558356085987" duration="258000" />
       <workItem from="1558423494078" duration="1463000" />
+      <workItem from="1558445506223" duration="204000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.21 at 15h 16m 22s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 15h 16m 51s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.21 at 15h 17m 08s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -977,15 +927,21 @@
     <history-entry file="AllTest - 2019.05.21 at 15h 19m 44s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 15h 33m 48s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 15h 35m 08s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719692000" />
+    <option name="totallyTimeSpent" value="719896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.2563966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -995,7 +951,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.44171122" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1213,31 +1169,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/Input/ComparativeIsNotAnInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/CompositeInputValidator/CompositeInputValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-          <folding>
-            <element signature="method#FreshInstance_InputShouldBeValid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedValidating_InputShouldBeInvalid#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedValidatingAfterInvalidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingAfterValidating_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingInBetweenTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#AddedInvalidatingAfterTwoValidatings_InputShouldBeFalse#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#makeValidatingAdded#0;class#CompositeInputValidatorTest#0" />
-            <element signature="method#makeInvalidatingAdded#0;class#CompositeInputValidatorTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Input2D/src/test/java/Input2D/InputProcessorSpy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1642,10 +1573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
+    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="161">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
@@ -1662,17 +1593,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameImp/HybridGameImp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1688,10 +1612,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java">
+    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XMultiHybridPlayer/XMultiHybridPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
+        <state relative-caret-position="135">
+          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/Board/HashingBoard/MarkStoringTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="method#IfJohnMarksSecondAfterHaleyMarkedFirst_FirstFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+            <element signature="method#IfHaleyMarksSecondAfterJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+            <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_SecondFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+            <element signature="method#IfJohnMarksThirdAfterHaleyMarkedSecondAndJohnMarkedFirst_ThirdFieldShouldBeJohns#0;class#MarkStoringTest#0" />
+            <element signature="method#IfHaleyMarksThirdAfterJohnMarkedSecondAndHaleyMarkedFirst_ThirdFieldShouldBeHaleys#0;class#MarkStoringTest#0" />
+            <element signature="method#makeJohnMarkedFirstAndHaleyMarkedSecond#0;class#MarkStoringTest#0" />
+            <element signature="method#makeHaleyMarkedFirstAndJohnMarkedSecond#0;class#MarkStoringTest#0" />
+            <element signature="method#assertFieldHasMark#0;class#MarkStoringTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/main/java/Domain/Board/HashingBoard/HashingBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
