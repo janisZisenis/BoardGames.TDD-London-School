@@ -1,7 +1,7 @@
 package FXSynchronizingView;
 
 import FXView.Gaming.FXMessengerView;
-import MappingPlayerMessenger.Messenger;
+import Messaging.Messenger;
 import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 

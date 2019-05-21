@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2957ae82-9eb7-45d6-b9e4-51b06ed7c4fc" name="Default Changelist" comment="(">
-      <change beforePath="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/notTested_Demo/TicTacToeRunInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/TicTacToe.Console/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/TicTacToe.Console/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Apps/TicTacToe.SequentialGui/src/main/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Apps/TicTacToe.SequentialGui/src/main/java/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/GameLoopMessengerImp/GameLoopMessengerImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/GameLoopMessengerImp/MessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/GameLoopMessengerImp/MessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MappingPlayerMessenger/MappingMultiPlayerMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MappingPlayerMessenger/MappingMultiPlayerMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MappingPlayerMessenger/Messenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/Messenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/FixedMessageProvider/FixedMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/WinnerMessageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MessagingGameLoop/GameLoopMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessagingGameLoop/GameLoopMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/main/java/MessagingGameLoop/MessagingGameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessagingGameLoop/MessagingGameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/GameLoopMessengerImp/GameLoopMessengerImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/GameLoopMessengerImp/MessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/GameLoopMessengerImp/MessageProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/GameOverMessageProvider/GameOverMessageProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/GameOverMessageProvider/WinnerMessageProviderStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessageProviders/GameOverMessageProvider/WinnerMessageProviderStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/MappingPlayerMessenger/MappingMultiPlayerMessengerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MappingPlayerMessenger/MappingMultiPlayerMessengerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/MappingPlayerMessenger/MessengerSpy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerSpy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Messaging/src/test/java/MessagingGameLoop/MessagingGameLoopShunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessagingGameLoop/MessagingGameLoopShunt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.ConsoleView/src/main/java/ConsoleView/ConsoleMessenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.ConsoleView/src/main/java/ConsoleView/ConsoleMessenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXSynchronizingView/FXSynchronizingMessengerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXSynchronizingView/FXSynchronizingMessengerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Gaming/FXMessengerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Gaming/FXMessengerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/MessagingBoardListener/MessagingBoardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/main/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/MessagingBoardListener/MessagingBoardListenerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/MessagingBoardListener/MessagingBoardListenerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/WinnerMessageProviderImp/WinnerMessageProviderImpTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverInteractorFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/main/java/Presentation/GameOverViewPresenter/GameOverInteractorFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverInteractorFacadeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/GameOverViewPresenter/GameOverInteractorFacadeTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/TicTacToe.Mapping/target/" />
@@ -102,30 +132,21 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/OneActionAdded.java">
+        <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/MessagingBoardListener/MessagingBoardListenerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            <state relative-caret-position="295">
+              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java">
+        <entry file="file://$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="195">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -146,7 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HashingBo</find>
       <find>hide</find>
       <find>interface GameView</find>
       <find>FXTic</find>
@@ -176,6 +196,7 @@
       <find>line</find>
       <find>proc</find>
       <find>new TransactionSpy</find>
+      <find>new MessengerSpy</find>
     </findStrings>
     <replaceStrings>
       <replace>'.'</replace>
@@ -219,11 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.FXView/src/main/java/FXView/Configuration/FXConfigureView.java" />
-        <option value="$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/Main.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayer/XHybridPlayerTest.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayer/XMultiHybridPlayerTest.java" />
-        <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XHybridPlayer/XNoAdditionalHybridPlayersAdded.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/XHybridPlayer/XMultiHybridPlayer.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XHybridPlayer.java" />
         <option value="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/XMultiHybridPlayer/XOneAdditionalHybridPlayerAdded.java" />
@@ -270,6 +286,11 @@
         <option value="$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/OneActionAdded.java" />
         <option value="$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java" />
         <option value="$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java" />
+        <option value="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java" />
+        <option value="$PROJECT_DIR$/Core/Messaging/src/main/java/GameLoopMessengerImp/GameLoopMessengerImp.java" />
+        <option value="$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java" />
+        <option value="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/MessagingBoardListener/MessagingBoardListenerTest.java" />
+        <option value="$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerMock.java" />
       </list>
     </option>
   </component>
@@ -282,7 +303,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tictactoe-tdd" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="tictactoe-tdd" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -434,8 +465,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -452,69 +483,47 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="Observer" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="Transaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -522,7 +531,7 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -531,22 +540,11 @@
               <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
               <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tictactoe-tdd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BoardGames.TDD" type="462c0819:PsiDirectoryNode" />
-              <item name="Core" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
-              <item name="Transaction" type="462c0819:PsiDirectoryNode" />
+              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -584,11 +582,11 @@
       <recent name="FieldPrinter" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Messaging" />
+      <recent name="Messaging.MessageProviders" />
       <recent name="InteractiveGaming.InputProcessors" />
       <recent name="InteractiveGaming.GameOverInputProcessor" />
       <recent name="InteractiveGaming.HybridGameImp" />
-      <recent name="InteractiveGaming.XHybridInputPlayerAdapter" />
-      <recent name="InteractiveGaming.XMultiHybridPlayer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming" />
@@ -598,11 +596,11 @@
       <recent name="$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Messaging" />
       <recent name="Utilities.Transaction" />
       <recent name="Presentation.GameOverViewPresenter" />
       <recent name="InteractiveGaming.XHybridGameImp" />
       <recent name="InteractiveGaming.XHybridInputPlayerAdapter" />
-      <recent name="InteractiveGaming.XHybridPlayerAdapter" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="InteractiveGaming.InputTurnProcessor" />
@@ -885,16 +883,11 @@
       <workItem from="1558356085987" duration="258000" />
       <workItem from="1558423494078" duration="1463000" />
       <workItem from="1558445506223" duration="1662000" />
+      <workItem from="1558465249025" duration="354000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2019.05.21 at 20h 44m 19s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllTest - 2019.05.21 at 20h 44m 57s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllTest - 2019.05.21 at 20h 45m 02s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
@@ -919,15 +912,21 @@
     <history-entry file="AllTest - 2019.05.21 at 20h 55m 14s.xml">
       <configuration name="AllTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 21h 06m 22s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllTest - 2019.05.21 at 21h 06m 33s.xml">
+      <configuration name="AllTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="723511000" />
+    <option name="totallyTimeSpent" value="724146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2741148" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.2771673" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.2563966" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -937,7 +936,7 @@
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.44171122" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1155,81 +1154,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/NextIsInputTurn.java" />
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/HybridGameSpy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/HybridGameRunnerTest.java" />
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/main/java/InteractiveGaming/HybridGameRunner/HybridGameRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/InteractiveGaming/src/test/java/InteractiveGaming/HybridGameRunner/HybridGameRunnerShunt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding>
-            <element signature="method#assertLogStringEquals#0;class#HybridGameRunnerShunt#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Domain/src/test/java/Domain/TicTacToeInputPlayer/TicTacToeInputPlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="method#IfPlayerIsJohn_ShouldMarkAsJohn#0;class#TicTacToeInputPlayerTest#0" />
-            <element signature="method#IfPlayerIsHaley_ShouldMarkAsHaley#0;class#TicTacToeInputPlayerTest#0" />
-            <element signature="method#assertMarkedAs#0;class#TicTacToeInputPlayerTest#0" />
-            <element signature="method#IfTheFieldIsR0C0_ShouldMarkR0C0#0;class#TicTacToeInputPlayerTest#0" />
-            <element signature="method#IfTheFieldIsR2C1_ShouldMarkR2C1#0;class#TicTacToeInputPlayerTest#0" />
-            <element signature="method#assertMarkedFieldEquals#0;class#TicTacToeInputPlayerTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Presentation/src/test/java/Presentation/BoardViewPresenter/BoardViewPresenterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="136" column="21" lean-forward="true" selection-start-line="136" selection-start-column="21" selection-end-line="136" selection-end-column="21" />
-          <folding>
-            <element signature="method#IfFieldR0C0IsMarked_ShouldSetR0C0#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldR1C2IsMarked_ShouldSetR0C0#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldIsMarkedWithJohn_ShouldSetJohn#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldIsMarkedWithHaley_ShouldSetHaley#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertSetFieldEquals#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertSetMarkEquals#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldIsUnmarked_ShouldNotSetField#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertHasNotSetField#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldIsUnmarked_ShouldClearTheField#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertClearedFieldEquals#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfFieldIsMarked_ShouldNotClearTheField#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertHasNotCleared#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#IfGetsCleared_ShouldClearAllField#0;class#BoardViewPresenterTest#0" />
-            <element signature="method#assertHasClearedView#0;class#BoardViewPresenterTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/FXBoardGames/src/main/java/App/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.FXView/src/main/java/FXView/FXWelcomeView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -1596,6 +1520,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/GameOverMessageProvider/GameOverMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessageProviders/FixedMessageProvider/FixedMessageProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MappingPlayerMessenger/MappingMultiPlayerMessenger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/GameLoopMessengerImp/GameLoopMessengerImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerSpy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BoardGames/BoardGames.Presentation/src/test/java/Presentation/WelcomeViewPresenter/TwoActionsAdded.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -1603,10 +1569,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Utilities/src/test/java/Utilities/Transaction/TransactionMock.java">
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/main/java/Messaging/MessagingGameLoop/MessagingGameLoop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTacToe/TicTacToe.Messaging/src/test/java/Messaging/MessagingBoardListener/MessagingBoardListenerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Messaging/src/test/java/Messaging/MessengerMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>

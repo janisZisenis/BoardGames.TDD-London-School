@@ -1,4 +1,4 @@
-package GameLoopMessengerImp;
+package Messaging.GameLoopMessengerImp;
 
 public class MessageProviderStub implements MessageProvider {
 

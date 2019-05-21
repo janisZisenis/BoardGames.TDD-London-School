@@ -1,4 +1,4 @@
-package MessagingGameLoop;
+package Messaging.MessagingGameLoop;
 
 import Gaming.GameLoopImp.Api.GameLoop;
 import org.junit.jupiter.api.Test;

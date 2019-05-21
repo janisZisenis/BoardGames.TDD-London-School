@@ -1,4 +1,4 @@
-package MessageProviders.GameOverMessageProvider;
+package Messaging.MessageProviders.GameOverMessageProvider;
 
 public interface WinnerMessageProvider {
     boolean hasWinner();

@@ -1,6 +1,6 @@
-package MessageProviders.FixedMessageProvider;
+package Messaging.MessageProviders.FixedMessageProvider;
 
-import GameLoopMessengerImp.MessageProvider;
+import Messaging.GameLoopMessengerImp.MessageProvider;
 
 public class FixedMessageProvider implements MessageProvider {
 

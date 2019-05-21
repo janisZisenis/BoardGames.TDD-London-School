@@ -2,7 +2,7 @@ package Messaging.WinnerMessageProviderImp;
 
 import Domain.Data.Mark;
 import Domain.GameEvaluation.GameEvaluator.Api.WinnerProvider;
-import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
+import Messaging.MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
 
 public class WinnerMessageProviderImp implements WinnerMessageProvider {
 

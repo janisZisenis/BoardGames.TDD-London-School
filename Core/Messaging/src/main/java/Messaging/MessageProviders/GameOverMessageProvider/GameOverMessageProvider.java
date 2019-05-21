@@ -1,6 +1,6 @@
-package MessageProviders.GameOverMessageProvider;
+package Messaging.MessageProviders.GameOverMessageProvider;
 
-import GameLoopMessengerImp.MessageProvider;
+import Messaging.GameLoopMessengerImp.MessageProvider;
 
 public class GameOverMessageProvider implements MessageProvider {
 

@@ -1,7 +1,6 @@
-package GameOverMessageProvider;
+package Messaging.MessageProviders.GameOverMessageProvider;
 
-import GameLoopMessengerImp.MessageProviderStub;
-import MessageProviders.GameOverMessageProvider.GameOverMessageProvider;
+import Messaging.GameLoopMessengerImp.MessageProviderStub;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

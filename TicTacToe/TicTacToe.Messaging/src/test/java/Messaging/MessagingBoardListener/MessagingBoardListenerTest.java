@@ -1,15 +1,13 @@
 package Messaging.MessagingBoardListener;
 
 import Domain.Data.Field.Field;
-import GameLoopMessengerImp.MessageProviderStub;
-import MappingPlayerMessenger.MessengerSpy;
+import Messaging.GameLoopMessengerImp.MessageProviderStub;
+import Messaging.MessengerMock;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MessagingBoardListenerTest {
 
-    private MessengerSpy messenger = new MessengerSpy();
+    private MessengerMock messenger = new MessengerMock();
     private MessageProviderStub provider = new MessageProviderStub();
     private MarkedFieldMessageProviderStub fieldMessageProvider = new MarkedFieldMessageProviderStub();
     private MessagingBoardListener sut = new MessagingBoardListener(messenger, fieldMessageProvider, provider);
@@ -19,24 +17,21 @@ public class MessagingBoardListenerTest {
     void IfFieldGetsUpdated_ShouldPublishTheProvidedFieldMessage() {
         Field field = new Field(0, 0);
         fieldMessageProvider.setMessageForField("Message", field);
+        messenger.expectPublishesString("Message");
 
         sut.onFieldUpdated(field);
 
-        assertHasPublished("Message");
+        messenger.verifyAll();
     }
 
     @Test
     void IfGetsCleared_ShouldPublishTheProvidedClearMessage() {
         provider.setMessage("Clear");
+        messenger.expectPublishesString("Clear");
 
         sut.onCleared();
 
-        assertHasPublished("Clear");
-    }
-
-    private void assertHasPublished(String expected) {
-        String actual = messenger.getPublished();
-        assertEquals(expected, actual);
+        messenger.verifyAll();
     }
 
 }

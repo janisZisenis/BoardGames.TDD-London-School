@@ -1,6 +1,4 @@
-package GameOverMessageProvider;
-
-import MessageProviders.GameOverMessageProvider.WinnerMessageProvider;
+package Messaging.MessageProviders.GameOverMessageProvider;
 
 public class WinnerMessageProviderStub implements WinnerMessageProvider {
     private boolean hasWinner = false;

@@ -1,6 +1,6 @@
 package ConsoleView;
 
-import MappingPlayerMessenger.Messenger;
+import Messaging.Messenger;
 
 public class ConsoleMessenger implements Messenger {
 

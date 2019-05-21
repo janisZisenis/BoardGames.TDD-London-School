@@ -2,8 +2,8 @@ package Messaging.MessagingBoardListener;
 
 import Domain.Board.BoardDecorators.ListenableBoard.BoardListener;
 import Domain.Data.Field.Field;
-import GameLoopMessengerImp.MessageProvider;
-import MappingPlayerMessenger.Messenger;
+import Messaging.GameLoopMessengerImp.MessageProvider;
+import Messaging.Messenger;
 
 public class MessagingBoardListener implements BoardListener {
 

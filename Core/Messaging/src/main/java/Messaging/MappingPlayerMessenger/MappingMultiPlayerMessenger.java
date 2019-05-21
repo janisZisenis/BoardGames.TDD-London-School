@@ -1,6 +1,7 @@
-package MappingPlayerMessenger;
+package Messaging.MappingPlayerMessenger;
 
 import Gaming.MultiPlayer.MultiPlayerMessenger;
+import Messaging.Messenger;
 import Utilities.ObjectToStringMapper.Api.ObjectToStringMapper;
 
 public class MappingMultiPlayerMessenger implements MultiPlayerMessenger {

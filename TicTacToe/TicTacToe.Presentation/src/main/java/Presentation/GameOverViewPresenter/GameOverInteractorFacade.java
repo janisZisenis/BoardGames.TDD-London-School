@@ -1,6 +1,6 @@
 package Presentation.GameOverViewPresenter;
 
-import GameLoopMessengerImp.MessageProvider;
+import Messaging.GameLoopMessengerImp.MessageProvider;
 import Gaming.GameFacade.GameOverRule;
 import Utilities.Transaction.Transaction;
 

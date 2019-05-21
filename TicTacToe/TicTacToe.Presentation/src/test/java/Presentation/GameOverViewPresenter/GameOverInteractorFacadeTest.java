@@ -1,6 +1,6 @@
 package Presentation.GameOverViewPresenter;
 
-import GameLoopMessengerImp.MessageProviderStub;
+import Messaging.GameLoopMessengerImp.MessageProviderStub;
 import Gaming.GameFacade.GameOverRuleStub;
 import Utilities.Transaction.TransactionMock;
 import org.junit.jupiter.api.Test;
