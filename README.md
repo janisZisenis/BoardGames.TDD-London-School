@@ -22,7 +22,7 @@ For those who are new to TDD, these are the rules and aspects I strictly obeyed:
 
 Nevertheless I won't omit the general tool set of the software craftmanship, the design principles. Especially in the phase Red, the principles (SOLID, etc.) support the programmer to discover different ways a specific task/behaviour can be represented in software. In general the most readable, maintainable and trustworthy tests conform to the design principles.
 
-Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions leads to high quality systems by itself. (To evaluate the quality of the system I use the well-known metrics of cohesion and coupling and McCall's internal quality factors.)
+Besides training my skills in test-driving a system, this project serves as a personal investigation to which extent the test-centric development and pure following of the TDD rules/instructions with the interaction-based test approach (London School) leads to high quality systems by itself. (To evaluate the quality of the system I use the well-known metrics of cohesion and coupling and McCall's internal quality factors.)
 
 If you're interested in TDD, feel free to enter my code and make your own conclusion. The unit tests should explain the system and serve as documentation of the system. In addition to that I attached some UML-like diagrams (documentation folder) to visualise the most interesting/important parts/modules of the system.
 
